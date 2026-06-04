@@ -11,7 +11,7 @@ import {
 import type { Outcome, ToDState } from './logic';
 import { DEFAULT_OPTIONS } from './config';
 import type { ToDOptions, PromptKind } from './config';
-import { validateContent } from './content';
+import { PROMPT_BY_ID, validateContent } from './content';
 
 const seat = (id: string): PlayerSeat => ({ id: asPlayerId(id), name: id.toUpperCase() });
 
@@ -58,9 +58,10 @@ describe('tod createInitialState', () => {
       makeConfig({ intensities: { mild: true, medium: true, spicy: false } }, ['a', 'b']),
       1,
     );
-    // 2 players + no spicy: medium minPlayers-3 items and all spicy excluded
-    expect(noSpicy.truthDeck.drawPile).not.toContain('truth-spicy-001');
-    expect(noSpicy.truthDeck.drawPile).not.toContain('truth-medium-002'); // minPlayers 3
+    // 2 players + no spicy: spicy items and any minPlayers-3 items are excluded
+    const ids = noSpicy.truthDeck.drawPile;
+    expect(ids.some((id) => PROMPT_BY_ID[id].intensity === 'spicy')).toBe(false);
+    expect(ids.some((id) => (PROMPT_BY_ID[id].minPlayers ?? 2) > 2)).toBe(false);
   });
 
   it('errors on too few players', () => {

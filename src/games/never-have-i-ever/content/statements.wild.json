@@ -2,15 +2,309 @@
   "intensity": "wild",
   "version": 1,
   "items": [
-    { "id": "nhie-w-001", "intensity": "wild", "tags": ["romance"],
-      "text": { "en": "Never have I ever sent a risky text I instantly regretted.", "fa": "من هیچ‌وقت پیام جسورانه‌ای نفرستاده‌ام که فوراً پشیمان شوم." } },
-    { "id": "nhie-w-002", "intensity": "wild", "tags": ["embarrassing"],
-      "text": { "en": "Never have I ever broken something and blamed someone else.", "fa": "من هیچ‌وقت چیزی را نشکسته‌ام و تقصیر را گردن دیگری نینداخته‌ام." } },
-    { "id": "nhie-w-003", "intensity": "wild", "tags": ["romance"],
-      "text": { "en": "Never have I ever ghosted someone after a great date.", "fa": "من هیچ‌وقت بعد از یک قرار عالی کسی را ناغافل رها نکرده‌ام." } },
-    { "id": "nhie-w-004", "intensity": "wild", "tags": ["embarrassing"],
-      "text": { "en": "Never have I ever snooped through a host's bathroom cabinet.", "fa": "من هیچ‌وقت کابینت دستشویی میزبان را فضولانه نگشته‌ام." } },
-    { "id": "nhie-w-005", "intensity": "wild", "tags": ["social"],
-      "text": { "en": "Never have I ever crashed a party I wasn't invited to.", "fa": "من هیچ‌وقت بدون دعوت وارد یک مهمانی نشده‌ام." } }
+    {
+      "id": "nhie-w-101",
+      "intensity": "wild",
+      "tags": [
+        "romance",
+        "party"
+      ],
+      "text": {
+        "en": "Never have I ever kissed someone whose name I'd already forgotten.",
+        "fa": "من هیچ‌وقت کسی رو نبوسیدم که اسمش رو تا اون موقع یادم رفته بود."
+      }
+    },
+    {
+      "id": "nhie-w-102",
+      "intensity": "wild",
+      "tags": [
+        "romance"
+      ],
+      "text": {
+        "en": "Never have I ever flirted my way out of a parking ticket.",
+        "fa": "من هیچ‌وقت با عشوه و خوش‌زبونی از زیر جریمه‌ی پارک در نرفتم."
+      }
+    },
+    {
+      "id": "nhie-w-103",
+      "intensity": "wild",
+      "tags": [
+        "party"
+      ],
+      "text": {
+        "en": "Never have I ever woken up somewhere and had no idea how I got there.",
+        "fa": "من هیچ‌وقت یه جایی بیدار نشدم که اصلاً نفهمم چطوری اونجا رسیدم."
+      }
+    },
+    {
+      "id": "nhie-w-104",
+      "intensity": "wild",
+      "tags": [
+        "romance",
+        "social"
+      ],
+      "text": {
+        "en": "Never have I ever dated two people in the same week.",
+        "fa": "من هیچ‌وقت تو یه هفته با دو نفر همزمان قرار نذاشتم."
+      }
+    },
+    {
+      "id": "nhie-w-105",
+      "intensity": "wild",
+      "tags": [
+        "embarrassing",
+        "party"
+      ],
+      "text": {
+        "en": "Never have I ever skinny-dipped where I definitely shouldn't have.",
+        "fa": "من هیچ‌وقت جایی که اصلاً نباید، لخت شنا نکردم."
+      }
+    },
+    {
+      "id": "nhie-w-106",
+      "intensity": "wild",
+      "tags": [
+        "romance",
+        "tech"
+      ],
+      "text": {
+        "en": "Never have I ever swiped on a dating app while on a date.",
+        "fa": "من هیچ‌وقت وسطِ خودِ قرار، تو اپ دوست‌یابی نچرخیدم دنبال یکی دیگه."
+      }
+    },
+    {
+      "id": "nhie-w-107",
+      "intensity": "wild",
+      "tags": [
+        "social"
+      ],
+      "text": {
+        "en": "Never have I ever pretended to be someone's partner to get a free drink.",
+        "fa": "من هیچ‌وقت خودم رو جای پارتنرِ یکی جا نزدم که یه نوشیدنی مفت بگیرم."
+      }
+    },
+    {
+      "id": "nhie-w-108",
+      "intensity": "wild",
+      "tags": [
+        "romance"
+      ],
+      "text": {
+        "en": "Never have I ever fancied two friends in the same friend group.",
+        "fa": "من هیچ‌وقت تو یه جمعِ دوستانه همزمان از دو نفر خوشم نیومده."
+      }
+    },
+    {
+      "id": "nhie-w-109",
+      "intensity": "wild",
+      "tags": [
+        "party",
+        "embarrassing"
+      ],
+      "text": {
+        "en": "Never have I ever danced on a table when I really shouldn't have.",
+        "fa": "من هیچ‌وقت یه جایی که اصلاً جاش نبود رو میز نرقصیدم."
+      }
+    },
+    {
+      "id": "nhie-w-110",
+      "intensity": "wild",
+      "tags": [
+        "romance",
+        "social"
+      ],
+      "text": {
+        "en": "Never have I ever made out with someone in a bathroom at a party.",
+        "fa": "من هیچ‌وقت تو مهمونی تو دستشویی با کسی لب نگرفتم."
+      }
+    },
+    {
+      "id": "nhie-w-111",
+      "intensity": "wild",
+      "tags": [
+        "embarrassing",
+        "tech"
+      ],
+      "text": {
+        "en": "Never have I ever sent a flirty text to the wrong group chat.",
+        "fa": "من هیچ‌وقت یه پیامِ عاشقونه رو اشتباهی تو گروهِ اشتباهی نفرستادم."
+      }
+    },
+    {
+      "id": "nhie-w-112",
+      "intensity": "wild",
+      "tags": [
+        "romance"
+      ],
+      "text": {
+        "en": "Never have I ever gotten back with an ex I swore I was done with.",
+        "fa": "من هیچ‌وقت با اکسی که قسم خورده بودم دیگه تموم شده، برنگشتم."
+      }
+    },
+    {
+      "id": "nhie-w-113",
+      "intensity": "wild",
+      "tags": [
+        "party"
+      ],
+      "text": {
+        "en": "Never have I ever lost a piece of clothing during a night out.",
+        "fa": "من هیچ‌وقت یه تیکه از لباسام رو وسط یه شبِ بیرون گم نکردم."
+      }
+    },
+    {
+      "id": "nhie-w-114",
+      "intensity": "wild",
+      "tags": [
+        "social",
+        "embarrassing"
+      ],
+      "text": {
+        "en": "Never have I ever told someone I was single when I really wasn't.",
+        "fa": "من هیچ‌وقت به کسی نگفتم مجردم در حالی که اصلاً نبودم."
+      }
+    },
+    {
+      "id": "nhie-w-115",
+      "intensity": "wild",
+      "tags": [
+        "romance",
+        "party"
+      ],
+      "text": {
+        "en": "Never have I ever hooked up with someone the night I met them.",
+        "fa": "من هیچ‌وقت همون شبی که یکی رو دیدم باهاش رو هم نریختم."
+      }
+    },
+    {
+      "id": "nhie-w-116",
+      "intensity": "wild",
+      "tags": [
+        "embarrassing",
+        "work"
+      ],
+      "text": {
+        "en": "Never have I ever had a crush on my boss.",
+        "fa": "من هیچ‌وقت از رئیسم خوشم نیومده."
+      }
+    },
+    {
+      "id": "nhie-w-117",
+      "intensity": "wild",
+      "tags": [
+        "romance",
+        "tech"
+      ],
+      "text": {
+        "en": "Never have I ever screenshotted someone's profile to send to my friends.",
+        "fa": "من هیچ‌وقت از پروفایلِ یکی اسکرین‌شات نگرفتم که برای رفقام بفرستم."
+      }
+    },
+    {
+      "id": "nhie-w-118",
+      "intensity": "wild",
+      "tags": [
+        "party"
+      ],
+      "text": {
+        "en": "Never have I ever snuck out of a party without saying goodbye to anyone.",
+        "fa": "من هیچ‌وقت از یه مهمونی بدون خداحافظی با هیچکس در نرفتم."
+      }
+    },
+    {
+      "id": "nhie-w-119",
+      "intensity": "wild",
+      "tags": [
+        "romance",
+        "social"
+      ],
+      "text": {
+        "en": "Never have I ever kissed a friend and pretended it never happened.",
+        "fa": "من هیچ‌وقت یه دوست رو نبوسیدم و بعد وانمود نکردم که انگار اصلاً نشده."
+      }
+    },
+    {
+      "id": "nhie-w-120",
+      "intensity": "wild",
+      "tags": [
+        "embarrassing",
+        "party"
+      ],
+      "text": {
+        "en": "Never have I ever sent a voice message I prayed nobody would replay.",
+        "fa": "من هیچ‌وقت یه ویس نفرستادم که دعا کنم هیچکس دوباره گوشش نده."
+      }
+    },
+    {
+      "id": "nhie-w-121",
+      "intensity": "wild",
+      "tags": [
+        "romance"
+      ],
+      "text": {
+        "en": "Never have I ever lied about how many people I've dated.",
+        "fa": "من هیچ‌وقت درباره‌ی تعدادِ آدمایی که باهاشون بودم دروغ نگفتم."
+      }
+    },
+    {
+      "id": "nhie-w-122",
+      "intensity": "wild",
+      "tags": [
+        "social",
+        "party"
+      ],
+      "text": {
+        "en": "Never have I ever stayed at an afterparty until the sun came up.",
+        "fa": "من هیچ‌وقت تو افترپارتی تا طلوعِ آفتاب نموندم."
+      }
+    },
+    {
+      "id": "nhie-w-123",
+      "intensity": "wild",
+      "tags": [
+        "romance",
+        "embarrassing"
+      ],
+      "text": {
+        "en": "Never have I ever called a date by my ex's name.",
+        "fa": "من هیچ‌وقت وسطِ قرار، طرف رو با اسمِ اکسم صدا نزدم."
+      }
+    },
+    {
+      "id": "nhie-w-124",
+      "intensity": "wild",
+      "tags": [
+        "tech",
+        "social"
+      ],
+      "text": {
+        "en": "Never have I ever made a fake profile just to see what someone was up to.",
+        "fa": "من هیچ‌وقت یه پروفایلِ فیک نساختم فقط که ببینم یکی چیکار می‌کنه."
+      }
+    },
+    {
+      "id": "nhie-w-125",
+      "intensity": "wild",
+      "tags": [
+        "party",
+        "romance"
+      ],
+      "text": {
+        "en": "Never have I ever played spin the bottle as a grown adult.",
+        "fa": "من هیچ‌وقت تو بزرگسالی بطری‌بازی نکردم."
+      }
+    },
+    {
+      "id": "nhie-w-126",
+      "intensity": "wild",
+      "tags": [
+        "embarrassing",
+        "social"
+      ],
+      "text": {
+        "en": "Never have I ever spilled someone's biggest secret after a few drinks.",
+        "fa": "من هیچ‌وقت بعد از چندتا پیک، بزرگ‌ترین رازِ یکی رو لو ندادم."
+      }
+    }
   ]
 }

@@ -1,24 +1,284 @@
 {
   "id": "spicy",
-  "name": { "en": "Night Out", "fa": "شب‌نشینی" },
-  "description": { "en": "Bolder prompts for a rowdy crowd.", "fa": "سوال‌های جسورانه‌تر برای جمع پرشور." },
+  "name": {
+    "en": "Night Out",
+    "fa": "شب‌نشینی"
+  },
+  "description": {
+    "en": "Bolder prompts for a rowdy crowd.",
+    "fa": "سوال‌های جسورانه‌تر برای جمع پرشور."
+  },
   "version": 1,
   "prompts": [
-    { "id": "mlt-karaoke-mic", "intensity": "casual", "emoji": "🎤",
-      "text": { "en": "Most likely to hog the karaoke mic", "fa": "به احتمال زیاد میکروفون کارائوکه رو ول نمی‌کنه" } },
-    { "id": "mlt-dance-table", "intensity": "casual", "emoji": "💃",
-      "text": { "en": "Most likely to dance on a table", "fa": "به احتمال زیاد روی میز می‌رقصه" } },
-    { "id": "mlt-lose-phone", "intensity": "casual", "emoji": "📵",
-      "text": { "en": "Most likely to lose their phone on a night out", "fa": "به احتمال زیاد شب بیرون گوشیش رو گم می‌کنه" } },
-    { "id": "mlt-flirt-stranger", "intensity": "spicy", "emoji": "😏",
-      "text": { "en": "Most likely to flirt with a total stranger", "fa": "به احتمال زیاد با یه غریبه‌ی کامل لاس می‌زنه" } },
-    { "id": "mlt-skinny-dip", "intensity": "spicy", "emoji": "🌊",
-      "text": { "en": "Most likely to suggest a midnight swim", "fa": "به احتمال زیاد پیشنهاد شنای نیمه‌شب می‌ده" } },
-    { "id": "mlt-overshare", "intensity": "spicy", "emoji": "🙊",
-      "text": { "en": "Most likely to overshare after one drink", "fa": "به احتمال زیاد بعد از یه نوشیدنی همه‌چی رو لو می‌ده" } },
-    { "id": "mlt-fall-in-love", "intensity": "spicy", "emoji": "💘",
-      "text": { "en": "Most likely to fall in love on vacation", "fa": "به احتمال زیاد توی سفر عاشق می‌شه" } },
-    { "id": "mlt-prank-friend", "intensity": "family", "emoji": "🃏",
-      "text": { "en": "Most likely to pull an elaborate prank", "fa": "به احتمال زیاد یه شوخی پیچیده راه می‌ندازه" } }
+    {
+      "id": "mlt-text-the-ex",
+      "intensity": "spicy",
+      "emoji": "📱",
+      "text": {
+        "en": "Most likely to text their ex at 2am",
+        "fa": "به احتمال زیاد ساعت دو نصف‌شب به اکسش پیام می‌ده"
+      }
+    },
+    {
+      "id": "mlt-cry-after-drink",
+      "intensity": "spicy",
+      "emoji": "😭",
+      "text": {
+        "en": "Most likely to cry after a few drinks",
+        "fa": "به احتمال زیاد بعد از چند تا پیک می‌زنه زیر گریه"
+      }
+    },
+    {
+      "id": "mlt-start-the-conga",
+      "intensity": "casual",
+      "emoji": "🪩",
+      "text": {
+        "en": "Most likely to start a conga line",
+        "fa": "به احتمال زیاد وسط جمع آهنگ می‌ذاره همه رو می‌کشه وسط"
+      }
+    },
+    {
+      "id": "mlt-last-to-leave",
+      "intensity": "casual",
+      "emoji": "🌙",
+      "text": {
+        "en": "Most likely to be the last one to leave the party",
+        "fa": "به احتمال زیاد آخرین نفریه که از مهمونی می‌ره"
+      }
+    },
+    {
+      "id": "mlt-fake-emergency",
+      "intensity": "casual",
+      "emoji": "🤥",
+      "text": {
+        "en": "Most likely to fake an emergency to leave early",
+        "fa": "به احتمال زیاد یه بهونه‌ی الکی جور می‌کنه که زودتر بزنه به چاک"
+      }
+    },
+    {
+      "id": "mlt-spill-a-secret",
+      "intensity": "spicy",
+      "emoji": "🤫",
+      "text": {
+        "en": "Most likely to spill someone else's secret",
+        "fa": "به احتمال زیاد راز یکی دیگه رو لو می‌ده"
+      }
+    },
+    {
+      "id": "mlt-slide-into-dms",
+      "intensity": "spicy",
+      "emoji": "💌",
+      "text": {
+        "en": "Most likely to slide into someone's DMs",
+        "fa": "به احتمال زیاد یواشکی به دایرکت یکی پیام می‌ده"
+      }
+    },
+    {
+      "id": "mlt-dance-no-music-2",
+      "intensity": "casual",
+      "emoji": "🕺",
+      "text": {
+        "en": "Most likely to dance even when there's no music",
+        "fa": "به احتمال زیاد بدون آهنگم شروع می‌کنه به رقصیدن"
+      }
+    },
+    {
+      "id": "mlt-pick-a-fight",
+      "intensity": "spicy",
+      "emoji": "🥊",
+      "text": {
+        "en": "Most likely to pick a fight over nothing",
+        "fa": "به احتمال زیاد سر هیچی دعوا راه می‌ندازه"
+      }
+    },
+    {
+      "id": "mlt-end-up-on-stage",
+      "intensity": "casual",
+      "emoji": "🎙️",
+      "text": {
+        "en": "Most likely to somehow end up on stage",
+        "fa": "به احتمال زیاد یه جوری سر از روی صحنه درمیاره"
+      }
+    },
+    {
+      "id": "mlt-third-wheel",
+      "intensity": "casual",
+      "emoji": "🚲",
+      "text": {
+        "en": "Most likely to be the third wheel",
+        "fa": "به احتمال زیاد همیشه می‌شه چرخ سوم یه قرار عاشقونه"
+      }
+    },
+    {
+      "id": "mlt-buy-round-broke",
+      "intensity": "casual",
+      "emoji": "💸",
+      "text": {
+        "en": "Most likely to buy a round when they're broke",
+        "fa": "به احتمال زیاد با اینکه جیبش خالیه حساب همه رو می‌کنه"
+      }
+    },
+    {
+      "id": "mlt-ghost-a-crush",
+      "intensity": "spicy",
+      "emoji": "👻",
+      "text": {
+        "en": "Most likely to ghost someone they like",
+        "fa": "به احتمال زیاد یهو طرف موردعلاقه‌اش رو می‌پیچونه و غیب می‌شه"
+      }
+    },
+    {
+      "id": "mlt-tell-everyone-loves",
+      "intensity": "spicy",
+      "emoji": "❤️‍🔥",
+      "text": {
+        "en": "Most likely to confess a crush in front of everyone",
+        "fa": "به احتمال زیاد جلوی همه می‌گه دلش پیش کیه"
+      }
+    },
+    {
+      "id": "mlt-take-it-too-far",
+      "intensity": "spicy",
+      "emoji": "🔥",
+      "text": {
+        "en": "Most likely to take a dare way too far",
+        "fa": "به احتمال زیاد یه شرط رو خیلی بیشتر از حدش پیش می‌بره"
+      }
+    },
+    {
+      "id": "mlt-wake-neighbors",
+      "intensity": "casual",
+      "emoji": "📢",
+      "text": {
+        "en": "Most likely to wake up the neighbors",
+        "fa": "به احتمال زیاد با سر و صداش همسایه‌ها رو بیدار می‌کنه"
+      }
+    },
+    {
+      "id": "mlt-lost-in-city",
+      "intensity": "casual",
+      "emoji": "🗺️",
+      "text": {
+        "en": "Most likely to get lost in their own city",
+        "fa": "به احتمال زیاد توی شهر خودشون گم می‌شه"
+      }
+    },
+    {
+      "id": "mlt-double-text",
+      "intensity": "spicy",
+      "emoji": "💬",
+      "text": {
+        "en": "Most likely to double-text and then triple-text",
+        "fa": "به احتمال زیاد پشت سر هم پیام می‌ده تا طرف جواب بده"
+      }
+    },
+    {
+      "id": "mlt-instant-bff",
+      "intensity": "casual",
+      "emoji": "🫶",
+      "text": {
+        "en": "Most likely to become best friends with a stranger in the bathroom",
+        "fa": "به احتمال زیاد توی دستشویی مهمونی با یه غریبه رفیق جون‌جونی می‌شه"
+      }
+    },
+    {
+      "id": "mlt-karaoke-wrong-words",
+      "intensity": "casual",
+      "emoji": "🎶",
+      "text": {
+        "en": "Most likely to belt a song with all the wrong words",
+        "fa": "به احتمال زیاد آهنگ رو با کلمات اشتباه با تمام وجود می‌خونه"
+      }
+    },
+    {
+      "id": "mlt-start-rumor",
+      "intensity": "spicy",
+      "emoji": "🗣️",
+      "text": {
+        "en": "Most likely to start a juicy rumor",
+        "fa": "به احتمال زیاد یه شایعه‌ی آب‌دار راه می‌ندازه"
+      }
+    },
+    {
+      "id": "mlt-fall-asleep-party-2",
+      "intensity": "casual",
+      "emoji": "😴",
+      "text": {
+        "en": "Most likely to fall asleep at the party",
+        "fa": "به احتمال زیاد وسط مهمونی خوابش می‌بره"
+      }
+    },
+    {
+      "id": "mlt-lose-bet-2",
+      "intensity": "casual",
+      "emoji": "🎲",
+      "text": {
+        "en": "Most likely to make a bet they instantly regret",
+        "fa": "به احتمال زیاد یه شرطی می‌بنده که فوری پشیمون می‌شه"
+      }
+    },
+    {
+      "id": "mlt-eat-whole-plate",
+      "intensity": "casual",
+      "emoji": "🍕",
+      "text": {
+        "en": "Most likely to finish everyone's leftovers",
+        "fa": "به احتمال زیاد ته‌مونده‌ی غذای همه رو هم می‌خوره"
+      }
+    },
+    {
+      "id": "mlt-dramatic-exit",
+      "intensity": "spicy",
+      "emoji": "🚪",
+      "text": {
+        "en": "Most likely to storm out dramatically",
+        "fa": "به احتمال زیاد با یه قهر نمایشی در می‌ره بیرون"
+      }
+    },
+    {
+      "id": "mlt-flirt-to-skip-line",
+      "intensity": "spicy",
+      "emoji": "😉",
+      "text": {
+        "en": "Most likely to flirt their way past the line",
+        "fa": "به احتمال زیاد با چرب‌زبونی و عشوه خودش رو از صف رد می‌کنه"
+      }
+    },
+    {
+      "id": "mlt-overshare-stranger",
+      "intensity": "spicy",
+      "emoji": "🙃",
+      "text": {
+        "en": "Most likely to tell their whole life story to a stranger",
+        "fa": "به احتمال زیاد کل زندگی‌نامه‌اش رو برای یه غریبه تعریف می‌کنه"
+      }
+    },
+    {
+      "id": "mlt-photo-everything",
+      "intensity": "casual",
+      "emoji": "📸",
+      "text": {
+        "en": "Most likely to post the whole night on their story",
+        "fa": "به احتمال زیاد کل شب رو می‌ذاره توی استوریش"
+      }
+    },
+    {
+      "id": "mlt-talk-way-out",
+      "intensity": "casual",
+      "emoji": "🗯️",
+      "text": {
+        "en": "Most likely to talk their way out of trouble",
+        "fa": "به احتمال زیاد با حرف زدن خودش رو از هر دردسری خلاص می‌کنه"
+      }
+    },
+    {
+      "id": "mlt-regret-tomorrow",
+      "intensity": "spicy",
+      "emoji": "🫣",
+      "text": {
+        "en": "Most likely to do something they'll regret tomorrow",
+        "fa": "به احتمال زیاد یه کاری می‌کنه که فردا حسابی پشیمون می‌شه"
+      }
+    }
   ]
 }

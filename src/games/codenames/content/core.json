@@ -1,39 +1,941 @@
 {
   "id": "core",
-  "name": { "en": "Core Words", "fa": "واژگان پایه" },
+  "name": {
+    "en": "Core Words",
+    "fa": "واژگان پایه"
+  },
   "version": 1,
   "words": [
-    { "id": "apple", "text": { "en": "Apple", "fa": "سیب" } },
-    { "id": "moon", "text": { "en": "Moon", "fa": "ماه" } },
-    { "id": "river", "text": { "en": "River", "fa": "رودخانه" } },
-    { "id": "bridge", "text": { "en": "Bridge", "fa": "پل" } },
-    { "id": "fire", "text": { "en": "Fire", "fa": "آتش" } },
-    { "id": "king", "text": { "en": "King", "fa": "پادشاه" } },
-    { "id": "garden", "text": { "en": "Garden", "fa": "باغ" } },
-    { "id": "tea", "text": { "en": "Tea", "fa": "چای" } },
-    { "id": "snow", "text": { "en": "Snow", "fa": "برف" } },
-    { "id": "lion", "text": { "en": "Lion", "fa": "شیر" } },
-    { "id": "mirror", "text": { "en": "Mirror", "fa": "آینه" } },
-    { "id": "carpet", "text": { "en": "Carpet", "fa": "فرش" } },
-    { "id": "star", "text": { "en": "Star", "fa": "ستاره" } },
-    { "id": "desert", "text": { "en": "Desert", "fa": "کویر" } },
-    { "id": "poet", "text": { "en": "Poet", "fa": "شاعر" } },
-    { "id": "key", "text": { "en": "Key", "fa": "کلید" } },
-    { "id": "ship", "text": { "en": "Ship", "fa": "کشتی" } },
-    { "id": "spider", "text": { "en": "Spider", "fa": "عنکبوت" } },
-    { "id": "mountain", "text": { "en": "Mountain", "fa": "کوه" } },
-    { "id": "book", "text": { "en": "Book", "fa": "کتاب" } },
-    { "id": "clock", "text": { "en": "Clock", "fa": "ساعت" } },
-    { "id": "window", "text": { "en": "Window", "fa": "پنجره" } },
-    { "id": "horse", "text": { "en": "Horse", "fa": "اسب" } },
-    { "id": "candle", "text": { "en": "Candle", "fa": "شمع" } },
-    { "id": "market", "text": { "en": "Market", "fa": "بازار" } },
-    { "id": "cloud", "text": { "en": "Cloud", "fa": "ابر" } },
-    { "id": "sword", "text": { "en": "Sword", "fa": "شمشیر" } },
-    { "id": "crown", "text": { "en": "Crown", "fa": "تاج" } },
-    { "id": "forest", "text": { "en": "Forest", "fa": "جنگل" } },
-    { "id": "lamp", "text": { "en": "Lamp", "fa": "چراغ" } },
-    { "id": "bird", "text": { "en": "Bird", "fa": "پرنده" } },
-    { "id": "wheel", "text": { "en": "Wheel", "fa": "چرخ" } }
+    {
+      "id": "apple",
+      "text": {
+        "en": "Apple",
+        "fa": "سیب"
+      }
+    },
+    {
+      "id": "moon",
+      "text": {
+        "en": "Moon",
+        "fa": "ماه"
+      }
+    },
+    {
+      "id": "river",
+      "text": {
+        "en": "River",
+        "fa": "رودخونه"
+      }
+    },
+    {
+      "id": "bridge",
+      "text": {
+        "en": "Bridge",
+        "fa": "پل"
+      }
+    },
+    {
+      "id": "fire",
+      "text": {
+        "en": "Fire",
+        "fa": "آتیش"
+      }
+    },
+    {
+      "id": "king",
+      "text": {
+        "en": "King",
+        "fa": "پادشاه"
+      }
+    },
+    {
+      "id": "garden",
+      "text": {
+        "en": "Garden",
+        "fa": "باغ"
+      }
+    },
+    {
+      "id": "tea",
+      "text": {
+        "en": "Tea",
+        "fa": "چای"
+      }
+    },
+    {
+      "id": "snow",
+      "text": {
+        "en": "Snow",
+        "fa": "برف"
+      }
+    },
+    {
+      "id": "lion",
+      "text": {
+        "en": "Lion",
+        "fa": "شیر جنگل"
+      }
+    },
+    {
+      "id": "mirror",
+      "text": {
+        "en": "Mirror",
+        "fa": "آینه"
+      }
+    },
+    {
+      "id": "carpet",
+      "text": {
+        "en": "Carpet",
+        "fa": "فرش"
+      }
+    },
+    {
+      "id": "star",
+      "text": {
+        "en": "Star",
+        "fa": "ستاره"
+      }
+    },
+    {
+      "id": "desert",
+      "text": {
+        "en": "Desert",
+        "fa": "کویر"
+      }
+    },
+    {
+      "id": "poet",
+      "text": {
+        "en": "Poet",
+        "fa": "شاعر"
+      }
+    },
+    {
+      "id": "key",
+      "text": {
+        "en": "Key",
+        "fa": "کلید"
+      }
+    },
+    {
+      "id": "ship",
+      "text": {
+        "en": "Ship",
+        "fa": "کشتی"
+      }
+    },
+    {
+      "id": "spider",
+      "text": {
+        "en": "Spider",
+        "fa": "عنکبوت"
+      }
+    },
+    {
+      "id": "mountain",
+      "text": {
+        "en": "Mountain",
+        "fa": "کوه"
+      }
+    },
+    {
+      "id": "book",
+      "text": {
+        "en": "Book",
+        "fa": "کتاب"
+      }
+    },
+    {
+      "id": "clock",
+      "text": {
+        "en": "Clock",
+        "fa": "ساعت دیواری"
+      }
+    },
+    {
+      "id": "window",
+      "text": {
+        "en": "Window",
+        "fa": "پنجره"
+      }
+    },
+    {
+      "id": "horse",
+      "text": {
+        "en": "Horse",
+        "fa": "اسب"
+      }
+    },
+    {
+      "id": "candle",
+      "text": {
+        "en": "Candle",
+        "fa": "شمع"
+      }
+    },
+    {
+      "id": "market",
+      "text": {
+        "en": "Market",
+        "fa": "بازار"
+      }
+    },
+    {
+      "id": "cloud",
+      "text": {
+        "en": "Cloud",
+        "fa": "ابر"
+      }
+    },
+    {
+      "id": "sword",
+      "text": {
+        "en": "Sword",
+        "fa": "شمشیر"
+      }
+    },
+    {
+      "id": "crown",
+      "text": {
+        "en": "Crown",
+        "fa": "تاج"
+      }
+    },
+    {
+      "id": "forest",
+      "text": {
+        "en": "Forest",
+        "fa": "جنگل"
+      }
+    },
+    {
+      "id": "lamp",
+      "text": {
+        "en": "Lamp",
+        "fa": "چراغ"
+      }
+    },
+    {
+      "id": "bird",
+      "text": {
+        "en": "Bird",
+        "fa": "پرنده"
+      }
+    },
+    {
+      "id": "wheel",
+      "text": {
+        "en": "Wheel",
+        "fa": "چرخ"
+      }
+    },
+    {
+      "id": "sun",
+      "text": {
+        "en": "Sun",
+        "fa": "خورشید"
+      }
+    },
+    {
+      "id": "rain",
+      "text": {
+        "en": "Rain",
+        "fa": "بارون"
+      }
+    },
+    {
+      "id": "wind",
+      "text": {
+        "en": "Wind",
+        "fa": "باد"
+      }
+    },
+    {
+      "id": "sea",
+      "text": {
+        "en": "Sea",
+        "fa": "دریا"
+      }
+    },
+    {
+      "id": "island",
+      "text": {
+        "en": "Island",
+        "fa": "جزیره"
+      }
+    },
+    {
+      "id": "beach",
+      "text": {
+        "en": "Beach",
+        "fa": "ساحل"
+      }
+    },
+    {
+      "id": "cave",
+      "text": {
+        "en": "Cave",
+        "fa": "غار"
+      }
+    },
+    {
+      "id": "rainbow",
+      "text": {
+        "en": "Rainbow",
+        "fa": "رنگین‌کمون"
+      }
+    },
+    {
+      "id": "thunder",
+      "text": {
+        "en": "Thunder",
+        "fa": "رعد و برق"
+      }
+    },
+    {
+      "id": "volcano",
+      "text": {
+        "en": "Volcano",
+        "fa": "آتشفشان"
+      }
+    },
+    {
+      "id": "flower",
+      "text": {
+        "en": "Flower",
+        "fa": "گل"
+      }
+    },
+    {
+      "id": "tree",
+      "text": {
+        "en": "Tree",
+        "fa": "درخت"
+      }
+    },
+    {
+      "id": "leaf",
+      "text": {
+        "en": "Leaf",
+        "fa": "برگ"
+      }
+    },
+    {
+      "id": "root",
+      "text": {
+        "en": "Root",
+        "fa": "ریشه"
+      }
+    },
+    {
+      "id": "seed",
+      "text": {
+        "en": "Seed",
+        "fa": "دونه"
+      }
+    },
+    {
+      "id": "honey",
+      "text": {
+        "en": "Honey",
+        "fa": "عسل"
+      }
+    },
+    {
+      "id": "bee",
+      "text": {
+        "en": "Bee",
+        "fa": "زنبور"
+      }
+    },
+    {
+      "id": "butterfly",
+      "text": {
+        "en": "Butterfly",
+        "fa": "پروانه"
+      }
+    },
+    {
+      "id": "fish",
+      "text": {
+        "en": "Fish",
+        "fa": "ماهی"
+      }
+    },
+    {
+      "id": "shark",
+      "text": {
+        "en": "Shark",
+        "fa": "کوسه"
+      }
+    },
+    {
+      "id": "whale",
+      "text": {
+        "en": "Whale",
+        "fa": "نهنگ"
+      }
+    },
+    {
+      "id": "snake",
+      "text": {
+        "en": "Snake",
+        "fa": "مار"
+      }
+    },
+    {
+      "id": "wolf",
+      "text": {
+        "en": "Wolf",
+        "fa": "گرگ"
+      }
+    },
+    {
+      "id": "fox",
+      "text": {
+        "en": "Fox",
+        "fa": "روباه"
+      }
+    },
+    {
+      "id": "bear",
+      "text": {
+        "en": "Bear",
+        "fa": "خرس"
+      }
+    },
+    {
+      "id": "elephant",
+      "text": {
+        "en": "Elephant",
+        "fa": "فیل"
+      }
+    },
+    {
+      "id": "camel",
+      "text": {
+        "en": "Camel",
+        "fa": "شتر"
+      }
+    },
+    {
+      "id": "cat",
+      "text": {
+        "en": "Cat",
+        "fa": "گربه"
+      }
+    },
+    {
+      "id": "dog",
+      "text": {
+        "en": "Dog",
+        "fa": "سگ"
+      }
+    },
+    {
+      "id": "owl",
+      "text": {
+        "en": "Owl",
+        "fa": "جغد"
+      }
+    },
+    {
+      "id": "eagle",
+      "text": {
+        "en": "Eagle",
+        "fa": "عقاب"
+      }
+    },
+    {
+      "id": "peacock",
+      "text": {
+        "en": "Peacock",
+        "fa": "طاووس"
+      }
+    },
+    {
+      "id": "egg",
+      "text": {
+        "en": "Egg",
+        "fa": "تخم‌مرغ"
+      }
+    },
+    {
+      "id": "bread",
+      "text": {
+        "en": "Bread",
+        "fa": "نون"
+      }
+    },
+    {
+      "id": "salt",
+      "text": {
+        "en": "Salt",
+        "fa": "نمک"
+      }
+    },
+    {
+      "id": "sugar",
+      "text": {
+        "en": "Sugar",
+        "fa": "شکر"
+      }
+    },
+    {
+      "id": "milk",
+      "text": {
+        "en": "Milk",
+        "fa": "شیر"
+      }
+    },
+    {
+      "id": "coffee",
+      "text": {
+        "en": "Coffee",
+        "fa": "قهوه"
+      }
+    },
+    {
+      "id": "ice",
+      "text": {
+        "en": "Ice",
+        "fa": "یخ"
+      }
+    },
+    {
+      "id": "pepper",
+      "text": {
+        "en": "Pepper",
+        "fa": "فلفل"
+      }
+    },
+    {
+      "id": "lemon",
+      "text": {
+        "en": "Lemon",
+        "fa": "لیمو"
+      }
+    },
+    {
+      "id": "watermelon",
+      "text": {
+        "en": "Watermelon",
+        "fa": "هندونه"
+      }
+    },
+    {
+      "id": "pomegranate",
+      "text": {
+        "en": "Pomegranate",
+        "fa": "انار"
+      }
+    },
+    {
+      "id": "grape",
+      "text": {
+        "en": "Grape",
+        "fa": "انگور"
+      }
+    },
+    {
+      "id": "cherry",
+      "text": {
+        "en": "Cherry",
+        "fa": "گیلاس"
+      }
+    },
+    {
+      "id": "nut",
+      "text": {
+        "en": "Nut",
+        "fa": "آجیل"
+      }
+    },
+    {
+      "id": "chocolate",
+      "text": {
+        "en": "Chocolate",
+        "fa": "شکلات"
+      }
+    },
+    {
+      "id": "cake",
+      "text": {
+        "en": "Cake",
+        "fa": "کیک"
+      }
+    },
+    {
+      "id": "soup",
+      "text": {
+        "en": "Soup",
+        "fa": "سوپ"
+      }
+    },
+    {
+      "id": "rice",
+      "text": {
+        "en": "Rice",
+        "fa": "برنج"
+      }
+    },
+    {
+      "id": "knife",
+      "text": {
+        "en": "Knife",
+        "fa": "چاقو"
+      }
+    },
+    {
+      "id": "spoon",
+      "text": {
+        "en": "Spoon",
+        "fa": "قاشق"
+      }
+    },
+    {
+      "id": "plate",
+      "text": {
+        "en": "Plate",
+        "fa": "بشقاب"
+      }
+    },
+    {
+      "id": "bottle",
+      "text": {
+        "en": "Bottle",
+        "fa": "بطری"
+      }
+    },
+    {
+      "id": "basket",
+      "text": {
+        "en": "Basket",
+        "fa": "سبد"
+      }
+    },
+    {
+      "id": "chair",
+      "text": {
+        "en": "Chair",
+        "fa": "صندلی"
+      }
+    },
+    {
+      "id": "table",
+      "text": {
+        "en": "Table",
+        "fa": "میز"
+      }
+    },
+    {
+      "id": "bed",
+      "text": {
+        "en": "Bed",
+        "fa": "تخت"
+      }
+    },
+    {
+      "id": "door",
+      "text": {
+        "en": "Door",
+        "fa": "در"
+      }
+    },
+    {
+      "id": "roof",
+      "text": {
+        "en": "Roof",
+        "fa": "سقف"
+      }
+    },
+    {
+      "id": "wall",
+      "text": {
+        "en": "Wall",
+        "fa": "دیوار"
+      }
+    },
+    {
+      "id": "stairs",
+      "text": {
+        "en": "Stairs",
+        "fa": "پله"
+      }
+    },
+    {
+      "id": "ladder",
+      "text": {
+        "en": "Ladder",
+        "fa": "نردبون"
+      }
+    },
+    {
+      "id": "rope",
+      "text": {
+        "en": "Rope",
+        "fa": "طناب"
+      }
+    },
+    {
+      "id": "chain",
+      "text": {
+        "en": "Chain",
+        "fa": "زنجیر"
+      }
+    },
+    {
+      "id": "hammer",
+      "text": {
+        "en": "Hammer",
+        "fa": "چکش"
+      }
+    },
+    {
+      "id": "needle",
+      "text": {
+        "en": "Needle",
+        "fa": "سوزن"
+      }
+    },
+    {
+      "id": "bell",
+      "text": {
+        "en": "Bell",
+        "fa": "زنگ"
+      }
+    },
+    {
+      "id": "drum",
+      "text": {
+        "en": "Drum",
+        "fa": "طبل"
+      }
+    },
+    {
+      "id": "guitar",
+      "text": {
+        "en": "Guitar",
+        "fa": "گیتار"
+      }
+    },
+    {
+      "id": "flute",
+      "text": {
+        "en": "Flute",
+        "fa": "نی"
+      }
+    },
+    {
+      "id": "kite",
+      "text": {
+        "en": "Kite",
+        "fa": "بادبادک"
+      }
+    },
+    {
+      "id": "ball",
+      "text": {
+        "en": "Ball",
+        "fa": "توپ"
+      }
+    },
+    {
+      "id": "dice",
+      "text": {
+        "en": "Dice",
+        "fa": "تاس"
+      }
+    },
+    {
+      "id": "mask",
+      "text": {
+        "en": "Mask",
+        "fa": "ماسک"
+      }
+    },
+    {
+      "id": "ring",
+      "text": {
+        "en": "Ring",
+        "fa": "انگشتر"
+      }
+    },
+    {
+      "id": "diamond",
+      "text": {
+        "en": "Diamond",
+        "fa": "الماس"
+      }
+    },
+    {
+      "id": "gold",
+      "text": {
+        "en": "Gold",
+        "fa": "طلا"
+      }
+    },
+    {
+      "id": "coin",
+      "text": {
+        "en": "Coin",
+        "fa": "سکه"
+      }
+    },
+    {
+      "id": "treasure",
+      "text": {
+        "en": "Treasure",
+        "fa": "گنج"
+      }
+    },
+    {
+      "id": "map",
+      "text": {
+        "en": "Map",
+        "fa": "نقشه"
+      }
+    },
+    {
+      "id": "letter",
+      "text": {
+        "en": "Letter",
+        "fa": "نامه"
+      }
+    },
+    {
+      "id": "stamp",
+      "text": {
+        "en": "Stamp",
+        "fa": "تمبر"
+      }
+    },
+    {
+      "id": "photo",
+      "text": {
+        "en": "Photo",
+        "fa": "عکس"
+      }
+    },
+    {
+      "id": "camera",
+      "text": {
+        "en": "Camera",
+        "fa": "دوربین"
+      }
+    },
+    {
+      "id": "phone",
+      "text": {
+        "en": "Phone",
+        "fa": "گوشی"
+      }
+    },
+    {
+      "id": "train",
+      "text": {
+        "en": "Train",
+        "fa": "قطار"
+      }
+    },
+    {
+      "id": "plane",
+      "text": {
+        "en": "Plane",
+        "fa": "هواپیما"
+      }
+    },
+    {
+      "id": "car",
+      "text": {
+        "en": "Car",
+        "fa": "ماشین"
+      }
+    },
+    {
+      "id": "bicycle",
+      "text": {
+        "en": "Bicycle",
+        "fa": "دوچرخه"
+      }
+    },
+    {
+      "id": "balloon",
+      "text": {
+        "en": "Balloon",
+        "fa": "بادکنک"
+      }
+    },
+    {
+      "id": "rocket",
+      "text": {
+        "en": "Rocket",
+        "fa": "موشک"
+      }
+    },
+    {
+      "id": "robot",
+      "text": {
+        "en": "Robot",
+        "fa": "ربات"
+      }
+    },
+    {
+      "id": "ghost",
+      "text": {
+        "en": "Ghost",
+        "fa": "روح"
+      }
+    },
+    {
+      "id": "angel",
+      "text": {
+        "en": "Angel",
+        "fa": "فرشته"
+      }
+    },
+    {
+      "id": "dragon",
+      "text": {
+        "en": "Dragon",
+        "fa": "اژدها"
+      }
+    },
+    {
+      "id": "giant",
+      "text": {
+        "en": "Giant",
+        "fa": "غول"
+      }
+    },
+    {
+      "id": "witch",
+      "text": {
+        "en": "Witch",
+        "fa": "جادوگر"
+      }
+    },
+    {
+      "id": "shadow",
+      "text": {
+        "en": "Shadow",
+        "fa": "سایه"
+      }
+    },
+    {
+      "id": "dream",
+      "text": {
+        "en": "Dream",
+        "fa": "رویا"
+      }
+    },
+    {
+      "id": "smile",
+      "text": {
+        "en": "Smile",
+        "fa": "لبخند"
+      }
+    }
   ]
 }

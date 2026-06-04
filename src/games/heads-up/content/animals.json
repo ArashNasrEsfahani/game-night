@@ -1,18 +1,221 @@
 {
   "id": "animals",
-  "name": { "en": "Animals", "fa": "حیوانات" },
+  "name": {
+    "en": "Animals",
+    "fa": "حیوانات"
+  },
   "category": "animals",
   "icon": "🐾",
   "cards": [
-    { "id": "elephant", "word": { "en": "Elephant", "fa": "فیل" } },
-    { "id": "giraffe", "word": { "en": "Giraffe", "fa": "زرافه" } },
-    { "id": "penguin", "word": { "en": "Penguin", "fa": "پنگوئن" } },
-    { "id": "kangaroo", "word": { "en": "Kangaroo", "fa": "کانگورو" } },
-    { "id": "dolphin", "word": { "en": "Dolphin", "fa": "دلفین" } },
-    { "id": "crocodile", "word": { "en": "Crocodile", "fa": "تمساح" } },
-    { "id": "octopus", "word": { "en": "Octopus", "fa": "اختاپوس" } },
-    { "id": "peacock", "word": { "en": "Peacock", "fa": "طاووس" } },
-    { "id": "hedgehog", "word": { "en": "Hedgehog", "fa": "جوجه‌تیغی" } },
-    { "id": "camel", "word": { "en": "Camel", "fa": "شتر" } }
+    {
+      "id": "animals-elephant",
+      "word": {
+        "en": "Elephant",
+        "fa": "فیل"
+      }
+    },
+    {
+      "id": "animals-giraffe",
+      "word": {
+        "en": "Giraffe",
+        "fa": "زرافه"
+      }
+    },
+    {
+      "id": "animals-penguin",
+      "word": {
+        "en": "Penguin",
+        "fa": "پنگوئن"
+      }
+    },
+    {
+      "id": "animals-kangaroo",
+      "word": {
+        "en": "Kangaroo",
+        "fa": "کانگورو"
+      }
+    },
+    {
+      "id": "animals-dolphin",
+      "word": {
+        "en": "Dolphin",
+        "fa": "دلفین"
+      }
+    },
+    {
+      "id": "animals-crocodile",
+      "word": {
+        "en": "Crocodile",
+        "fa": "تمساح"
+      }
+    },
+    {
+      "id": "animals-octopus",
+      "word": {
+        "en": "Octopus",
+        "fa": "اختاپوس"
+      }
+    },
+    {
+      "id": "animals-peacock",
+      "word": {
+        "en": "Peacock",
+        "fa": "طاووس"
+      }
+    },
+    {
+      "id": "animals-hedgehog",
+      "word": {
+        "en": "Hedgehog",
+        "fa": "جوجه‌تیغی"
+      }
+    },
+    {
+      "id": "animals-camel",
+      "word": {
+        "en": "Camel",
+        "fa": "شتر"
+      }
+    },
+    {
+      "id": "animals-lion",
+      "word": {
+        "en": "Lion",
+        "fa": "شیر"
+      }
+    },
+    {
+      "id": "animals-tiger",
+      "word": {
+        "en": "Tiger",
+        "fa": "ببر"
+      }
+    },
+    {
+      "id": "animals-monkey",
+      "word": {
+        "en": "Monkey",
+        "fa": "میمون"
+      }
+    },
+    {
+      "id": "animals-zebra",
+      "word": {
+        "en": "Zebra",
+        "fa": "گورخر"
+      }
+    },
+    {
+      "id": "animals-bear",
+      "word": {
+        "en": "Bear",
+        "fa": "خرس"
+      }
+    },
+    {
+      "id": "animals-wolf",
+      "word": {
+        "en": "Wolf",
+        "fa": "گرگ"
+      }
+    },
+    {
+      "id": "animals-fox",
+      "word": {
+        "en": "Fox",
+        "fa": "روباه"
+      }
+    },
+    {
+      "id": "animals-rabbit",
+      "word": {
+        "en": "Rabbit",
+        "fa": "خرگوش"
+      }
+    },
+    {
+      "id": "animals-horse",
+      "word": {
+        "en": "Horse",
+        "fa": "اسب"
+      }
+    },
+    {
+      "id": "animals-cow",
+      "word": {
+        "en": "Cow",
+        "fa": "گاو"
+      }
+    },
+    {
+      "id": "animals-sheep",
+      "word": {
+        "en": "Sheep",
+        "fa": "گوسفند"
+      }
+    },
+    {
+      "id": "animals-goat",
+      "word": {
+        "en": "Goat",
+        "fa": "بز"
+      }
+    },
+    {
+      "id": "animals-chicken",
+      "word": {
+        "en": "Chicken",
+        "fa": "مرغ"
+      }
+    },
+    {
+      "id": "animals-rooster",
+      "word": {
+        "en": "Rooster",
+        "fa": "خروس"
+      }
+    },
+    {
+      "id": "animals-owl",
+      "word": {
+        "en": "Owl",
+        "fa": "جغد"
+      }
+    },
+    {
+      "id": "animals-eagle",
+      "word": {
+        "en": "Eagle",
+        "fa": "عقاب"
+      }
+    },
+    {
+      "id": "animals-snake",
+      "word": {
+        "en": "Snake",
+        "fa": "مار"
+      }
+    },
+    {
+      "id": "animals-turtle",
+      "word": {
+        "en": "Turtle",
+        "fa": "لاک‌پشت"
+      }
+    },
+    {
+      "id": "animals-frog",
+      "word": {
+        "en": "Frog",
+        "fa": "قورباغه"
+      }
+    },
+    {
+      "id": "animals-bat",
+      "word": {
+        "en": "Bat",
+        "fa": "خفاش"
+      }
+    }
   ]
 }

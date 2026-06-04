@@ -1,51 +1,398 @@
 {
   "id": "classic",
-  "name": { "en": "Classic", "fa": "کلاسیک" },
-  "description": { "en": "Crowd-pleasers for any group.", "fa": "مناسب هر جمعی." },
+  "name": {
+    "en": "Classic",
+    "fa": "کلاسیک"
+  },
+  "description": {
+    "en": "Crowd-pleasers for any group.",
+    "fa": "مناسب هر جمعی."
+  },
   "intensityDefault": "mild",
   "items": [
-    { "id": "classic-001", "intensity": "mild", "tags": ["superpower"],
-      "optionA": { "en": "Be able to fly", "fa": "بتونی پرواز کنی" },
-      "optionB": { "en": "Be able to turn invisible", "fa": "بتونی نامرئی بشی" } },
-    { "id": "classic-002", "intensity": "mild", "tags": ["food"],
-      "optionA": { "en": "Only ever eat pizza", "fa": "تا آخر عمر فقط پیتزا بخوری" },
-      "optionB": { "en": "Only ever eat kabab", "fa": "تا آخر عمر فقط کباب بخوری" } },
-    { "id": "classic-003", "intensity": "mild", "tags": ["time"],
-      "optionA": { "en": "Travel to the past", "fa": "به گذشته سفر کنی" },
-      "optionB": { "en": "Travel to the future", "fa": "به آینده سفر کنی" } },
-    { "id": "classic-004", "intensity": "mild", "tags": ["lifestyle"],
-      "optionA": { "en": "Always be 10 minutes late", "fa": "همیشه ۱۰ دقیقه دیر برسی" },
-      "optionB": { "en": "Always be 20 minutes early", "fa": "همیشه ۲۰ دقیقه زود برسی" } },
-    { "id": "classic-005", "intensity": "medium", "tags": ["social"],
-      "optionA": { "en": "Lose the ability to lie", "fa": "دیگه نتونی دروغ بگی" },
-      "optionB": { "en": "Believe every lie you hear", "fa": "هر دروغی رو که می‌شنوی باور کنی" } },
-    { "id": "classic-006", "intensity": "medium", "tags": ["money"],
-      "optionA": { "en": "Be rich but always tired", "fa": "ثروتمند باشی ولی همیشه خسته" },
-      "optionB": { "en": "Be broke but always well-rested", "fa": "بی‌پول باشی ولی همیشه سرحال" } },
-    { "id": "classic-007", "intensity": "mild", "tags": ["pets"],
-      "optionA": { "en": "Have a dog that talks", "fa": "سگی داشته باشی که حرف بزنه" },
-      "optionB": { "en": "Have a cat that does chores", "fa": "گربه‌ای داشته باشی که کارای خونه رو بکنه" } },
-    { "id": "classic-008", "intensity": "medium", "tags": ["tech"],
-      "optionA": { "en": "Give up your phone for a month", "fa": "یه ماه گوشیت رو کنار بذاری" },
-      "optionB": { "en": "Give up showering for a week", "fa": "یه هفته حموم نری" } },
-    { "id": "classic-009", "intensity": "mild", "tags": ["weather"],
-      "optionA": { "en": "Live somewhere it's always summer", "fa": "جایی زندگی کنی که همیشه تابستونه" },
-      "optionB": { "en": "Live somewhere it's always winter", "fa": "جایی زندگی کنی که همیشه زمستونه" } },
-    { "id": "classic-010", "intensity": "medium", "tags": ["ability"],
-      "optionA": { "en": "Speak every language", "fa": "همه‌ی زبون‌ها رو بلد باشی" },
-      "optionB": { "en": "Play every musical instrument", "fa": "همه‌ی سازها رو بلد باشی بزنی" } },
-    { "id": "classic-011", "intensity": "spicy", "tags": ["social"],
-      "optionA": { "en": "Have your search history made public", "fa": "تاریخچه‌ی جست‌وجوت عمومی بشه" },
-      "optionB": { "en": "Have your texts read aloud at dinner", "fa": "پیام‌هات سر شام بلند خونده بشه" } },
-    { "id": "classic-012", "intensity": "spicy", "tags": ["ethics"],
-      "optionA": { "en": "Always know when someone is lying", "fa": "همیشه بفهمی کی داره دروغ می‌گه" },
-      "optionB": { "en": "Always get away with your own lies", "fa": "همیشه دروغ‌های خودت لو نره" } },
-    { "id": "classic-013", "intensity": "medium", "tags": ["adventure"],
-      "optionA": { "en": "Explore deep space", "fa": "اعماق فضا رو کشف کنی" },
-      "optionB": { "en": "Explore the deep ocean", "fa": "اعماق اقیانوس رو کشف کنی" } },
-    { "id": "classic-014", "intensity": "mild", "tags": ["food"],
-      "optionA": { "en": "Never eat sweets again", "fa": "دیگه هیچ‌وقت شیرینی نخوری" },
-      "optionB": { "en": "Never drink tea again", "fa": "دیگه هیچ‌وقت چای نخوری" },
-      "note": { "en": "Tough one for a Persian household!", "fa": "برای یه خونه‌ی ایرانی سخته!" } }
+    {
+      "id": "classic-001",
+      "intensity": "mild",
+      "optionA": {
+        "en": "Be able to fly",
+        "fa": "بتونی پرواز کنی"
+      },
+      "optionB": {
+        "en": "Be able to turn invisible",
+        "fa": "بتونی نامرئی بشی"
+      }
+    },
+    {
+      "id": "classic-002",
+      "intensity": "mild",
+      "optionA": {
+        "en": "Only ever eat pizza",
+        "fa": "تا آخر عمر فقط پیتزا بخوری"
+      },
+      "optionB": {
+        "en": "Only ever eat kabab",
+        "fa": "تا آخر عمر فقط کباب بخوری"
+      }
+    },
+    {
+      "id": "classic-003",
+      "intensity": "mild",
+      "optionA": {
+        "en": "Travel to the past",
+        "fa": "به گذشته سفر کنی"
+      },
+      "optionB": {
+        "en": "Travel to the future",
+        "fa": "به آینده سفر کنی"
+      }
+    },
+    {
+      "id": "classic-004",
+      "intensity": "mild",
+      "optionA": {
+        "en": "Always be 10 minutes late",
+        "fa": "همیشه ۱۰ دقیقه دیر برسی"
+      },
+      "optionB": {
+        "en": "Always be 20 minutes early",
+        "fa": "همیشه ۲۰ دقیقه زود برسی"
+      }
+    },
+    {
+      "id": "classic-005",
+      "intensity": "mild",
+      "optionA": {
+        "en": "Live somewhere it's always summer",
+        "fa": "جایی زندگی کنی که همیشه تابستونه"
+      },
+      "optionB": {
+        "en": "Live somewhere it's always winter",
+        "fa": "جایی زندگی کنی که همیشه زمستونه"
+      }
+    },
+    {
+      "id": "classic-006",
+      "intensity": "mild",
+      "optionA": {
+        "en": "Have a dog that talks",
+        "fa": "سگی داشته باشی که حرف بزنه"
+      },
+      "optionB": {
+        "en": "Have a cat that does chores",
+        "fa": "گربه‌ای داشته باشی که کارای خونه رو بکنه"
+      }
+    },
+    {
+      "id": "classic-007",
+      "intensity": "mild",
+      "optionA": {
+        "en": "Never eat sweets again",
+        "fa": "دیگه هیچ‌وقت شیرینی نخوری"
+      },
+      "optionB": {
+        "en": "Never drink tea again",
+        "fa": "دیگه هیچ‌وقت چای نخوری"
+      }
+    },
+    {
+      "id": "classic-008",
+      "intensity": "mild",
+      "optionA": {
+        "en": "Live by the sea",
+        "fa": "کنار دریا زندگی کنی"
+      },
+      "optionB": {
+        "en": "Live in the mountains",
+        "fa": "تو کوهستان زندگی کنی"
+      }
+    },
+    {
+      "id": "classic-009",
+      "intensity": "mild",
+      "optionA": {
+        "en": "Always know the time exactly",
+        "fa": "همیشه دقیق بدونی ساعت چنده"
+      },
+      "optionB": {
+        "en": "Always know the way home",
+        "fa": "همیشه راه خونه رو بلد باشی"
+      }
+    },
+    {
+      "id": "classic-010",
+      "intensity": "mild",
+      "optionA": {
+        "en": "Have free coffee for life",
+        "fa": "تا آخر عمر قهوه‌ی مجانی داشته باشی"
+      },
+      "optionB": {
+        "en": "Have free ice cream for life",
+        "fa": "تا آخر عمر بستنی‌ مجانی داشته باشی"
+      }
+    },
+    {
+      "id": "classic-011",
+      "intensity": "mild",
+      "optionA": {
+        "en": "Be the funniest one in the room",
+        "fa": "بامزه‌ترین آدم جمع باشی"
+      },
+      "optionB": {
+        "en": "Be the smartest one in the room",
+        "fa": "باهوش‌ترین آدم جمع باشی"
+      }
+    },
+    {
+      "id": "classic-012",
+      "intensity": "mild",
+      "optionA": {
+        "en": "Wake up early every day",
+        "fa": "هر روز صبح زود بیدار شی"
+      },
+      "optionB": {
+        "en": "Stay up late every night",
+        "fa": "هر شب تا دیروقت بیدار بمونی"
+      }
+    },
+    {
+      "id": "classic-013",
+      "intensity": "mild",
+      "optionA": {
+        "en": "Read one book a week",
+        "fa": "هفته‌ای یه کتاب بخونی"
+      },
+      "optionB": {
+        "en": "Watch one movie a night",
+        "fa": "هر شب یه فیلم ببینی"
+      }
+    },
+    {
+      "id": "classic-014",
+      "intensity": "mild",
+      "optionA": {
+        "en": "Have a pause button for life",
+        "fa": "یه دکمه‌ی توقف برای زندگیت داشته باشی"
+      },
+      "optionB": {
+        "en": "Have a rewind button for life",
+        "fa": "یه دکمه‌ی برگشت برای زندگیت داشته باشی"
+      }
+    },
+    {
+      "id": "classic-015",
+      "intensity": "mild",
+      "optionA": {
+        "en": "Never get stuck in traffic",
+        "fa": "هیچ‌وقت تو ترافیک گیر نکنی"
+      },
+      "optionB": {
+        "en": "Never wait in a single line",
+        "fa": "هیچ‌وقت تو هیچ صفی نمونی"
+      }
+    },
+    {
+      "id": "classic-016",
+      "intensity": "mild",
+      "optionA": {
+        "en": "Be a famous singer",
+        "fa": "یه خواننده‌ی معروف باشی"
+      },
+      "optionB": {
+        "en": "Be a famous actor",
+        "fa": "یه بازیگر معروف باشی"
+      }
+    },
+    {
+      "id": "classic-017",
+      "intensity": "medium",
+      "optionA": {
+        "en": "Lose the ability to lie",
+        "fa": "دیگه نتونی دروغ بگی"
+      },
+      "optionB": {
+        "en": "Believe every lie you hear",
+        "fa": "هر دروغی رو که می‌شنوی باور کنی"
+      }
+    },
+    {
+      "id": "classic-018",
+      "intensity": "medium",
+      "optionA": {
+        "en": "Be rich but always tired",
+        "fa": "پولدار باشی ولی همیشه خسته"
+      },
+      "optionB": {
+        "en": "Be broke but always rested",
+        "fa": "بی‌پول باشی ولی همیشه سرحال"
+      }
+    },
+    {
+      "id": "classic-019",
+      "intensity": "medium",
+      "optionA": {
+        "en": "Give up your phone for a month",
+        "fa": "یه ماه گوشیت رو کنار بذاری"
+      },
+      "optionB": {
+        "en": "Give up the internet for a week",
+        "fa": "یه هفته اینترنت رو کنار بذاری"
+      }
+    },
+    {
+      "id": "classic-020",
+      "intensity": "medium",
+      "optionA": {
+        "en": "Speak every language fluently",
+        "fa": "همه‌ی زبون‌ها رو روون بلد باشی"
+      },
+      "optionB": {
+        "en": "Play every instrument perfectly",
+        "fa": "همه‌ی سازها رو عالی بلد باشی بزنی"
+      }
+    },
+    {
+      "id": "classic-021",
+      "intensity": "medium",
+      "optionA": {
+        "en": "Explore deep space",
+        "fa": "اعماق فضا رو کشف کنی"
+      },
+      "optionB": {
+        "en": "Explore the deep ocean",
+        "fa": "اعماق اقیانوس رو کشف کنی"
+      }
+    },
+    {
+      "id": "classic-022",
+      "intensity": "medium",
+      "optionA": {
+        "en": "Always say what you think",
+        "fa": "همیشه حرف دلت رو بزنی"
+      },
+      "optionB": {
+        "en": "Always keep it to yourself",
+        "fa": "همیشه حرفت رو تو دلت نگه داری"
+      }
+    },
+    {
+      "id": "classic-023",
+      "intensity": "medium",
+      "optionA": {
+        "en": "Relive your best day forever",
+        "fa": "بهترین روز عمرت رو تا ابد تکرار کنی"
+      },
+      "optionB": {
+        "en": "Skip every bad day forever",
+        "fa": "هر روز بدت رو تا ابد رد کنی"
+      }
+    },
+    {
+      "id": "classic-024",
+      "intensity": "medium",
+      "optionA": {
+        "en": "Have one true best friend",
+        "fa": "یه رفیق واقعی داشته باشی"
+      },
+      "optionB": {
+        "en": "Have a hundred fun friends",
+        "fa": "صد تا دوست بامزه داشته باشی"
+      }
+    },
+    {
+      "id": "classic-025",
+      "intensity": "medium",
+      "optionA": {
+        "en": "Know how you'll die",
+        "fa": "بدونی چه‌جوری می‌میری"
+      },
+      "optionB": {
+        "en": "Know when you'll die",
+        "fa": "بدونی کی می‌میری"
+      }
+    },
+    {
+      "id": "classic-026",
+      "intensity": "medium",
+      "optionA": {
+        "en": "Be loved but not respected",
+        "fa": "دوستت داشته باشن ولی احترامت نذارن"
+      },
+      "optionB": {
+        "en": "Be respected but not loved",
+        "fa": "احترامت بذارن ولی دوستت نداشته باشن"
+      }
+    },
+    {
+      "id": "classic-027",
+      "intensity": "medium",
+      "optionA": {
+        "en": "Work a job you love for little pay",
+        "fa": "کاری که دوست داری رو با حقوق کم بکنی"
+      },
+      "optionB": {
+        "en": "Work a dull job for great pay",
+        "fa": "کار خسته‌کننده رو با حقوق عالی بکنی"
+      }
+    },
+    {
+      "id": "classic-028",
+      "intensity": "medium",
+      "optionA": {
+        "en": "Forget every movie you've seen",
+        "fa": "همه‌ی فیلم‌هایی که دیدی رو فراموش کنی"
+      },
+      "optionB": {
+        "en": "Forget every song you've heard",
+        "fa": "همه‌ی آهنگ‌هایی که شنیدی رو فراموش کنی"
+      }
+    },
+    {
+      "id": "classic-029",
+      "intensity": "medium",
+      "optionA": {
+        "en": "Live the same year twice",
+        "fa": "یه سال رو دو بار زندگی کنی"
+      },
+      "optionB": {
+        "en": "Age two years in one",
+        "fa": "تو یه سال دو سال پیر شی"
+      }
+    },
+    {
+      "id": "classic-030",
+      "intensity": "medium",
+      "optionA": {
+        "en": "Always win but play alone",
+        "fa": "همیشه ببری ولی تنها بازی کنی"
+      },
+      "optionB": {
+        "en": "Often lose but play together",
+        "fa": "بیشتر ببازی ولی با هم بازی کنی"
+      }
+    },
+    {
+      "id": "classic-031",
+      "intensity": "medium",
+      "optionA": {
+        "en": "Travel the world but never settle",
+        "fa": "دنیا رو بگردی ولی هیچ‌جا موندگار نشی"
+      },
+      "optionB": {
+        "en": "Settle down but never travel",
+        "fa": "یه‌جا موندگار شی ولی هیچ‌جا نری"
+      }
+    },
+    {
+      "id": "classic-032",
+      "intensity": "medium",
+      "optionA": {
+        "en": "Remember every face you meet",
+        "fa": "صورت هر کسی رو ببینی یادت بمونه"
+      },
+      "optionB": {
+        "en": "Remember every name you hear",
+        "fa": "اسم هر کسی رو بشنوی یادت بمونه"
+      }
+    }
   ]
 }

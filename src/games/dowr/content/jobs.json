@@ -1,7 +1,308 @@
 [
-  { "id": "job-001", "word": { "en": "Doctor", "fa": "پزشک" }, "category": "jobs", "difficulty": "easy" },
-  { "id": "job-002", "word": { "en": "Carpenter", "fa": "نجار" }, "category": "jobs", "difficulty": "med" },
-  { "id": "job-003", "word": { "en": "Astronaut", "fa": "فضانورد" }, "category": "jobs", "difficulty": "hard" },
-  { "id": "job-004", "word": { "en": "Teacher", "fa": "معلم" }, "category": "jobs", "difficulty": "easy" },
-  { "id": "job-005", "word": { "en": "Firefighter", "fa": "آتش‌نشان" }, "category": "jobs", "difficulty": "med" }
+  {
+    "id": "job-001",
+    "word": {
+      "en": "Doctor",
+      "fa": "دکتر"
+    },
+    "category": "jobs",
+    "difficulty": "easy"
+  },
+  {
+    "id": "job-002",
+    "word": {
+      "en": "Teacher",
+      "fa": "معلم"
+    },
+    "category": "jobs",
+    "difficulty": "easy"
+  },
+  {
+    "id": "job-003",
+    "word": {
+      "en": "Driver",
+      "fa": "راننده"
+    },
+    "category": "jobs",
+    "difficulty": "easy"
+  },
+  {
+    "id": "job-004",
+    "word": {
+      "en": "Cook / Chef",
+      "fa": "آشپز"
+    },
+    "category": "jobs",
+    "difficulty": "easy"
+  },
+  {
+    "id": "job-005",
+    "word": {
+      "en": "Police officer",
+      "fa": "پلیس"
+    },
+    "category": "jobs",
+    "difficulty": "easy"
+  },
+  {
+    "id": "job-006",
+    "word": {
+      "en": "Nurse",
+      "fa": "پرستار"
+    },
+    "category": "jobs",
+    "difficulty": "easy"
+  },
+  {
+    "id": "job-007",
+    "word": {
+      "en": "Hairdresser",
+      "fa": "آرایشگر"
+    },
+    "category": "jobs",
+    "difficulty": "easy"
+  },
+  {
+    "id": "job-008",
+    "word": {
+      "en": "Baker",
+      "fa": "نونوا"
+    },
+    "category": "jobs",
+    "difficulty": "easy"
+  },
+  {
+    "id": "job-009",
+    "word": {
+      "en": "Butcher",
+      "fa": "قصاب"
+    },
+    "category": "jobs",
+    "difficulty": "easy"
+  },
+  {
+    "id": "job-010",
+    "word": {
+      "en": "Farmer",
+      "fa": "کشاورز"
+    },
+    "category": "jobs",
+    "difficulty": "easy"
+  },
+  {
+    "id": "job-011",
+    "word": {
+      "en": "Singer",
+      "fa": "خواننده"
+    },
+    "category": "jobs",
+    "difficulty": "easy"
+  },
+  {
+    "id": "job-012",
+    "word": {
+      "en": "Soccer player",
+      "fa": "فوتبالیست"
+    },
+    "category": "jobs",
+    "difficulty": "easy"
+  },
+  {
+    "id": "job-013",
+    "word": {
+      "en": "Firefighter",
+      "fa": "آتش‌نشان"
+    },
+    "category": "jobs",
+    "difficulty": "med"
+  },
+  {
+    "id": "job-014",
+    "word": {
+      "en": "Carpenter",
+      "fa": "نجار"
+    },
+    "category": "jobs",
+    "difficulty": "med"
+  },
+  {
+    "id": "job-015",
+    "word": {
+      "en": "Mechanic",
+      "fa": "مکانیک"
+    },
+    "category": "jobs",
+    "difficulty": "med"
+  },
+  {
+    "id": "job-016",
+    "word": {
+      "en": "Pilot",
+      "fa": "خلبان"
+    },
+    "category": "jobs",
+    "difficulty": "med"
+  },
+  {
+    "id": "job-017",
+    "word": {
+      "en": "Dentist",
+      "fa": "دندون‌پزشک"
+    },
+    "category": "jobs",
+    "difficulty": "med"
+  },
+  {
+    "id": "job-018",
+    "word": {
+      "en": "Engineer",
+      "fa": "مهندس"
+    },
+    "category": "jobs",
+    "difficulty": "med"
+  },
+  {
+    "id": "job-019",
+    "word": {
+      "en": "Lawyer",
+      "fa": "وکیل"
+    },
+    "category": "jobs",
+    "difficulty": "med"
+  },
+  {
+    "id": "job-020",
+    "word": {
+      "en": "Journalist",
+      "fa": "خبرنگار"
+    },
+    "category": "jobs",
+    "difficulty": "med"
+  },
+  {
+    "id": "job-021",
+    "word": {
+      "en": "Photographer",
+      "fa": "عکاس"
+    },
+    "category": "jobs",
+    "difficulty": "med"
+  },
+  {
+    "id": "job-022",
+    "word": {
+      "en": "Painter (artist)",
+      "fa": "نقاش"
+    },
+    "category": "jobs",
+    "difficulty": "med"
+  },
+  {
+    "id": "job-023",
+    "word": {
+      "en": "Plumber",
+      "fa": "لوله‌کش"
+    },
+    "category": "jobs",
+    "difficulty": "med"
+  },
+  {
+    "id": "job-024",
+    "word": {
+      "en": "Electrician",
+      "fa": "برق‌کار"
+    },
+    "category": "jobs",
+    "difficulty": "med"
+  },
+  {
+    "id": "job-025",
+    "word": {
+      "en": "Waiter",
+      "fa": "گارسون"
+    },
+    "category": "jobs",
+    "difficulty": "med"
+  },
+  {
+    "id": "job-026",
+    "word": {
+      "en": "Tailor",
+      "fa": "خیاط"
+    },
+    "category": "jobs",
+    "difficulty": "med"
+  },
+  {
+    "id": "job-027",
+    "word": {
+      "en": "Actor",
+      "fa": "بازیگر"
+    },
+    "category": "jobs",
+    "difficulty": "med"
+  },
+  {
+    "id": "job-028",
+    "word": {
+      "en": "Astronaut",
+      "fa": "فضانورد"
+    },
+    "category": "jobs",
+    "difficulty": "hard"
+  },
+  {
+    "id": "job-029",
+    "word": {
+      "en": "Architect",
+      "fa": "معمار"
+    },
+    "category": "jobs",
+    "difficulty": "hard"
+  },
+  {
+    "id": "job-030",
+    "word": {
+      "en": "Surgeon",
+      "fa": "جراح"
+    },
+    "category": "jobs",
+    "difficulty": "hard"
+  },
+  {
+    "id": "job-031",
+    "word": {
+      "en": "Veterinarian",
+      "fa": "دامپزشک"
+    },
+    "category": "jobs",
+    "difficulty": "hard"
+  },
+  {
+    "id": "job-032",
+    "word": {
+      "en": "Translator",
+      "fa": "مترجم"
+    },
+    "category": "jobs",
+    "difficulty": "hard"
+  },
+  {
+    "id": "job-033",
+    "word": {
+      "en": "Accountant",
+      "fa": "حسابدار"
+    },
+    "category": "jobs",
+    "difficulty": "hard"
+  },
+  {
+    "id": "job-034",
+    "word": {
+      "en": "Blacksmith",
+      "fa": "آهنگر"
+    },
+    "category": "jobs",
+    "difficulty": "hard"
+  }
 ]

@@ -5,7 +5,7 @@ import { createInitialState, reducer, rankPlayers, computeWinners } from './logi
 import type { NhieState } from './logic';
 import { DEFAULT_OPTIONS } from './config';
 import type { NhieOptions } from './config';
-import { validateContent } from './content';
+import { getDeck, validateContent } from './content';
 
 const seat = (id: string): PlayerSeat => ({ id: asPlayerId(id), name: id.toUpperCase() });
 
@@ -15,14 +15,14 @@ function makeConfig(options: Partial<NhieOptions> = {}, ids = ['a', 'b', 'c']): 
     options: {
       ...DEFAULT_OPTIONS,
       intensities: ['classic', 'spicy', 'wild'],
-      deckSize: 50,
+      deckSize: 200,
       ...options,
     },
     lang: 'en',
   };
 }
 
-const POOL = 18; // 7 classic + 6 spicy + 5 wild
+const POOL = getDeck({ intensities: ['classic', 'spicy', 'wild'] }).length;
 
 /** Play one sequential round; `haves` = ids that confess. */
 function playRound(s: NhieState, haves: string[]): NhieState {

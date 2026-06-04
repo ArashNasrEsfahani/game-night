@@ -1,7 +1,308 @@
 [
-  { "id": "ani-001", "word": { "en": "Cat", "fa": "گربه" }, "category": "animals", "difficulty": "easy" },
-  { "id": "ani-002", "word": { "en": "Camel", "fa": "شتر" }, "category": "animals", "difficulty": "easy" },
-  { "id": "ani-003", "word": { "en": "Peacock", "fa": "طاووس" }, "category": "animals", "difficulty": "med" },
-  { "id": "ani-004", "word": { "en": "Hedgehog", "fa": "جوجه‌تیغی" }, "category": "animals", "difficulty": "hard" },
-  { "id": "ani-005", "word": { "en": "Dolphin", "fa": "دلفین" }, "category": "animals", "difficulty": "med" }
+  {
+    "id": "ani-001",
+    "word": {
+      "en": "Cat",
+      "fa": "گربه"
+    },
+    "category": "animals",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ani-002",
+    "word": {
+      "en": "Dog",
+      "fa": "سگ"
+    },
+    "category": "animals",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ani-003",
+    "word": {
+      "en": "Cow",
+      "fa": "گاو"
+    },
+    "category": "animals",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ani-004",
+    "word": {
+      "en": "Sheep",
+      "fa": "گوسفند"
+    },
+    "category": "animals",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ani-005",
+    "word": {
+      "en": "Horse",
+      "fa": "اسب"
+    },
+    "category": "animals",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ani-006",
+    "word": {
+      "en": "Donkey",
+      "fa": "الاغ"
+    },
+    "category": "animals",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ani-007",
+    "word": {
+      "en": "Chicken",
+      "fa": "مرغ"
+    },
+    "category": "animals",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ani-008",
+    "word": {
+      "en": "Rooster",
+      "fa": "خروس"
+    },
+    "category": "animals",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ani-009",
+    "word": {
+      "en": "Fish",
+      "fa": "ماهی"
+    },
+    "category": "animals",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ani-010",
+    "word": {
+      "en": "Mouse",
+      "fa": "موش"
+    },
+    "category": "animals",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ani-011",
+    "word": {
+      "en": "Lion",
+      "fa": "شیر"
+    },
+    "category": "animals",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ani-012",
+    "word": {
+      "en": "Camel",
+      "fa": "شتر"
+    },
+    "category": "animals",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ani-013",
+    "word": {
+      "en": "Elephant",
+      "fa": "فیل"
+    },
+    "category": "animals",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ani-014",
+    "word": {
+      "en": "Bear",
+      "fa": "خرس"
+    },
+    "category": "animals",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ani-015",
+    "word": {
+      "en": "Snake",
+      "fa": "مار"
+    },
+    "category": "animals",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ani-016",
+    "word": {
+      "en": "Monkey",
+      "fa": "میمون"
+    },
+    "category": "animals",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ani-017",
+    "word": {
+      "en": "Rabbit",
+      "fa": "خرگوش"
+    },
+    "category": "animals",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ani-018",
+    "word": {
+      "en": "Wolf",
+      "fa": "گرگ"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "ani-019",
+    "word": {
+      "en": "Fox",
+      "fa": "روباه"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "ani-020",
+    "word": {
+      "en": "Giraffe",
+      "fa": "زرافه"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "ani-021",
+    "word": {
+      "en": "Tiger",
+      "fa": "ببر"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "ani-022",
+    "word": {
+      "en": "Frog",
+      "fa": "قورباغه"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "ani-023",
+    "word": {
+      "en": "Turtle",
+      "fa": "لاک‌پشت"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "ani-024",
+    "word": {
+      "en": "Peacock",
+      "fa": "طاووس"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "ani-025",
+    "word": {
+      "en": "Owl",
+      "fa": "جغد"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "ani-026",
+    "word": {
+      "en": "Spider",
+      "fa": "عنکبوت"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "ani-027",
+    "word": {
+      "en": "Crocodile",
+      "fa": "تمساح"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "ani-028",
+    "word": {
+      "en": "Dolphin",
+      "fa": "دلفین"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "ani-029",
+    "word": {
+      "en": "Parrot",
+      "fa": "طوطی"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "ani-030",
+    "word": {
+      "en": "Bat",
+      "fa": "خفاش"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "ani-031",
+    "word": {
+      "en": "Hedgehog",
+      "fa": "جوجه‌تیغی"
+    },
+    "category": "animals",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ani-032",
+    "word": {
+      "en": "Squirrel",
+      "fa": "سنجاب"
+    },
+    "category": "animals",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ani-033",
+    "word": {
+      "en": "Chameleon",
+      "fa": "آفتاب‌پرست"
+    },
+    "category": "animals",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ani-034",
+    "word": {
+      "en": "Woodpecker",
+      "fa": "دارکوب"
+    },
+    "category": "animals",
+    "difficulty": "hard"
+  }
 ]

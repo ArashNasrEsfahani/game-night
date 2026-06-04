@@ -5,7 +5,7 @@ import { createInitialState, reducer, standings, computeWinners } from './logic'
 import type { Side, WyrState } from './logic';
 import { DEFAULT_OPTIONS } from './config';
 import type { WyrOptions } from './config';
-import { validateContent } from './content';
+import { poolFor, validateContent } from './content';
 
 const seat = (id: string): PlayerSeat => ({ id: asPlayerId(id), name: id.toUpperCase() });
 
@@ -24,7 +24,7 @@ function makeConfig(options: Partial<WyrOptions> = {}, ids = ['p1', 'p2', 'p3'])
   };
 }
 
-const POOL = 14;
+const POOL = poolFor('classic', 'spicy').length;
 
 function voteRound(s: WyrState, choices: Record<string, Side>): WyrState {
   s = reducer(s, { type: 'BEGIN_COLLECTION' });

@@ -1,32 +1,350 @@
 {
   "id": "spicy",
-  "name": { "en": "Spicy", "fa": "تند" },
-  "description": { "en": "Bolder dilemmas for a daring group.", "fa": "دوراهی‌های جسورانه‌تر برای جمع شجاع." },
+  "name": {
+    "en": "Spicy",
+    "fa": "تند"
+  },
+  "description": {
+    "en": "Bolder dilemmas for a daring group.",
+    "fa": "دوراهی‌های جسورانه‌تر برای جمع شجاع."
+  },
   "intensityDefault": "spicy",
   "items": [
-    { "id": "spicy-001", "intensity": "medium", "tags": ["social"],
-      "optionA": { "en": "Read everyone's mind for a day", "fa": "یه روز فکر همه رو بخونی" },
-      "optionB": { "en": "Let everyone read yours for a day", "fa": "یه روز همه فکر تو رو بخونن" } },
-    { "id": "spicy-002", "intensity": "spicy", "tags": ["romance"],
-      "optionA": { "en": "Marry your celebrity crush but be bored", "fa": "با سلبریتی موردعلاقه‌ت ازدواج کنی ولی حوصله‌ت سر بره" },
-      "optionB": { "en": "Marry a stranger who adores you", "fa": "با یه غریبه که عاشقته ازدواج کنی" } },
-    { "id": "spicy-003", "intensity": "spicy", "tags": ["secrets"],
-      "optionA": { "en": "Reveal your biggest secret to the group", "fa": "بزرگ‌ترین رازت رو به جمع بگی" },
-      "optionB": { "en": "Hear everyone else's biggest secret", "fa": "بزرگ‌ترین راز بقیه رو بشنوی" } },
-    { "id": "spicy-004", "intensity": "medium", "tags": ["career"],
-      "optionA": { "en": "Have a dream job with no pay", "fa": "شغل رویاییت رو داشته باشی ولی بی‌حقوق" },
-      "optionB": { "en": "Have a boring job with huge pay", "fa": "شغل خسته‌کننده ولی پرحقوق داشته باشی" } },
-    { "id": "spicy-005", "intensity": "spicy", "tags": ["ethics"],
-      "optionA": { "en": "Win every game by cheating", "fa": "با تقلب توی هر بازی برنده بشی" },
-      "optionB": { "en": "Lose every game honestly", "fa": "صادقانه توی هر بازی ببازی" } },
-    { "id": "spicy-006", "intensity": "mild", "tags": ["food"],
-      "optionA": { "en": "Give up coffee forever", "fa": "برای همیشه قهوه رو کنار بذاری" },
-      "optionB": { "en": "Give up dessert forever", "fa": "برای همیشه دسر رو کنار بذاری" } },
-    { "id": "spicy-007", "intensity": "spicy", "tags": ["fame"],
-      "optionA": { "en": "Be famous for something embarrassing", "fa": "به‌خاطر یه چیز خجالت‌آور مشهور بشی" },
-      "optionB": { "en": "Be forgotten despite doing something great", "fa": "با وجود یه کار بزرگ فراموش بشی" } },
-    { "id": "spicy-008", "intensity": "medium", "tags": ["lifestyle"],
-      "optionA": { "en": "Never use the internet again", "fa": "دیگه هیچ‌وقت از اینترنت استفاده نکنی" },
-      "optionB": { "en": "Never travel again", "fa": "دیگه هیچ‌وقت سفر نری" } }
+    {
+      "id": "spicy-001",
+      "intensity": "spicy",
+      "optionA": {
+        "en": "Have your last text message read out loud to the whole group",
+        "fa": "آخرین پیامی که فرستادی رو بلند برای کل جمع بخونن"
+      },
+      "optionB": {
+        "en": "Let the group scroll your photo gallery for one minute",
+        "fa": "بذاری جمع یه دقیقه گالری عکس‌هات رو بالا پایین کنه"
+      }
+    },
+    {
+      "id": "spicy-002",
+      "intensity": "spicy",
+      "optionA": {
+        "en": "Confess your worst date story right now",
+        "fa": "همین الان بدترین قرار عاشقانه‌ی عمرت رو تعریف کنی"
+      },
+      "optionB": {
+        "en": "Let your ex describe you in three words",
+        "fa": "بذاری اکست با سه تا کلمه توصیفت کنه"
+      }
+    },
+    {
+      "id": "spicy-003",
+      "intensity": "medium",
+      "optionA": {
+        "en": "Date someone gorgeous but clingy",
+        "fa": "با یه آدم خوش‌قیافه ولی چسبناک باشی"
+      },
+      "optionB": {
+        "en": "Date someone plain but totally chill",
+        "fa": "با یه آدم معمولی ولی کاملاً بی‌خیال و راحت باشی"
+      }
+    },
+    {
+      "id": "spicy-004",
+      "intensity": "spicy",
+      "optionA": {
+        "en": "Tell the group who you secretly find attractive",
+        "fa": "به جمع بگی مخفیانه از کی خوشت میاد"
+      },
+      "optionB": {
+        "en": "Have the group guess your crush out loud",
+        "fa": "بذاری جمع بلند بلند حدس بزنن کراشت کیه"
+      }
+    },
+    {
+      "id": "spicy-005",
+      "intensity": "medium",
+      "optionA": {
+        "en": "Be caught singing badly in the shower",
+        "fa": "موقع آواز خوندن افتضاحت زیر دوش مچت رو بگیرن"
+      },
+      "optionB": {
+        "en": "Be caught talking to yourself in the mirror",
+        "fa": "موقع حرف زدن با خودت جلوی آینه مچت رو بگیرن"
+      }
+    },
+    {
+      "id": "spicy-006",
+      "intensity": "spicy",
+      "optionA": {
+        "en": "Reveal how many people you've kissed",
+        "fa": "بگی تا حالا با چند نفر بوس و ماچ داشتی"
+      },
+      "optionB": {
+        "en": "Reveal your most embarrassing nickname",
+        "fa": "خجالت‌آورترین لقبی که روت گذاشتن رو لو بدی"
+      }
+    },
+    {
+      "id": "spicy-007",
+      "intensity": "medium",
+      "optionA": {
+        "en": "Always flirt by being super awkward",
+        "fa": "همیشه موقع لاس زدن خیلی دست‌وپا چلفتی بشی"
+      },
+      "optionB": {
+        "en": "Always flirt by being way too forward",
+        "fa": "همیشه موقع لاس زدن زیادی رک و بی‌پروا باشی"
+      }
+    },
+    {
+      "id": "spicy-008",
+      "intensity": "spicy",
+      "optionA": {
+        "en": "Have your browser search history leaked",
+        "fa": "تاریخچه‌ی سرچ مرورگرت لو بره"
+      },
+      "optionB": {
+        "en": "Have your DMs projected on the wall",
+        "fa": "پیام‌های دایرکتت روی دیوار پروژکت بشه"
+      }
+    },
+    {
+      "id": "spicy-009",
+      "intensity": "medium",
+      "optionA": {
+        "en": "Go on a blind date set up by your mom",
+        "fa": "بری سر قرار عاشقانه‌ای که مامانت جور کرده"
+      },
+      "optionB": {
+        "en": "Go on a blind date set up by your nosiest friend",
+        "fa": "بری سر قراری که فوضول‌ترین دوستت جور کرده"
+      }
+    },
+    {
+      "id": "spicy-010",
+      "intensity": "spicy",
+      "optionA": {
+        "en": "Drunk-text your boss by accident",
+        "fa": "اشتباهی تو حالت مستی به رئیست پیام بدی"
+      },
+      "optionB": {
+        "en": "Drunk-text your crush by accident",
+        "fa": "اشتباهی تو حالت مستی به کراشت پیام بدی"
+      }
+    },
+    {
+      "id": "spicy-011",
+      "intensity": "medium",
+      "optionA": {
+        "en": "Have everyone know your weight",
+        "fa": "همه وزنت رو بدونن"
+      },
+      "optionB": {
+        "en": "Have everyone know your bank balance",
+        "fa": "همه موجودی حسابت رو بدونن"
+      }
+    },
+    {
+      "id": "spicy-012",
+      "intensity": "spicy",
+      "optionA": {
+        "en": "Kiss the person to your left on the cheek",
+        "fa": "گونه‌ی نفر سمت چپت رو بوس کنی"
+      },
+      "optionB": {
+        "en": "Whisper a compliment to the person on your right",
+        "fa": "در گوش نفر سمت راستت یه تعریف زمزمه کنی"
+      }
+    },
+    {
+      "id": "spicy-013",
+      "intensity": "medium",
+      "optionA": {
+        "en": "Wear last night's outfit for a week",
+        "fa": "یه هفته همون لباس دیشب رو بپوشی"
+      },
+      "optionB": {
+        "en": "Wear your pajamas everywhere for a week",
+        "fa": "یه هفته همه جا با لباس خواب بری"
+      }
+    },
+    {
+      "id": "spicy-014",
+      "intensity": "spicy",
+      "optionA": {
+        "en": "Have your camera roll set to your phone wallpaper randomly",
+        "fa": "یه عکس رندوم از گالریت بشه پس‌زمینه‌ی گوشیت"
+      },
+      "optionB": {
+        "en": "Have your most-played song play whenever you enter a room",
+        "fa": "هر بار وارد یه اتاق شدی، آهنگی که بیشتر از همه گوش دادی پخش بشه"
+      }
+    },
+    {
+      "id": "spicy-015",
+      "intensity": "medium",
+      "optionA": {
+        "en": "Always laugh at the worst possible moment",
+        "fa": "همیشه تو بدترین لحظه‌ی ممکن خنده‌ت بگیره"
+      },
+      "optionB": {
+        "en": "Always blush whenever someone says your name",
+        "fa": "هر بار کسی اسمت رو بگه سرخ بشی"
+      }
+    },
+    {
+      "id": "spicy-016",
+      "intensity": "spicy",
+      "optionA": {
+        "en": "Spill your biggest dating regret to the group",
+        "fa": "بزرگ‌ترین پشیمونی عاشقانه‌ت رو به جمع لو بدی"
+      },
+      "optionB": {
+        "en": "Let the group rate your flirting skills out of ten",
+        "fa": "بذاری جمع مهارت لاس زدنت رو از ده نمره بده"
+      }
+    },
+    {
+      "id": "spicy-017",
+      "intensity": "medium",
+      "optionA": {
+        "en": "Be the friend who always overshares",
+        "fa": "همون دوستی باشی که همیشه زیادی از همه‌چی حرف می‌زنه"
+      },
+      "optionB": {
+        "en": "Be the friend who never tells anyone anything",
+        "fa": "همون دوستی باشی که هیچ‌وقت هیچی به کسی نمی‌گه"
+      }
+    },
+    {
+      "id": "spicy-018",
+      "intensity": "spicy",
+      "optionA": {
+        "en": "Have a love song dedicated to you in public",
+        "fa": "تو جمع یه آهنگ عاشقانه به اسمت تقدیم بشه"
+      },
+      "optionB": {
+        "en": "Have to slow dance with a stranger at a party",
+        "fa": "مجبور بشی تو مهمونی با یه غریبه رقص آروم بری"
+      }
+    },
+    {
+      "id": "spicy-019",
+      "intensity": "medium",
+      "optionA": {
+        "en": "Always say exactly what you're thinking",
+        "fa": "همیشه دقیقاً همون چیزی که تو فکرته رو بگی"
+      },
+      "optionB": {
+        "en": "Never be able to give a compliment again",
+        "fa": "دیگه هیچ‌وقت نتونی از کسی تعریف کنی"
+      }
+    },
+    {
+      "id": "spicy-020",
+      "intensity": "spicy",
+      "optionA": {
+        "en": "Tell the group your weirdest habit when you're alone",
+        "fa": "عجیب‌ترین عادتت موقع تنهایی رو به جمع بگی"
+      },
+      "optionB": {
+        "en": "Reenact your worst dance move right now",
+        "fa": "همین الان بدترین حرکت رقصت رو اجرا کنی"
+      }
+    },
+    {
+      "id": "spicy-021",
+      "intensity": "medium",
+      "optionA": {
+        "en": "Be stuck on a long road trip with your ex",
+        "fa": "تو یه سفر جاده‌ای طولانی با اکست گیر بیفتی"
+      },
+      "optionB": {
+        "en": "Be stuck on a long road trip with your boss",
+        "fa": "تو یه سفر جاده‌ای طولانی با رئیست گیر بیفتی"
+      }
+    },
+    {
+      "id": "spicy-022",
+      "intensity": "spicy",
+      "optionA": {
+        "en": "Have your group chat nicknames revealed to those people",
+        "fa": "لقب‌هایی که تو گروه برای بقیه گذاشتی، خودشون بفهمن"
+      },
+      "optionB": {
+        "en": "Have your voice notes played at full volume",
+        "fa": "ویس‌هات با صدای بلند پخش بشه"
+      }
+    },
+    {
+      "id": "spicy-023",
+      "intensity": "medium",
+      "optionA": {
+        "en": "Always be the one who says 'I love you' first",
+        "fa": "همیشه تو اولین نفری باشی که می‌گه دوستت دارم"
+      },
+      "optionB": {
+        "en": "Always be the one waiting to hear it back",
+        "fa": "همیشه تو منتظر بمونی که طرف اول بگه"
+      }
+    },
+    {
+      "id": "spicy-024",
+      "intensity": "spicy",
+      "optionA": {
+        "en": "Let the group pick your dating profile photo",
+        "fa": "بذاری جمع عکس پروفایل دوستیابیت رو انتخاب کنه"
+      },
+      "optionB": {
+        "en": "Let the group write your dating profile bio",
+        "fa": "بذاری جمع بیوی پروفایل دوستیابیت رو بنویسه"
+      }
+    },
+    {
+      "id": "spicy-025",
+      "intensity": "medium",
+      "optionA": {
+        "en": "Have every awkward silence be your fault",
+        "fa": "هر سکوت معذب‌کننده‌ای تقصیر تو باشه"
+      },
+      "optionB": {
+        "en": "Have every bad joke at the table be yours",
+        "fa": "هر جوک بی‌مزه‌ای سر میز مال تو باشه"
+      }
+    },
+    {
+      "id": "spicy-026",
+      "intensity": "spicy",
+      "optionA": {
+        "en": "Admit which celebrity you'd run away with",
+        "fa": "بگی با کدوم سلبریتی حاضری فرار کنی"
+      },
+      "optionB": {
+        "en": "Admit which friend's wardrobe you'd steal",
+        "fa": "بگی کمد لباس کدوم دوستت رو حاضری بدزدی"
+      }
+    },
+    {
+      "id": "spicy-027",
+      "intensity": "medium",
+      "optionA": {
+        "en": "Always overdress for every occasion",
+        "fa": "همیشه برای هر مناسبتی زیادی شیک‌پوش باشی"
+      },
+      "optionB": {
+        "en": "Always underdress for every occasion",
+        "fa": "همیشه برای هر مناسبتی زیادی ساده و دم‌دستی لباس بپوشی"
+      }
+    },
+    {
+      "id": "spicy-028",
+      "intensity": "spicy",
+      "optionA": {
+        "en": "Have your most-used emoji tattooed on your hand",
+        "fa": "ایموجی‌ای که بیشتر از همه استفاده می‌کنی رو روی دستت خالکوبی کنن"
+      },
+      "optionB": {
+        "en": "Have your worst selfie become your ID photo forever",
+        "fa": "بدترین سلفیت تا ابد بشه عکس کارت شناساییت"
+      }
+    }
   ]
 }

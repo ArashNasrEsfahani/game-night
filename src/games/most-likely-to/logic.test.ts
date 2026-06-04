@@ -11,7 +11,7 @@ import {
 import type { MltState } from './logic';
 import { DEFAULT_OPTIONS } from './config';
 import type { MltOptions } from './config';
-import { validateContent } from './content';
+import { getPool, validateContent } from './content';
 
 const seat = (id: string): PlayerSeat => ({ id: asPlayerId(id), name: id.toUpperCase() });
 
@@ -23,7 +23,7 @@ function makeConfig(options: Partial<MltOptions> = {}, ids = ['a', 'b', 'c', 'd'
   };
 }
 
-const POOL = 14; // classic deck, all intensities
+const POOL = getPool({ deckId: 'classic', intensity: 'spicy' }).length; // classic deck, all intensities
 
 /** Cast a full pass-device round: targets maps voterId -> targetId. */
 function voteRound(s: MltState, targets: Record<string, string>, seed = 1): MltState {

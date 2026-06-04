@@ -1,16 +1,221 @@
 {
   "id": "actions",
-  "name": { "en": "Actions", "fa": "کارها" },
+  "name": {
+    "en": "Actions",
+    "fa": "کارها"
+  },
   "category": "actions",
   "icon": "🤸",
   "cards": [
-    { "id": "swimming", "word": { "en": "Swimming", "fa": "شنا کردن" } },
-    { "id": "dancing", "word": { "en": "Dancing", "fa": "رقصیدن" } },
-    { "id": "sneezing", "word": { "en": "Sneezing", "fa": "عطسه کردن" } },
-    { "id": "cooking", "word": { "en": "Cooking", "fa": "آشپزی کردن" } },
-    { "id": "fishing", "word": { "en": "Fishing", "fa": "ماهیگیری" } },
-    { "id": "yawning", "word": { "en": "Yawning", "fa": "خمیازه کشیدن" } },
-    { "id": "juggling", "word": { "en": "Juggling", "fa": "ژانگولر بازی" } },
-    { "id": "skateboarding", "word": { "en": "Skateboarding", "fa": "اسکیت‌بازی" } }
+    {
+      "id": "actions-swimming",
+      "word": {
+        "en": "Swimming",
+        "fa": "شنا کردن"
+      }
+    },
+    {
+      "id": "actions-dancing",
+      "word": {
+        "en": "Dancing",
+        "fa": "رقصیدن"
+      }
+    },
+    {
+      "id": "actions-sneezing",
+      "word": {
+        "en": "Sneezing",
+        "fa": "عطسه کردن"
+      }
+    },
+    {
+      "id": "actions-cooking",
+      "word": {
+        "en": "Cooking",
+        "fa": "آشپزی کردن"
+      }
+    },
+    {
+      "id": "actions-fishing",
+      "word": {
+        "en": "Fishing",
+        "fa": "ماهیگیری"
+      }
+    },
+    {
+      "id": "actions-yawning",
+      "word": {
+        "en": "Yawning",
+        "fa": "خمیازه کشیدن"
+      }
+    },
+    {
+      "id": "actions-juggling",
+      "word": {
+        "en": "Juggling",
+        "fa": "ژانگولربازی"
+      }
+    },
+    {
+      "id": "actions-skateboarding",
+      "word": {
+        "en": "Skateboarding",
+        "fa": "اسکیت‌سواری"
+      }
+    },
+    {
+      "id": "actions-clapping",
+      "word": {
+        "en": "Clapping",
+        "fa": "دست زدن"
+      }
+    },
+    {
+      "id": "actions-whistling",
+      "word": {
+        "en": "Whistling",
+        "fa": "سوت زدن"
+      }
+    },
+    {
+      "id": "actions-snoring",
+      "word": {
+        "en": "Snoring",
+        "fa": "خروپف کردن"
+      }
+    },
+    {
+      "id": "actions-laughing",
+      "word": {
+        "en": "Laughing",
+        "fa": "خندیدن"
+      }
+    },
+    {
+      "id": "actions-crying",
+      "word": {
+        "en": "Crying",
+        "fa": "گریه کردن"
+      }
+    },
+    {
+      "id": "actions-jumping",
+      "word": {
+        "en": "Jumping",
+        "fa": "پریدن"
+      }
+    },
+    {
+      "id": "actions-running",
+      "word": {
+        "en": "Running",
+        "fa": "دویدن"
+      }
+    },
+    {
+      "id": "actions-typing",
+      "word": {
+        "en": "Typing",
+        "fa": "تایپ کردن"
+      }
+    },
+    {
+      "id": "actions-driving",
+      "word": {
+        "en": "Driving",
+        "fa": "رانندگی کردن"
+      }
+    },
+    {
+      "id": "actions-painting",
+      "word": {
+        "en": "Painting",
+        "fa": "نقاشی کشیدن"
+      }
+    },
+    {
+      "id": "actions-singing",
+      "word": {
+        "en": "Singing",
+        "fa": "آواز خواندن"
+      }
+    },
+    {
+      "id": "actions-sleeping",
+      "word": {
+        "en": "Sleeping",
+        "fa": "خوابیدن"
+      }
+    },
+    {
+      "id": "actions-eating",
+      "word": {
+        "en": "Eating",
+        "fa": "غذا خوردن"
+      }
+    },
+    {
+      "id": "actions-brushing-teeth",
+      "word": {
+        "en": "Brushing teeth",
+        "fa": "مسواک زدن"
+      }
+    },
+    {
+      "id": "actions-taking-selfie",
+      "word": {
+        "en": "Taking a selfie",
+        "fa": "سلفی گرفتن"
+      }
+    },
+    {
+      "id": "actions-texting",
+      "word": {
+        "en": "Texting",
+        "fa": "پیام دادن"
+      }
+    },
+    {
+      "id": "actions-flexing",
+      "word": {
+        "en": "Flexing muscles",
+        "fa": "عضله نشان دادن"
+      }
+    },
+    {
+      "id": "actions-tiptoeing",
+      "word": {
+        "en": "Tiptoeing",
+        "fa": "پاورچین راه رفتن"
+      }
+    },
+    {
+      "id": "actions-blowing-kiss",
+      "word": {
+        "en": "Blowing a kiss",
+        "fa": "بوس فرستادن"
+      }
+    },
+    {
+      "id": "actions-winking",
+      "word": {
+        "en": "Winking",
+        "fa": "چشمک زدن"
+      }
+    },
+    {
+      "id": "actions-tickling",
+      "word": {
+        "en": "Tickling",
+        "fa": "قلقلک دادن"
+      }
+    },
+    {
+      "id": "actions-twerking",
+      "word": {
+        "en": "Twerking",
+        "fa": "قر دادن"
+      }
+    }
   ]
 }

@@ -1,7 +1,308 @@
 [
-  { "id": "plc-001", "word": { "en": "Beach", "fa": "ساحل" }, "category": "places", "difficulty": "easy" },
-  { "id": "plc-002", "word": { "en": "Bazaar", "fa": "بازار" }, "category": "places", "difficulty": "med" },
-  { "id": "plc-003", "word": { "en": "Persepolis", "fa": "تخت جمشید" }, "category": "places", "difficulty": "hard" },
-  { "id": "plc-004", "word": { "en": "Library", "fa": "کتابخانه" }, "category": "places", "difficulty": "easy" },
-  { "id": "plc-005", "word": { "en": "Airport", "fa": "فرودگاه" }, "category": "places", "difficulty": "med" }
+  {
+    "id": "pla-001",
+    "word": {
+      "en": "Beach",
+      "fa": "ساحل"
+    },
+    "category": "places",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pla-002",
+    "word": {
+      "en": "Hospital",
+      "fa": "بیمارستان"
+    },
+    "category": "places",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pla-003",
+    "word": {
+      "en": "School",
+      "fa": "مدرسه"
+    },
+    "category": "places",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pla-004",
+    "word": {
+      "en": "Park",
+      "fa": "پارک"
+    },
+    "category": "places",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pla-005",
+    "word": {
+      "en": "Restaurant",
+      "fa": "رستوران"
+    },
+    "category": "places",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pla-006",
+    "word": {
+      "en": "Airport",
+      "fa": "فرودگاه"
+    },
+    "category": "places",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pla-007",
+    "word": {
+      "en": "Cinema",
+      "fa": "سینما"
+    },
+    "category": "places",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pla-008",
+    "word": {
+      "en": "Bank",
+      "fa": "بانک"
+    },
+    "category": "places",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pla-009",
+    "word": {
+      "en": "Mosque",
+      "fa": "مسجد"
+    },
+    "category": "places",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pla-010",
+    "word": {
+      "en": "Kitchen",
+      "fa": "آشپزخونه"
+    },
+    "category": "places",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pla-011",
+    "word": {
+      "en": "Bathroom",
+      "fa": "دستشویی"
+    },
+    "category": "places",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pla-012",
+    "word": {
+      "en": "Zoo",
+      "fa": "باغ‌وحش"
+    },
+    "category": "places",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pla-013",
+    "word": {
+      "en": "Pharmacy",
+      "fa": "داروخونه"
+    },
+    "category": "places",
+    "difficulty": "med"
+  },
+  {
+    "id": "pla-014",
+    "word": {
+      "en": "Bazaar",
+      "fa": "بازار"
+    },
+    "category": "places",
+    "difficulty": "med"
+  },
+  {
+    "id": "pla-015",
+    "word": {
+      "en": "Gym",
+      "fa": "باشگاه"
+    },
+    "category": "places",
+    "difficulty": "med"
+  },
+  {
+    "id": "pla-016",
+    "word": {
+      "en": "Bus station",
+      "fa": "ترمینال"
+    },
+    "category": "places",
+    "difficulty": "med"
+  },
+  {
+    "id": "pla-017",
+    "word": {
+      "en": "Gas station",
+      "fa": "پمپ‌بنزین"
+    },
+    "category": "places",
+    "difficulty": "med"
+  },
+  {
+    "id": "pla-018",
+    "word": {
+      "en": "Barbershop",
+      "fa": "آرایشگاه"
+    },
+    "category": "places",
+    "difficulty": "med"
+  },
+  {
+    "id": "pla-019",
+    "word": {
+      "en": "Bakery",
+      "fa": "نونوایی"
+    },
+    "category": "places",
+    "difficulty": "med"
+  },
+  {
+    "id": "pla-020",
+    "word": {
+      "en": "Museum",
+      "fa": "موزه"
+    },
+    "category": "places",
+    "difficulty": "med"
+  },
+  {
+    "id": "pla-021",
+    "word": {
+      "en": "Stadium",
+      "fa": "استادیوم"
+    },
+    "category": "places",
+    "difficulty": "med"
+  },
+  {
+    "id": "pla-022",
+    "word": {
+      "en": "Subway",
+      "fa": "مترو"
+    },
+    "category": "places",
+    "difficulty": "med"
+  },
+  {
+    "id": "pla-023",
+    "word": {
+      "en": "Hotel",
+      "fa": "هتل"
+    },
+    "category": "places",
+    "difficulty": "med"
+  },
+  {
+    "id": "pla-024",
+    "word": {
+      "en": "Police station",
+      "fa": "کلانتری"
+    },
+    "category": "places",
+    "difficulty": "med"
+  },
+  {
+    "id": "pla-025",
+    "word": {
+      "en": "Mall",
+      "fa": "پاساژ"
+    },
+    "category": "places",
+    "difficulty": "med"
+  },
+  {
+    "id": "pla-026",
+    "word": {
+      "en": "Cemetery",
+      "fa": "قبرستون"
+    },
+    "category": "places",
+    "difficulty": "med"
+  },
+  {
+    "id": "pla-027",
+    "word": {
+      "en": "Persepolis",
+      "fa": "تخت جمشید"
+    },
+    "category": "places",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pla-028",
+    "word": {
+      "en": "Lighthouse",
+      "fa": "فانوس دریایی"
+    },
+    "category": "places",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pla-029",
+    "word": {
+      "en": "Greenhouse",
+      "fa": "گلخونه"
+    },
+    "category": "places",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pla-030",
+    "word": {
+      "en": "Observatory",
+      "fa": "رصدخونه"
+    },
+    "category": "places",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pla-031",
+    "word": {
+      "en": "Caravanserai",
+      "fa": "کاروانسرا"
+    },
+    "category": "places",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pla-032",
+    "word": {
+      "en": "Bathhouse",
+      "fa": "حموم عمومی"
+    },
+    "category": "places",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pla-033",
+    "word": {
+      "en": "Courthouse",
+      "fa": "دادگاه"
+    },
+    "category": "places",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pla-034",
+    "word": {
+      "en": "Border",
+      "fa": "مرز"
+    },
+    "category": "places",
+    "difficulty": "hard"
+  }
 ]

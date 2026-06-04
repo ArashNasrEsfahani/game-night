@@ -28,8 +28,8 @@ export function HomePage() {
       </header>
 
       <div className="flex flex-col items-center gap-1.5 pb-5 pt-3 text-center">
-        <div className="dp-ball mb-1 h-16 w-16" aria-hidden />
-        <h1 className="dp-neon font-display text-4xl tracking-wide">Game Night</h1>
+        <div className="dp-ball dp-pop mb-1 h-16 w-16" aria-hidden />
+        <h1 className="dp-title font-display text-4xl tracking-wide">Game Night</h1>
         <p className="dp-foil font-display text-2xl leading-none">شب بازی</p>
         <p className="mt-1 text-sm text-[var(--text-muted)]">{t('home.subtitle')}</p>
       </div>
@@ -40,10 +40,11 @@ export function HomePage() {
         </div>
       ) : (
         <div className="grid grid-cols-2 gap-3 pb-8">
-          {catalog.map((m) => (
+          {catalog.map((m, i) => (
             <GameCard
               key={m.id}
               manifest={m}
+              index={i}
               title={localize(m.name)}
               tagline={localize(m.tagline)}
               onClick={() => navigate(buildGamePath(m.id))}

@@ -26,7 +26,7 @@ export interface SettingsState {
 export const useSettingsStore = create<SettingsState>()(
   persist(
     (set) => ({
-      theme: 'system',
+      theme: 'light',
       language: 'en',
       muted: false,
       haptics: true,

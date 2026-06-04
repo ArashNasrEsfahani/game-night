@@ -22,7 +22,7 @@ export function Curtain({
     <div
       className="relative grid flex-1 place-items-center gap-5 overflow-hidden rounded-[var(--radius-card)] border border-[var(--border-glow)] px-6 py-10 text-center"
       style={{
-        background: 'radial-gradient(120% 90% at 50% 0%, var(--game-accent-strong), var(--lapis) 82%)',
+        background: 'radial-gradient(120% 90% at 50% 0%, var(--game-accent-strong), #120c2e 82%)',
       }}
     >
       <div

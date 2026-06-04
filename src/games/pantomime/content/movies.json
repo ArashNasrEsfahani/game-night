@@ -2,14 +2,275 @@
   "category": "movies",
   "version": 1,
   "prompts": [
-    { "id": "movies.titanic", "category": "movies", "difficulty": "easy",
-      "text": { "en": "Titanic", "fa": "تایتانیک" } },
-    { "id": "movies.the-lion-king", "category": "movies", "difficulty": "easy",
-      "text": { "en": "The Lion King", "fa": "شیرشاه" } },
-    { "id": "movies.harry-potter", "category": "movies", "difficulty": "medium",
-      "text": { "en": "Harry Potter", "fa": "هری پاتر" } },
-    { "id": "movies.the-matrix", "category": "movies", "difficulty": "hard",
-      "text": { "en": "The Matrix", "fa": "ماتریکس" },
-      "hint": { "en": "Dodge bullets in slow motion", "fa": "جاخالی دادن از گلوله با حرکت آهسته" } }
+    {
+      "id": "movies.titanic",
+      "category": "movies",
+      "difficulty": "easy",
+      "text": {
+        "en": "Titanic",
+        "fa": "تایتانیک"
+      }
+    },
+    {
+      "id": "movies.the-lion-king",
+      "category": "movies",
+      "difficulty": "easy",
+      "text": {
+        "en": "The Lion King",
+        "fa": "شیرشاه"
+      }
+    },
+    {
+      "id": "movies.jurassic-park",
+      "category": "movies",
+      "difficulty": "easy",
+      "text": {
+        "en": "Jurassic Park",
+        "fa": "پارک ژوراسیک"
+      }
+    },
+    {
+      "id": "movies.frozen",
+      "category": "movies",
+      "difficulty": "easy",
+      "text": {
+        "en": "Frozen",
+        "fa": "فروزن (یخ‌زده)"
+      }
+    },
+    {
+      "id": "movies.spider-man",
+      "category": "movies",
+      "difficulty": "easy",
+      "text": {
+        "en": "Spider-Man",
+        "fa": "مرد عنکبوتی"
+      }
+    },
+    {
+      "id": "movies.home-alone",
+      "category": "movies",
+      "difficulty": "easy",
+      "text": {
+        "en": "Home Alone",
+        "fa": "تنها در خانه"
+      }
+    },
+    {
+      "id": "movies.finding-nemo",
+      "category": "movies",
+      "difficulty": "easy",
+      "text": {
+        "en": "Finding Nemo",
+        "fa": "در جستجوی نمو"
+      }
+    },
+    {
+      "id": "movies.the-mummy",
+      "category": "movies",
+      "difficulty": "easy",
+      "text": {
+        "en": "The Mummy",
+        "fa": "مومیایی"
+      }
+    },
+    {
+      "id": "movies.batman",
+      "category": "movies",
+      "difficulty": "easy",
+      "text": {
+        "en": "Batman",
+        "fa": "بتمن"
+      }
+    },
+    {
+      "id": "movies.harry-potter",
+      "category": "movies",
+      "difficulty": "medium",
+      "text": {
+        "en": "Harry Potter",
+        "fa": "هری پاتر"
+      }
+    },
+    {
+      "id": "movies.pirates-of-the-caribbean",
+      "category": "movies",
+      "difficulty": "medium",
+      "text": {
+        "en": "Pirates of the Caribbean",
+        "fa": "دزدان دریایی کارائیب"
+      }
+    },
+    {
+      "id": "movies.king-kong",
+      "category": "movies",
+      "difficulty": "medium",
+      "text": {
+        "en": "King Kong",
+        "fa": "کینگ‌کونگ"
+      }
+    },
+    {
+      "id": "movies.the-godfather",
+      "category": "movies",
+      "difficulty": "medium",
+      "text": {
+        "en": "The Godfather",
+        "fa": "پدرخوانده"
+      }
+    },
+    {
+      "id": "movies.forrest-gump",
+      "category": "movies",
+      "difficulty": "medium",
+      "text": {
+        "en": "Forrest Gump",
+        "fa": "فارست گامپ"
+      }
+    },
+    {
+      "id": "movies.the-terminator",
+      "category": "movies",
+      "difficulty": "medium",
+      "text": {
+        "en": "The Terminator",
+        "fa": "نابودگر (ترمیناتور)"
+      }
+    },
+    {
+      "id": "movies.gladiator",
+      "category": "movies",
+      "difficulty": "medium",
+      "text": {
+        "en": "Gladiator",
+        "fa": "گلادیاتور"
+      }
+    },
+    {
+      "id": "movies.the-avengers",
+      "category": "movies",
+      "difficulty": "medium",
+      "text": {
+        "en": "The Avengers",
+        "fa": "انتقام‌جویان"
+      }
+    },
+    {
+      "id": "movies.kung-fu-panda",
+      "category": "movies",
+      "difficulty": "easy",
+      "text": {
+        "en": "Kung Fu Panda",
+        "fa": "پاندای کونگ‌فوکار"
+      }
+    },
+    {
+      "id": "movies.the-mask",
+      "category": "movies",
+      "difficulty": "medium",
+      "text": {
+        "en": "The Mask",
+        "fa": "نقاب (د ماسک)"
+      }
+    },
+    {
+      "id": "movies.the-matrix",
+      "category": "movies",
+      "difficulty": "hard",
+      "text": {
+        "en": "The Matrix",
+        "fa": "ماتریکس"
+      }
+    },
+    {
+      "id": "movies.inception",
+      "category": "movies",
+      "difficulty": "hard",
+      "text": {
+        "en": "Inception",
+        "fa": "تلقین (اینسپشن)"
+      }
+    },
+    {
+      "id": "movies.interstellar",
+      "category": "movies",
+      "difficulty": "hard",
+      "text": {
+        "en": "Interstellar",
+        "fa": "میان‌ستاره‌ای (اینتراستلار)"
+      }
+    },
+    {
+      "id": "movies.a-separation",
+      "category": "movies",
+      "difficulty": "medium",
+      "text": {
+        "en": "A Separation",
+        "fa": "جدایی نادر از سیمین"
+      }
+    },
+    {
+      "id": "movies.the-salesman",
+      "category": "movies",
+      "difficulty": "hard",
+      "text": {
+        "en": "The Salesman",
+        "fa": "فروشنده"
+      }
+    },
+    {
+      "id": "movies.children-of-heaven",
+      "category": "movies",
+      "difficulty": "medium",
+      "text": {
+        "en": "Children of Heaven",
+        "fa": "بچه‌های آسمان"
+      }
+    },
+    {
+      "id": "movies.the-lizard",
+      "category": "movies",
+      "difficulty": "medium",
+      "text": {
+        "en": "The Lizard (Marmoulak)",
+        "fa": "مارمولک"
+      }
+    },
+    {
+      "id": "movies.the-cow",
+      "category": "movies",
+      "difficulty": "hard",
+      "text": {
+        "en": "The Cow (Gaav)",
+        "fa": "گاو"
+      }
+    },
+    {
+      "id": "movies.where-is-the-friends-house",
+      "category": "movies",
+      "difficulty": "hard",
+      "text": {
+        "en": "Where Is the Friend's House?",
+        "fa": "خانه دوست کجاست؟"
+      }
+    },
+    {
+      "id": "movies.the-snowman",
+      "category": "movies",
+      "difficulty": "hard",
+      "text": {
+        "en": "The Snowman (Aadam Barfi)",
+        "fa": "آدم برفی"
+      }
+    },
+    {
+      "id": "movies.ekhrajiha",
+      "category": "movies",
+      "difficulty": "medium",
+      "text": {
+        "en": "The Outcasts (Ekhrajiha)",
+        "fa": "اخراجی‌ها"
+      }
+    }
   ]
 }

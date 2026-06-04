@@ -14,3 +14,4 @@ export * from './TimerRing';
 export * from './Scoreboard';
 export * from './WinnerBanner';
 export * from './TeamBadge';
+export * from './Confetti';

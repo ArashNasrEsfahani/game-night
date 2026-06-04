@@ -1,16 +1,221 @@
 {
   "id": "food",
-  "name": { "en": "Food", "fa": "خوراکی" },
+  "name": {
+    "en": "Food",
+    "fa": "خوراکی"
+  },
   "category": "food",
   "icon": "🍕",
   "cards": [
-    { "id": "pizza", "word": { "en": "Pizza", "fa": "پیتزا" } },
-    { "id": "watermelon", "word": { "en": "Watermelon", "fa": "هندوانه" } },
-    { "id": "ice-cream", "word": { "en": "Ice Cream", "fa": "بستنی" } },
-    { "id": "kabab", "word": { "en": "Kabab", "fa": "کباب" } },
-    { "id": "spaghetti", "word": { "en": "Spaghetti", "fa": "اسپاگتی" } },
-    { "id": "popcorn", "word": { "en": "Popcorn", "fa": "پاپ‌کورن" } },
-    { "id": "sushi", "word": { "en": "Sushi", "fa": "سوشی" } },
-    { "id": "pomegranate", "word": { "en": "Pomegranate", "fa": "انار" } }
+    {
+      "id": "food-tahdig",
+      "word": {
+        "en": "Tahdig",
+        "fa": "ته‌دیگ"
+      }
+    },
+    {
+      "id": "food-kebab",
+      "word": {
+        "en": "Kebab",
+        "fa": "کباب"
+      }
+    },
+    {
+      "id": "food-ghormeh-sabzi",
+      "word": {
+        "en": "Ghormeh Sabzi",
+        "fa": "قورمه‌سبزی"
+      }
+    },
+    {
+      "id": "food-fesenjan",
+      "word": {
+        "en": "Fesenjan",
+        "fa": "فسنجون"
+      }
+    },
+    {
+      "id": "food-dizi",
+      "word": {
+        "en": "Dizi",
+        "fa": "دیزی"
+      }
+    },
+    {
+      "id": "food-ash-reshteh",
+      "word": {
+        "en": "Ash Reshteh",
+        "fa": "آش رشته"
+      }
+    },
+    {
+      "id": "food-kashk-bademjan",
+      "word": {
+        "en": "Kashk Bademjan",
+        "fa": "کشک بادمجون"
+      }
+    },
+    {
+      "id": "food-pizza",
+      "word": {
+        "en": "Pizza",
+        "fa": "پیتزا"
+      }
+    },
+    {
+      "id": "food-hamburger",
+      "word": {
+        "en": "Hamburger",
+        "fa": "همبرگر"
+      }
+    },
+    {
+      "id": "food-french-fries",
+      "word": {
+        "en": "French Fries",
+        "fa": "سیب‌زمینی سرخ‌کرده"
+      }
+    },
+    {
+      "id": "food-sushi",
+      "word": {
+        "en": "Sushi",
+        "fa": "سوشی"
+      }
+    },
+    {
+      "id": "food-spaghetti",
+      "word": {
+        "en": "Spaghetti",
+        "fa": "اسپاگتی"
+      }
+    },
+    {
+      "id": "food-falafel",
+      "word": {
+        "en": "Falafel",
+        "fa": "فلافل"
+      }
+    },
+    {
+      "id": "food-doogh",
+      "word": {
+        "en": "Doogh",
+        "fa": "دوغ"
+      }
+    },
+    {
+      "id": "food-saffron-ice-cream",
+      "word": {
+        "en": "Saffron Ice Cream",
+        "fa": "بستنی زعفرونی"
+      }
+    },
+    {
+      "id": "food-watermelon",
+      "word": {
+        "en": "Watermelon",
+        "fa": "هندوانه"
+      }
+    },
+    {
+      "id": "food-pomegranate",
+      "word": {
+        "en": "Pomegranate",
+        "fa": "انار"
+      }
+    },
+    {
+      "id": "food-pistachio",
+      "word": {
+        "en": "Pistachio",
+        "fa": "پسته"
+      }
+    },
+    {
+      "id": "food-dates",
+      "word": {
+        "en": "Dates",
+        "fa": "خرما"
+      }
+    },
+    {
+      "id": "food-saffron",
+      "word": {
+        "en": "Saffron",
+        "fa": "زعفران"
+      }
+    },
+    {
+      "id": "food-sangak-bread",
+      "word": {
+        "en": "Sangak Bread",
+        "fa": "نون سنگک"
+      }
+    },
+    {
+      "id": "food-feta-cheese",
+      "word": {
+        "en": "Feta Cheese",
+        "fa": "پنیر و سبزی"
+      }
+    },
+    {
+      "id": "food-omelet",
+      "word": {
+        "en": "Omelet",
+        "fa": "املت"
+      }
+    },
+    {
+      "id": "food-popcorn",
+      "word": {
+        "en": "Popcorn",
+        "fa": "پاپ‌کورن"
+      }
+    },
+    {
+      "id": "food-gaz",
+      "word": {
+        "en": "Gaz Nougat",
+        "fa": "گز"
+      }
+    },
+    {
+      "id": "food-zoolbia-bamieh",
+      "word": {
+        "en": "Zoolbia Bamieh",
+        "fa": "زولبیا بامیه"
+      }
+    },
+    {
+      "id": "food-chai-tea",
+      "word": {
+        "en": "Tea",
+        "fa": "چایی"
+      }
+    },
+    {
+      "id": "food-saffron-rice",
+      "word": {
+        "en": "Saffron Rice",
+        "fa": "پلو زعفرونی"
+      }
+    },
+    {
+      "id": "food-grilled-tomato",
+      "word": {
+        "en": "Grilled Tomato",
+        "fa": "گوجه کبابی"
+      }
+    },
+    {
+      "id": "food-roasted-corn",
+      "word": {
+        "en": "Roasted Corn",
+        "fa": "بلال"
+      }
+    }
   ]
 }

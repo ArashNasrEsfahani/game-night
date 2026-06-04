@@ -2,13 +2,275 @@
   "category": "actions",
   "version": 1,
   "prompts": [
-    { "id": "actions.swimming", "category": "actions", "difficulty": "easy",
-      "text": { "en": "Swimming", "fa": "شنا کردن" } },
-    { "id": "actions.brushing-teeth", "category": "actions", "difficulty": "easy",
-      "text": { "en": "Brushing teeth", "fa": "مسواک زدن" } },
-    { "id": "actions.driving-a-car", "category": "actions", "difficulty": "medium",
-      "text": { "en": "Driving a car", "fa": "رانندگی کردن" } },
-    { "id": "actions.juggling", "category": "actions", "difficulty": "hard",
-      "text": { "en": "Juggling", "fa": "ژانگولر بازی" } }
+    {
+      "id": "actions.titanic",
+      "category": "actions",
+      "difficulty": "medium",
+      "text": {
+        "en": "The Titanic \"I'm flying\" pose on the ship's bow",
+        "fa": "همون ژست معروف فیلم تایتانیک، وایسادن لب کشتی با دست‌های باز"
+      }
+    },
+    {
+      "id": "actions.brushing-teeth",
+      "category": "actions",
+      "difficulty": "easy",
+      "text": {
+        "en": "Brushing your teeth",
+        "fa": "مسواک زدن"
+      }
+    },
+    {
+      "id": "actions.tying-shoelaces",
+      "category": "actions",
+      "difficulty": "easy",
+      "text": {
+        "en": "Tying your shoelaces",
+        "fa": "بند کفش بستن"
+      }
+    },
+    {
+      "id": "actions.taking-a-selfie",
+      "category": "actions",
+      "difficulty": "easy",
+      "text": {
+        "en": "Taking a selfie",
+        "fa": "سلفی گرفتن"
+      }
+    },
+    {
+      "id": "actions.blowing-out-candles",
+      "category": "actions",
+      "difficulty": "easy",
+      "text": {
+        "en": "Blowing out birthday candles",
+        "fa": "فوت کردن شمع تولد"
+      }
+    },
+    {
+      "id": "actions.eating-spaghetti",
+      "category": "actions",
+      "difficulty": "easy",
+      "text": {
+        "en": "Eating a big plate of spaghetti",
+        "fa": "خوردن یه بشقاب پر اسپاگتی"
+      }
+    },
+    {
+      "id": "actions.washing-the-dishes",
+      "category": "actions",
+      "difficulty": "easy",
+      "text": {
+        "en": "Washing the dishes",
+        "fa": "ظرف شستن"
+      }
+    },
+    {
+      "id": "actions.scrolling-on-phone",
+      "category": "actions",
+      "difficulty": "easy",
+      "text": {
+        "en": "Endlessly scrolling on your phone",
+        "fa": "بی‌وقفه گوشی بالا پایین کردن"
+      }
+    },
+    {
+      "id": "actions.flying-a-kite",
+      "category": "actions",
+      "difficulty": "easy",
+      "text": {
+        "en": "Flying a kite",
+        "fa": "بادبادک هوا کردن"
+      }
+    },
+    {
+      "id": "actions.driving-a-car",
+      "category": "actions",
+      "difficulty": "easy",
+      "text": {
+        "en": "Driving a car",
+        "fa": "رانندگی کردن"
+      }
+    },
+    {
+      "id": "actions.fishing-from-a-boat",
+      "category": "actions",
+      "difficulty": "medium",
+      "text": {
+        "en": "Fishing from a small boat and catching a big one",
+        "fa": "ماهیگیری از قایق و گرفتن یه ماهی گنده"
+      }
+    },
+    {
+      "id": "actions.changing-a-flat-tire",
+      "category": "actions",
+      "difficulty": "medium",
+      "text": {
+        "en": "Changing a flat tire on the side of the road",
+        "fa": "پنچرگیری ماشین کنار جاده"
+      }
+    },
+    {
+      "id": "actions.bargaining-in-a-bazaar",
+      "category": "actions",
+      "difficulty": "medium",
+      "text": {
+        "en": "Haggling with a shopkeeper in the bazaar",
+        "fa": "چونه زدن سر قیمت با مغازه‌دار تو بازار"
+      }
+    },
+    {
+      "id": "actions.painting-a-wall",
+      "category": "actions",
+      "difficulty": "medium",
+      "text": {
+        "en": "Painting a wall with a roller",
+        "fa": "رنگ کردن دیوار با غلطک"
+      }
+    },
+    {
+      "id": "actions.proposing-marriage",
+      "category": "actions",
+      "difficulty": "medium",
+      "text": {
+        "en": "Getting down on one knee to propose",
+        "fa": "زانو زدن و خواستگاری کردن با حلقه"
+      }
+    },
+    {
+      "id": "actions.walking-a-stubborn-dog",
+      "category": "actions",
+      "difficulty": "medium",
+      "text": {
+        "en": "Walking a dog that refuses to move",
+        "fa": "بردن سگی به پیاده‌روی که اصلاً تکون نمی‌خوره"
+      }
+    },
+    {
+      "id": "actions.assembling-furniture",
+      "category": "actions",
+      "difficulty": "medium",
+      "text": {
+        "en": "Assembling flat-pack furniture without instructions",
+        "fa": "سرهم کردن مبل و کمد بدون نگاه به دفترچه راهنما"
+      }
+    },
+    {
+      "id": "actions.giving-a-haircut",
+      "category": "actions",
+      "difficulty": "medium",
+      "text": {
+        "en": "Giving someone a haircut",
+        "fa": "اصلاح کردن و کوتاه کردن موی یکی"
+      }
+    },
+    {
+      "id": "actions.carrying-tea-tray",
+      "category": "actions",
+      "difficulty": "medium",
+      "text": {
+        "en": "Carrying a wobbly tray of tea to guests",
+        "fa": "آوردن سینی چای لرزون برای مهمونا"
+      }
+    },
+    {
+      "id": "actions.chasing-a-bus",
+      "category": "actions",
+      "difficulty": "medium",
+      "text": {
+        "en": "Running after a bus you just missed",
+        "fa": "دویدن دنبال اتوبوسی که تازه از دستت در رفته"
+      }
+    },
+    {
+      "id": "actions.conducting-an-orchestra",
+      "category": "actions",
+      "difficulty": "hard",
+      "text": {
+        "en": "Conducting a full orchestra",
+        "fa": "رهبری کردن یه ارکستر بزرگ"
+      }
+    },
+    {
+      "id": "actions.defusing-a-bomb",
+      "category": "actions",
+      "difficulty": "hard",
+      "text": {
+        "en": "Defusing a ticking bomb, wire by wire",
+        "fa": "خنثی کردن بمب، سیم به سیم، با عرق سرد"
+      }
+    },
+    {
+      "id": "actions.threading-a-needle",
+      "category": "actions",
+      "difficulty": "hard",
+      "text": {
+        "en": "Threading a needle with shaky hands",
+        "fa": "نخ کردن سوزن با دست‌های لرزون"
+      }
+    },
+    {
+      "id": "actions.sleepwalking",
+      "category": "actions",
+      "difficulty": "hard",
+      "text": {
+        "en": "Sleepwalking around the room",
+        "fa": "تو خواب راه رفتن دور اتاق"
+      }
+    },
+    {
+      "id": "actions.mime-stuck-in-a-box",
+      "category": "actions",
+      "difficulty": "hard",
+      "text": {
+        "en": "A mime trapped inside an invisible box",
+        "fa": "آدم پانتومیمی که تو یه جعبه نامرئی گیر افتاده"
+      }
+    },
+    {
+      "id": "actions.escaping-quicksand",
+      "category": "actions",
+      "difficulty": "hard",
+      "text": {
+        "en": "Slowly sinking into quicksand and struggling out",
+        "fa": "فرو رفتن آروم تو شن روان و دست‌وپا زدن برای بیرون اومدن"
+      }
+    },
+    {
+      "id": "actions.juggling-flaming-torches",
+      "category": "actions",
+      "difficulty": "hard",
+      "text": {
+        "en": "Juggling flaming torches",
+        "fa": "ژانگولر بازی با مشعل‌های آتیشین"
+      }
+    },
+    {
+      "id": "actions.parallel-parking",
+      "category": "actions",
+      "difficulty": "hard",
+      "text": {
+        "en": "Parallel parking in a tiny spot",
+        "fa": "پارک دوبل تو یه جای خیلی تنگ"
+      }
+    },
+    {
+      "id": "actions.flirting-across-the-room",
+      "category": "actions",
+      "difficulty": "hard",
+      "text": {
+        "en": "Shyly flirting with someone across a crowded room",
+        "fa": "زیرچشمی و خجالتی با یکی اون‌ور سالن لاس زدن"
+      }
+    },
+    {
+      "id": "actions.sneaking-snacks-from-fridge",
+      "category": "actions",
+      "difficulty": "hard",
+      "text": {
+        "en": "Tiptoeing to raid the fridge at midnight without waking anyone",
+        "fa": "یواشکی نصفه‌شب رفتن سر یخچال که کسی بیدار نشه"
+      }
+    }
   ]
 }

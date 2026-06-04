@@ -2,13 +2,275 @@
   "category": "famous",
   "version": 1,
   "prompts": [
-    { "id": "famous.charlie-chaplin", "category": "famous", "difficulty": "medium",
-      "text": { "en": "Charlie Chaplin", "fa": "چارلی چاپلین" } },
-    { "id": "famous.albert-einstein", "category": "famous", "difficulty": "medium",
-      "text": { "en": "Albert Einstein", "fa": "آلبرت اینشتین" } },
-    { "id": "famous.michael-jackson", "category": "famous", "difficulty": "easy",
-      "text": { "en": "Michael Jackson", "fa": "مایکل جکسون" } },
-    { "id": "famous.hafez", "category": "famous", "difficulty": "hard",
-      "text": { "en": "Hafez", "fa": "حافظ" } }
+    {
+      "id": "famous.charlie-chaplin",
+      "text": {
+        "en": "Charlie Chaplin",
+        "fa": "چارلی چاپلین"
+      },
+      "category": "famous",
+      "difficulty": "easy"
+    },
+    {
+      "id": "famous.michael-jackson",
+      "text": {
+        "en": "Michael Jackson",
+        "fa": "مایکل جکسون"
+      },
+      "category": "famous",
+      "difficulty": "easy"
+    },
+    {
+      "id": "famous.albert-einstein",
+      "text": {
+        "en": "Albert Einstein",
+        "fa": "آلبرت اینشتین"
+      },
+      "category": "famous",
+      "difficulty": "easy"
+    },
+    {
+      "id": "famous.lionel-messi",
+      "text": {
+        "en": "Lionel Messi",
+        "fa": "لیونل مسی"
+      },
+      "category": "famous",
+      "difficulty": "easy"
+    },
+    {
+      "id": "famous.harry-potter",
+      "text": {
+        "en": "Harry Potter",
+        "fa": "هری پاتر"
+      },
+      "category": "famous",
+      "difficulty": "easy"
+    },
+    {
+      "id": "famous.spider-man",
+      "text": {
+        "en": "Spider-Man",
+        "fa": "مرد عنکبوتی"
+      },
+      "category": "famous",
+      "difficulty": "easy"
+    },
+    {
+      "id": "famous.cristiano-ronaldo",
+      "text": {
+        "en": "Cristiano Ronaldo",
+        "fa": "کریستیانو رونالدو"
+      },
+      "category": "famous",
+      "difficulty": "easy"
+    },
+    {
+      "id": "famous.mr-bean",
+      "text": {
+        "en": "Mr. Bean",
+        "fa": "مستر بین"
+      },
+      "category": "famous",
+      "difficulty": "easy"
+    },
+    {
+      "id": "famous.elvis-presley",
+      "text": {
+        "en": "Elvis Presley",
+        "fa": "الویس پریسلی"
+      },
+      "category": "famous",
+      "difficulty": "medium"
+    },
+    {
+      "id": "famous.marilyn-monroe",
+      "text": {
+        "en": "Marilyn Monroe",
+        "fa": "مرلین مونرو"
+      },
+      "category": "famous",
+      "difficulty": "medium"
+    },
+    {
+      "id": "famous.queen-elizabeth",
+      "text": {
+        "en": "Queen Elizabeth II",
+        "fa": "ملکه الیزابت دوم"
+      },
+      "category": "famous",
+      "difficulty": "medium"
+    },
+    {
+      "id": "famous.steve-jobs",
+      "text": {
+        "en": "Steve Jobs",
+        "fa": "استیو جابز"
+      },
+      "category": "famous",
+      "difficulty": "medium"
+    },
+    {
+      "id": "famous.usain-bolt",
+      "text": {
+        "en": "Usain Bolt",
+        "fa": "یوسین بولت"
+      },
+      "category": "famous",
+      "difficulty": "medium"
+    },
+    {
+      "id": "famous.lady-gaga",
+      "text": {
+        "en": "Lady Gaga",
+        "fa": "لیدی گاگا"
+      },
+      "category": "famous",
+      "difficulty": "medium"
+    },
+    {
+      "id": "famous.shakira",
+      "text": {
+        "en": "Shakira",
+        "fa": "شکیرا"
+      },
+      "category": "famous",
+      "difficulty": "medium"
+    },
+    {
+      "id": "famous.gandhi",
+      "text": {
+        "en": "Mahatma Gandhi",
+        "fa": "مهاتما گاندی"
+      },
+      "category": "famous",
+      "difficulty": "medium"
+    },
+    {
+      "id": "famous.napoleon",
+      "text": {
+        "en": "Napoleon Bonaparte",
+        "fa": "ناپلئون بناپارت"
+      },
+      "category": "famous",
+      "difficulty": "hard"
+    },
+    {
+      "id": "famous.frida-kahlo",
+      "text": {
+        "en": "Frida Kahlo",
+        "fa": "فریدا کالو"
+      },
+      "category": "famous",
+      "difficulty": "hard"
+    },
+    {
+      "id": "famous.nikola-tesla",
+      "text": {
+        "en": "Nikola Tesla",
+        "fa": "نیکولا تسلا"
+      },
+      "category": "famous",
+      "difficulty": "hard"
+    },
+    {
+      "id": "famous.salvador-dali",
+      "text": {
+        "en": "Salvador Dalí",
+        "fa": "سالوادور دالی"
+      },
+      "category": "famous",
+      "difficulty": "hard"
+    },
+    {
+      "id": "famous.googoosh",
+      "text": {
+        "en": "Googoosh (Iranian diva)",
+        "fa": "گوگوش، خواننده‌ی محبوب ایرانی"
+      },
+      "category": "famous",
+      "difficulty": "easy"
+    },
+    {
+      "id": "famous.ali-daei",
+      "text": {
+        "en": "Ali Daei (Iran football legend)",
+        "fa": "علی دایی، اسطوره‌ی فوتبال ایران"
+      },
+      "category": "famous",
+      "difficulty": "easy"
+    },
+    {
+      "id": "famous.ali-karimi",
+      "text": {
+        "en": "Ali Karimi (the football 'wizard')",
+        "fa": "علی کریمی، جادوگر فوتبال ایران"
+      },
+      "category": "famous",
+      "difficulty": "medium"
+    },
+    {
+      "id": "famous.mehran-modiri",
+      "text": {
+        "en": "Mehran Modiri (Iranian comedy star)",
+        "fa": "مهران مدیری، ستاره‌ی طنز ایران"
+      },
+      "category": "famous",
+      "difficulty": "medium"
+    },
+    {
+      "id": "famous.hafez",
+      "text": {
+        "en": "Hafez (Persian poet)",
+        "fa": "حافظ، شاعر بزرگ ایران"
+      },
+      "category": "famous",
+      "difficulty": "medium"
+    },
+    {
+      "id": "famous.ferdowsi",
+      "text": {
+        "en": "Ferdowsi (poet of the Shahnameh)",
+        "fa": "فردوسی، سراینده‌ی شاهنامه"
+      },
+      "category": "famous",
+      "difficulty": "hard"
+    },
+    {
+      "id": "famous.omar-khayyam",
+      "text": {
+        "en": "Omar Khayyam (poet & mathematician)",
+        "fa": "خیام، شاعر و ریاضیدان"
+      },
+      "category": "famous",
+      "difficulty": "hard"
+    },
+    {
+      "id": "famous.kourosh",
+      "text": {
+        "en": "Cyrus the Great",
+        "fa": "کوروش بزرگ"
+      },
+      "category": "famous",
+      "difficulty": "medium"
+    },
+    {
+      "id": "famous.morteza-pashaei",
+      "text": {
+        "en": "Morteza Pashaei (beloved Iranian singer)",
+        "fa": "مرتضی پاشایی، خواننده‌ی محبوب مردم"
+      },
+      "category": "famous",
+      "difficulty": "hard"
+    },
+    {
+      "id": "famous.nasser-malek-motiee",
+      "text": {
+        "en": "Nasser Malek Motiee (classic Iranian film hero)",
+        "fa": "ناصر ملک‌مطیعی، قهرمان سینمای قدیم ایران"
+      },
+      "category": "famous",
+      "difficulty": "hard"
+    }
   ]
 }

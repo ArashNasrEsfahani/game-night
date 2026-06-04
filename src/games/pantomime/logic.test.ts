@@ -11,7 +11,7 @@ import {
 import type { PantomimeState } from './logic';
 import { DEFAULT_OPTIONS } from './config';
 import type { PantomimeOptions } from './config';
-import { validateContent } from './content';
+import { selectPrompts, validateContent } from './content';
 
 const seat = (id: string, name = id): PlayerSeat => ({ id: asPlayerId(id), name });
 
@@ -30,7 +30,7 @@ function makeConfig(options: Partial<PantomimeOptions> = {}): GameConfig {
   };
 }
 
-const POOL = 16; // mixed × all difficulties
+const POOL = selectPrompts(['mixed'], ['easy', 'medium', 'hard']).length; // mixed × all difficulties
 
 /** Drive a full turn: handoff → reveal → acting → (corrects) → end → advance. */
 function runTurn(s: PantomimeState, corrects: number, now = 1000, seed = 1): PantomimeState {
@@ -286,8 +286,9 @@ describe('pantomime advancement & end conditions', () => {
 
 describe('pantomime edge cases', () => {
   it('recycles the discard pile so a turn never runs dry while prompts exist', () => {
-    // movies × hard == exactly one prompt ("the-matrix").
-    let s = createInitialState(makeConfig({ categories: ['movies'], difficulties: ['hard'] }), 42);
+    // Force a tiny one-card deck to exercise recycling.
+    let s = createInitialState(makeConfig(), 42);
+    s = { ...s, deck: { drawPile: [s.deck.drawPile[0]], discardPile: [] } };
     expect(s.deck.drawPile).toHaveLength(1);
     s = reducer(s, { type: 'HANDOFF_READY' });
     s = reducer(s, { type: 'REVEAL' });

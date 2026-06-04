@@ -12,7 +12,7 @@ import {
 import type { HeadsUpState } from './logic';
 import { DEFAULT_OPTIONS } from './config';
 import type { HeadsUpOptions } from './config';
-import { validateContent } from './content';
+import { mergedPool, validateContent } from './content';
 
 const seat = (id: string): PlayerSeat => ({ id: asPlayerId(id), name: id.toUpperCase() });
 
@@ -24,7 +24,7 @@ function makeConfig(options: Partial<HeadsUpOptions> = {}, ids = ['a', 'b', 'c']
   };
 }
 
-const POOL = 10; // animals deck
+const POOL = mergedPool(['animals']).length; // animals deck
 
 /** Drive one full round to TIME_UP. */
 function playRound(s: HeadsUpState, gots: number, passes: number, seed = 3): HeadsUpState {

@@ -1,16 +1,221 @@
 {
   "id": "movies",
-  "name": { "en": "Movies", "fa": "فیلم‌ها" },
+  "name": {
+    "en": "Movies",
+    "fa": "فیلم‌ها"
+  },
   "category": "movies",
   "icon": "🎬",
   "cards": [
-    { "id": "titanic", "word": { "en": "Titanic", "fa": "تایتانیک" } },
-    { "id": "the-lion-king", "word": { "en": "The Lion King", "fa": "شیرشاه" } },
-    { "id": "frozen", "word": { "en": "Frozen", "fa": "یخ‌زده" } },
-    { "id": "harry-potter", "word": { "en": "Harry Potter", "fa": "هری پاتر" } },
-    { "id": "the-matrix", "word": { "en": "The Matrix", "fa": "ماتریکس" } },
-    { "id": "jurassic-park", "word": { "en": "Jurassic Park", "fa": "پارک ژوراسیک" } },
-    { "id": "spider-man", "word": { "en": "Spider-Man", "fa": "مرد عنکبوتی" } },
-    { "id": "toy-story", "word": { "en": "Toy Story", "fa": "داستان اسباب‌بازی" } }
+    {
+      "id": "movies-titanic",
+      "word": {
+        "en": "Titanic",
+        "fa": "تایتانیک"
+      }
+    },
+    {
+      "id": "movies-the-lion-king",
+      "word": {
+        "en": "The Lion King",
+        "fa": "شیرشاه"
+      }
+    },
+    {
+      "id": "movies-frozen",
+      "word": {
+        "en": "Frozen",
+        "fa": "فروزن"
+      }
+    },
+    {
+      "id": "movies-harry-potter",
+      "word": {
+        "en": "Harry Potter",
+        "fa": "هری پاتر"
+      }
+    },
+    {
+      "id": "movies-the-matrix",
+      "word": {
+        "en": "The Matrix",
+        "fa": "ماتریکس"
+      }
+    },
+    {
+      "id": "movies-jurassic-park",
+      "word": {
+        "en": "Jurassic Park",
+        "fa": "پارک ژوراسیک"
+      }
+    },
+    {
+      "id": "movies-spider-man",
+      "word": {
+        "en": "Spider-Man",
+        "fa": "مرد عنکبوتی"
+      }
+    },
+    {
+      "id": "movies-toy-story",
+      "word": {
+        "en": "Toy Story",
+        "fa": "داستان اسباب‌بازی"
+      }
+    },
+    {
+      "id": "movies-avatar",
+      "word": {
+        "en": "Avatar",
+        "fa": "آواتار"
+      }
+    },
+    {
+      "id": "movies-star-wars",
+      "word": {
+        "en": "Star Wars",
+        "fa": "جنگ ستارگان"
+      }
+    },
+    {
+      "id": "movies-batman",
+      "word": {
+        "en": "Batman",
+        "fa": "بتمن"
+      }
+    },
+    {
+      "id": "movies-the-godfather",
+      "word": {
+        "en": "The Godfather",
+        "fa": "پدرخوانده"
+      }
+    },
+    {
+      "id": "movies-shrek",
+      "word": {
+        "en": "Shrek",
+        "fa": "شرک"
+      }
+    },
+    {
+      "id": "movies-finding-nemo",
+      "word": {
+        "en": "Finding Nemo",
+        "fa": "در جستجوی نمو"
+      }
+    },
+    {
+      "id": "movies-the-avengers",
+      "word": {
+        "en": "The Avengers",
+        "fa": "انتقام‌جویان"
+      }
+    },
+    {
+      "id": "movies-iron-man",
+      "word": {
+        "en": "Iron Man",
+        "fa": "مرد آهنی"
+      }
+    },
+    {
+      "id": "movies-jaws",
+      "word": {
+        "en": "Jaws",
+        "fa": "آرواره‌ها"
+      }
+    },
+    {
+      "id": "movies-aladdin",
+      "word": {
+        "en": "Aladdin",
+        "fa": "علاءالدین"
+      }
+    },
+    {
+      "id": "movies-the-mummy",
+      "word": {
+        "en": "The Mummy",
+        "fa": "مومیایی"
+      }
+    },
+    {
+      "id": "movies-cinderella",
+      "word": {
+        "en": "Cinderella",
+        "fa": "سیندرلا"
+      }
+    },
+    {
+      "id": "movies-king-kong",
+      "word": {
+        "en": "King Kong",
+        "fa": "کینگ کونگ"
+      }
+    },
+    {
+      "id": "movies-the-incredibles",
+      "word": {
+        "en": "The Incredibles",
+        "fa": "شگفت‌انگیزان"
+      }
+    },
+    {
+      "id": "movies-pirates-of-the-caribbean",
+      "word": {
+        "en": "Pirates of the Caribbean",
+        "fa": "دزدان دریایی کارائیب"
+      }
+    },
+    {
+      "id": "movies-the-terminator",
+      "word": {
+        "en": "The Terminator",
+        "fa": "ترمیناتور"
+      }
+    },
+    {
+      "id": "movies-home-alone",
+      "word": {
+        "en": "Home Alone",
+        "fa": "تنها در خانه"
+      }
+    },
+    {
+      "id": "movies-ratatouille",
+      "word": {
+        "en": "Ratatouille",
+        "fa": "موش سرآشپز"
+      }
+    },
+    {
+      "id": "movies-up",
+      "word": {
+        "en": "Up",
+        "fa": "بالا (آپ)"
+      }
+    },
+    {
+      "id": "movies-the-wizard-of-oz",
+      "word": {
+        "en": "The Wizard of Oz",
+        "fa": "جادوگر شهر اوز"
+      }
+    },
+    {
+      "id": "movies-snow-white",
+      "word": {
+        "en": "Snow White",
+        "fa": "سفیدبرفی"
+      }
+    },
+    {
+      "id": "movies-kung-fu-panda",
+      "word": {
+        "en": "Kung Fu Panda",
+        "fa": "پاندای کونگ‌فوکار"
+      }
+    }
   ]
 }

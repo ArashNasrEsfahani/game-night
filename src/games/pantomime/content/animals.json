@@ -2,13 +2,275 @@
   "category": "animals",
   "version": 1,
   "prompts": [
-    { "id": "animals.elephant", "category": "animals", "difficulty": "easy",
-      "text": { "en": "Elephant", "fa": "فیل" } },
-    { "id": "animals.penguin", "category": "animals", "difficulty": "easy",
-      "text": { "en": "Penguin", "fa": "پنگوئن" } },
-    { "id": "animals.kangaroo", "category": "animals", "difficulty": "medium",
-      "text": { "en": "Kangaroo", "fa": "کانگورو" } },
-    { "id": "animals.chameleon", "category": "animals", "difficulty": "hard",
-      "text": { "en": "Chameleon", "fa": "آفتاب‌پرست" } }
+    {
+      "id": "animals.barking-dog",
+      "category": "animals",
+      "difficulty": "easy",
+      "text": {
+        "en": "A dog barking and wagging its tail",
+        "fa": "سگی که پارس می‌کنه و دمشو تکون می‌ده"
+      }
+    },
+    {
+      "id": "animals.cat-licking-paw",
+      "category": "animals",
+      "difficulty": "easy",
+      "text": {
+        "en": "A cat licking its paw and cleaning its face",
+        "fa": "گربه‌ای که دستشو لیس می‌زنه و صورتشو می‌شوره"
+      }
+    },
+    {
+      "id": "animals.hopping-rabbit",
+      "category": "animals",
+      "difficulty": "easy",
+      "text": {
+        "en": "A rabbit hopping and nibbling a carrot",
+        "fa": "خرگوشی که جست‌وخیز می‌کنه و هویج گاز می‌زنه"
+      }
+    },
+    {
+      "id": "animals.clucking-chicken",
+      "category": "animals",
+      "difficulty": "easy",
+      "text": {
+        "en": "A chicken clucking and pecking the ground",
+        "fa": "مرغی که قدقد می‌کنه و زمینو نوک می‌زنه"
+      }
+    },
+    {
+      "id": "animals.mooing-cow",
+      "category": "animals",
+      "difficulty": "easy",
+      "text": {
+        "en": "A cow mooing and chewing slowly",
+        "fa": "گاوی که ماغ می‌کشه و آروم‌آروم نشخوار می‌کنه"
+      }
+    },
+    {
+      "id": "animals.galloping-horse",
+      "category": "animals",
+      "difficulty": "easy",
+      "text": {
+        "en": "A horse galloping and neighing",
+        "fa": "اسبی که چهارنعل می‌تازه و شیهه می‌کشه"
+      }
+    },
+    {
+      "id": "animals.swimming-fish",
+      "category": "animals",
+      "difficulty": "easy",
+      "text": {
+        "en": "A fish swimming and blowing bubbles",
+        "fa": "ماهی‌ای که شنا می‌کنه و حباب درمی‌آره"
+      }
+    },
+    {
+      "id": "animals.buzzing-bee",
+      "category": "animals",
+      "difficulty": "easy",
+      "text": {
+        "en": "A bee buzzing around flowers",
+        "fa": "زنبوری که دور گل‌ها وزوز می‌کنه"
+      }
+    },
+    {
+      "id": "animals.slithering-snake",
+      "category": "animals",
+      "difficulty": "easy",
+      "text": {
+        "en": "A snake slithering and hissing",
+        "fa": "ماری که می‌خزه و فِش‌فِش می‌کنه"
+      }
+    },
+    {
+      "id": "animals.roaring-lion",
+      "category": "animals",
+      "difficulty": "easy",
+      "text": {
+        "en": "A lion roaring and stretching",
+        "fa": "شیری که می‌غره و کش‌وقوس میاد"
+      }
+    },
+    {
+      "id": "animals.swinging-monkey",
+      "category": "animals",
+      "difficulty": "medium",
+      "text": {
+        "en": "A monkey swinging from branches and scratching itself",
+        "fa": "میمونی که از شاخه‌ها آویزون می‌شه و خودشو می‌خارونه"
+      }
+    },
+    {
+      "id": "animals.frog-catching-fly",
+      "category": "animals",
+      "difficulty": "medium",
+      "text": {
+        "en": "A frog hopping and catching a fly with its tongue",
+        "fa": "قورباغه‌ای که می‌جهه و با زبونش مگس شکار می‌کنه"
+      }
+    },
+    {
+      "id": "animals.owl-turning-head",
+      "category": "animals",
+      "difficulty": "medium",
+      "text": {
+        "en": "An owl turning its head all the way around at night",
+        "fa": "جغدی که شب سرشو کامل می‌چرخونه"
+      }
+    },
+    {
+      "id": "animals.crab-walking-sideways",
+      "category": "animals",
+      "difficulty": "medium",
+      "text": {
+        "en": "A crab walking sideways with its claws",
+        "fa": "خرچنگی که کج‌کجی راه می‌ره و چنگال‌هاشو تکون می‌ده"
+      }
+    },
+    {
+      "id": "animals.pecking-woodpecker",
+      "category": "animals",
+      "difficulty": "medium",
+      "text": {
+        "en": "A woodpecker pecking a tree trunk fast",
+        "fa": "دارکوبی که تند‌تند به تنه‌ی درخت نوک می‌زنه"
+      }
+    },
+    {
+      "id": "animals.kicking-donkey",
+      "category": "animals",
+      "difficulty": "medium",
+      "text": {
+        "en": "A stubborn donkey braying and kicking",
+        "fa": "الاغ لجبازی که عرعر می‌کنه و جفتک می‌ندازه"
+      }
+    },
+    {
+      "id": "animals.peacock-spreading-tail",
+      "category": "animals",
+      "difficulty": "medium",
+      "text": {
+        "en": "A peacock proudly spreading its tail feathers",
+        "fa": "طاووسی که با غرور پرهای دمشو باز می‌کنه"
+      }
+    },
+    {
+      "id": "animals.gorilla-beating-chest",
+      "category": "animals",
+      "difficulty": "medium",
+      "text": {
+        "en": "A gorilla beating its chest and stomping",
+        "fa": "گوریلی که به سینه‌ش می‌کوبه و پا می‌کوبه"
+      }
+    },
+    {
+      "id": "animals.camel-spitting",
+      "category": "animals",
+      "difficulty": "medium",
+      "text": {
+        "en": "A camel chewing sideways and spitting",
+        "fa": "شتری که کج‌کجی نشخوار می‌کنه و تُف می‌ندازه"
+      }
+    },
+    {
+      "id": "animals.flamingo-one-leg",
+      "category": "animals",
+      "difficulty": "medium",
+      "text": {
+        "en": "A flamingo standing on one leg by the water",
+        "fa": "فلامینگویی که لب آب رو یه پا وایساده"
+      }
+    },
+    {
+      "id": "animals.chameleon-color-change",
+      "category": "animals",
+      "difficulty": "hard",
+      "text": {
+        "en": "A chameleon changing color and rolling one eye",
+        "fa": "آفتاب‌پرستی که رنگ عوض می‌کنه و یه چشمشو می‌چرخونه"
+      }
+    },
+    {
+      "id": "animals.octopus-eight-arms",
+      "category": "animals",
+      "difficulty": "hard",
+      "text": {
+        "en": "An octopus moving eight arms and squirting ink",
+        "fa": "اختاپوسی که هشت‌تا دستشو تکون می‌ده و جوهر فوت می‌کنه"
+      }
+    },
+    {
+      "id": "animals.sloth-slow-motion",
+      "category": "animals",
+      "difficulty": "hard",
+      "text": {
+        "en": "A sloth moving in extreme slow motion up a branch",
+        "fa": "تنبلی که خیلی‌خیلی آروم از شاخه بالا می‌ره"
+      }
+    },
+    {
+      "id": "animals.kangaroo-pouch",
+      "category": "animals",
+      "difficulty": "hard",
+      "text": {
+        "en": "A kangaroo bouncing with a baby in its pouch",
+        "fa": "کانگورویی که با بچه‌ش تو کیسه ورجه‌وورجه می‌کنه"
+      }
+    },
+    {
+      "id": "animals.platypus-confused",
+      "category": "animals",
+      "difficulty": "hard",
+      "text": {
+        "en": "A platypus with a duck bill swimming and digging",
+        "fa": "نوک‌اردکی که با منقارش شنا می‌کنه و زمینو می‌کنه"
+      }
+    },
+    {
+      "id": "animals.praying-mantis",
+      "category": "animals",
+      "difficulty": "hard",
+      "text": {
+        "en": "A praying mantis holding its front legs up like prayer",
+        "fa": "آخوندکی که دست‌های جلوش رو مثل دعا بالا گرفته"
+      }
+    },
+    {
+      "id": "animals.pufferfish-inflating",
+      "category": "animals",
+      "difficulty": "hard",
+      "text": {
+        "en": "A pufferfish inflating into a spiky ball when scared",
+        "fa": "ماهی بادکنکی که از ترس باد می‌کنه و مثل توپ خاردار می‌شه"
+      }
+    },
+    {
+      "id": "animals.anteater-long-tongue",
+      "category": "animals",
+      "difficulty": "hard",
+      "text": {
+        "en": "An anteater sniffing the ground and slurping ants with a long tongue",
+        "fa": "مورچه‌خواری که زمینو بو می‌کشه و با زبون درازش مورچه‌ها رو می‌بلعه"
+      }
+    },
+    {
+      "id": "animals.hermit-crab-shell",
+      "category": "animals",
+      "difficulty": "hard",
+      "text": {
+        "en": "A hermit crab hauling its shell and hiding inside it",
+        "fa": "خرچنگ منزوی‌ای که صدفشو می‌کشه و توش قایم می‌شه"
+      }
+    },
+    {
+      "id": "animals.mongoose-vs-snake",
+      "category": "animals",
+      "difficulty": "hard",
+      "text": {
+        "en": "A mongoose dodging and pouncing on a snake",
+        "fa": "راسویی که جاخالی می‌ده و رو مار شیرجه می‌زنه"
+      }
+    }
   ]
 }

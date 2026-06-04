@@ -1,7 +1,308 @@
 [
-  { "id": "obj-001", "word": { "en": "Umbrella", "fa": "چتر" }, "category": "objects", "difficulty": "easy" },
-  { "id": "obj-002", "word": { "en": "Lantern", "fa": "فانوس" }, "category": "objects", "difficulty": "med" },
-  { "id": "obj-003", "word": { "en": "Compass", "fa": "قطب‌نما" }, "category": "objects", "difficulty": "hard" },
-  { "id": "obj-004", "word": { "en": "Mirror", "fa": "آینه" }, "category": "objects", "difficulty": "easy" },
-  { "id": "obj-005", "word": { "en": "Scissors", "fa": "قیچی" }, "category": "objects", "difficulty": "easy" }
+  {
+    "id": "obj-001",
+    "word": {
+      "en": "Umbrella",
+      "fa": "چتر"
+    },
+    "category": "objects",
+    "difficulty": "easy"
+  },
+  {
+    "id": "obj-002",
+    "word": {
+      "en": "Mirror",
+      "fa": "آینه"
+    },
+    "category": "objects",
+    "difficulty": "easy"
+  },
+  {
+    "id": "obj-003",
+    "word": {
+      "en": "Scissors",
+      "fa": "قیچی"
+    },
+    "category": "objects",
+    "difficulty": "easy"
+  },
+  {
+    "id": "obj-004",
+    "word": {
+      "en": "Pillow",
+      "fa": "بالش"
+    },
+    "category": "objects",
+    "difficulty": "easy"
+  },
+  {
+    "id": "obj-005",
+    "word": {
+      "en": "Key",
+      "fa": "کلید"
+    },
+    "category": "objects",
+    "difficulty": "easy"
+  },
+  {
+    "id": "obj-006",
+    "word": {
+      "en": "Spoon",
+      "fa": "قاشق"
+    },
+    "category": "objects",
+    "difficulty": "easy"
+  },
+  {
+    "id": "obj-007",
+    "word": {
+      "en": "Glasses",
+      "fa": "عینک"
+    },
+    "category": "objects",
+    "difficulty": "easy"
+  },
+  {
+    "id": "obj-008",
+    "word": {
+      "en": "Clock",
+      "fa": "ساعت دیواری"
+    },
+    "category": "objects",
+    "difficulty": "easy"
+  },
+  {
+    "id": "obj-009",
+    "word": {
+      "en": "Comb",
+      "fa": "شونه"
+    },
+    "category": "objects",
+    "difficulty": "easy"
+  },
+  {
+    "id": "obj-010",
+    "word": {
+      "en": "Towel",
+      "fa": "حوله"
+    },
+    "category": "objects",
+    "difficulty": "easy"
+  },
+  {
+    "id": "obj-011",
+    "word": {
+      "en": "Backpack",
+      "fa": "کوله‌پشتی"
+    },
+    "category": "objects",
+    "difficulty": "easy"
+  },
+  {
+    "id": "obj-012",
+    "word": {
+      "en": "Candle",
+      "fa": "شمع"
+    },
+    "category": "objects",
+    "difficulty": "easy"
+  },
+  {
+    "id": "obj-013",
+    "word": {
+      "en": "Toothbrush",
+      "fa": "مسواک"
+    },
+    "category": "objects",
+    "difficulty": "easy"
+  },
+  {
+    "id": "obj-014",
+    "word": {
+      "en": "Remote control",
+      "fa": "کنترل تلویزیون"
+    },
+    "category": "objects",
+    "difficulty": "easy"
+  },
+  {
+    "id": "obj-015",
+    "word": {
+      "en": "Lantern",
+      "fa": "فانوس"
+    },
+    "category": "objects",
+    "difficulty": "med"
+  },
+  {
+    "id": "obj-016",
+    "word": {
+      "en": "Ladder",
+      "fa": "نردبون"
+    },
+    "category": "objects",
+    "difficulty": "med"
+  },
+  {
+    "id": "obj-017",
+    "word": {
+      "en": "Hammer",
+      "fa": "چکش"
+    },
+    "category": "objects",
+    "difficulty": "med"
+  },
+  {
+    "id": "obj-018",
+    "word": {
+      "en": "Padlock",
+      "fa": "قفل"
+    },
+    "category": "objects",
+    "difficulty": "med"
+  },
+  {
+    "id": "obj-019",
+    "word": {
+      "en": "Wallet",
+      "fa": "کیف پول"
+    },
+    "category": "objects",
+    "difficulty": "med"
+  },
+  {
+    "id": "obj-020",
+    "word": {
+      "en": "Stapler",
+      "fa": "منگنه"
+    },
+    "category": "objects",
+    "difficulty": "med"
+  },
+  {
+    "id": "obj-021",
+    "word": {
+      "en": "Fan",
+      "fa": "پنکه"
+    },
+    "category": "objects",
+    "difficulty": "med"
+  },
+  {
+    "id": "obj-022",
+    "word": {
+      "en": "Bucket",
+      "fa": "سطل"
+    },
+    "category": "objects",
+    "difficulty": "med"
+  },
+  {
+    "id": "obj-023",
+    "word": {
+      "en": "Hanger",
+      "fa": "چوب‌لباسی"
+    },
+    "category": "objects",
+    "difficulty": "med"
+  },
+  {
+    "id": "obj-024",
+    "word": {
+      "en": "Whistle",
+      "fa": "سوت"
+    },
+    "category": "objects",
+    "difficulty": "med"
+  },
+  {
+    "id": "obj-025",
+    "word": {
+      "en": "Magnet",
+      "fa": "آهنربا"
+    },
+    "category": "objects",
+    "difficulty": "med"
+  },
+  {
+    "id": "obj-026",
+    "word": {
+      "en": "Battery",
+      "fa": "باتری"
+    },
+    "category": "objects",
+    "difficulty": "med"
+  },
+  {
+    "id": "obj-027",
+    "word": {
+      "en": "Telescope",
+      "fa": "تلسکوپ"
+    },
+    "category": "objects",
+    "difficulty": "med"
+  },
+  {
+    "id": "obj-028",
+    "word": {
+      "en": "Compass",
+      "fa": "قطب‌نما"
+    },
+    "category": "objects",
+    "difficulty": "hard"
+  },
+  {
+    "id": "obj-029",
+    "word": {
+      "en": "Funnel",
+      "fa": "قیف"
+    },
+    "category": "objects",
+    "difficulty": "hard"
+  },
+  {
+    "id": "obj-030",
+    "word": {
+      "en": "Hourglass",
+      "fa": "ساعت شنی"
+    },
+    "category": "objects",
+    "difficulty": "hard"
+  },
+  {
+    "id": "obj-031",
+    "word": {
+      "en": "Tripod",
+      "fa": "سه‌پایه"
+    },
+    "category": "objects",
+    "difficulty": "hard"
+  },
+  {
+    "id": "obj-032",
+    "word": {
+      "en": "Pliers",
+      "fa": "انبردست"
+    },
+    "category": "objects",
+    "difficulty": "hard"
+  },
+  {
+    "id": "obj-033",
+    "word": {
+      "en": "Spirit level",
+      "fa": "تراز"
+    },
+    "category": "objects",
+    "difficulty": "hard"
+  },
+  {
+    "id": "obj-034",
+    "word": {
+      "en": "Abacus",
+      "fa": "چرتکه"
+    },
+    "category": "objects",
+    "difficulty": "hard"
+  }
 ]
