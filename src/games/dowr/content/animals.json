@@ -1,0 +1,7 @@
+[
+  { "id": "ani-001", "word": { "en": "Cat", "fa": "گربه" }, "category": "animals", "difficulty": "easy" },
+  { "id": "ani-002", "word": { "en": "Camel", "fa": "شتر" }, "category": "animals", "difficulty": "easy" },
+  { "id": "ani-003", "word": { "en": "Peacock", "fa": "طاووس" }, "category": "animals", "difficulty": "med" },
+  { "id": "ani-004", "word": { "en": "Hedgehog", "fa": "جوجه‌تیغی" }, "category": "animals", "difficulty": "hard" },
+  { "id": "ani-005", "word": { "en": "Dolphin", "fa": "دلفین" }, "category": "animals", "difficulty": "med" }
+]

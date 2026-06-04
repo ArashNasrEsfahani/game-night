@@ -1,0 +1,7 @@
+[
+  { "id": "plc-001", "word": { "en": "Beach", "fa": "ساحل" }, "category": "places", "difficulty": "easy" },
+  { "id": "plc-002", "word": { "en": "Bazaar", "fa": "بازار" }, "category": "places", "difficulty": "med" },
+  { "id": "plc-003", "word": { "en": "Persepolis", "fa": "تخت جمشید" }, "category": "places", "difficulty": "hard" },
+  { "id": "plc-004", "word": { "en": "Library", "fa": "کتابخانه" }, "category": "places", "difficulty": "easy" },
+  { "id": "plc-005", "word": { "en": "Airport", "fa": "فرودگاه" }, "category": "places", "difficulty": "med" }
+]

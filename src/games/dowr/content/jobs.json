@@ -1,0 +1,7 @@
+[
+  { "id": "job-001", "word": { "en": "Doctor", "fa": "پزشک" }, "category": "jobs", "difficulty": "easy" },
+  { "id": "job-002", "word": { "en": "Carpenter", "fa": "نجار" }, "category": "jobs", "difficulty": "med" },
+  { "id": "job-003", "word": { "en": "Astronaut", "fa": "فضانورد" }, "category": "jobs", "difficulty": "hard" },
+  { "id": "job-004", "word": { "en": "Teacher", "fa": "معلم" }, "category": "jobs", "difficulty": "easy" },
+  { "id": "job-005", "word": { "en": "Firefighter", "fa": "آتش‌نشان" }, "category": "jobs", "difficulty": "med" }
+]

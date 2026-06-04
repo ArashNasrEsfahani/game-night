@@ -1,0 +1,7 @@
+[
+  { "id": "obj-001", "word": { "en": "Umbrella", "fa": "چتر" }, "category": "objects", "difficulty": "easy" },
+  { "id": "obj-002", "word": { "en": "Lantern", "fa": "فانوس" }, "category": "objects", "difficulty": "med" },
+  { "id": "obj-003", "word": { "en": "Compass", "fa": "قطب‌نما" }, "category": "objects", "difficulty": "hard" },
+  { "id": "obj-004", "word": { "en": "Mirror", "fa": "آینه" }, "category": "objects", "difficulty": "easy" },
+  { "id": "obj-005", "word": { "en": "Scissors", "fa": "قیچی" }, "category": "objects", "difficulty": "easy" }
+]

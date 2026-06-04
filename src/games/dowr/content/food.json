@@ -1,0 +1,8 @@
+[
+  { "id": "food-001", "word": { "en": "Pizza", "fa": "پیتزا" }, "category": "food", "difficulty": "easy", "hints": { "taboo": [{ "en": "cheese", "fa": "پنیر" }, { "en": "slice", "fa": "برش" }] } },
+  { "id": "food-002", "word": { "en": "Saffron", "fa": "زعفران" }, "category": "food", "difficulty": "med" },
+  { "id": "food-003", "word": { "en": "Pomegranate", "fa": "انار" }, "category": "food", "difficulty": "easy" },
+  { "id": "food-004", "word": { "en": "Tahdig", "fa": "ته‌دیگ" }, "category": "food", "difficulty": "hard" },
+  { "id": "food-005", "word": { "en": "Watermelon", "fa": "هندوانه" }, "category": "food", "difficulty": "easy" },
+  { "id": "food-006", "word": { "en": "Kebab", "fa": "کباب" }, "category": "food", "difficulty": "easy" }
+]
