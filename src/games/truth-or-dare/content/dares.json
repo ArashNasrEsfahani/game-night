@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "deckId": "builtin-dares",
+  "kind": "dare",
+  "title": { "en": "Classic Dares", "fa": "جرئت‌های کلاسیک" },
+  "items": [
+    { "id": "dare-mild-001", "kind": "dare", "intensity": "mild", "tags": ["funny", "physical"], "minPlayers": 3,
+      "text": { "en": "Do your best impression of another player until someone guesses who it is.", "fa": "ادای یکی از بازیکن‌ها رو دربیار تا یکی حدس بزنه کیه." } },
+    { "id": "dare-mild-002", "kind": "dare", "intensity": "mild", "tags": ["funny"],
+      "text": { "en": "Talk in a fake accent until it is your turn again.", "fa": "تا نوبت بعدیت با یه لهجهٔ ساختگی حرف بزن." } },
+    { "id": "dare-mild-003", "kind": "dare", "intensity": "mild", "tags": ["physical"],
+      "text": { "en": "Let the player on your right give you a new hairstyle with their hands.", "fa": "بذار نفر سمت راستت با دستاش یه مدل موی جدید برات درست کنه." } },
+    { "id": "dare-mild-004", "kind": "dare", "intensity": "mild", "tags": ["funny"],
+      "text": { "en": "Do ten jumping jacks while singing the alphabet.", "fa": "ده تا پروانه بزن و همزمان الفبا رو بخون." } },
+    { "id": "dare-medium-001", "kind": "dare", "intensity": "medium", "tags": ["bold"], "requiresProps": true,
+      "text": { "en": "Call a contact and sing them happy birthday — even if it is not their birthday.", "fa": "به یکی از مخاطباتت زنگ بزن و براش تولدت مبارک بخون، حتی اگه تولدش نیست." } },
+    { "id": "dare-medium-002", "kind": "dare", "intensity": "medium", "tags": ["bold"], "requiresProps": true,
+      "text": { "en": "Let the group pick a single emoji to post as your status (you pick the app).", "fa": "بذار جمع یه ایموجی به‌عنوان استوریت انتخاب کنه (اپش با خودت)." } },
+    { "id": "dare-spicy-001", "kind": "dare", "intensity": "spicy", "tags": ["spicy"], "requiresProps": true,
+      "text": { "en": "Read aloud the last message you sent, in your most dramatic voice.", "fa": "آخرین پیامی که فرستادی رو با هیجانی‌ترین لحنت بلند بخون." } },
+    { "id": "dare-spicy-002", "kind": "dare", "intensity": "spicy", "tags": ["spicy"], "minPlayers": 3,
+      "text": { "en": "Let the group decide on a new contact name for the person to your left.", "fa": "بذار جمع برای نفر سمت چپت یه اسم جدید توی مخاطبینت انتخاب کنه." } }
+  ]
+}

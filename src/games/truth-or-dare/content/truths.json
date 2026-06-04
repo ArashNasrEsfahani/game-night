@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "deckId": "builtin-truths",
+  "kind": "truth",
+  "title": { "en": "Classic Truths", "fa": "حقیقت‌های کلاسیک" },
+  "items": [
+    { "id": "truth-mild-001", "kind": "truth", "intensity": "mild", "tags": ["funny", "icebreaker"],
+      "text": { "en": "What is the most embarrassing song on your playlist?", "fa": "خجالت‌آورترین آهنگی که توی پلی‌لیستت داری چیه؟" } },
+    { "id": "truth-mild-002", "kind": "truth", "intensity": "mild", "tags": ["icebreaker"],
+      "text": { "en": "If you could have any superpower, which would you pick and why?", "fa": "اگه می‌تونستی یه ابرقدرت داشته باشی، کدومو انتخاب می‌کردی و چرا؟" } },
+    { "id": "truth-mild-003", "kind": "truth", "intensity": "mild", "tags": ["icebreaker"],
+      "text": { "en": "What was your childhood nickname?", "fa": "اسم مستعار دوران بچگیت چی بود؟" } },
+    { "id": "truth-mild-004", "kind": "truth", "intensity": "mild", "tags": ["funny"],
+      "text": { "en": "What is the weirdest food combination you secretly enjoy?", "fa": "عجیب‌ترین ترکیب غذایی که مخفیانه دوستش داری چیه؟" } },
+    { "id": "truth-medium-001", "kind": "truth", "intensity": "medium", "tags": ["deep"],
+      "text": { "en": "What is one thing you have never told anyone in this room?", "fa": "یه چیزی بگو که تا حالا به هیچ‌کس توی این جمع نگفتی." } },
+    { "id": "truth-medium-002", "kind": "truth", "intensity": "medium", "tags": ["group"], "minPlayers": 3,
+      "text": { "en": "Who in this room would you trust with your unlocked phone for a day?", "fa": "بین آدمای این جمع، گوشی آنلاکتو یه روز دست کی می‌سپردی؟" } },
+    { "id": "truth-spicy-001", "kind": "truth", "intensity": "spicy", "tags": ["spicy"],
+      "text": { "en": "What is the boldest message you have ever sent to someone?", "fa": "جسورانه‌ترین پیامی که تا حالا برای کسی فرستادی چی بوده؟" } },
+    { "id": "truth-spicy-002", "kind": "truth", "intensity": "spicy", "tags": ["spicy"], "minPlayers": 3,
+      "text": { "en": "Who here would you swap lives with for a week?", "fa": "با کی توی این جمع حاضری یه هفته جاتو عوض کنی؟" } }
+  ]
+}
