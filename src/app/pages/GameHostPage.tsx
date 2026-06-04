@@ -1,4 +1,5 @@
 import { useMemo } from 'react';
+import type { CSSProperties } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { getGame } from '../../games/registry';
@@ -91,36 +92,32 @@ export function GameHostPage() {
     updateStore(gameId, { state: next, screen, updatedAt: clockService.now() });
   };
 
-  if (!session || session.screen === 'setup') {
-    const Setup = mod.screens.Setup;
-    const config = session?.config ?? mod.defaultConfig({ players: [], lang });
-    return (
-      <GameContextProvider value={ctx}>
-        <Setup
-          state={session?.state ?? setupState!}
-          config={config}
+  const accentStyle = {
+    '--game-accent': `var(--color-game-${mod.manifest.color})`,
+    '--game-accent-strong': `var(--color-game-${mod.manifest.color}-strong)`,
+  } as CSSProperties;
+
+  const ScreenComp =
+    !session || session.screen === 'setup'
+      ? mod.screens.Setup
+      : session.screen === 'results' || session.state.finished
+        ? mod.screens.Results
+        : mod.screens.Play;
+
+  const screenState = session?.state ?? setupState!;
+  const screenConfig = session?.config ?? mod.defaultConfig({ players: [], lang });
+
+  return (
+    <GameContextProvider value={ctx}>
+      <div style={accentStyle} className="contents">
+        <ScreenComp
+          state={screenState}
+          config={screenConfig}
           dispatch={dispatch}
           ctx={ctx}
           nav={nav}
         />
-      </GameContextProvider>
-    );
-  }
-
-  const Active =
-    session.screen === 'results' || session.state.finished
-      ? mod.screens.Results
-      : mod.screens.Play;
-
-  return (
-    <GameContextProvider value={ctx}>
-      <Active
-        state={session.state}
-        config={session.config}
-        dispatch={dispatch}
-        ctx={ctx}
-        nav={nav}
-      />
+      </div>
     </GameContextProvider>
   );
 }
