@@ -1,0 +1,24 @@
+{
+  "id": "spicy",
+  "name": { "en": "Night Out", "fa": "شب‌نشینی" },
+  "description": { "en": "Bolder prompts for a rowdy crowd.", "fa": "سوال‌های جسورانه‌تر برای جمع پرشور." },
+  "version": 1,
+  "prompts": [
+    { "id": "mlt-karaoke-mic", "intensity": "casual", "emoji": "🎤",
+      "text": { "en": "Most likely to hog the karaoke mic", "fa": "به احتمال زیاد میکروفون کارائوکه رو ول نمی‌کنه" } },
+    { "id": "mlt-dance-table", "intensity": "casual", "emoji": "💃",
+      "text": { "en": "Most likely to dance on a table", "fa": "به احتمال زیاد روی میز می‌رقصه" } },
+    { "id": "mlt-lose-phone", "intensity": "casual", "emoji": "📵",
+      "text": { "en": "Most likely to lose their phone on a night out", "fa": "به احتمال زیاد شب بیرون گوشیش رو گم می‌کنه" } },
+    { "id": "mlt-flirt-stranger", "intensity": "spicy", "emoji": "😏",
+      "text": { "en": "Most likely to flirt with a total stranger", "fa": "به احتمال زیاد با یه غریبه‌ی کامل لاس می‌زنه" } },
+    { "id": "mlt-skinny-dip", "intensity": "spicy", "emoji": "🌊",
+      "text": { "en": "Most likely to suggest a midnight swim", "fa": "به احتمال زیاد پیشنهاد شنای نیمه‌شب می‌ده" } },
+    { "id": "mlt-overshare", "intensity": "spicy", "emoji": "🙊",
+      "text": { "en": "Most likely to overshare after one drink", "fa": "به احتمال زیاد بعد از یه نوشیدنی همه‌چی رو لو می‌ده" } },
+    { "id": "mlt-fall-in-love", "intensity": "spicy", "emoji": "💘",
+      "text": { "en": "Most likely to fall in love on vacation", "fa": "به احتمال زیاد توی سفر عاشق می‌شه" } },
+    { "id": "mlt-prank-friend", "intensity": "family", "emoji": "🃏",
+      "text": { "en": "Most likely to pull an elaborate prank", "fa": "به احتمال زیاد یه شوخی پیچیده راه می‌ندازه" } }
+  ]
+}
