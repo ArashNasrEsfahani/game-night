@@ -1,0 +1,14 @@
+{
+  "category": "actions",
+  "version": 1,
+  "prompts": [
+    { "id": "actions.swimming", "category": "actions", "difficulty": "easy",
+      "text": { "en": "Swimming", "fa": "شنا کردن" } },
+    { "id": "actions.brushing-teeth", "category": "actions", "difficulty": "easy",
+      "text": { "en": "Brushing teeth", "fa": "مسواک زدن" } },
+    { "id": "actions.driving-a-car", "category": "actions", "difficulty": "medium",
+      "text": { "en": "Driving a car", "fa": "رانندگی کردن" } },
+    { "id": "actions.juggling", "category": "actions", "difficulty": "hard",
+      "text": { "en": "Juggling", "fa": "ژانگولر بازی" } }
+  ]
+}

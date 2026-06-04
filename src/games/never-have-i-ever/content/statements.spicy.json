@@ -1,0 +1,18 @@
+{
+  "intensity": "spicy",
+  "version": 1,
+  "items": [
+    { "id": "nhie-s-001", "intensity": "spicy", "tags": ["romance", "tech"],
+      "text": { "en": "Never have I ever stalked an ex on social media.", "fa": "من هیچ‌وقت دوست‌سابقم را در شبکه‌های اجتماعی تعقیب نکرده‌ام." } },
+    { "id": "nhie-s-002", "intensity": "spicy", "tags": ["embarrassing"],
+      "text": { "en": "Never have I ever lied about my age.", "fa": "من هیچ‌وقت درباره سنم دروغ نگفته‌ام." } },
+    { "id": "nhie-s-003", "intensity": "spicy", "tags": ["social"],
+      "text": { "en": "Never have I ever pretended to be sick to skip something.", "fa": "من هیچ‌وقت برای جا زدن از کاری خودم را به مریضی نزده‌ام." } },
+    { "id": "nhie-s-004", "intensity": "spicy", "tags": ["tech", "romance"],
+      "text": { "en": "Never have I ever read someone else's messages without permission.", "fa": "من هیچ‌وقت بدون اجازه پیام‌های شخص دیگری را نخوانده‌ام." } },
+    { "id": "nhie-s-005", "intensity": "spicy", "tags": ["romance"],
+      "text": { "en": "Never have I ever had a crush on a friend's partner.", "fa": "من هیچ‌وقت به پارتنرِ یک دوست علاقه پنهانی پیدا نکرده‌ام." } },
+    { "id": "nhie-s-006", "intensity": "spicy", "tags": ["embarrassing"],
+      "text": { "en": "Never have I ever blamed a fart on someone else.", "fa": "من هیچ‌وقت باد معده‌ام را گردن کس دیگری نینداخته‌ام." } }
+  ]
+}

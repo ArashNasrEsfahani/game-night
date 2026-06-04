@@ -1,0 +1,16 @@
+{
+  "intensity": "wild",
+  "version": 1,
+  "items": [
+    { "id": "nhie-w-001", "intensity": "wild", "tags": ["romance"],
+      "text": { "en": "Never have I ever sent a risky text I instantly regretted.", "fa": "من هیچ‌وقت پیام جسورانه‌ای نفرستاده‌ام که فوراً پشیمان شوم." } },
+    { "id": "nhie-w-002", "intensity": "wild", "tags": ["embarrassing"],
+      "text": { "en": "Never have I ever broken something and blamed someone else.", "fa": "من هیچ‌وقت چیزی را نشکسته‌ام و تقصیر را گردن دیگری نینداخته‌ام." } },
+    { "id": "nhie-w-003", "intensity": "wild", "tags": ["romance"],
+      "text": { "en": "Never have I ever ghosted someone after a great date.", "fa": "من هیچ‌وقت بعد از یک قرار عالی کسی را ناغافل رها نکرده‌ام." } },
+    { "id": "nhie-w-004", "intensity": "wild", "tags": ["embarrassing"],
+      "text": { "en": "Never have I ever snooped through a host's bathroom cabinet.", "fa": "من هیچ‌وقت کابینت دستشویی میزبان را فضولانه نگشته‌ام." } },
+    { "id": "nhie-w-005", "intensity": "wild", "tags": ["social"],
+      "text": { "en": "Never have I ever crashed a party I wasn't invited to.", "fa": "من هیچ‌وقت بدون دعوت وارد یک مهمانی نشده‌ام." } }
+  ]
+}

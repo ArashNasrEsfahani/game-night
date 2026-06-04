@@ -1,0 +1,14 @@
+{
+  "category": "famous",
+  "version": 1,
+  "prompts": [
+    { "id": "famous.charlie-chaplin", "category": "famous", "difficulty": "medium",
+      "text": { "en": "Charlie Chaplin", "fa": "چارلی چاپلین" } },
+    { "id": "famous.albert-einstein", "category": "famous", "difficulty": "medium",
+      "text": { "en": "Albert Einstein", "fa": "آلبرت اینشتین" } },
+    { "id": "famous.michael-jackson", "category": "famous", "difficulty": "easy",
+      "text": { "en": "Michael Jackson", "fa": "مایکل جکسون" } },
+    { "id": "famous.hafez", "category": "famous", "difficulty": "hard",
+      "text": { "en": "Hafez", "fa": "حافظ" } }
+  ]
+}

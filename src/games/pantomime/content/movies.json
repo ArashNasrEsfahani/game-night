@@ -1,0 +1,15 @@
+{
+  "category": "movies",
+  "version": 1,
+  "prompts": [
+    { "id": "movies.titanic", "category": "movies", "difficulty": "easy",
+      "text": { "en": "Titanic", "fa": "تایتانیک" } },
+    { "id": "movies.the-lion-king", "category": "movies", "difficulty": "easy",
+      "text": { "en": "The Lion King", "fa": "شیرشاه" } },
+    { "id": "movies.harry-potter", "category": "movies", "difficulty": "medium",
+      "text": { "en": "Harry Potter", "fa": "هری پاتر" } },
+    { "id": "movies.the-matrix", "category": "movies", "difficulty": "hard",
+      "text": { "en": "The Matrix", "fa": "ماتریکس" },
+      "hint": { "en": "Dodge bullets in slow motion", "fa": "جاخالی دادن از گلوله با حرکت آهسته" } }
+  ]
+}

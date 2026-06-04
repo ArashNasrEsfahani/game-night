@@ -1,0 +1,14 @@
+{
+  "category": "animals",
+  "version": 1,
+  "prompts": [
+    { "id": "animals.elephant", "category": "animals", "difficulty": "easy",
+      "text": { "en": "Elephant", "fa": "فیل" } },
+    { "id": "animals.penguin", "category": "animals", "difficulty": "easy",
+      "text": { "en": "Penguin", "fa": "پنگوئن" } },
+    { "id": "animals.kangaroo", "category": "animals", "difficulty": "medium",
+      "text": { "en": "Kangaroo", "fa": "کانگورو" } },
+    { "id": "animals.chameleon", "category": "animals", "difficulty": "hard",
+      "text": { "en": "Chameleon", "fa": "آفتاب‌پرست" } }
+  ]
+}

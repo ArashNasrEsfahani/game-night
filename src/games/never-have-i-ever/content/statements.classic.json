@@ -1,0 +1,20 @@
+{
+  "intensity": "classic",
+  "version": 1,
+  "items": [
+    { "id": "nhie-c-001", "intensity": "classic", "tags": ["embarrassing", "work"],
+      "text": { "en": "Never have I ever fallen asleep in a meeting.", "fa": "من هیچ‌وقت در یک جلسه خوابم نبرده." } },
+    { "id": "nhie-c-002", "intensity": "classic", "tags": ["tech", "embarrassing"],
+      "text": { "en": "Never have I ever sent a text to the wrong person.", "fa": "من هیچ‌وقت پیام را برای آدم اشتباهی نفرستاده‌ام." } },
+    { "id": "nhie-c-003", "intensity": "classic", "tags": ["embarrassing"],
+      "text": { "en": "Never have I ever forgotten someone's name right after meeting them.", "fa": "من هیچ‌وقت بلافاصله بعد از آشنایی اسم کسی را فراموش نکرده‌ام." } },
+    { "id": "nhie-c-004", "intensity": "classic", "tags": ["food"],
+      "text": { "en": "Never have I ever eaten food that fell on the floor.", "fa": "من هیچ‌وقت غذایی را که روی زمین افتاده نخورده‌ام." } },
+    { "id": "nhie-c-005", "intensity": "classic", "tags": ["social"],
+      "text": { "en": "Never have I ever pretended to laugh at a joke I didn't get.", "fa": "من هیچ‌وقت الکی به جوکی که نفهمیدم نخندیده‌ام." } },
+    { "id": "nhie-c-006", "intensity": "classic", "tags": ["travel"],
+      "text": { "en": "Never have I ever missed a flight or a train.", "fa": "من هیچ‌وقت پرواز یا قطارم را از دست نداده‌ام." } },
+    { "id": "nhie-c-007", "intensity": "classic", "tags": ["childhood"],
+      "text": { "en": "Never have I ever cried during a cartoon.", "fa": "من هیچ‌وقت موقع تماشای کارتون گریه نکرده‌ام." } }
+  ]
+}
