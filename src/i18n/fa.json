@@ -1,0 +1,62 @@
+{
+  "app": { "title": "شب بازی", "tagline": "بازی‌های گروهی با یک گوشی" },
+  "common": {
+    "back": "بازگشت",
+    "next": "بعدی",
+    "start": "شروع",
+    "cancel": "انصراف",
+    "confirm": "تأیید",
+    "done": "تمام",
+    "play": "بازی",
+    "close": "بستن",
+    "continue": "ادامه",
+    "skip": "رد کردن",
+    "add": "افزودن",
+    "remove": "حذف",
+    "save": "ذخیره",
+    "delete": "حذف",
+    "edit": "ویرایش"
+  },
+  "home": {
+    "title": "شب بازی",
+    "subtitle": "یک بازی انتخاب کن",
+    "empty": "بازی‌ای پیدا نشد",
+    "players": "{{count}} بازیکن",
+    "minutes": "{{min}} تا {{max}} دقیقه"
+  },
+  "host": {
+    "resumeTitle": "بازی در جریان",
+    "resumeBody": "از همان‌جا ادامه می‌دهی یا بازی تازه شروع می‌کنی؟",
+    "resume": "ادامه",
+    "startOver": "شروع دوباره",
+    "exitConfirm": "از بازی خارج می‌شوی؟ پیشرفتت ذخیره شده است.",
+    "pause": "توقف"
+  },
+  "setup": { "title": "آماده‌سازی", "players": "بازیکنان", "teams": "تیم‌ها", "options": "تنظیمات" },
+  "results": { "title": "نتایج", "winner": "{{name}} برنده شد!", "tie": "مساوی شد!", "playAgain": "بازی دوباره", "home": "خانه" },
+  "players": {
+    "title": "بازیکنان",
+    "add": "افزودن بازیکن",
+    "namePlaceholder": "نام بازیکن",
+    "groups": "گروه‌های ذخیره‌شده",
+    "saveGroup": "ذخیره گروه",
+    "empty": "برای شروع چند بازیکن اضافه کن"
+  },
+  "settings": {
+    "title": "تنظیمات",
+    "theme": "پوسته",
+    "language": "زبان",
+    "sound": "صدا",
+    "haptics": "لرزش",
+    "motion": "کاهش حرکت",
+    "system": "سیستم",
+    "light": "روشن",
+    "dark": "تیره",
+    "on": "روشن",
+    "off": "خاموش",
+    "signIn": "ورود",
+    "signOut": "خروج"
+  },
+  "a11y": { "loading": "در حال بارگذاری", "passTo": "گوشی را به {{name}} بده", "tapToReveal": "برای دیدن بزن", "tapToHide": "برای پنهان کردن بزن" },
+  "errors": { "notFound": "صفحه پیدا نشد", "gameMissing": "این بازی پیدا نشد" }
+}

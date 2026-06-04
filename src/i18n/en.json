@@ -1,0 +1,62 @@
+{
+  "app": { "title": "Game Night", "tagline": "Pass-and-play party games" },
+  "common": {
+    "back": "Back",
+    "next": "Next",
+    "start": "Start",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "done": "Done",
+    "play": "Play",
+    "close": "Close",
+    "continue": "Continue",
+    "skip": "Skip",
+    "add": "Add",
+    "remove": "Remove",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit"
+  },
+  "home": {
+    "title": "Game Night",
+    "subtitle": "Pick a game to play",
+    "empty": "No games found",
+    "players": "{{count}} players",
+    "minutes": "{{min}}–{{max}} min"
+  },
+  "host": {
+    "resumeTitle": "Game in progress",
+    "resumeBody": "Resume where you left off, or start a new match?",
+    "resume": "Resume",
+    "startOver": "Start over",
+    "exitConfirm": "Leave this game? Your progress is saved.",
+    "pause": "Pause"
+  },
+  "setup": { "title": "Setup", "players": "Players", "teams": "Teams", "options": "Options" },
+  "results": { "title": "Results", "winner": "{{name}} wins!", "tie": "It's a tie!", "playAgain": "Play again", "home": "Home" },
+  "players": {
+    "title": "Players",
+    "add": "Add player",
+    "namePlaceholder": "Player name",
+    "groups": "Saved groups",
+    "saveGroup": "Save group",
+    "empty": "Add some players to get started"
+  },
+  "settings": {
+    "title": "Settings",
+    "theme": "Theme",
+    "language": "Language",
+    "sound": "Sound",
+    "haptics": "Vibration",
+    "motion": "Reduce motion",
+    "system": "System",
+    "light": "Light",
+    "dark": "Dark",
+    "on": "On",
+    "off": "Off",
+    "signIn": "Sign in",
+    "signOut": "Sign out"
+  },
+  "a11y": { "loading": "Loading", "passTo": "Pass the phone to {{name}}", "tapToReveal": "Tap to reveal", "tapToHide": "Tap to hide" },
+  "errors": { "notFound": "Page not found", "gameMissing": "That game could not be found" }
+}
