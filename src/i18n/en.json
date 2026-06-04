@@ -371,5 +371,52 @@
     "winAssassin": "The other team hit the assassin",
     "winCleared": "All words found",
     "rematch": "New board"
+  },
+  "mf": {
+    "title": "Mafia",
+    "autoFill": "Auto-fill roles",
+    "citizens": "Citizens: {{n}}",
+    "mode": "Mode",
+    "narrated": "Narrated",
+    "silent": "Silent",
+    "errorSetup": "Check players and role counts",
+    "playAgain": "Play again",
+    "dealProgress": "Dealing {{done}} / {{total}}",
+    "imName": "Only {{name}} should look",
+    "reveal": "Tap to reveal your role",
+    "hideAndPass": "Hide & pass",
+    "wake": "{{role}}, wake up — choose a target",
+    "detectiveResult": "{{name}} appears: {{faction}}",
+    "faction": { "town": "Town", "mafia": "Mafia", "neutral": "Neutral" },
+    "err": {
+      "cannotSkip": "This action can't be skipped",
+      "badTarget": "Pick a living player",
+      "noSelf": "Can't target yourself",
+      "selfSaveUsed": "Self-save already used",
+      "needTarget": "Choose a target first",
+      "emptyBallot": "Nominate someone first"
+    },
+    "skip": "Skip",
+    "back": "Back",
+    "next": "Next",
+    "noDeaths": "No one died last night.",
+    "killedLastNight": "Killed last night",
+    "toDay": "Continue to day",
+    "dayOpen": "The city wakes. Discuss who the mafia might be.",
+    "startNominations": "Start nominations",
+    "nominateHint": "Tap to nominate · {{n}} needed for a vote",
+    "goToVote": "Go to vote",
+    "allVoted": "Everyone has voted",
+    "resolveVote": "Reveal result",
+    "voteWho": "Who do you vote out?",
+    "abstain": "Abstain",
+    "votedOut": "was voted out",
+    "noElimination": "No one was eliminated.",
+    "nextNight": "Next night",
+    "win": {
+      "town": "Town wins! 🎉",
+      "mafia": "Mafia wins! 🔪",
+      "draw": "It's a draw."
+    }
   }
 }
