@@ -1,3 +1,6 @@
+/* Disco Persian — "80s disco lights over ancient Iran." Lapis night, gold & turquoise,
+   pomegranate & neon under a mirror ball. Keeps the 8 ColorToken names. */
+@import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Monoton&family=Gulzar&family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap');
 @import "tailwindcss";
 
 /* Manual dark-mode toggle (class) layered on top of system preference. */
@@ -5,79 +8,89 @@
 
 /* ─────────────────────────  Design tokens  ───────────────────────── */
 @theme {
-  /* Playful game-accent palette (ColorToken). Each: base + strong (for gradients). */
-  --color-game-grape: #a855f7;
-  --color-game-grape-strong: #7c3aed;
-  --color-game-tangerine: #fb923c;
-  --color-game-tangerine-strong: #f97316;
-  --color-game-lime: #a3e635;
-  --color-game-lime-strong: #65a30d;
-  --color-game-sky: #38bdf8;
-  --color-game-sky-strong: #0284c7;
-  --color-game-rose: #fb7185;
-  --color-game-rose-strong: #e11d48;
-  --color-game-gold: #fbbf24;
-  --color-game-gold-strong: #d97706;
-  --color-game-teal: #2dd4bf;
-  --color-game-teal-strong: #0d9488;
-  --color-game-violet: #818cf8;
-  --color-game-violet-strong: #4f46e5;
+  /* The disco lights (Persian-named hues). Each: base + strong (for gradients). */
+  --color-game-grape: #d633ff;
+  --color-game-grape-strong: #9b1fd6;
+  --color-game-tangerine: #ff8a2b;
+  --color-game-tangerine-strong: #f4640a;
+  --color-game-lime: #5dff9b;
+  --color-game-lime-strong: #1fb85f;
+  --color-game-sky: #36b6ff;
+  --color-game-sky-strong: #1574e6;
+  --color-game-rose: #ff3d7f;
+  --color-game-rose-strong: #e01154;
+  --color-game-gold: #ffc233;
+  --color-game-gold-strong: #e89400;
+  --color-game-teal: #25e0c8;
+  --color-game-teal-strong: #08a896;
+  --color-game-violet: #8b7bff;
+  --color-game-violet-strong: #5a44e6;
 
-  /* Brand / primary (purple). */
-  --color-brand: #7c3aed;
-  --color-brand-strong: #6d28d9;
+  /* Brand / primary = gold + turquoise on lapis. */
+  --color-brand: #ffc233;
+  --color-brand-strong: #e89400;
 
   /* Team / hidden-role tokens (codenames, mafia). */
-  --color-team-a: #ef4444;
-  --color-team-b: #3b82f6;
+  --color-team-a: #ff3d7f;
+  --color-team-b: #2f6bf0;
   --color-neutral: #d6c7a1;
-  --color-assassin: #18181b;
+  --color-assassin: #0b0922;
 
-  /* Type. RTL swaps --font-sans to Vazirmatn below. */
+  /* Type. Lalezar = Persian display; Vazirmatn = bilingual body. */
   --font-sans: "Vazirmatn", "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-display: "Fredoka", "Baloo 2", "Vazirmatn", system-ui, sans-serif;
+  --font-display: "Lalezar", "Vazirmatn", system-ui, sans-serif;
+  --font-neon: "Monoton", "Lalezar", system-ui, sans-serif;
 
-  /* Radius + shadow scales (rounded, playful). */
-  --radius-card: 1.25rem;
+  /* Radius + shadow scales. */
+  --radius-card: 1.5rem;
   --radius-pill: 999px;
-  --shadow-card: 0 8px 24px -8px rgb(80 40 140 / 0.25);
-  --shadow-pop: 0 12px 32px -6px rgb(80 40 140 / 0.35);
+  --shadow-card: 0 18px 50px -18px rgb(0 0 0 / 0.7);
+  --shadow-pop: 0 26px 60px -20px rgb(0 0 0 / 0.6);
 
   /* Animation tempo. */
   --ease-pop: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* ─────────────────────  Semantic color variables  ───────────────────── */
-:root {
-  --bg: #faf8ff;
-  --surface: #ffffff;
-  --surface-2: #f3f0fb;
-  --text: #1a1626;
-  --text-muted: #6b6478;
-  --border: #ece9f5;
+/* ─────────────────────  Semantic color variables (Persian night)  ─────────────────────
+   The disco look is dark-only: both light & dark resolve to the lapis night so the
+   theme toggle never breaks the design. */
+:root,
+.dark {
+  --night: #07061a;
+  --night-2: #0d0b2b;
+  --lapis: #14163f;
+  --lapis-2: #1b2466;
+
+  --bg: #07061a;
+  --surface: #15123a;
+  --surface-2: #1d1950;
+  --surface-sunk: #100d2e;
+  --border: #2c2768;
+  --border-glow: #4a3fb0;
+
+  --text: #fdf6e6; /* warm ivory */
+  --text-muted: #b9add9;
+  --text-dim: #7e74a8;
+  --on-accent: #0a0820; /* dark ink on bright accents */
 
   /* In-game accent: the host overrides these from the active game's manifest.color. */
-  --game-accent: var(--color-game-grape);
-  --game-accent-strong: var(--color-game-grape-strong);
+  --game-accent: var(--color-game-gold);
+  --game-accent-strong: var(--color-game-gold-strong);
+  --game-accent-glow: color-mix(in oklab, var(--game-accent) 60%, transparent);
+  --game-accent-soft: color-mix(in oklab, var(--game-accent) 16%, transparent);
 
-  color-scheme: light;
-}
-
-.dark {
-  --bg: #0f0d17;
-  --surface: #1a1726;
-  --surface-2: #221d33;
-  --text: #f5f3fb;
-  --text-muted: #a39db5;
-  --border: #2a2638;
   color-scheme: dark;
 }
 
-/* Persian / RTL uses Vazirmatn as the primary face. */
+/* Persian / RTL uses Vazirmatn as the primary face with a touch more leading. */
 :root:dir(rtl),
 html[dir="rtl"] {
   --font-sans: "Vazirmatn", "Inter", system-ui, sans-serif;
-  --font-display: "Vazirmatn", "Fredoka", system-ui, sans-serif;
+}
+:lang(fa),
+[dir="rtl"] {
+  line-height: 1.85;
 }
 
 /* ─────────────────────────  Base layer  ───────────────────────── */
@@ -90,6 +103,7 @@ html[dir="rtl"] {
   body {
     margin: 0;
     background-color: var(--bg);
+    background-image: radial-gradient(120% 80% at 50% -10%, var(--lapis-2) 0%, var(--night-2) 45%, var(--night) 100%);
     color: var(--text);
     font-family: var(--font-sans);
     -webkit-tap-highlight-color: transparent;
@@ -97,14 +111,139 @@ html[dir="rtl"] {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
   }
+  /* Sweeping disco beams behind everything. */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: -40%;
+    z-index: 0;
+    pointer-events: none;
+    background: conic-gradient(from 0deg at 50% 50%,
+      transparent 0 6deg, color-mix(in oklab, var(--color-game-sky) 50%, transparent) 8deg 14deg,
+      transparent 16deg 40deg, color-mix(in oklab, var(--color-game-rose) 50%, transparent) 42deg 48deg,
+      transparent 50deg 78deg, color-mix(in oklab, var(--color-game-lime) 45%, transparent) 80deg 86deg,
+      transparent 88deg 120deg, color-mix(in oklab, var(--color-game-gold) 50%, transparent) 122deg 128deg,
+      transparent 130deg 168deg, color-mix(in oklab, var(--color-game-teal) 45%, transparent) 212deg 218deg,
+      transparent 220deg 250deg, color-mix(in oklab, var(--color-game-violet) 50%, transparent) 252deg 258deg,
+      transparent 260deg 360deg);
+    filter: blur(70px) saturate(1.3);
+    opacity: 0.4;
+    mix-blend-mode: screen;
+    animation: dp-beam 36s linear infinite;
+  }
+  /* Drifting starlight / disco dust. */
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background-image:
+      radial-gradient(1.5px 1.5px at 12% 22%, var(--color-game-gold) 50%, transparent),
+      radial-gradient(1.5px 1.5px at 78% 14%, var(--color-game-teal) 50%, transparent),
+      radial-gradient(1px 1px at 33% 68%, #fff 50%, transparent),
+      radial-gradient(1.5px 1.5px at 62% 82%, var(--color-game-rose) 50%, transparent),
+      radial-gradient(1px 1px at 88% 54%, var(--color-game-sky) 50%, transparent),
+      radial-gradient(1.5px 1.5px at 45% 38%, #fff 50%, transparent),
+      radial-gradient(1px 1px at 20% 88%, var(--color-game-lime) 50%, transparent);
+    opacity: 0.5;
+    animation: dp-twinkle 4s ease-in-out infinite alternate;
+  }
+  #root {
+    position: relative;
+    z-index: 1;
+  }
   h1,
   h2,
   h3 {
     font-family: var(--font-display);
   }
-  /* Disable pull-to-refresh / text selection jank on tappable game UI. */
+  ::selection {
+    background: var(--color-game-gold);
+    color: var(--on-accent);
+  }
   button {
     -webkit-user-select: none;
     user-select: none;
+  }
+}
+
+@keyframes dp-beam {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes dp-twinkle {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 0.7;
+  }
+}
+
+/* ─────────────────────────  Disco utilities  ───────────────────────── */
+@layer utilities {
+  /* Neon-tube text — the disco signature (uses the active game accent). */
+  .dp-neon {
+    color: #fff;
+    text-shadow:
+      0 0 4px #fff,
+      0 0 11px var(--game-accent),
+      0 0 22px var(--game-accent),
+      0 0 44px var(--game-accent-strong);
+  }
+  /* Gold-foil gradient text. */
+  .dp-foil {
+    background: linear-gradient(96deg, #ffe9a8, var(--color-game-gold) 35%, #fff3cf 50%, var(--color-game-gold-strong) 70%, #ffcf57);
+    background-size: 220% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: dp-foil 6s ease-in-out infinite;
+  }
+  /* Faceted lapis mirror ball. */
+  .dp-ball {
+    border-radius: 50%;
+    background:
+      radial-gradient(circle at 30% 24%, #fff 0 5%, transparent 11%),
+      radial-gradient(circle at 70% 64%, var(--color-game-teal) 0 4%, transparent 13%),
+      radial-gradient(circle at 56% 82%, var(--color-game-rose) 0 4%, transparent 12%),
+      radial-gradient(circle at 80% 32%, var(--color-game-gold) 0 3%, transparent 11%),
+      radial-gradient(circle at 22% 60%, var(--color-game-lime) 0 3%, transparent 12%),
+      radial-gradient(circle at 40% 44%, var(--color-game-sky) 0 3%, transparent 11%),
+      radial-gradient(circle at 50% 50%, #5b6bc4, #1b2466 70%, #0c1138);
+    box-shadow:
+      inset -6px -8px 18px rgb(0 0 0 / 0.6),
+      inset 6px 6px 12px rgb(255 255 255 / 0.18),
+      0 0 30px -6px var(--color-game-teal),
+      0 0 50px -10px var(--color-game-gold);
+    animation: dp-ballglow 3.4s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes dp-foil {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+@keyframes dp-ballglow {
+  from {
+    box-shadow: inset -6px -8px 18px rgb(0 0 0 / 0.6), inset 6px 6px 12px rgb(255 255 255 / 0.18), 0 0 26px -8px var(--color-game-teal), 0 0 44px -12px var(--color-game-gold);
+  }
+  to {
+    box-shadow: inset -6px -8px 18px rgb(0 0 0 / 0.6), inset 6px 6px 12px rgb(255 255 255 / 0.18), 0 0 40px -4px var(--color-game-rose), 0 0 66px -8px var(--color-game-grape);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::before,
+  body::after,
+  .dp-foil,
+  .dp-ball {
+    animation: none !important;
   }
 }

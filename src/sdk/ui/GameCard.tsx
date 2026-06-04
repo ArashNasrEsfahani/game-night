@@ -1,16 +1,6 @@
-import type { ColorToken, GameManifest } from '../types';
-import { cn } from '../../lib/cn';
-
-const ACCENT_VAR: Record<ColorToken, string> = {
-  grape: '--color-game-grape',
-  tangerine: '--color-game-tangerine',
-  lime: '--color-game-lime',
-  sky: '--color-game-sky',
-  rose: '--color-game-rose',
-  gold: '--color-game-gold',
-  teal: '--color-game-teal',
-  violet: '--color-game-violet',
-};
+import type { CSSProperties } from 'react';
+import type { GameManifest } from '../types';
+import { gameEmblem } from './emblems';
 
 export function GameCard({
   manifest,
@@ -23,21 +13,46 @@ export function GameCard({
   tagline: string;
   onClick?: () => void;
 }) {
-  const base = ACCENT_VAR[manifest.color] ?? '--color-game-grape';
+  const accent = manifest.color;
+  const accentVars = {
+    '--game-accent': `var(--color-game-${accent})`,
+    '--game-accent-strong': `var(--color-game-${accent}-strong)`,
+    '--game-accent-glow': `color-mix(in oklab, var(--color-game-${accent}) 60%, transparent)`,
+  } as CSSProperties;
+  const emblem = gameEmblem(manifest.id);
+  const faName = manifest.name.fa;
+
   return (
     <button
       onClick={onClick}
-      className={cn(
-        'group relative flex aspect-square flex-col justify-between overflow-hidden rounded-[var(--radius-card)]',
-        'p-4 text-start text-white shadow-[var(--shadow-card)] transition active:scale-[0.97]',
-      )}
-      style={{ background: `linear-gradient(140deg, var(${base}), var(${base}-strong))` }}
+      style={accentVars}
+      className="group relative flex flex-col overflow-hidden rounded-[var(--radius-card)] border border-[var(--border)] bg-gradient-to-b from-[var(--surface-2)] to-[var(--surface)] text-start shadow-[var(--shadow-card)] transition duration-300 ease-[var(--ease-pop)] hover:-translate-y-1 hover:shadow-[0_26px_60px_-20px_var(--game-accent-glow)] active:scale-[0.98]"
     >
-      <span className="text-4xl drop-shadow-sm">{manifest.icon}</span>
-      <span className="z-10">
-        <span className="block text-lg font-bold leading-tight">{title}</span>
-        <span className="block text-sm leading-snug opacity-90">{tagline}</span>
-      </span>
+      {/* Lit niche / arch with the glowing emblem */}
+      <div
+        className="relative grid h-28 place-items-center transition-[filter] duration-300 group-hover:brightness-110"
+        style={{
+          background:
+            'radial-gradient(75% 95% at 50% 128%, var(--game-accent-strong) 0%, transparent 62%), linear-gradient(180deg, var(--lapis-2), var(--surface-sunk))',
+        }}
+      >
+        <div
+          className="h-[68px] w-[68px] text-[var(--game-accent)] [&_svg]:h-full [&_svg]:w-full"
+          style={{ filter: 'drop-shadow(0 0 10px var(--game-accent-glow))' }}
+          {...(emblem
+            ? { dangerouslySetInnerHTML: { __html: emblem } }
+            : { children: <span className="grid h-full w-full place-items-center text-5xl">{manifest.icon}</span> })}
+        />
+      </div>
+
+      {/* Body */}
+      <div className="flex flex-col gap-0.5 px-3.5 pb-3.5 pt-2.5">
+        <span className="font-display text-lg leading-tight text-[var(--text)]">{title}</span>
+        {faName !== title && (
+          <span className="font-display text-sm leading-tight text-[var(--game-accent)]">{faName}</span>
+        )}
+        <span className="mt-0.5 text-xs leading-snug text-[var(--text-muted)]">{tagline}</span>
+      </div>
     </button>
   );
 }

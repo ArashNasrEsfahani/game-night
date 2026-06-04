@@ -95,6 +95,8 @@ export function GameHostPage() {
   const accentStyle = {
     '--game-accent': `var(--color-game-${mod.manifest.color})`,
     '--game-accent-strong': `var(--color-game-${mod.manifest.color}-strong)`,
+    '--game-accent-glow': `color-mix(in oklab, var(--color-game-${mod.manifest.color}) 60%, transparent)`,
+    '--game-accent-soft': `color-mix(in oklab, var(--color-game-${mod.manifest.color}) 16%, transparent)`,
   } as CSSProperties;
 
   const ScreenComp =

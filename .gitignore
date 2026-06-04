@@ -16,6 +16,10 @@ dist-ssr
 .playwright-mcp/
 .devserver.log
 
+# Design reference pack (kept locally, not part of the app build)
+Disco Persian/
+disco-*.png
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

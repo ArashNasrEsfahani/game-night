@@ -15,7 +15,7 @@ export function SegmentedControl<T extends string>({
     <div
       role="radiogroup"
       aria-label={ariaLabel}
-      className="flex gap-1 rounded-[var(--radius-pill)] bg-[var(--surface-2)] p-1"
+      className="flex gap-1 rounded-[var(--radius-pill)] bg-[var(--surface-sunk)] p-1 shadow-[inset_0_0_0_1px_var(--border)]"
     >
       {options.map((o) => (
         <button
@@ -26,8 +26,8 @@ export function SegmentedControl<T extends string>({
           className={cn(
             'flex-1 rounded-[var(--radius-pill)] px-3 py-2 text-sm font-semibold transition',
             value === o.value
-              ? 'bg-[var(--game-accent-strong)] text-white shadow-sm'
-              : 'text-[var(--text)]',
+              ? 'bg-[linear-gradient(135deg,var(--game-accent),var(--game-accent-strong))] text-[var(--on-accent)] shadow-[0_4px_14px_-4px_var(--game-accent-glow)]'
+              : 'text-[var(--text-muted)]',
           )}
         >
           {o.label}
