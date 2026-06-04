@@ -272,5 +272,30 @@
     "endGame": "پایان بازی",
     "sessionSummary": "بازی تمام شد!",
     "statLine": "{{turns}} نوبت · {{dares}} جرئت · {{truths}} حقیقت · {{skips}} رد"
+  },
+  "hu": {
+    "title": "حدس بزن!",
+    "teamName": "تیم {{n}}",
+    "decks": "دسته‌ها",
+    "mode": "حالت",
+    "solo": "انفرادی",
+    "teams": "تیمی",
+    "teamCount": "تیم‌ها",
+    "roundTime": "زمان دور",
+    "roundsEach": "تعداد دور هرکس",
+    "passPenalty": "رد کردن یک امتیاز کم می‌کند",
+    "errorDeck": "کارتی موجود نیست",
+    "playAgain": "بازی دوباره",
+    "passTo": "گوشی را بده به",
+    "foreheadHint": "روی پیشانی نگه دار — نگاه نکن!",
+    "ready": "آماده‌ام",
+    "go": "برو!",
+    "outOfWords": "کلمه‌ای نمانده!",
+    "gotCount": "درست: {{n}}",
+    "pass": "رد",
+    "got": "درست",
+    "gotPassed": "درست {{got}} · رد {{passed}}",
+    "next": "بعدی",
+    "seeResults": "دیدن نتایج"
   }
 }

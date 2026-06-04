@@ -272,5 +272,30 @@
     "endGame": "End game",
     "sessionSummary": "Session over!",
     "statLine": "{{turns}} turns · {{dares}} dares · {{truths}} truths · {{skips}} skips"
+  },
+  "hu": {
+    "title": "Heads Up!",
+    "teamName": "Team {{n}}",
+    "decks": "Decks",
+    "mode": "Mode",
+    "solo": "Solo",
+    "teams": "Teams",
+    "teamCount": "Teams",
+    "roundTime": "Round time",
+    "roundsEach": "Rounds each",
+    "passPenalty": "Pass costs a point",
+    "errorDeck": "No cards available",
+    "playAgain": "Play again",
+    "passTo": "Pass the phone to",
+    "foreheadHint": "Hold it on your forehead — don't peek!",
+    "ready": "I'm ready",
+    "go": "GO!",
+    "outOfWords": "Out of words!",
+    "gotCount": "Got: {{n}}",
+    "pass": "Pass",
+    "got": "Got it",
+    "gotPassed": "Got {{got}} · Passed {{passed}}",
+    "next": "Next",
+    "seeResults": "See results"
   }
 }

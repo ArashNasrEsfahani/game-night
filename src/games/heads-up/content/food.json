@@ -1,0 +1,16 @@
+{
+  "id": "food",
+  "name": { "en": "Food", "fa": "خوراکی" },
+  "category": "food",
+  "icon": "🍕",
+  "cards": [
+    { "id": "pizza", "word": { "en": "Pizza", "fa": "پیتزا" } },
+    { "id": "watermelon", "word": { "en": "Watermelon", "fa": "هندوانه" } },
+    { "id": "ice-cream", "word": { "en": "Ice Cream", "fa": "بستنی" } },
+    { "id": "kabab", "word": { "en": "Kabab", "fa": "کباب" } },
+    { "id": "spaghetti", "word": { "en": "Spaghetti", "fa": "اسپاگتی" } },
+    { "id": "popcorn", "word": { "en": "Popcorn", "fa": "پاپ‌کورن" } },
+    { "id": "sushi", "word": { "en": "Sushi", "fa": "سوشی" } },
+    { "id": "pomegranate", "word": { "en": "Pomegranate", "fa": "انار" } }
+  ]
+}

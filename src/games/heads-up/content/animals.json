@@ -1,0 +1,18 @@
+{
+  "id": "animals",
+  "name": { "en": "Animals", "fa": "حیوانات" },
+  "category": "animals",
+  "icon": "🐾",
+  "cards": [
+    { "id": "elephant", "word": { "en": "Elephant", "fa": "فیل" } },
+    { "id": "giraffe", "word": { "en": "Giraffe", "fa": "زرافه" } },
+    { "id": "penguin", "word": { "en": "Penguin", "fa": "پنگوئن" } },
+    { "id": "kangaroo", "word": { "en": "Kangaroo", "fa": "کانگورو" } },
+    { "id": "dolphin", "word": { "en": "Dolphin", "fa": "دلفین" } },
+    { "id": "crocodile", "word": { "en": "Crocodile", "fa": "تمساح" } },
+    { "id": "octopus", "word": { "en": "Octopus", "fa": "اختاپوس" } },
+    { "id": "peacock", "word": { "en": "Peacock", "fa": "طاووس" } },
+    { "id": "hedgehog", "word": { "en": "Hedgehog", "fa": "جوجه‌تیغی" } },
+    { "id": "camel", "word": { "en": "Camel", "fa": "شتر" } }
+  ]
+}

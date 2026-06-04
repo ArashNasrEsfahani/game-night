@@ -1,0 +1,16 @@
+{
+  "id": "actions",
+  "name": { "en": "Actions", "fa": "کارها" },
+  "category": "actions",
+  "icon": "🤸",
+  "cards": [
+    { "id": "swimming", "word": { "en": "Swimming", "fa": "شنا کردن" } },
+    { "id": "dancing", "word": { "en": "Dancing", "fa": "رقصیدن" } },
+    { "id": "sneezing", "word": { "en": "Sneezing", "fa": "عطسه کردن" } },
+    { "id": "cooking", "word": { "en": "Cooking", "fa": "آشپزی کردن" } },
+    { "id": "fishing", "word": { "en": "Fishing", "fa": "ماهیگیری" } },
+    { "id": "yawning", "word": { "en": "Yawning", "fa": "خمیازه کشیدن" } },
+    { "id": "juggling", "word": { "en": "Juggling", "fa": "ژانگولر بازی" } },
+    { "id": "skateboarding", "word": { "en": "Skateboarding", "fa": "اسکیت‌بازی" } }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "movies",
+  "name": { "en": "Movies", "fa": "فیلم‌ها" },
+  "category": "movies",
+  "icon": "🎬",
+  "cards": [
+    { "id": "titanic", "word": { "en": "Titanic", "fa": "تایتانیک" } },
+    { "id": "the-lion-king", "word": { "en": "The Lion King", "fa": "شیرشاه" } },
+    { "id": "frozen", "word": { "en": "Frozen", "fa": "یخ‌زده" } },
+    { "id": "harry-potter", "word": { "en": "Harry Potter", "fa": "هری پاتر" } },
+    { "id": "the-matrix", "word": { "en": "The Matrix", "fa": "ماتریکس" } },
+    { "id": "jurassic-park", "word": { "en": "Jurassic Park", "fa": "پارک ژوراسیک" } },
+    { "id": "spider-man", "word": { "en": "Spider-Man", "fa": "مرد عنکبوتی" } },
+    { "id": "toy-story", "word": { "en": "Toy Story", "fa": "داستان اسباب‌بازی" } }
+  ]
+}
