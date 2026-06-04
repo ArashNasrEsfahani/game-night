@@ -336,5 +336,40 @@
     "spyWas": "The spy was",
     "nextRound": "Next round",
     "seeResults": "See results"
+  },
+  "cn": {
+    "title": "Spy Grid",
+    "red": "Red",
+    "blue": "Blue",
+    "spymaster": "Spymaster",
+    "mode": "Mode",
+    "untimed": "Untimed",
+    "timed": "Timed",
+    "startingTeam": "Starting team",
+    "random": "Random",
+    "bonusGuess": "Allow the bonus +1 guess",
+    "errorSetup": "Need 2 teams of 2+ and 25 words",
+    "playAgain": "Play again",
+    "imSpymaster": "I'm the spymaster",
+    "onlySpymaster": "Only {{name}} should look",
+    "reveal": "Tap to reveal the key",
+    "clueNumber": "Number",
+    "clueGiven": "Clue given",
+    "hideKey": "Hide the key — pass to the guessers",
+    "weAreReady": "We're ready",
+    "clueEcho": "Clue: {{count}} · {{left}} guesses left",
+    "stopGuessing": "Stop guessing",
+    "reason": {
+      "guessedWrong": "Wrong guess!",
+      "usedAllGuesses": "Out of guesses",
+      "stopped": "Turn passed",
+      "timeUp": "Time's up!"
+    },
+    "nextTeam": "Next: {{team}}",
+    "continue": "Continue",
+    "teamWins": "{{team}} wins!",
+    "winAssassin": "The other team hit the assassin",
+    "winCleared": "All words found",
+    "rematch": "New board"
   }
 }

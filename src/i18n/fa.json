@@ -336,5 +336,40 @@
     "spyWas": "جاسوس این بود",
     "nextRound": "دور بعد",
     "seeResults": "دیدن نتایج"
+  },
+  "cn": {
+    "title": "شبکهٔ جاسوسی",
+    "red": "قرمز",
+    "blue": "آبی",
+    "spymaster": "رئیس‌جاسوس",
+    "mode": "حالت",
+    "untimed": "بدون زمان",
+    "timed": "زمان‌دار",
+    "startingTeam": "تیم شروع‌کننده",
+    "random": "تصادفی",
+    "bonusGuess": "حدس جایزه +۱ مجاز باشد",
+    "errorSetup": "به ۲ تیم حداقل ۲ نفره و ۲۵ کلمه نیاز است",
+    "playAgain": "بازی دوباره",
+    "imSpymaster": "من رئیس‌جاسوسم",
+    "onlySpymaster": "فقط {{name}} باید ببیند",
+    "reveal": "برای دیدن کلید بزن",
+    "clueNumber": "عدد",
+    "clueGiven": "سرنخ داده شد",
+    "hideKey": "کلید را پنهان کن — به حدس‌زن‌ها بده",
+    "weAreReady": "آماده‌ایم",
+    "clueEcho": "سرنخ: {{count}} · {{left}} حدس باقی",
+    "stopGuessing": "توقف حدس",
+    "reason": {
+      "guessedWrong": "حدس اشتباه!",
+      "usedAllGuesses": "حدس‌ها تمام شد",
+      "stopped": "نوبت رد شد",
+      "timeUp": "وقت تمام شد!"
+    },
+    "nextTeam": "بعدی: {{team}}",
+    "continue": "ادامه",
+    "teamWins": "{{team}} برنده شد!",
+    "winAssassin": "تیم دیگر جاسوس مرگبار را زد",
+    "winCleared": "همهٔ کلمات پیدا شد",
+    "rematch": "صفحهٔ جدید"
   }
 }

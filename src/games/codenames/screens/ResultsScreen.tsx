@@ -1,0 +1,58 @@
+import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
+import type { GameScreenProps, Lang } from '../../../sdk/types';
+import { Screen, AppBar, Button, WinnerBanner } from '../../../sdk/ui';
+import type { BoardCell, CardRole, CodenamesAction, CodenamesState } from '../logic';
+
+function roleClass(role: CardRole): string {
+  switch (role) {
+    case 'teamA':
+      return 'bg-[var(--color-game-rose-strong)] text-white';
+    case 'teamB':
+      return 'bg-[var(--color-game-sky-strong)] text-white';
+    case 'neutral':
+      return 'bg-[var(--color-game-gold)] text-[var(--text)]';
+    case 'assassin':
+      return 'bg-zinc-900 text-white';
+  }
+}
+
+export function ResultsScreen({ state, ctx, nav }: GameScreenProps<CodenamesState, CodenamesAction>) {
+  const { t } = useTranslation();
+  const s = state;
+  const lang: Lang = ctx.lang;
+
+  useEffect(() => {
+    ctx.sound.play(s.winner ? 'win' : 'lose');
+  }, [ctx, s.winner]);
+
+  const winnerName = s.winner ? s.teamMeta[s.winner].name : '';
+  const reasonKey = s.winReason === 'opponentHitAssassin' ? 'cn.winAssassin' : 'cn.winCleared';
+
+  return (
+    <Screen>
+      <AppBar title={t('results.title')} onBack={() => nav.exit()} />
+      <div className="flex flex-col gap-4 pb-8">
+        <WinnerBanner title={t('cn.teamWins', { team: winnerName })} names={[t(reasonKey)]} />
+        <div className="grid grid-cols-5 gap-1.5">
+          {s.board.map((c: BoardCell) => (
+            <div
+              key={c.index}
+              className={`flex aspect-square items-center justify-center rounded-lg p-1 text-center text-[10px] font-bold leading-tight ${roleClass(c.role)}`}
+            >
+              {c.word[lang]}
+            </div>
+          ))}
+        </div>
+        <div className="mt-2 flex flex-col gap-2">
+          <Button size="lg" fullWidth onClick={() => { ctx.sound.play('tap'); nav.playAgain(); }}>
+            {t('cn.rematch')}
+          </Button>
+          <Button variant="secondary" fullWidth onClick={() => nav.exit()}>
+            {t('results.home')}
+          </Button>
+        </div>
+      </div>
+    </Screen>
+  );
+}
