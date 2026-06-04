@@ -1,0 +1,32 @@
+{
+  "id": "spicy",
+  "name": { "en": "Spicy", "fa": "تند" },
+  "description": { "en": "Bolder dilemmas for a daring group.", "fa": "دوراهی‌های جسورانه‌تر برای جمع شجاع." },
+  "intensityDefault": "spicy",
+  "items": [
+    { "id": "spicy-001", "intensity": "medium", "tags": ["social"],
+      "optionA": { "en": "Read everyone's mind for a day", "fa": "یه روز فکر همه رو بخونی" },
+      "optionB": { "en": "Let everyone read yours for a day", "fa": "یه روز همه فکر تو رو بخونن" } },
+    { "id": "spicy-002", "intensity": "spicy", "tags": ["romance"],
+      "optionA": { "en": "Marry your celebrity crush but be bored", "fa": "با سلبریتی موردعلاقه‌ت ازدواج کنی ولی حوصله‌ت سر بره" },
+      "optionB": { "en": "Marry a stranger who adores you", "fa": "با یه غریبه که عاشقته ازدواج کنی" } },
+    { "id": "spicy-003", "intensity": "spicy", "tags": ["secrets"],
+      "optionA": { "en": "Reveal your biggest secret to the group", "fa": "بزرگ‌ترین رازت رو به جمع بگی" },
+      "optionB": { "en": "Hear everyone else's biggest secret", "fa": "بزرگ‌ترین راز بقیه رو بشنوی" } },
+    { "id": "spicy-004", "intensity": "medium", "tags": ["career"],
+      "optionA": { "en": "Have a dream job with no pay", "fa": "شغل رویاییت رو داشته باشی ولی بی‌حقوق" },
+      "optionB": { "en": "Have a boring job with huge pay", "fa": "شغل خسته‌کننده ولی پرحقوق داشته باشی" } },
+    { "id": "spicy-005", "intensity": "spicy", "tags": ["ethics"],
+      "optionA": { "en": "Win every game by cheating", "fa": "با تقلب توی هر بازی برنده بشی" },
+      "optionB": { "en": "Lose every game honestly", "fa": "صادقانه توی هر بازی ببازی" } },
+    { "id": "spicy-006", "intensity": "mild", "tags": ["food"],
+      "optionA": { "en": "Give up coffee forever", "fa": "برای همیشه قهوه رو کنار بذاری" },
+      "optionB": { "en": "Give up dessert forever", "fa": "برای همیشه دسر رو کنار بذاری" } },
+    { "id": "spicy-007", "intensity": "spicy", "tags": ["fame"],
+      "optionA": { "en": "Be famous for something embarrassing", "fa": "به‌خاطر یه چیز خجالت‌آور مشهور بشی" },
+      "optionB": { "en": "Be forgotten despite doing something great", "fa": "با وجود یه کار بزرگ فراموش بشی" } },
+    { "id": "spicy-008", "intensity": "medium", "tags": ["lifestyle"],
+      "optionA": { "en": "Never use the internet again", "fa": "دیگه هیچ‌وقت از اینترنت استفاده نکنی" },
+      "optionB": { "en": "Never travel again", "fa": "دیگه هیچ‌وقت سفر نری" } }
+  ]
+}

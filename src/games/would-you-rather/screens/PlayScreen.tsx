@@ -1,0 +1,196 @@
+import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import type { GameScreenProps } from '../../../sdk/types';
+import { Screen, AppBar, Button, Card, Curtain, Stepper } from '../../../sdk/ui';
+import { ITEM_BY_ID } from '../content';
+import { currentItemId, currentVoterId, everyoneVoted } from '../logic';
+import type { Side, WyrAction, WyrState } from '../logic';
+
+function OptionButtons({
+  a,
+  b,
+  onPick,
+  disabled,
+}: {
+  a: string;
+  b: string;
+  onPick: (side: Side) => void;
+  disabled?: boolean;
+}) {
+  return (
+    <div className="grid w-full gap-3">
+      <Button size="lg" fullWidth disabled={disabled} onClick={() => onPick('A')}>
+        {a}
+      </Button>
+      <div className="text-center text-sm font-bold text-[var(--text-muted)]">—</div>
+      <Button size="lg" variant="secondary" fullWidth disabled={disabled} onClick={() => onPick('B')}>
+        {b}
+      </Button>
+    </div>
+  );
+}
+
+export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<WyrState, WyrAction>) {
+  const { t } = useTranslation();
+  const s = state;
+  const [gateOpen, setGateOpen] = useState(false);
+  const [qa, setQa] = useState(0);
+  const [qb, setQb] = useState(0);
+
+  const voterId = currentVoterId(s);
+  useEffect(() => {
+    setGateOpen(false);
+  }, [voterId]);
+  useEffect(() => {
+    if (s.phase === 'collecting') {
+      setQa(0);
+      setQb(0);
+    }
+  }, [s.phase, s.index]);
+
+  const itemId = currentItemId(s);
+  const item = itemId ? ITEM_BY_ID[itemId] : undefined;
+  const a = item ? ctx.localize(item.optionA) : '';
+  const b = item ? ctx.localize(item.optionB) : '';
+
+  if (s.phase === 'error') {
+    return (
+      <Screen>
+        <AppBar title={t('wyr.title')} onBack={() => nav.exit()} />
+        <div className="grid flex-1 place-items-center gap-4 text-center">
+          <p className="text-[var(--text-muted)]">{t('wyr.errorDeck')}</p>
+          <Button onClick={() => nav.playAgain()}>{t('wyr.playAgain')}</Button>
+        </div>
+      </Screen>
+    );
+  }
+
+  if (s.phase === 'prompt') {
+    return (
+      <Screen>
+        <AppBar onBack={() => nav.exit()} />
+        <p className="py-1 text-center text-sm font-semibold text-[var(--text-muted)]">
+          {t('wyr.progress', { done: s.index + 1, total: s.total })}
+        </p>
+        <div className="flex flex-1 flex-col items-center justify-center gap-4 text-center">
+          <p className="text-lg font-bold">{t('wyr.wouldYouRather')}</p>
+          <Card className="px-5 py-6 text-xl font-extrabold">{a}</Card>
+          <div className="text-2xl font-black text-[var(--game-accent-strong)]">{t('wyr.or')}</div>
+          <Card className="px-5 py-6 text-xl font-extrabold">{b}</Card>
+          <div className="mt-2 flex w-full flex-col gap-2">
+            <Button size="lg" fullWidth onClick={() => { ctx.sound.play('tap'); dispatch({ type: 'BEGIN_COLLECTION' }); }}>
+              {s.options.mode === 'vote' ? t('wyr.startVoting') : t('wyr.countHands')}
+            </Button>
+            <Button variant="ghost" onClick={() => dispatch({ type: 'SKIP' })}>
+              {t('wyr.skip')}
+            </Button>
+          </div>
+        </div>
+      </Screen>
+    );
+  }
+
+  if (s.phase === 'collecting' && s.options.mode === 'vote') {
+    const done = everyoneVoted(s);
+    const voterName = voterId ? s.playerNames[voterId] : '';
+    if (done) {
+      return (
+        <Screen>
+          <AppBar onBack={() => nav.exit()} />
+          <div className="grid flex-1 place-items-center gap-4 text-center">
+            <p className="text-lg text-[var(--text-muted)]">{t('wyr.passBack')}</p>
+            <Button size="lg" onClick={() => { ctx.sound.play('reveal'); dispatch({ type: 'REVEAL' }); }}>
+              {t('wyr.revealSplit')}
+            </Button>
+          </div>
+        </Screen>
+      );
+    }
+    return (
+      <Screen>
+        <AppBar onBack={() => nav.exit()} />
+        <p className="py-1 text-center text-xs text-[var(--text-muted)]">
+          {t('wyr.votedProgress', { done: s.handoffIndex, total: s.playerIds.length })}
+        </p>
+        <Curtain
+          open={gateOpen}
+          holderName={voterName}
+          hint={t('wyr.imReady', { name: voterName })}
+          revealLabel={t('wyr.reveal')}
+          onReveal={() => setGateOpen(true)}
+        >
+          <div className="flex flex-1 flex-col items-center justify-center gap-4">
+            <p className="text-center text-base font-bold">{t('wyr.wouldYouRather')}</p>
+            <OptionButtons
+              a={a}
+              b={b}
+              onPick={(side) => {
+                ctx.haptics.light();
+                if (voterId) dispatch({ type: 'CHOOSE', playerId: voterId, side });
+                dispatch({ type: 'ADVANCE_HANDOFF' });
+              }}
+            />
+          </div>
+        </Curtain>
+      </Screen>
+    );
+  }
+
+  if (s.phase === 'collecting' && s.options.mode === 'quick') {
+    return (
+      <Screen>
+        <AppBar onBack={() => nav.exit()} />
+        <div className="flex flex-1 flex-col justify-center gap-4">
+          <p className="text-center text-base font-bold">{t('wyr.wouldYouRather')}</p>
+          <Card className="px-4 py-4 text-center text-lg font-extrabold">{a}</Card>
+          <Stepper label={t('wyr.handsForA')} value={qa} min={0} max={s.playerIds.length} onChange={setQa} />
+          <Card className="px-4 py-4 text-center text-lg font-extrabold">{b}</Card>
+          <Stepper label={t('wyr.handsForB')} value={qb} min={0} max={s.playerIds.length} onChange={setQb} />
+          <Button
+            size="lg"
+            fullWidth
+            disabled={qa + qb === 0}
+            onClick={() => {
+              ctx.sound.play('reveal');
+              dispatch({ type: 'SET_QUICK_COUNTS', A: qa, B: qb });
+              dispatch({ type: 'REVEAL' });
+            }}
+          >
+            {t('wyr.revealSplit')}
+          </Button>
+        </div>
+      </Screen>
+    );
+  }
+
+  // reveal
+  const cur = s.current ?? { countA: 0, countB: 0, majority: 'tie' as const };
+  const totalVotes = cur.countA + cur.countB || 1;
+  const pctA = Math.round((cur.countA / totalVotes) * 100);
+  const last = s.index + 1 >= s.total;
+  return (
+    <Screen>
+      <AppBar onBack={() => nav.exit()} />
+      <div className="flex flex-1 flex-col justify-center gap-4">
+        <p className="text-center text-sm text-[var(--text-muted)]">{t('wyr.wouldYouRather')}</p>
+        <div className="overflow-hidden rounded-2xl">
+          <div className="flex items-center justify-between bg-[var(--game-accent-strong)] px-4 py-4 text-white" style={{ width: `${Math.max(20, pctA)}%`, minWidth: '30%' }}>
+            <span className="truncate font-bold">{a}</span>
+            <span className="ms-2 font-black">{cur.countA}</span>
+          </div>
+          <div className="flex items-center justify-between bg-[var(--surface-2)] px-4 py-4">
+            <span className="truncate font-bold">{b}</span>
+            <span className="ms-2 font-black">{cur.countB}</span>
+          </div>
+        </div>
+        <p className="text-center text-lg font-extrabold">
+          {cur.majority === 'tie' ? t('wyr.tie') : cur.majority === 'A' ? `${a} ✓` : `${b} ✓`}
+        </p>
+        {item?.note && <p className="text-center text-sm text-[var(--text-muted)]">{ctx.localize(item.note)}</p>}
+        <Button size="lg" fullWidth onClick={() => { ctx.sound.play('tap'); dispatch({ type: 'NEXT' }); }}>
+          {last ? t('wyr.seeResults') : t('wyr.next')}
+        </Button>
+      </div>
+    </Screen>
+  );
+}
