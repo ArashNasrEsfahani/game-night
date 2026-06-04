@@ -1,0 +1,79 @@
+{
+  "id": "core",
+  "name": { "en": "Classic Locations", "fa": "مکان‌های کلاسیک" },
+  "version": 1,
+  "locations": [
+    { "id": "airport", "icon": "✈️", "name": { "en": "Airport", "fa": "فرودگاه" }, "roles": [
+      { "id": "pilot", "name": { "en": "Pilot", "fa": "خلبان" } },
+      { "id": "flight_attendant", "name": { "en": "Flight Attendant", "fa": "مهماندار" } },
+      { "id": "passenger", "name": { "en": "Passenger", "fa": "مسافر" } },
+      { "id": "security", "name": { "en": "Security Officer", "fa": "مأمور امنیتی" } },
+      { "id": "ticket_agent", "name": { "en": "Ticket Agent", "fa": "متصدی بلیت" } } ] },
+    { "id": "hospital", "icon": "🏥", "name": { "en": "Hospital", "fa": "بیمارستان" }, "roles": [
+      { "id": "surgeon", "name": { "en": "Surgeon", "fa": "جراح" } },
+      { "id": "nurse", "name": { "en": "Nurse", "fa": "پرستار" } },
+      { "id": "patient", "name": { "en": "Patient", "fa": "بیمار" } },
+      { "id": "anesthetist", "name": { "en": "Anesthetist", "fa": "متخصص بیهوشی" } },
+      { "id": "intern", "name": { "en": "Intern", "fa": "کارورز" } } ] },
+    { "id": "restaurant", "icon": "🍽️", "name": { "en": "Restaurant", "fa": "رستوران" }, "roles": [
+      { "id": "chef", "name": { "en": "Chef", "fa": "سرآشپز" } },
+      { "id": "waiter", "name": { "en": "Waiter", "fa": "پیشخدمت" } },
+      { "id": "customer", "name": { "en": "Customer", "fa": "مشتری" } },
+      { "id": "cashier", "name": { "en": "Cashier", "fa": "صندوق‌دار" } },
+      { "id": "dishwasher", "name": { "en": "Dishwasher", "fa": "ظرف‌شور" } } ] },
+    { "id": "school", "icon": "🏫", "name": { "en": "School", "fa": "مدرسه" }, "roles": [
+      { "id": "teacher", "name": { "en": "Teacher", "fa": "معلم" } },
+      { "id": "student", "name": { "en": "Student", "fa": "دانش‌آموز" } },
+      { "id": "principal", "name": { "en": "Principal", "fa": "مدیر" } },
+      { "id": "janitor", "name": { "en": "Janitor", "fa": "سرایدار" } },
+      { "id": "gym_teacher", "name": { "en": "Gym Teacher", "fa": "معلم ورزش" } } ] },
+    { "id": "bank", "icon": "🏦", "name": { "en": "Bank", "fa": "بانک" }, "roles": [
+      { "id": "teller", "name": { "en": "Teller", "fa": "متصدی باجه" } },
+      { "id": "manager", "name": { "en": "Manager", "fa": "مدیر شعبه" } },
+      { "id": "customer", "name": { "en": "Customer", "fa": "مشتری" } },
+      { "id": "guard", "name": { "en": "Security Guard", "fa": "نگهبان" } },
+      { "id": "robber", "name": { "en": "Robber", "fa": "سارق" } } ] },
+    { "id": "beach", "icon": "🏖️", "name": { "en": "Beach", "fa": "ساحل" }, "roles": [
+      { "id": "lifeguard", "name": { "en": "Lifeguard", "fa": "نجات‌غریق" } },
+      { "id": "swimmer", "name": { "en": "Swimmer", "fa": "شناگر" } },
+      { "id": "vendor", "name": { "en": "Ice-cream Vendor", "fa": "بستنی‌فروش" } },
+      { "id": "surfer", "name": { "en": "Surfer", "fa": "موج‌سوار" } },
+      { "id": "photographer", "name": { "en": "Photographer", "fa": "عکاس" } } ] },
+    { "id": "movie_set", "icon": "🎬", "name": { "en": "Movie Set", "fa": "صحنه فیلم‌برداری" }, "roles": [
+      { "id": "director", "name": { "en": "Director", "fa": "کارگردان" } },
+      { "id": "actor", "name": { "en": "Actor", "fa": "بازیگر" } },
+      { "id": "cameraman", "name": { "en": "Cameraman", "fa": "فیلم‌بردار" } },
+      { "id": "makeup", "name": { "en": "Makeup Artist", "fa": "گریمور" } },
+      { "id": "stuntman", "name": { "en": "Stunt Double", "fa": "بدلکار" } } ] },
+    { "id": "spaceship", "icon": "🚀", "name": { "en": "Spaceship", "fa": "سفینه فضایی" }, "roles": [
+      { "id": "captain", "name": { "en": "Captain", "fa": "فرمانده" } },
+      { "id": "engineer", "name": { "en": "Engineer", "fa": "مهندس" } },
+      { "id": "scientist", "name": { "en": "Scientist", "fa": "دانشمند" } },
+      { "id": "medic", "name": { "en": "Medic", "fa": "پزشک سفینه" } },
+      { "id": "navigator", "name": { "en": "Navigator", "fa": "ناوبر" } } ] },
+    { "id": "casino", "icon": "🎰", "name": { "en": "Casino", "fa": "کازینو" }, "roles": [
+      { "id": "dealer", "name": { "en": "Dealer", "fa": "گرداننده میز" } },
+      { "id": "gambler", "name": { "en": "Gambler", "fa": "قمارباز" } },
+      { "id": "bartender", "name": { "en": "Bartender", "fa": "متصدی بار" } },
+      { "id": "bouncer", "name": { "en": "Bouncer", "fa": "نگهبان در" } },
+      { "id": "vip", "name": { "en": "VIP Guest", "fa": "مهمان ویژه" } } ] },
+    { "id": "train", "icon": "🚆", "name": { "en": "Passenger Train", "fa": "قطار مسافربری" }, "roles": [
+      { "id": "conductor", "name": { "en": "Conductor", "fa": "مهماندار قطار" } },
+      { "id": "driver", "name": { "en": "Driver", "fa": "راننده قطار" } },
+      { "id": "passenger", "name": { "en": "Passenger", "fa": "مسافر" } },
+      { "id": "ticket_inspector", "name": { "en": "Ticket Inspector", "fa": "بازرس بلیت" } },
+      { "id": "snack_seller", "name": { "en": "Snack Seller", "fa": "فروشنده تنقلات" } } ] },
+    { "id": "bazaar", "icon": "🛍️", "name": { "en": "Grand Bazaar", "fa": "بازار بزرگ" }, "roles": [
+      { "id": "carpet_seller", "name": { "en": "Carpet Seller", "fa": "فرش‌فروش" } },
+      { "id": "spice_merchant", "name": { "en": "Spice Merchant", "fa": "عطار" } },
+      { "id": "shopper", "name": { "en": "Shopper", "fa": "خریدار" } },
+      { "id": "porter", "name": { "en": "Porter", "fa": "باربر" } },
+      { "id": "goldsmith", "name": { "en": "Goldsmith", "fa": "زرگر" } } ] },
+    { "id": "soccer_stadium", "icon": "⚽", "name": { "en": "Soccer Stadium", "fa": "ورزشگاه فوتبال" }, "roles": [
+      { "id": "player", "name": { "en": "Player", "fa": "بازیکن" } },
+      { "id": "referee", "name": { "en": "Referee", "fa": "داور" } },
+      { "id": "coach", "name": { "en": "Coach", "fa": "مربی" } },
+      { "id": "fan", "name": { "en": "Fan", "fa": "هوادار" } },
+      { "id": "commentator", "name": { "en": "Commentator", "fa": "گزارشگر" } } ] }
+  ]
+}
