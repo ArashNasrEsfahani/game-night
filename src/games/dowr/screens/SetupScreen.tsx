@@ -2,11 +2,18 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import type { GameConfig, GameScreenProps, PlayerSeat, TeamSetup } from '../../../sdk/types';
-import { Screen, AppBar, Button, SegmentedControl, Stepper, Toggle } from '../../../sdk/ui';
+import { Screen, AppBar, Button, SegmentedControl, Stepper, Toggle, MotifDivider } from '../../../sdk/ui';
 import { useRosterStore } from '../../../store/rosterStore';
 import { asTeamId } from '../../../engine/ids';
-import { DEFAULT_OPTIONS, DOWR_CATEGORIES, validateConfig } from '../config';
-import type { DowrDifficultySel, DowrMode, DowrOptions } from '../config';
+import {
+  DEFAULT_OPTIONS,
+  DOWR_CATEGORIES,
+  FUSE_CHOICES,
+  BOMB_PENALTY_CHOICES,
+  CHANGE_PENALTY_CHOICES,
+  validateConfig,
+} from '../config';
+import type { DowrDifficultySel, DowrOptions } from '../config';
 import type { DowrCategory } from '../content';
 import { buildPool } from '../deck';
 import type { DowrAction, DowrState } from '../logic';
@@ -35,17 +42,15 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<DowrState, DowrAction>
     .filter((p) => selected.includes(p.id))
     .map((p) => ({ id: p.id, name: p.name, emoji: p.emoji, color: p.color }));
 
-  const teams: TeamSetup | undefined =
-    opts.mode === 'teams'
-      ? {
-          mode: 'auto',
-          teams: Array.from({ length: Math.floor(seats.length / 2) }, (_, i) => ({
-            id: asTeamId(`t${i}`),
-            name: `Team ${i + 1}`,
-            memberIds: [seats[2 * i].id, seats[2 * i + 1].id],
-          })),
-        }
-      : undefined;
+  const teamCount = Math.floor(seats.length / 2);
+  const teams: TeamSetup = {
+    mode: 'auto',
+    teams: Array.from({ length: teamCount }, (_, i) => ({
+      id: asTeamId(`t${i}`),
+      name: `Team ${i + 1}`,
+      memberIds: [seats[2 * i].id, seats[2 * i + 1].id],
+    })),
+  };
 
   const config: GameConfig = {
     players: seats,
@@ -61,65 +66,62 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<DowrState, DowrAction>
     nav.startMatch(config);
   };
 
+  const chip = (active: boolean) =>
+    `rounded-full px-3 py-2 text-sm font-medium ${
+      active
+        ? 'bg-[var(--game-accent-strong)] text-[var(--game-on-accent)]'
+        : 'bg-[var(--surface-2)] text-[var(--text)]'
+    }`;
+
   return (
     <Screen>
       <AppBar title={t('dowr.title')} onBack={() => nav.exit()} />
       <div className="flex flex-col gap-5 pb-8">
+        {/* Players → auto-paired into teams of two */}
         <section>
-          <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">{t('dowr.mode')}</h2>
-          <SegmentedControl<DowrMode>
-            value={opts.mode}
-            onChange={(v) => set('mode', v)}
-            options={[
-              { value: 'teams', label: t('dowr.teams') },
-              { value: 'solo', label: t('dowr.solo') },
-            ]}
-          />
-        </section>
-
-        <section>
-          <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">
-            {t('common.players')} · {seats.length}
-          </h2>
+          <div className="mb-2 flex items-baseline justify-between">
+            <h2 className="text-sm font-semibold text-[var(--text-muted)]">
+              {t('common.players')} · {seats.length}
+            </h2>
+            {teamCount > 0 && (
+              <span className="dp-accent text-xs font-semibold">
+                {t('dowr.teamsPreview', { count: teamCount })}
+              </span>
+            )}
+          </div>
           {players.length === 0 ? (
             <Button variant="secondary" onClick={() => navigate('/players')}>
               {t('players.add')}
             </Button>
           ) : (
-            <div className="flex flex-wrap gap-2">
-              {players.map((p) => (
-                <button
-                  key={p.id}
-                  onClick={() => togglePlayer(p.id)}
-                  className={`rounded-full px-3 py-2 text-sm font-medium ${
-                    selected.includes(p.id)
-                      ? 'bg-[var(--game-accent-strong)] text-white'
-                      : 'bg-[var(--surface-2)] text-[var(--text)]'
-                  }`}
-                >
-                  {p.emoji ? `${p.emoji} ` : ''}
-                  {p.name}
-                </button>
-              ))}
-            </div>
+            <>
+              <div className="flex flex-wrap gap-2">
+                {players.map((p) => (
+                  <button
+                    key={p.id}
+                    onClick={() => togglePlayer(p.id)}
+                    className={chip(selected.includes(p.id))}
+                  >
+                    {p.emoji ? `${p.emoji} ` : ''}
+                    {p.name}
+                  </button>
+                ))}
+              </div>
+              <p className="mt-2 text-xs text-[var(--text-muted)]">{t('dowr.evenHint')}</p>
+            </>
           )}
         </section>
 
+        <MotifDivider motif="tar" />
+
+        {/* Word packs */}
         <section>
           <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">
             {t('dowr.categories')}
           </h2>
           <div className="flex flex-wrap gap-2">
             {DOWR_CATEGORIES.map((c) => (
-              <button
-                key={c}
-                onClick={() => toggleCat(c)}
-                className={`rounded-full px-3 py-1.5 text-sm ${
-                  opts.categories.includes(c)
-                    ? 'bg-[var(--game-accent-strong)] text-white'
-                    : 'bg-[var(--surface-2)] text-[var(--text)]'
-                }`}
-              >
+              <button key={c} onClick={() => toggleCat(c)} className={chip(opts.categories.includes(c))}>
                 {t(`dowr.cat.${c}`)}
               </button>
             ))}
@@ -142,35 +144,61 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<DowrState, DowrAction>
           />
         </section>
 
+        <MotifDivider motif="boteh" />
+
+        {/* Length + bomb settings */}
         <section className="flex flex-col gap-4">
           <Stepper
             label={t('dowr.rounds')}
             value={opts.rounds}
             min={1}
-            max={10}
+            max={8}
             onChange={(v) => set('rounds', v)}
           />
+
           <div>
-            <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">{t('dowr.timer')}</h2>
-            <SegmentedControl<'60' | '120'>
-              value={String(opts.timerSeconds) as '60' | '120'}
-              onChange={(v) => set('timerSeconds', Number(v) as 60 | 120)}
-              options={[
-                { value: '60', label: '60s' },
-                { value: '120', label: '120s' },
-              ]}
+            <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">{t('dowr.fuse')}</h2>
+            <SegmentedControl<string>
+              value={String(opts.fuseSeconds)}
+              onChange={(v) => set('fuseSeconds', Number(v))}
+              options={FUSE_CHOICES.map((n) => ({ value: String(n), label: `${n}s` }))}
             />
           </div>
+
+          <div>
+            <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">
+              {t('dowr.bombPenalty')}
+            </h2>
+            <SegmentedControl<string>
+              value={String(opts.bombPenaltySeconds)}
+              onChange={(v) => set('bombPenaltySeconds', Number(v))}
+              options={BOMB_PENALTY_CHOICES.map((n) => ({ value: String(n), label: `+${n}s` }))}
+            />
+          </div>
+
+          <div>
+            <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">
+              {t('dowr.changePenalty')}
+            </h2>
+            <SegmentedControl<string>
+              value={String(opts.changePenaltySeconds)}
+              onChange={(v) => set('changePenaltySeconds', Number(v))}
+              options={CHANGE_PENALTY_CHOICES.map((n) => ({
+                value: String(n),
+                label: n === 0 ? t('dowr.off') : `+${n}s`,
+              }))}
+            />
+          </div>
+
           <Toggle
-            label={t('dowr.skipPenalty')}
-            checked={opts.skipPenalty}
-            onChange={(v) => set('skipPenalty', v)}
+            label={t('dowr.surpriseBomb')}
+            checked={opts.surpriseBomb}
+            onChange={(v) => set('surpriseBomb', v)}
           />
+          <p className="-mt-2 text-xs text-[var(--text-muted)]">{t('dowr.surpriseBombHint')}</p>
         </section>
 
-        <p className="text-sm text-[var(--text-muted)]">
-          {t('dowr.poolHint', { count: poolSize })}
-        </p>
+        <p className="text-sm text-[var(--text-muted)]">{t('dowr.poolHint', { count: poolSize })}</p>
         {errors && (
           <ul className="text-sm text-[var(--color-game-rose-strong)]">
             {errors.map((e, i) => (

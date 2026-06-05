@@ -64,7 +64,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<ToDSta
           ) : (
             <>
               <p className="text-lg text-[var(--text-muted)]">{t('tod.nextUp')}</p>
-              <h1 className="text-4xl font-extrabold text-[var(--game-accent-strong)]">
+              <h1 className="text-4xl font-extrabold dp-accent">
                 {s.playerNames[seqNext]}
               </h1>
               <Button size="lg" onClick={() => { ctx.sound.play('tap'); dispatch({ type: 'NEXT_PLAYER' }); }}>
@@ -82,7 +82,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<ToDSta
       <Screen>
         {header}
         <div className="grid flex-1 place-items-center gap-6 text-center">
-          <h1 className="text-3xl font-extrabold text-[var(--game-accent-strong)]">
+          <h1 className="text-3xl font-extrabold dp-accent">
             {t('tod.yourTurn', { name: activeName })}
           </h1>
           <div className="grid w-full grid-cols-2 gap-3">

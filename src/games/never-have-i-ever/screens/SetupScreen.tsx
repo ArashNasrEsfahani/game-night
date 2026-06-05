@@ -62,7 +62,7 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<NhieState, NhieAction>
                   onClick={() => togglePlayer(p.id)}
                   className={`rounded-full px-3 py-2 text-sm font-medium ${
                     selected.includes(p.id)
-                      ? 'bg-[var(--game-accent-strong)] text-white'
+                      ? 'bg-[var(--game-accent-strong)] text-[var(--game-on-accent)]'
                       : 'bg-[var(--surface-2)] text-[var(--text)]'
                   }`}
                 >
@@ -111,7 +111,7 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<NhieState, NhieAction>
                 onClick={() => toggleIntensity(i)}
                 className={`rounded-full px-3 py-1.5 text-sm ${
                   opts.intensities.includes(i)
-                    ? 'bg-[var(--game-accent-strong)] text-white'
+                    ? 'bg-[var(--game-accent-strong)] text-[var(--game-on-accent)]'
                     : 'bg-[var(--surface-2)] text-[var(--text)]'
                 }`}
               >

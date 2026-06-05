@@ -47,7 +47,7 @@ describe('nhie createInitialState', () => {
     expect(a.phase).toBe('statement');
     expect(a.players).toHaveLength(3);
     expect(a.players.every((p) => p.lives === 3 && p.haveCount === 0 && !p.eliminated)).toBe(true);
-    expect(a.drawOrder.length).toBe(POOL); // deckSize 50 clamped to 18
+    expect(a.drawOrder.length).toBe(Math.min(POOL, 200)); // deckSize 200, clamped to available pool
     expect(a.currentStatementId).toBe(a.drawOrder[0]);
     expect(a.drawIndex).toBe(0);
     expect(a.roundIndex).toBe(0);

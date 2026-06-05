@@ -5,9 +5,10 @@ import * as deckEngine from '../../engine/deck';
 import {
   createInitialState,
   reducer,
-  describerSeat,
+  currentTeam,
   currentRound,
-  totalTurns,
+  describerPlayerId,
+  guesserPlayerId,
   isLastTurn,
   selectStandings,
   selectWinners,
@@ -19,14 +20,7 @@ import { buildPool, validateContent } from './deck';
 
 const seat = (i: number): PlayerSeat => ({ id: asPlayerId(`p${i}`), name: `P${i}` });
 
-function soloConfig(n: number, opts: Partial<DowrOptions> = {}): GameConfig {
-  return {
-    players: Array.from({ length: n }, (_, i) => seat(i)),
-    lang: 'en',
-    options: { ...DEFAULT_OPTIONS, mode: 'solo', ...opts },
-  };
-}
-
+/** Teams config, N players paired in seat order, surprise bomb OFF (deterministic fuse). */
 function teamsConfig(n: number, opts: Partial<DowrOptions> = {}): GameConfig {
   const players = Array.from({ length: n }, (_, i) => seat(i));
   const teams = {
@@ -37,17 +31,20 @@ function teamsConfig(n: number, opts: Partial<DowrOptions> = {}): GameConfig {
       memberIds: [players[2 * i].id, players[2 * i + 1].id],
     })),
   };
-  return { players, teams, lang: 'en', options: { ...DEFAULT_OPTIONS, mode: 'teams', ...opts } };
+  return {
+    players,
+    teams,
+    lang: 'en',
+    options: { ...DEFAULT_OPTIONS, surpriseBomb: false, ...opts },
+  };
 }
 
-const withDeck = (s: DowrState, ids: string[]): DowrState => ({
-  ...s,
-  deck: deckEngine.create(ids, 0),
-});
-const fold = (s: DowrState, actions: DowrAction[]): DowrState =>
-  actions.reduce((acc, a) => reducer(acc, a), s);
-const toDescribing = (s: DowrState): DowrState =>
-  fold(s, [{ type: 'BEGIN_TURN' }, { type: 'START_DESCRIBE', now: 1000 }]);
+const advance = (
+  s: DowrState,
+  segmentMs: number,
+  reason: 'guessed' | 'bomb' = 'guessed',
+  seed = 1,
+): DowrState => reducer(s, { type: 'ADVANCE', reason, segmentMs, seed } as DowrAction);
 
 describe('content & deck', () => {
   it('validateContent reports no problems', () => {
@@ -58,201 +55,161 @@ describe('content & deck', () => {
     expect(pool.length).toBeGreaterThan(0);
     expect(pool.every((c) => c.category === 'food')).toBe(true);
   });
-  it('buildPool filters by difficulty; random keeps all', () => {
-    const hard = buildPool({ ...DEFAULT_OPTIONS, difficulty: 'hard' });
-    expect(hard.every((c) => c.difficulty === 'hard')).toBe(true);
-    const all = buildPool({ ...DEFAULT_OPTIONS, difficulty: 'random' });
-    expect(all.length).toBeGreaterThan(hard.length);
-  });
 });
 
 describe('normalizeOptions', () => {
-  it('clamps rounds, coerces timer, fixes categories & difficulty', () => {
+  it('clamps rounds and coerces bomb settings to allowed choices', () => {
     const n = normalizeOptions({
       rounds: 99,
-      timerSeconds: 45 as DowrOptions['timerSeconds'],
+      fuseSeconds: 17 as DowrOptions['fuseSeconds'],
+      bombPenaltySeconds: 999,
+      changePenaltySeconds: 7,
       categories: [],
       difficulty: 'bogus' as DowrOptions['difficulty'],
     });
-    expect(n.rounds).toBe(10);
-    expect(n.timerSeconds).toBe(60);
+    expect(n.rounds).toBe(8);
+    expect(n.fuseSeconds).toBe(DEFAULT_OPTIONS.fuseSeconds);
+    expect(n.bombPenaltySeconds).toBe(DEFAULT_OPTIONS.bombPenaltySeconds);
+    expect(n.changePenaltySeconds).toBe(DEFAULT_OPTIONS.changePenaltySeconds);
     expect(n.categories.length).toBe(5);
     expect(n.difficulty).toBe('random');
+  });
+  it('keeps valid choices', () => {
+    const n = normalizeOptions({ fuseSeconds: 45, bombPenaltySeconds: 30, changePenaltySeconds: 0 });
+    expect(n.fuseSeconds).toBe(45);
+    expect(n.bombPenaltySeconds).toBe(30);
+    expect(n.changePenaltySeconds).toBe(0);
   });
 });
 
 describe('createInitialState', () => {
-  it('solo: scorers are players, all at 0, phase roundIntro', () => {
-    const s = createInitialState(soloConfig(3), 1);
-    expect(s.seatToScorer).toEqual(['p0', 'p1', 'p2']);
-    expect(s.scorerIds).toEqual(['p0', 'p1', 'p2']);
-    expect(s.score.totals).toEqual({ p0: 0, p1: 0, p2: 0 });
-    expect(s.phase).toBe('roundIntro');
+  it('starts in playing with a served word and zeroed totals', () => {
+    const s = createInitialState(teamsConfig(4), 1);
+    expect(s.teams.map((t) => t.id)).toEqual(['t0', 't1']);
+    expect(s.teams[0].memberIds).toEqual(['p0', 'p1']);
+    expect(s.phase).toBe('playing');
+    expect(s.currentCardId).not.toBeNull();
+    expect(s.totals).toEqual({ t0: 0, t1: 0 });
+    expect(s.totalTurns).toBe(2 * DEFAULT_OPTIONS.rounds);
     expect(s.finished).toBe(false);
   });
-  it('teams: seats map to team ids', () => {
-    const s = createInitialState(teamsConfig(4), 1);
-    expect(s.seatToScorer).toEqual(['t0', 't0', 't1', 't1']);
-    expect(s.scorerIds).toEqual(['t0', 't1']);
-    expect(s.score.totals).toEqual({ t0: 0, t1: 0 });
-  });
-  it('empty roster → error phase', () => {
-    const s = createInitialState(soloConfig(0), 1);
+  it('fewer than two teams → error phase', () => {
+    const s = createInitialState(teamsConfig(2), 1);
     expect(s.phase).toBe('error');
+    expect(s.errorCode).toBe('NEED_TEAMS');
   });
 });
 
-describe('turn flow', () => {
-  it('BEGIN_TURN serves a card and enters reveal', () => {
-    const s = reducer(createInitialState(soloConfig(2), 1), { type: 'BEGIN_TURN' });
-    expect(s.phase).toBe('reveal');
+describe('turn participants', () => {
+  it('describer alternates between teammates each round', () => {
+    let s = createInitialState(teamsConfig(4, { rounds: 2 }), 1);
+    expect(currentTeam(s).id).toBe('t0');
+    expect(describerPlayerId(s)).toBe('p0');
+    expect(guesserPlayerId(s)).toBe('p1');
+    s = advance(s, 1000); // → t1, round 0
+    expect(currentTeam(s).id).toBe('t1');
+    expect(describerPlayerId(s)).toBe('p2');
+    s = advance(s, 1000); // → t0, round 1
+    expect(currentTeam(s).id).toBe('t0');
+    expect(describerPlayerId(s)).toBe('p1'); // swapped
+    expect(guesserPlayerId(s)).toBe('p0');
+  });
+});
+
+describe('advancing (the fast relay)', () => {
+  it('a correct guess banks the segment time and serves the next team immediately', () => {
+    let s = createInitialState(teamsConfig(4), 1);
+    const firstWord = s.currentCardId;
+    s = advance(s, 5000);
+    expect(s.phase).toBe('playing');
+    expect(s.totals.t0).toBe(5000);
+    expect(s.turnNo).toBe(1);
+    expect(currentTeam(s).id).toBe('t1');
     expect(s.currentCardId).not.toBeNull();
+    expect(s.lastRecord?.solved).toBe(true);
+    expect(firstWord).toBeTruthy();
   });
-  it('REVEAL opens the gate', () => {
-    const s = fold(createInitialState(soloConfig(2), 1), [
-      { type: 'BEGIN_TURN' },
-      { type: 'REVEAL' },
-    ]);
-    expect(s.gate.phase).toBe('revealed');
+  it('segment time is capped at the fuse', () => {
+    let s = createInitialState(teamsConfig(4, { fuseSeconds: 30 }), 1);
+    s = advance(s, 999_999);
+    expect(s.totals.t0).toBe(30_000);
   });
-  it('START_DESCRIBE enters describing with a running clock', () => {
-    const s = toDescribing(createInitialState(soloConfig(2), 1));
-    expect(s.phase).toBe('describing');
-    expect(s.clock.running).toBe(true);
+  it('a bomb banks the fuse plus the bomb penalty and flags a flash', () => {
+    let s = createInitialState(teamsConfig(4, { fuseSeconds: 30, bombPenaltySeconds: 20 }), 1);
+    s = advance(s, 30_000, 'bomb');
+    expect(s.totals.t0).toBe(50_000);
+    expect(s.lastRecord?.reason).toBe('bomb');
+    expect(s.flash).toBe('bomb');
   });
-  it('TICK before expiry stays describing; expiry finalizes (timeExpired)', () => {
-    const d = toDescribing(createInitialState(soloConfig(2), 1));
-    const mid = reducer(d, { type: 'TICK', now: 1000 + 10_000 });
-    expect(mid.phase).toBe('describing');
-    const done = reducer(d, { type: 'TICK', now: 1000 + 60_000 + 1 });
-    expect(done.phase).toBe('turnSummary');
-    expect(done.lastTurnEndReason).toBe('timeExpired');
-  });
-  it('CORRECT scores and serves the next card', () => {
-    const d = toDescribing(createInitialState(soloConfig(2), 1));
-    const c = reducer(d, { type: 'CORRECT' });
-    expect(c.turnCorrect).toBe(1);
-    expect(c.turnEvents.at(-1)).toEqual({ cardId: expect.any(String), result: 'correct' });
-    expect(c.phase).toBe('describing');
-  });
-  it('SKIP increments skipped', () => {
-    const d = toDescribing(createInitialState(soloConfig(2), 1));
-    const c = reducer(d, { type: 'SKIP' });
-    expect(c.turnSkipped).toBe(1);
-  });
-  it('BEGIN_TURN on an empty deck finalizes deckExhausted with delta 0', () => {
-    const s = withDeck(createInitialState(soloConfig(2), 1), []);
-    const out = reducer(s, { type: 'BEGIN_TURN' });
-    expect(out.phase).toBe('turnSummary');
-    expect(out.lastTurnEndReason).toBe('deckExhausted');
-    expect(out.history.at(-1)?.delta).toBe(0);
-  });
-  it('running out of cards mid-turn finalizes deckExhausted', () => {
-    const s = withDeck(createInitialState(soloConfig(2), 1), ['only-one']);
-    const out = fold(s, [
-      { type: 'BEGIN_TURN' },
-      { type: 'START_DESCRIBE', now: 0 },
-      { type: 'CORRECT' },
-    ]);
-    expect(out.phase).toBe('turnSummary');
-    expect(out.lastTurnEndReason).toBe('deckExhausted');
-    expect(out.score.totals.p0).toBe(1);
+  it('CLEAR_FLASH clears the flash', () => {
+    let s = createInitialState(teamsConfig(4, { fuseSeconds: 30 }), 1);
+    s = advance(s, 30_000, 'bomb');
+    s = reducer(s, { type: 'CLEAR_FLASH' });
+    expect(s.flash).toBeNull();
   });
 });
 
-describe('scoring', () => {
-  it('skip is free when skipPenalty is off', () => {
-    const d = toDescribing(createInitialState(soloConfig(2, { skipPenalty: false }), 1));
-    const out = fold(d, [
-      { type: 'CORRECT' },
-      { type: 'CORRECT' },
-      { type: 'SKIP' },
-      { type: 'END_TURN_EARLY', now: 5000 },
-    ]);
-    expect(out.history.at(-1)?.delta).toBe(2);
-    expect(out.score.totals.p0).toBe(2);
+describe('changing words', () => {
+  it('CHANGE_WORD swaps the card and accrues a penalty banked on the next advance', () => {
+    let s = createInitialState(teamsConfig(4, { changePenaltySeconds: 5 }), 1);
+    s = reducer(s, { type: 'CHANGE_WORD', seed: 99 });
+    expect(s.turnChanges).toBe(1);
+    expect(s.changePenaltyMs).toBe(5000);
+    s = advance(s, 10_000); // 10s described + 5s change penalty
+    expect(s.totals.t0).toBe(15_000);
+    expect(s.turnChanges).toBe(0); // reset for the next turn
   });
-  it('skip costs −1 when skipPenalty is on (score can go negative)', () => {
-    const d = toDescribing(createInitialState(soloConfig(2, { skipPenalty: true }), 1));
-    const out = fold(d, [
-      { type: 'CORRECT' },
-      { type: 'SKIP' },
-      { type: 'SKIP' },
-      { type: 'END_TURN_EARLY', now: 5000 },
-    ]);
-    expect(out.history.at(-1)?.delta).toBe(-1);
-    expect(out.score.totals.p0).toBe(-1);
-  });
-  it('teams: both teammates accumulate into the same team', () => {
-    let s = createInitialState(teamsConfig(2), 1);
-    s = fold(toDescribing(s), [{ type: 'CORRECT' }, { type: 'CORRECT' }, { type: 'END_TURN_EARLY', now: 1 }]);
-    s = reducer(s, { type: 'NEXT_TURN', seed: 1 });
-    s = fold(toDescribing(s), [{ type: 'CORRECT' }, { type: 'END_TURN_EARLY', now: 1 }]);
-    expect(s.score.totals.t0).toBe(3);
+  it('reshuffles so a one-card deck never runs dry on a change', () => {
+    let s = createInitialState(teamsConfig(4), 1);
+    s = { ...s, deck: { drawPile: [], discardPile: ['only'] }, currentCardId: 'x' };
+    s = reducer(s, { type: 'CHANGE_WORD', seed: 7 });
+    expect(s.currentCardId).not.toBeNull();
+    expect(s.phase).toBe('playing');
   });
 });
 
-describe('turn pointer & rounds', () => {
-  it('NEXT_TURN advances and resets fields', () => {
-    let s = createInitialState(soloConfig(3, { rounds: 2 }), 1);
-    s = fold(toDescribing(s), [{ type: 'CORRECT' }, { type: 'END_TURN_EARLY', now: 1 }]);
-    expect(describerSeat(s)).toBe(0);
-    s = reducer(s, { type: 'NEXT_TURN', seed: 1 });
-    expect(s.phase).toBe('roundIntro');
-    expect(describerSeat(s)).toBe(1);
-    expect(s.turnCorrect).toBe(0);
-  });
-  it('selectors track a full N=2, rounds=1 walkthrough then gameOver', () => {
-    let s = createInitialState(soloConfig(2, { rounds: 1 }), 1);
-    expect(totalTurns(s)).toBe(2);
+describe('rounds & game end', () => {
+  it('ends after every team has had its turns; lowest time wins', () => {
+    let s = createInitialState(teamsConfig(4, { rounds: 1 }), 1);
+    expect(s.totalTurns).toBe(2);
     expect(currentRound(s)).toBe(1);
     expect(isLastTurn(s)).toBe(false);
-    s = fold(toDescribing(s), [{ type: 'END_TURN_EARLY', now: 1 }]); // seat 0
-    s = reducer(s, { type: 'NEXT_TURN', seed: 1 }); // → seat 1
-    expect(describerSeat(s)).toBe(1);
+    s = advance(s, 5000); // t0 = 5s → t1
+    expect(currentTeam(s).id).toBe('t1');
     expect(isLastTurn(s)).toBe(true);
-    s = fold(toDescribing(s), [{ type: 'END_TURN_EARLY', now: 1 }]); // seat 1
-    s = reducer(s, { type: 'NEXT_TURN', seed: 1 }); // → gameOver
+    s = advance(s, 9000); // t1 = 9s → gameOver
     expect(s.phase).toBe('gameOver');
     expect(s.finished).toBe(true);
+    expect(selectStandings(s)[0].subjectId).toBe('t0');
+    expect(selectWinners(s)).toEqual(['t0']);
   });
-});
-
-describe('selectors / win', () => {
-  it('selectStandings sorts desc and selectWinners returns the leader', () => {
-    let s = createInitialState(soloConfig(2, { rounds: 1 }), 1);
-    s = fold(toDescribing(s), [{ type: 'CORRECT' }, { type: 'CORRECT' }, { type: 'END_TURN_EARLY', now: 1 }]); // p0 = 2
-    s = reducer(s, { type: 'NEXT_TURN', seed: 1 });
-    s = fold(toDescribing(s), [{ type: 'CORRECT' }, { type: 'END_TURN_EARLY', now: 1 }]); // p1 = 1
-    const standings = selectStandings(s);
-    expect(standings[0].subjectId).toBe('p0');
-    expect(selectWinners(s)).toEqual(['p0']);
-  });
-  it('a tie returns multiple winners', () => {
-    let s = createInitialState(soloConfig(2, { rounds: 1 }), 1);
-    s = fold(toDescribing(s), [{ type: 'CORRECT' }, { type: 'END_TURN_EARLY', now: 1 }]);
-    s = reducer(s, { type: 'NEXT_TURN', seed: 1 });
-    s = fold(toDescribing(s), [{ type: 'CORRECT' }, { type: 'END_TURN_EARLY', now: 1 }]);
-    expect(selectWinners(s).sort()).toEqual(['p0', 'p1']);
+  it('equal totals tie', () => {
+    let s = createInitialState(teamsConfig(4, { rounds: 1 }), 1);
+    s = advance(s, 5000);
+    s = advance(s, 5000);
+    expect(selectWinners(s).sort()).toEqual(['t0', 't1']);
+    expect(selectStandings(s).every((r) => r.rank === 1)).toBe(true);
   });
 });
 
 describe('guards & purity', () => {
-  it('actions in the wrong phase return state unchanged', () => {
-    const s = createInitialState(soloConfig(2), 1);
-    expect(reducer(s, { type: 'CORRECT' })).toBe(s);
-    expect(reducer(s, { type: 'TICK', now: 1 })).toBe(s);
+  it('ADVANCE after game over is a no-op', () => {
+    let s = createInitialState(teamsConfig(4, { rounds: 1 }), 1);
+    s = advance(s, 1000);
+    s = advance(s, 1000); // gameOver
+    expect(reducer(s, { type: 'ADVANCE', reason: 'guessed', segmentMs: 1, seed: 1 })).toBe(s);
   });
   it('RESET is a no-op', () => {
-    const s = createInitialState(soloConfig(2), 1);
+    const s = createInitialState(teamsConfig(4), 1);
     expect(reducer(s, { type: 'RESET' })).toBe(s);
   });
   it('does not mutate a frozen input state', () => {
-    const d = toDescribing(createInitialState(soloConfig(2), 1));
-    Object.freeze(d);
-    const after = reducer(d, { type: 'CORRECT' });
-    expect(after).not.toBe(d);
-    expect(after.turnCorrect).toBe(1);
-    expect(d.turnCorrect).toBe(0);
+    const s = createInitialState(teamsConfig(4), 1);
+    Object.freeze(s);
+    Object.freeze(s.totals);
+    const after = advance(s, 3000);
+    expect(after).not.toBe(s);
+    expect(after.totals.t0).toBe(3000);
+    expect(s.totals.t0).toBe(0);
   });
 });

@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
 import type { GameScreenProps } from '../../../sdk/types';
 import { Screen, AppBar, Button, TimerRing } from '../../../sdk/ui';
 import { CARD_BY_KEY } from '../content';
@@ -13,31 +14,33 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<HeadsU
   dispatchRef.current = dispatch;
   const endAtRef = useRef(0);
 
+  const clock = ctx.clock;
+
   // Countdown 3-2-1.
   useEffect(() => {
     if (s.phase !== 'countdown') return;
-    const stop = ctx.clock.interval(700, () => dispatchRef.current({ type: 'COUNTDOWN_TICK' }));
+    const stop = clock.interval(700, () => dispatchRef.current({ type: 'COUNTDOWN_TICK' }));
     return stop;
-  }, [s.phase, ctx]);
+  }, [s.phase, clock]);
 
   // Round clock.
   useEffect(() => {
     if (s.phase !== 'playing') return;
-    endAtRef.current = ctx.clock.now() + s.roundSeconds * 1000;
-    const stop = ctx.clock.interval(250, (now) => {
+    endAtRef.current = clock.now() + s.roundSeconds * 1000;
+    const stop = clock.interval(250, (now) => {
       const rem = Math.ceil((endAtRef.current - now) / 1000);
       if (rem <= 0) dispatchRef.current({ type: 'TIME_UP' });
       else dispatchRef.current({ type: 'TICK', secondsLeft: rem });
     });
     return stop;
-  }, [s.phase, s.turnIndex, ctx, s.roundSeconds]);
+  }, [s.phase, s.turnIndex, clock, s.roundSeconds]);
 
   // Clear the color flash shortly after it fires.
   useEffect(() => {
     if (!s.flash) return;
-    const stop = ctx.clock.interval(400, () => dispatchRef.current({ type: 'CLEAR_FLASH' }));
+    const stop = clock.interval(400, () => dispatchRef.current({ type: 'CLEAR_FLASH' }));
     return stop;
-  }, [s.flash, ctx]);
+  }, [s.flash, clock]);
 
   const participant = currentParticipant(s);
   const guesserName = participant ? s.playerNames[guesserId(participant)] : '';
@@ -67,7 +70,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<HeadsU
           )}
           <div className="text-6xl">🙈</div>
           <p className="text-lg text-[var(--text-muted)]">{t('hu.passTo')}</p>
-          <h1 className="text-4xl font-extrabold text-[var(--game-accent-strong)]">{guesserName}</h1>
+          <h1 className="text-4xl font-extrabold dp-accent">{guesserName}</h1>
           <p className="px-8 text-sm text-[var(--text-muted)]">{t('hu.foreheadHint')}</p>
           <Button size="lg" onClick={() => { ctx.sound.play('tap'); dispatch({ type: 'CONFIRM_READY' }); }}>
             {t('hu.ready')}
@@ -81,9 +84,15 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<HeadsU
     return (
       <Screen>
         <div className="grid flex-1 place-items-center">
-          <div className="text-9xl font-black text-[var(--game-accent-strong)]">
+          <motion.div
+            key={s.countdownLeft}
+            initial={{ scale: 0.4, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ type: 'spring', stiffness: 300, damping: 16 }}
+            className="text-9xl font-black dp-accent"
+          >
             {s.countdownLeft > 0 ? s.countdownLeft : t('hu.go')}
-          </div>
+          </motion.div>
         </div>
       </Screen>
     );
@@ -102,7 +111,15 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<HeadsU
           {s.flash && <div className={`pointer-events-none absolute inset-0 -z-0 opacity-40 ${flashBg}`} />}
           <TimerRing totalSeconds={s.roundSeconds} remainingSeconds={s.secondsLeft} />
           {s.currentCardId ? (
-            <h1 className="z-10 text-center text-6xl font-black leading-tight">{word}</h1>
+            <motion.h1
+              key={s.currentCardId}
+              initial={{ scale: 0.7, opacity: 0, y: 10 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              transition={{ type: 'spring', stiffness: 320, damping: 20 }}
+              className="z-10 text-center text-6xl font-black leading-tight"
+            >
+              {word}
+            </motion.h1>
           ) : (
             <p className="z-10 text-2xl text-[var(--text-muted)]">{t('hu.outOfWords')}</p>
           )}
@@ -137,7 +154,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<HeadsU
       <AppBar onBack={() => nav.exit()} />
       <div className="flex flex-1 flex-col items-center justify-center gap-4 text-center">
         <h2 className="text-2xl font-bold">{guesserName}</h2>
-        <p className="text-4xl font-extrabold text-[var(--game-accent-strong)]">
+        <p className="text-4xl font-extrabold dp-accent">
           {t('hu.gotPassed', { got: last?.got ?? 0, passed: last?.passed ?? 0 })}
         </p>
         <div className="flex flex-wrap justify-center gap-2">

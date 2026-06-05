@@ -1,6 +1,6 @@
 import type { LocalizedString } from '../../../sdk/types';
 
-export type Intensity = 'mild' | 'medium' | 'spicy';
+export type Intensity = 'mild' | 'medium' | 'spicy' | 'risky';
 
 export interface WyrItem {
   id: string;

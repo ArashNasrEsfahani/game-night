@@ -55,7 +55,7 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<MltState, MltAction>) 
                   onClick={() => togglePlayer(p.id)}
                   className={`rounded-full px-3 py-2 text-sm font-medium ${
                     selected.includes(p.id)
-                      ? 'bg-[var(--game-accent-strong)] text-white'
+                      ? 'bg-[var(--game-accent-strong)] text-[var(--game-on-accent)]'
                       : 'bg-[var(--surface-2)] text-[var(--text)]'
                   }`}
                 >
@@ -117,6 +117,11 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<MltState, MltAction>) 
             label={t('mlt.allowSelfVote')}
             checked={opts.allowSelfVote}
             onChange={(v) => set('allowSelfVote', v)}
+          />
+          <Toggle
+            label={t('mlt.showScores')}
+            checked={opts.showRunningScores}
+            onChange={(v) => set('showRunningScores', v)}
           />
           <div>
             <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">

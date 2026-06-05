@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import type { GameConfig, GameScreenProps, PlayerSeat } from '../../../sdk/types';
 import { Screen, AppBar, Button, SegmentedControl, Stepper, Toggle } from '../../../sdk/ui';
 import { useRosterStore } from '../../../store/rosterStore';
-import { DEFAULT_OPTIONS, ROUND_SECONDS_CHOICES, maxSpies, validateConfig } from '../config';
+import { DEFAULT_OPTIONS, PACK_LIST, ROUND_SECONDS_CHOICES, maxSpies, validateConfig } from '../config';
 import type { SpyfallOptions } from '../config';
 import type { SpyfallAction, SpyfallState } from '../logic';
 
@@ -20,6 +20,13 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<SpyfallState, SpyfallA
   }
   const togglePlayer = (id: string) =>
     setSelected((s) => (s.includes(id) ? s.filter((x) => x !== id) : [...s, id]));
+  const togglePack = (id: string) =>
+    set(
+      'enabledPackIds',
+      opts.enabledPackIds.includes(id)
+        ? opts.enabledPackIds.filter((x) => x !== id)
+        : [...opts.enabledPackIds, id],
+    );
 
   const seats: PlayerSeat[] = players
     .filter((p) => selected.includes(p.id))
@@ -53,7 +60,7 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<SpyfallState, SpyfallA
                   onClick={() => togglePlayer(p.id)}
                   className={`rounded-full px-3 py-2 text-sm font-medium ${
                     selected.includes(p.id)
-                      ? 'bg-[var(--game-accent-strong)] text-white'
+                      ? 'bg-[var(--game-accent-strong)] text-[var(--game-on-accent)]'
                       : 'bg-[var(--surface-2)] text-[var(--text)]'
                   }`}
                 >
@@ -78,6 +85,27 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<SpyfallState, SpyfallA
             options={ROUND_SECONDS_CHOICES.map((s) => ({ value: String(s), label: `${Math.round(s / 60)}m` }))}
           />
         </section>
+
+        {PACK_LIST.length > 1 && (
+          <section>
+            <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">{t('spy.packs')}</h2>
+            <div className="flex flex-wrap gap-2">
+              {PACK_LIST.map((p) => (
+                <button
+                  key={p.id}
+                  onClick={() => togglePack(p.id)}
+                  className={`rounded-full px-3 py-1.5 text-sm ${
+                    opts.enabledPackIds.includes(p.id)
+                      ? 'bg-[var(--game-accent-strong)] text-[var(--game-on-accent)]'
+                      : 'bg-[var(--surface-2)] text-[var(--text)]'
+                  }`}
+                >
+                  {ctx.localize(p.name)}
+                </button>
+              ))}
+            </div>
+          </section>
+        )}
 
         <section className="flex flex-col gap-3">
           <Toggle label={t('spy.useTimer')} checked={opts.useTimer} onChange={(v) => set('useTimer', v)} />

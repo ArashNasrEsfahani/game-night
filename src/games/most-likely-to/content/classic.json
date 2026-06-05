@@ -142,7 +142,7 @@
       "emoji": "🎰",
       "text": {
         "en": "Most likely to win the lottery and tell no one",
-        "fa": "به احتمال زیاد لاتاری می‌بره و به هیچ‌کس نمی‌گه"
+        "fa": "به احتمال زیاد بخت‌آزمایی می‌بره و به هیچ‌کس نمی‌گه"
       }
     },
     {
@@ -304,7 +304,7 @@
       "emoji": "🧊",
       "text": {
         "en": "Most likely to stay calm in a crisis",
-        "fa": "به احتمال زیاد سر بزنگاه خونسردیش رو حفظ می‌کنه"
+        "fa": "به احتمال زیاد تو شرایط بحرانی خونسردیش رو حفظ می‌کنه"
       }
     },
     {
@@ -332,6 +332,537 @@
       "text": {
         "en": "Most likely to share their last snack with you",
         "fa": "به احتمال زیاد آخرین خوراکیش رو هم باهات تقسیم می‌کنه"
+      }
+    },
+    {
+      "id": "mlt-c-x001",
+      "intensity": "family",
+      "emoji": "😭",
+      "text": {
+        "en": "Most likely to cry at a wedding",
+        "fa": "به احتمال زیاد سر عروسی گریه‌اش بگیره"
+      }
+    },
+    {
+      "id": "mlt-c-x002",
+      "intensity": "casual",
+      "emoji": "💰",
+      "text": {
+        "en": "Most likely to become a millionaire",
+        "fa": "به احتمال زیاد یه روز میلیونر بشه"
+      }
+    },
+    {
+      "id": "mlt-c-x003",
+      "intensity": "family",
+      "emoji": "🎂",
+      "text": {
+        "en": "Most likely to forget their own birthday",
+        "fa": "به احتمال زیاد تولد خودشو یادش بره"
+      }
+    },
+    {
+      "id": "mlt-c-x004",
+      "intensity": "casual",
+      "emoji": "⭐",
+      "text": {
+        "en": "Most likely to become famous",
+        "fa": "به احتمال زیاد یه روز معروف بشه"
+      }
+    },
+    {
+      "id": "mlt-c-x005",
+      "intensity": "casual",
+      "emoji": "🧟",
+      "text": {
+        "en": "Most likely to survive a zombie apocalypse",
+        "fa": "به احتمال زیاد تو حمله زامبی‌ها زنده بمونه"
+      }
+    },
+    {
+      "id": "mlt-c-x006",
+      "intensity": "family",
+      "emoji": "🐱",
+      "text": {
+        "en": "Most likely to adopt ten cats",
+        "fa": "به احتمال زیاد ده تا گربه نگه داره"
+      }
+    },
+    {
+      "id": "mlt-c-x007",
+      "intensity": "casual",
+      "emoji": "🤕",
+      "text": {
+        "en": "Most likely to trip in public",
+        "fa": "به احتمال زیاد جلوی جمع زمین بخوره"
+      }
+    },
+    {
+      "id": "mlt-c-x008",
+      "intensity": "family",
+      "emoji": "🗺️",
+      "text": {
+        "en": "Most likely to get lost using a map",
+        "fa": "به احتمال زیاد با وجود نقشه هم گم بشه"
+      }
+    },
+    {
+      "id": "mlt-c-x009",
+      "intensity": "casual",
+      "emoji": "😂",
+      "text": {
+        "en": "Most likely to laugh at the wrong moment",
+        "fa": "به احتمال زیاد سر بزنگاه خنده‌اش بگیره"
+      }
+    },
+    {
+      "id": "mlt-c-x010",
+      "intensity": "family",
+      "emoji": "👩‍🏫",
+      "text": {
+        "en": "Most likely to become a teacher",
+        "fa": "به احتمال زیاد یه روز معلم بشه"
+      }
+    },
+    {
+      "id": "mlt-c-x011",
+      "intensity": "casual",
+      "emoji": "💼",
+      "text": {
+        "en": "Most likely to start a business",
+        "fa": "به احتمال زیاد یه کسب‌وکار راه بندازه"
+      }
+    },
+    {
+      "id": "mlt-c-x012",
+      "intensity": "family",
+      "emoji": "😴",
+      "text": {
+        "en": "Most likely to fall asleep during a movie",
+        "fa": "به احتمال زیاد وسط فیلم خوابش ببره"
+      }
+    },
+    {
+      "id": "mlt-c-x013",
+      "intensity": "family",
+      "emoji": "🚿",
+      "text": {
+        "en": "Most likely to sing in the shower",
+        "fa": "به احتمال زیاد زیر دوش آواز بخونه"
+      }
+    },
+    {
+      "id": "mlt-c-x014",
+      "intensity": "casual",
+      "emoji": "🏆",
+      "text": {
+        "en": "Most likely to win an award",
+        "fa": "به احتمال زیاد یه جایزه ببره"
+      }
+    },
+    {
+      "id": "mlt-c-x015",
+      "intensity": "casual",
+      "emoji": "🗣️",
+      "text": {
+        "en": "Most likely to talk to strangers",
+        "fa": "به احتمال زیاد با غریبه‌ها سر صحبت رو باز کنه"
+      }
+    },
+    {
+      "id": "mlt-c-x016",
+      "intensity": "casual",
+      "emoji": "🍕",
+      "text": {
+        "en": "Most likely to eat the last slice of pizza",
+        "fa": "به احتمال زیاد آخرین تکه پیتزا رو بخوره"
+      }
+    },
+    {
+      "id": "mlt-c-x017",
+      "intensity": "family",
+      "emoji": "👨‍🍳",
+      "text": {
+        "en": "Most likely to become a chef",
+        "fa": "به احتمال زیاد یه روز سرآشپز بشه"
+      }
+    },
+    {
+      "id": "mlt-c-x018",
+      "intensity": "casual",
+      "emoji": "📱",
+      "text": {
+        "en": "Most likely to break a phone screen",
+        "fa": "به احتمال زیاد صفحه گوشیش رو بشکنه"
+      }
+    },
+    {
+      "id": "mlt-c-x019",
+      "intensity": "casual",
+      "emoji": "🌍",
+      "text": {
+        "en": "Most likely to travel the world",
+        "fa": "به احتمال زیاد دور دنیا رو بگرده"
+      }
+    },
+    {
+      "id": "mlt-c-x020",
+      "intensity": "family",
+      "emoji": "🩺",
+      "text": {
+        "en": "Most likely to become a doctor",
+        "fa": "به احتمال زیاد یه روز دکتر بشه"
+      }
+    },
+    {
+      "id": "mlt-c-x021",
+      "intensity": "casual",
+      "emoji": "💃",
+      "text": {
+        "en": "Most likely to win a dance-off",
+        "fa": "به احتمال زیاد تو مسابقه رقص برنده بشه"
+      }
+    },
+    {
+      "id": "mlt-c-x022",
+      "intensity": "casual",
+      "emoji": "🍫",
+      "text": {
+        "en": "Most likely to spend all their money on snacks",
+        "fa": "به احتمال زیاد تمام پولش رو خرج خوراکی کنه"
+      }
+    },
+    {
+      "id": "mlt-c-x023",
+      "intensity": "casual",
+      "emoji": "⏰",
+      "text": {
+        "en": "Most likely to be late to their own party",
+        "fa": "به احتمال زیاد به مهمونی خودش هم دیر برسه"
+      }
+    },
+    {
+      "id": "mlt-c-x024",
+      "intensity": "family",
+      "emoji": "📚",
+      "text": {
+        "en": "Most likely to read every book in the library",
+        "fa": "به احتمال زیاد همه کتاب‌های کتابخونه رو بخونه"
+      }
+    },
+    {
+      "id": "mlt-c-x025",
+      "intensity": "family",
+      "emoji": "🏅",
+      "text": {
+        "en": "Most likely to become a famous athlete",
+        "fa": "به احتمال زیاد یه ورزشکار معروف بشه"
+      }
+    },
+    {
+      "id": "mlt-c-x026",
+      "intensity": "spicy",
+      "emoji": "😤",
+      "text": {
+        "en": "Most likely to start an argument over nothing",
+        "fa": "به احتمال زیاد سر هیچ و پوچ دعوا راه بندازه"
+      }
+    },
+    {
+      "id": "mlt-c-x027",
+      "intensity": "spicy",
+      "emoji": "📲",
+      "text": {
+        "en": "Most likely to send a risky text",
+        "fa": "به احتمال زیاد یه پیام جسورانه بفرسته"
+      }
+    },
+    {
+      "id": "mlt-c-x028",
+      "intensity": "spicy",
+      "emoji": "😏",
+      "text": {
+        "en": "Most likely to flirt with the waiter",
+        "fa": "به احتمال زیاد با پیشخدمت لاس بزنه"
+      }
+    },
+    {
+      "id": "mlt-c-x029",
+      "intensity": "casual",
+      "emoji": "🎤",
+      "text": {
+        "en": "Most likely to become a stand-up comedian",
+        "fa": "به احتمال زیاد یه روز کمدین استندآپ بشه"
+      }
+    },
+    {
+      "id": "mlt-c-x030",
+      "intensity": "family",
+      "emoji": "🎉",
+      "text": {
+        "en": "Most likely to plan a surprise party",
+        "fa": "به احتمال زیاد یه جشن سورپرایز ترتیب بده"
+      }
+    },
+    {
+      "id": "mlt-c-x031",
+      "intensity": "spicy",
+      "emoji": "🕺",
+      "text": {
+        "en": "Most likely to dance on the table",
+        "fa": "به احتمال زیاد روی میز برقصه"
+      }
+    },
+    {
+      "id": "mlt-c-x032",
+      "intensity": "casual",
+      "emoji": "🎰",
+      "text": {
+        "en": "Most likely to win the lottery",
+        "fa": "به احتمال زیاد تو بخت‌آزمایی برنده بشه"
+      }
+    },
+    {
+      "id": "mlt-c-x033",
+      "intensity": "casual",
+      "emoji": "🏛️",
+      "text": {
+        "en": "Most likely to become a politician",
+        "fa": "به احتمال زیاد یه روز سیاستمدار بشه"
+      }
+    },
+    {
+      "id": "mlt-c-x034",
+      "intensity": "spicy",
+      "emoji": "💉",
+      "text": {
+        "en": "Most likely to get a tattoo on a dare",
+        "fa": "به احتمال زیاد سر شرط‌بندی خالکوبی کنه"
+      }
+    },
+    {
+      "id": "mlt-c-x035",
+      "intensity": "casual",
+      "emoji": "🤔",
+      "text": {
+        "en": "Most likely to forget someone's name right after meeting them",
+        "fa": "به احتمال زیاد بلافاصله بعد آشنایی اسم طرف رو یادش بره"
+      }
+    },
+    {
+      "id": "mlt-c-x036",
+      "intensity": "casual",
+      "emoji": "🎬",
+      "text": {
+        "en": "Most likely to become a movie star",
+        "fa": "به احتمال زیاد یه روز ستاره سینما بشه"
+      }
+    },
+    {
+      "id": "mlt-c-x037",
+      "intensity": "casual",
+      "emoji": "💭",
+      "text": {
+        "en": "Most likely to overthink a text message",
+        "fa": "به احتمال زیاد روی یه پیام ساده بیش از حد فکر کنه"
+      }
+    },
+    {
+      "id": "mlt-c-x038",
+      "intensity": "family",
+      "emoji": "🧠",
+      "text": {
+        "en": "Most likely to give the best advice",
+        "fa": "به احتمال زیاد بهترین نصیحت‌ها رو بده"
+      }
+    },
+    {
+      "id": "mlt-c-x039",
+      "intensity": "spicy",
+      "emoji": "👻",
+      "text": {
+        "en": "Most likely to ghost someone",
+        "fa": "به احتمال زیاد یهو طرف رو بی‌جواب بذاره و غیب بشه"
+      }
+    },
+    {
+      "id": "mlt-c-x040",
+      "intensity": "family",
+      "emoji": "🥺",
+      "text": {
+        "en": "Most likely to cry over a sad commercial",
+        "fa": "به احتمال زیاد با یه تبلیغ غم‌انگیز گریه‌اش بگیره"
+      }
+    },
+    {
+      "id": "mlt-c-x041",
+      "intensity": "casual",
+      "emoji": "📹",
+      "text": {
+        "en": "Most likely to become a successful YouTuber",
+        "fa": "به احتمال زیاد یه یوتیوبر موفق بشه"
+      }
+    },
+    {
+      "id": "mlt-c-x042",
+      "intensity": "casual",
+      "emoji": "🙊",
+      "text": {
+        "en": "Most likely to get caught talking to themselves",
+        "fa": "به احتمال زیاد موقع حرف زدن با خودش مچش رو بگیرن"
+      }
+    },
+    {
+      "id": "mlt-c-x043",
+      "intensity": "casual",
+      "emoji": "💻",
+      "text": {
+        "en": "Most likely to become a workaholic",
+        "fa": "به احتمال زیاد معتاد به کار بشه"
+      }
+    },
+    {
+      "id": "mlt-c-x044",
+      "intensity": "spicy",
+      "emoji": "🌙",
+      "text": {
+        "en": "Most likely to text their ex at midnight",
+        "fa": "به احتمال زیاد نصف‌شب به اکسش پیام بده"
+      }
+    },
+    {
+      "id": "mlt-c-x045",
+      "intensity": "family",
+      "emoji": "🎲",
+      "text": {
+        "en": "Most likely to win every board game",
+        "fa": "به احتمال زیاد تو هر بازی رومیزی برنده بشه"
+      }
+    },
+    {
+      "id": "mlt-c-x046",
+      "intensity": "family",
+      "emoji": "✍️",
+      "text": {
+        "en": "Most likely to become a famous author",
+        "fa": "به احتمال زیاد یه نویسنده معروف بشه"
+      }
+    },
+    {
+      "id": "mlt-c-x047",
+      "intensity": "casual",
+      "emoji": "👗",
+      "text": {
+        "en": "Most likely to spend an hour choosing an outfit",
+        "fa": "به احتمال زیاد یه ساعت سر انتخاب لباس وقت بذاره"
+      }
+    },
+    {
+      "id": "mlt-c-x048",
+      "intensity": "family",
+      "emoji": "🤱",
+      "text": {
+        "en": "Most likely to become the group's mom friend",
+        "fa": "به احتمال زیاد نقش مامان گروه رو بازی کنه"
+      }
+    },
+    {
+      "id": "mlt-c-x049",
+      "intensity": "casual",
+      "emoji": "🛸",
+      "text": {
+        "en": "Most likely to start a conspiracy theory",
+        "fa": "به احتمال زیاد یه نظریه توطئه راه بندازه"
+      }
+    },
+    {
+      "id": "mlt-c-x050",
+      "intensity": "casual",
+      "emoji": "🎣",
+      "text": {
+        "en": "Most likely to fall for a scam",
+        "fa": "به احتمال زیاد گول یه کلاهبرداری رو بخوره"
+      }
+    },
+    {
+      "id": "mlt-c-x051",
+      "intensity": "spicy",
+      "emoji": "😍",
+      "text": {
+        "en": "Most likely to brag about their crush",
+        "fa": "به احتمال زیاد درباره کراشش پز بده"
+      }
+    },
+    {
+      "id": "mlt-c-x052",
+      "intensity": "casual",
+      "emoji": "📉",
+      "text": {
+        "en": "Most likely to become a millionaire then lose it all",
+        "fa": "به احتمال زیاد میلیونر بشه و بعد همه‌اش رو از دست بده"
+      }
+    },
+    {
+      "id": "mlt-c-x053",
+      "intensity": "casual",
+      "emoji": "🎶",
+      "text": {
+        "en": "Most likely to win a karaoke contest",
+        "fa": "به احتمال زیاد تو مسابقه کارائوکه برنده بشه"
+      }
+    },
+    {
+      "id": "mlt-c-x054",
+      "intensity": "family",
+      "emoji": "🤐",
+      "text": {
+        "en": "Most likely to keep a secret forever",
+        "fa": "به احتمال زیاد یه راز رو تا ابد نگه داره"
+      }
+    },
+    {
+      "id": "mlt-c-x055",
+      "intensity": "spicy",
+      "emoji": "🙈",
+      "text": {
+        "en": "Most likely to spill a secret accidentally",
+        "fa": "به احتمال زیاد ناخواسته یه راز رو لو بده"
+      }
+    },
+    {
+      "id": "mlt-c-x056",
+      "intensity": "family",
+      "emoji": "🎨",
+      "text": {
+        "en": "Most likely to become a famous artist",
+        "fa": "به احتمال زیاد یه هنرمند معروف بشه"
+      }
+    },
+    {
+      "id": "mlt-c-x057",
+      "intensity": "casual",
+      "emoji": "🤣",
+      "text": {
+        "en": "Most likely to start crying from laughing too hard",
+        "fa": "به احتمال زیاد از زور خنده اشکش دربیاد"
+      }
+    },
+    {
+      "id": "mlt-c-x058",
+      "intensity": "casual",
+      "emoji": "✈️",
+      "text": {
+        "en": "Most likely to move to another country",
+        "fa": "به احتمال زیاد به یه کشور دیگه مهاجرت کنه"
+      }
+    },
+    {
+      "id": "mlt-c-x059",
+      "intensity": "spicy",
+      "emoji": "🚓",
+      "text": {
+        "en": "Most likely to flirt their way out of a parking ticket",
+        "fa": "به احتمال زیاد با دلبری از جریمه پارکینگ در بره"
       }
     }
   ]

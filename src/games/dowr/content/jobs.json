@@ -304,5 +304,176 @@
     },
     "category": "jobs",
     "difficulty": "hard"
+  },
+  {
+    "id": "jobs-x001",
+    "word": {
+      "en": "Chef",
+      "fa": "سرآشپز"
+    },
+    "category": "jobs",
+    "difficulty": "easy"
+  },
+  {
+    "id": "jobs-x002",
+    "word": {
+      "en": "Painter",
+      "fa": "نقاش"
+    },
+    "category": "jobs",
+    "difficulty": "easy"
+  },
+  {
+    "id": "jobs-x003",
+    "word": {
+      "en": "Soldier",
+      "fa": "سرباز"
+    },
+    "category": "jobs",
+    "difficulty": "easy"
+  },
+  {
+    "id": "jobs-x004",
+    "word": {
+      "en": "Librarian",
+      "fa": "کتابدار"
+    },
+    "category": "jobs",
+    "difficulty": "med"
+  },
+  {
+    "id": "jobs-x005",
+    "word": {
+      "en": "Pharmacist",
+      "fa": "داروساز"
+    },
+    "category": "jobs",
+    "difficulty": "med"
+  },
+  {
+    "id": "jobs-x006",
+    "word": {
+      "en": "Fisherman",
+      "fa": "ماهیگیر"
+    },
+    "category": "jobs",
+    "difficulty": "med"
+  },
+  {
+    "id": "jobs-x007",
+    "word": {
+      "en": "Welder",
+      "fa": "جوشکار"
+    },
+    "category": "jobs",
+    "difficulty": "med"
+  },
+  {
+    "id": "jobs-x008",
+    "word": {
+      "en": "Gardener",
+      "fa": "باغبان"
+    },
+    "category": "jobs",
+    "difficulty": "med"
+  },
+  {
+    "id": "jobs-x009",
+    "word": {
+      "en": "Dancer",
+      "fa": "رقصنده"
+    },
+    "category": "jobs",
+    "difficulty": "med"
+  },
+  {
+    "id": "jobs-x010",
+    "word": {
+      "en": "Archaeologist",
+      "fa": "باستان‌شناس"
+    },
+    "category": "jobs",
+    "difficulty": "hard"
+  },
+  {
+    "id": "jobs-x011",
+    "word": {
+      "en": "Diplomat",
+      "fa": "دیپلمات"
+    },
+    "category": "jobs",
+    "difficulty": "hard"
+  },
+  {
+    "id": "jobs-x012",
+    "word": {
+      "en": "Beekeeper",
+      "fa": "زنبوردار"
+    },
+    "category": "jobs",
+    "difficulty": "hard"
+  },
+  {
+    "id": "jobs-x013",
+    "word": {
+      "en": "Locksmith",
+      "fa": "قفل‌ساز"
+    },
+    "category": "jobs",
+    "difficulty": "hard"
+  },
+  {
+    "id": "jobs-x014",
+    "word": {
+      "en": "Cartographer",
+      "fa": "نقشه‌بردار"
+    },
+    "category": "jobs",
+    "difficulty": "hard"
+  },
+  {
+    "id": "jobs-x015",
+    "word": {
+      "en": "Geologist",
+      "fa": "زمین‌شناس"
+    },
+    "category": "jobs",
+    "difficulty": "hard"
+  },
+  {
+    "id": "jobs-x016",
+    "word": {
+      "en": "Optician",
+      "fa": "عینک‌ساز"
+    },
+    "category": "jobs",
+    "difficulty": "hard"
+  },
+  {
+    "id": "jobs-x017",
+    "word": {
+      "en": "Calligrapher",
+      "fa": "خوشنویس"
+    },
+    "category": "jobs",
+    "difficulty": "hard"
+  },
+  {
+    "id": "jobs-x018",
+    "word": {
+      "en": "Watchmaker",
+      "fa": "ساعت‌ساز"
+    },
+    "category": "jobs",
+    "difficulty": "hard"
+  },
+  {
+    "id": "jobs-x019",
+    "word": {
+      "en": "Auctioneer",
+      "fa": "حراج‌گزار"
+    },
+    "category": "jobs",
+    "difficulty": "hard"
   }
 ]

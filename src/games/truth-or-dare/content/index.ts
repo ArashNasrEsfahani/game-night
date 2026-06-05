@@ -2,7 +2,7 @@ import truths from './truths.json';
 import dares from './dares.json';
 import type { LocalizedString } from '../../../sdk/types';
 
-export type Intensity = 'mild' | 'medium' | 'spicy';
+export type Intensity = 'mild' | 'medium' | 'spicy' | 'extreme';
 export type PromptKind = 'truth' | 'dare';
 
 export interface PromptItem {
@@ -31,7 +31,7 @@ export const PROMPT_BY_ID: Record<string, PromptItem> = Object.fromEntries(
   ALL_PROMPTS.map((p) => [p.id, p]),
 );
 
-export const INTENSITIES: Intensity[] = ['mild', 'medium', 'spicy'];
+export const INTENSITIES: Intensity[] = ['mild', 'medium', 'spicy', 'extreme'];
 
 /** Filter a kind's pool by enabled intensities + minPlayers gate (NOT shuffled). */
 export function getPool(opts: {

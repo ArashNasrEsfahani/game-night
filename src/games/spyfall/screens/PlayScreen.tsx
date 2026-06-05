@@ -21,6 +21,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<Spyfal
   const [voteCursor, setVoteCursor] = useState(0);
   const [secondsLeft, setSecondsLeft] = useState(s.options.roundSeconds);
   const endAtRef = useRef(0);
+  const clock = ctx.clock;
 
   useEffect(() => setGateOpen(false), [s.phase, s.revealCursor, voteCursor]);
   useEffect(() => {
@@ -30,15 +31,15 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<Spyfal
   // QA timer.
   useEffect(() => {
     if (s.phase !== 'qa' || !s.options.useTimer) return;
-    endAtRef.current = ctx.clock.now() + s.options.roundSeconds * 1000;
+    endAtRef.current = clock.now() + s.options.roundSeconds * 1000;
     setSecondsLeft(s.options.roundSeconds);
-    const stop = ctx.clock.interval(500, (now) => {
+    const stop = clock.interval(500, (now) => {
       const rem = Math.ceil((endAtRef.current - now) / 1000);
       setSecondsLeft(Math.max(0, rem));
       if (rem <= 0) dispatchRef.current({ type: 'TIMER_EXPIRED' });
     });
     return stop;
-  }, [s.phase, s.options.useTimer, s.options.roundSeconds, ctx]);
+  }, [s.phase, s.options.useTimer, s.options.roundSeconds, clock]);
 
   const name = (id: string) => s.playerNames[id] ?? id;
 
@@ -76,7 +77,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<Spyfal
             {card?.isSpy ? (
               <>
                 <div className="text-7xl">🕵️</div>
-                <h1 className="text-3xl font-extrabold text-[var(--game-accent-strong)]">{t('spy.youAreSpy')}</h1>
+                <h1 className="text-3xl font-extrabold dp-accent">{t('spy.youAreSpy')}</h1>
                 <p className="text-sm text-[var(--text-muted)]">{t('spy.spyHint')}</p>
               </>
             ) : (
@@ -101,21 +102,12 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<Spyfal
         <AppBar onBack={() => nav.exit()} />
         <div className="flex flex-1 flex-col items-center gap-4 py-2 text-center">
           {s.options.useTimer && (
-            <div className={`text-6xl font-black tabular-nums ${secondsLeft <= 60 ? 'text-[var(--color-game-rose-strong)]' : 'text-[var(--game-accent-strong)]'}`}>
+            <div className={`text-6xl font-black tabular-nums ${secondsLeft <= 60 ? 'text-[var(--color-game-rose-strong)]' : 'dp-accent'}`}>
               {fmt(secondsLeft)}
             </div>
           )}
           <p className="text-sm text-[var(--text-muted)]">{t('spy.firstAsker', { name: name(s.round.firstAskerId) })}</p>
-          <Card className="w-full px-4 py-3 text-start">
-            <p className="mb-2 text-xs font-semibold text-[var(--text-muted)]">{t('spy.locations')}</p>
-            <div className="flex flex-wrap gap-1.5">
-              {ALL_LOCATIONS.map((l) => (
-                <span key={l.id} className="rounded-full bg-[var(--surface-2)] px-2 py-0.5 text-xs">
-                  {l.icon} {ctx.localize(l.name)}
-                </span>
-              ))}
-            </div>
-          </Card>
+          <p className="max-w-xs text-sm text-[var(--text-muted)]">{t('spy.noHints')}</p>
           <div className="mt-auto w-full">
             <Button size="lg" fullWidth onClick={() => { ctx.sound.play('tap'); dispatch({ type: 'CALL_VOTE', accuserId: '', nomineeId: '' }); }}>
               {t('spy.callVote')}
@@ -233,7 +225,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<Spyfal
     <Screen>
       <AppBar onBack={() => nav.exit()} />
       <div className="flex flex-1 flex-col items-center justify-center gap-4 text-center">
-        <h1 className="text-2xl font-extrabold text-[var(--game-accent-strong)]">{t(outcomeKey)}</h1>
+        <h1 className="text-2xl font-extrabold dp-accent">{t(outcomeKey)}</h1>
         <Card className="w-full px-4 py-4">
           <p className="text-sm text-[var(--text-muted)]">{t('spy.locationWas')}</p>
           <p className="text-xl font-bold">{loc?.icon} {loc ? ctx.localize(loc.name) : ''}</p>

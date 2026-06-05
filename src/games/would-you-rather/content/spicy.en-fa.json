@@ -115,7 +115,7 @@
       },
       "optionB": {
         "en": "Go on a blind date set up by your nosiest friend",
-        "fa": "بری سر قراری که فوضول‌ترین دوستت جور کرده"
+        "fa": "بری سر قراری که فضول‌ترین دوستت جور کرده"
       }
     },
     {
@@ -345,6 +345,858 @@
         "en": "Have your worst selfie become your ID photo forever",
         "fa": "بدترین سلفیت تا ابد بشه عکس کارت شناساییت"
       }
+    },
+    {
+      "id": "wyr-s-x001",
+      "optionA": {
+        "en": "Have your search history made public",
+        "fa": "تاریخچه جست‌وجوهات عمومی بشه"
+      },
+      "optionB": {
+        "en": "Have your text messages read aloud",
+        "fa": "پیام‌هات با صدای بلند خونده بشه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-s-x002",
+      "optionA": {
+        "en": "Accidentally like an ex's photo from 3 years ago",
+        "fa": "اتفاقی عکس سه سال پیشِ اکست‌رو لایک کنی"
+      },
+      "optionB": {
+        "en": "Send a screenshot to the person you're gossiping about",
+        "fa": "اسکرین‌شاتو واسه همونی که پشتش حرف می‌زدی بفرستی"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-s-x003",
+      "optionA": {
+        "en": "Have your worst dance moves filmed forever",
+        "fa": "بدترین رقصت واسه همیشه فیلم بشه"
+      },
+      "optionB": {
+        "en": "Have your karaoke recorded forever",
+        "fa": "کارائوکه‌ت واسه همیشه ضبط بشه"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-s-x004",
+      "optionA": {
+        "en": "Confess your first crush to the whole group",
+        "fa": "اولین کراشتو جلوی کل جمع اعتراف کنی"
+      },
+      "optionB": {
+        "en": "Reveal who you find most attractive here",
+        "fa": "بگی این‌جا کی‌رو از همه جذاب‌تر می‌دونی"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-s-x005",
+      "optionA": {
+        "en": "Always blush when lying",
+        "fa": "هر وقت دروغ می‌گی سرخ بشی"
+      },
+      "optionB": {
+        "en": "Always giggle when nervous",
+        "fa": "هر وقت استرس داری ریز بخندی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-s-x006",
+      "optionA": {
+        "en": "Have your dating app profile read aloud",
+        "fa": "پروفایل اپ دوست‌یابیت با صدای بلند خونده بشه"
+      },
+      "optionB": {
+        "en": "Have your last flirty DM screenshotted to the group",
+        "fa": "آخرین دایرکت لاسِت واسه جمع اسکرین بشه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-s-x007",
+      "optionA": {
+        "en": "Reveal your most embarrassing nickname",
+        "fa": "خجالت‌آورترین لقبتو لو بدی"
+      },
+      "optionB": {
+        "en": "Reveal the pet name someone calls you",
+        "fa": "اسم نازی که یکی صدات می‌کنه‌رو لو بدی"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-s-x008",
+      "optionA": {
+        "en": "Wear your outfit inside out all night",
+        "fa": "کل شب لباستو پشت‌ورو بپوشی"
+      },
+      "optionB": {
+        "en": "Wear mismatched shoes all night",
+        "fa": "کل شب دوتا کفش لنگه‌به‌لنگه بپوشی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-s-x009",
+      "optionA": {
+        "en": "Let the group post a status on your behalf",
+        "fa": "بذاری جمع از طرفت یه استوری بذاره"
+      },
+      "optionB": {
+        "en": "Let the group rewrite your bio",
+        "fa": "بذاری جمع بیوگرافیتو از نو بنویسه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-s-x010",
+      "optionA": {
+        "en": "Tell your most cringe-worthy date story",
+        "fa": "ضایع‌ترین خاطره‌ی قرارتو تعریف کنی"
+      },
+      "optionB": {
+        "en": "Tell the time you texted the wrong person",
+        "fa": "اون باری که پیامو واسه آدم اشتباهی فرستادی‌رو بگی"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-s-x011",
+      "optionA": {
+        "en": "Have to wink at every person you talk to tonight",
+        "fa": "امشب به هر کی حرف می‌زنی چشمک بزنی"
+      },
+      "optionB": {
+        "en": "Have to compliment everyone you meet tonight",
+        "fa": "امشب به هر کی می‌رسی تعریف کنی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-s-x012",
+      "optionA": {
+        "en": "Reveal your celebrity crush",
+        "fa": "کراش سلبریتیتو لو بدی"
+      },
+      "optionB": {
+        "en": "Reveal your most embarrassing fantasy purchase",
+        "fa": "خجالت‌آورترین خریدِ فانتزیتو لو بدی"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-s-x013",
+      "optionA": {
+        "en": "Have your camera roll shuffled on the big screen",
+        "fa": "گالری عکست رو پرده‌ی بزرگ شافل بشه"
+      },
+      "optionB": {
+        "en": "Have your notes app read out loud",
+        "fa": "اپ یادداشت‌هات با صدای بلند خونده بشه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-s-x014",
+      "optionA": {
+        "en": "Laugh-snort in front of your crush",
+        "fa": "جلوی کراشت با خنده فین کنی"
+      },
+      "optionB": {
+        "en": "Trip in front of your crush",
+        "fa": "جلوی کراشت زمین بخوری"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-s-x015",
+      "optionA": {
+        "en": "Admit who you stalked online this week",
+        "fa": "بگی این هفته کیو آنلاین استاک کردی"
+      },
+      "optionB": {
+        "en": "Admit whose old photos you scrolled too far on",
+        "fa": "بگی عکسای قدیمی کیو زیادی اسکرول کردی"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-s-x016",
+      "optionA": {
+        "en": "Slow dance with a stranger",
+        "fa": "با یه غریبه آهنگ آروم برقصی"
+      },
+      "optionB": {
+        "en": "Serenade your crush in public",
+        "fa": "جلوی جمع واسه کراشت آواز بخونی"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-s-x017",
+      "optionA": {
+        "en": "Have everyone know your guilty-pleasure song",
+        "fa": "همه آهنگ مخفیِ موردعلاقه‌تو بدونن"
+      },
+      "optionB": {
+        "en": "Have everyone know your guilty-pleasure snack",
+        "fa": "همه خوراکی مخفیِ موردعلاقه‌تو بدونن"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-s-x018",
+      "optionA": {
+        "en": "Reveal your most-used emoji to your ex",
+        "fa": "پراستفاده‌ترین ایموجیتو واسه اکست لو بدی"
+      },
+      "optionB": {
+        "en": "Reveal your most-replayed flirty voice note",
+        "fa": "ویس لاسی که بیشتر از همه گوش دادی‌رو لو بدی"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-s-x019",
+      "optionA": {
+        "en": "Let your crush pick your outfit for a week",
+        "fa": "بذاری کراشت یه هفته لباستو انتخاب کنه"
+      },
+      "optionB": {
+        "en": "Let your ex pick your next haircut",
+        "fa": "بذاری اکست مدل موی بعدیتو انتخاب کنه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-s-x020",
+      "optionA": {
+        "en": "Have a permanent love-heart doodle on your hand",
+        "fa": "یه قلب همیشگی رو دستت نقاشی بشه"
+      },
+      "optionB": {
+        "en": "Have a permanent winky face on your cheek",
+        "fa": "یه چشمکِ همیشگی رو گونه‌ت کشیده بشه"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-s-x021",
+      "optionA": {
+        "en": "Confess the biggest lie you told to impress someone",
+        "fa": "بزرگ‌ترین دروغی که واسه خودنمایی گفتی‌رو اعتراف کنی"
+      },
+      "optionB": {
+        "en": "Confess the cheesiest pickup line you ever used",
+        "fa": "آبکی‌ترین تیکه‌ای که تا حالا پروندی‌رو اعتراف کنی"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-s-x022",
+      "optionA": {
+        "en": "Have your group chat nickname revealed",
+        "fa": "لقبت تو گروه‌چت لو بره"
+      },
+      "optionB": {
+        "en": "Have the contact name someone saved you as revealed",
+        "fa": "اسمی که یکی شماره‌تو باهاش سیو کرده لو بره"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-s-x023",
+      "optionA": {
+        "en": "Do your morning routine on a livestream",
+        "fa": "روتین صبحگاهیتو زنده پخش کنی"
+      },
+      "optionB": {
+        "en": "Narrate your inner thoughts out loud for an hour",
+        "fa": "یه ساعت افکار درونیتو بلند بلند بگی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-s-x024",
+      "optionA": {
+        "en": "Reveal the riskiest text you never sent",
+        "fa": "جسورانه‌ترین پیامی که هیچ‌وقت نفرستادی‌رو لو بدی"
+      },
+      "optionB": {
+        "en": "Reveal the screenshot you've kept too long",
+        "fa": "اسکرین‌شاتی که خیلی نگه داشتی‌رو لو بدی"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-s-x025",
+      "optionA": {
+        "en": "Give your crush a piggyback ride across the room",
+        "fa": "کراشتو کول کنی و این‌ور اتاق ببری"
+      },
+      "optionB": {
+        "en": "Let your crush draw on your face",
+        "fa": "بذاری کراشت رو صورتت نقاشی کنه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-s-x026",
+      "optionA": {
+        "en": "Always speak in a dramatic whisper",
+        "fa": "همیشه با پچ‌پچِ نمایشی حرف بزنی"
+      },
+      "optionB": {
+        "en": "Always end sentences with a wink",
+        "fa": "همیشه آخر جمله‌هات چشمک بزنی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-s-x027",
+      "optionA": {
+        "en": "Have your last five Googled questions read aloud",
+        "fa": "پنج تا سؤال آخری که گوگل کردی بلند خونده بشه"
+      },
+      "optionB": {
+        "en": "Have your shopping cart shown to everyone",
+        "fa": "سبد خریدت به همه نشون داده بشه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-s-x028",
+      "optionA": {
+        "en": "Admit your most embarrassing autocorrect fail",
+        "fa": "خجالت‌آورترین سوتیِ تصحیح خودکارتو اعتراف کنی"
+      },
+      "optionB": {
+        "en": "Admit the voice message you wish you could unsend",
+        "fa": "ویسی که کاش می‌تونستی پسش بگیری‌رو اعتراف کنی"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-s-x029",
+      "optionA": {
+        "en": "Wear a 'kiss me' sticker all night",
+        "fa": "کل شب برچسبِ «ماچم کن» بزنی"
+      },
+      "optionB": {
+        "en": "Wear a 'ask me anything' sticker all night",
+        "fa": "کل شب برچسبِ «هرچی می‌خوای بپرس» بزنی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-s-x030",
+      "optionA": {
+        "en": "Reveal who in this room you'd swipe right on",
+        "fa": "بگی تو این اتاق رو کی راست سوایپ می‌کنی"
+      },
+      "optionB": {
+        "en": "Reveal who you'd never match with here",
+        "fa": "بگی این‌جا با کی هیچ‌وقت مچ نمی‌شی"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-s-x031",
+      "optionA": {
+        "en": "Let the group read your last sent message",
+        "fa": "بذاری جمع آخرین پیامی که فرستادی‌رو بخونه"
+      },
+      "optionB": {
+        "en": "Let the group read your last received message",
+        "fa": "بذاری جمع آخرین پیامی که گرفتی‌رو بخونه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-s-x032",
+      "optionA": {
+        "en": "Blow a kiss to everyone who enters the room",
+        "fa": "به هر کی وارد می‌شه بوس بفرستی"
+      },
+      "optionB": {
+        "en": "Curtsy to everyone who enters the room",
+        "fa": "به هر کی وارد می‌شه تعظیم کنی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-s-x033",
+      "optionA": {
+        "en": "Confess the most embarrassing thing in your bedroom",
+        "fa": "خجالت‌آورترین چیزِ تو اتاق‌خوابتو اعتراف کنی"
+      },
+      "optionB": {
+        "en": "Confess what's hidden in your phone's secret folder",
+        "fa": "چیزی که تو پوشه‌ی مخفی گوشیته‌رو اعتراف کنی"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-s-x034",
+      "optionA": {
+        "en": "Have your ex describe you in three words",
+        "fa": "بذاری اکست با سه کلمه توصیفت کنه"
+      },
+      "optionB": {
+        "en": "Have your best friend rate your dating taste",
+        "fa": "بذاری رفیق صمیمیت به سلیقه‌ی عشقیت نمره بده"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-s-x035",
+      "optionA": {
+        "en": "Hold eye contact for a full minute with anyone you talk to",
+        "fa": "با هر کی حرف می‌زنی یه دقیقه تو چشمش زل بزنی"
+      },
+      "optionB": {
+        "en": "Hold hands for a full minute with anyone you talk to",
+        "fa": "با هر کی حرف می‌زنی یه دقیقه دستشو بگیری"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-s-x036",
+      "optionA": {
+        "en": "Reveal the riskiest place you've ever flirted",
+        "fa": "جسورانه‌ترین جایی که لاس زدی‌رو لو بدی"
+      },
+      "optionB": {
+        "en": "Reveal the worst moment you got caught staring",
+        "fa": "بدترین لحظه‌ای که موقع زل‌زدن گیر افتادی‌رو لو بدی"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-s-x037",
+      "optionA": {
+        "en": "Send your crush a compliment right now",
+        "fa": "همین حالا به کراشت یه تعریف بفرستی"
+      },
+      "optionB": {
+        "en": "Send your ex a 'no reason' hello right now",
+        "fa": "همین حالا به اکست یه سلامِ بی‌دلیل بفرستی"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-s-x038",
+      "optionA": {
+        "en": "Have your laugh replaced with a giggle forever",
+        "fa": "خنده‌ت واسه همیشه به قهقهه‌ی ریز تبدیل بشه"
+      },
+      "optionB": {
+        "en": "Have your voice go squeaky when flirting",
+        "fa": "موقع لاس‌زدن صدات جیغ‌جیغی بشه"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-s-x039",
+      "optionA": {
+        "en": "Reveal your phone's most-viewed photo",
+        "fa": "پربازدیدترین عکس گوشیتو لو بدی"
+      },
+      "optionB": {
+        "en": "Reveal the contact you text the most at night",
+        "fa": "مخاطبی که شب‌ها بیشتر بهش پیام می‌دی‌رو لو بدی"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-s-x040",
+      "optionA": {
+        "en": "Let your crush scroll your DMs for one minute",
+        "fa": "بذاری کراشت یه دقیقه دایرکتاتو بگرده"
+      },
+      "optionB": {
+        "en": "Let your ex scroll your camera roll for one minute",
+        "fa": "بذاری اکست یه دقیقه گالریتو بگرده"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-s-x041",
+      "optionA": {
+        "en": "Compliment a stranger's outfit every hour",
+        "fa": "هر ساعت از تیپِ یه غریبه تعریف کنی"
+      },
+      "optionB": {
+        "en": "Ask a stranger for their best dance move every hour",
+        "fa": "هر ساعت از یه غریبه بهترین حرکت رقصشو بخوای"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-s-x042",
+      "optionA": {
+        "en": "Reenact your most awkward first kiss story",
+        "fa": "خاطره‌ی ناجورترین بوسه‌ی اولتو بازسازی کنی"
+      },
+      "optionB": {
+        "en": "Reenact your worst pickup attempt",
+        "fa": "بدترین تلاشت واسه مخ‌زدن‌رو بازسازی کنی"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-s-x043",
+      "optionA": {
+        "en": "Have a love letter you wrote read aloud",
+        "fa": "نامه‌ی عاشقانه‌ای که نوشتی بلند خونده بشه"
+      },
+      "optionB": {
+        "en": "Have a breakup text you sent read aloud",
+        "fa": "پیام جدایی‌ای که فرستادی بلند خونده بشه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-s-x044",
+      "optionA": {
+        "en": "Wear heart-shaped glasses for the rest of the night",
+        "fa": "بقیه‌ی شب عینک قلبی‌شکل بزنی"
+      },
+      "optionB": {
+        "en": "Speak only in rhymes for the rest of the night",
+        "fa": "بقیه‌ی شب فقط قافیه‌دار حرف بزنی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-s-x045",
+      "optionA": {
+        "en": "Confess the crush you never told anyone about",
+        "fa": "کراشی که به هیچ‌کس نگفتی‌رو اعتراف کنی"
+      },
+      "optionB": {
+        "en": "Confess the crush you regret telling everyone about",
+        "fa": "کراشی که پشیمونی به همه گفتی‌رو اعتراف کنی"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "risky-001",
+      "optionA": {
+        "en": "Date someone exactly like your ex",
+        "fa": "با یکی دقیقاً شبیه اکست بری سر قرار"
+      },
+      "optionB": {
+        "en": "Date the complete opposite of your ex",
+        "fa": "با یکی که کاملاً برعکس اکسته بری سر قرار"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "risky-002",
+      "optionA": {
+        "en": "Let your crush read your entire DM history",
+        "fa": "بذاری کراشت کل دایرکتاتو بخونه"
+      },
+      "optionB": {
+        "en": "Let your ex scroll your whole camera roll",
+        "fa": "بذاری اکست کل گالریتو بگرده"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "risky-003",
+      "optionA": {
+        "en": "Reveal your number of exes to the room",
+        "fa": "تعداد اکسات رو جلوی جمع لو بدی"
+      },
+      "optionB": {
+        "en": "Reveal your most-texted person to the room",
+        "fa": "کسی که بیشتر از همه بهش پیام می‌دی رو لو بدی"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "risky-004",
+      "optionA": {
+        "en": "Have your search history projected for one minute",
+        "fa": "یه دقیقه تاریخچه‌ی سرچت رو بزرگ نشون بدن"
+      },
+      "optionB": {
+        "en": "Have your DMs read aloud for one minute",
+        "fa": "یه دقیقه دایرکتاتو بلندبلند بخونن"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "risky-005",
+      "optionA": {
+        "en": "Have a whirlwind romance that lasts one month",
+        "fa": "یه عشق آتشین که فقط یه ماه طول می‌کشه داشته باشی"
+      },
+      "optionB": {
+        "en": "Have a lukewarm relationship that lasts forever",
+        "fa": "یه رابطه‌ی سرد که تا ابد ادامه داره داشته باشی"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "risky-006",
+      "optionA": {
+        "en": "Kiss your best friend once",
+        "fa": "یه بار رفیق صمیمیتو ببوسی"
+      },
+      "optionB": {
+        "en": "Never be able to hug anyone for a year",
+        "fa": "یه سال هیچ‌کسو نتونی بغل کنی"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "risky-007",
+      "optionA": {
+        "en": "Send a flirty text to your boss",
+        "fa": "به رئیست یه پیام عشقولانه بفرستی"
+      },
+      "optionB": {
+        "en": "Send a confession to your oldest crush",
+        "fa": "به قدیمی‌ترین کراشت اعتراف کنی"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "risky-008",
+      "optionA": {
+        "en": "Have your ex give a speech at your wedding",
+        "fa": "اکست تو عروسیت سخنرانی کنه"
+      },
+      "optionB": {
+        "en": "Have your worst date plan your honeymoon",
+        "fa": "بدترین قرارت ماه‌عسلتو برنامه‌ریزی کنه"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "risky-009",
+      "optionA": {
+        "en": "Let your partner read one year of your DMs",
+        "fa": "بذاری پارتنرت یه سال از دایرکتاتو بخونه"
+      },
+      "optionB": {
+        "en": "Let your partner pick your phone password",
+        "fa": "بذاری پارتنرت رمز گوشیتو انتخاب کنه"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "risky-010",
+      "optionA": {
+        "en": "Date an amazing kisser who is broke",
+        "fa": "با یکی که فوق‌العاده می‌بوسه ولی بی‌پوله بری سر قرار"
+      },
+      "optionB": {
+        "en": "Date a terrible kisser who is rich",
+        "fa": "با یکی که افتضاح می‌بوسه ولی پولداره بری سر قرار"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "risky-011",
+      "optionA": {
+        "en": "Reveal who you stalk most online",
+        "fa": "لو بدی بیشتر از همه کیو آنلاین استاک می‌کنی"
+      },
+      "optionB": {
+        "en": "Reveal who stalks you the most",
+        "fa": "لو بدی کی بیشتر از همه استاکت می‌کنه"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "risky-012",
+      "optionA": {
+        "en": "Confess your feelings and get rejected in public",
+        "fa": "جلوی همه به احساست اعتراف کنی و ضدحال بخوری"
+      },
+      "optionB": {
+        "en": "Never say it and always wonder",
+        "fa": "هیچ‌وقت نگی و همیشه تو کفش بمونی"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "risky-013",
+      "optionA": {
+        "en": "Marry your high-school crush",
+        "fa": "با کراش دوران مدرسه‌ات ازدواج کنی"
+      },
+      "optionB": {
+        "en": "Marry someone you will meet in ten years",
+        "fa": "با یکی که ده سال دیگه می‌بینیش ازدواج کنی"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "risky-014",
+      "optionA": {
+        "en": "Have your crush see every drunk text you sent",
+        "fa": "کراشت همه‌ی پیامای مستیتو ببینه"
+      },
+      "optionB": {
+        "en": "Have your family see every photo on your phone",
+        "fa": "خانواده‌ات همه‌ی عکسای گوشیتو ببینن"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "risky-015",
+      "optionA": {
+        "en": "Re-date your worst ex for a week",
+        "fa": "یه هفته با بدترین اکست دوباره دوست شی"
+      },
+      "optionB": {
+        "en": "Go on a blind date the group sets up",
+        "fa": "بری سر یه قرار کور که جمع برات جور کرده"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "risky-016",
+      "optionA": {
+        "en": "Let the group write your dating bio",
+        "fa": "بذاری جمع بیوی دوستیابیتو بنویسه"
+      },
+      "optionB": {
+        "en": "Let the group choose your next three dates",
+        "fa": "بذاری جمع سه تا قرار بعدیتو انتخاب کنه"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "risky-017",
+      "optionA": {
+        "en": "Have your ex as your roommate",
+        "fa": "اکست هم‌خونه‌ات بشه"
+      },
+      "optionB": {
+        "en": "Have your crush as your boss",
+        "fa": "کراشت رئیست بشه"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "risky-018",
+      "optionA": {
+        "en": "Have everyone you dated in one group chat",
+        "fa": "همه‌ی کسایی که باهاشون بودی تو یه گروه باشن"
+      },
+      "optionB": {
+        "en": "Have your parents read every date-night text",
+        "fa": "پدرومادرت همه‌ی پیامای شب‌قرارتو بخونن"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "risky-019",
+      "optionA": {
+        "en": "Always blush whenever your crush walks in",
+        "fa": "هر بار کراشت میاد تو، سرخ بشی"
+      },
+      "optionB": {
+        "en": "Always say their name in your sleep",
+        "fa": "همیشه تو خواب اسمشونو بگی"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "risky-020",
+      "optionA": {
+        "en": "Have your dating profile read at a family dinner",
+        "fa": "پروفایل دوستیابیتو سر شام خانوادگی بخونن"
+      },
+      "optionB": {
+        "en": "Have your browser history read in a work meeting",
+        "fa": "تاریخچه‌ی مرورگرتو تو جلسه‌ی کاری بخونن"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "risky-021",
+      "optionA": {
+        "en": "Spend a weekend with your ex’s family",
+        "fa": "یه آخر هفته رو با خانواده‌ی اکست بگذرونی"
+      },
+      "optionB": {
+        "en": "Spend a weekend with your crush’s ex",
+        "fa": "یه آخر هفته رو با اکسِ کراشت بگذرونی"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "risky-022",
+      "optionA": {
+        "en": "Let the room guess your type out loud",
+        "fa": "بذاری جمع با صدای بلند تایپتو حدس بزنه"
+      },
+      "optionB": {
+        "en": "Reveal your type by naming someone in the room",
+        "fa": "تایپتو با اسم بردن یکی تو همین جمع لو بدی"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "risky-023",
+      "optionA": {
+        "en": "Have your most-used emoji tattooed for a year",
+        "fa": "پراستفاده‌ترین ایموجیتو یه سال خالکوبی کنی"
+      },
+      "optionB": {
+        "en": "Have your most-replayed song reveal your mood to all",
+        "fa": "آهنگی که بیشترین بار گوش دادی حال‌وهواتو لو بده"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "risky-024",
+      "optionA": {
+        "en": "Be caught flirting by your partner",
+        "fa": "پارتنرت مچتو موقع لاس زدن بگیره"
+      },
+      "optionB": {
+        "en": "Be caught talking about your partner’s friend",
+        "fa": "مچتو موقع حرف زدن درباره‌ی دوستِ پارتنرت بگیرن"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "risky-025",
+      "optionA": {
+        "en": "Get a matching tattoo with your crush",
+        "fa": "با کراشت یه خالکوبی ست بزنی"
+      },
+      "optionB": {
+        "en": "Get a matching tattoo with your ex",
+        "fa": "با اکست یه خالکوبی ست بزنی"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "risky-026",
+      "optionA": {
+        "en": "Have every flirty DM you send auto-liked by your mom",
+        "fa": "هر دایرکت عشقولانه‌ای که می‌فرستی مامانت خودکار لایک کنه"
+      },
+      "optionB": {
+        "en": "Have every selfie you post commented on by your ex",
+        "fa": "هر سلفی‌ای که می‌ذاری اکست زیرش کامنت بذاره"
+      },
+      "intensity": "risky"
     }
   ]
 }

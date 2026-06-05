@@ -216,6 +216,209 @@
         "en": "Kung Fu Panda",
         "fa": "پاندای کونگ‌فوکار"
       }
+    },
+    {
+      "id": "hu-movies-x001",
+      "word": {
+        "en": "Pulp Fiction",
+        "fa": "داستان عامه‌پسند"
+      }
+    },
+    {
+      "id": "hu-movies-x002",
+      "word": {
+        "en": "Forrest Gump",
+        "fa": "فارست گامپ"
+      }
+    },
+    {
+      "id": "hu-movies-x003",
+      "word": {
+        "en": "The Shawshank Redemption",
+        "fa": "رستگاری در شاوشنک"
+      }
+    },
+    {
+      "id": "hu-movies-x004",
+      "word": {
+        "en": "The Dark Knight",
+        "fa": "شوالیه تاریکی"
+      }
+    },
+    {
+      "id": "hu-movies-x005",
+      "word": {
+        "en": "Inception",
+        "fa": "تلقین"
+      }
+    },
+    {
+      "id": "hu-movies-x006",
+      "word": {
+        "en": "Gladiator",
+        "fa": "گلادیاتور"
+      }
+    },
+    {
+      "id": "hu-movies-x007",
+      "word": {
+        "en": "Fight Club",
+        "fa": "باشگاه مشت‌زنی"
+      }
+    },
+    {
+      "id": "hu-movies-x008",
+      "word": {
+        "en": "Schindler's List",
+        "fa": "فهرست شیندلر"
+      }
+    },
+    {
+      "id": "hu-movies-x009",
+      "word": {
+        "en": "Goodfellas",
+        "fa": "رفقای خوب"
+      }
+    },
+    {
+      "id": "hu-movies-x010",
+      "word": {
+        "en": "Interstellar",
+        "fa": "میان‌ستاره‌ای"
+      }
+    },
+    {
+      "id": "hu-movies-x011",
+      "word": {
+        "en": "The Lord of the Rings",
+        "fa": "ارباب حلقه‌ها"
+      }
+    },
+    {
+      "id": "hu-movies-x012",
+      "word": {
+        "en": "Back to the Future",
+        "fa": "بازگشت به آینده"
+      }
+    },
+    {
+      "id": "hu-movies-x013",
+      "word": {
+        "en": "E.T. the Extra-Terrestrial",
+        "fa": "ای‌تی موجود فرازمینی"
+      }
+    },
+    {
+      "id": "hu-movies-x014",
+      "word": {
+        "en": "The Silence of the Lambs",
+        "fa": "سکوت بره‌ها"
+      }
+    },
+    {
+      "id": "hu-movies-x015",
+      "word": {
+        "en": "Saving Private Ryan",
+        "fa": "نجات سرباز رایان"
+      }
+    },
+    {
+      "id": "hu-movies-x016",
+      "word": {
+        "en": "Alien",
+        "fa": "بیگانه"
+      }
+    },
+    {
+      "id": "hu-movies-x017",
+      "word": {
+        "en": "Casablanca",
+        "fa": "کازابلانکا"
+      }
+    },
+    {
+      "id": "hu-movies-x018",
+      "word": {
+        "en": "Psycho",
+        "fa": "روانی"
+      }
+    },
+    {
+      "id": "hu-movies-x019",
+      "word": {
+        "en": "Spirited Away",
+        "fa": "شهر اشباح"
+      }
+    },
+    {
+      "id": "hu-movies-x020",
+      "word": {
+        "en": "Beauty and the Beast",
+        "fa": "دیو و دلبر"
+      }
+    },
+    {
+      "id": "hu-movies-x021",
+      "word": {
+        "en": "Despicable Me",
+        "fa": "من نفرت‌انگیز"
+      }
+    },
+    {
+      "id": "hu-movies-x022",
+      "word": {
+        "en": "The Lego Movie",
+        "fa": "فیلم لگو"
+      }
+    },
+    {
+      "id": "hu-movies-x023",
+      "word": {
+        "en": "Coco",
+        "fa": "کوکو"
+      }
+    },
+    {
+      "id": "hu-movies-x024",
+      "word": {
+        "en": "Joker",
+        "fa": "جوکر"
+      }
+    },
+    {
+      "id": "hu-movies-x025",
+      "word": {
+        "en": "Parasite",
+        "fa": "انگل"
+      }
+    },
+    {
+      "id": "hu-movies-x026",
+      "word": {
+        "en": "Black Panther",
+        "fa": "پلنگ سیاه"
+      }
+    },
+    {
+      "id": "hu-movies-x027",
+      "word": {
+        "en": "The Wolf of Wall Street",
+        "fa": "گرگ وال‌استریت"
+      }
+    },
+    {
+      "id": "hu-movies-x028",
+      "word": {
+        "en": "La La Land",
+        "fa": "لا لا لند"
+      }
+    },
+    {
+      "id": "hu-movies-x029",
+      "word": {
+        "en": "Mad Max: Fury Road",
+        "fa": "مکس دیوانه: جاده خشم"
+      }
     }
   ]
 }

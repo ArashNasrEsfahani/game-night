@@ -271,6 +271,240 @@
         "en": "The Outcasts (Ekhrajiha)",
         "fa": "اخراجی‌ها"
       }
+    },
+    {
+      "id": "movies-x001",
+      "text": {
+        "en": "Superman",
+        "fa": "سوپرمن"
+      },
+      "category": "movies",
+      "difficulty": "easy"
+    },
+    {
+      "id": "movies-x002",
+      "text": {
+        "en": "Tarzan",
+        "fa": "تارزان"
+      },
+      "category": "movies",
+      "difficulty": "easy"
+    },
+    {
+      "id": "movies-x003",
+      "text": {
+        "en": "Jaws",
+        "fa": "آرواره‌ها"
+      },
+      "category": "movies",
+      "difficulty": "easy"
+    },
+    {
+      "id": "movies-x004",
+      "text": {
+        "en": "E.T.",
+        "fa": "ای‌تی"
+      },
+      "category": "movies",
+      "difficulty": "easy"
+    },
+    {
+      "id": "movies-x005",
+      "text": {
+        "en": "Rocky",
+        "fa": "راکی"
+      },
+      "category": "movies",
+      "difficulty": "easy"
+    },
+    {
+      "id": "movies-x006",
+      "text": {
+        "en": "Cinderella",
+        "fa": "سیندرلا"
+      },
+      "category": "movies",
+      "difficulty": "easy"
+    },
+    {
+      "id": "movies-x007",
+      "text": {
+        "en": "Snow White",
+        "fa": "سفیدبرفی"
+      },
+      "category": "movies",
+      "difficulty": "easy"
+    },
+    {
+      "id": "movies-x008",
+      "text": {
+        "en": "Aladdin",
+        "fa": "علاءالدین"
+      },
+      "category": "movies",
+      "difficulty": "easy"
+    },
+    {
+      "id": "movies-x009",
+      "text": {
+        "en": "Toy Story",
+        "fa": "داستان اسباب‌بازی"
+      },
+      "category": "movies",
+      "difficulty": "easy"
+    },
+    {
+      "id": "movies-x010",
+      "text": {
+        "en": "Star Wars",
+        "fa": "جنگ ستارگان"
+      },
+      "category": "movies",
+      "difficulty": "medium"
+    },
+    {
+      "id": "movies-x011",
+      "text": {
+        "en": "Avatar",
+        "fa": "آواتار"
+      },
+      "category": "movies",
+      "difficulty": "medium"
+    },
+    {
+      "id": "movies-x012",
+      "text": {
+        "en": "Iron Man",
+        "fa": "مرد آهنی"
+      },
+      "category": "movies",
+      "difficulty": "medium"
+    },
+    {
+      "id": "movies-x013",
+      "text": {
+        "en": "Ghostbusters",
+        "fa": "شکارچیان روح"
+      },
+      "category": "movies",
+      "difficulty": "medium"
+    },
+    {
+      "id": "movies-x014",
+      "text": {
+        "en": "Back to the Future",
+        "fa": "بازگشت به آینده"
+      },
+      "category": "movies",
+      "difficulty": "medium"
+    },
+    {
+      "id": "movies-x015",
+      "text": {
+        "en": "The Karate Kid",
+        "fa": "بچه کاراته‌باز"
+      },
+      "category": "movies",
+      "difficulty": "medium"
+    },
+    {
+      "id": "movies-x016",
+      "text": {
+        "en": "How to Train Your Dragon",
+        "fa": "چگونه اژدهای خود را تربیت کنیم"
+      },
+      "category": "movies",
+      "difficulty": "medium"
+    },
+    {
+      "id": "movies-x017",
+      "text": {
+        "en": "The Wizard of Oz",
+        "fa": "جادوگر شهر اوز"
+      },
+      "category": "movies",
+      "difficulty": "medium"
+    },
+    {
+      "id": "movies-x018",
+      "text": {
+        "en": "Mary Poppins",
+        "fa": "مری پاپینز"
+      },
+      "category": "movies",
+      "difficulty": "hard"
+    },
+    {
+      "id": "movies-x019",
+      "text": {
+        "en": "Singin' in the Rain",
+        "fa": "آواز در باران"
+      },
+      "category": "movies",
+      "difficulty": "hard"
+    },
+    {
+      "id": "movies-x020",
+      "text": {
+        "en": "Braveheart",
+        "fa": "شجاع‌دل"
+      },
+      "category": "movies",
+      "difficulty": "hard"
+    },
+    {
+      "id": "movies-x021",
+      "text": {
+        "en": "The Silence of the Lambs",
+        "fa": "سکوت بره‌ها"
+      },
+      "category": "movies",
+      "difficulty": "hard"
+    },
+    {
+      "id": "movies-x022",
+      "text": {
+        "en": "A Beautiful Mind",
+        "fa": "یک ذهن زیبا"
+      },
+      "category": "movies",
+      "difficulty": "hard"
+    },
+    {
+      "id": "movies-x023",
+      "text": {
+        "en": "Slumdog Millionaire",
+        "fa": "میلیونر زاغه‌نشین"
+      },
+      "category": "movies",
+      "difficulty": "hard"
+    },
+    {
+      "id": "movies-x024",
+      "text": {
+        "en": "The Pianist",
+        "fa": "پیانیست"
+      },
+      "category": "movies",
+      "difficulty": "hard"
+    },
+    {
+      "id": "movies-x025",
+      "text": {
+        "en": "Cast Away",
+        "fa": "دور افتاده"
+      },
+      "category": "movies",
+      "difficulty": "hard"
+    },
+    {
+      "id": "movies-x026",
+      "text": {
+        "en": "The Shawshank Redemption",
+        "fa": "رستگاری در شاوشنک"
+      },
+      "category": "movies",
+      "difficulty": "hard"
     }
   ]
 }

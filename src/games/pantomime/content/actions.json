@@ -271,6 +271,393 @@
         "en": "Tiptoeing to raid the fridge at midnight without waking anyone",
         "fa": "یواشکی نصفه‌شب رفتن سر یخچال که کسی بیدار نشه"
       }
+    },
+    {
+      "id": "actions-x001",
+      "text": {
+        "en": "Brushing teeth",
+        "fa": "مسواک زدن"
+      },
+      "category": "actions",
+      "difficulty": "easy"
+    },
+    {
+      "id": "actions-x002",
+      "text": {
+        "en": "Combing hair",
+        "fa": "شانه کردن مو"
+      },
+      "category": "actions",
+      "difficulty": "easy"
+    },
+    {
+      "id": "actions-x003",
+      "text": {
+        "en": "Blowing out candles",
+        "fa": "فوت کردن شمع‌ها"
+      },
+      "category": "actions",
+      "difficulty": "easy"
+    },
+    {
+      "id": "actions-x004",
+      "text": {
+        "en": "Drinking tea",
+        "fa": "نوشیدن چای"
+      },
+      "category": "actions",
+      "difficulty": "easy"
+    },
+    {
+      "id": "actions-x005",
+      "text": {
+        "en": "Tying shoelaces",
+        "fa": "بستن بند کفش"
+      },
+      "category": "actions",
+      "difficulty": "easy"
+    },
+    {
+      "id": "actions-x006",
+      "text": {
+        "en": "Waving goodbye",
+        "fa": "خداحافظی با دست تکان دادن"
+      },
+      "category": "actions",
+      "difficulty": "easy"
+    },
+    {
+      "id": "actions-x007",
+      "text": {
+        "en": "Eating an apple",
+        "fa": "خوردن سیب"
+      },
+      "category": "actions",
+      "difficulty": "easy"
+    },
+    {
+      "id": "actions-x008",
+      "text": {
+        "en": "Clapping hands",
+        "fa": "دست زدن"
+      },
+      "category": "actions",
+      "difficulty": "easy"
+    },
+    {
+      "id": "actions-x009",
+      "text": {
+        "en": "Sweeping the floor",
+        "fa": "جارو کردن زمین"
+      },
+      "category": "actions",
+      "difficulty": "easy"
+    },
+    {
+      "id": "actions-x010",
+      "text": {
+        "en": "Washing dishes",
+        "fa": "ظرف شستن"
+      },
+      "category": "actions",
+      "difficulty": "easy"
+    },
+    {
+      "id": "actions-x011",
+      "text": {
+        "en": "Putting on socks",
+        "fa": "پوشیدن جوراب"
+      },
+      "category": "actions",
+      "difficulty": "easy"
+    },
+    {
+      "id": "actions-x012",
+      "text": {
+        "en": "Yawning and stretching",
+        "fa": "خمیازه کشیدن و کش و قوس"
+      },
+      "category": "actions",
+      "difficulty": "easy"
+    },
+    {
+      "id": "actions-x013",
+      "text": {
+        "en": "Reading a book",
+        "fa": "کتاب خواندن"
+      },
+      "category": "actions",
+      "difficulty": "easy"
+    },
+    {
+      "id": "actions-x014",
+      "text": {
+        "en": "Riding a horse",
+        "fa": "اسب‌سواری"
+      },
+      "category": "actions",
+      "difficulty": "easy"
+    },
+    {
+      "id": "actions-x015",
+      "text": {
+        "en": "Fishing",
+        "fa": "ماهیگیری"
+      },
+      "category": "actions",
+      "difficulty": "easy"
+    },
+    {
+      "id": "actions-x016",
+      "text": {
+        "en": "Painting a wall",
+        "fa": "رنگ کردن دیوار"
+      },
+      "category": "actions",
+      "difficulty": "medium"
+    },
+    {
+      "id": "actions-x017",
+      "text": {
+        "en": "Playing the guitar",
+        "fa": "گیتار زدن"
+      },
+      "category": "actions",
+      "difficulty": "medium"
+    },
+    {
+      "id": "actions-x018",
+      "text": {
+        "en": "Shooting a basketball",
+        "fa": "پرتاب توپ بسکتبال"
+      },
+      "category": "actions",
+      "difficulty": "medium"
+    },
+    {
+      "id": "actions-x019",
+      "text": {
+        "en": "Watering plants",
+        "fa": "آب دادن به گیاهان"
+      },
+      "category": "actions",
+      "difficulty": "medium"
+    },
+    {
+      "id": "actions-x020",
+      "text": {
+        "en": "Carrying heavy bags",
+        "fa": "حمل کیسه‌های سنگین"
+      },
+      "category": "actions",
+      "difficulty": "medium"
+    },
+    {
+      "id": "actions-x021",
+      "text": {
+        "en": "Rowing a boat",
+        "fa": "پارو زدن قایق"
+      },
+      "category": "actions",
+      "difficulty": "medium"
+    },
+    {
+      "id": "actions-x022",
+      "text": {
+        "en": "Folding laundry",
+        "fa": "تا کردن لباس‌ها"
+      },
+      "category": "actions",
+      "difficulty": "medium"
+    },
+    {
+      "id": "actions-x023",
+      "text": {
+        "en": "Knitting a scarf",
+        "fa": "بافتن شال‌گردن"
+      },
+      "category": "actions",
+      "difficulty": "medium"
+    },
+    {
+      "id": "actions-x024",
+      "text": {
+        "en": "Boxing match",
+        "fa": "مسابقه بوکس"
+      },
+      "category": "actions",
+      "difficulty": "medium"
+    },
+    {
+      "id": "actions-x025",
+      "text": {
+        "en": "Climbing a ladder",
+        "fa": "بالا رفتن از نردبان"
+      },
+      "category": "actions",
+      "difficulty": "medium"
+    },
+    {
+      "id": "actions-x026",
+      "text": {
+        "en": "Roller skating",
+        "fa": "اسکیت سواری"
+      },
+      "category": "actions",
+      "difficulty": "medium"
+    },
+    {
+      "id": "actions-x027",
+      "text": {
+        "en": "Pumping a bicycle tire",
+        "fa": "باد کردن لاستیک دوچرخه"
+      },
+      "category": "actions",
+      "difficulty": "medium"
+    },
+    {
+      "id": "actions-x028",
+      "text": {
+        "en": "Conducting an orchestra",
+        "fa": "رهبری ارکستر"
+      },
+      "category": "actions",
+      "difficulty": "medium"
+    },
+    {
+      "id": "actions-x029",
+      "text": {
+        "en": "Juggling balls",
+        "fa": "ژانگولر بازی با توپ"
+      },
+      "category": "actions",
+      "difficulty": "medium"
+    },
+    {
+      "id": "actions-x030",
+      "text": {
+        "en": "Building a sandcastle",
+        "fa": "ساختن قلعه شنی"
+      },
+      "category": "actions",
+      "difficulty": "medium"
+    },
+    {
+      "id": "actions-x031",
+      "text": {
+        "en": "Changing a tire",
+        "fa": "تعویض لاستیک خودرو"
+      },
+      "category": "actions",
+      "difficulty": "hard"
+    },
+    {
+      "id": "actions-x032",
+      "text": {
+        "en": "Assembling furniture",
+        "fa": "سرهم کردن مبلمان"
+      },
+      "category": "actions",
+      "difficulty": "hard"
+    },
+    {
+      "id": "actions-x033",
+      "text": {
+        "en": "Skydiving",
+        "fa": "چتربازی از هواپیما"
+      },
+      "category": "actions",
+      "difficulty": "hard"
+    },
+    {
+      "id": "actions-x034",
+      "text": {
+        "en": "Scuba diving",
+        "fa": "غواصی با کپسول اکسیژن"
+      },
+      "category": "actions",
+      "difficulty": "hard"
+    },
+    {
+      "id": "actions-x035",
+      "text": {
+        "en": "Defusing a bomb",
+        "fa": "خنثی کردن بمب"
+      },
+      "category": "actions",
+      "difficulty": "hard"
+    },
+    {
+      "id": "actions-x036",
+      "text": {
+        "en": "Milking a cow",
+        "fa": "دوشیدن گاو"
+      },
+      "category": "actions",
+      "difficulty": "hard"
+    },
+    {
+      "id": "actions-x037",
+      "text": {
+        "en": "Performing surgery",
+        "fa": "انجام جراحی"
+      },
+      "category": "actions",
+      "difficulty": "hard"
+    },
+    {
+      "id": "actions-x038",
+      "text": {
+        "en": "Directing traffic",
+        "fa": "هدایت ترافیک"
+      },
+      "category": "actions",
+      "difficulty": "hard"
+    },
+    {
+      "id": "actions-x039",
+      "text": {
+        "en": "Walking a tightrope",
+        "fa": "بندبازی روی طناب"
+      },
+      "category": "actions",
+      "difficulty": "hard"
+    },
+    {
+      "id": "actions-x040",
+      "text": {
+        "en": "Taming a lion",
+        "fa": "رام کردن شیر"
+      },
+      "category": "actions",
+      "difficulty": "hard"
+    },
+    {
+      "id": "actions-x041",
+      "text": {
+        "en": "Photographing wildlife",
+        "fa": "عکاسی از حیات وحش"
+      },
+      "category": "actions",
+      "difficulty": "hard"
+    },
+    {
+      "id": "actions-x042",
+      "text": {
+        "en": "Hatching from an egg",
+        "fa": "بیرون آمدن از تخم"
+      },
+      "category": "actions",
+      "difficulty": "hard"
+    },
+    {
+      "id": "actions-x043",
+      "text": {
+        "en": "Sculpting a statue",
+        "fa": "تراشیدن مجسمه"
+      },
+      "category": "actions",
+      "difficulty": "hard"
     }
   ]
 }

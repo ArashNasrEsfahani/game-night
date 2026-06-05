@@ -1,3 +1,6 @@
+import { motion } from 'framer-motion';
+import { springSnappy } from '../motion';
+
 export function Toggle({
   checked,
   onChange,
@@ -10,20 +13,24 @@ export function Toggle({
   return (
     <div className="flex items-center justify-between">
       {label && <span className="text-[var(--text)]">{label}</span>}
-      <button
+      <motion.button
         role="switch"
         aria-checked={checked}
         onClick={() => onChange(!checked)}
-        className={`h-7 w-12 shrink-0 rounded-full p-0.5 transition ${
+        whileTap={{ scale: 0.92 }}
+        transition={springSnappy}
+        className={`h-7 w-12 shrink-0 rounded-full p-0.5 transition-colors ${
           checked ? 'bg-[var(--game-accent-strong)]' : 'bg-[var(--surface-2)]'
         }`}
       >
-        <span
-          className={`block h-6 w-6 rounded-full bg-white transition ${
+        <motion.span
+          layout
+          transition={springSnappy}
+          className={`block h-6 w-6 rounded-full bg-white shadow-[0_2px_6px_rgb(0_0_0/0.4)] ${
             checked ? 'translate-x-5 rtl:-translate-x-5' : 'translate-x-0'
           }`}
         />
-      </button>
+      </motion.button>
     </div>
   );
 }

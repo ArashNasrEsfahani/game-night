@@ -2,6 +2,7 @@ import movies from './movies.json';
 import animals from './animals.json';
 import actions from './actions.json';
 import famous from './famous.json';
+import tv from './tv.json';
 import type {
   PantomimeCategory,
   PantomimeDeckFile,
@@ -18,11 +19,12 @@ export type {
   RealCategory,
 } from './types';
 
-export const REAL_CATEGORIES: RealCategory[] = ['movies', 'animals', 'actions', 'famous'];
+export const REAL_CATEGORIES: RealCategory[] = ['movies', 'tv', 'animals', 'actions', 'famous'];
 
 /** Static content indexed by real category. */
 export const CONTENT: Record<RealCategory, PantomimePrompt[]> = {
   movies: (movies as PantomimeDeckFile).prompts,
+  tv: (tv as PantomimeDeckFile).prompts,
   animals: (animals as PantomimeDeckFile).prompts,
   actions: (actions as PantomimeDeckFile).prompts,
   famous: (famous as PantomimeDeckFile).prompts,

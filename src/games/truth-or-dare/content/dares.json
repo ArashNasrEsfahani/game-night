@@ -171,7 +171,7 @@
       "minPlayers": 3,
       "text": {
         "en": "Let the group pick a single emoji to post as your status (you choose the app).",
-        "fa": "بذار جمع یه ایموجی انتخاب کنه که بذاری استوریت (خود اپ با خودت)."
+        "fa": "بذار جمع یه ایموجی انتخاب کنه که بذاری استوریت (اپش با خودت)."
       }
     },
     {
@@ -380,6 +380,727 @@
       "text": {
         "en": "Send a single heart emoji to the last person you texted and show the group their reply.",
         "fa": "به آخرین نفری که بهش پیام دادی یه ایموجی قلب بفرست و جوابشو به جمع نشون بده."
+      }
+    },
+    {
+      "id": "dare-x001",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Do 10 push-ups right now.",
+        "fa": "همین الان ۱۰ تا شنا برو."
+      }
+    },
+    {
+      "id": "dare-x002",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Talk in a robot voice until your next turn.",
+        "fa": "تا نوبت بعدیت با صدای ربات حرف بزن."
+      }
+    },
+    {
+      "id": "dare-x003",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Do your best impression of a chicken for 20 seconds.",
+        "fa": "۲۰ ثانیه بهترین ادای مرغ رو دربیار."
+      }
+    },
+    {
+      "id": "dare-x004",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Sing the chorus of any song out loud.",
+        "fa": "کُرِ یه آهنگ دلخواه رو بلندبلند بخون."
+      }
+    },
+    {
+      "id": "dare-x005",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Balance a spoon on your nose for 10 seconds.",
+        "fa": "۱۰ ثانیه یه قاشق رو روی دماغت نگه دار."
+      }
+    },
+    {
+      "id": "dare-x006",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Do 15 jumping jacks.",
+        "fa": "۱۵ تا پروانه بزن."
+      }
+    },
+    {
+      "id": "dare-x007",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Pretend to be a news anchor and report what's happening in the room.",
+        "fa": "ادای گزارشگر خبر رو دربیار و اتفاقای اتاق رو گزارش کن."
+      }
+    },
+    {
+      "id": "dare-x008",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Hop on one foot around the room once.",
+        "fa": "یه دور لِی‌لِی‌کنان دور اتاق بچرخ."
+      }
+    },
+    {
+      "id": "dare-x009",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Do your best slow-motion walk across the room.",
+        "fa": "با حالت اسلوموشن از این سر اتاق تا اون سر برو."
+      }
+    },
+    {
+      "id": "dare-x010",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Speak in an exaggerated accent until your next turn.",
+        "fa": "تا نوبت بعدیت با یه لهجهٔ اغراق‌آمیز حرف بزن."
+      }
+    },
+    {
+      "id": "dare-x011",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Try to lick your elbow for 10 seconds.",
+        "fa": "۱۰ ثانیه سعی کن آرنجتو لیس بزنی."
+      }
+    },
+    {
+      "id": "dare-x012",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Do an impression of a famous cartoon character.",
+        "fa": "ادای یه شخصیت کارتونی معروف رو دربیار."
+      }
+    },
+    {
+      "id": "dare-x013",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Wear your shirt backwards until your next turn.",
+        "fa": "تا نوبت بعدیت لباستو برعکس بپوش."
+      }
+    },
+    {
+      "id": "dare-x014",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Do a dramatic reading of the last text message you sent.",
+        "fa": "آخرین پیامی که فرستادی رو با حالت نمایشی بخون."
+      }
+    },
+    {
+      "id": "dare-x015",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Pretend the floor is lava and cross the room without touching it.",
+        "fa": "وانمود کن کف اتاق گدازه‌ست و بدون اینکه دست بزنی بهش از اتاق رد شو."
+      }
+    },
+    {
+      "id": "dare-x016",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Make up a 10-second jingle about pizza.",
+        "fa": "یه آهنگ تبلیغاتی ۱۰ ثانیه‌ای دربارهٔ پیتزا بساز و بخون."
+      }
+    },
+    {
+      "id": "dare-x017",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Do your best evil villain laugh.",
+        "fa": "بهترین خندهٔ شرورانه‌تو تحویل بده."
+      }
+    },
+    {
+      "id": "dare-x018",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Hold a plank for 30 seconds.",
+        "fa": "۳۰ ثانیه پلانک بگیر."
+      }
+    },
+    {
+      "id": "dare-x019",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Speak in rhymes for the next two rounds.",
+        "fa": "دو دور بعدی قافیه‌دار حرف بزن."
+      }
+    },
+    {
+      "id": "dare-x020",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Do a dance move and name it after yourself.",
+        "fa": "یه حرکت رقص اجرا کن و اسمتو روش بذار."
+      }
+    },
+    {
+      "id": "dare-x021",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Act out brushing your teeth in slow motion.",
+        "fa": "مسواک زدنو با حالت اسلوموشن بازی کن."
+      }
+    },
+    {
+      "id": "dare-x022",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Let the group pick a new nickname for you for the rest of the game.",
+        "fa": "بذار جمع تا آخر بازی یه لقب جدید برات انتخاب کنه."
+      },
+      "minPlayers": 3
+    },
+    {
+      "id": "dare-x023",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Let the group post a status on your behalf.",
+        "fa": "بذار جمع به جای تو یه استوری بذاره."
+      },
+      "minPlayers": 3
+    },
+    {
+      "id": "dare-x024",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Call a friend and sing them happy birthday even though it isn't.",
+        "fa": "به یه دوست زنگ بزن و براش تولدت‌مبارک بخون، با اینکه تولدش نیست."
+      }
+    },
+    {
+      "id": "dare-x025",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Let the person to your right draw on your hand with a pen.",
+        "fa": "بذار نفر سمت راستت با خودکار روی دستت نقاشی بکشه."
+      },
+      "minPlayers": 3
+    },
+    {
+      "id": "dare-x026",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Do an impression of someone in the room and let others guess.",
+        "fa": "ادای یکی از آدمای جمع رو دربیار تا بقیه حدس بزنن."
+      },
+      "minPlayers": 3
+    },
+    {
+      "id": "dare-x027",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Let the group choose an embarrassing photo from your phone to show.",
+        "fa": "بذار جمع یه عکس خجالت‌آور از گوشیت انتخاب کنه که نشون بدی."
+      },
+      "minPlayers": 3
+    },
+    {
+      "id": "dare-x028",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Speak only in a whisper until your next turn.",
+        "fa": "تا نوبت بعدیت فقط در گوشی و آروم حرف بزن."
+      }
+    },
+    {
+      "id": "dare-x029",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Let someone tickle you for 10 seconds without laughing.",
+        "fa": "بذار یه نفر ۱۰ ثانیه قلقلکت بده بدون اینکه بخندی."
+      }
+    },
+    {
+      "id": "dare-x030",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Text the third person in your contacts a single mysterious emoji.",
+        "fa": "به سومین نفر توی مخاطبینت یه ایموجی مرموز بفرست."
+      }
+    },
+    {
+      "id": "dare-x031",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Do your best catwalk runway strut across the room.",
+        "fa": "بهترین راه‌رفتن مدلینگ روی صحنه رو از این سر اتاق تا اون سر اجرا کن."
+      }
+    },
+    {
+      "id": "dare-x032",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Let the group give you a 30-second makeover with whatever is nearby.",
+        "fa": "بذار جمع با هر چی دم دسته ۳۰ ثانیه قیافه‌تو عوض کنه."
+      },
+      "minPlayers": 3
+    },
+    {
+      "id": "dare-x033",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Eat a spoonful of a condiment chosen by the group.",
+        "fa": "یه قاشق از یه سُسی که جمع انتخاب می‌کنه بخور."
+      },
+      "minPlayers": 3
+    },
+    {
+      "id": "dare-x034",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Do an interpretive dance to a song someone hums.",
+        "fa": "با آهنگی که یکی زمزمه می‌کنه یه رقص نمایشی اجرا کن."
+      }
+    },
+    {
+      "id": "dare-x035",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Wear a piece of clothing belonging to the person on your left.",
+        "fa": "یکی از لباسای نفر سمت چپتو بپوش."
+      },
+      "minPlayers": 3
+    },
+    {
+      "id": "dare-x036",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Let the group quiz you with three questions and answer all honestly.",
+        "fa": "بذار جمع سه تا سؤال ازت بپرسه و همه رو صادقانه جواب بده."
+      },
+      "minPlayers": 3
+    },
+    {
+      "id": "dare-x037",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Do your best impression of how you look when you wake up.",
+        "fa": "بهترین ادای قیافه‌تو موقع بیدار شدن از خواب دربیار."
+      }
+    },
+    {
+      "id": "dare-x038",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Talk in baby talk for the next two rounds.",
+        "fa": "دو دور بعدی مثل بچه‌ها با زبون نی‌نی حرف بزن."
+      }
+    },
+    {
+      "id": "dare-x039",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Let the player across from you redo your hairstyle.",
+        "fa": "بذار نفر روبه‌روت مدل موهاتو عوض کنه."
+      }
+    },
+    {
+      "id": "dare-x040",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Send a heartfelt compliment text to the last person you messaged.",
+        "fa": "به آخرین کسی که بهش پیام دادی یه تعریف از ته دل بفرست."
+      }
+    },
+    {
+      "id": "dare-x041",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Act out a dramatic breakup scene with an imaginary partner.",
+        "fa": "یه صحنهٔ جدایی دراماتیک با یه طرفِ خیالی بازی کن."
+      }
+    },
+    {
+      "id": "dare-x042",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Do your most convincing fake cry for 15 seconds.",
+        "fa": "۱۵ ثانیه قانع‌کننده‌ترین گریهٔ الکیتو دربیار."
+      }
+    },
+    {
+      "id": "dare-x043",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Let the group reenact your most recent awkward moment.",
+        "fa": "بذار جمع آخرین لحظهٔ خجالت‌آورتو دوباره بازی کنه."
+      },
+      "minPlayers": 3
+    },
+    {
+      "id": "dare-x044",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Whisper a cheesy pickup line to the person on your right.",
+        "fa": "یه تیکهٔ لوس مخ‌زنی دم گوش نفر سمت راستت زمزمه کن."
+      }
+    },
+    {
+      "id": "dare-x045",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Let the group read your most recent search history aloud.",
+        "fa": "بذار جمع آخرین چیزایی که سرچ کردی رو بلندبلند بخونه."
+      },
+      "minPlayers": 3
+    },
+    {
+      "id": "dare-x046",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Slow dance with a chair as if it's your dream date.",
+        "fa": "با یه صندلی جوری آهسته برقص که انگار قرار رؤیاییته."
+      }
+    },
+    {
+      "id": "dare-x047",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Confess your most embarrassing crush story to the group.",
+        "fa": "خجالت‌آورترین ماجرای دلباختگیتو برای جمع تعریف کن."
+      },
+      "minPlayers": 3
+    },
+    {
+      "id": "dare-x048",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Let the player to your left send one message from your phone to anyone.",
+        "fa": "بذار نفر سمت چپت از گوشیت به هرکی خواست یه پیام بفرسته."
+      },
+      "minPlayers": 3
+    },
+    {
+      "id": "dare-x049",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Give a dramatic love-poem reading to a random object in the room.",
+        "fa": "برای یه چیز اتفاقی توی اتاق یه شعر عاشقانهٔ دراماتیک بخون."
+      }
+    },
+    {
+      "id": "dare-x050",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Reenact a romantic movie scene with a pillow as your co-star.",
+        "fa": "یه صحنهٔ عاشقانهٔ فیلم رو با یه بالش به‌عنوان همبازیت بازی کن."
+      }
+    },
+    {
+      "id": "dare-x051",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Let the group decide a silly rule you must follow for 10 minutes.",
+        "fa": "بذار جمع یه قانون مسخره تعیین کنه که ۱۰ دقیقه باید رعایتش کنی."
+      },
+      "minPlayers": 3
+    },
+    {
+      "id": "dare-x052",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Strike and hold a superhero pose for one full minute.",
+        "fa": "یه ژست ابرقهرمانی بگیر و یه دقیقهٔ تمام نگهش دار."
+      }
+    },
+    {
+      "id": "dare-x053",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Pretend to be a tour guide and describe the room to the group.",
+        "fa": "ادای راهنمای تور رو دربیار و اتاق رو برای جمع توصیف کن."
+      }
+    },
+    {
+      "id": "dare-x054",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Let the group serenade you and react as if it's the most romantic moment ever.",
+        "fa": "بذار جمع برات آواز عاشقانه بخونه و جوری واکنش نشون بده که انگار رمانتیک‌ترین لحظهٔ عمرته."
+      },
+      "minPlayers": 3
+    },
+    {
+      "id": "dare-ext-001",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Give the player to your right a 15-second lap dance.",
+        "fa": "به بازیکن سمت راستت یه رقص ۱۵ ثانیه‌ای روی پا هدیه بده."
+      }
+    },
+    {
+      "id": "dare-ext-002",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Take off one item of clothing and leave it off until your next turn.",
+        "fa": "یه تیکه از لباساتو دربیار و تا نوبت بعدی همون‌طوری بمون."
+      }
+    },
+    {
+      "id": "dare-ext-003",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Let the group choose two players to swap one item of clothing.",
+        "fa": "بذار جمع دو نفرو انتخاب کنه که یه تیکه لباس با هم عوض کنن."
+      },
+      "minPlayers": 3
+    },
+    {
+      "id": "dare-ext-004",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Sit on the lap of the player across from you until your next turn.",
+        "fa": "تا نوبت بعدی روی پای بازیکن روبه‌روت بشین."
+      },
+      "minPlayers": 3
+    },
+    {
+      "id": "dare-ext-005",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Demonstrate your three best kissing techniques on the back of your hand.",
+        "fa": "سه تا از بهترین تکنیکای بوسیدنتو روی پشت دستت نشون بده."
+      }
+    },
+    {
+      "id": "dare-ext-006",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Let the player to your left draw whatever they want on your arm.",
+        "fa": "بذار بازیکن سمت چپت هرچی می‌خواد روی بازوت نقاشی بکشه."
+      }
+    },
+    {
+      "id": "dare-ext-007",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Whisper your most scandalous secret to the player on your right.",
+        "fa": "جنجالی‌ترین رازتو دم گوش بازیکن سمت راستت زمزمه کن."
+      }
+    },
+    {
+      "id": "dare-ext-008",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Do your most seductive slow walk across the room.",
+        "fa": "اغواکننده‌ترین راه‌رفتن آهسته‌تو این سر تا اون سر اتاق اجرا کن."
+      }
+    },
+    {
+      "id": "dare-ext-009",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Re-enact a passionate movie love scene using a pillow as your partner.",
+        "fa": "یه صحنهٔ عاشقانهٔ پرشور فیلم رو با یه بالش به‌جای پارتنر بازی کن."
+      }
+    },
+    {
+      "id": "dare-ext-010",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Let the group pick someone for you to give a 10-second shoulder massage.",
+        "fa": "بذار جمع یکی رو انتخاب کنه که ۱۰ ثانیه شونه‌هاشو ماساژ بدی."
+      },
+      "minPlayers": 3
+    },
+    {
+      "id": "dare-ext-011",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Send a flirty message to the last person you texted.",
+        "fa": "به آخرین کسی که بهش پیام دادی یه پیام عاشقانه بفرست."
+      }
+    },
+    {
+      "id": "dare-ext-012",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Stare into the eyes of the player across from you for 30 seconds without laughing.",
+        "fa": "۳۰ ثانیه بدون خندیدن تو چشمای بازیکن روبه‌روت خیره شو."
+      }
+    },
+    {
+      "id": "dare-ext-013",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Give your best impression of how you act when you are flirting.",
+        "fa": "بهترین ادای حالتتو موقع لاس‌زدن دربیار."
+      }
+    },
+    {
+      "id": "dare-ext-014",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Trade one item of clothing with the player to your left for two rounds.",
+        "fa": "یه تیکه لباستو دو دور با بازیکن سمت چپت عوض کن."
+      }
+    },
+    {
+      "id": "dare-ext-015",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Let the group write a flirty caption and post it as your status.",
+        "fa": "بذار جمع یه کپشن عاشقانه بنویسه و به‌عنوان استوریت بذاره."
+      }
+    },
+    {
+      "id": "dare-ext-016",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Slow-dance with a chair as if it is the love of your life for 20 seconds.",
+        "fa": "۲۰ ثانیه با یه صندلی جوری آهسته برقص که انگار عشق زندگیته."
+      }
+    },
+    {
+      "id": "dare-ext-017",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Give the most dramatic fake moan you can, then keep a straight face.",
+        "fa": "نمایشی‌ترین آه و نالهٔ ساختگیتو دربیار و بعد جدی بمون."
+      }
+    },
+    {
+      "id": "dare-ext-018",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Let someone blindfold you and feed you a mystery snack.",
+        "fa": "بذار یه نفر چشمتو ببنده و یه خوراکی مرموز بهت بده."
+      }
+    },
+    {
+      "id": "dare-ext-019",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Confess which player here you would pick for seven minutes in heaven, and why.",
+        "fa": "اعتراف کن کدوم بازیکن این جمع رو برای هفت دقیقه تو بهشت انتخاب می‌کنی و چرا."
+      },
+      "minPlayers": 3
+    },
+    {
+      "id": "dare-ext-020",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Do a catwalk across the room in your most confident runway pose.",
+        "fa": "با پراعتمادبه‌نفس‌ترین ژست مدلینگت این سر تا اون سر اتاق راه برو."
+      }
+    },
+    {
+      "id": "dare-ext-021",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Let the player with the next birthday give you a piggyback ride across the room.",
+        "fa": "بذار بازیکنی که تولدش نزدیک‌تره کولت کنه و تو اتاق ببرتت."
+      }
+    },
+    {
+      "id": "dare-ext-022",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Act out your idea of the perfect first date — alone, in mime.",
+        "fa": "تصورتو از یه قرار اولِ بی‌نقص، تنهایی و بی‌کلام اجرا کن."
+      }
+    },
+    {
+      "id": "dare-ext-023",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Pick a player and pay them three over-the-top romantic compliments.",
+        "fa": "یه بازیکن رو انتخاب کن و سه تا تعریف عاشقانهٔ اغراق‌آمیز بهش بکن."
+      }
+    },
+    {
+      "id": "dare-ext-024",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Let the group dare you to text one bold emoji to your crush.",
+        "fa": "بذار جمع جرئتت بده یه ایموجی جسورانه برای کراشت بفرستی."
       }
     }
   ]

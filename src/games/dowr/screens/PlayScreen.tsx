@@ -1,212 +1,177 @@
 import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
 import type { GameScreenProps } from '../../../sdk/types';
-import { Screen, AppBar, Button, Curtain, TimerRing, TeamBadge, Scoreboard } from '../../../sdk/ui';
-import type { ScoreRow } from '../../../sdk/ui';
-import * as timerEngine from '../../../engine/timer';
+import { Screen, AppBar, Button, TimerRing } from '../../../sdk/ui';
+import { reveal as revealVariant } from '../../../sdk/motion';
 import { CARD_BY_ID } from '../content';
-import {
-  currentRound,
-  describerPlayerId,
-  isLastTurn,
-  selectStandings,
-} from '../logic';
+import { currentTeam, describerName, guesserName, currentRound } from '../logic';
 import type { DowrAction, DowrState } from '../logic';
+
+/** Tidy mm:ss / Ns total. */
+const fmtTotal = (ms: number): string => {
+  const s = Math.max(0, Math.round(ms / 1000));
+  const m = Math.floor(s / 60);
+  const r = s % 60;
+  return m > 0 ? `${m}:${String(r).padStart(2, '0')}` : `${r}s`;
+};
 
 export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<DowrState, DowrAction>) {
   const { t } = useTranslation();
   const s = state;
-  const [now, setNow] = useState(() => ctx.clock.now());
-  const [gateOpen, setGateOpen] = useState(false);
   const dispatchRef = useRef(dispatch);
   dispatchRef.current = dispatch;
+  const clock = ctx.clock;
 
-  // Pump the clock while describing; the reducer auto-finalizes on expiry.
+  // Live timing lives here, not in reducer state: the current word's segment is measured against
+  // the wall clock from the moment the word appeared. This keeps the match resume-safe.
+  // Wall-clock mark for when the current word began. Source of truth for timing; only touched
+  // in handlers/callbacks. `segMs` (state) mirrors it for rendering so render never reads the ref.
+  const segStartRef = useRef(clock.now());
+  const [segMs, setSegMs] = useState(0);
+
+  // The always-running clock: pump elapsed and auto-detonate the bomb when the fuse is spent.
   useEffect(() => {
-    if (s.phase !== 'describing') return;
-    const stop = ctx.clock.interval(250, (n) => {
-      setNow(n);
-      dispatchRef.current({ type: 'TICK', now: n });
+    if (s.phase !== 'playing') return;
+    const stop = clock.interval(120, (n) => {
+      const e = Math.max(0, n - segStartRef.current);
+      setSegMs(e);
+      if (e >= s.fuseMs) {
+        segStartRef.current = n; // re-anchor first so the next tick doesn't double-fire
+        setSegMs(0);
+        ctx.sound.play('lose');
+        ctx.haptics.error();
+        dispatchRef.current({ type: 'ADVANCE', reason: 'bomb', segmentMs: s.fuseMs, seed: ctx.random.seed() });
+      }
     });
     return stop;
-  }, [s.phase, ctx]);
+  }, [s.phase, s.turnNo, s.fuseMs, clock, ctx]);
 
-  // Re-lock the curtain whenever a new reveal begins.
+  // Clear the bomb flash shortly after it fires.
   useEffect(() => {
-    if (s.phase === 'reveal') setGateOpen(false);
-  }, [s.phase, s.turn.index, s.turn.round]);
-
-  const seat = s.turn.index;
-  const describerId = describerPlayerId(s);
-  const describerName = s.playerNames[describerId] ?? '';
-  const scorerId = s.seatToScorer[seat];
-  const partnerId =
-    s.options.mode === 'teams'
-      ? s.playerIds.find((_id, i) => i !== seat && s.seatToScorer[i] === scorerId)
-      : undefined;
-  const partnerName = partnerId ? s.playerNames[partnerId] : undefined;
-
-  const card = s.currentCardId ? CARD_BY_ID[s.currentCardId] : undefined;
-  const word = card ? ctx.localize(card.word) : '';
-  const remainingSec = timerEngine.remainingMs(s.clock, now) / 1000;
-
-  const rows: ScoreRow[] = selectStandings(s).map((st) => ({
-    id: st.subjectId,
-    label: s.scorerLabels[st.subjectId] ?? st.subjectId,
-    score: st.total,
-    rank: st.rank,
-    color: s.scorerColors[st.subjectId],
-  }));
+    if (!s.flash) return;
+    const stop = clock.interval(450, () => dispatchRef.current({ type: 'CLEAR_FLASH' }));
+    return stop;
+  }, [s.flash, clock]);
 
   if (s.phase === 'error') {
     return (
       <Screen>
         <AppBar title={t('dowr.title')} onBack={() => nav.exit()} />
         <div className="grid flex-1 place-items-center gap-4 text-center">
-          <p className="text-[var(--text-muted)]">{t('dowr.outOfWords')}</p>
+          <p className="text-[var(--text-muted)]">{t('dowr.poolHint', { count: 0 })}</p>
           <Button onClick={() => nav.playAgain()}>{t('dowr.playAgain')}</Button>
         </div>
       </Screen>
     );
   }
 
-  if (s.phase === 'roundIntro') {
-    return (
-      <Screen>
-        <AppBar onBack={() => nav.exit()} />
-        <div className="grid flex-1 place-items-center gap-4 text-center">
-          <p className="text-sm font-semibold text-[var(--text-muted)]">
-            {t('dowr.roundOf', { round: currentRound(s), total: s.options.rounds })}
-          </p>
-          <p className="text-lg text-[var(--text-muted)]">{t('dowr.passTo', { name: '' })}</p>
-          <h1 className="text-4xl font-extrabold text-[var(--game-accent-strong)]">{describerName}</h1>
-          {partnerName && <TeamBadge label={t('dowr.partner', { name: partnerName })} />}
-          <Button
-            size="lg"
-            onClick={() => {
-              ctx.sound.play('tap');
-              dispatch({ type: 'BEGIN_TURN' });
-            }}
-          >
-            {t('dowr.ready')}
-          </Button>
-        </div>
-      </Screen>
-    );
-  }
+  const team = currentTeam(s);
+  const card = s.currentCardId ? CARD_BY_ID[s.currentCardId] : undefined;
+  const word = card ? ctx.localize(card.word) : '';
+  const fuseSec = s.fuseMs / 1000;
+  const remainSec = Math.max(0, (s.fuseMs - segMs) / 1000);
+  const changeCost = s.options.changePenaltySeconds;
+  const liveTotal = (id: string) =>
+    id === team.id ? (s.totals[id] ?? 0) + s.changePenaltyMs + segMs : s.totals[id] ?? 0;
 
-  if (s.phase === 'reveal') {
-    return (
-      <Screen>
-        <AppBar onBack={() => nav.exit()} />
-        <Curtain
-          open={gateOpen}
-          holderName={describerName}
-          hint={t('dowr.revealHint', { name: describerName })}
-          revealLabel={t('dowr.reveal')}
-          onReveal={() => {
-            ctx.sound.play('reveal');
-            dispatch({ type: 'REVEAL' });
-            setGateOpen(true);
-          }}
-        >
-          <div className="grid flex-1 place-items-center gap-6 text-center">
-            <h1 className="text-5xl font-extrabold">{word}</h1>
-            {card?.hints?.taboo && card.hints.taboo.length > 0 && (
-              <div className="text-[var(--text-muted)]">
-                <p className="text-sm">{t('dowr.dontSay')}</p>
-                <p>{card.hints.taboo.map((x) => ctx.localize(x)).join('، ')}</p>
-              </div>
-            )}
-            <Button
-              size="lg"
-              onClick={() => dispatch({ type: 'START_DESCRIBE', now: ctx.clock.now() })}
-            >
-              {t('dowr.startDescribing')}
-            </Button>
-          </div>
-        </Curtain>
-      </Screen>
-    );
-  }
+  const gotIt = () => {
+    const n = clock.now();
+    const segmentMs = Math.min(Math.max(0, n - segStartRef.current), s.fuseMs);
+    segStartRef.current = n; // anchor the next team's segment to this instant
+    setSegMs(0);
+    ctx.sound.play('correct');
+    ctx.haptics.success();
+    dispatch({ type: 'ADVANCE', reason: 'guessed', segmentMs, seed: ctx.random.seed() });
+  };
+  const changeWord = () => {
+    ctx.sound.play('pass');
+    ctx.haptics.warning();
+    dispatch({ type: 'CHANGE_WORD', seed: ctx.random.seed() });
+  };
 
-  if (s.phase === 'describing') {
-    return (
-      <Screen>
-        <div className="flex flex-col items-center gap-6 py-4">
-          <TimerRing totalSeconds={s.options.timerSeconds} remainingSeconds={remainingSec} />
-          <h1 className="text-center text-5xl font-extrabold">{word}</h1>
-          <p className="text-sm text-[var(--text-muted)]">
-            {t('dowr.tally', { correct: s.turnCorrect, skipped: s.turnSkipped })}
-          </p>
-          <div className="grid w-full grid-cols-2 gap-3">
-            <Button
-              size="lg"
-              onClick={() => {
-                ctx.sound.play('correct');
-                ctx.haptics.success();
-                dispatch({ type: 'CORRECT' });
-              }}
-            >
-              ✓ {t('dowr.correct')}
-            </Button>
-            <Button
-              size="lg"
-              variant="secondary"
-              onClick={() => {
-                ctx.sound.play('pass');
-                ctx.haptics.warning();
-                dispatch({ type: 'SKIP' });
-              }}
-            >
-              ↷ {t('dowr.skip')}
-              {s.options.skipPenalty ? ' (−1)' : ''}
-            </Button>
-          </div>
-          <Button
-            variant="ghost"
-            onClick={() => dispatch({ type: 'END_TURN_EARLY', now: ctx.clock.now() })}
-          >
-            {t('dowr.endTurn')}
-          </Button>
-        </div>
-      </Screen>
-    );
-  }
-
-  // turnSummary
-  const last = s.history.at(-1);
-  const reasonKey =
-    s.lastTurnEndReason === 'timeExpired'
-      ? 'dowr.timeUp'
-      : s.lastTurnEndReason === 'deckExhausted'
-        ? 'dowr.outOfWords'
-        : 'dowr.endedEarly';
   return (
     <Screen>
       <AppBar onBack={() => nav.exit()} />
-      <div className="flex flex-col gap-4 py-4">
-        <div className="text-center">
-          <h2 className="text-2xl font-bold">{describerName}</h2>
-          <p className="text-[var(--text-muted)]">{t(reasonKey)}</p>
-          <p className="mt-2 text-3xl font-extrabold text-[var(--game-accent-strong)]">
-            {last ? (last.delta >= 0 ? `+${last.delta}` : last.delta) : '+0'}
-          </p>
-          <p className="text-sm text-[var(--text-muted)]">
-            {t('dowr.tally', { correct: last?.correct ?? 0, skipped: last?.skipped ?? 0 })}
-          </p>
+      <div className="relative flex flex-1 flex-col gap-3 py-1">
+        {/* Bomb flash */}
+        {s.flash === 'bomb' && (
+          <div className="pointer-events-none absolute inset-0 -z-0 bg-[var(--color-game-rose-strong)] opacity-30" />
+        )}
+
+        {/* Always-visible standings strip — whose turn + every team's running total. */}
+        <div className="z-10 flex flex-wrap justify-center gap-1.5">
+          {s.teams.map((tm) => {
+            const active = tm.id === team.id;
+            return (
+              <span
+                key={tm.id}
+                className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-semibold ${
+                  active
+                    ? 'bg-[var(--game-accent-strong)] text-[var(--game-on-accent)]'
+                    : 'bg-[var(--surface-2)] text-[var(--text-muted)]'
+                }`}
+              >
+                <span
+                  className="h-2 w-2 rounded-full"
+                  style={{ background: `var(--color-game-${tm.color})` }}
+                />
+                {tm.name}
+                <span className="tabular-nums">{fmtTotal(liveTotal(tm.id))}</span>
+              </span>
+            );
+          })}
         </div>
-        <Scoreboard rows={rows} />
-        <Button
-          size="lg"
-          fullWidth
-          onClick={() => {
-            ctx.sound.play('tap');
-            dispatch({ type: 'NEXT_TURN', seed: ctx.random.seed() });
-          }}
-        >
-          {isLastTurn(s) ? t('dowr.seeResults') : t('dowr.nextPlayer')}
-        </Button>
+
+        {/* Whose turn — always visible */}
+        <p className="z-10 text-center text-base font-bold dp-accent">
+          {t('dowr.describerIs', { name: describerName(s) })}
+        </p>
+        <p className="z-10 -mt-2 text-center text-xs text-[var(--text-muted)]">
+          {t('dowr.guesserIs', { name: guesserName(s) })} ·{' '}
+          {t('dowr.roundOf', { round: currentRound(s), total: s.options.rounds })}
+        </p>
+
+        {/* Bomb + word */}
+        <div className="z-10 flex flex-1 flex-col items-center justify-center gap-5 text-center">
+          {s.options.surpriseBomb ? (
+            <motion.div
+              animate={{ scale: [1, 1.14, 1], rotate: [0, -7, 7, 0] }}
+              transition={{ duration: 1, repeat: Infinity, ease: 'easeInOut' }}
+              className="text-5xl"
+              aria-hidden
+            >
+              💣
+            </motion.div>
+          ) : (
+            <TimerRing totalSeconds={fuseSec} remainingSeconds={remainSec} />
+          )}
+
+          <motion.h1
+            key={s.currentCardId}
+            variants={revealVariant}
+            initial="initial"
+            animate="animate"
+            className="text-6xl font-black leading-tight"
+          >
+            {word}
+          </motion.h1>
+          {card?.hints?.taboo && card.hints.taboo.length > 0 && (
+            <p className="text-sm text-[var(--text-muted)]">
+              {t('dowr.dontSay')}: {card.hints.taboo.map((x) => ctx.localize(x)).join('، ')}
+            </p>
+          )}
+        </div>
+
+        {/* Controls */}
+        <div className="z-10 flex w-full flex-col gap-2">
+          <Button size="lg" fullWidth onClick={gotIt}>
+            ✓ {t('dowr.gotIt')}
+          </Button>
+          <Button variant="secondary" fullWidth onClick={changeWord}>
+            ↻ {changeCost > 0 ? t('dowr.changeWordCost', { n: changeCost }) : t('dowr.changeWord')}
+          </Button>
+        </div>
       </div>
     </Screen>
   );

@@ -304,5 +304,230 @@
     },
     "category": "places",
     "difficulty": "hard"
+  },
+  {
+    "id": "places-x001",
+    "word": {
+      "en": "Library",
+      "fa": "کتابخانه"
+    },
+    "category": "places",
+    "difficulty": "easy"
+  },
+  {
+    "id": "places-x002",
+    "word": {
+      "en": "Supermarket",
+      "fa": "سوپرمارکت"
+    },
+    "category": "places",
+    "difficulty": "easy"
+  },
+  {
+    "id": "places-x003",
+    "word": {
+      "en": "Café",
+      "fa": "کافه"
+    },
+    "category": "places",
+    "difficulty": "easy"
+  },
+  {
+    "id": "places-x004",
+    "word": {
+      "en": "Train Station",
+      "fa": "ایستگاه قطار"
+    },
+    "category": "places",
+    "difficulty": "med"
+  },
+  {
+    "id": "places-x005",
+    "word": {
+      "en": "Amusement Park",
+      "fa": "شهربازی"
+    },
+    "category": "places",
+    "difficulty": "med"
+  },
+  {
+    "id": "places-x006",
+    "word": {
+      "en": "Aquarium",
+      "fa": "آکواریوم"
+    },
+    "category": "places",
+    "difficulty": "med"
+  },
+  {
+    "id": "places-x007",
+    "word": {
+      "en": "Bookstore",
+      "fa": "کتاب‌فروشی"
+    },
+    "category": "places",
+    "difficulty": "med"
+  },
+  {
+    "id": "places-x008",
+    "word": {
+      "en": "Fire Station",
+      "fa": "ایستگاه آتش‌نشانی"
+    },
+    "category": "places",
+    "difficulty": "med"
+  },
+  {
+    "id": "places-x009",
+    "word": {
+      "en": "Theater",
+      "fa": "تئاتر"
+    },
+    "category": "places",
+    "difficulty": "med"
+  },
+  {
+    "id": "places-x010",
+    "word": {
+      "en": "Art Gallery",
+      "fa": "گالری هنری"
+    },
+    "category": "places",
+    "difficulty": "med"
+  },
+  {
+    "id": "places-x011",
+    "word": {
+      "en": "Castle",
+      "fa": "قلعه"
+    },
+    "category": "places",
+    "difficulty": "med"
+  },
+  {
+    "id": "places-x012",
+    "word": {
+      "en": "Vineyard",
+      "fa": "تاکستان"
+    },
+    "category": "places",
+    "difficulty": "med"
+  },
+  {
+    "id": "places-x013",
+    "word": {
+      "en": "Laundromat",
+      "fa": "خشک‌شویی"
+    },
+    "category": "places",
+    "difficulty": "med"
+  },
+  {
+    "id": "places-x014",
+    "word": {
+      "en": "Harbor",
+      "fa": "بندرگاه"
+    },
+    "category": "places",
+    "difficulty": "med"
+  },
+  {
+    "id": "places-x015",
+    "word": {
+      "en": "Campsite",
+      "fa": "اردوگاه"
+    },
+    "category": "places",
+    "difficulty": "med"
+  },
+  {
+    "id": "places-x016",
+    "word": {
+      "en": "Waterfall",
+      "fa": "آبشار"
+    },
+    "category": "places",
+    "difficulty": "med"
+  },
+  {
+    "id": "places-x017",
+    "word": {
+      "en": "Pyramid",
+      "fa": "اهرام"
+    },
+    "category": "places",
+    "difficulty": "hard"
+  },
+  {
+    "id": "places-x018",
+    "word": {
+      "en": "Glacier",
+      "fa": "یخچال طبیعی"
+    },
+    "category": "places",
+    "difficulty": "hard"
+  },
+  {
+    "id": "places-x019",
+    "word": {
+      "en": "Volcano",
+      "fa": "آتشفشان"
+    },
+    "category": "places",
+    "difficulty": "hard"
+  },
+  {
+    "id": "places-x020",
+    "word": {
+      "en": "Monastery",
+      "fa": "صومعه"
+    },
+    "category": "places",
+    "difficulty": "hard"
+  },
+  {
+    "id": "places-x021",
+    "word": {
+      "en": "Catacombs",
+      "fa": "دخمه"
+    },
+    "category": "places",
+    "difficulty": "hard"
+  },
+  {
+    "id": "places-x022",
+    "word": {
+      "en": "Planetarium",
+      "fa": "آسمان‌نما"
+    },
+    "category": "places",
+    "difficulty": "hard"
+  },
+  {
+    "id": "places-x023",
+    "word": {
+      "en": "Coral Reef",
+      "fa": "صخره مرجانی"
+    },
+    "category": "places",
+    "difficulty": "hard"
+  },
+  {
+    "id": "places-x024",
+    "word": {
+      "en": "Oasis",
+      "fa": "واحه"
+    },
+    "category": "places",
+    "difficulty": "hard"
+  },
+  {
+    "id": "places-x025",
+    "word": {
+      "en": "Amphitheater",
+      "fa": "آمفی‌تئاتر"
+    },
+    "category": "places",
+    "difficulty": "hard"
   }
 ]

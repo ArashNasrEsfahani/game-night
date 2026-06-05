@@ -170,4 +170,163 @@ export function gameEmblem(gameId: string): string | undefined {
   return EMBLEMS[EMBLEM_ALIASES[gameId] ?? gameId];
 }
 
-export { EMBLEMS };
+/* ═══════════════════  PERSIAN DECORATIVE VOCABULARY  ═══════════════════
+   Faravahar, Persepolis lotus, tulip, tar, dome, crown, nightingale, gereh,
+   plus the Lion & Sun and an authentic boteh jegheh. accent (currentColor) + gold. */
+const STEEL = '#dbe2f2'; void STEEL;
+
+// scalloped ring (a mane / flower of n rounded bumps)
+function scallopRing(cx: number, cy: number, r: number, n: number): string {
+  let d = '';
+  for (let i = 0; i < n; i++) {
+    const a0 = (i / n) * Math.PI * 2,
+      a1 = ((i + 1) / n) * Math.PI * 2,
+      am = (a0 + a1) / 2;
+    const [x0, y0] = onCircle(cx, cy, r * 0.74, a0);
+    const [xc, yc] = onCircle(cx, cy, r * 1.2, am);
+    const [x1, y1] = onCircle(cx, cy, r * 0.74, a1);
+    d += (i === 0 ? `M${x0.toFixed(1)} ${y0.toFixed(1)} ` : '') + `Q${xc.toFixed(1)} ${yc.toFixed(1)} ${x1.toFixed(1)} ${y1.toFixed(1)} `;
+  }
+  return d + 'Z';
+}
+
+const BOTEH = `<svg viewBox="0 0 100 124" fill="none">
+  <path d="M50 120 C20 113 8 86 16 60 C22 39 38 22 60 20 C82 18 95 33 90 53 C86 68 73 73 63 66 C55 60 56 50 63 47 C50 43 39 57 41 75 C43 96 47 110 50 120 Z" fill="currentColor"/>
+  <path d="M50 120 C20 113 8 86 16 60 C22 39 38 22 60 20 C82 18 95 33 90 53 C86 68 73 73 63 66 C55 60 56 50 63 47 C50 43 39 57 41 75 C43 96 47 110 50 120 Z" fill="none" stroke="${GOLD}" stroke-width="2.4" stroke-linejoin="round"/>
+  <path d="M50 110 C27 104 18 84 24 63 C29 46 42 33 59 31 C76 29 85 41 81 55 C78 65 69 68 62 63" fill="none" stroke="${GOLD}" stroke-width="1.5" opacity=".75"/>
+  <g fill="${GOLD_LT}"><circle cx="48" cy="72" r="4.4"/><circle cx="40" cy="64" r="3"/><circle cx="56" cy="64" r="3"/><circle cx="44" cy="83" r="3"/><circle cx="53" cy="83" r="3"/><circle cx="48" cy="92" r="2.4"/></g>
+  <g fill="currentColor"><circle cx="48" cy="72" r="1.8"/></g>
+  <g fill="${GOLD}" opacity=".9"><path d="M50 56 q6 4 0 9 q-6 -5 0 -9 Z"/><path d="M49 44 q5 3 0 8 q-5 -5 0 -8 Z"/></g>
+</svg>`;
+
+const LION_SUN = `<svg viewBox="0 0 124 124" fill="none">
+  <g>${sunRays(62, 62, 46, 60, 16, GOLD)}</g>
+  <path d="${scallopRing(62, 62, 40, 16)}" fill="${GOLD}" stroke="${GOLD_DK}" stroke-width="1.4"/>
+  <path d="${scallopRing(62, 63, 30, 13)}" fill="currentColor"/>
+  <g><circle cx="45" cy="48" r="7" fill="${GOLD}"/><circle cx="79" cy="48" r="7" fill="${GOLD}"/><circle cx="45" cy="48" r="3" fill="currentColor"/><circle cx="79" cy="48" r="3" fill="currentColor"/></g>
+  <circle cx="62" cy="65" r="23" fill="${GOLD}"/>
+  <circle cx="62" cy="65" r="23" fill="none" stroke="${GOLD_DK}" stroke-width="1.4"/>
+  <path d="M50 58 Q56 54 60 58 M74 58 Q68 54 64 58" stroke="${GOLD_DK}" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <g><path d="M49 62 Q54 57 59 62 Q54 66 49 62 Z" fill="${DARK}"/><path d="M65 62 Q70 57 75 62 Q70 66 65 62 Z" fill="${DARK}"/><circle cx="54" cy="61.5" r="1.4" fill="${GOLD_LT}"/><circle cx="70" cy="61.5" r="1.4" fill="${GOLD_LT}"/></g>
+  <path d="M56 70 L68 70 L62 78 Z" fill="${DARK}"/>
+  <path d="M62 78 Q56 84 50 80 M62 78 Q68 84 74 80" stroke="${GOLD_DK}" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <g fill="${GOLD_DK}"><circle cx="50" cy="74" r="1.1"/><circle cx="74" cy="74" r="1.1"/><circle cx="48" cy="78" r="1.1"/><circle cx="76" cy="78" r="1.1"/></g>
+</svg>`;
+
+const PERSIAN: Record<string, string> = {};
+
+PERSIAN['faravahar'] = (() => {
+  const wing = (s: number): string => {
+    const x = (v: number): string => (80 + s * v).toFixed(1);
+    const tiers: number[][] = [
+      [8, 30, 70, 32, 40],
+      [8, 41, 60, 43, 49],
+      [8, 50, 50, 52, 58],
+    ];
+    let out = '';
+    for (const [x0, y0, len, y1, y2] of tiers) {
+      out += `<path d="M${x(x0)} ${y0} L${x(x0 + len)} ${y0 + 1} Q${x(x0 + len + 4)} ${(y0 + y1) / 2} ${x(x0 + len)} ${y1} L${x(x0)} ${y2} Z" fill="currentColor" stroke="${GOLD}" stroke-width="1.4" stroke-linejoin="round"/>`;
+    }
+    for (const fx of [22, 40, 58]) out += `<line x1="${x(fx)}" y1="32" x2="${x(fx - 2)}" y2="49" stroke="${GOLD}" stroke-width="1" opacity=".55"/>`;
+    return out;
+  };
+  return `<svg viewBox="0 0 160 104" fill="none">
+    ${wing(1)}${wing(-1)}
+    <rect x="72" y="9" width="16" height="7" rx="1.5" fill="${GOLD}"/>
+    <g fill="${GOLD}"><rect x="73" y="4" width="3.5" height="6"/><rect x="78.2" y="3" width="3.5" height="7"/><rect x="83.5" y="4" width="3.5" height="6"/></g>
+    <circle cx="80" cy="23" r="6.5" fill="currentColor" stroke="${GOLD}" stroke-width="1.6"/>
+    <circle cx="80" cy="46" r="12" fill="currentColor" stroke="${GOLD}" stroke-width="2"/>
+    <circle cx="80" cy="46" r="5.5" fill="${DARK}"/>
+    <path d="M71 58 L89 58 L85.5 90 Q80 94 74.5 90 Z" fill="currentColor" stroke="${GOLD}" stroke-width="1.6" stroke-linejoin="round"/>
+    <g stroke="${GOLD}" stroke-width="1" opacity=".6"><line x1="76.5" y1="60" x2="77.5" y2="89"/><line x1="80" y1="60" x2="80" y2="91"/><line x1="83.5" y1="60" x2="82.5" y2="89"/></g>
+    <g fill="none" stroke="${GOLD}" stroke-width="4.4" stroke-linecap="round">
+      <path d="M72 64 C60 70 50 80 53 90 C55 96 63 94 62 87"/>
+      <path d="M88 64 C100 70 110 80 107 90 C105 96 97 94 98 87"/>
+    </g>
+  </svg>`;
+})();
+
+PERSIAN['lotus'] = `<svg viewBox="0 0 100 100" fill="none">
+  <path d="M50 92 L50 54" stroke="${GOLD}" stroke-width="3.4" stroke-linecap="round"/>
+  <path d="M50 72 C36 70 30 60 30 50 C40 52 48 60 50 72 Z" fill="currentColor" stroke="${GOLD}" stroke-width="1.4"/>
+  <path d="M50 72 C64 70 70 60 70 50 C60 52 52 60 50 72 Z" fill="currentColor" stroke="${GOLD}" stroke-width="1.4"/>
+  <path d="M30 50 C24 40 26 28 33 22 C40 28 42 40 36 50 Z" fill="currentColor" stroke="${GOLD}" stroke-width="1.6"/>
+  <path d="M70 50 C76 40 74 28 67 22 C60 28 58 40 64 50 Z" fill="currentColor" stroke="${GOLD}" stroke-width="1.6"/>
+  <path d="M50 56 C40 44 42 24 50 10 C58 24 60 44 50 56 Z" fill="currentColor" stroke="${GOLD}" stroke-width="1.8"/>
+  <path d="M40 50 L50 58 L60 50 Z" fill="${GOLD}"/>
+  <g stroke="${GOLD}" stroke-width="1.2" opacity=".7"><line x1="50" y1="14" x2="50" y2="50"/></g>
+</svg>`;
+
+PERSIAN['tulip'] = `<svg viewBox="0 0 100 100" fill="none">
+  <path d="M50 90 L50 56" stroke="${GOLD}" stroke-width="3.4" stroke-linecap="round"/>
+  <path d="M50 74 C36 72 30 62 32 52 C42 54 49 62 50 74 Z" fill="currentColor" stroke="${GOLD}" stroke-width="1.4"/>
+  <g fill="currentColor" stroke="${GOLD}" stroke-width="1.8" stroke-linejoin="round">
+    <path d="M50 58 C40 56 33 44 35 30 C42 38 47 44 50 44 Z"/>
+    <path d="M50 58 C60 56 67 44 65 30 C58 38 53 44 50 44 Z"/>
+    <path d="M50 58 C46 50 46 34 50 22 C54 34 54 50 50 58 Z"/>
+  </g>
+  <circle cx="50" cy="30" r="2.4" fill="${GOLD_LT}"/>
+</svg>`;
+
+PERSIAN['tar'] = `<svg viewBox="0 0 100 100" fill="none">
+  <g fill="currentColor" stroke="${GOLD}" stroke-width="2"><ellipse cx="50" cy="76" rx="20" ry="15"/><ellipse cx="50" cy="58" rx="14" ry="11"/></g>
+  <ellipse cx="50" cy="76" rx="20" ry="15" fill="none" stroke="${GOLD_DK}" stroke-width="1" opacity=".6"/>
+  <circle cx="50" cy="72" r="3.4" fill="${GOLD}"/>
+  <rect x="46" y="16" width="8" height="36" rx="2" fill="currentColor" stroke="${GOLD}" stroke-width="1.6"/>
+  <g stroke="${GOLD}" stroke-width="1" opacity=".7"><line x1="46" y1="24" x2="54" y2="24"/><line x1="46" y1="32" x2="54" y2="32"/><line x1="46" y1="40" x2="54" y2="40"/></g>
+  <path d="M44 16 L56 16 L58 6 L42 6 Z" fill="currentColor" stroke="${GOLD}" stroke-width="1.6"/>
+  <g fill="${GOLD}"><circle cx="46" cy="11" r="1.8"/><circle cx="54" cy="11" r="1.8"/></g>
+  <g stroke="${GOLD_LT}" stroke-width="0.8" opacity=".8"><line x1="49" y1="10" x2="49" y2="84"/><line x1="51" y1="10" x2="51" y2="84"/></g>
+</svg>`;
+
+PERSIAN['dome'] = `<svg viewBox="0 0 100 100" fill="none">
+  <path d="M50 6 L50 16" stroke="${GOLD}" stroke-width="2.4"/>
+  <circle cx="50" cy="6" r="3.2" fill="${GOLD}"/>
+  <path d="M50 16 C44 22 32 30 32 48 C32 62 40 70 50 70 C60 70 68 62 68 48 C68 30 56 22 50 16 Z" fill="currentColor" stroke="${GOLD}" stroke-width="2"/>
+  <g stroke="${GOLD}" stroke-width="1.1" opacity=".65" fill="none"><path d="M50 16 L50 70"/><path d="M40 20 C36 34 36 54 43 69"/><path d="M60 20 C64 34 64 54 57 69"/></g>
+  <rect x="38" y="70" width="24" height="8" fill="currentColor" stroke="${GOLD}" stroke-width="1.6"/>
+  <path d="M30 92 L30 78 L70 78 L70 92 Z" fill="currentColor" stroke="${GOLD}" stroke-width="1.6"/>
+  <path d="M44 92 L44 86 C44 82 56 82 56 86 L56 92 Z" fill="${DARK}"/>
+</svg>`;
+
+PERSIAN['crown'] = `<svg viewBox="0 0 100 100" fill="none">
+  <rect x="22" y="64" width="56" height="16" rx="3" fill="currentColor" stroke="${GOLD}" stroke-width="2"/>
+  <path d="M22 64 L26 36 L38 56 L50 30 L62 56 L74 36 L78 64 Z" fill="currentColor" stroke="${GOLD}" stroke-width="2" stroke-linejoin="round"/>
+  <g fill="${GOLD}"><circle cx="26" cy="34" r="3.4"/><circle cx="50" cy="27" r="4"/><circle cx="74" cy="34" r="3.4"/></g>
+  <g><path d="M50 66 l4 6 -4 6 -4 -6 Z" fill="${GOLD}"/><circle cx="34" cy="72" r="3" fill="${GOLD}"/><circle cx="66" cy="72" r="3" fill="${GOLD}"/></g>
+  <g fill="${GOLD_LT}"><circle cx="28" cy="78" r="1.6"/><circle cx="42" cy="78" r="1.6"/><circle cx="58" cy="78" r="1.6"/><circle cx="72" cy="78" r="1.6"/></g>
+</svg>`;
+
+PERSIAN['nightingale'] = `<svg viewBox="0 0 100 100" fill="none">
+  <path d="M6 88 C30 84 60 84 78 88" stroke="${GOLD}" stroke-width="2.6" stroke-linecap="round"/>
+  <g transform="translate(80 80)"><circle r="8" fill="currentColor" stroke="${GOLD}" stroke-width="1.4"/><path d="M0 -8 A8 8 0 0 1 5.6 5.6 M-5 -5 A7 7 0 0 1 5 5" stroke="${GOLD}" stroke-width="1.1" fill="none" opacity=".7"/><circle r="2.2" fill="${GOLD_LT}"/></g>
+  <g stroke="${GOLD}" stroke-width="2" stroke-linecap="round"><line x1="44" y1="70" x2="44" y2="86"/><line x1="52" y1="70" x2="52" y2="86"/></g>
+  <path d="M34 60 L8 70 L34 70 Z" fill="currentColor" stroke="${GOLD}" stroke-width="1.6" stroke-linejoin="round"/>
+  <path d="M34 64 C28 46 40 30 56 32 C66 33 70 42 66 50 C72 52 72 60 64 64 C54 69 42 69 34 64 Z" fill="currentColor" stroke="${GOLD}" stroke-width="2" stroke-linejoin="round"/>
+  <circle cx="62" cy="38" r="9" fill="currentColor" stroke="${GOLD}" stroke-width="2"/>
+  <path d="M71 37 L82 35 L71 41 Z" fill="${GOLD}"/>
+  <circle cx="63" cy="36" r="2" fill="${DARK}"/>
+  <path d="M40 50 C50 46 60 50 62 58 C52 60 44 58 40 50 Z" fill="${GOLD}" opacity=".85"/>
+  <g fill="${GOLD_LT}"><circle cx="84" cy="26" r="2.4"/><circle cx="92" cy="18" r="1.8"/></g>
+  <line x1="86" y1="26" x2="86" y2="14" stroke="${GOLD_LT}" stroke-width="1.4"/>
+</svg>`;
+
+PERSIAN['gereh'] = `<svg viewBox="0 0 100 100" fill="none">
+  <g transform="translate(50 50)">
+    <path d="M${[...Array(8)].map((_, i) => { const a = (i / 8) * Math.PI * 2 + Math.PI / 8; return (40 * Math.cos(a)).toFixed(1) + ' ' + (40 * Math.sin(a)).toFixed(1); }).join(' L')} Z" stroke="${GOLD}" stroke-width="2" opacity=".5"/>
+    <path d="M0 -38 L11 -11 38 0 11 11 0 38 -11 11 -38 0 -11 -11 Z" fill="currentColor" stroke="${GOLD}" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M0 -38 L11 -11 38 0 11 11 0 38 -11 11 -38 0 -11 -11 Z" fill="none" stroke="${GOLD}" stroke-width="2" stroke-linejoin="round" transform="rotate(45)" opacity=".9"/>
+    <circle r="9" fill="${GOLD}"/>
+    <path d="M0 -9 L2.6 -2.6 9 0 2.6 2.6 0 9 -2.6 2.6 -9 0 -2.6 -2.6 Z" fill="${DARK}"/>
+  </g>
+</svg>`;
+
+/** A decorative Persian motif SVG string (faravahar, lotus, tulip, tar, dome, crown,
+ *  nightingale, gereh, plus boteh and lion-sun). */
+export function motif(name: string): string | undefined {
+  if (name === 'boteh') return BOTEH;
+  if (name === 'lion-sun' || name === 'lionsun') return LION_SUN;
+  return PERSIAN[name];
+}
+
+export { EMBLEMS, PERSIAN, BOTEH, LION_SUN };

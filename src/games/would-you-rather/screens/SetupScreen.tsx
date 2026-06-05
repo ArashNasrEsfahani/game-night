@@ -56,7 +56,7 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<WyrState, WyrAction>) 
                   onClick={() => togglePlayer(p.id)}
                   className={`rounded-full px-3 py-2 text-sm font-medium ${
                     selected.includes(p.id)
-                      ? 'bg-[var(--game-accent-strong)] text-white'
+                      ? 'bg-[var(--game-accent-strong)] text-[var(--game-on-accent)]'
                       : 'bg-[var(--surface-2)] text-[var(--text)]'
                   }`}
                 >
@@ -88,6 +88,7 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<WyrState, WyrAction>) 
               { value: 'mild', label: t('wyr.intensity.mild') },
               { value: 'medium', label: t('wyr.intensity.medium') },
               { value: 'spicy', label: t('wyr.intensity.spicy') },
+              { value: 'risky', label: t('wyr.intensity.risky') },
             ]}
           />
         </section>

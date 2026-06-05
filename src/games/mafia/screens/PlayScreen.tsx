@@ -56,7 +56,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<MafiaS
         >
           <div className="grid flex-1 place-items-center gap-5 text-center">
             <div className="text-7xl">{role?.icon}</div>
-            <h1 className="text-3xl font-extrabold text-[var(--game-accent-strong)]">{role ? ctx.localize(role.name) : ''}</h1>
+            <h1 className="text-3xl font-extrabold dp-accent">{role ? ctx.localize(role.name) : ''}</h1>
             <p className="px-6 text-sm text-[var(--text-muted)]">{role ? ctx.localize(role.reveal) : ''}</p>
             <Button size="lg" onClick={() => dispatch({ type: 'DEAL_NEXT' })}>
               {t('mf.hideAndPass')}
@@ -92,7 +92,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<MafiaS
                 key={p.id}
                 onClick={() => { ctx.haptics.light(); dispatch({ type: 'RECORD_NIGHT_ACTION', actorId: step.actorIds[0], targetId: p.id }); }}
                 className={`rounded-full px-4 py-3 text-base font-medium ${
-                  recorded === p.id ? 'bg-[var(--game-accent-strong)] text-white' : 'bg-[var(--surface-2)] text-[var(--text)]'
+                  recorded === p.id ? 'bg-[var(--game-accent-strong)] text-[var(--game-on-accent)]' : 'bg-[var(--surface-2)] text-[var(--text)]'
                 }`}
               >
                 {name(p.id)}
@@ -185,7 +185,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<MafiaS
                 key={p.id}
                 onClick={() => dispatch({ type: 'NOMINATE', nomineeId: p.id })}
                 className={`rounded-full px-4 py-3 text-base font-medium ${
-                  s.ballot.includes(p.id) ? 'bg-[var(--game-accent-strong)] text-white' : 'bg-[var(--surface-2)] text-[var(--text)]'
+                  s.ballot.includes(p.id) ? 'bg-[var(--game-accent-strong)] text-[var(--game-on-accent)]' : 'bg-[var(--surface-2)] text-[var(--text)]'
                 }`}
               >
                 {name(p.id)} {(s.nominations[p.id] ?? 0) > 0 ? `(${s.nominations[p.id]})` : ''}

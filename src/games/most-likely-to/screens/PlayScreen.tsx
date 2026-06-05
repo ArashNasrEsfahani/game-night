@@ -1,10 +1,86 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
 import type { GameScreenProps } from '../../../sdk/types';
-import { Screen, AppBar, Button, Card, Chip, Curtain, Stepper } from '../../../sdk/ui';
+import { Screen, AppBar, Button, Curtain, Motif, MotifDivider, Stepper } from '../../../sdk/ui';
+import { reveal } from '../../../sdk/motion';
 import { PROMPT_BY_ID } from '../content';
 import { allVoted, currentPromptId, currentVoterId } from '../logic';
 import type { MltAction, MltState, VoteTally } from '../logic';
+
+/** A large, centered Persian-style framed niche that presents the round's prompt.
+ *  Re-animates whenever `promptKey` changes. `compact` shrinks it to a header that
+ *  sits above interactive controls (voting screens). */
+function PromptCard({
+  text,
+  emoji,
+  kicker,
+  promptKey,
+  compact = false,
+}: {
+  text: string;
+  emoji?: string;
+  kicker?: string;
+  promptKey?: string | number;
+  compact?: boolean;
+}) {
+  return (
+    <motion.div
+      key={promptKey}
+      variants={reveal}
+      initial="initial"
+      animate="animate"
+      className="relative mx-auto w-full max-w-md"
+    >
+      <div
+        className={`relative overflow-hidden rounded-[var(--radius-card)] text-center ${
+          compact ? 'px-5 py-6' : 'px-7 py-10'
+        }`}
+        style={{
+          background:
+            'radial-gradient(125% 92% at 50% 0%, color-mix(in oklab, var(--game-accent) 26%, var(--surface-2)), var(--surface) 80%)',
+          boxShadow:
+            '0 0 0 1px var(--border), 0 0 0 4px color-mix(in oklab, var(--color-game-gold) 36%, transparent), inset 0 0 60px -22px var(--game-accent-glow), var(--shadow-card)',
+        }}
+      >
+        {/* gilded inner ring */}
+        <span
+          aria-hidden
+          className="pointer-events-none absolute inset-[7px] rounded-[calc(var(--radius-card)-7px)]"
+          style={{ border: '1.5px solid color-mix(in oklab, var(--color-game-gold) 50%, transparent)' }}
+        />
+        {/* slow disco glint sweeping the niche */}
+        <span
+          aria-hidden
+          className="dp-spin-slow pointer-events-none absolute opacity-40 mix-blend-screen"
+          style={{
+            inset: '-40%',
+            background:
+              'conic-gradient(from 0deg, transparent, color-mix(in oklab, var(--game-accent) 60%, transparent), transparent 38%)',
+          }}
+        />
+        <div className="relative z-[1]">
+          <Motif
+            name="gereh"
+            size={compact ? 24 : 32}
+            color="var(--color-game-gold)"
+            className="mx-auto mb-2 opacity-90"
+          />
+          {kicker && (
+            <p className="mb-2 text-xs font-semibold uppercase tracking-[0.12em] text-[var(--text-muted)]">
+              {kicker}
+            </p>
+          )}
+          {emoji && <div className={compact ? 'mb-2 text-4xl' : 'mb-4 text-6xl'}>{emoji}</div>}
+          <h1 className={`font-extrabold leading-snug dp-title ${compact ? 'text-2xl' : 'text-[2rem]'}`}>
+            {text}
+          </h1>
+          <MotifDivider motif="boteh" size={compact ? 16 : 20} className="mt-4" />
+        </div>
+      </div>
+    </motion.div>
+  );
+}
 
 function ScoreStrip({ s }: { s: MltState }) {
   if (!s.options.showRunningScores) return null;
@@ -60,13 +136,12 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<MltSta
         <AppBar onBack={() => nav.exit()} />
         <ScoreStrip s={s} />
         <div className="flex flex-1 flex-col items-center justify-center gap-5 text-center">
-          <p className="text-sm font-semibold text-[var(--text-muted)]">
-            {t('mlt.round', { k: s.currentRound + 1, n: s.orderedPromptIds.length })}
-          </p>
-          <Card className="px-6 py-10">
-            <div className="mb-3 text-5xl">{prompt?.emoji ?? '👉'}</div>
-            <h1 className="text-3xl font-extrabold leading-snug">{promptText}</h1>
-          </Card>
+          <PromptCard
+            text={promptText}
+            emoji={prompt?.emoji ?? '👉'}
+            kicker={t('mlt.round', { k: s.currentRound + 1, n: s.orderedPromptIds.length })}
+            promptKey={promptId ?? s.currentRound}
+          />
           <div className="flex w-full flex-col gap-2">
             <Button size="lg" fullWidth onClick={() => { ctx.sound.play('tap'); dispatch({ type: 'BEGIN_VOTING' }); }}>
               {t('mlt.startVoting')}
@@ -115,7 +190,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<MltSta
           onReveal={() => setGateOpen(true)}
         >
           <div className="flex flex-1 flex-col gap-4">
-            <h1 className="text-center text-xl font-extrabold leading-snug">{promptText}</h1>
+            <PromptCard compact text={promptText} promptKey={promptId ?? s.currentRound} />
             <div className="flex flex-wrap justify-center gap-2">
               {s.playerIds.map((id) => {
                 const disabled = id === voterId && !s.options.allowSelfVote;
@@ -146,7 +221,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<MltSta
       <Screen>
         <AppBar onBack={() => nav.exit()} />
         <div className="flex flex-1 flex-col gap-3">
-          <h1 className="text-center text-xl font-extrabold leading-snug">{promptText}</h1>
+          <PromptCard compact text={promptText} promptKey={promptId ?? s.currentRound} />
           <p className="text-center text-sm text-[var(--text-muted)]">{t('mlt.enterTally')}</p>
           <div className="flex flex-col gap-2">
             {s.playerIds.map((id) => (
@@ -183,14 +258,18 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<MltSta
       <AppBar onBack={() => nav.exit()} />
       <ScoreStrip s={s} />
       <div className="flex flex-1 flex-col items-center justify-center gap-4 text-center">
-        <Chip>{t('mlt.round', { k: s.currentRound + 1, n: s.orderedPromptIds.length })}</Chip>
-        <h1 className="text-2xl font-extrabold leading-snug">{promptText}</h1>
+        <PromptCard
+          compact
+          text={promptText}
+          kicker={t('mlt.round', { k: s.currentRound + 1, n: s.orderedPromptIds.length })}
+          promptKey={promptId ?? s.currentRound}
+        />
         {winnerNames.length === 0 ? (
           <p className="text-xl">🤷 {t('mlt.noVotes')}</p>
         ) : (
           <div>
             <div className="text-5xl">🎉</div>
-            <p className="mt-2 text-2xl font-extrabold text-[var(--game-accent-strong)]">
+            <p className="mt-2 text-2xl font-extrabold dp-accent">
               {winnerNames.join('، ')}
             </p>
             <p className="text-sm text-[var(--text-muted)]">

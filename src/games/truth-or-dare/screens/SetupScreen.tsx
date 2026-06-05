@@ -56,7 +56,7 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<ToDState, ToDAction>) 
                   onClick={() => togglePlayer(p.id)}
                   className={`rounded-full px-3 py-2 text-sm font-medium ${
                     selected.includes(p.id)
-                      ? 'bg-[var(--game-accent-strong)] text-white'
+                      ? 'bg-[var(--game-accent-strong)] text-[var(--game-on-accent)]'
                       : 'bg-[var(--surface-2)] text-[var(--text)]'
                   }`}
                 >
@@ -79,7 +79,7 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<ToDState, ToDAction>) 
                 onClick={() => toggleIntensity(i)}
                 className={`rounded-full px-3 py-1.5 text-sm ${
                   opts.intensities[i]
-                    ? 'bg-[var(--game-accent-strong)] text-white'
+                    ? 'bg-[var(--game-accent-strong)] text-[var(--game-on-accent)]'
                     : 'bg-[var(--surface-2)] text-[var(--text)]'
                 }`}
               >
@@ -117,6 +117,7 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<ToDState, ToDAction>) 
           <section className="flex flex-col gap-3">
             <Stepper label={t('tod.pointsForDare')} value={opts.pointsForDare} min={0} max={10} onChange={(v) => set('pointsForDare', v)} />
             <Stepper label={t('tod.pointsForTruth')} value={opts.pointsForTruth} min={0} max={10} onChange={(v) => set('pointsForTruth', v)} />
+            <Stepper label={t('tod.pointsForSkip')} value={opts.pointsForSkip} min={0} max={10} onChange={(v) => set('pointsForSkip', v)} />
           </section>
         )}
 

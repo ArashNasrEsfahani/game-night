@@ -6,6 +6,7 @@ export type PantomimeEndMode = 'targetScore' | 'rounds';
 
 export const PANTOMIME_CATEGORIES: PantomimeCategory[] = [
   'movies',
+  'tv',
   'animals',
   'actions',
   'famous',

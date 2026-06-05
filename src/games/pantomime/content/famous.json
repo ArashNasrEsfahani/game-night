@@ -271,6 +271,303 @@
       },
       "category": "famous",
       "difficulty": "hard"
+    },
+    {
+      "id": "famous-x001",
+      "text": {
+        "en": "Mr. Bean (Rowan Atkinson)",
+        "fa": "مستر بین (روآن اتکینسون)"
+      },
+      "category": "famous",
+      "difficulty": "easy"
+    },
+    {
+      "id": "famous-x002",
+      "text": {
+        "en": "Mr. Spock (Leonard Nimoy)",
+        "fa": "مستر اسپاک (لئونارد نیموی)"
+      },
+      "category": "famous",
+      "difficulty": "easy"
+    },
+    {
+      "id": "famous-x003",
+      "text": {
+        "en": "Freddie Mercury",
+        "fa": "فردی مرکوری"
+      },
+      "category": "famous",
+      "difficulty": "easy"
+    },
+    {
+      "id": "famous-x004",
+      "text": {
+        "en": "Madonna",
+        "fa": "مدونا"
+      },
+      "category": "famous",
+      "difficulty": "easy"
+    },
+    {
+      "id": "famous-x005",
+      "text": {
+        "en": "Muhammad Ali",
+        "fa": "محمد علی کلی"
+      },
+      "category": "famous",
+      "difficulty": "easy"
+    },
+    {
+      "id": "famous-x006",
+      "text": {
+        "en": "Jackie Chan",
+        "fa": "جکی چان"
+      },
+      "category": "famous",
+      "difficulty": "easy"
+    },
+    {
+      "id": "famous-x007",
+      "text": {
+        "en": "Beyoncé",
+        "fa": "بیانسه"
+      },
+      "category": "famous",
+      "difficulty": "easy"
+    },
+    {
+      "id": "famous-x008",
+      "text": {
+        "en": "Mike Tyson",
+        "fa": "مایک تایسون"
+      },
+      "category": "famous",
+      "difficulty": "easy"
+    },
+    {
+      "id": "famous-x009",
+      "text": {
+        "en": "Rowan Atkinson",
+        "fa": "روآن اتکینسون"
+      },
+      "category": "famous",
+      "difficulty": "easy"
+    },
+    {
+      "id": "famous-x010",
+      "text": {
+        "en": "Bruce Lee",
+        "fa": "بروس لی"
+      },
+      "category": "famous",
+      "difficulty": "easy"
+    },
+    {
+      "id": "famous-x011",
+      "text": {
+        "en": "Leonardo DiCaprio",
+        "fa": "لئوناردو دی کاپریو"
+      },
+      "category": "famous",
+      "difficulty": "medium"
+    },
+    {
+      "id": "famous-x012",
+      "text": {
+        "en": "Audrey Hepburn",
+        "fa": "آدری هپبورن"
+      },
+      "category": "famous",
+      "difficulty": "medium"
+    },
+    {
+      "id": "famous-x013",
+      "text": {
+        "en": "Michael Jordan",
+        "fa": "مایکل جردن"
+      },
+      "category": "famous",
+      "difficulty": "medium"
+    },
+    {
+      "id": "famous-x014",
+      "text": {
+        "en": "Adele",
+        "fa": "ادل"
+      },
+      "category": "famous",
+      "difficulty": "medium"
+    },
+    {
+      "id": "famous-x015",
+      "text": {
+        "en": "Roger Federer",
+        "fa": "راجر فدرر"
+      },
+      "category": "famous",
+      "difficulty": "medium"
+    },
+    {
+      "id": "famous-x016",
+      "text": {
+        "en": "Johnny Depp",
+        "fa": "جانی دپ"
+      },
+      "category": "famous",
+      "difficulty": "medium"
+    },
+    {
+      "id": "famous-x017",
+      "text": {
+        "en": "Marlon Brando",
+        "fa": "مارلون براندو"
+      },
+      "category": "famous",
+      "difficulty": "medium"
+    },
+    {
+      "id": "famous-x018",
+      "text": {
+        "en": "Serena Williams",
+        "fa": "سرنا ویلیامز"
+      },
+      "category": "famous",
+      "difficulty": "medium"
+    },
+    {
+      "id": "famous-x019",
+      "text": {
+        "en": "Charlie Sheen",
+        "fa": "چارلی شین"
+      },
+      "category": "famous",
+      "difficulty": "medium"
+    },
+    {
+      "id": "famous-x020",
+      "text": {
+        "en": "Nelson Mandela",
+        "fa": "نلسون ماندلا"
+      },
+      "category": "famous",
+      "difficulty": "medium"
+    },
+    {
+      "id": "famous-x021",
+      "text": {
+        "en": "Arnold Schwarzenegger",
+        "fa": "آرنولد شوارتزنگر"
+      },
+      "category": "famous",
+      "difficulty": "medium"
+    },
+    {
+      "id": "famous-x022",
+      "text": {
+        "en": "Maradona",
+        "fa": "دیگو مارادونا"
+      },
+      "category": "famous",
+      "difficulty": "medium"
+    },
+    {
+      "id": "famous-x023",
+      "text": {
+        "en": "Tom Cruise",
+        "fa": "تام کروز"
+      },
+      "category": "famous",
+      "difficulty": "medium"
+    },
+    {
+      "id": "famous-x024",
+      "text": {
+        "en": "Marie Curie",
+        "fa": "ماری کوری"
+      },
+      "category": "famous",
+      "difficulty": "hard"
+    },
+    {
+      "id": "famous-x025",
+      "text": {
+        "en": "Pablo Picasso",
+        "fa": "پابلو پیکاسو"
+      },
+      "category": "famous",
+      "difficulty": "hard"
+    },
+    {
+      "id": "famous-x026",
+      "text": {
+        "en": "Winston Churchill",
+        "fa": "وینستون چرچیل"
+      },
+      "category": "famous",
+      "difficulty": "hard"
+    },
+    {
+      "id": "famous-x027",
+      "text": {
+        "en": "Stephen Hawking",
+        "fa": "استیون هاوکینگ"
+      },
+      "category": "famous",
+      "difficulty": "hard"
+    },
+    {
+      "id": "famous-x028",
+      "text": {
+        "en": "Leonardo da Vinci",
+        "fa": "لئوناردو داوینچی"
+      },
+      "category": "famous",
+      "difficulty": "hard"
+    },
+    {
+      "id": "famous-x029",
+      "text": {
+        "en": "Ludwig van Beethoven",
+        "fa": "لودویگ ون بتهوون"
+      },
+      "category": "famous",
+      "difficulty": "hard"
+    },
+    {
+      "id": "famous-x030",
+      "text": {
+        "en": "Vincent van Gogh",
+        "fa": "وینسنت ون گوگ"
+      },
+      "category": "famous",
+      "difficulty": "hard"
+    },
+    {
+      "id": "famous-x031",
+      "text": {
+        "en": "Isaac Newton",
+        "fa": "آیزاک نیوتن"
+      },
+      "category": "famous",
+      "difficulty": "hard"
+    },
+    {
+      "id": "famous-x032",
+      "text": {
+        "en": "William Shakespeare",
+        "fa": "ویلیام شکسپیر"
+      },
+      "category": "famous",
+      "difficulty": "hard"
+    },
+    {
+      "id": "famous-x033",
+      "text": {
+        "en": "Abraham Lincoln",
+        "fa": "آبراهام لینکلن"
+      },
+      "category": "famous",
+      "difficulty": "hard"
     }
   ]
 }

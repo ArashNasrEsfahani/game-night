@@ -32,7 +32,7 @@ function clampInt(value: number | undefined, min: number, max: number, fallback:
 export function normalizeOptions(o: Partial<WyrOptions> | undefined): WyrOptions {
   const src = o ?? {};
   const deckId = DECK_BY_ID[src.deckId ?? ''] ? src.deckId! : DECKS[0].id;
-  const maxIntensity: Intensity = (['mild', 'medium', 'spicy'] as const).includes(
+  const maxIntensity: Intensity = (['mild', 'medium', 'spicy', 'risky'] as const).includes(
     src.maxIntensity as Intensity,
   )
     ? (src.maxIntensity as Intensity)

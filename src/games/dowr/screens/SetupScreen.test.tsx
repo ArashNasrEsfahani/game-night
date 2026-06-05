@@ -53,9 +53,9 @@ describe('Dowr SetupScreen', () => {
       </MemoryRouter>,
     );
     expect(screen.getByRole('heading', { name: 'Dowr' })).toBeInTheDocument();
-    // Mode segmented control labels present
-    expect(screen.getByRole('radio', { name: 'Teams' })).toBeInTheDocument();
-    expect(screen.getByRole('radio', { name: 'Solo' })).toBeInTheDocument();
+    // Difficulty segmented control labels present
+    expect(screen.getByRole('radio', { name: 'Mixed' })).toBeInTheDocument();
+    expect(screen.getByRole('radio', { name: 'Hard' })).toBeInTheDocument();
     // Start is present but disabled (no players in roster)
     expect(screen.getByRole('button', { name: 'Start' })).toBeDisabled();
   });

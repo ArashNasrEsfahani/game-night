@@ -1,4 +1,7 @@
+import { useId } from 'react';
+import { motion } from 'framer-motion';
 import { cn } from '../../lib/cn';
+import { press, springSnappy } from '../motion';
 
 export function SegmentedControl<T extends string>({
   options,
@@ -11,28 +14,43 @@ export function SegmentedControl<T extends string>({
   onChange: (v: T) => void;
   ariaLabel?: string;
 }) {
+  const groupId = useId();
   return (
     <div
       role="radiogroup"
       aria-label={ariaLabel}
-      className="flex gap-1 rounded-[var(--radius-pill)] bg-[var(--surface-sunk)] p-1 shadow-[inset_0_0_0_1px_var(--border)]"
+      className="relative flex gap-1 rounded-[var(--radius-pill)] bg-[var(--surface-sunk)] p-1 shadow-[inset_0_0_0_1px_var(--border)]"
     >
-      {options.map((o) => (
-        <button
-          key={o.value}
-          role="radio"
-          aria-checked={value === o.value}
-          onClick={() => onChange(o.value)}
-          className={cn(
-            'flex-1 rounded-[var(--radius-pill)] px-3 py-2 text-sm font-semibold transition',
-            value === o.value
-              ? 'bg-[linear-gradient(135deg,var(--game-accent),var(--game-accent-strong))] text-[var(--on-accent)] shadow-[0_4px_14px_-4px_var(--game-accent-glow)]'
-              : 'text-[var(--text-muted)]',
-          )}
-        >
-          {o.label}
-        </button>
-      ))}
+      {options.map((o) => {
+        const selected = value === o.value;
+        return (
+          <motion.button
+            key={o.value}
+            role="radio"
+            aria-checked={selected}
+            onClick={() => onChange(o.value)}
+            whileTap={press.whileTap}
+            transition={press.transition}
+            className="relative flex-1 rounded-[var(--radius-pill)] px-3 py-2 text-sm font-semibold"
+          >
+            {selected && (
+              <motion.span
+                layoutId={`seg-${groupId}`}
+                transition={springSnappy}
+                className="absolute inset-0 rounded-[var(--radius-pill)] bg-[linear-gradient(135deg,var(--game-accent),var(--game-accent-strong))] shadow-[0_4px_14px_-4px_var(--game-accent-glow)]"
+              />
+            )}
+            <span
+              className={cn(
+                'relative z-10',
+                selected ? 'text-[var(--game-on-accent)]' : 'text-[var(--text-muted)]',
+              )}
+            >
+              {o.label}
+            </span>
+          </motion.button>
+        );
+      })}
     </div>
   );
 }

@@ -216,6 +216,230 @@
         "en": "Roasted Corn",
         "fa": "بلال"
       }
+    },
+    {
+      "id": "hu-food-x001",
+      "word": {
+        "en": "Tacos",
+        "fa": "تاکو"
+      }
+    },
+    {
+      "id": "hu-food-x002",
+      "word": {
+        "en": "Fried Chicken",
+        "fa": "مرغ سوخاری"
+      }
+    },
+    {
+      "id": "hu-food-x003",
+      "word": {
+        "en": "Pancakes",
+        "fa": "پنکیک"
+      }
+    },
+    {
+      "id": "hu-food-x004",
+      "word": {
+        "en": "Ice Cream",
+        "fa": "بستنی"
+      }
+    },
+    {
+      "id": "hu-food-x005",
+      "word": {
+        "en": "Chocolate",
+        "fa": "شکلات"
+      }
+    },
+    {
+      "id": "hu-food-x006",
+      "word": {
+        "en": "Doughnut",
+        "fa": "دونات"
+      }
+    },
+    {
+      "id": "hu-food-x007",
+      "word": {
+        "en": "Cheesecake",
+        "fa": "چیزکیک"
+      }
+    },
+    {
+      "id": "hu-food-x008",
+      "word": {
+        "en": "Strawberry",
+        "fa": "توت‌فرنگی"
+      }
+    },
+    {
+      "id": "hu-food-x009",
+      "word": {
+        "en": "Pineapple",
+        "fa": "آناناس"
+      }
+    },
+    {
+      "id": "hu-food-x010",
+      "word": {
+        "en": "Banana",
+        "fa": "موز"
+      }
+    },
+    {
+      "id": "hu-food-x011",
+      "word": {
+        "en": "Grapes",
+        "fa": "انگور"
+      }
+    },
+    {
+      "id": "hu-food-x012",
+      "word": {
+        "en": "Mango",
+        "fa": "انبه"
+      }
+    },
+    {
+      "id": "hu-food-x013",
+      "word": {
+        "en": "Dolma",
+        "fa": "دلمه"
+      }
+    },
+    {
+      "id": "hu-food-x014",
+      "word": {
+        "en": "Kebab Koobideh",
+        "fa": "کباب کوبیده"
+      }
+    },
+    {
+      "id": "hu-food-x015",
+      "word": {
+        "en": "Zereshk Polo",
+        "fa": "زرشک‌پلو"
+      }
+    },
+    {
+      "id": "hu-food-x016",
+      "word": {
+        "en": "Mirza Ghasemi",
+        "fa": "میرزاقاسمی"
+      }
+    },
+    {
+      "id": "hu-food-x017",
+      "word": {
+        "en": "Hummus",
+        "fa": "حمص"
+      }
+    },
+    {
+      "id": "hu-food-x018",
+      "word": {
+        "en": "Shawarma",
+        "fa": "شاورما"
+      }
+    },
+    {
+      "id": "hu-food-x019",
+      "word": {
+        "en": "Baklava",
+        "fa": "باقلوا"
+      }
+    },
+    {
+      "id": "hu-food-x020",
+      "word": {
+        "en": "Tabbouleh",
+        "fa": "تبوله"
+      }
+    },
+    {
+      "id": "hu-food-x021",
+      "word": {
+        "en": "Lentil Soup",
+        "fa": "سوپ عدس"
+      }
+    },
+    {
+      "id": "hu-food-x022",
+      "word": {
+        "en": "Omelette",
+        "fa": "املت"
+      }
+    },
+    {
+      "id": "hu-food-x023",
+      "word": {
+        "en": "Lasagna",
+        "fa": "لازانیا"
+      }
+    },
+    {
+      "id": "hu-food-x024",
+      "word": {
+        "en": "Dumplings",
+        "fa": "دامپلینگ"
+      }
+    },
+    {
+      "id": "hu-food-x025",
+      "word": {
+        "en": "Noodles",
+        "fa": "نودل"
+      }
+    },
+    {
+      "id": "hu-food-x026",
+      "word": {
+        "en": "Curry",
+        "fa": "کاری"
+      }
+    },
+    {
+      "id": "hu-food-x027",
+      "word": {
+        "en": "Salad",
+        "fa": "سالاد"
+      }
+    },
+    {
+      "id": "hu-food-x028",
+      "word": {
+        "en": "Sandwich",
+        "fa": "ساندویچ"
+      }
+    },
+    {
+      "id": "hu-food-x029",
+      "word": {
+        "en": "Coffee",
+        "fa": "قهوه"
+      }
+    },
+    {
+      "id": "hu-food-x030",
+      "word": {
+        "en": "Lemonade",
+        "fa": "لیموناد"
+      }
+    },
+    {
+      "id": "hu-food-x031",
+      "word": {
+        "en": "Smoothie",
+        "fa": "اسموتی"
+      }
+    },
+    {
+      "id": "hu-food-x032",
+      "word": {
+        "en": "Hot Chocolate",
+        "fa": "شکلات داغ"
+      }
     }
   ]
 }

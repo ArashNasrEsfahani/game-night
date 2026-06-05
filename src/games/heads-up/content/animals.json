@@ -216,6 +216,258 @@
         "en": "Bat",
         "fa": "خفاش"
       }
+    },
+    {
+      "id": "hu-animals-x001",
+      "word": {
+        "en": "Cheetah",
+        "fa": "یوزپلنگ"
+      }
+    },
+    {
+      "id": "hu-animals-x002",
+      "word": {
+        "en": "Flamingo",
+        "fa": "فلامینگو"
+      }
+    },
+    {
+      "id": "hu-animals-x003",
+      "word": {
+        "en": "Chameleon",
+        "fa": "آفتاب‌پرست"
+      }
+    },
+    {
+      "id": "hu-animals-x004",
+      "word": {
+        "en": "Sloth",
+        "fa": "تنبل"
+      }
+    },
+    {
+      "id": "hu-animals-x005",
+      "word": {
+        "en": "Hippopotamus",
+        "fa": "اسب آبی"
+      }
+    },
+    {
+      "id": "hu-animals-x006",
+      "word": {
+        "en": "Rhinoceros",
+        "fa": "کرگدن"
+      }
+    },
+    {
+      "id": "hu-animals-x007",
+      "word": {
+        "en": "Squirrel",
+        "fa": "سنجاب"
+      }
+    },
+    {
+      "id": "hu-animals-x008",
+      "word": {
+        "en": "Jellyfish",
+        "fa": "عروس دریایی"
+      }
+    },
+    {
+      "id": "hu-animals-x009",
+      "word": {
+        "en": "Ostrich",
+        "fa": "شترمرغ"
+      }
+    },
+    {
+      "id": "hu-animals-x010",
+      "word": {
+        "en": "Koala",
+        "fa": "کوآلا"
+      }
+    },
+    {
+      "id": "hu-animals-x011",
+      "word": {
+        "en": "Panda",
+        "fa": "پاندا"
+      }
+    },
+    {
+      "id": "hu-animals-x012",
+      "word": {
+        "en": "Gorilla",
+        "fa": "گوریل"
+      }
+    },
+    {
+      "id": "hu-animals-x013",
+      "word": {
+        "en": "Seahorse",
+        "fa": "اسب دریایی"
+      }
+    },
+    {
+      "id": "hu-animals-x014",
+      "word": {
+        "en": "Scorpion",
+        "fa": "عقرب"
+      }
+    },
+    {
+      "id": "hu-animals-x015",
+      "word": {
+        "en": "Butterfly",
+        "fa": "پروانه"
+      }
+    },
+    {
+      "id": "hu-animals-x016",
+      "word": {
+        "en": "Snail",
+        "fa": "حلزون"
+      }
+    },
+    {
+      "id": "hu-animals-x017",
+      "word": {
+        "en": "Walrus",
+        "fa": "گراز دریایی"
+      }
+    },
+    {
+      "id": "hu-animals-x018",
+      "word": {
+        "en": "Raccoon",
+        "fa": "راکون"
+      }
+    },
+    {
+      "id": "hu-animals-x019",
+      "word": {
+        "en": "Porcupine",
+        "fa": "تشی"
+      }
+    },
+    {
+      "id": "hu-animals-x020",
+      "word": {
+        "en": "Woodpecker",
+        "fa": "دارکوب"
+      }
+    },
+    {
+      "id": "hu-animals-x021",
+      "word": {
+        "en": "Starfish",
+        "fa": "ستاره دریایی"
+      }
+    },
+    {
+      "id": "hu-animals-x022",
+      "word": {
+        "en": "Lobster",
+        "fa": "خرچنگ دریایی"
+      }
+    },
+    {
+      "id": "hu-animals-x023",
+      "word": {
+        "en": "Hummingbird",
+        "fa": "مرغ مگس‌خوار"
+      }
+    },
+    {
+      "id": "hu-animals-x024",
+      "word": {
+        "en": "Platypus",
+        "fa": "پلاتیپوس"
+      }
+    },
+    {
+      "id": "hu-animals-x025",
+      "word": {
+        "en": "Meerkat",
+        "fa": "میرکت"
+      }
+    },
+    {
+      "id": "hu-animals-x026",
+      "word": {
+        "en": "Pelican",
+        "fa": "مرغ ماهی‌خوار"
+      }
+    },
+    {
+      "id": "hu-animals-x027",
+      "word": {
+        "en": "Llama",
+        "fa": "لاما"
+      }
+    },
+    {
+      "id": "hu-animals-x028",
+      "word": {
+        "en": "Toucan",
+        "fa": "توکان"
+      }
+    },
+    {
+      "id": "hu-animals-x029",
+      "word": {
+        "en": "Armadillo",
+        "fa": "آرمادیلو"
+      }
+    },
+    {
+      "id": "hu-animals-x030",
+      "word": {
+        "en": "Swan",
+        "fa": "قو"
+      }
+    },
+    {
+      "id": "hu-animals-x031",
+      "word": {
+        "en": "Iguana",
+        "fa": "ایگوانا"
+      }
+    },
+    {
+      "id": "hu-animals-x032",
+      "word": {
+        "en": "Anteater",
+        "fa": "مورچه‌خوار"
+      }
+    },
+    {
+      "id": "hu-animals-x033",
+      "word": {
+        "en": "Beaver",
+        "fa": "سگ آبی"
+      }
+    },
+    {
+      "id": "hu-animals-x034",
+      "word": {
+        "en": "Crab",
+        "fa": "خرچنگ"
+      }
+    },
+    {
+      "id": "hu-animals-x035",
+      "word": {
+        "en": "Bumblebee",
+        "fa": "زنبور درشت"
+      }
+    },
+    {
+      "id": "hu-animals-x036",
+      "word": {
+        "en": "Stingray",
+        "fa": "سفره‌ماهی"
+      }
     }
   ]
 }

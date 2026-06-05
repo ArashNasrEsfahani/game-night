@@ -103,7 +103,7 @@
       },
       "optionB": {
         "en": "Live in the mountains",
-        "fa": "تو کوهستان زندگی کنی"
+        "fa": "تو کوهستون زندگی کنی"
       }
     },
     {
@@ -247,7 +247,7 @@
       },
       "optionB": {
         "en": "Play every instrument perfectly",
-        "fa": "همه‌ی سازها رو عالی بلد باشی بزنی"
+        "fa": "بتونی همه‌ی سازها رو عالی بزنی"
       }
     },
     {
@@ -393,6 +393,582 @@
         "en": "Remember every name you hear",
         "fa": "اسم هر کسی رو بشنوی یادت بمونه"
       }
+    },
+    {
+      "id": "wyr-c-x001",
+      "optionA": {
+        "en": "Always be 10 minutes early",
+        "fa": "همیشه ۱۰ دقیقه زود برسی"
+      },
+      "optionB": {
+        "en": "Always be 20 minutes late",
+        "fa": "همیشه ۲۰ دقیقه دیر برسی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-c-x002",
+      "optionA": {
+        "en": "Have unlimited free pizza for life",
+        "fa": "تا آخر عمر پیتزای رایگان نامحدود داشته باشی"
+      },
+      "optionB": {
+        "en": "Have unlimited free tacos for life",
+        "fa": "تا آخر عمر تاکوی رایگان نامحدود داشته باشی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-c-x003",
+      "optionA": {
+        "en": "Live without music",
+        "fa": "بدون موسیقی زندگی کنی"
+      },
+      "optionB": {
+        "en": "Live without movies",
+        "fa": "بدون فیلم زندگی کنی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-c-x004",
+      "optionA": {
+        "en": "Have the ability to talk to animals",
+        "fa": "بتونی با حیوون‌ها حرف بزنی"
+      },
+      "optionB": {
+        "en": "Be able to speak every human language",
+        "fa": "بتونی به همه‌ی زبون‌های انسانی صحبت کنی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-c-x005",
+      "optionA": {
+        "en": "Never be able to use a touchscreen again",
+        "fa": "دیگه هیچ‌وقت نتونی از صفحه‌ی لمسی استفاده کنی"
+      },
+      "optionB": {
+        "en": "Never be able to use a keyboard again",
+        "fa": "دیگه هیچ‌وقت نتونی از کیبورد استفاده کنی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-c-x006",
+      "optionA": {
+        "en": "Always know what time it is",
+        "fa": "همیشه بدونی ساعت چنده"
+      },
+      "optionB": {
+        "en": "Always know which direction is north",
+        "fa": "همیشه بدونی شمال کدوم طرفه"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-c-x007",
+      "optionA": {
+        "en": "Be famous but poor",
+        "fa": "معروف باشی ولی فقیر"
+      },
+      "optionB": {
+        "en": "Be rich but unknown",
+        "fa": "ثروتمند باشی ولی گمنام"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-c-x008",
+      "optionA": {
+        "en": "Have a personal chef",
+        "fa": "یه آشپز شخصی داشته باشی"
+      },
+      "optionB": {
+        "en": "Have a personal driver",
+        "fa": "یه راننده‌ی شخصی داشته باشی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-c-x009",
+      "optionA": {
+        "en": "Read minds but can't turn it off",
+        "fa": "ذهن‌خوانی کنی ولی نتونی خاموشش کنی"
+      },
+      "optionB": {
+        "en": "Be able to teleport but only to places you've already been",
+        "fa": "بتونی تله‌پورت کنی ولی فقط به جاهایی که قبلاً رفتی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-c-x010",
+      "optionA": {
+        "en": "Have summer all year round",
+        "fa": "تمام سال تابستون باشه"
+      },
+      "optionB": {
+        "en": "Have winter all year round",
+        "fa": "تمام سال زمستون باشه"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-c-x011",
+      "optionA": {
+        "en": "Be the funniest person in the room",
+        "fa": "بامزه‌ترین آدم جمع باشی"
+      },
+      "optionB": {
+        "en": "Be the smartest person in the room",
+        "fa": "باهوش‌ترین آدم جمع باشی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-c-x012",
+      "optionA": {
+        "en": "Lose your sense of taste",
+        "fa": "حس چشایی‌ت رو از دست بدی"
+      },
+      "optionB": {
+        "en": "Lose your sense of smell",
+        "fa": "حس بویایی‌ت رو از دست بدی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-c-x013",
+      "optionA": {
+        "en": "Have a rewind button for your life",
+        "fa": "یه دکمه‌ی برگشت برای زندگیت داشته باشی"
+      },
+      "optionB": {
+        "en": "Have a pause button for your life",
+        "fa": "یه دکمه‌ی توقف برای زندگیت داشته باشی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-c-x014",
+      "optionA": {
+        "en": "Never have to sleep again",
+        "fa": "دیگه هیچ‌وقت لازم نباشه بخوابی"
+      },
+      "optionB": {
+        "en": "Never have to eat again",
+        "fa": "دیگه هیچ‌وقت لازم نباشه غذا بخوری"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-c-x015",
+      "optionA": {
+        "en": "Always have to tell the truth",
+        "fa": "همیشه مجبور باشی راست بگی"
+      },
+      "optionB": {
+        "en": "Always have to lie",
+        "fa": "همیشه مجبور باشی دروغ بگی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-c-x016",
+      "optionA": {
+        "en": "Be a master of every musical instrument",
+        "fa": "استاد نواختن هر سازی باشی"
+      },
+      "optionB": {
+        "en": "Be fluent in every sport",
+        "fa": "توی هر ورزشی حرفه‌ای باشی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-c-x017",
+      "optionA": {
+        "en": "Have hands instead of feet",
+        "fa": "به جای پاها دست داشته باشی"
+      },
+      "optionB": {
+        "en": "Have feet instead of hands",
+        "fa": "به جای دست‌ها پا داشته باشی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-c-x018",
+      "optionA": {
+        "en": "Be able to control fire",
+        "fa": "بتونی آتش رو کنترل کنی"
+      },
+      "optionB": {
+        "en": "Be able to control water",
+        "fa": "بتونی آب رو کنترل کنی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-c-x019",
+      "optionA": {
+        "en": "Have free Wi-Fi everywhere you go",
+        "fa": "هرجا بری وای‌فای رایگان داشته باشی"
+      },
+      "optionB": {
+        "en": "Have free coffee everywhere you go",
+        "fa": "هرجا بری قهوه‌ی رایگان داشته باشی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-c-x020",
+      "optionA": {
+        "en": "Fight one horse-sized duck",
+        "fa": "با یه اردک به اندازه‌ی اسب بجنگی"
+      },
+      "optionB": {
+        "en": "Fight a hundred duck-sized horses",
+        "fa": "با صد تا اسب به اندازه‌ی اردک بجنگی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-c-x021",
+      "optionA": {
+        "en": "Live in a treehouse",
+        "fa": "توی یه خونه‌ی درختی زندگی کنی"
+      },
+      "optionB": {
+        "en": "Live in a houseboat",
+        "fa": "توی یه قایق مسکونی زندگی کنی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-c-x022",
+      "optionA": {
+        "en": "Be able to pause any conversation",
+        "fa": "بتونی هر گفتگویی رو متوقف کنی"
+      },
+      "optionB": {
+        "en": "Be able to skip any conversation",
+        "fa": "بتونی هر گفتگویی رو رد کنی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-c-x023",
+      "optionA": {
+        "en": "Have everyone you meet instantly like you",
+        "fa": "هرکسی رو می‌بینی فوری ازت خوشش بیاد"
+      },
+      "optionB": {
+        "en": "Have everyone you meet instantly respect you",
+        "fa": "هرکسی رو می‌بینی فوری برات احترام قائل بشه"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-c-x024",
+      "optionA": {
+        "en": "Only be able to whisper",
+        "fa": "فقط بتونی پچ‌پچ کنی"
+      },
+      "optionB": {
+        "en": "Only be able to shout",
+        "fa": "فقط بتونی داد بزنی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-c-x025",
+      "optionA": {
+        "en": "Have a dragon",
+        "fa": "یه اژدها داشته باشی"
+      },
+      "optionB": {
+        "en": "Be a dragon",
+        "fa": "خودت یه اژدها باشی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-c-x026",
+      "optionA": {
+        "en": "Always say everything on your mind",
+        "fa": "همیشه هرچی توی ذهنته بگی"
+      },
+      "optionB": {
+        "en": "Never speak again",
+        "fa": "دیگه هیچ‌وقت حرف نزنی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-c-x027",
+      "optionA": {
+        "en": "Have a permanent suntan",
+        "fa": "همیشه پوستت برنزه باشه"
+      },
+      "optionB": {
+        "en": "Never get sunburned again",
+        "fa": "دیگه هیچ‌وقت آفتاب‌سوختگی نگیری"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-c-x028",
+      "optionA": {
+        "en": "Have your search history made public",
+        "fa": "تاریخچه‌ی جستجوهات عمومی بشه"
+      },
+      "optionB": {
+        "en": "Have your texts made public",
+        "fa": "پیام‌هات عمومی بشه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-c-x029",
+      "optionA": {
+        "en": "Be able to breathe underwater",
+        "fa": "بتونی زیر آب نفس بکشی"
+      },
+      "optionB": {
+        "en": "Be able to walk through walls",
+        "fa": "بتونی از دیوار رد بشی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-c-x030",
+      "optionA": {
+        "en": "Always win at board games",
+        "fa": "همیشه توی بازی‌های رومیزی ببری"
+      },
+      "optionB": {
+        "en": "Always win at video games",
+        "fa": "همیشه توی بازی‌های ویدئویی ببری"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-c-x031",
+      "optionA": {
+        "en": "Give up your phone for a year",
+        "fa": "یه سال گوشیت رو کنار بذاری"
+      },
+      "optionB": {
+        "en": "Give up dessert for a year",
+        "fa": "یه سال از دسر بگذری"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-c-x032",
+      "optionA": {
+        "en": "Have eyes in the back of your head",
+        "fa": "پشت سرت هم چشم داشته باشی"
+      },
+      "optionB": {
+        "en": "Have an extra pair of arms",
+        "fa": "یه جفت دست اضافه داشته باشی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-c-x033",
+      "optionA": {
+        "en": "Live in a world without clocks",
+        "fa": "توی دنیایی بدون ساعت زندگی کنی"
+      },
+      "optionB": {
+        "en": "Live in a world without calendars",
+        "fa": "توی دنیایی بدون تقویم زندگی کنی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-c-x034",
+      "optionA": {
+        "en": "Date someone gorgeous but boring",
+        "fa": "با یکی خوش‌قیافه ولی خسته‌کننده باشی"
+      },
+      "optionB": {
+        "en": "Date someone plain but hilarious",
+        "fa": "با یکی معمولی ولی بامزه باشی"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-c-x035",
+      "optionA": {
+        "en": "Have super strength",
+        "fa": "قدرت فوق‌العاده داشته باشی"
+      },
+      "optionB": {
+        "en": "Have super speed",
+        "fa": "سرعت فوق‌العاده داشته باشی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-c-x036",
+      "optionA": {
+        "en": "Relive your best day forever",
+        "fa": "بهترین روز زندگیت رو تا ابد دوباره زندگی کنی"
+      },
+      "optionB": {
+        "en": "Live every day as a brand new adventure",
+        "fa": "هر روز رو مثل یه ماجراجویی کاملاً نو زندگی کنی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-c-x037",
+      "optionA": {
+        "en": "Have a tail you can control",
+        "fa": "یه دم داشته باشی که بتونی کنترلش کنی"
+      },
+      "optionB": {
+        "en": "Have wings you can't use to fly",
+        "fa": "بال داشته باشی که نتونی باهاش پرواز کنی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-c-x038",
+      "optionA": {
+        "en": "Always have spinach in your teeth",
+        "fa": "همیشه لای دندونت اسفناج باشه"
+      },
+      "optionB": {
+        "en": "Always have a small stain on your shirt",
+        "fa": "همیشه یه لکه‌ی کوچیک رو پیراهنت باشه"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-c-x039",
+      "optionA": {
+        "en": "Be stuck on a deserted island alone",
+        "fa": "تنها توی یه جزیره‌ی متروکه گیر بیفتی"
+      },
+      "optionB": {
+        "en": "Be stuck on a deserted island with someone annoying",
+        "fa": "با یه آدم اعصاب‌خرد‌کن توی یه جزیره‌ی متروکه گیر بیفتی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-c-x040",
+      "optionA": {
+        "en": "Have a robot best friend",
+        "fa": "یه ربات به‌عنوان بهترین دوست داشته باشی"
+      },
+      "optionB": {
+        "en": "Have a talking pet",
+        "fa": "یه حیوون خونگی سخنگو داشته باشی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-c-x041",
+      "optionA": {
+        "en": "Have everyone hear your thoughts for a day",
+        "fa": "یه روز همه افکارت رو بشنون"
+      },
+      "optionB": {
+        "en": "Hear everyone's thoughts about you for a day",
+        "fa": "یه روز افکار همه درباره‌ی خودت رو بشنوی"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-c-x042",
+      "optionA": {
+        "en": "Be able to change your hair color at will",
+        "fa": "بتونی هر وقت خواستی رنگ موهات رو عوض کنی"
+      },
+      "optionB": {
+        "en": "Be able to change your eye color at will",
+        "fa": "بتونی هر وقت خواستی رنگ چشمت رو عوض کنی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-c-x043",
+      "optionA": {
+        "en": "Forget every movie you've ever seen",
+        "fa": "همه‌ی فیلم‌هایی که دیدی رو فراموش کنی"
+      },
+      "optionB": {
+        "en": "Forget every book you've ever read",
+        "fa": "همه‌ی کتاب‌هایی که خوندی رو فراموش کنی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-c-x044",
+      "optionA": {
+        "en": "Sweat maple syrup",
+        "fa": "به جای عرق، شیره‌ی افرا ازت بزنه"
+      },
+      "optionB": {
+        "en": "Cry glitter",
+        "fa": "به جای اشک، اکلیل ازت بریزه"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-c-x045",
+      "optionA": {
+        "en": "Have a personal theme song that plays when you enter a room",
+        "fa": "وقتی وارد اتاق میشی یه آهنگ مخصوص خودت پخش بشه"
+      },
+      "optionB": {
+        "en": "Have a narrator describe your every move",
+        "fa": "یه راوی هر حرکتت رو توصیف کنه"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-c-x046",
+      "optionA": {
+        "en": "Win the lottery but lose all your friends",
+        "fa": "توی لاتاری ببری ولی همه‌ی دوستات رو از دست بدی"
+      },
+      "optionB": {
+        "en": "Keep all your friends but always be broke",
+        "fa": "همه‌ی دوستات رو نگه داری ولی همیشه بی‌پول باشی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-c-x047",
+      "optionA": {
+        "en": "Always have a song stuck in your head",
+        "fa": "همیشه یه آهنگ توی سرت گیر کرده باشه"
+      },
+      "optionB": {
+        "en": "Always have an itch you can't reach",
+        "fa": "همیشه یه جای بدنت بخاره که دستت بهش نرسه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-c-x048",
+      "optionA": {
+        "en": "Be able to teleport anywhere instantly",
+        "fa": "بتونی فوری به هرجایی تله‌پورت کنی"
+      },
+      "optionB": {
+        "en": "Be able to stop time whenever you want",
+        "fa": "بتونی هر وقت خواستی زمان رو متوقف کنی"
+      },
+      "intensity": "mild"
     }
   ]
 }

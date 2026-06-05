@@ -304,5 +304,248 @@
     },
     "category": "objects",
     "difficulty": "hard"
+  },
+  {
+    "id": "objects-x001",
+    "word": {
+      "en": "kettle",
+      "fa": "کتری"
+    },
+    "category": "objects",
+    "difficulty": "med"
+  },
+  {
+    "id": "objects-x002",
+    "word": {
+      "en": "fork",
+      "fa": "چنگال"
+    },
+    "category": "objects",
+    "difficulty": "easy"
+  },
+  {
+    "id": "objects-x003",
+    "word": {
+      "en": "knife",
+      "fa": "چاقو"
+    },
+    "category": "objects",
+    "difficulty": "easy"
+  },
+  {
+    "id": "objects-x004",
+    "word": {
+      "en": "broom",
+      "fa": "جارو"
+    },
+    "category": "objects",
+    "difficulty": "easy"
+  },
+  {
+    "id": "objects-x005",
+    "word": {
+      "en": "blanket",
+      "fa": "پتو"
+    },
+    "category": "objects",
+    "difficulty": "easy"
+  },
+  {
+    "id": "objects-x006",
+    "word": {
+      "en": "frying pan",
+      "fa": "ماهیتابه"
+    },
+    "category": "objects",
+    "difficulty": "med"
+  },
+  {
+    "id": "objects-x007",
+    "word": {
+      "en": "teapot",
+      "fa": "قوری"
+    },
+    "category": "objects",
+    "difficulty": "med"
+  },
+  {
+    "id": "objects-x008",
+    "word": {
+      "en": "flashlight",
+      "fa": "چراغ‌قوه"
+    },
+    "category": "objects",
+    "difficulty": "med"
+  },
+  {
+    "id": "objects-x009",
+    "word": {
+      "en": "screwdriver",
+      "fa": "پیچ‌گوشتی"
+    },
+    "category": "objects",
+    "difficulty": "med"
+  },
+  {
+    "id": "objects-x010",
+    "word": {
+      "en": "wrench",
+      "fa": "آچار"
+    },
+    "category": "objects",
+    "difficulty": "hard"
+  },
+  {
+    "id": "objects-x011",
+    "word": {
+      "en": "needle",
+      "fa": "سوزن"
+    },
+    "category": "objects",
+    "difficulty": "med"
+  },
+  {
+    "id": "objects-x012",
+    "word": {
+      "en": "thimble",
+      "fa": "انگشتانه"
+    },
+    "category": "objects",
+    "difficulty": "hard"
+  },
+  {
+    "id": "objects-x013",
+    "word": {
+      "en": "envelope",
+      "fa": "پاکت نامه"
+    },
+    "category": "objects",
+    "difficulty": "med"
+  },
+  {
+    "id": "objects-x014",
+    "word": {
+      "en": "ruler",
+      "fa": "خط‌کش"
+    },
+    "category": "objects",
+    "difficulty": "easy"
+  },
+  {
+    "id": "objects-x015",
+    "word": {
+      "en": "eraser",
+      "fa": "پاک‌کن"
+    },
+    "category": "objects",
+    "difficulty": "easy"
+  },
+  {
+    "id": "objects-x016",
+    "word": {
+      "en": "pencil",
+      "fa": "مداد"
+    },
+    "category": "objects",
+    "difficulty": "easy"
+  },
+  {
+    "id": "objects-x017",
+    "word": {
+      "en": "notebook",
+      "fa": "دفترچه"
+    },
+    "category": "objects",
+    "difficulty": "easy"
+  },
+  {
+    "id": "objects-x018",
+    "word": {
+      "en": "ladle",
+      "fa": "ملاقه"
+    },
+    "category": "objects",
+    "difficulty": "hard"
+  },
+  {
+    "id": "objects-x019",
+    "word": {
+      "en": "colander",
+      "fa": "آبکش"
+    },
+    "category": "objects",
+    "difficulty": "hard"
+  },
+  {
+    "id": "objects-x020",
+    "word": {
+      "en": "grater",
+      "fa": "رنده"
+    },
+    "category": "objects",
+    "difficulty": "hard"
+  },
+  {
+    "id": "objects-x021",
+    "word": {
+      "en": "rope",
+      "fa": "طناب"
+    },
+    "category": "objects",
+    "difficulty": "easy"
+  },
+  {
+    "id": "objects-x022",
+    "word": {
+      "en": "chain",
+      "fa": "زنجیر"
+    },
+    "category": "objects",
+    "difficulty": "med"
+  },
+  {
+    "id": "objects-x023",
+    "word": {
+      "en": "mug",
+      "fa": "ماگ"
+    },
+    "category": "objects",
+    "difficulty": "easy"
+  },
+  {
+    "id": "objects-x024",
+    "word": {
+      "en": "plate",
+      "fa": "بشقاب"
+    },
+    "category": "objects",
+    "difficulty": "easy"
+  },
+  {
+    "id": "objects-x025",
+    "word": {
+      "en": "bottle",
+      "fa": "بطری"
+    },
+    "category": "objects",
+    "difficulty": "easy"
+  },
+  {
+    "id": "objects-x026",
+    "word": {
+      "en": "carpet",
+      "fa": "فرش"
+    },
+    "category": "objects",
+    "difficulty": "easy"
+  },
+  {
+    "id": "objects-x027",
+    "word": {
+      "en": "curtain",
+      "fa": "پرده"
+    },
+    "category": "objects",
+    "difficulty": "med"
   }
 ]

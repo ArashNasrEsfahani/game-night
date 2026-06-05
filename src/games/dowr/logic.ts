@@ -1,311 +1,252 @@
-// src/games/dowr/logic.ts — PURE game logic for Dowr. No clock/RNG/IO; seeds/now arrive in payloads.
-import type { ColorToken, GameConfig, GameStateBase, PlayerId } from '../../sdk/types';
+// src/games/dowr/logic.ts — PURE game logic for Dowr.
+// A FAST, CONTINUOUS timed relay. N players in N/2 teams of two. The phone races around the
+// teams: one member describes a word (without saying it) while their teammate guesses. A
+// stopwatch runs the whole time. The instant the teammate gets it, tap "Got it!" — the time
+// that team spent is banked and the NEXT team's word appears immediately (no handoff screens).
+// A bomb fuse runs each word; if it blows first, the team eats the elapsed time plus a penalty.
+// Changing a word also costs penalty time. After every team has had `rounds` turns, the team
+// with the LOWEST total time wins.
+//
+// Timing lives in the SCREEN (refs), not here: the view measures each segment against the wall
+// clock and passes `segmentMs` in the ADVANCE action, so this reducer stays pure and the match
+// survives a resume without the clock "jumping". State only ever holds banked totals.
+import type { ColorToken, GameConfig, GameStateBase } from '../../sdk/types';
 import type { DeckState } from '../../engine/deck';
-import type { ScoreState } from '../../engine/scoring';
-import type { TurnOrderState } from '../../engine/turnOrder';
-import type { RevealGateState } from '../../engine/revealGate';
-import type { TimerState } from '../../engine/timer';
 import * as deck from '../../engine/deck';
-import * as scoring from '../../engine/scoring';
-import * as turnOrder from '../../engine/turnOrder';
-import * as revealGate from '../../engine/revealGate';
-import * as timer from '../../engine/timer';
-import * as phaseMachine from '../../engine/phaseMachine';
-import * as results from '../../engine/results';
-import { asPlayerId } from '../../engine/ids';
+import * as rng from '../../engine/rng';
 import { buildPool } from './deck';
 import { readOptions } from './config';
 import type { DowrOptions } from './config';
 
-export type DowrPhase =
-  | 'roundIntro'
-  | 'reveal'
-  | 'describing'
-  | 'turnSummary'
-  | 'gameOver'
-  | 'error';
+export type DowrPhase = 'playing' | 'gameOver' | 'error';
+export type TurnEndReason = 'guessed' | 'bomb' | 'deckExhausted';
 
-export type TurnEndReason = 'timeExpired' | 'deckExhausted' | 'manualEnd';
-
-export interface TurnEvent {
-  cardId: string;
-  result: 'correct' | 'skip';
+export interface DowrTeam {
+  id: string;
+  name: string;
+  color: ColorToken;
+  /** Exactly two member player ids. */
+  memberIds: string[];
 }
 
 export interface TurnRecord {
-  turnIndex: number;
-  round: number;
-  describerSeat: number;
-  describerPlayerId: string;
-  scorerId: string;
-  correct: number;
-  skipped: number;
-  delta: number;
-  endReason: TurnEndReason;
+  turnNo: number;
+  round: number; // 0-based
+  teamId: string;
+  describerId: string;
+  guesserId: string;
+  segmentMs: number;
+  changes: number;
+  changePenaltyMs: number;
+  bombPenaltyMs: number;
+  totalMs: number; // what was added to the team's total this turn
+  reason: TurnEndReason;
+  solved: boolean;
 }
 
 export interface DowrState extends GameStateBase {
   phase: DowrPhase;
   options: DowrOptions;
-  seatCount: number;
-  playerIds: string[];
+  teams: DowrTeam[];
   playerNames: Record<string, string>;
-  /** seat index → scorerId (teamId in teams mode, playerId in solo mode). */
-  seatToScorer: string[];
-  scorerIds: string[];
-  scorerLabels: Record<string, string>;
-  scorerColors: Record<string, ColorToken | undefined>;
   deck: DeckState<string>;
-  turn: TurnOrderState;
-  gate: RevealGateState;
-  clock: TimerState;
+  /** Global 0-based turn counter. team = teams[turnNo % teams.length]. */
+  turnNo: number;
+  totalTurns: number;
   currentCardId: string | null;
-  turnCorrect: number;
-  turnSkipped: number;
-  turnEvents: TurnEvent[];
-  lastTurnEndReason: TurnEndReason | null;
+  /** Bomb fuse for the current word (ms) — jittered when surpriseBomb is on. */
+  fuseMs: number;
+  /** Word changes on the current word (reset each turn). */
+  turnChanges: number;
+  /** Accumulated change penalty for the current turn (ms), banked on ADVANCE. */
+  changePenaltyMs: number;
+  /** teamId → cumulative time in ms (lower is better). */
+  totals: Record<string, number>;
+  /** Transient: set to 'bomb' for one render so the view can flash; cleared via CLEAR_FLASH. */
+  flash: 'bomb' | null;
   history: TurnRecord[];
-  score: ScoreState;
-  errorCode: 'EMPTY_DECK' | null;
+  lastRecord: TurnRecord | null;
+  errorCode: 'EMPTY_DECK' | 'NEED_TEAMS' | null;
 }
 
 export type DowrAction =
-  | { type: 'BEGIN_TURN' }
-  | { type: 'REVEAL' }
-  | { type: 'START_DESCRIBE'; now: number }
-  | { type: 'TICK'; now: number }
-  | { type: 'CORRECT' }
-  | { type: 'SKIP' }
-  | { type: 'END_TURN_EARLY'; now: number }
-  | { type: 'NEXT_TURN'; seed: number }
+  | { type: 'ADVANCE'; reason: 'guessed' | 'bomb'; segmentMs: number; seed: number }
+  | { type: 'CHANGE_WORD'; seed: number }
+  | { type: 'CLEAR_FLASH' }
   | { type: 'RESET' };
 
-const MACHINE = phaseMachine.defineMachine<DowrPhase>({
-  initial: 'roundIntro',
-  nodes: {
-    roundIntro: { id: 'roundIntro', to: ['reveal', 'error'] },
-    reveal: { id: 'reveal', to: ['describing', 'turnSummary'] },
-    describing: { id: 'describing', to: ['turnSummary'] },
-    turnSummary: { id: 'turnSummary', to: ['roundIntro', 'gameOver'] },
-    gameOver: { id: 'gameOver', to: [], terminal: true },
-    error: { id: 'error', to: [], terminal: true },
-  },
-});
+const TEAM_COLORS: ColorToken[] = ['rose', 'sky', 'lime', 'gold', 'violet', 'teal'];
 
-const TEAM_COLORS: ColorToken[] = ['rose', 'sky', 'lime', 'gold', 'violet'];
+/** The fuse for a turn: the configured length, jittered down to 60–100% when surpriseBomb is on. */
+function computeFuseMs(o: DowrOptions, seed: number): number {
+  if (!o.surpriseBomb) return o.fuseSeconds * 1000;
+  const lo = Math.max(10, Math.round(o.fuseSeconds * 0.6));
+  return rng.int(lo, o.fuseSeconds, seed) * 1000;
+}
 
-function drawNext(d: DeckState<string>): { deck: DeckState<string>; cardId: string | null } {
-  if (deck.remaining(d) <= 0) return { deck: d, cardId: null };
-  const r = deck.draw(d, 1, 0);
+function drawCard(d: DeckState<string>, seed: number): { deck: DeckState<string>; cardId: string | null } {
+  const r = deck.draw(d, 1, seed);
   return { deck: r.deck, cardId: r.drawn[0] ?? null };
 }
 
-function finalizeTurn(s: DowrState, reason: TurnEndReason, now: number): DowrState {
-  const seat = s.turn.index;
-  const scorerId = s.seatToScorer[seat];
-  const delta = s.turnCorrect - (s.options.skipPenalty ? s.turnSkipped : 0);
-  const record: TurnRecord = {
-    turnIndex: s.history.length,
-    round: s.turn.round + 1,
-    describerSeat: seat,
-    describerPlayerId: s.playerIds[seat],
-    scorerId,
-    correct: s.turnCorrect,
-    skipped: s.turnSkipped,
-    delta,
-    endReason: reason,
-  };
+/* ─────────────────────────  Turn participants (derived)  ───────────────────────── */
+
+export const teamForTurn = (s: DowrState, turnNo: number): DowrTeam =>
+  s.teams[turnNo % s.teams.length];
+export const roundForTurn = (s: DowrState, turnNo: number): number =>
+  Math.floor(turnNo / s.teams.length);
+export const currentTeam = (s: DowrState): DowrTeam => teamForTurn(s, s.turnNo);
+/** Within a team the describer alternates between its two members each round. */
+export const describerPlayerId = (s: DowrState): string => {
+  const team = currentTeam(s);
+  return team.memberIds[roundForTurn(s, s.turnNo) % 2];
+};
+export const guesserPlayerId = (s: DowrState): string => {
+  const team = currentTeam(s);
+  return team.memberIds[(roundForTurn(s, s.turnNo) + 1) % 2];
+};
+
+function makeRecord(s: DowrState, reason: TurnEndReason, segmentMs: number, bombPenaltyMs: number): TurnRecord {
   return {
-    ...s,
-    phase: 'turnSummary',
-    currentCardId: null,
-    lastTurnEndReason: reason,
-    history: [...s.history, record],
-    score: scoring.add(s.score, scorerId, delta, reason, now),
-    clock: timer.pause(s.clock, now),
+    turnNo: s.turnNo,
+    round: roundForTurn(s, s.turnNo),
+    teamId: currentTeam(s).id,
+    describerId: describerPlayerId(s),
+    guesserId: guesserPlayerId(s),
+    segmentMs,
+    changes: s.turnChanges,
+    changePenaltyMs: s.changePenaltyMs,
+    bombPenaltyMs,
+    totalMs: segmentMs + s.changePenaltyMs + bombPenaltyMs,
+    reason,
+    solved: reason === 'guessed',
   };
 }
 
 export function createInitialState(config: GameConfig, seed: number): DowrState {
   const options = readOptions(config);
   const players = config.players;
-  const seatCount = players.length;
-  const playerIds = players.map((p) => p.id as string);
   const playerNames: Record<string, string> = {};
   players.forEach((p) => {
     playerNames[p.id] = p.name;
   });
 
-  const teamsMode = options.mode === 'teams';
-  const teamList = teamsMode ? (config.teams?.teams ?? []) : [];
-
-  const seatToScorer = players.map((p) => {
-    if (teamsMode) {
-      const team = teamList.find((t) => t.memberIds.includes(p.id));
-      return team ? (team.id as string) : (p.id as string);
-    }
-    return p.id as string;
-  });
-
-  const scorerIds = teamsMode ? teamList.map((t) => t.id as string) : playerIds;
-  const scorerLabels: Record<string, string> = {};
-  const scorerColors: Record<string, ColorToken | undefined> = {};
-  if (teamsMode) {
-    teamList.forEach((t, i) => {
-      const nm =
-        typeof t.name === 'string'
-          ? t.name
-          : t.name
-            ? (t.name[config.lang] ?? t.name.en)
-            : `Team ${i + 1}`;
-      scorerLabels[t.id] = nm;
-      scorerColors[t.id] = TEAM_COLORS[i % TEAM_COLORS.length];
-    });
-  } else {
-    players.forEach((p) => {
-      scorerLabels[p.id] = p.name;
-      scorerColors[p.id] = p.color;
-    });
-  }
+  const supplied = config.teams?.teams ?? [];
+  const teams: DowrTeam[] =
+    supplied.length > 0
+      ? supplied.map((t, i) => ({
+          id: t.id as string,
+          name:
+            typeof t.name === 'string'
+              ? t.name
+              : t.name
+                ? (t.name[config.lang] ?? t.name.en)
+                : `Team ${i + 1}`,
+          color: TEAM_COLORS[i % TEAM_COLORS.length],
+          memberIds: (t.memberIds as string[]).slice(0, 2),
+        }))
+      : Array.from({ length: Math.floor(players.length / 2) }, (_, i) => ({
+          id: `t${i}`,
+          name: `Team ${i + 1}`,
+          color: TEAM_COLORS[i % TEAM_COLORS.length],
+          memberIds: [players[2 * i].id as string, players[2 * i + 1].id as string],
+        }));
 
   const pool = buildPool(options);
-  const deckState = deck.create(
+  let deckState = deck.create(
     pool.map((c) => c.id),
     seed,
   );
-  const turn = turnOrder.init(playerIds as unknown as PlayerId[], 'circular', seed);
-  const empty = pool.length === 0 || seatCount < 1;
+  const validTeams = teams.length >= 2 && teams.every((t) => t.memberIds.length === 2);
+  const emptyDeck = pool.length === 0;
+
+  const totals: Record<string, number> = {};
+  teams.forEach((t) => (totals[t.id] = 0));
+
+  let currentCardId: string | null = null;
+  let fuseMs = options.fuseSeconds * 1000;
+  if (!emptyDeck && validTeams) {
+    const r = drawCard(deckState, seed);
+    deckState = r.deck;
+    currentCardId = r.cardId;
+    fuseMs = computeFuseMs(options, rng.deriveSeed(seed, 7));
+  }
 
   return {
-    v: 1,
-    phase: empty ? 'error' : 'roundIntro',
+    v: 2,
+    phase: emptyDeck || !validTeams ? 'error' : 'playing',
     finished: false,
     options,
-    seatCount,
-    playerIds,
+    teams,
     playerNames,
-    seatToScorer,
-    scorerIds,
-    scorerLabels,
-    scorerColors,
     deck: deckState,
-    turn,
-    gate: revealGate.init([]),
-    clock: timer.create('countdown', options.timerSeconds * 1000),
-    currentCardId: null,
-    turnCorrect: 0,
-    turnSkipped: 0,
-    turnEvents: [],
-    lastTurnEndReason: null,
+    turnNo: 0,
+    totalTurns: teams.length * options.rounds,
+    currentCardId,
+    fuseMs,
+    turnChanges: 0,
+    changePenaltyMs: 0,
+    totals,
+    flash: null,
     history: [],
-    score: scoring.create(scorerIds),
-    errorCode: pool.length === 0 ? 'EMPTY_DECK' : null,
+    lastRecord: null,
+    errorCode: emptyDeck ? 'EMPTY_DECK' : !validTeams ? 'NEED_TEAMS' : null,
   };
 }
 
 export function reducer(state: DowrState, action: DowrAction): DowrState {
   const s = state;
   switch (action.type) {
-    case 'BEGIN_TURN': {
-      if (s.phase !== 'roundIntro') return s;
-      const describerId = s.playerIds[s.turn.index];
-      const base: DowrState = {
+    case 'ADVANCE': {
+      if (s.phase !== 'playing' || s.currentCardId === null) return s;
+      const team = currentTeam(s);
+      const segmentMs = Math.max(0, Math.min(action.segmentMs, s.fuseMs));
+      const bombPenaltyMs = action.reason === 'bomb' ? s.options.bombPenaltySeconds * 1000 : 0;
+      const addMs = segmentMs + s.changePenaltyMs + bombPenaltyMs;
+      const record = makeRecord(s, action.reason, segmentMs, bombPenaltyMs);
+      const totals = { ...s.totals, [team.id]: (s.totals[team.id] ?? 0) + addMs };
+      const consumed = deck.discard(s.deck, s.currentCardId);
+      const nextTurnNo = s.turnNo + 1;
+      const common = {
         ...s,
-        turnCorrect: 0,
-        turnSkipped: 0,
-        turnEvents: [],
-        lastTurnEndReason: null,
-        gate: revealGate.init([asPlayerId(describerId)]),
-        clock: timer.create('countdown', s.options.timerSeconds * 1000),
+        totals,
+        history: [...s.history, record],
+        lastRecord: record,
+        flash: action.reason === 'bomb' ? ('bomb' as const) : null,
+        turnChanges: 0,
+        changePenaltyMs: 0,
       };
-      const { deck: d, cardId } = drawNext(base.deck);
+      if (nextTurnNo >= s.totalTurns) {
+        return { ...common, phase: 'gameOver', finished: true, deck: consumed, currentCardId: null };
+      }
+      const { deck: d, cardId } = drawCard(consumed, action.seed);
       if (cardId === null) {
-        return finalizeTurn({ ...base, currentCardId: null }, 'deckExhausted', 0);
+        return { ...common, phase: 'gameOver', finished: true, deck: consumed, currentCardId: null };
       }
       return {
-        ...base,
+        ...common,
         deck: d,
         currentCardId: cardId,
-        phase: phaseMachine.go(MACHINE, s.phase, 'reveal'),
+        turnNo: nextTurnNo,
+        fuseMs: computeFuseMs(s.options, action.seed),
       };
     }
-    case 'REVEAL': {
-      if (s.phase !== 'reveal') return s;
-      return { ...s, gate: revealGate.reveal(s.gate) };
-    }
-    case 'START_DESCRIBE': {
-      if (s.phase !== 'reveal') return s;
+    case 'CHANGE_WORD': {
+      if (s.phase !== 'playing' || s.currentCardId === null) return s;
+      const discarded = deck.discard(s.deck, s.currentCardId);
+      const { deck: d, cardId } = drawCard(discarded, action.seed);
+      if (cardId === null) return s; // nothing to swap to; keep the current word
       return {
         ...s,
-        phase: phaseMachine.go(MACHINE, s.phase, 'describing'),
-        clock: timer.start(
-          timer.create('countdown', s.options.timerSeconds * 1000),
-          action.now,
-        ),
+        deck: d,
+        currentCardId: cardId,
+        turnChanges: s.turnChanges + 1,
+        changePenaltyMs: s.changePenaltyMs + s.options.changePenaltySeconds * 1000,
       };
     }
-    case 'TICK': {
-      if (s.phase !== 'describing') return s;
-      const clock = timer.tick(s.clock, action.now);
-      if (timer.isExpired(clock, action.now)) {
-        return finalizeTurn({ ...s, clock }, 'timeExpired', action.now);
-      }
-      return { ...s, clock };
-    }
-    case 'CORRECT': {
-      if (s.phase !== 'describing' || s.currentCardId === null) return s;
-      const turnEvents: TurnEvent[] = [
-        ...s.turnEvents,
-        { cardId: s.currentCardId, result: 'correct' },
-      ];
-      const turnCorrect = s.turnCorrect + 1;
-      const { deck: d, cardId } = drawNext(s.deck);
-      if (cardId === null) {
-        return finalizeTurn(
-          { ...s, turnCorrect, turnEvents, deck: d, currentCardId: null },
-          'deckExhausted',
-          0,
-        );
-      }
-      return { ...s, turnCorrect, turnEvents, deck: d, currentCardId: cardId };
-    }
-    case 'SKIP': {
-      if (s.phase !== 'describing' || s.currentCardId === null) return s;
-      const turnEvents: TurnEvent[] = [
-        ...s.turnEvents,
-        { cardId: s.currentCardId, result: 'skip' },
-      ];
-      const turnSkipped = s.turnSkipped + 1;
-      const { deck: d, cardId } = drawNext(s.deck);
-      if (cardId === null) {
-        return finalizeTurn(
-          { ...s, turnSkipped, turnEvents, deck: d, currentCardId: null },
-          'deckExhausted',
-          0,
-        );
-      }
-      return { ...s, turnSkipped, turnEvents, deck: d, currentCardId: cardId };
-    }
-    case 'END_TURN_EARLY': {
-      if (s.phase !== 'describing') return s;
-      return finalizeTurn(s, 'manualEnd', action.now);
-    }
-    case 'NEXT_TURN': {
-      if (s.phase !== 'turnSummary') return s;
-      const turn = turnOrder.next(s.turn, action.seed);
-      if (turn.round >= s.options.rounds) {
-        return { ...s, turn, phase: 'gameOver', finished: true };
-      }
-      return {
-        ...s,
-        turn,
-        phase: 'roundIntro',
-        currentCardId: null,
-        turnCorrect: 0,
-        turnSkipped: 0,
-        turnEvents: [],
-        lastTurnEndReason: null,
-      };
+    case 'CLEAR_FLASH': {
+      if (!s.flash) return s;
+      return { ...s, flash: null };
     }
     case 'RESET':
       return s; // no-op; "play again" is host-driven (re-creates with a fresh seed)
@@ -316,12 +257,43 @@ export function reducer(state: DowrState, action: DowrAction): DowrState {
 
 /* ─────────────────────────  Pure selectors  ───────────────────────── */
 
-export const describerSeat = (s: DowrState): number => s.turn.index;
-export const describerPlayerId = (s: DowrState): string => s.playerIds[s.turn.index];
-export const currentRound = (s: DowrState): number => s.turn.round + 1;
-export const totalTurns = (s: DowrState): number => s.options.rounds * s.seatCount;
-export const isLastTurn = (s: DowrState): boolean =>
-  s.turn.round === s.options.rounds - 1 && s.turn.index === s.seatCount - 1;
-export const selectStandings = (s: DowrState) => results.fromScores(s.score).standings;
-export const selectWinners = (s: DowrState): string[] => results.fromScores(s.score).winners;
-export const selectResult = (s: DowrState) => results.fromScores(s.score);
+export const currentRound = (s: DowrState): number => roundForTurn(s, s.turnNo) + 1;
+export const describerName = (s: DowrState): string => s.playerNames[describerPlayerId(s)] ?? '';
+export const guesserName = (s: DowrState): string => s.playerNames[guesserPlayerId(s)] ?? '';
+export const isLastTurn = (s: DowrState): boolean => s.turnNo >= s.totalTurns - 1;
+
+export interface DowrStanding {
+  subjectId: string;
+  label: string;
+  color?: ColorToken;
+  totalMs: number;
+  rank: number;
+}
+
+/** Teams sorted by total time ASCENDING (fastest first); ties share a rank. */
+export function selectStandings(s: DowrState): DowrStanding[] {
+  const rows = s.teams
+    .map((t) => ({
+      subjectId: t.id,
+      label: t.name,
+      color: t.color,
+      totalMs: s.totals[t.id] ?? 0,
+    }))
+    .sort((a, b) => a.totalMs - b.totalMs);
+  let rank = 0;
+  let prev: number | null = null;
+  return rows.map((row, i) => {
+    if (prev === null || row.totalMs !== prev) {
+      rank = i + 1;
+      prev = row.totalMs;
+    }
+    return { ...row, rank };
+  });
+}
+
+/** The fastest team(s) — lowest total time. */
+export function selectWinners(s: DowrState): string[] {
+  if (s.teams.length === 0) return [];
+  const min = Math.min(...s.teams.map((t) => s.totals[t.id] ?? 0));
+  return s.teams.filter((t) => (s.totals[t.id] ?? 0) === min).map((t) => t.id);
+}

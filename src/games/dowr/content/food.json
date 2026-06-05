@@ -304,5 +304,257 @@
     },
     "category": "food",
     "difficulty": "hard"
+  },
+  {
+    "id": "food-x001",
+    "word": {
+      "en": "pizza",
+      "fa": "پیتزا"
+    },
+    "category": "food",
+    "difficulty": "easy"
+  },
+  {
+    "id": "food-x002",
+    "word": {
+      "en": "watermelon",
+      "fa": "هندوانه"
+    },
+    "category": "food",
+    "difficulty": "easy"
+  },
+  {
+    "id": "food-x003",
+    "word": {
+      "en": "banana",
+      "fa": "موز"
+    },
+    "category": "food",
+    "difficulty": "easy"
+  },
+  {
+    "id": "food-x004",
+    "word": {
+      "en": "chicken",
+      "fa": "مرغ"
+    },
+    "category": "food",
+    "difficulty": "easy"
+  },
+  {
+    "id": "food-x005",
+    "word": {
+      "en": "coffee",
+      "fa": "قهوه"
+    },
+    "category": "food",
+    "difficulty": "easy"
+  },
+  {
+    "id": "food-x006",
+    "word": {
+      "en": "water",
+      "fa": "آب"
+    },
+    "category": "food",
+    "difficulty": "easy"
+  },
+  {
+    "id": "food-x007",
+    "word": {
+      "en": "milk",
+      "fa": "شیر"
+    },
+    "category": "food",
+    "difficulty": "easy"
+  },
+  {
+    "id": "food-x008",
+    "word": {
+      "en": "orange juice",
+      "fa": "آب‌پرتقال"
+    },
+    "category": "food",
+    "difficulty": "easy"
+  },
+  {
+    "id": "food-x009",
+    "word": {
+      "en": "kebab",
+      "fa": "کباب"
+    },
+    "category": "food",
+    "difficulty": "easy"
+  },
+  {
+    "id": "food-x010",
+    "word": {
+      "en": "saffron",
+      "fa": "زعفران"
+    },
+    "category": "food",
+    "difficulty": "med"
+  },
+  {
+    "id": "food-x011",
+    "word": {
+      "en": "hamburger",
+      "fa": "همبرگر"
+    },
+    "category": "food",
+    "difficulty": "med"
+  },
+  {
+    "id": "food-x012",
+    "word": {
+      "en": "spaghetti",
+      "fa": "اسپاگتی"
+    },
+    "category": "food",
+    "difficulty": "med"
+  },
+  {
+    "id": "food-x013",
+    "word": {
+      "en": "salad",
+      "fa": "سالاد"
+    },
+    "category": "food",
+    "difficulty": "med"
+  },
+  {
+    "id": "food-x014",
+    "word": {
+      "en": "omelette",
+      "fa": "املت"
+    },
+    "category": "food",
+    "difficulty": "med"
+  },
+  {
+    "id": "food-x015",
+    "word": {
+      "en": "pomegranate",
+      "fa": "انار"
+    },
+    "category": "food",
+    "difficulty": "med"
+  },
+  {
+    "id": "food-x016",
+    "word": {
+      "en": "dates",
+      "fa": "خرما"
+    },
+    "category": "food",
+    "difficulty": "med"
+  },
+  {
+    "id": "food-x017",
+    "word": {
+      "en": "garlic",
+      "fa": "سیر"
+    },
+    "category": "food",
+    "difficulty": "med"
+  },
+  {
+    "id": "food-x018",
+    "word": {
+      "en": "lemonade",
+      "fa": "لیموناد"
+    },
+    "category": "food",
+    "difficulty": "med"
+  },
+  {
+    "id": "food-x019",
+    "word": {
+      "en": "grilled corn",
+      "fa": "بلال"
+    },
+    "category": "food",
+    "difficulty": "med"
+  },
+  {
+    "id": "food-x020",
+    "word": {
+      "en": "saffron rice",
+      "fa": "پلو زعفرانی"
+    },
+    "category": "food",
+    "difficulty": "med"
+  },
+  {
+    "id": "food-x021",
+    "word": {
+      "en": "grape juice",
+      "fa": "آب‌انگور"
+    },
+    "category": "food",
+    "difficulty": "med"
+  },
+  {
+    "id": "food-x022",
+    "word": {
+      "en": "ghormeh sabzi",
+      "fa": "قرمه‌سبزی"
+    },
+    "category": "food",
+    "difficulty": "hard"
+  },
+  {
+    "id": "food-x023",
+    "word": {
+      "en": "fesenjan",
+      "fa": "فسنجان"
+    },
+    "category": "food",
+    "difficulty": "hard"
+  },
+  {
+    "id": "food-x024",
+    "word": {
+      "en": "tahdig",
+      "fa": "ته‌دیگ"
+    },
+    "category": "food",
+    "difficulty": "hard"
+  },
+  {
+    "id": "food-x025",
+    "word": {
+      "en": "ash reshteh",
+      "fa": "آش رشته"
+    },
+    "category": "food",
+    "difficulty": "hard"
+  },
+  {
+    "id": "food-x026",
+    "word": {
+      "en": "dizi",
+      "fa": "دیزی"
+    },
+    "category": "food",
+    "difficulty": "hard"
+  },
+  {
+    "id": "food-x027",
+    "word": {
+      "en": "tamarind",
+      "fa": "تمر هندی"
+    },
+    "category": "food",
+    "difficulty": "hard"
+  },
+  {
+    "id": "food-x028",
+    "word": {
+      "en": "sangak",
+      "fa": "سنگک"
+    },
+    "category": "food",
+    "difficulty": "hard"
   }
 ]

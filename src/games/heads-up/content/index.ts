@@ -2,6 +2,7 @@ import animals from './animals.json';
 import movies from './movies.json';
 import actions from './actions.json';
 import food from './food.json';
+import tv from './tv.json';
 import type { LocalizedString } from '../../../sdk/types';
 
 export interface Card {
@@ -18,7 +19,7 @@ export interface Deck {
   cards: Card[];
 }
 
-export const DECKS: Deck[] = [animals as Deck, movies as Deck, actions as Deck, food as Deck];
+export const DECKS: Deck[] = [animals as Deck, movies as Deck, tv as Deck, actions as Deck, food as Deck];
 
 export const DECK_BY_ID: Record<string, Deck> = Object.fromEntries(DECKS.map((d) => [d.id, d]));
 

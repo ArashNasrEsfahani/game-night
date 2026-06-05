@@ -6,6 +6,13 @@ import type { ScoreRow } from '../../../sdk/ui';
 import { selectStandings, selectWinners } from '../logic';
 import type { DowrAction, DowrState } from '../logic';
 
+const fmtTotal = (ms: number): string => {
+  const s = Math.round(ms / 1000);
+  const m = Math.floor(s / 60);
+  const r = s % 60;
+  return m > 0 ? `${m}:${String(r).padStart(2, '0')}` : `${r}s`;
+};
+
 export function ResultsScreen({ state, ctx, nav }: GameScreenProps<DowrState, DowrAction>) {
   const { t } = useTranslation();
   const s = state;
@@ -15,15 +22,19 @@ export function ResultsScreen({ state, ctx, nav }: GameScreenProps<DowrState, Do
   }, [ctx]);
 
   const winners = selectWinners(s);
-  const winnerNames = winners.map((id) => s.scorerLabels[id] ?? id);
+  const standings = selectStandings(s);
+  const nameOf = (id: string) => s.teams.find((tm) => tm.id === id)?.name ?? id;
+  const winnerNames = winners.map(nameOf);
   const title =
     winners.length > 1 ? t('results.tie') : t('results.winner', { name: winnerNames[0] ?? '' });
-  const rows: ScoreRow[] = selectStandings(s).map((st) => ({
+
+  const rows: ScoreRow[] = standings.map((st) => ({
     id: st.subjectId,
-    label: s.scorerLabels[st.subjectId] ?? st.subjectId,
-    score: st.total,
+    label: st.label,
+    score: st.totalMs,
+    display: fmtTotal(st.totalMs),
     rank: st.rank,
-    color: s.scorerColors[st.subjectId],
+    color: st.color,
   }));
 
   return (
@@ -31,6 +42,7 @@ export function ResultsScreen({ state, ctx, nav }: GameScreenProps<DowrState, Do
       <AppBar title={t('results.title')} onBack={() => nav.exit()} />
       <div className="flex flex-col gap-4 pb-8">
         <WinnerBanner title={title} names={winnerNames} />
+        <p className="text-center text-sm text-[var(--text-muted)]">{t('dowr.fastest')}</p>
         <Scoreboard rows={rows} />
         <div className="mt-2 flex flex-col gap-2">
           <Button

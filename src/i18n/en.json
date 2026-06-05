@@ -1,5 +1,8 @@
 {
-  "app": { "title": "Game Night", "tagline": "Pass-and-play party games" },
+  "app": {
+    "title": "Game Night",
+    "tagline": "Pass-and-play party games"
+  },
   "common": {
     "back": "Back",
     "next": "Next",
@@ -16,14 +19,18 @@
     "save": "Save",
     "delete": "Delete",
     "edit": "Edit",
-    "players": "Players"
+    "players": "Players",
+    "howToPlay": "How to play"
   },
   "home": {
     "title": "Game Night",
     "subtitle": "Pick a game to play",
     "empty": "No games found",
     "players": "{{count}} players",
-    "minutes": "{{min}}–{{max}} min"
+    "minutes": "{{min}}–{{max}} min",
+    "heroTagline": "Pass-and-play party games — one phone, everyone plays.",
+    "chooseGame": "Choose a game",
+    "resume": "Resume game"
   },
   "host": {
     "resumeTitle": "Game in progress",
@@ -33,8 +40,19 @@
     "exitConfirm": "Leave this game? Your progress is saved.",
     "pause": "Pause"
   },
-  "setup": { "title": "Setup", "players": "Players", "teams": "Teams", "options": "Options" },
-  "results": { "title": "Results", "winner": "{{name}} wins!", "tie": "It's a tie!", "playAgain": "Play again", "home": "Home" },
+  "setup": {
+    "title": "Setup",
+    "players": "Players",
+    "teams": "Teams",
+    "options": "Options"
+  },
+  "results": {
+    "title": "Results",
+    "winner": "{{name}} wins!",
+    "tie": "It's a tie!",
+    "playAgain": "Play again",
+    "home": "Home"
+  },
   "players": {
     "title": "Players",
     "add": "Add player",
@@ -58,42 +76,66 @@
     "signIn": "Sign in",
     "signOut": "Sign out"
   },
-  "a11y": { "loading": "Loading", "passTo": "Pass the phone to {{name}}", "tapToReveal": "Tap to reveal", "tapToHide": "Tap to hide" },
-  "errors": { "notFound": "Page not found", "gameMissing": "That game could not be found" },
+  "a11y": {
+    "loading": "Loading",
+    "passTo": "Pass the phone to {{name}}",
+    "tapToReveal": "Tap to reveal",
+    "tapToHide": "Tap to hide"
+  },
+  "errors": {
+    "notFound": "Page not found",
+    "gameMissing": "That game could not be found"
+  },
   "dowr": {
     "title": "Dowr",
-    "mode": "Mode",
-    "teams": "Teams",
-    "solo": "Solo",
-    "categories": "Categories",
+    "categories": "Word packs",
     "difficulty": "Difficulty",
     "easy": "Easy",
     "med": "Medium",
     "hard": "Hard",
-    "random": "Random",
-    "rounds": "Rounds",
-    "timer": "Timer",
-    "skipPenalty": "Skip costs −1 point",
-    "poolHint": "≈ {{count}} words available",
+    "random": "Mixed",
+    "rounds": "Turns per team",
+    "fuse": "Bomb timer",
+    "bombPenalty": "Bomb penalty",
+    "changePenalty": "Change-word penalty",
+    "surpriseBomb": "Surprise bomb",
+    "surpriseBombHint": "Hide the countdown — you won't know exactly when it blows",
+    "off": "Off",
+    "poolHint": "≈ {{count}} words ready",
+    "teamsPreview": "{{count}} teams of 2",
+    "evenHint": "Pairs up automatically — keep it even",
+    "ready": "We're ready",
     "passTo": "Pass the phone to {{name}}",
-    "partner": "Partner: {{name}}",
+    "describerIs": "{{name}} describes",
+    "guesserIs": "{{name}} guesses",
     "roundOf": "Round {{round}} of {{total}}",
-    "ready": "I'm ready",
-    "revealHint": "Only {{name}} should look",
-    "reveal": "Tap to reveal",
-    "startDescribing": "Start describing",
+    "revealHint": "Only {{name}} (the describer) should look",
+    "reveal": "Tap to reveal the word",
+    "startDescribing": "Start the clock",
     "dontSay": "Don't say",
-    "correct": "Correct",
-    "skip": "Skip",
-    "endTurn": "End turn",
-    "tally": "Correct {{correct}} · Skipped {{skipped}}",
-    "outOfWords": "Out of words!",
-    "timeUp": "Time's up",
-    "endedEarly": "Ended early",
-    "nextPlayer": "Next player",
+    "gotIt": "Got it!",
+    "changeWord": "Change word",
+    "changeWordCost": "Change (+{{n}}s)",
+    "timeLabel": "Time",
+    "bombSoon": "Bomb's about to blow!",
+    "guessed": "Guessed it!",
+    "bombBlew": "Boom! 💥",
+    "thisTurn": "This turn",
+    "describing": "Describing",
+    "penaltyChanges": "{{count}} changes +{{n}}s",
+    "penaltyBomb": "Bomb +{{n}}s",
+    "teamTotal": "Total",
+    "nextTeam": "Next team",
     "seeResults": "See results",
     "playAgain": "Play again",
-    "cat": { "food": "Food", "objects": "Objects", "jobs": "Jobs", "places": "Places", "animals": "Animals" }
+    "fastest": "Fastest team wins!",
+    "cat": {
+      "food": "Food",
+      "objects": "Objects",
+      "jobs": "Jobs",
+      "places": "Places",
+      "animals": "Animals"
+    }
   },
   "pantomime": {
     "title": "Pantomime",
@@ -103,7 +145,10 @@
     "difficulty": "Difficulty",
     "roundTime": "Round time",
     "endModeLabel": "Game length",
-    "endMode": { "targetScore": "Target score", "rounds": "Fixed rounds" },
+    "endMode": {
+      "targetScore": "Target score",
+      "rounds": "Fixed rounds"
+    },
     "targetScore": "Target score",
     "totalRounds": "Rounds",
     "skips": "Skips per turn",
@@ -126,24 +171,41 @@
     "nextTurn": "Next turn",
     "tie": "It's a tie!",
     "playAgain": "Play again",
-    "error": { "noPrompts": "No prompts for these categories/difficulties" },
+    "error": {
+      "noPrompts": "No prompts for these categories/difficulties"
+    },
     "cat": {
       "movies": "Movies",
       "animals": "Animals",
       "actions": "Actions",
       "famous": "Famous people",
-      "mixed": "Mixed"
+      "mixed": "Mixed",
+      "tv": "TV Shows"
     },
-    "diff": { "easy": "Easy", "medium": "Medium", "hard": "Hard" }
+    "diff": {
+      "easy": "Easy",
+      "medium": "Medium",
+      "hard": "Hard"
+    }
   },
   "nhie": {
     "title": "Never Have I Ever",
     "modeLabel": "Mode",
-    "mode": { "classic": "Classic (lives)", "points": "Points" },
+    "mode": {
+      "classic": "Classic (lives)",
+      "points": "Points"
+    },
     "answerStyle": "Answer style",
-    "answer": { "sequential": "Pass & hide", "honor": "Honor count" },
+    "answer": {
+      "sequential": "Pass & hide",
+      "honor": "Honor count"
+    },
     "intensityLabel": "Intensity",
-    "intensity": { "classic": "Classic", "spicy": "Spicy", "wild": "Wild" },
+    "intensity": {
+      "classic": "Classic",
+      "spicy": "Spicy",
+      "wild": "Wild"
+    },
     "lives": "Starting lives",
     "statements": "Statements",
     "deckCount": "{{n}} statements available",
@@ -173,13 +235,23 @@
     "title": "Most Likely To",
     "deck": "Deck",
     "intensityLabel": "Intensity",
-    "intensity": { "family": "Family", "casual": "Casual", "spicy": "Spicy" },
+    "intensity": {
+      "family": "Family",
+      "casual": "Casual",
+      "spicy": "Spicy"
+    },
     "votingStyle": "Voting style",
-    "style": { "passDevice": "Pass & hide", "simultaneous": "Count out loud" },
+    "style": {
+      "passDevice": "Pass & hide",
+      "simultaneous": "Count out loud"
+    },
     "rounds": "Rounds",
     "allowSelfVote": "Allow voting for yourself",
     "tieBreakLabel": "Ties",
-    "tie": { "coWinners": "Co-winners", "random": "Pick one" },
+    "tie": {
+      "coWinners": "Co-winners",
+      "random": "Pick one"
+    },
     "poolHint": "≈ {{count}} prompts available",
     "round": "Round {{k}} of {{n}}",
     "startVoting": "Start voting",
@@ -200,15 +272,24 @@
     "errorDeck": "No prompts available",
     "playAgain": "Play again",
     "votesReceived": "{{n}} votes",
-    "winsLabel": "Round wins"
+    "winsLabel": "Round wins",
+    "showScores": "Show running scores"
   },
   "wyr": {
     "title": "Would You Rather",
     "deck": "Deck",
     "intensityLabel": "Intensity",
-    "intensity": { "mild": "Mild", "medium": "Medium", "spicy": "Spicy" },
+    "intensity": {
+      "mild": "Mild",
+      "medium": "Medium",
+      "spicy": "Spicy",
+      "risky": "Risky 🔥"
+    },
     "modeLabel": "Mode",
-    "mode": { "vote": "Pass & hide", "quick": "Count hands" },
+    "mode": {
+      "vote": "Pass & hide",
+      "quick": "Count hands"
+    },
     "length": "Length",
     "all": "All",
     "awardPoints": "Award a point for going with the majority",
@@ -239,19 +320,38 @@
   "tod": {
     "title": "Truth or Dare",
     "intensity": "Intensity",
-    "intensityName": { "mild": "Mild", "medium": "Medium", "spicy": "Spicy" },
+    "intensityName": {
+      "mild": "Mild",
+      "medium": "Medium",
+      "spicy": "Spicy",
+      "extreme": "Extreme 🔥 18+"
+    },
     "selection": "Pick player by",
-    "sel": { "spinner": "Spinner", "sequential": "In order" },
+    "sel": {
+      "spinner": "Spinner",
+      "sequential": "In order"
+    },
     "scoring": "Scoring",
-    "score": { "casual": "Casual", "points": "Points" },
+    "score": {
+      "casual": "Casual",
+      "points": "Points"
+    },
     "pointsForDare": "Points for a dare",
     "pointsForTruth": "Points for a truth",
     "endLabel": "Game length",
-    "end": { "endless": "Endless", "rounds": "Rounds", "target": "Target" },
+    "end": {
+      "endless": "Endless",
+      "rounds": "Rounds",
+      "target": "Target"
+    },
     "roundsCount": "Rounds",
     "targetPoints": "Target points",
     "privacy": "Private reveal",
-    "priv": { "never": "Off", "spicy": "Spicy only", "always": "Always" },
+    "priv": {
+      "never": "Off",
+      "spicy": "Spicy only",
+      "always": "Always"
+    },
     "avoidRepeat": "Avoid picking the same player twice in a row",
     "errorPool": "No prompts available",
     "playAgain": "Play again",
@@ -271,7 +371,8 @@
     "redraw": "Redraw",
     "endGame": "End game",
     "sessionSummary": "Session over!",
-    "statLine": "{{turns}} turns · {{dares}} dares · {{truths}} truths · {{skips}} skips"
+    "statLine": "{{turns}} turns · {{dares}} dares · {{truths}} truths · {{skips}} skips",
+    "pointsForSkip": "Points for a skip"
   },
   "hu": {
     "title": "Heads Up!",
@@ -296,7 +397,9 @@
     "got": "Got it",
     "gotPassed": "Got {{got}} · Passed {{passed}}",
     "next": "Next",
-    "seeResults": "See results"
+    "seeResults": "See results",
+    "motion": "Card-flip animation",
+    "recycle": "Reshuffle when cards run out"
   },
   "spy": {
     "title": "Spyfall",
@@ -335,7 +438,9 @@
     "locationWas": "The location was",
     "spyWas": "The spy was",
     "nextRound": "Next round",
-    "seeResults": "See results"
+    "seeResults": "See results",
+    "packs": "Location packs",
+    "noHints": "No location list — work it out from the questions."
   },
   "cn": {
     "title": "Spy Grid",
@@ -370,7 +475,9 @@
     "teamWins": "{{team}} wins!",
     "winAssassin": "The other team hit the assassin",
     "winCleared": "All words found",
-    "rematch": "New board"
+    "rematch": "New board",
+    "turnTime": "Turn time",
+    "packs": "Word packs"
   },
   "mf": {
     "title": "Mafia",
@@ -387,7 +494,11 @@
     "hideAndPass": "Hide & pass",
     "wake": "{{role}}, wake up — choose a target",
     "detectiveResult": "{{name}} appears: {{faction}}",
-    "faction": { "town": "Town", "mafia": "Mafia", "neutral": "Neutral" },
+    "faction": {
+      "town": "Town",
+      "mafia": "Mafia",
+      "neutral": "Neutral"
+    },
     "err": {
       "cannotSkip": "This action can't be skipped",
       "badTarget": "Pick a living player",
@@ -417,6 +528,21 @@
       "town": "Town wins! 🎉",
       "mafia": "Mafia wins! 🔪",
       "draw": "It's a draw."
-    }
+    },
+    "houseRules": "House rules",
+    "discussion": "Discussion time",
+    "voting": "Vote to eliminate",
+    "majority": "Majority",
+    "plurality": "Most votes",
+    "nominations": "Nominations to vote",
+    "onTie": "On a tie",
+    "tieNoElim": "No elimination",
+    "tieRandom": "Random",
+    "doctorSave": "Doctor self-save",
+    "saveNever": "Never",
+    "saveOnce": "Once",
+    "saveAlways": "Always",
+    "revealRole": "Reveal role on death",
+    "peacefulFirst": "Peaceful first night"
   }
 }

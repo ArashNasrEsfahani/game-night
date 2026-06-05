@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
 import type { GameScreenProps } from '../../../sdk/types';
 import { Screen, AppBar, Button, Card, Curtain, Stepper } from '../../../sdk/ui';
 import { ITEM_BY_ID } from '../content';
@@ -75,7 +76,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<WyrSta
         <div className="flex flex-1 flex-col items-center justify-center gap-4 text-center">
           <p className="text-lg font-bold">{t('wyr.wouldYouRather')}</p>
           <Card className="px-5 py-6 text-xl font-extrabold">{a}</Card>
-          <div className="text-2xl font-black text-[var(--game-accent-strong)]">{t('wyr.or')}</div>
+          <div className="text-2xl font-black dp-accent">{t('wyr.or')}</div>
           <Card className="px-5 py-6 text-xl font-extrabold">{b}</Card>
           <div className="mt-2 flex w-full flex-col gap-2">
             <Button size="lg" fullWidth onClick={() => { ctx.sound.play('tap'); dispatch({ type: 'BEGIN_COLLECTION' }); }}>
@@ -174,18 +175,29 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<WyrSta
       <div className="flex flex-1 flex-col justify-center gap-4">
         <p className="text-center text-sm text-[var(--text-muted)]">{t('wyr.wouldYouRather')}</p>
         <div className="overflow-hidden rounded-2xl">
-          <div className="flex items-center justify-between bg-[var(--game-accent-strong)] px-4 py-4 text-white" style={{ width: `${Math.max(20, pctA)}%`, minWidth: '30%' }}>
+          <motion.div
+            className="flex items-center justify-between bg-[var(--game-accent-strong)] px-4 py-4 text-[var(--game-on-accent)]"
+            style={{ minWidth: '30%' }}
+            initial={{ width: '30%' }}
+            animate={{ width: `${Math.max(20, pctA)}%` }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          >
             <span className="truncate font-bold">{a}</span>
             <span className="ms-2 font-black">{cur.countA}</span>
-          </div>
+          </motion.div>
           <div className="flex items-center justify-between bg-[var(--surface-2)] px-4 py-4">
             <span className="truncate font-bold">{b}</span>
             <span className="ms-2 font-black">{cur.countB}</span>
           </div>
         </div>
-        <p className="text-center text-lg font-extrabold">
+        <motion.p
+          className="text-center text-lg font-extrabold"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.5, type: 'spring', stiffness: 300, damping: 18 }}
+        >
           {cur.majority === 'tie' ? t('wyr.tie') : cur.majority === 'A' ? `${a} ✓` : `${b} ✓`}
-        </p>
+        </motion.p>
         {item?.note && <p className="text-center text-sm text-[var(--text-muted)]">{ctx.localize(item.note)}</p>}
         <Button size="lg" fullWidth onClick={() => { ctx.sound.play('tap'); dispatch({ type: 'NEXT' }); }}>
           {last ? t('wyr.seeResults') : t('wyr.next')}

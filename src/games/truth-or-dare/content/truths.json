@@ -322,7 +322,7 @@
       "intensity": "spicy",
       "text": {
         "en": "What is the cheesiest pickup line you have ever used or fallen for?",
-        "fa": "لوس‌ترین جمله مخ‌زنی که تا حالا گفتی یا خرش شدی چی بوده؟"
+        "fa": "لوس‌ترین جمله مخ‌زنی که تا حالا گفتی یا گولشو خوردی چی بوده؟"
       }
     },
     {
@@ -340,7 +340,7 @@
       "intensity": "spicy",
       "text": {
         "en": "What is the wildest thing on your bucket list that you would never admit publicly?",
-        "fa": "وحشیانه‌ترین آرزویی که توی لیست کارهای دلت داری ولی جلوی جمع نمی‌گیش چیه؟"
+        "fa": "دیوونه‌وارترین آرزویی که توی لیست کارهای دلت داری ولی جلوی جمع نمی‌گیش چیه؟"
       }
     },
     {
@@ -407,6 +407,722 @@
       "text": {
         "en": "What is the most rebellious thing you have ever done?",
         "fa": "یاغی‌گرانه‌ترین کاری که تا حالا توی عمرت کردی چی بوده؟"
+      }
+    },
+    {
+      "id": "truth-x001",
+      "kind": "truth",
+      "intensity": "medium",
+      "text": {
+        "en": "What's the most embarrassing thing currently in your search history?",
+        "fa": "خجالت‌آورترین چیزی که الان توی تاریخچه‌ی جست‌وجوت هست چیه؟"
+      }
+    },
+    {
+      "id": "truth-x002",
+      "kind": "truth",
+      "intensity": "mild",
+      "text": {
+        "en": "What's a small lie you tell almost every day?",
+        "fa": "یه دروغ کوچولو که تقریباً هر روز می‌گی چیه؟"
+      }
+    },
+    {
+      "id": "truth-x003",
+      "kind": "truth",
+      "intensity": "mild",
+      "text": {
+        "en": "What's the childish thing you still secretly enjoy?",
+        "fa": "کدوم کار بچگانه‌ای هست که هنوز یواشکی ازش لذت می‌بری؟"
+      }
+    },
+    {
+      "id": "truth-x004",
+      "kind": "truth",
+      "intensity": "medium",
+      "text": {
+        "en": "What's the last thing you searched for late at night?",
+        "fa": "آخرین چیزی که آخر شب جست‌وجو کردی چی بود؟"
+      }
+    },
+    {
+      "id": "truth-x005",
+      "kind": "truth",
+      "intensity": "mild",
+      "text": {
+        "en": "Who in this room would you trust with your unlocked phone?",
+        "fa": "توی این جمع به کی اعتماد می‌کنی که گوشی باز و قفل‌نشده‌ات رو دستش بدی؟"
+      },
+      "minPlayers": 3
+    },
+    {
+      "id": "truth-x006",
+      "kind": "truth",
+      "intensity": "medium",
+      "text": {
+        "en": "What's the pettiest reason you've ever stopped talking to someone?",
+        "fa": "بی‌ارزش‌ترین دلیلی که به‌خاطرش با یکی قهر کردی یا حرف زدن باهاش رو قطع کردی چی بود؟"
+      }
+    },
+    {
+      "id": "truth-x007",
+      "kind": "truth",
+      "intensity": "mild",
+      "text": {
+        "en": "What's a habit of yours that would annoy your roommates?",
+        "fa": "کدوم عادتت هست که هم‌خونه‌هات رو حسابی کلافه می‌کنه؟"
+      }
+    },
+    {
+      "id": "truth-x008",
+      "kind": "truth",
+      "intensity": "mild",
+      "text": {
+        "en": "What's the most money you've ever spent on something totally useless?",
+        "fa": "بیشترین پولی که تا حالا برای یه چیز کاملاً بی‌فایده خرج کردی چقدر بوده؟"
+      }
+    },
+    {
+      "id": "truth-x009",
+      "kind": "truth",
+      "intensity": "mild",
+      "text": {
+        "en": "What's a secret talent nobody here knows you have?",
+        "fa": "کدوم استعداد پنهانت رو کسی توی این جمع نمی‌دونه؟"
+      },
+      "minPlayers": 3
+    },
+    {
+      "id": "truth-x010",
+      "kind": "truth",
+      "intensity": "mild",
+      "text": {
+        "en": "What's the worst grade you ever got and how did you hide it?",
+        "fa": "بدترین نمره‌ای که تا حالا گرفتی چی بود و چطوری قایمش کردی؟"
+      }
+    },
+    {
+      "id": "truth-x011",
+      "kind": "truth",
+      "intensity": "mild",
+      "text": {
+        "en": "What's the most embarrassing nickname you've ever had?",
+        "fa": "خجالت‌آورترین لقبی که تا حالا روت گذاشتن چی بوده؟"
+      }
+    },
+    {
+      "id": "truth-x012",
+      "kind": "truth",
+      "intensity": "medium",
+      "text": {
+        "en": "What's something you pretend to like just to fit in?",
+        "fa": "چه چیزی هست که فقط برای اینکه با بقیه جور بشی وانمود می‌کنی دوستش داری؟"
+      }
+    },
+    {
+      "id": "truth-x013",
+      "kind": "truth",
+      "intensity": "medium",
+      "text": {
+        "en": "What's the longest you've gone without showering?",
+        "fa": "بیشترین مدتی که حموم نرفتی چقدر بوده؟"
+      }
+    },
+    {
+      "id": "truth-x014",
+      "kind": "truth",
+      "intensity": "medium",
+      "text": {
+        "en": "What's a text you wish you could unsend?",
+        "fa": "کدوم پیامک رو آرزو می‌کنی کاش می‌تونستی پسش بگیری؟"
+      }
+    },
+    {
+      "id": "truth-x015",
+      "kind": "truth",
+      "intensity": "mild",
+      "text": {
+        "en": "Who here do you think keeps the messiest room?",
+        "fa": "فکر می‌کنی کدوم‌یکی از حاضرها به‌هم‌ریخته‌ترین اتاق رو داره؟"
+      },
+      "minPlayers": 3
+    },
+    {
+      "id": "truth-x016",
+      "kind": "truth",
+      "intensity": "mild",
+      "text": {
+        "en": "What's the weirdest thing you've ever eaten?",
+        "fa": "عجیب‌ترین چیزی که تا حالا خوردی چی بوده؟"
+      }
+    },
+    {
+      "id": "truth-x017",
+      "kind": "truth",
+      "intensity": "mild",
+      "text": {
+        "en": "What's a fear you have that you think is irrational?",
+        "fa": "کدوم ترست رو داری که خودت هم می‌دونی غیرمنطقیه؟"
+      }
+    },
+    {
+      "id": "truth-x018",
+      "kind": "truth",
+      "intensity": "medium",
+      "text": {
+        "en": "What's the biggest lie you've told to get out of plans?",
+        "fa": "بزرگ‌ترین دروغی که گفتی تا از زیر یه قرار در بری چی بود؟"
+      }
+    },
+    {
+      "id": "truth-x019",
+      "kind": "truth",
+      "intensity": "mild",
+      "text": {
+        "en": "What's the most embarrassing song on your playlist right now?",
+        "fa": "خجالت‌آورترین آهنگی که الان توی پلی‌لیستته چیه؟"
+      }
+    },
+    {
+      "id": "truth-x020",
+      "kind": "truth",
+      "intensity": "mild",
+      "text": {
+        "en": "What's something you did as a kid that you'd be grounded for now?",
+        "fa": "چه کاری توی بچگی کردی که اگه الان بکنی حسابی توبیخ می‌شی؟"
+      }
+    },
+    {
+      "id": "truth-x021",
+      "kind": "truth",
+      "intensity": "medium",
+      "text": {
+        "en": "When was the last time you cried and why?",
+        "fa": "آخرین باری که گریه کردی کی بود و برای چی؟"
+      }
+    },
+    {
+      "id": "truth-x022",
+      "kind": "truth",
+      "intensity": "medium",
+      "text": {
+        "en": "What's a rumor you once started or spread?",
+        "fa": "کدوم شایعه رو یه بار خودت راه انداختی یا پخش کردی؟"
+      }
+    },
+    {
+      "id": "truth-x023",
+      "kind": "truth",
+      "intensity": "medium",
+      "text": {
+        "en": "What's the most trouble you've ever been in?",
+        "fa": "بزرگ‌ترین دردسری که تا حالا توش افتادی چی بوده؟"
+      }
+    },
+    {
+      "id": "truth-x024",
+      "kind": "truth",
+      "intensity": "mild",
+      "text": {
+        "en": "What app do you waste the most time on?",
+        "fa": "بیشترین وقتت رو روی کدوم اپلیکیشن هدر می‌دی؟"
+      }
+    },
+    {
+      "id": "truth-x025",
+      "kind": "truth",
+      "intensity": "medium",
+      "text": {
+        "en": "What's a compliment you secretly give yourself in the mirror?",
+        "fa": "چه تعریفی هست که یواشکی جلوی آینه از خودت می‌کنی؟"
+      }
+    },
+    {
+      "id": "truth-x026",
+      "kind": "truth",
+      "intensity": "mild",
+      "text": {
+        "en": "Who in this room would you call first in an emergency?",
+        "fa": "توی این جمع، تو شرایط اضطراری اول به کی زنگ می‌زنی؟"
+      },
+      "minPlayers": 3
+    },
+    {
+      "id": "truth-x027",
+      "kind": "truth",
+      "intensity": "mild",
+      "text": {
+        "en": "What's the most childish argument you've had as an adult?",
+        "fa": "بچگانه‌ترین دعوایی که توی بزرگسالی کردی سر چی بود؟"
+      }
+    },
+    {
+      "id": "truth-x028",
+      "kind": "truth",
+      "intensity": "mild",
+      "text": {
+        "en": "What's a guilty pleasure TV show you binge alone?",
+        "fa": "کدوم سریال رو که خجالت می‌کشی بگی، تنهایی پشت‌سر‌هم تماشا می‌کنی؟"
+      }
+    },
+    {
+      "id": "truth-x029",
+      "kind": "truth",
+      "intensity": "mild",
+      "text": {
+        "en": "What's something you've Googled instead of asking a person?",
+        "fa": "چه چیزی رو به‌جای پرسیدن از یه آدم، گوگل کردی؟"
+      }
+    },
+    {
+      "id": "truth-x030",
+      "kind": "truth",
+      "intensity": "medium",
+      "text": {
+        "en": "What's the most embarrassing thing your parents have caught you doing?",
+        "fa": "خجالت‌آورترین کاری که پدر و مادرت موقع انجامش مچت رو گرفتن چی بود؟"
+      }
+    },
+    {
+      "id": "truth-x031",
+      "kind": "truth",
+      "intensity": "medium",
+      "text": {
+        "en": "What's a secret you've never told your best friend?",
+        "fa": "کدوم رازت رو هیچ‌وقت به بهترین دوستت نگفتی؟"
+      }
+    },
+    {
+      "id": "truth-x032",
+      "kind": "truth",
+      "intensity": "medium",
+      "text": {
+        "en": "What's the worst date you've ever been on?",
+        "fa": "بدترین قراری که تا حالا رفتی چطوری بود؟"
+      }
+    },
+    {
+      "id": "truth-x033",
+      "kind": "truth",
+      "intensity": "mild",
+      "text": {
+        "en": "Who in this room gives the best advice?",
+        "fa": "توی این جمع، کی بهترین نصیحت‌ها رو می‌ده؟"
+      },
+      "minPlayers": 3
+    },
+    {
+      "id": "truth-x034",
+      "kind": "truth",
+      "intensity": "medium",
+      "text": {
+        "en": "What's the most spontaneous thing you've ever done?",
+        "fa": "بی‌برنامه‌ترین و ناگهانی‌ترین کاری که تا حالا کردی چی بوده؟"
+      }
+    },
+    {
+      "id": "truth-x035",
+      "kind": "truth",
+      "intensity": "spicy",
+      "text": {
+        "en": "What's a physical feature you secretly love about yourself?",
+        "fa": "کدوم ویژگی ظاهری‌ات رو یواشکی خیلی دوست داری؟"
+      }
+    },
+    {
+      "id": "truth-x036",
+      "kind": "truth",
+      "intensity": "spicy",
+      "text": {
+        "en": "What's the cheesiest pickup line that's ever worked on you?",
+        "fa": "آبکی‌ترین جمله‌ی مخ‌زنی که روی تو جواب داده چی بوده؟"
+      }
+    },
+    {
+      "id": "truth-x037",
+      "kind": "truth",
+      "intensity": "spicy",
+      "text": {
+        "en": "Who in this room would you pick to be stranded on an island with?",
+        "fa": "توی این جمع، با کی حاضری توی یه جزیره‌ی متروک گیر بیفتی؟"
+      },
+      "minPlayers": 3
+    },
+    {
+      "id": "truth-x038",
+      "kind": "truth",
+      "intensity": "spicy",
+      "text": {
+        "en": "What's the most romantic thing someone has done for you?",
+        "fa": "عاشقانه‌ترین کاری که کسی برات کرده چی بوده؟"
+      }
+    },
+    {
+      "id": "truth-x039",
+      "kind": "truth",
+      "intensity": "spicy",
+      "text": {
+        "en": "Have you ever had a crush on a friend's partner?",
+        "fa": "تا حالا به دوست‌دختر یا دوست‌پسر یکی از رفیقات نظر داشتی؟"
+      }
+    },
+    {
+      "id": "truth-x040",
+      "kind": "truth",
+      "intensity": "spicy",
+      "text": {
+        "en": "What's a flirty text you've sent that you immediately regretted?",
+        "fa": "کدوم پیامک عاشقانه و دلبرانه فرستادی که بلافاصله پشیمون شدی؟"
+      }
+    },
+    {
+      "id": "truth-x041",
+      "kind": "truth",
+      "intensity": "spicy",
+      "text": {
+        "en": "What's the first thing you notice about someone you're attracted to?",
+        "fa": "وقتی از کسی خوشت میاد، اولین چیزی که توی اون آدم می‌بینی چیه؟"
+      }
+    },
+    {
+      "id": "truth-x042",
+      "kind": "truth",
+      "intensity": "mild",
+      "text": {
+        "en": "What's a piece of advice you wish you'd taken?",
+        "fa": "کدوم نصیحت رو آرزو می‌کنی کاش گوش کرده بودی؟"
+      }
+    },
+    {
+      "id": "truth-x043",
+      "kind": "truth",
+      "intensity": "medium",
+      "text": {
+        "en": "What's the biggest risk you've ever taken?",
+        "fa": "بزرگ‌ترین ریسکی که تا حالا کردی چی بوده؟"
+      }
+    },
+    {
+      "id": "truth-x044",
+      "kind": "truth",
+      "intensity": "mild",
+      "text": {
+        "en": "What's something you're proud of but never get to brag about?",
+        "fa": "به چه چیزی افتخار می‌کنی که هیچ‌وقت فرصت نمی‌شه بهش بنازی؟"
+      }
+    },
+    {
+      "id": "truth-x045",
+      "kind": "truth",
+      "intensity": "medium",
+      "text": {
+        "en": "What's the most embarrassing thing you've done while drunk or sleepy?",
+        "fa": "خجالت‌آورترین کاری که موقع خواب‌آلودگی یا مستی کردی چی بوده؟"
+      }
+    },
+    {
+      "id": "truth-x046",
+      "kind": "truth",
+      "intensity": "mild",
+      "text": {
+        "en": "Who here would you swap lives with for a day?",
+        "fa": "توی این جمع، یه روز جای کی رو می‌خواستی زندگی کنی؟"
+      },
+      "minPlayers": 3
+    },
+    {
+      "id": "truth-x047",
+      "kind": "truth",
+      "intensity": "medium",
+      "text": {
+        "en": "What's a dream you've given up on?",
+        "fa": "کدوم آرزو رو از سرت بیرون کردی و بی‌خیالش شدی؟"
+      }
+    },
+    {
+      "id": "truth-x048",
+      "kind": "truth",
+      "intensity": "mild",
+      "text": {
+        "en": "What's the pettiest thing that makes you instantly dislike someone?",
+        "fa": "بی‌اهمیت‌ترین چیزی که باعث می‌شه فوری از یکی بدت بیاد چیه؟"
+      }
+    },
+    {
+      "id": "truth-x049",
+      "kind": "truth",
+      "intensity": "medium",
+      "text": {
+        "en": "What's a memory that always makes you cringe?",
+        "fa": "کدوم خاطره همیشه باعث می‌شه از خجالت آب بشی؟"
+      }
+    },
+    {
+      "id": "truth-x050",
+      "kind": "truth",
+      "intensity": "spicy",
+      "text": {
+        "en": "What's the longest crush you've ever had on someone?",
+        "fa": "طولانی‌ترین مدتی که عاشق کسی بودی چقدر طول کشید؟"
+      }
+    },
+    {
+      "id": "truth-x051",
+      "kind": "truth",
+      "intensity": "medium",
+      "text": {
+        "en": "What's something you'd change about your personality?",
+        "fa": "کدوم ویژگی از شخصیتت رو دوست داشتی عوض کنی؟"
+      }
+    },
+    {
+      "id": "truth-x052",
+      "kind": "truth",
+      "intensity": "mild",
+      "text": {
+        "en": "What's the most embarrassing thing you've worn in public?",
+        "fa": "خجالت‌آورترین چیزی که توی جمع پوشیدی چی بوده؟"
+      }
+    },
+    {
+      "id": "truth-x053",
+      "kind": "truth",
+      "intensity": "mild",
+      "text": {
+        "en": "Who in this room do you think is the best at keeping secrets?",
+        "fa": "توی این جمع، فکر می‌کنی کی بهتر از همه راز نگه‌داره؟"
+      },
+      "minPlayers": 3
+    },
+    {
+      "id": "truth-x054",
+      "kind": "truth",
+      "intensity": "medium",
+      "text": {
+        "en": "What's a white lie you've told someone in this room?",
+        "fa": "کدوم دروغ مصلحتی رو به یکی از آدم‌های همین جمع گفتی؟"
+      },
+      "minPlayers": 3
+    },
+    {
+      "id": "truth-ext-001",
+      "kind": "truth",
+      "intensity": "extreme",
+      "text": {
+        "en": "What is the most adventurous place you have ever kissed someone?",
+        "fa": "ماجراجویانه‌ترین جایی که تا حالا یکیو بوسیدی کجا بوده؟"
+      }
+    },
+    {
+      "id": "truth-ext-002",
+      "kind": "truth",
+      "intensity": "extreme",
+      "text": {
+        "en": "Who in this room would you most want to go on a date with?",
+        "fa": "توی این جمع بیشتر از همه دوست داری با کی بری سر قرار؟"
+      },
+      "minPlayers": 3
+    },
+    {
+      "id": "truth-ext-003",
+      "kind": "truth",
+      "intensity": "extreme",
+      "text": {
+        "en": "What is your biggest turn-on?",
+        "fa": "چه چیزی بیشتر از همه حسابی جذبت می‌کنه؟"
+      }
+    },
+    {
+      "id": "truth-ext-004",
+      "kind": "truth",
+      "intensity": "extreme",
+      "text": {
+        "en": "Describe your most embarrassing romantic moment.",
+        "fa": "خجالت‌آورترین لحظه عاشقانه‌ت رو تعریف کن."
+      }
+    },
+    {
+      "id": "truth-ext-005",
+      "kind": "truth",
+      "intensity": "extreme",
+      "text": {
+        "en": "What is the wildest thing on your romantic bucket list?",
+        "fa": "دیوونه‌وارترین آرزوی عاشقانه‌ت چیه؟"
+      }
+    },
+    {
+      "id": "truth-ext-006",
+      "kind": "truth",
+      "intensity": "extreme",
+      "text": {
+        "en": "Have you ever had a crush on someone in this room — who?",
+        "fa": "تا حالا از کسی توی این جمع خوشت اومده؟ کی؟"
+      },
+      "minPlayers": 3
+    },
+    {
+      "id": "truth-ext-007",
+      "kind": "truth",
+      "intensity": "extreme",
+      "text": {
+        "en": "Rate everyone in the room out of ten for first-date potential.",
+        "fa": "به همه آدمای این جمع از ده نمره بده برای اینکه چقدر واسه قرار اول گزینه‌ن."
+      },
+      "minPlayers": 3
+    },
+    {
+      "id": "truth-ext-008",
+      "kind": "truth",
+      "intensity": "extreme",
+      "text": {
+        "en": "What is the boldest thing you have done to get someone’s attention?",
+        "fa": "جسورانه‌ترین کاری که برای جلب توجه یکی کردی چی بوده؟"
+      }
+    },
+    {
+      "id": "truth-ext-009",
+      "kind": "truth",
+      "intensity": "extreme",
+      "text": {
+        "en": "Who was your most memorable kiss, and why?",
+        "fa": "به‌یادموندنی‌ترین بوسه‌ت با کی بود و چرا؟"
+      }
+    },
+    {
+      "id": "truth-ext-010",
+      "kind": "truth",
+      "intensity": "extreme",
+      "text": {
+        "en": "What is a secret fantasy date you have never told anyone about?",
+        "fa": "یه قرار رویایی مخفی که تا حالا به هیچ‌کس نگفتی چیه؟"
+      }
+    },
+    {
+      "id": "truth-ext-011",
+      "kind": "truth",
+      "intensity": "extreme",
+      "text": {
+        "en": "Have you ever sent a flirty text to the wrong person? What did it say?",
+        "fa": "تا حالا یه پیام عاشقانه اشتباهی واسه یکی دیگه فرستادی؟ توش چی نوشته بودی؟"
+      }
+    },
+    {
+      "id": "truth-ext-012",
+      "kind": "truth",
+      "intensity": "extreme",
+      "text": {
+        "en": "What is the most you have ever exaggerated to impress a date?",
+        "fa": "برای اینکه طرف قرارتو تحت‌تأثیر بذاری، بیشترین اغراقی که کردی چی بوده؟"
+      }
+    },
+    {
+      "id": "truth-ext-013",
+      "kind": "truth",
+      "intensity": "extreme",
+      "text": {
+        "en": "Who here gives the best hugs, and who would you want a slow dance with?",
+        "fa": "کی اینجا بهترین بغلو داره و با کی دوست داری یه رقص آروم بزنی؟"
+      },
+      "minPlayers": 3
+    },
+    {
+      "id": "truth-ext-014",
+      "kind": "truth",
+      "intensity": "extreme",
+      "text": {
+        "en": "What is your go-to move when you are trying to flirt?",
+        "fa": "حرکت همیشگیت موقع لاس‌زدن چیه؟"
+      }
+    },
+    {
+      "id": "truth-ext-015",
+      "kind": "truth",
+      "intensity": "extreme",
+      "text": {
+        "en": "What is the most embarrassing thing in your search or DM history?",
+        "fa": "خجالت‌آورترین چیزی که توی تاریخچه سرچت یا دایرکتات هست چیه؟"
+      }
+    },
+    {
+      "id": "truth-ext-016",
+      "kind": "truth",
+      "intensity": "extreme",
+      "text": {
+        "en": "Have you ever pretended to like something just to impress a crush?",
+        "fa": "تا حالا الکی وانمود کردی یه چیزی رو دوست داری فقط که نظر کراشتو جلب کنی؟"
+      }
+    },
+    {
+      "id": "truth-ext-017",
+      "kind": "truth",
+      "intensity": "extreme",
+      "text": {
+        "en": "What is the riskiest place you have ever flirted with someone?",
+        "fa": "پرریسک‌ترین جایی که با یکی لاس زدی کجا بوده؟"
+      }
+    },
+    {
+      "id": "truth-ext-018",
+      "kind": "truth",
+      "intensity": "extreme",
+      "text": {
+        "en": "If you had to kiss one player here on the cheek, who would it be?",
+        "fa": "اگه مجبور بودی لپ یکی از این جمع رو ببوسی، کی می‌شد؟"
+      },
+      "minPlayers": 3
+    },
+    {
+      "id": "truth-ext-019",
+      "kind": "truth",
+      "intensity": "extreme",
+      "text": {
+        "en": "What is the wildest dream you have had about someone you know?",
+        "fa": "عجیب‌ترین خوابی که درباره یکی از آشناهات دیدی چی بوده؟"
+      }
+    },
+    {
+      "id": "truth-ext-020",
+      "kind": "truth",
+      "intensity": "extreme",
+      "text": {
+        "en": "What is the most scandalous rumor about you that was actually true?",
+        "fa": "جنجالی‌ترین شایعه‌ای که درموردت بود و واقعاً هم درست بود چی بود؟"
+      }
+    },
+    {
+      "id": "truth-ext-021",
+      "kind": "truth",
+      "intensity": "extreme",
+      "text": {
+        "en": "Who is the one that got away, and what would you say to them now?",
+        "fa": "اون کسی که از دستش دادی کیه و الان بهش چی می‌گفتی؟"
+      }
+    },
+    {
+      "id": "truth-ext-022",
+      "kind": "truth",
+      "intensity": "extreme",
+      "text": {
+        "en": "What is the boldest outfit you have ever worn to turn heads?",
+        "fa": "جسورانه‌ترین لباسی که برای جلب توجه پوشیدی چی بوده؟"
+      }
+    },
+    {
+      "id": "truth-ext-023",
+      "kind": "truth",
+      "intensity": "extreme",
+      "text": {
+        "en": "Describe your perfect romantic night in three words.",
+        "fa": "شب عاشقانه بی‌نقصتو توی سه کلمه توصیف کن."
+      }
+    },
+    {
+      "id": "truth-ext-024",
+      "kind": "truth",
+      "intensity": "extreme",
+      "text": {
+        "en": "Which celebrity would you break all your rules for?",
+        "fa": "برای کدوم سلبریتی حاضری همه قانونای خودتو زیر پا بذاری؟"
       }
     }
   ]

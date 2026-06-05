@@ -936,6 +936,774 @@
         "en": "Smile",
         "fa": "لبخند"
       }
+    },
+    {
+      "id": "cn-x001",
+      "text": {
+        "en": "bank",
+        "fa": "بانک"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x002",
+      "text": {
+        "en": "spring",
+        "fa": "بهار"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x003",
+      "text": {
+        "en": "mouse",
+        "fa": "موش"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x004",
+      "text": {
+        "en": "bond",
+        "fa": "پیوند"
+      },
+      "difficulty": 2
+    },
+    {
+      "id": "cn-x005",
+      "text": {
+        "en": "cow",
+        "fa": "گاو"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x006",
+      "text": {
+        "en": "sheep",
+        "fa": "گوسفند"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x007",
+      "text": {
+        "en": "rabbit",
+        "fa": "خرگوش"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x008",
+      "text": {
+        "en": "frog",
+        "fa": "قورباغه"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x009",
+      "text": {
+        "en": "ant",
+        "fa": "مورچه"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x010",
+      "text": {
+        "en": "duck",
+        "fa": "اردک"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x011",
+      "text": {
+        "en": "deer",
+        "fa": "آهو"
+      },
+      "difficulty": 2
+    },
+    {
+      "id": "cn-x012",
+      "text": {
+        "en": "grass",
+        "fa": "چمن"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x013",
+      "text": {
+        "en": "lake",
+        "fa": "دریاچه"
+      },
+      "difficulty": 2
+    },
+    {
+      "id": "cn-x014",
+      "text": {
+        "en": "rock",
+        "fa": "سنگ"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x015",
+      "text": {
+        "en": "sand",
+        "fa": "ماسه"
+      },
+      "difficulty": 2
+    },
+    {
+      "id": "cn-x016",
+      "text": {
+        "en": "head",
+        "fa": "سر"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x017",
+      "text": {
+        "en": "hand",
+        "fa": "دست"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x018",
+      "text": {
+        "en": "foot",
+        "fa": "پا"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x019",
+      "text": {
+        "en": "eye",
+        "fa": "چشم"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x020",
+      "text": {
+        "en": "ear",
+        "fa": "گوش"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x021",
+      "text": {
+        "en": "nose",
+        "fa": "بینی"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x022",
+      "text": {
+        "en": "mouth",
+        "fa": "دهان"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x023",
+      "text": {
+        "en": "tooth",
+        "fa": "دندان"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x024",
+      "text": {
+        "en": "heart",
+        "fa": "قلب"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x025",
+      "text": {
+        "en": "bone",
+        "fa": "استخوان"
+      },
+      "difficulty": 2
+    },
+    {
+      "id": "cn-x026",
+      "text": {
+        "en": "hair",
+        "fa": "مو"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x027",
+      "text": {
+        "en": "finger",
+        "fa": "انگشت"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x028",
+      "text": {
+        "en": "arm",
+        "fa": "بازو"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x029",
+      "text": {
+        "en": "neck",
+        "fa": "گردن"
+      },
+      "difficulty": 2
+    },
+    {
+      "id": "cn-x030",
+      "text": {
+        "en": "skin",
+        "fa": "پوست"
+      },
+      "difficulty": 2
+    },
+    {
+      "id": "cn-x031",
+      "text": {
+        "en": "cheese",
+        "fa": "پنیر"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x032",
+      "text": {
+        "en": "orange",
+        "fa": "پرتقال"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x033",
+      "text": {
+        "en": "onion",
+        "fa": "پیاز"
+      },
+      "difficulty": 2
+    },
+    {
+      "id": "cn-x034",
+      "text": {
+        "en": "valley",
+        "fa": "دره"
+      },
+      "difficulty": 2
+    },
+    {
+      "id": "cn-x035",
+      "text": {
+        "en": "harbor",
+        "fa": "بندرگاه"
+      },
+      "difficulty": 2
+    },
+    {
+      "id": "cn-x036",
+      "text": {
+        "en": "castle",
+        "fa": "قلعه"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x037",
+      "text": {
+        "en": "tower",
+        "fa": "برج"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x038",
+      "text": {
+        "en": "capital",
+        "fa": "پایتخت"
+      },
+      "difficulty": 2
+    },
+    {
+      "id": "cn-x039",
+      "text": {
+        "en": "border",
+        "fa": "مرز"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x040",
+      "text": {
+        "en": "village",
+        "fa": "روستا"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x041",
+      "text": {
+        "en": "canal",
+        "fa": "کانال"
+      },
+      "difficulty": 2
+    },
+    {
+      "id": "cn-x042",
+      "text": {
+        "en": "compass",
+        "fa": "قطب‌نما"
+      },
+      "difficulty": 2
+    },
+    {
+      "id": "cn-x043",
+      "text": {
+        "en": "pole",
+        "fa": "قطب"
+      },
+      "difficulty": 2
+    },
+    {
+      "id": "cn-x044",
+      "text": {
+        "en": "court",
+        "fa": "دادگاه"
+      },
+      "difficulty": 2
+    },
+    {
+      "id": "cn-x045",
+      "text": {
+        "en": "palace",
+        "fa": "کاخ"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x046",
+      "text": {
+        "en": "temple",
+        "fa": "معبد"
+      },
+      "difficulty": 2
+    },
+    {
+      "id": "cn-x047",
+      "text": {
+        "en": "tunnel",
+        "fa": "تونل"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x048",
+      "text": {
+        "en": "doctor",
+        "fa": "دکتر"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x049",
+      "text": {
+        "en": "judge",
+        "fa": "قاضی"
+      },
+      "difficulty": 2
+    },
+    {
+      "id": "cn-x050",
+      "text": {
+        "en": "pilot",
+        "fa": "خلبان"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x051",
+      "text": {
+        "en": "captain",
+        "fa": "ناخدا"
+      },
+      "difficulty": 2
+    },
+    {
+      "id": "cn-x052",
+      "text": {
+        "en": "soldier",
+        "fa": "سرباز"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x053",
+      "text": {
+        "en": "queen",
+        "fa": "ملکه"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x054",
+      "text": {
+        "en": "knight",
+        "fa": "شوالیه"
+      },
+      "difficulty": 2
+    },
+    {
+      "id": "cn-x055",
+      "text": {
+        "en": "nurse",
+        "fa": "پرستار"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x056",
+      "text": {
+        "en": "teacher",
+        "fa": "معلم"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x057",
+      "text": {
+        "en": "farmer",
+        "fa": "کشاورز"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x058",
+      "text": {
+        "en": "hunter",
+        "fa": "شکارچی"
+      },
+      "difficulty": 2
+    },
+    {
+      "id": "cn-x059",
+      "text": {
+        "en": "thief",
+        "fa": "دزد"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x060",
+      "text": {
+        "en": "spy",
+        "fa": "جاسوس"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x061",
+      "text": {
+        "en": "guard",
+        "fa": "نگهبان"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x062",
+      "text": {
+        "en": "agent",
+        "fa": "مأمور"
+      },
+      "difficulty": 2
+    },
+    {
+      "id": "cn-x063",
+      "text": {
+        "en": "clown",
+        "fa": "دلقک"
+      },
+      "difficulty": 2
+    },
+    {
+      "id": "cn-x064",
+      "text": {
+        "en": "engine",
+        "fa": "موتور"
+      },
+      "difficulty": 2
+    },
+    {
+      "id": "cn-x065",
+      "text": {
+        "en": "anchor",
+        "fa": "لنگر"
+      },
+      "difficulty": 2
+    },
+    {
+      "id": "cn-x066",
+      "text": {
+        "en": "sail",
+        "fa": "بادبان"
+      },
+      "difficulty": 2
+    },
+    {
+      "id": "cn-x067",
+      "text": {
+        "en": "wagon",
+        "fa": "واگن"
+      },
+      "difficulty": 2
+    },
+    {
+      "id": "cn-x068",
+      "text": {
+        "en": "ticket",
+        "fa": "بلیت"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x069",
+      "text": {
+        "en": "station",
+        "fa": "ایستگاه"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x070",
+      "text": {
+        "en": "battery",
+        "fa": "باتری"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x071",
+      "text": {
+        "en": "screen",
+        "fa": "صفحه"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x072",
+      "text": {
+        "en": "satellite",
+        "fa": "ماهواره"
+      },
+      "difficulty": 2
+    },
+    {
+      "id": "cn-x073",
+      "text": {
+        "en": "signal",
+        "fa": "سیگنال"
+      },
+      "difficulty": 2
+    },
+    {
+      "id": "cn-x074",
+      "text": {
+        "en": "circuit",
+        "fa": "مدار"
+      },
+      "difficulty": 3
+    },
+    {
+      "id": "cn-x075",
+      "text": {
+        "en": "antenna",
+        "fa": "آنتن"
+      },
+      "difficulty": 2
+    },
+    {
+      "id": "cn-x076",
+      "text": {
+        "en": "laser",
+        "fa": "لیزر"
+      },
+      "difficulty": 2
+    },
+    {
+      "id": "cn-x077",
+      "text": {
+        "en": "cable",
+        "fa": "کابل"
+      },
+      "difficulty": 2
+    },
+    {
+      "id": "cn-x078",
+      "text": {
+        "en": "drone",
+        "fa": "پهپاد"
+      },
+      "difficulty": 2
+    },
+    {
+      "id": "cn-x079",
+      "text": {
+        "en": "goal",
+        "fa": "گل"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x080",
+      "text": {
+        "en": "racket",
+        "fa": "راکت"
+      },
+      "difficulty": 2
+    },
+    {
+      "id": "cn-x081",
+      "text": {
+        "en": "net",
+        "fa": "تور"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x082",
+      "text": {
+        "en": "medal",
+        "fa": "مدال"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x083",
+      "text": {
+        "en": "trophy",
+        "fa": "جام"
+      },
+      "difficulty": 2
+    },
+    {
+      "id": "cn-x084",
+      "text": {
+        "en": "referee",
+        "fa": "داور"
+      },
+      "difficulty": 2
+    },
+    {
+      "id": "cn-x085",
+      "text": {
+        "en": "stadium",
+        "fa": "ورزشگاه"
+      },
+      "difficulty": 2
+    },
+    {
+      "id": "cn-x086",
+      "text": {
+        "en": "chess",
+        "fa": "شطرنج"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x087",
+      "text": {
+        "en": "card",
+        "fa": "کارت"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x088",
+      "text": {
+        "en": "puzzle",
+        "fa": "پازل"
+      },
+      "difficulty": 2
+    },
+    {
+      "id": "cn-x089",
+      "text": {
+        "en": "luck",
+        "fa": "شانس"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x090",
+      "text": {
+        "en": "secret",
+        "fa": "راز"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x091",
+      "text": {
+        "en": "power",
+        "fa": "قدرت"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x092",
+      "text": {
+        "en": "freedom",
+        "fa": "آزادی"
+      },
+      "difficulty": 2
+    },
+    {
+      "id": "cn-x093",
+      "text": {
+        "en": "war",
+        "fa": "جنگ"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x094",
+      "text": {
+        "en": "peace",
+        "fa": "صلح"
+      },
+      "difficulty": 1
+    },
+    {
+      "id": "cn-x095",
+      "text": {
+        "en": "myth",
+        "fa": "اسطوره"
+      },
+      "difficulty": 2
+    },
+    {
+      "id": "cn-x096",
+      "text": {
+        "en": "hero",
+        "fa": "قهرمان"
+      },
+      "difficulty": 1
     }
   ]
 }

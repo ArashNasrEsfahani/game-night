@@ -279,6 +279,456 @@
         "en": "Most likely to do something they'll regret tomorrow",
         "fa": "به احتمال زیاد یه کاری می‌کنه که فردا حسابی پشیمون می‌شه"
       }
+    },
+    {
+      "id": "mlt-s-x001",
+      "intensity": "spicy",
+      "emoji": "📱",
+      "text": {
+        "en": "Most likely to drunk-text their ex at 2am",
+        "fa": "بیشترین احتمال داره نصفه‌شب مست به اکسش پیام بده"
+      }
+    },
+    {
+      "id": "mlt-s-x002",
+      "intensity": "spicy",
+      "emoji": "🚓",
+      "text": {
+        "en": "Most likely to flirt to get out of a speeding ticket",
+        "fa": "بیشترین احتمال داره با لاس زدن از جریمه‌ی سرعت در بره"
+      }
+    },
+    {
+      "id": "mlt-s-x003",
+      "intensity": "spicy",
+      "emoji": "✉️",
+      "text": {
+        "en": "Most likely to slide into a celebrity's DMs",
+        "fa": "بیشترین احتمال داره به دایرکت یه سلبریتی پیام بده"
+      }
+    },
+    {
+      "id": "mlt-s-x004",
+      "intensity": "spicy",
+      "emoji": "😍",
+      "text": {
+        "en": "Most likely to have a secret crush on someone in this room",
+        "fa": "بیشترین احتمال داره مخفیانه به یکی تو همین جمع کراش داشته باشه"
+      }
+    },
+    {
+      "id": "mlt-s-x005",
+      "intensity": "spicy",
+      "emoji": "💋",
+      "text": {
+        "en": "Most likely to kiss a stranger on a dare",
+        "fa": "بیشترین احتمال داره سر شرط یه غریبه رو ببوسه"
+      }
+    },
+    {
+      "id": "mlt-s-x006",
+      "intensity": "spicy",
+      "emoji": "😳",
+      "text": {
+        "en": "Most likely to send a risky text to the wrong person",
+        "fa": "بیشترین احتمال داره یه پیام جنجالی رو به آدم اشتباهی بفرسته"
+      }
+    },
+    {
+      "id": "mlt-s-x007",
+      "intensity": "casual",
+      "emoji": "📞",
+      "text": {
+        "en": "Most likely to fake a phone call to escape a bad date",
+        "fa": "بیشترین احتمال داره برای فرار از یه قرار بد ادای تماس تلفنی دربیاره"
+      }
+    },
+    {
+      "id": "mlt-s-x008",
+      "intensity": "spicy",
+      "emoji": "🕵️",
+      "text": {
+        "en": "Most likely to stalk an ex on social media",
+        "fa": "بیشترین احتمال داره اکسش رو تو شبکه‌های اجتماعی تعقیب کنه"
+      }
+    },
+    {
+      "id": "mlt-s-x009",
+      "intensity": "spicy",
+      "emoji": "🏖️",
+      "text": {
+        "en": "Most likely to start a fling on vacation",
+        "fa": "بیشترین احتمال داره تو سفر یه رابطه‌ی زودگذر شروع کنه"
+      }
+    },
+    {
+      "id": "mlt-s-x010",
+      "intensity": "spicy",
+      "emoji": "💁",
+      "text": {
+        "en": "Most likely to brag about their number of exes",
+        "fa": "بیشترین احتمال داره پز تعداد اکس‌هاش رو بده"
+      }
+    },
+    {
+      "id": "mlt-s-x011",
+      "intensity": "spicy",
+      "emoji": "🚪",
+      "text": {
+        "en": "Most likely to get caught sneaking out after a sleepover",
+        "fa": "بیشترین احتمال داره موقع یواشکی بیرون رفتن بعد از شب‌مونی گیر بیفته"
+      }
+    },
+    {
+      "id": "mlt-s-x012",
+      "intensity": "casual",
+      "emoji": "📲",
+      "text": {
+        "en": "Most likely to swipe right on everyone",
+        "fa": "بیشترین احتمال داره روی همه راست سوایپ کنه"
+      }
+    },
+    {
+      "id": "mlt-s-x013",
+      "intensity": "spicy",
+      "emoji": "😏",
+      "text": {
+        "en": "Most likely to make a move on a friend's crush",
+        "fa": "بیشترین احتمال داره روی کراش یه دوستش حرکت بزنه"
+      }
+    },
+    {
+      "id": "mlt-s-x014",
+      "intensity": "spicy",
+      "emoji": "😜",
+      "text": {
+        "en": "Most likely to be a shameless tease",
+        "fa": "بیشترین احتمال داره یه آدم بی‌حیا و دلبر باشه که همش لاس می‌زنه"
+      }
+    },
+    {
+      "id": "mlt-s-x015",
+      "intensity": "casual",
+      "emoji": "🎂",
+      "text": {
+        "en": "Most likely to lie about their age on a dating app",
+        "fa": "بیشترین احتمال داره تو اپ دوست‌یابی سن خودش رو دروغ بگه"
+      }
+    },
+    {
+      "id": "mlt-s-x016",
+      "intensity": "spicy",
+      "emoji": "💃",
+      "text": {
+        "en": "Most likely to give a wild lap dance at a party",
+        "fa": "بیشترین احتمال داره تو مهمونی برای یکی یه رقص داغ و دیوونه‌وار بذاره"
+      }
+    },
+    {
+      "id": "mlt-s-x017",
+      "intensity": "casual",
+      "emoji": "📝",
+      "text": {
+        "en": "Most likely to keep a list of their crushes",
+        "fa": "بیشترین احتمال داره یه لیست از کراش‌هاش نگه داره"
+      }
+    },
+    {
+      "id": "mlt-s-x018",
+      "intensity": "spicy",
+      "emoji": "😉",
+      "text": {
+        "en": "Most likely to wink at the bartender for a free drink",
+        "fa": "بیشترین احتمال داره به بارمن چشمک بزنه که نوشیدنی مجانی بگیره"
+      }
+    },
+    {
+      "id": "mlt-s-x019",
+      "intensity": "spicy",
+      "emoji": "🤳",
+      "text": {
+        "en": "Most likely to send a flirty selfie",
+        "fa": "بیشترین احتمال داره یه سلفی عشوه‌ای بفرسته"
+      }
+    },
+    {
+      "id": "mlt-s-x020",
+      "intensity": "spicy",
+      "emoji": "👯",
+      "text": {
+        "en": "Most likely to date two people at once",
+        "fa": "بیشترین احتمال داره همزمان با دو نفر دوست بشه"
+      }
+    },
+    {
+      "id": "mlt-s-x021",
+      "intensity": "spicy",
+      "emoji": "🍷",
+      "text": {
+        "en": "Most likely to confess a secret crush after a few drinks",
+        "fa": "بیشترین احتمال داره بعد از چند تا نوشیدنی به کراش پنهانش اعتراف کنه"
+      }
+    },
+    {
+      "id": "mlt-s-x022",
+      "intensity": "spicy",
+      "emoji": "👀",
+      "text": {
+        "en": "Most likely to be caught checking someone out",
+        "fa": "بیشترین احتمال داره موقع دید زدن یکی گیر بیفته"
+      }
+    },
+    {
+      "id": "mlt-s-x023",
+      "intensity": "spicy",
+      "emoji": "👻",
+      "text": {
+        "en": "Most likely to ghost someone after a great date",
+        "fa": "بیشترین احتمال داره بعد از یه قرار عالی طرف رو غیب کنه"
+      }
+    },
+    {
+      "id": "mlt-s-x024",
+      "intensity": "spicy",
+      "emoji": "🗣️",
+      "text": {
+        "en": "Most likely to start a rumor about who's hooking up",
+        "fa": "بیشترین احتمال داره شایعه بسازه که کی با کی رابطه داره"
+      }
+    },
+    {
+      "id": "mlt-s-x025",
+      "intensity": "spicy",
+      "emoji": "🕺",
+      "text": {
+        "en": "Most likely to dance on the table by midnight",
+        "fa": "بیشترین احتمال داره تا نصفه‌شب روی میز برقصه"
+      }
+    },
+    {
+      "id": "mlt-s-x026",
+      "intensity": "spicy",
+      "emoji": "🌅",
+      "text": {
+        "en": "Most likely to text three people good morning",
+        "fa": "بیشترین احتمال داره به سه نفر پیام صبح‌بخیر بفرسته"
+      }
+    },
+    {
+      "id": "mlt-s-x027",
+      "intensity": "spicy",
+      "emoji": "🙊",
+      "text": {
+        "en": "Most likely to pretend they're single when they're not",
+        "fa": "بیشترین احتمال داره وانمود کنه مجرده در حالی که نیست"
+      }
+    },
+    {
+      "id": "mlt-s-x028",
+      "intensity": "casual",
+      "emoji": "🧀",
+      "text": {
+        "en": "Most likely to use a cheesy pickup line and mean it",
+        "fa": "بیشترین احتمال داره یه جمله‌ی مخ‌زنی لوس بگه و جدی هم باشه"
+      }
+    },
+    {
+      "id": "mlt-s-x029",
+      "intensity": "casual",
+      "emoji": "🪩",
+      "text": {
+        "en": "Most likely to be the last one to leave the dance floor",
+        "fa": "بیشترین احتمال داره آخرین نفری باشه که پیست رقص رو ترک می‌کنه"
+      }
+    },
+    {
+      "id": "mlt-s-x030",
+      "intensity": "spicy",
+      "emoji": "🌊",
+      "text": {
+        "en": "Most likely to skinny dip on a dare",
+        "fa": "بیشترین احتمال داره سر شرط لخت بپره تو آب"
+      }
+    },
+    {
+      "id": "mlt-s-x031",
+      "intensity": "casual",
+      "emoji": "🤝",
+      "text": {
+        "en": "Most likely to keep their exes as close friends",
+        "fa": "بیشترین احتمال داره اکس‌هاش رو به‌عنوان دوست صمیمی نگه داره"
+      }
+    },
+    {
+      "id": "mlt-s-x032",
+      "intensity": "spicy",
+      "emoji": "😬",
+      "text": {
+        "en": "Most likely to flirt with their best friend's sibling",
+        "fa": "بیشترین احتمال داره با خواهر یا برادر بهترین دوستش لاس بزنه"
+      }
+    },
+    {
+      "id": "mlt-s-x033",
+      "intensity": "spicy",
+      "emoji": "👗",
+      "text": {
+        "en": "Most likely to wear something scandalous to a wedding",
+        "fa": "بیشترین احتمال داره یه لباس جنجالی بپوشه و بره عروسی"
+      }
+    },
+    {
+      "id": "mlt-s-x034",
+      "intensity": "spicy",
+      "emoji": "🫢",
+      "text": {
+        "en": "Most likely to spill everyone's dating secrets",
+        "fa": "بیشترین احتمال داره راز رابطه‌ی همه رو لو بده"
+      }
+    },
+    {
+      "id": "mlt-s-x035",
+      "intensity": "spicy",
+      "emoji": "✍️",
+      "text": {
+        "en": "Most likely to get a number written on their hand",
+        "fa": "بیشترین احتمال داره یکی شماره‌اش رو روی دستش بنویسه"
+      }
+    },
+    {
+      "id": "mlt-s-x036",
+      "intensity": "casual",
+      "emoji": "💫",
+      "text": {
+        "en": "Most likely to fall for someone way out of their league",
+        "fa": "بیشترین احتمال داره عاشق یکی بشه که خیلی ازش سرتره"
+      }
+    },
+    {
+      "id": "mlt-s-x037",
+      "intensity": "spicy",
+      "emoji": "🔒",
+      "text": {
+        "en": "Most likely to have a secret dating profile",
+        "fa": "بیشترین احتمال داره یه پروفایل دوست‌یابی مخفی داشته باشه"
+      }
+    },
+    {
+      "id": "mlt-s-x038",
+      "intensity": "spicy",
+      "emoji": "🍸",
+      "text": {
+        "en": "Most likely to make eyes at someone across the bar",
+        "fa": "بیشترین احتمال داره از اون سر بار با یکی چشم و ابرو بیاد"
+      }
+    },
+    {
+      "id": "mlt-s-x039",
+      "intensity": "spicy",
+      "emoji": "💄",
+      "text": {
+        "en": "Most likely to kiss and tell",
+        "fa": "بیشترین احتمال داره بعد از یه بوسه همه‌جا تعریفش کنه"
+      }
+    },
+    {
+      "id": "mlt-s-x040",
+      "intensity": "spicy",
+      "emoji": "🌙",
+      "text": {
+        "en": "Most likely to text their crush 'u up?'",
+        "fa": "بیشترین احتمال داره به کراشش پیام بده «بیداری؟»"
+      }
+    },
+    {
+      "id": "mlt-s-x041",
+      "intensity": "spicy",
+      "emoji": "🎉",
+      "text": {
+        "en": "Most likely to crash a party to see their crush",
+        "fa": "بیشترین احتمال داره برای دیدن کراشش سرزده بپره تو یه مهمونی"
+      }
+    },
+    {
+      "id": "mlt-s-x042",
+      "intensity": "casual",
+      "emoji": "🗨️",
+      "text": {
+        "en": "Most likely to flirt in a language no one understands",
+        "fa": "بیشترین احتمال داره به زبونی لاس بزنه که هیچکس نمی‌فهمه"
+      }
+    },
+    {
+      "id": "mlt-s-x043",
+      "intensity": "spicy",
+      "emoji": "📸",
+      "text": {
+        "en": "Most likely to keep flirty texts as screenshots",
+        "fa": "بیشترین احتمال داره از پیام‌های عشوه‌ای اسکرین‌شات نگه داره"
+      }
+    },
+    {
+      "id": "mlt-s-x044",
+      "intensity": "casual",
+      "emoji": "🆘",
+      "text": {
+        "en": "Most likely to be everyone's emergency contact for a crush",
+        "fa": "بیشترین احتمال داره طرف مشورت همه برای ماجراهای کراش باشه"
+      }
+    },
+    {
+      "id": "mlt-s-x045",
+      "intensity": "casual",
+      "emoji": "🕶️",
+      "text": {
+        "en": "Most likely to wear sunglasses indoors to look mysterious",
+        "fa": "بیشترین احتمال داره تو خونه عینک آفتابی بزنه که مرموز به نظر بیاد"
+      }
+    },
+    {
+      "id": "mlt-s-x046",
+      "intensity": "spicy",
+      "emoji": "💭",
+      "text": {
+        "en": "Most likely to brag about a steamy dream",
+        "fa": "بیشترین احتمال داره از یه خواب داغ و هیجان‌انگیز تعریف کنه"
+      }
+    },
+    {
+      "id": "mlt-s-x047",
+      "intensity": "casual",
+      "emoji": "📷",
+      "text": {
+        "en": "Most likely to get caught winking in a group photo",
+        "fa": "بیشترین احتمال داره تو عکس دسته‌جمعی موقع چشمک گیر بیفته"
+      }
+    },
+    {
+      "id": "mlt-s-x048",
+      "intensity": "spicy",
+      "emoji": "🚗",
+      "text": {
+        "en": "Most likely to leave a party with someone new",
+        "fa": "بیشترین احتمال داره مهمونی رو با یه آدم تازه ترک کنه"
+      }
+    },
+    {
+      "id": "mlt-s-x049",
+      "intensity": "spicy",
+      "emoji": "🙈",
+      "text": {
+        "en": "Most likely to play hard to get and then cave",
+        "fa": "بیشترین احتمال داره ادای ناز کردن دربیاره و آخرش کوتاه بیاد"
+      }
+    },
+    {
+      "id": "mlt-s-x050",
+      "intensity": "casual",
+      "emoji": "💬",
+      "text": {
+        "en": "Most likely to start a group chat full of gossip",
+        "fa": "بیشترین احتمال داره یه گروه چت پر از شایعه و حرف راه بندازه"
+      }
     }
   ]
 }

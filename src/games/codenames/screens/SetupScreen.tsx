@@ -5,7 +5,7 @@ import type { GameConfig, GameScreenProps, PlayerSeat, TeamSetup } from '../../.
 import { Screen, AppBar, Button, SegmentedControl, Toggle } from '../../../sdk/ui';
 import { useRosterStore } from '../../../store/rosterStore';
 import { asTeamId } from '../../../engine/ids';
-import { DEFAULT_OPTIONS, validateConfig } from '../config';
+import { DEFAULT_OPTIONS, PACK_LIST, validateConfig } from '../config';
 import type { CodenamesMode, CodenamesOptions, StartingTeam } from '../config';
 import type { CodenamesAction, CodenamesState } from '../logic';
 
@@ -21,6 +21,8 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<CodenamesState, Codena
   }
   const togglePlayer = (id: string) =>
     setSelected((s) => (s.includes(id) ? s.filter((x) => x !== id) : [...s, id]));
+  const togglePack = (id: string) =>
+    set('packIds', opts.packIds.includes(id) ? opts.packIds.filter((x) => x !== id) : [...opts.packIds, id]);
 
   const seats: PlayerSeat[] = players
     .filter((p) => selected.includes(p.id))
@@ -66,7 +68,7 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<CodenamesState, Codena
                   onClick={() => togglePlayer(p.id)}
                   className={`rounded-full px-3 py-2 text-sm font-medium ${
                     selected.includes(p.id)
-                      ? 'bg-[var(--game-accent-strong)] text-white'
+                      ? 'bg-[var(--game-accent-strong)] text-[var(--game-on-accent)]'
                       : 'bg-[var(--surface-2)] text-[var(--text)]'
                   }`}
                 >
@@ -108,6 +110,38 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<CodenamesState, Codena
             ]}
           />
         </section>
+
+        {opts.mode === 'timed' && (
+          <section>
+            <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">{t('cn.turnTime')}</h2>
+            <SegmentedControl<string>
+              value={String(opts.turnSeconds)}
+              onChange={(v) => set('turnSeconds', Number(v))}
+              options={[60, 120, 180, 240].map((s) => ({ value: String(s), label: `${s / 60}m` }))}
+            />
+          </section>
+        )}
+
+        {PACK_LIST.length > 1 && (
+          <section>
+            <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">{t('cn.packs')}</h2>
+            <div className="flex flex-wrap gap-2">
+              {PACK_LIST.map((p) => (
+                <button
+                  key={p.id}
+                  onClick={() => togglePack(p.id)}
+                  className={`rounded-full px-3 py-1.5 text-sm ${
+                    opts.packIds.includes(p.id)
+                      ? 'bg-[var(--game-accent-strong)] text-[var(--game-on-accent)]'
+                      : 'bg-[var(--surface-2)] text-[var(--text)]'
+                  }`}
+                >
+                  {ctx.localize(p.name)}
+                </button>
+              ))}
+            </div>
+          </section>
+        )}
 
         <section>
           <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">{t('cn.startingTeam')}</h2>

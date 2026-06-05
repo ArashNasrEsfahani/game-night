@@ -68,7 +68,7 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<HeadsUpState, HeadsUpA
                   onClick={() => togglePlayer(p.id)}
                   className={`rounded-full px-3 py-2 text-sm font-medium ${
                     selected.includes(p.id)
-                      ? 'bg-[var(--game-accent-strong)] text-white'
+                      ? 'bg-[var(--game-accent-strong)] text-[var(--game-on-accent)]'
                       : 'bg-[var(--surface-2)] text-[var(--text)]'
                   }`}
                 >
@@ -89,7 +89,7 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<HeadsUpState, HeadsUpA
                 onClick={() => toggleDeck(d.id)}
                 className={`rounded-full px-3 py-1.5 text-sm ${
                   opts.deckIds.includes(d.id)
-                    ? 'bg-[var(--game-accent-strong)] text-white'
+                    ? 'bg-[var(--game-accent-strong)] text-[var(--game-on-accent)]'
                     : 'bg-[var(--surface-2)] text-[var(--text)]'
                 }`}
               >
@@ -142,6 +142,8 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<HeadsUpState, HeadsUpA
             checked={opts.passPenalty === 1}
             onChange={(v) => set('passPenalty', v ? 1 : 0)}
           />
+          <Toggle label={t('hu.recycle')} checked={opts.recycleDeck} onChange={(v) => set('recycleDeck', v)} />
+          <Toggle label={t('hu.motion')} checked={opts.motionEnabled} onChange={(v) => set('motionEnabled', v)} />
         </section>
 
         {errors && (

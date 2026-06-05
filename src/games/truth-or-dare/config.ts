@@ -22,7 +22,7 @@ export interface ToDOptions {
 }
 
 export const DEFAULT_OPTIONS: ToDOptions = {
-  intensities: { mild: true, medium: true, spicy: false },
+  intensities: { mild: true, medium: true, spicy: false, extreme: false },
   selectionMode: 'spinner',
   scoringMode: 'casual',
   pointsForDare: 2,
@@ -40,8 +40,10 @@ export function normalizeOptions(o: Partial<ToDOptions> | undefined): ToDOptions
     mild: src.intensities?.mild ?? true,
     medium: src.intensities?.medium ?? false,
     spicy: src.intensities?.spicy ?? false,
+    extreme: src.intensities?.extreme ?? false,
   };
-  if (!intensities.mild && !intensities.medium && !intensities.spicy) intensities.mild = true;
+  if (!intensities.mild && !intensities.medium && !intensities.spicy && !intensities.extreme)
+    intensities.mild = true;
   return {
     intensities,
     selectionMode: src.selectionMode === 'sequential' ? 'sequential' : 'spinner',

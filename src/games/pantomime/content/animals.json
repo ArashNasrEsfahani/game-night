@@ -271,6 +271,411 @@
         "en": "A mongoose dodging and pouncing on a snake",
         "fa": "راسویی که جاخالی می‌ده و رو مار شیرجه می‌زنه"
       }
+    },
+    {
+      "id": "animals-x001",
+      "text": {
+        "en": "Cat",
+        "fa": "گربه"
+      },
+      "category": "animals",
+      "difficulty": "easy"
+    },
+    {
+      "id": "animals-x002",
+      "text": {
+        "en": "Dog",
+        "fa": "سگ"
+      },
+      "category": "animals",
+      "difficulty": "easy"
+    },
+    {
+      "id": "animals-x003",
+      "text": {
+        "en": "Cow",
+        "fa": "گاو"
+      },
+      "category": "animals",
+      "difficulty": "easy"
+    },
+    {
+      "id": "animals-x004",
+      "text": {
+        "en": "Horse",
+        "fa": "اسب"
+      },
+      "category": "animals",
+      "difficulty": "easy"
+    },
+    {
+      "id": "animals-x005",
+      "text": {
+        "en": "Rabbit",
+        "fa": "خرگوش"
+      },
+      "category": "animals",
+      "difficulty": "easy"
+    },
+    {
+      "id": "animals-x006",
+      "text": {
+        "en": "Chicken",
+        "fa": "مرغ"
+      },
+      "category": "animals",
+      "difficulty": "easy"
+    },
+    {
+      "id": "animals-x007",
+      "text": {
+        "en": "Duck",
+        "fa": "اردک"
+      },
+      "category": "animals",
+      "difficulty": "easy"
+    },
+    {
+      "id": "animals-x008",
+      "text": {
+        "en": "Monkey",
+        "fa": "میمون"
+      },
+      "category": "animals",
+      "difficulty": "easy"
+    },
+    {
+      "id": "animals-x009",
+      "text": {
+        "en": "Elephant",
+        "fa": "فیل"
+      },
+      "category": "animals",
+      "difficulty": "easy"
+    },
+    {
+      "id": "animals-x010",
+      "text": {
+        "en": "Snake",
+        "fa": "مار"
+      },
+      "category": "animals",
+      "difficulty": "easy"
+    },
+    {
+      "id": "animals-x011",
+      "text": {
+        "en": "Frog",
+        "fa": "قورباغه"
+      },
+      "category": "animals",
+      "difficulty": "easy"
+    },
+    {
+      "id": "animals-x012",
+      "text": {
+        "en": "Bird",
+        "fa": "پرنده"
+      },
+      "category": "animals",
+      "difficulty": "easy"
+    },
+    {
+      "id": "animals-x013",
+      "text": {
+        "en": "Fish",
+        "fa": "ماهی"
+      },
+      "category": "animals",
+      "difficulty": "easy"
+    },
+    {
+      "id": "animals-x014",
+      "text": {
+        "en": "Bee",
+        "fa": "زنبور"
+      },
+      "category": "animals",
+      "difficulty": "easy"
+    },
+    {
+      "id": "animals-x015",
+      "text": {
+        "en": "Sheep",
+        "fa": "گوسفند"
+      },
+      "category": "animals",
+      "difficulty": "easy"
+    },
+    {
+      "id": "animals-x016",
+      "text": {
+        "en": "Lion",
+        "fa": "شیر"
+      },
+      "category": "animals",
+      "difficulty": "easy"
+    },
+    {
+      "id": "animals-x017",
+      "text": {
+        "en": "Penguin",
+        "fa": "پنگوئن"
+      },
+      "category": "animals",
+      "difficulty": "medium"
+    },
+    {
+      "id": "animals-x018",
+      "text": {
+        "en": "Kangaroo",
+        "fa": "کانگورو"
+      },
+      "category": "animals",
+      "difficulty": "medium"
+    },
+    {
+      "id": "animals-x019",
+      "text": {
+        "en": "Gorilla",
+        "fa": "گوریل"
+      },
+      "category": "animals",
+      "difficulty": "medium"
+    },
+    {
+      "id": "animals-x020",
+      "text": {
+        "en": "Spider",
+        "fa": "عنکبوت"
+      },
+      "category": "animals",
+      "difficulty": "medium"
+    },
+    {
+      "id": "animals-x021",
+      "text": {
+        "en": "Crab",
+        "fa": "خرچنگ"
+      },
+      "category": "animals",
+      "difficulty": "medium"
+    },
+    {
+      "id": "animals-x022",
+      "text": {
+        "en": "Eagle",
+        "fa": "عقاب"
+      },
+      "category": "animals",
+      "difficulty": "medium"
+    },
+    {
+      "id": "animals-x023",
+      "text": {
+        "en": "Owl",
+        "fa": "جغد"
+      },
+      "category": "animals",
+      "difficulty": "medium"
+    },
+    {
+      "id": "animals-x024",
+      "text": {
+        "en": "Bear",
+        "fa": "خرس"
+      },
+      "category": "animals",
+      "difficulty": "medium"
+    },
+    {
+      "id": "animals-x025",
+      "text": {
+        "en": "Giraffe",
+        "fa": "زرافه"
+      },
+      "category": "animals",
+      "difficulty": "medium"
+    },
+    {
+      "id": "animals-x026",
+      "text": {
+        "en": "Turtle",
+        "fa": "لاک‌پشت"
+      },
+      "category": "animals",
+      "difficulty": "medium"
+    },
+    {
+      "id": "animals-x027",
+      "text": {
+        "en": "Crocodile",
+        "fa": "تمساح"
+      },
+      "category": "animals",
+      "difficulty": "medium"
+    },
+    {
+      "id": "animals-x028",
+      "text": {
+        "en": "Butterfly",
+        "fa": "پروانه"
+      },
+      "category": "animals",
+      "difficulty": "medium"
+    },
+    {
+      "id": "animals-x029",
+      "text": {
+        "en": "Octopus",
+        "fa": "هشت‌پا"
+      },
+      "category": "animals",
+      "difficulty": "medium"
+    },
+    {
+      "id": "animals-x030",
+      "text": {
+        "en": "Shark",
+        "fa": "کوسه"
+      },
+      "category": "animals",
+      "difficulty": "medium"
+    },
+    {
+      "id": "animals-x031",
+      "text": {
+        "en": "Camel",
+        "fa": "شتر"
+      },
+      "category": "animals",
+      "difficulty": "medium"
+    },
+    {
+      "id": "animals-x032",
+      "text": {
+        "en": "Bat",
+        "fa": "خفاش"
+      },
+      "category": "animals",
+      "difficulty": "medium"
+    },
+    {
+      "id": "animals-x033",
+      "text": {
+        "en": "Peacock",
+        "fa": "طاووس"
+      },
+      "category": "animals",
+      "difficulty": "medium"
+    },
+    {
+      "id": "animals-x034",
+      "text": {
+        "en": "Snail",
+        "fa": "حلزون"
+      },
+      "category": "animals",
+      "difficulty": "hard"
+    },
+    {
+      "id": "animals-x035",
+      "text": {
+        "en": "Chameleon",
+        "fa": "آفتاب‌پرست"
+      },
+      "category": "animals",
+      "difficulty": "hard"
+    },
+    {
+      "id": "animals-x036",
+      "text": {
+        "en": "Seahorse",
+        "fa": "اسب دریایی"
+      },
+      "category": "animals",
+      "difficulty": "hard"
+    },
+    {
+      "id": "animals-x037",
+      "text": {
+        "en": "Jellyfish",
+        "fa": "عروس دریایی"
+      },
+      "category": "animals",
+      "difficulty": "hard"
+    },
+    {
+      "id": "animals-x038",
+      "text": {
+        "en": "Sloth",
+        "fa": "تنبل"
+      },
+      "category": "animals",
+      "difficulty": "hard"
+    },
+    {
+      "id": "animals-x039",
+      "text": {
+        "en": "Hedgehog",
+        "fa": "جوجه‌تیغی"
+      },
+      "category": "animals",
+      "difficulty": "hard"
+    },
+    {
+      "id": "animals-x040",
+      "text": {
+        "en": "Flamingo",
+        "fa": "فلامینگو"
+      },
+      "category": "animals",
+      "difficulty": "hard"
+    },
+    {
+      "id": "animals-x041",
+      "text": {
+        "en": "Praying mantis",
+        "fa": "آخوندک"
+      },
+      "category": "animals",
+      "difficulty": "hard"
+    },
+    {
+      "id": "animals-x042",
+      "text": {
+        "en": "Platypus",
+        "fa": "پلاتیپوس"
+      },
+      "category": "animals",
+      "difficulty": "hard"
+    },
+    {
+      "id": "animals-x043",
+      "text": {
+        "en": "Woodpecker",
+        "fa": "دارکوب"
+      },
+      "category": "animals",
+      "difficulty": "hard"
+    },
+    {
+      "id": "animals-x044",
+      "text": {
+        "en": "Starfish",
+        "fa": "ستاره دریایی"
+      },
+      "category": "animals",
+      "difficulty": "hard"
+    },
+    {
+      "id": "animals-x045",
+      "text": {
+        "en": "Anteater",
+        "fa": "مورچه‌خوار"
+      },
+      "category": "animals",
+      "difficulty": "hard"
     }
   ]
 }

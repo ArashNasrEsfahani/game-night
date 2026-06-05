@@ -26,7 +26,7 @@ export function SettingsPage() {
               onClick={() => s.setTheme(th)}
               className={`flex-1 rounded-full py-2 text-sm font-medium ${
                 s.theme === th
-                  ? 'bg-[var(--game-accent-strong)] text-white'
+                  ? 'bg-[var(--game-accent-strong)] text-[var(--game-on-accent)]'
                   : 'bg-[var(--surface-2)] text-[var(--text)]'
               }`}
             >
@@ -47,7 +47,7 @@ export function SettingsPage() {
               onClick={() => s.setLanguage(lng)}
               className={`flex-1 rounded-full py-2 text-sm font-medium ${
                 s.language === lng
-                  ? 'bg-[var(--game-accent-strong)] text-white'
+                  ? 'bg-[var(--game-accent-strong)] text-[var(--game-on-accent)]'
                   : 'bg-[var(--surface-2)] text-[var(--text)]'
               }`}
             >

@@ -8,8 +8,12 @@
 /* Manual dark-mode toggle (class) layered on top of system preference. */
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* ─────────────────────────  Design tokens  ───────────────────────── */
-@theme {
+/* ─────────────────────────  Design tokens  ─────────────────────────
+   `static` forces every token to be emitted to :root even when it is only
+   referenced dynamically (e.g. `var(--color-game-${accent}-strong)` built in JS,
+   which Tailwind's static scanner can't see). Without it, tangerine / grape-strong /
+   violet-strong etc. get tree-shaken and those games lose their accent fills. */
+@theme static {
   /* The disco lights (Persian-named hues). Each: base + strong (for gradients). */
   --color-game-grape: #d633ff;
   --color-game-grape-strong: #9b1fd6;
@@ -64,17 +68,29 @@
   --border-glow: #d3b878;
 
   --text: #241b3f;
-  --text-muted: #6c6088;
-  --text-dim: #9a8fb0;
+  --text-muted: #5c5080;
+  --text-dim: #877a9f;
   --on-accent: #160f30; /* dark ink reads on the bright accent gradients in both themes */
+
+  /* Readable ink ON each saturated accent fill (same in both themes — accents are theme-independent).
+     Dark hues get ivory ink; bright hues get dark ink. Used as --game-on-accent. */
+  --on-grape: #fdf6e6;
+  --on-sky: #fdf6e6;
+  --on-rose: #fdf6e6;
+  --on-violet: #fdf6e6;
+  --on-tangerine: #160f30;
+  --on-lime: #160f30;
+  --on-gold: #160f30;
+  --on-teal: #160f30;
+  --game-on-accent: var(--on-teal); /* host/GameCard override per game */
 
   --game-accent: var(--color-game-teal-strong);
   --game-accent-strong: var(--color-game-teal-strong);
   --game-accent-glow: color-mix(in oklab, var(--game-accent) 45%, transparent);
   --game-accent-soft: color-mix(in oklab, var(--game-accent) 14%, transparent);
 
-  --beam: 0;
-  --dust: 0;
+  --beam: 0.42;
+  --dust: 0.4;
   --shadow-card: 0 16px 40px -24px rgb(60 40 20 / 0.4);
   color-scheme: light;
 }
@@ -97,6 +113,7 @@
   --text-muted: #b9add9;
   --text-dim: #7e74a8;
   --on-accent: #0a0820;
+  --game-on-accent: var(--on-gold); /* host/GameCard override per game */
 
   --game-accent: var(--color-game-gold);
   --game-accent-strong: var(--color-game-gold-strong);
@@ -135,7 +152,8 @@ html[dir="rtl"] {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
   }
-  /* Day: a faint Persian tilework wash on parchment. */
+  /* Day: a faint Persian tilework wash on parchment. (Pinned to the viewport so it
+     covers the full page on scroll — no mid-page seam.) */
   html:not(.dark) body {
     background-image:
       radial-gradient(circle at 22% 24%, color-mix(in oklab, var(--color-game-teal-strong) 13%, transparent) 0 4%, transparent 5%),
@@ -143,10 +161,13 @@ html[dir="rtl"] {
       repeating-linear-gradient(45deg, color-mix(in oklab, var(--color-game-rose) 6%, transparent) 0 1px, transparent 1px 30px),
       repeating-linear-gradient(-45deg, color-mix(in oklab, var(--color-game-sky) 6%, transparent) 0 1px, transparent 1px 30px);
     background-size: 52px 52px, 52px 52px, auto, auto;
+    background-attachment: fixed;
   }
-  /* Night: lapis sky. */
+  /* Night: lapis sky — fixed to the viewport so the gradient always fills the screen
+     (otherwise it ends partway down a tall page, leaving a visible cut-off). */
   .dark body {
-    background-image: radial-gradient(120% 80% at 50% -10%, var(--lapis-2) 0%, var(--night-2) 45%, var(--night) 100%);
+    background-image: radial-gradient(120% 90% at 50% 0%, var(--lapis-2) 0%, var(--night-2) 42%, var(--night) 100%);
+    background-attachment: fixed;
   }
   /* Sweeping disco beams (night only via --beam). */
   body::before {
@@ -186,6 +207,15 @@ html[dir="rtl"] {
     opacity: var(--dust);
     animation: dp-twinkle 4s ease-in-out infinite alternate;
   }
+  /* Day disco: the same sweeping beams + sparkle, blended so they read as colored light
+     washing over parchment instead of being invisible (screen blend only works on dark). */
+  html:not(.dark) body::before {
+    mix-blend-mode: soft-light;
+    filter: blur(58px) saturate(1.7);
+  }
+  html:not(.dark) body::after {
+    mix-blend-mode: multiply;
+  }
   #root {
     position: relative;
     z-index: 1;
@@ -210,6 +240,12 @@ html[dir="rtl"] {
 
 /* ─────────────────────────  Disco utilities  ───────────────────────── */
 @layer utilities {
+  /* Accent-COLORED text that stays readable on the page surface in BOTH themes.
+     Declared on the element that bears the class, so var() resolves against the
+     per-game accent override it inherits (day: darkened toward ink; night: bright neon). */
+  .dp-accent { color: color-mix(in oklab, var(--game-accent-strong) 72%, var(--text)); }
+  .dark .dp-accent { color: var(--game-accent); }
+
   /* Theme-adaptive title: ink in day, neon tube at night. */
   .dp-title { color: var(--text); }
   .dark .dp-title {
@@ -273,10 +309,13 @@ html[dir="rtl"] {
 @layer utilities {
   .dp-rise { animation: dp-rise 0.5s var(--ease-pop) both; }
   .dp-pop { animation: dp-pop 0.4s var(--ease-pop) both; }
+  /* Slow continuous rotation (medallion glint, loaders). */
+  .dp-spin-slow { animation: dp-beam 14s linear infinite; }
+  .dp-spin-med { animation: dp-beam 6s linear infinite; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  body::before, body::after, .dp-foil, .dp-ball, .dp-rise, .dp-pop {
+  body::before, body::after, .dp-foil, .dp-ball, .dp-rise, .dp-pop, .dp-spin-slow, .dp-spin-med {
     animation: none !important;
   }
 }

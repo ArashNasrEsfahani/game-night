@@ -1,7 +1,12 @@
-import { useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import type { CSSProperties } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { AnimatePresence, motion } from 'framer-motion';
+import { screenFade } from '../../sdk/motion';
+import { Sheet, Button, Screen, AppBar, Medallion } from '../../sdk/ui';
+import { gameEmblem } from '../../sdk/ui/emblems';
+import type { GameManifest } from '../../sdk/types';
 import { getGame } from '../../games/registry';
 import { useSessionStore } from '../../store/sessionStore';
 import type { HostScreen } from '../../store/sessionStore';
@@ -13,6 +18,7 @@ import type {
   GameContext,
   GameNav,
   Lang,
+  LocalizedString,
 } from '../../sdk/types';
 import { clockService } from '../../services/clock';
 import { randomService } from '../../services/random';
@@ -20,6 +26,86 @@ import { soundService, noopSound } from '../../services/sound';
 import { hapticsService, noopHaptics } from '../../services/haptics';
 import { useLocalize } from '../../lib/localize';
 import { NotFoundPage } from './NotFoundPage';
+
+/** A floating "?" that opens a how-to-play sheet for the current game. */
+function HostHelp({ howToPlay, title }: { howToPlay?: LocalizedString; title: string }) {
+  const [open, setOpen] = useState(false);
+  const { t } = useTranslation();
+  const localize = useLocalize();
+  if (!howToPlay) return null;
+  return (
+    <>
+      <div className="pointer-events-none fixed inset-x-0 top-0 z-30 mx-auto flex max-w-md justify-end px-4 pt-3">
+        <motion.button
+          whileTap={{ scale: 0.9 }}
+          onClick={() => setOpen(true)}
+          aria-label={t('common.howToPlay')}
+          className="pointer-events-auto grid h-10 w-10 place-items-center rounded-full bg-[var(--surface-2)] text-lg font-bold text-[var(--game-accent-strong)] shadow-[inset_0_0_0_1px_var(--border-glow)]"
+        >
+          ?
+        </motion.button>
+      </div>
+      <Sheet open={open} onClose={() => setOpen(false)} title={title}>
+        <p className="whitespace-pre-line text-sm leading-relaxed text-[var(--text-muted)]">
+          {localize(howToPlay)}
+        </p>
+        <Button fullWidth className="mt-5" onClick={() => setOpen(false)}>
+          {t('common.close')}
+        </Button>
+      </Sheet>
+    </>
+  );
+}
+
+/** Shown when re-entering a game that already has a saved match: resume it, or start fresh. */
+function ResumeGate({
+  manifest,
+  title,
+  finished,
+  onResume,
+  onNew,
+  onExit,
+}: {
+  manifest: GameManifest;
+  title: string;
+  finished: boolean;
+  onResume: () => void;
+  onNew: () => void;
+  onExit: () => void;
+}) {
+  const { t } = useTranslation();
+  const emblem = gameEmblem(manifest.id);
+  return (
+    <Screen>
+      <AppBar title={title} onBack={onExit} />
+      <div className="flex flex-1 flex-col items-center justify-center gap-6 text-center">
+        <Medallion size={132}>
+          {emblem ? (
+            <span dangerouslySetInnerHTML={{ __html: emblem }} />
+          ) : (
+            <span className="text-5xl">{manifest.icon}</span>
+          )}
+        </Medallion>
+        <div>
+          <h1 className="dp-title font-display text-2xl font-extrabold">
+            {finished ? t('results.title') : t('host.resumeTitle')}
+          </h1>
+          <p className="mx-auto mt-2 max-w-xs text-sm text-[var(--text-muted)]">
+            {t('host.resumeBody')}
+          </p>
+        </div>
+        <div className="flex w-full flex-col gap-2">
+          <Button size="lg" fullWidth onClick={onResume}>
+            {t('host.resume')}
+          </Button>
+          <Button variant="secondary" fullWidth onClick={onNew}>
+            {t('host.startOver')}
+          </Button>
+        </div>
+      </div>
+    </Screen>
+  );
+}
 
 export function GameHostPage() {
   const { gameId } = useParams();
@@ -29,10 +115,25 @@ export function GameHostPage() {
 
   const mod = gameId ? getGame(gameId) : undefined;
 
-  const session = useSessionStore((s) => (gameId ? s.sessions[gameId] : undefined));
+  const rawSession = useSessionStore((s) => (gameId ? s.sessions[gameId] : undefined));
   const startStore = useSessionStore((s) => s.start);
   const updateStore = useSessionStore((s) => s.update);
   const clearStore = useSessionStore((s) => s.clear);
+
+  // Ignore a saved match whose schema predates the current game version (it would crash the
+  // new reducer/screens). Drop it so the player just gets a clean Setup.
+  const session =
+    rawSession && mod && rawSession.stateVersion === mod.manifest.stateVersion
+      ? rawSession
+      : undefined;
+  useEffect(() => {
+    if (gameId && rawSession && mod && rawSession.stateVersion !== mod.manifest.stateVersion) {
+      clearStore(gameId);
+    }
+  }, [gameId, rawSession, mod, clearStore]);
+
+  // Per-mount: once the player chooses (or starts a match), don't show the resume gate again.
+  const [resumed, setResumed] = useState(false);
 
   const muted = useSettingsStore((s) => s.muted);
   const hapticsOn = useSettingsStore((s) => s.haptics);
@@ -81,14 +182,20 @@ export function GameHostPage() {
         stateVersion: mod.manifest.stateVersion,
         updatedAt: clockService.now(),
       });
+      setResumed(true); // we just started this match — don't gate it behind resume
     },
     playAgain: () => clearStore(gameId),
   };
 
   const dispatch = (action: GameActionBase) => {
-    if (!session) return;
-    const next = mod.logic.reducer(session.state, action);
-    const screen: HostScreen = next.finished ? 'results' : session.screen;
+    // Read the LATEST session from the store (not the render-closure `session`): a single handler
+    // may fire several dispatches in a row (e.g. ANSWER then PASS_TO_NEXT), and each must build on
+    // the previous one's result. Closing over `session.state` would make the second dispatch
+    // overwrite the first. zustand updates synchronously, so getState() reflects the prior dispatch.
+    const current = useSessionStore.getState().getSession(gameId);
+    if (!current) return;
+    const next = mod.logic.reducer(current.state, action);
+    const screen: HostScreen = next.finished ? 'results' : current.screen;
     updateStore(gameId, { state: next, screen, updatedAt: clockService.now() });
   };
 
@@ -97,28 +204,72 @@ export function GameHostPage() {
     '--game-accent-strong': `var(--color-game-${mod.manifest.color}-strong)`,
     '--game-accent-glow': `color-mix(in oklab, var(--color-game-${mod.manifest.color}) 60%, transparent)`,
     '--game-accent-soft': `color-mix(in oklab, var(--color-game-${mod.manifest.color}) 16%, transparent)`,
+    '--game-on-accent': `var(--on-${mod.manifest.color})`,
   } as CSSProperties;
 
-  const ScreenComp =
+  const shownScreen: HostScreen =
     !session || session.screen === 'setup'
-      ? mod.screens.Setup
+      ? 'setup'
       : session.screen === 'results' || session.state.finished
+        ? 'results'
+        : 'play';
+  const ScreenComp =
+    shownScreen === 'setup'
+      ? mod.screens.Setup
+      : shownScreen === 'results'
         ? mod.screens.Results
         : mod.screens.Play;
 
   const screenState = session?.state ?? setupState!;
   const screenConfig = session?.config ?? mod.defaultConfig({ players: [], lang });
 
+  // A saved, started match is waiting — offer Resume vs New before dropping into it.
+  const showGate =
+    !resumed && !!session && (session.screen === 'play' || session.screen === 'results');
+
   return (
     <GameContextProvider value={ctx}>
       <div style={accentStyle} className="contents">
-        <ScreenComp
-          state={screenState}
-          config={screenConfig}
-          dispatch={dispatch}
-          ctx={ctx}
-          nav={nav}
-        />
+        <HostHelp howToPlay={mod.manifest.howToPlay} title={localize(mod.manifest.name)} />
+        <AnimatePresence mode="wait" initial={false}>
+          {showGate ? (
+            <motion.div
+              key="resume-gate"
+              variants={screenFade}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+            >
+              <ResumeGate
+                manifest={mod.manifest}
+                title={localize(mod.manifest.name)}
+                finished={!!session?.state.finished}
+                onResume={() => setResumed(true)}
+                onNew={() => {
+                  clearStore(gameId);
+                  setResumed(true);
+                }}
+                onExit={() => navigate('/')}
+              />
+            </motion.div>
+          ) : (
+            <motion.div
+              key={shownScreen}
+              variants={screenFade}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+            >
+              <ScreenComp
+                state={screenState}
+                config={screenConfig}
+                dispatch={dispatch}
+                ctx={ctx}
+                nav={nav}
+              />
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </GameContextProvider>
   );

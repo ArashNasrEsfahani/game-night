@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
 import type { GameScreenProps, Lang } from '../../../sdk/types';
 import { Screen, AppBar, Button, Curtain, Stepper } from '../../../sdk/ui';
 import { currentSpymasterId, currentTeamName, guessesLeft } from '../logic';
@@ -30,19 +31,24 @@ function Grid({
   onTap?: (i: number) => void;
 }) {
   return (
-    <div className="grid grid-cols-5 gap-1.5">
+    <div className="grid grid-cols-5 gap-1.5" style={{ perspective: 700 }}>
       {cells.map((c) => {
         const show = spymaster || c.revealed;
         const cls = show ? roleClass(c.role) : 'bg-[var(--surface-2)] text-[var(--text)]';
+        const disabled = spymaster || c.revealed || !onTap;
         return (
-          <button
-            key={c.index}
-            disabled={spymaster || c.revealed || !onTap}
+          <motion.button
+            key={`${c.index}-${c.revealed}`}
+            initial={c.revealed && !spymaster ? { rotateY: 90, opacity: 0.3 } : false}
+            animate={{ rotateY: 0, opacity: 1 }}
+            transition={{ duration: 0.38, ease: [0.22, 1, 0.36, 1] }}
+            whileTap={disabled ? undefined : { scale: 0.93 }}
+            disabled={disabled}
             onClick={() => onTap?.(c.index)}
             className={`flex aspect-square items-center justify-center rounded-lg p-1 text-center text-[10px] font-bold leading-tight ${cls}`}
           >
             {c.word[lang]}
-          </button>
+          </motion.button>
         );
       })}
     </div>
@@ -54,6 +60,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<Codena
   const s = state;
   const dispatchRef = useRef(dispatch);
   dispatchRef.current = dispatch;
+  const clock = ctx.clock;
   const [gateOpen, setGateOpen] = useState(false);
   const [count, setCount] = useState(1);
   const endAtRef = useRef(0);
@@ -66,15 +73,15 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<Codena
 
   useEffect(() => {
     if (s.phase !== 'guessing' || s.mode !== 'timed') return;
-    endAtRef.current = ctx.clock.now() + s.turnSeconds * 1000;
+    endAtRef.current = clock.now() + s.turnSeconds * 1000;
     setSecondsLeft(s.turnSeconds);
-    const stop = ctx.clock.interval(500, (now) => {
+    const stop = clock.interval(500, (now) => {
       const rem = Math.ceil((endAtRef.current - now) / 1000);
       setSecondsLeft(Math.max(0, rem));
       if (rem <= 0) dispatchRef.current({ type: 'TIMER_EXPIRED' });
     });
     return stop;
-  }, [s.phase, s.mode, s.turnSeconds, ctx]);
+  }, [s.phase, s.mode, s.turnSeconds, clock]);
 
   const teamColor = s.currentTeam === 'teamA' ? 'rose' : 'sky';
   const spyName = s.playerNames[currentSpymasterId(s)] ?? '';

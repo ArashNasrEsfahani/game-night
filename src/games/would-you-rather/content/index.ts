@@ -14,7 +14,7 @@ export const ITEM_BY_ID: Record<string, WyrItem> = Object.fromEntries(
   DECKS.flatMap((d) => d.items).map((it) => [it.id, it]),
 );
 
-const ORDER: Intensity[] = ['mild', 'medium', 'spicy'];
+const ORDER: Intensity[] = ['mild', 'medium', 'spicy', 'risky'];
 
 /** Items at or below the chosen intensity ceiling (NOT shuffled). */
 export function poolFor(deckId: string, maxIntensity: Intensity): WyrItem[] {

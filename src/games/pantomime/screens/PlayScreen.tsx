@@ -35,16 +35,17 @@ export function PlayScreen({
   const [showHint, setShowHint] = useState(false);
   const dispatchRef = useRef(dispatch);
   dispatchRef.current = dispatch;
+  const clock = ctx.clock;
 
   // Pump the clock while acting; the reducer auto-finalizes on expiry.
   useEffect(() => {
     if (s.phase !== 'acting' || !s.clock.running) return;
-    const stop = ctx.clock.interval(250, (n) => {
+    const stop = clock.interval(250, (n) => {
       setNow(n);
       dispatchRef.current({ type: 'TICK', now: n });
     });
     return stop;
-  }, [s.phase, s.clock.running, ctx]);
+  }, [s.phase, s.clock.running, clock]);
 
   // Re-lock the curtain and reset the hint whenever a new reveal begins.
   useEffect(() => {
@@ -94,7 +95,7 @@ export function PlayScreen({
           </p>
           {team && <TeamBadge label={team.name} color={team.color} />}
           <p className="text-lg text-[var(--text-muted)]">{t('pantomime.passTo')}</p>
-          <h1 className="text-4xl font-extrabold text-[var(--game-accent-strong)]">{name}</h1>
+          <h1 className="text-4xl font-extrabold dp-accent">{name}</h1>
           <Button
             size="lg"
             onClick={() => {
@@ -215,7 +216,7 @@ export function PlayScreen({
           {team && <TeamBadge label={team.name} color={team.color} />}
           <h2 className="mt-2 text-2xl font-bold">{name}</h2>
           <p className="text-[var(--text-muted)]">{t(reasonKey)}</p>
-          <p className="mt-2 text-3xl font-extrabold text-[var(--game-accent-strong)]">
+          <p className="mt-2 text-3xl font-extrabold dp-accent">
             +{last?.correct ?? 0}
           </p>
           <p className="text-sm text-[var(--text-muted)]">

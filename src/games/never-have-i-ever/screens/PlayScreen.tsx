@@ -163,7 +163,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<NhieSt
                 onClick={() => toggle(p.id)}
                 className={`rounded-full px-4 py-2 text-sm font-medium ${
                   honorSel.includes(p.id)
-                    ? 'bg-[var(--game-accent-strong)] text-white'
+                    ? 'bg-[var(--game-accent-strong)] text-[var(--game-on-accent)]'
                     : 'bg-[var(--surface-2)] text-[var(--text)]'
                 }`}
               >

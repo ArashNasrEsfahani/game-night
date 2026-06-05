@@ -46,7 +46,7 @@
       ],
       "text": {
         "en": "Never have I ever eaten food that fell on the floor.",
-        "fa": "من هیچ‌وقت غذایی رو که افتاده زمین برنداشتم بخورم."
+        "fa": "من هیچ‌وقت غذایی رو که افتاده زمین، برنداشتم بخورم."
       }
     },
     {
@@ -137,7 +137,7 @@
       ],
       "text": {
         "en": "Never have I ever pretended I wasn't home when someone knocked.",
-        "fa": "من هیچ‌وقت کسی در زده، خونه بوده، نگفتم خونه نیستم."
+        "fa": "من هیچ‌وقت یکی در زده، خونه بودم و خودمو نزدم به نبودن."
       }
     },
     {
@@ -182,7 +182,7 @@
       ],
       "text": {
         "en": "Never have I ever burnt instant noodles.",
-        "fa": "من هیچ‌وقت حتی نودل آماده رو هم نسوزوندم."
+        "fa": "من هیچ‌وقت حتی یه نودل آماده رو هم نسوزوندم."
       }
     },
     {
@@ -204,7 +204,7 @@
       ],
       "text": {
         "en": "Never have I ever blamed a fart on the dog.",
-        "fa": "من هیچ‌وقت گردنِ سگ ننداختم که بوش از اون بوده."
+        "fa": "من هیچ‌وقت گردن سگ ننداختم که گوز کار اون بوده."
       }
     },
     {
@@ -296,7 +296,535 @@
       ],
       "text": {
         "en": "Never have I ever hidden vegetables under a napkin so my parents wouldn't notice.",
-        "fa": "من هیچ‌وقت سبزیجاتو زیر دستمال قایم نکردم که مامان بابام نفهمن نخوردم."
+        "fa": "من هیچ‌وقت سبزیجاتو زیر دستمال قایم نکردم که مامان‌بابام نفهمن نخوردمشون."
+      }
+    },
+    {
+      "id": "nhie-c-x001",
+      "intensity": "classic",
+      "tags": [
+        "work",
+        "embarrassing"
+      ],
+      "text": {
+        "en": "Never have I ever fallen asleep during a meeting.",
+        "fa": "من هیچ‌وقت وسط جلسه خوابم نبرده."
+      }
+    },
+    {
+      "id": "nhie-c-x002",
+      "intensity": "classic",
+      "tags": [
+        "social",
+        "embarrassing"
+      ],
+      "text": {
+        "en": "Never have I ever forgotten someone's name right after they introduced themselves.",
+        "fa": "من هیچ‌وقت اسم یکی رو همون لحظه‌ای که خودشو معرفی کرد یادم نرفته."
+      }
+    },
+    {
+      "id": "nhie-c-x003",
+      "intensity": "classic",
+      "tags": [
+        "home",
+        "funny"
+      ],
+      "text": {
+        "en": "Never have I ever sung loudly in the shower.",
+        "fa": "من هیچ‌وقت زیر دوش با صدای بلند آواز نخوندم."
+      }
+    },
+    {
+      "id": "nhie-c-x004",
+      "intensity": "classic",
+      "tags": [
+        "social",
+        "funny"
+      ],
+      "text": {
+        "en": "Never have I ever pretended to be on the phone to avoid talking to someone.",
+        "fa": "من هیچ‌وقت واسه اینکه با یکی حرف نزنم، الکی وانمود نکردم دارم تلفنی صحبت می‌کنم."
+      }
+    },
+    {
+      "id": "nhie-c-x005",
+      "intensity": "classic",
+      "tags": [
+        "food",
+        "funny"
+      ],
+      "text": {
+        "en": "Never have I ever eaten the last slice of pizza and pretended I didn't.",
+        "fa": "من هیچ‌وقت آخرین تیکه‌ی پیتزا رو خورده، وانمود نکردم کار من نبوده."
+      }
+    },
+    {
+      "id": "nhie-c-x006",
+      "intensity": "classic",
+      "tags": [
+        "embarrassing",
+        "funny"
+      ],
+      "text": {
+        "en": "Never have I ever talked to myself out loud in public.",
+        "fa": "من هیچ‌وقت تو جمع با صدای بلند با خودم حرف نزدم."
+      }
+    },
+    {
+      "id": "nhie-c-x007",
+      "intensity": "classic",
+      "tags": [
+        "everyday",
+        "forgetful"
+      ],
+      "text": {
+        "en": "Never have I ever forgotten where I parked my car.",
+        "fa": "من هیچ‌وقت یادم نرفته ماشینمو کجا پارک کردم."
+      }
+    },
+    {
+      "id": "nhie-c-x008",
+      "intensity": "classic",
+      "tags": [
+        "embarrassing",
+        "clumsy"
+      ],
+      "text": {
+        "en": "Never have I ever pushed a door that clearly said pull.",
+        "fa": "من هیچ‌وقت دری رو که واضح روش نوشته بود بکش، هل ندادم."
+      }
+    },
+    {
+      "id": "nhie-c-x009",
+      "intensity": "classic",
+      "tags": [
+        "home",
+        "tv"
+      ],
+      "text": {
+        "en": "Never have I ever stayed up all night binge-watching a show.",
+        "fa": "من هیچ‌وقت تا صبح بیدار نموندم که یه سریالو پشت سر هم نگاه کنم."
+      }
+    },
+    {
+      "id": "nhie-c-x010",
+      "intensity": "classic",
+      "tags": [
+        "embarrassing",
+        "clumsy"
+      ],
+      "text": {
+        "en": "Never have I ever tripped in front of a crowd.",
+        "fa": "من هیچ‌وقت جلوی جمعیت زمین نخوردم."
+      }
+    },
+    {
+      "id": "nhie-c-x011",
+      "intensity": "classic",
+      "tags": [
+        "social",
+        "funny"
+      ],
+      "text": {
+        "en": "Never have I ever pretended to understand something I didn't.",
+        "fa": "من هیچ‌وقت وانمود نکردم یه چیزیو فهمیدم، در حالی که اصلاً نفهمیده بودم."
+      }
+    },
+    {
+      "id": "nhie-c-x012",
+      "intensity": "classic",
+      "tags": [
+        "food",
+        "home"
+      ],
+      "text": {
+        "en": "Never have I ever burned toast and set off the smoke alarm.",
+        "fa": "من هیچ‌وقت نون تستو نسوزوندم که آژیر دود به صدا دربیاد."
+      }
+    },
+    {
+      "id": "nhie-c-x013",
+      "intensity": "classic",
+      "tags": [
+        "forgetful",
+        "funny"
+      ],
+      "text": {
+        "en": "Never have I ever forgotten my own phone number.",
+        "fa": "من هیچ‌وقت شماره‌ی خودمو یادم نرفته."
+      }
+    },
+    {
+      "id": "nhie-c-x014",
+      "intensity": "classic",
+      "tags": [
+        "forgetful",
+        "funny"
+      ],
+      "text": {
+        "en": "Never have I ever lost my phone while it was in my hand.",
+        "fa": "من هیچ‌وقت گوشیمو وقتی تو دستم بوده گم نکردم."
+      }
+    },
+    {
+      "id": "nhie-c-x015",
+      "intensity": "classic",
+      "tags": [
+        "home",
+        "funny"
+      ],
+      "text": {
+        "en": "Never have I ever danced when I thought no one was watching.",
+        "fa": "من هیچ‌وقت وقتی فکر می‌کردم کسی نگام نمی‌کنه نرقصیدم."
+      }
+    },
+    {
+      "id": "nhie-c-x016",
+      "intensity": "classic",
+      "tags": [
+        "movies",
+        "emotional"
+      ],
+      "text": {
+        "en": "Never have I ever cried during a movie.",
+        "fa": "من هیچ‌وقت موقع تماشای فیلم گریه‌م نگرفته."
+      }
+    },
+    {
+      "id": "nhie-c-x017",
+      "intensity": "classic",
+      "tags": [
+        "work",
+        "everyday"
+      ],
+      "text": {
+        "en": "Never have I ever procrastinated until the very last minute.",
+        "fa": "من هیچ‌وقت کارامو تا آخرین لحظه عقب ننداختم."
+      }
+    },
+    {
+      "id": "nhie-c-x018",
+      "intensity": "classic",
+      "tags": [
+        "social",
+        "awkward"
+      ],
+      "text": {
+        "en": "Never have I ever said goodbye and then walked in the same direction.",
+        "fa": "من هیچ‌وقت با یکی خداحافظی نکرده، بعد ببینم هردومون داریم یه مسیرو می‌ریم."
+      }
+    },
+    {
+      "id": "nhie-c-x019",
+      "intensity": "classic",
+      "tags": [
+        "phone",
+        "social"
+      ],
+      "text": {
+        "en": "Never have I ever re-read a text message ten times before sending it.",
+        "fa": "من هیچ‌وقت یه پیامو قبل از فرستادن ده بار نخوندم."
+      }
+    },
+    {
+      "id": "nhie-c-x020",
+      "intensity": "classic",
+      "tags": [
+        "forgetful",
+        "everyday"
+      ],
+      "text": {
+        "en": "Never have I ever forgotten why I walked into a room.",
+        "fa": "من هیچ‌وقت یادم نرفته واسه چی اومدم تو یه اتاق."
+      }
+    },
+    {
+      "id": "nhie-c-x021",
+      "intensity": "classic",
+      "tags": [
+        "morning",
+        "everyday"
+      ],
+      "text": {
+        "en": "Never have I ever hit snooze more than three times in a row.",
+        "fa": "من هیچ‌وقت بیشتر از سه بار پشت سر هم دکمه‌ی چرت ساعتو نزدم."
+      }
+    },
+    {
+      "id": "nhie-c-x022",
+      "intensity": "classic",
+      "tags": [
+        "everyday",
+        "funny"
+      ],
+      "text": {
+        "en": "Never have I ever worn mismatched socks by accident.",
+        "fa": "من هیچ‌وقت اشتباهی دو تا جوراب لنگه‌به‌لنگه نپوشیدم."
+      }
+    },
+    {
+      "id": "nhie-c-x023",
+      "intensity": "classic",
+      "tags": [
+        "school",
+        "embarrassing"
+      ],
+      "text": {
+        "en": "Never have I ever called my teacher mom or dad by mistake.",
+        "fa": "من هیچ‌وقت اشتباهی به معلمم نگفتم مامان یا بابا."
+      }
+    },
+    {
+      "id": "nhie-c-x024",
+      "intensity": "classic",
+      "tags": [
+        "travel",
+        "funny"
+      ],
+      "text": {
+        "en": "Never have I ever gotten lost using a map.",
+        "fa": "من هیچ‌وقت با اینکه نقشه داشتم، گم نشدم."
+      }
+    },
+    {
+      "id": "nhie-c-x025",
+      "intensity": "classic",
+      "tags": [
+        "social",
+        "forgetful"
+      ],
+      "text": {
+        "en": "Never have I ever forgotten a friend's birthday.",
+        "fa": "من هیچ‌وقت تولد یه دوستمو فراموش نکردم."
+      }
+    },
+    {
+      "id": "nhie-c-x026",
+      "intensity": "classic",
+      "tags": [
+        "embarrassing",
+        "everyday"
+      ],
+      "text": {
+        "en": "Never have I ever left the house in my slippers by accident.",
+        "fa": "من هیچ‌وقت اشتباهی با دمپایی از خونه نزدم بیرون."
+      }
+    },
+    {
+      "id": "nhie-c-x027",
+      "intensity": "classic",
+      "tags": [
+        "funny",
+        "home"
+      ],
+      "text": {
+        "en": "Never have I ever pretended to be asleep to avoid doing something.",
+        "fa": "من هیچ‌وقت واسه اینکه از زیر یه کاری در برم، خودمو به خواب نزدم."
+      }
+    },
+    {
+      "id": "nhie-c-x028",
+      "intensity": "classic",
+      "tags": [
+        "morning",
+        "everyday"
+      ],
+      "text": {
+        "en": "Never have I ever overslept and missed an important event.",
+        "fa": "من هیچ‌وقت خواب نموندم که یه برنامه‌ی مهمو از دست بدم."
+      }
+    },
+    {
+      "id": "nhie-c-x029",
+      "intensity": "classic",
+      "tags": [
+        "morning",
+        "clumsy"
+      ],
+      "text": {
+        "en": "Never have I ever spilled coffee on myself first thing in the morning.",
+        "fa": "من هیچ‌وقت اول صبحی قهوه رو روی خودم نریختم."
+      }
+    },
+    {
+      "id": "nhie-c-x030",
+      "intensity": "classic",
+      "tags": [
+        "phone",
+        "social"
+      ],
+      "text": {
+        "en": "Never have I ever forgotten to reply to a message and then it was too late.",
+        "fa": "من هیچ‌وقت یادم نرفته جواب یه پیامو بدم تا کار از کار بگذره."
+      }
+    },
+    {
+      "id": "nhie-c-x031",
+      "intensity": "classic",
+      "tags": [
+        "forgetful",
+        "funny"
+      ],
+      "text": {
+        "en": "Never have I ever started a sentence and forgotten what I was going to say.",
+        "fa": "من هیچ‌وقت یه جمله رو شروع کرده، وسطش یادم نرفته چی می‌خواستم بگم."
+      }
+    },
+    {
+      "id": "nhie-c-x032",
+      "intensity": "classic",
+      "tags": [
+        "travel",
+        "funny"
+      ],
+      "text": {
+        "en": "Never have I ever clapped when the plane landed.",
+        "fa": "من هیچ‌وقت موقع فرود هواپیما دست نزدم."
+      }
+    },
+    {
+      "id": "nhie-c-x033",
+      "intensity": "classic",
+      "tags": [
+        "social",
+        "awkward"
+      ],
+      "text": {
+        "en": "Never have I ever talked about someone and then they walked in.",
+        "fa": "من هیچ‌وقت پشت سر یکی حرف زده، همون موقع از در نیومده تو."
+      }
+    },
+    {
+      "id": "nhie-c-x034",
+      "intensity": "classic",
+      "tags": [
+        "funny",
+        "home"
+      ],
+      "text": {
+        "en": "Never have I ever googled the answer during a quiz at home.",
+        "fa": "من هیچ‌وقت وسط یه مسابقه‌ی خونگی جوابو گوگل نکردم."
+      }
+    },
+    {
+      "id": "nhie-c-x035",
+      "intensity": "classic",
+      "tags": [
+        "social",
+        "funny"
+      ],
+      "text": {
+        "en": "Never have I ever pretended a gift was exactly what I wanted.",
+        "fa": "من هیچ‌وقت وانمود نکردم یه کادو دقیقاً همون چیزی بوده که می‌خواستم."
+      }
+    },
+    {
+      "id": "nhie-c-x036",
+      "intensity": "classic",
+      "tags": [
+        "everyday",
+        "funny"
+      ],
+      "text": {
+        "en": "Never have I ever forgotten an umbrella on the one rainy day.",
+        "fa": "من هیچ‌وقت چترمو درست همون روزی که بارون می‌اومد جا نذاشتم."
+      }
+    },
+    {
+      "id": "nhie-c-x037",
+      "intensity": "classic",
+      "tags": [
+        "embarrassing",
+        "funny"
+      ],
+      "text": {
+        "en": "Never have I ever waved goodbye to the wrong car.",
+        "fa": "من هیچ‌وقت واسه ماشین اشتباهی دست خداحافظی تکون ندادم."
+      }
+    },
+    {
+      "id": "nhie-c-x038",
+      "intensity": "classic",
+      "tags": [
+        "home",
+        "forgetful"
+      ],
+      "text": {
+        "en": "Never have I ever put something in the fridge that belonged in the cupboard.",
+        "fa": "من هیچ‌وقت چیزی رو که جاش تو کابینت بود اشتباهی نذاشتم تو یخچال."
+      }
+    },
+    {
+      "id": "nhie-c-x039",
+      "intensity": "classic",
+      "tags": [
+        "funny",
+        "social"
+      ],
+      "text": {
+        "en": "Never have I ever laughed so hard I couldn't breathe.",
+        "fa": "من هیچ‌وقت اونقدر نخندیدم که نفسم بند بیاد."
+      }
+    },
+    {
+      "id": "nhie-c-x040",
+      "intensity": "classic",
+      "tags": [
+        "music",
+        "funny"
+      ],
+      "text": {
+        "en": "Never have I ever pretended to know a song's lyrics and just mumbled along.",
+        "fa": "من هیچ‌وقت وانمود نکردم متن یه آهنگو بلدم که فقط زیر لب باهاش زمزمه کرده باشم."
+      }
+    },
+    {
+      "id": "nhie-c-x041",
+      "intensity": "classic",
+      "tags": [
+        "food",
+        "phone"
+      ],
+      "text": {
+        "en": "Never have I ever taken way too many photos of my food.",
+        "fa": "من هیچ‌وقت بیش از حد از غذام عکس نگرفتم."
+      }
+    },
+    {
+      "id": "nhie-c-x042",
+      "intensity": "classic",
+      "tags": [
+        "home",
+        "tv"
+      ],
+      "text": {
+        "en": "Never have I ever fallen asleep with the TV on.",
+        "fa": "من هیچ‌وقت با تلویزیون روشن خوابم نبرده."
+      }
+    },
+    {
+      "id": "nhie-c-x043",
+      "intensity": "classic",
+      "tags": [
+        "forgetful",
+        "tech"
+      ],
+      "text": {
+        "en": "Never have I ever forgotten my password right after changing it.",
+        "fa": "من هیچ‌وقت رمزمو درست بعد از عوض کردنش فراموش نکردم."
+      }
+    },
+    {
+      "id": "nhie-c-x044",
+      "intensity": "classic",
+      "tags": [
+        "social",
+        "funny"
+      ],
+      "text": {
+        "en": "Never have I ever practiced what to say and then said something completely different.",
+        "fa": "من هیچ‌وقت تمرین نکردم چی بگم که بعدش یه چیز کاملاً متفاوت از دهنم در بیاد."
       }
     }
   ]

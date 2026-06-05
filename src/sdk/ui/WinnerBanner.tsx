@@ -1,17 +1,19 @@
 import { motion } from 'framer-motion';
 import { Confetti } from './Confetti';
+import { Medallion } from './Medallion';
 
 export function WinnerBanner({ title, names }: { title: string; names: string[] }) {
   return (
-    <div className="relative flex flex-col items-center gap-2 py-6 text-center">
+    <div className="relative flex flex-col items-center gap-3 py-6 text-center">
       <Confetti />
       <motion.div
         initial={{ scale: 0, rotate: -25 }}
         animate={{ scale: 1, rotate: 0 }}
         transition={{ type: 'spring', stiffness: 260, damping: 13, delay: 0.05 }}
-        className="text-6xl drop-shadow-[0_0_18px_var(--game-accent-glow)]"
       >
-        🏆
+        <Medallion size={118}>
+          <span className="text-5xl drop-shadow-[0_0_18px_var(--game-accent-glow)]">🏆</span>
+        </Medallion>
       </motion.div>
       <motion.h2
         initial={{ opacity: 0, y: 10 }}

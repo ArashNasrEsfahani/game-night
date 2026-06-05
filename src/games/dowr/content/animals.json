@@ -304,5 +304,248 @@
     },
     "category": "animals",
     "difficulty": "hard"
+  },
+  {
+    "id": "animals-x001",
+    "word": {
+      "en": "eagle",
+      "fa": "عقاب"
+    },
+    "category": "animals",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-x002",
+    "word": {
+      "en": "kangaroo",
+      "fa": "کانگورو"
+    },
+    "category": "animals",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-x003",
+    "word": {
+      "en": "zebra",
+      "fa": "گورخر"
+    },
+    "category": "animals",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-x004",
+    "word": {
+      "en": "shark",
+      "fa": "کوسه"
+    },
+    "category": "animals",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-x005",
+    "word": {
+      "en": "penguin",
+      "fa": "پنگوئن"
+    },
+    "category": "animals",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-x006",
+    "word": {
+      "en": "deer",
+      "fa": "گوزن"
+    },
+    "category": "animals",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-x007",
+    "word": {
+      "en": "octopus",
+      "fa": "هشت‌پا"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-x008",
+    "word": {
+      "en": "scorpion",
+      "fa": "عقرب"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-x009",
+    "word": {
+      "en": "panda",
+      "fa": "پاندا"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-x010",
+    "word": {
+      "en": "whale",
+      "fa": "نهنگ"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-x011",
+    "word": {
+      "en": "seal",
+      "fa": "فک دریایی"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-x012",
+    "word": {
+      "en": "jellyfish",
+      "fa": "عروس دریایی"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-x013",
+    "word": {
+      "en": "crab",
+      "fa": "خرچنگ"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-x014",
+    "word": {
+      "en": "butterfly",
+      "fa": "پروانه"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-x015",
+    "word": {
+      "en": "ostrich",
+      "fa": "شترمرغ"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-x016",
+    "word": {
+      "en": "leopard",
+      "fa": "پلنگ"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-x017",
+    "word": {
+      "en": "rhino",
+      "fa": "کرگدن"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-x018",
+    "word": {
+      "en": "hippo",
+      "fa": "اسب آبی"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-x019",
+    "word": {
+      "en": "platypus",
+      "fa": "پلاتیپوس"
+    },
+    "category": "animals",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-x020",
+    "word": {
+      "en": "pangolin",
+      "fa": "مورچه‌خوار پولک‌دار"
+    },
+    "category": "animals",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-x021",
+    "word": {
+      "en": "lemur",
+      "fa": "لمور"
+    },
+    "category": "animals",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-x022",
+    "word": {
+      "en": "narwhal",
+      "fa": "نهنگ تک‌شاخ"
+    },
+    "category": "animals",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-x023",
+    "word": {
+      "en": "armadillo",
+      "fa": "آرمادیلو"
+    },
+    "category": "animals",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-x024",
+    "word": {
+      "en": "meerkat",
+      "fa": "میرکت"
+    },
+    "category": "animals",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-x025",
+    "word": {
+      "en": "sloth",
+      "fa": "تنبل"
+    },
+    "category": "animals",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-x026",
+    "word": {
+      "en": "iguana",
+      "fa": "ایگوانا"
+    },
+    "category": "animals",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-x027",
+    "word": {
+      "en": "porcupine",
+      "fa": "تشی"
+    },
+    "category": "animals",
+    "difficulty": "hard"
   }
 ]

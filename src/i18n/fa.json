@@ -1,5 +1,8 @@
 {
-  "app": { "title": "شب بازی", "tagline": "بازی‌های گروهی با یک گوشی" },
+  "app": {
+    "title": "شب بازی",
+    "tagline": "بازی‌های گروهی با یک گوشی"
+  },
   "common": {
     "back": "بازگشت",
     "next": "بعدی",
@@ -16,14 +19,18 @@
     "save": "ذخیره",
     "delete": "حذف",
     "edit": "ویرایش",
-    "players": "بازیکنان"
+    "players": "بازیکنان",
+    "howToPlay": "راهنمای بازی"
   },
   "home": {
     "title": "شب بازی",
     "subtitle": "یک بازی انتخاب کن",
     "empty": "بازی‌ای پیدا نشد",
     "players": "{{count}} بازیکن",
-    "minutes": "{{min}} تا {{max}} دقیقه"
+    "minutes": "{{min}} تا {{max}} دقیقه",
+    "heroTagline": "بازی‌های مهمانی دست‌به‌دست — یک گوشی، همه بازی می‌کنن.",
+    "chooseGame": "یک بازی انتخاب کن",
+    "resume": "ادامهٔ بازی"
   },
   "host": {
     "resumeTitle": "بازی در جریان",
@@ -33,8 +40,19 @@
     "exitConfirm": "از بازی خارج می‌شوی؟ پیشرفتت ذخیره شده است.",
     "pause": "توقف"
   },
-  "setup": { "title": "آماده‌سازی", "players": "بازیکنان", "teams": "تیم‌ها", "options": "تنظیمات" },
-  "results": { "title": "نتایج", "winner": "{{name}} برنده شد!", "tie": "مساوی شد!", "playAgain": "بازی دوباره", "home": "خانه" },
+  "setup": {
+    "title": "آماده‌سازی",
+    "players": "بازیکنان",
+    "teams": "تیم‌ها",
+    "options": "تنظیمات"
+  },
+  "results": {
+    "title": "نتایج",
+    "winner": "{{name}} برنده شد!",
+    "tie": "مساوی شد!",
+    "playAgain": "بازی دوباره",
+    "home": "خانه"
+  },
   "players": {
     "title": "بازیکنان",
     "add": "افزودن بازیکن",
@@ -58,42 +76,66 @@
     "signIn": "ورود",
     "signOut": "خروج"
   },
-  "a11y": { "loading": "در حال بارگذاری", "passTo": "گوشی را به {{name}} بده", "tapToReveal": "برای دیدن بزن", "tapToHide": "برای پنهان کردن بزن" },
-  "errors": { "notFound": "صفحه پیدا نشد", "gameMissing": "این بازی پیدا نشد" },
+  "a11y": {
+    "loading": "در حال بارگذاری",
+    "passTo": "گوشی را به {{name}} بده",
+    "tapToReveal": "برای دیدن بزن",
+    "tapToHide": "برای پنهان کردن بزن"
+  },
+  "errors": {
+    "notFound": "صفحه پیدا نشد",
+    "gameMissing": "این بازی پیدا نشد"
+  },
   "dowr": {
     "title": "دور",
-    "mode": "حالت",
-    "teams": "تیمی",
-    "solo": "انفرادی",
-    "categories": "دسته‌ها",
+    "categories": "بسته‌های کلمه",
     "difficulty": "سختی",
     "easy": "آسان",
     "med": "متوسط",
     "hard": "سخت",
-    "random": "تصادفی",
-    "rounds": "دورها",
-    "timer": "زمان",
-    "skipPenalty": "رد کردن یک امتیاز کم می‌کند",
-    "poolHint": "حدود {{count}} کلمه موجود است",
+    "random": "ترکیبی",
+    "rounds": "نوبت هر تیم",
+    "fuse": "زمان بمب",
+    "bombPenalty": "جریمهٔ بمب",
+    "changePenalty": "جریمهٔ تعویض کلمه",
+    "surpriseBomb": "بمب غافلگیر",
+    "surpriseBombHint": "شمارش معکوس پنهان می‌شود — دقیق نمی‌دانی کِی منفجر می‌شود",
+    "off": "خاموش",
+    "poolHint": "حدود {{count}} کلمه آماده است",
+    "teamsPreview": "{{count}} تیم دونفره",
+    "evenHint": "خودکار جفت می‌شوند — تعداد را زوج نگه دار",
+    "ready": "آماده‌ایم",
     "passTo": "گوشی را به {{name}} بده",
-    "partner": "هم‌تیمی: {{name}}",
+    "describerIs": "{{name}} توضیح می‌دهد",
+    "guesserIs": "{{name}} حدس می‌زند",
     "roundOf": "دور {{round}} از {{total}}",
-    "ready": "آماده‌ام",
-    "revealHint": "فقط {{name}} باید ببیند",
-    "reveal": "برای دیدن بزن",
-    "startDescribing": "شروع توضیح",
+    "revealHint": "فقط {{name}} (توضیح‌دهنده) باید ببیند",
+    "reveal": "برای دیدن کلمه بزن",
+    "startDescribing": "شروع کرنومتر",
     "dontSay": "نگو",
-    "correct": "درست",
-    "skip": "رد کن",
-    "endTurn": "پایان نوبت",
-    "tally": "درست {{correct}} · رد {{skipped}}",
-    "outOfWords": "کلمه‌ای نمانده!",
-    "timeUp": "وقت تمام شد",
-    "endedEarly": "زودتر تمام شد",
-    "nextPlayer": "بازیکن بعدی",
+    "gotIt": "گرفتم!",
+    "changeWord": "تعویض کلمه",
+    "changeWordCost": "تعویض (+{{n}} ثانیه)",
+    "timeLabel": "زمان",
+    "bombSoon": "بمب نزدیک انفجار است!",
+    "guessed": "حدس زده شد!",
+    "bombBlew": "بوم! 💥",
+    "thisTurn": "این نوبت",
+    "describing": "توضیح",
+    "penaltyChanges": "{{count}} تعویض +{{n}} ثانیه",
+    "penaltyBomb": "بمب +{{n}} ثانیه",
+    "teamTotal": "مجموع",
+    "nextTeam": "تیم بعد",
     "seeResults": "دیدن نتایج",
     "playAgain": "بازی دوباره",
-    "cat": { "food": "خوراکی", "objects": "اشیا", "jobs": "مشاغل", "places": "مکان‌ها", "animals": "حیوانات" }
+    "fastest": "سریع‌ترین تیم برنده شد!",
+    "cat": {
+      "food": "خوراکی",
+      "objects": "اشیا",
+      "jobs": "مشاغل",
+      "places": "مکان‌ها",
+      "animals": "حیوانات"
+    }
   },
   "pantomime": {
     "title": "پانتومیم",
@@ -103,7 +145,10 @@
     "difficulty": "سختی",
     "roundTime": "زمان هر نوبت",
     "endModeLabel": "طول بازی",
-    "endMode": { "targetScore": "امتیاز هدف", "rounds": "دور ثابت" },
+    "endMode": {
+      "targetScore": "امتیاز هدف",
+      "rounds": "دور ثابت"
+    },
     "targetScore": "امتیاز هدف",
     "totalRounds": "دورها",
     "skips": "رد کردن در هر نوبت",
@@ -126,24 +171,41 @@
     "nextTurn": "نوبت بعدی",
     "tie": "مساوی شد!",
     "playAgain": "بازی دوباره",
-    "error": { "noPrompts": "هیچ سرنخی با این دسته‌ها/سختی‌ها نیست" },
+    "error": {
+      "noPrompts": "هیچ سرنخی با این دسته‌ها/سختی‌ها نیست"
+    },
     "cat": {
       "movies": "فیلم‌ها",
       "animals": "حیوانات",
       "actions": "کارها",
       "famous": "آدم‌های مشهور",
-      "mixed": "ترکیبی"
+      "mixed": "ترکیبی",
+      "tv": "سریال‌ها"
     },
-    "diff": { "easy": "آسان", "medium": "متوسط", "hard": "سخت" }
+    "diff": {
+      "easy": "آسان",
+      "medium": "متوسط",
+      "hard": "سخت"
+    }
   },
   "nhie": {
     "title": "من هیچ‌وقت",
     "modeLabel": "حالت",
-    "mode": { "classic": "کلاسیک (جان)", "points": "امتیازی" },
+    "mode": {
+      "classic": "کلاسیک (جان)",
+      "points": "امتیازی"
+    },
     "answerStyle": "نحوه پاسخ",
-    "answer": { "sequential": "چرخاندن و پنهان", "honor": "شمارش افتخاری" },
+    "answer": {
+      "sequential": "چرخاندن و پنهان",
+      "honor": "شمارش افتخاری"
+    },
     "intensityLabel": "شدت",
-    "intensity": { "classic": "کلاسیک", "spicy": "تند", "wild": "وحشی" },
+    "intensity": {
+      "classic": "کلاسیک",
+      "spicy": "تند",
+      "wild": "وحشی"
+    },
     "lives": "جان اولیه",
     "statements": "جمله‌ها",
     "deckCount": "{{n}} جمله موجود است",
@@ -173,13 +235,23 @@
     "title": "به احتمال زیاد",
     "deck": "دسته",
     "intensityLabel": "شدت",
-    "intensity": { "family": "خانوادگی", "casual": "معمولی", "spicy": "تند" },
+    "intensity": {
+      "family": "خانوادگی",
+      "casual": "معمولی",
+      "spicy": "تند"
+    },
     "votingStyle": "نحوه رأی",
-    "style": { "passDevice": "چرخاندن و پنهان", "simultaneous": "شمارش بلند" },
+    "style": {
+      "passDevice": "چرخاندن و پنهان",
+      "simultaneous": "شمارش بلند"
+    },
     "rounds": "دورها",
     "allowSelfVote": "رأی به خود مجاز است",
     "tieBreakLabel": "تساوی",
-    "tie": { "coWinners": "برندگان مشترک", "random": "یکی انتخاب شود" },
+    "tie": {
+      "coWinners": "برندگان مشترک",
+      "random": "یکی انتخاب شود"
+    },
     "poolHint": "حدود {{count}} سوال موجود است",
     "round": "دور {{k}} از {{n}}",
     "startVoting": "شروع رأی‌گیری",
@@ -200,15 +272,24 @@
     "errorDeck": "سوالی موجود نیست",
     "playAgain": "بازی دوباره",
     "votesReceived": "{{n}} رأی",
-    "winsLabel": "بردهای دور"
+    "winsLabel": "بردهای دور",
+    "showScores": "نمایش امتیاز لحظه‌ای"
   },
   "wyr": {
     "title": "کدوم رو ترجیح می‌دی؟",
     "deck": "دسته",
     "intensityLabel": "شدت",
-    "intensity": { "mild": "ملایم", "medium": "متوسط", "spicy": "تند" },
+    "intensity": {
+      "mild": "ملایم",
+      "medium": "متوسط",
+      "spicy": "تند",
+      "risky": "بی‌پروا 🔥"
+    },
     "modeLabel": "حالت",
-    "mode": { "vote": "چرخاندن و پنهان", "quick": "شمارش دست" },
+    "mode": {
+      "vote": "چرخاندن و پنهان",
+      "quick": "شمارش دست"
+    },
     "length": "طول",
     "all": "همه",
     "awardPoints": "برای همراهی با اکثریت امتیاز بده",
@@ -239,19 +320,38 @@
   "tod": {
     "title": "جرئت یا حقیقت",
     "intensity": "شدت",
-    "intensityName": { "mild": "ملایم", "medium": "متوسط", "spicy": "تند" },
+    "intensityName": {
+      "mild": "ملایم",
+      "medium": "متوسط",
+      "spicy": "تند",
+      "extreme": "بی‌پروا 🔥 +۱۸"
+    },
     "selection": "انتخاب بازیکن با",
-    "sel": { "spinner": "چرخونک", "sequential": "به ترتیب" },
+    "sel": {
+      "spinner": "چرخونک",
+      "sequential": "به ترتیب"
+    },
     "scoring": "امتیازدهی",
-    "score": { "casual": "بی‌خیال", "points": "امتیازی" },
+    "score": {
+      "casual": "بی‌خیال",
+      "points": "امتیازی"
+    },
     "pointsForDare": "امتیاز جرئت",
     "pointsForTruth": "امتیاز حقیقت",
     "endLabel": "طول بازی",
-    "end": { "endless": "بی‌پایان", "rounds": "دور", "target": "هدف" },
+    "end": {
+      "endless": "بی‌پایان",
+      "rounds": "دور",
+      "target": "هدف"
+    },
     "roundsCount": "دورها",
     "targetPoints": "امتیاز هدف",
     "privacy": "نمایش خصوصی",
-    "priv": { "never": "خاموش", "spicy": "فقط تند", "always": "همیشه" },
+    "priv": {
+      "never": "خاموش",
+      "spicy": "فقط تند",
+      "always": "همیشه"
+    },
     "avoidRepeat": "یک بازیکن دو بار پشت‌سرهم انتخاب نشود",
     "errorPool": "سرنخی موجود نیست",
     "playAgain": "بازی دوباره",
@@ -271,7 +371,8 @@
     "redraw": "سرنخ دیگه",
     "endGame": "پایان بازی",
     "sessionSummary": "بازی تمام شد!",
-    "statLine": "{{turns}} نوبت · {{dares}} جرئت · {{truths}} حقیقت · {{skips}} رد"
+    "statLine": "{{turns}} نوبت · {{dares}} جرئت · {{truths}} حقیقت · {{skips}} رد",
+    "pointsForSkip": "امتیاز رد کردن"
   },
   "hu": {
     "title": "حدس بزن!",
@@ -296,7 +397,9 @@
     "got": "درست",
     "gotPassed": "درست {{got}} · رد {{passed}}",
     "next": "بعدی",
-    "seeResults": "دیدن نتایج"
+    "seeResults": "دیدن نتایج",
+    "motion": "انیمیشن چرخش کارت",
+    "recycle": "وقتی کارت‌ها تمام شد دوباره بزن"
   },
   "spy": {
     "title": "جاسوس",
@@ -335,7 +438,9 @@
     "locationWas": "مکان این بود",
     "spyWas": "جاسوس این بود",
     "nextRound": "دور بعد",
-    "seeResults": "دیدن نتایج"
+    "seeResults": "دیدن نتایج",
+    "packs": "بسته‌های مکان",
+    "noHints": "فهرست مکان‌ها نیست — از روی سؤال‌ها حدس بزن."
   },
   "cn": {
     "title": "شبکهٔ جاسوسی",
@@ -370,7 +475,9 @@
     "teamWins": "{{team}} برنده شد!",
     "winAssassin": "تیم دیگر جاسوس مرگبار را زد",
     "winCleared": "همهٔ کلمات پیدا شد",
-    "rematch": "صفحهٔ جدید"
+    "rematch": "صفحهٔ جدید",
+    "turnTime": "زمان هر نوبت",
+    "packs": "بسته‌های کلمه"
   },
   "mf": {
     "title": "مافیا",
@@ -387,7 +494,11 @@
     "hideAndPass": "پنهان کن و بده",
     "wake": "{{role}}، بیدار شو — یک هدف انتخاب کن",
     "detectiveResult": "{{name}} به نظر می‌رسد: {{faction}}",
-    "faction": { "town": "مردم‌شهر", "mafia": "مافیا", "neutral": "خنثی" },
+    "faction": {
+      "town": "مردم‌شهر",
+      "mafia": "مافیا",
+      "neutral": "خنثی"
+    },
     "err": {
       "cannotSkip": "این کار قابل رد کردن نیست",
       "badTarget": "یک بازیکن زنده انتخاب کن",
@@ -417,6 +528,21 @@
       "town": "مردم‌شهر برنده شد! 🎉",
       "mafia": "مافیا برنده شد! 🔪",
       "draw": "مساوی شد."
-    }
+    },
+    "houseRules": "قوانین خانه",
+    "discussion": "زمان بحث",
+    "voting": "رأی حذف",
+    "majority": "اکثریت",
+    "plurality": "بیشترین رأی",
+    "nominations": "نامزد لازم برای رأی",
+    "onTie": "در تساوی",
+    "tieNoElim": "بدون حذف",
+    "tieRandom": "تصادفی",
+    "doctorSave": "نجات خودِ دکتر",
+    "saveNever": "هرگز",
+    "saveOnce": "یک‌بار",
+    "saveAlways": "همیشه",
+    "revealRole": "نمایش نقش هنگام مرگ",
+    "peacefulFirst": "شب اول آرام"
   }
 }
