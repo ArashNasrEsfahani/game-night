@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import type { GameScreenProps } from '../../../sdk/types';
-import { Screen, AppBar, Button, Card, Chip, Curtain } from '../../../sdk/ui';
+import { Screen, AppBar, Button, Card, Chip, Curtain, TurnAura } from '../../../sdk/ui';
 import { PROMPT_BY_ID } from '../content';
 import { nextSequentialId } from '../logic';
 import type { ToDAction, ToDState } from '../logic';
@@ -16,6 +16,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<ToDSta
   }, [s.spinSerial, s.currentPromptId]);
 
   const activeName = s.activePlayerId ? s.playerNames[s.activePlayerId] : '';
+  const activeColor = s.activePlayerId ? s.playerColors[s.activePlayerId] : undefined;
   const prompt = s.currentPromptId ? PROMPT_BY_ID[s.currentPromptId] : undefined;
   const promptText = prompt ? ctx.localize(prompt.text) : '';
 
@@ -80,6 +81,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<ToDSta
   if (s.phase === 'choosing') {
     return (
       <Screen>
+        <TurnAura color={activeColor} />
         {header}
         <div className="grid flex-1 place-items-center gap-6 text-center">
           <h1 className="text-3xl font-extrabold dp-accent">
@@ -101,6 +103,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<ToDSta
   if (s.phase === 'revealing') {
     return (
       <Screen>
+        <TurnAura color={activeColor} />
         {header}
         <Curtain
           open={gateOpen}
@@ -123,6 +126,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<ToDSta
   // resolving
   return (
     <Screen>
+      <TurnAura color={activeColor} />
       {header}
       <div className="flex flex-1 flex-col items-center justify-center gap-5 text-center">
         <div className="flex items-center gap-2">

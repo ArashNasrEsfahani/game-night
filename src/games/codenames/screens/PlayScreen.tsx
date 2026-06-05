@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import type { GameScreenProps, Lang } from '../../../sdk/types';
-import { Screen, AppBar, Button, Curtain, Stepper } from '../../../sdk/ui';
+import { Screen, AppBar, Button, Curtain, Stepper, TurnAura } from '../../../sdk/ui';
 import { currentSpymasterId, currentTeamName, guessesLeft } from '../logic';
 import type { BoardCell, CardRole, CodenamesAction, CodenamesState } from '../logic';
 
@@ -108,6 +108,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<Codena
   if (s.phase === 'spymasterHandoff') {
     return (
       <Screen>
+        <TurnAura color={teamColor} />
         <AppBar onBack={() => nav.exit()} />
         {scoreStrip}
         <div className="grid flex-1 place-items-center gap-4 text-center">
@@ -128,6 +129,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<Codena
     const max = s.remaining[s.currentTeam];
     return (
       <Screen>
+        <TurnAura color={teamColor} />
         <AppBar onBack={() => nav.exit()} />
         <Curtain
           open={gateOpen}
@@ -152,6 +154,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<Codena
   if (s.phase === 'guesserHandoff') {
     return (
       <Screen>
+        <TurnAura color={teamColor} />
         <AppBar onBack={() => nav.exit()} />
         <div className="grid flex-1 place-items-center gap-4 text-center">
           <div className="text-6xl">🙈</div>
@@ -167,6 +170,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<Codena
   if (s.phase === 'guessing') {
     return (
       <Screen>
+        <TurnAura color={teamColor} />
         <AppBar onBack={() => nav.exit()} />
         {scoreStrip}
         <div className="flex flex-1 flex-col gap-3">
@@ -192,6 +196,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<Codena
   const reasonKey = `cn.reason.${s.turnEndReason ?? 'stopped'}`;
   return (
     <Screen>
+      <TurnAura color={teamColor} />
       <AppBar onBack={() => nav.exit()} />
       {scoreStrip}
       <div className="grid flex-1 place-items-center gap-4 text-center">

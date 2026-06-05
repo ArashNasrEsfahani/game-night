@@ -406,8 +406,9 @@
     "gotPassed": "Got {{got}} · Passed {{passed}}",
     "next": "Next",
     "seeResults": "See results",
-    "motion": "Card-flip animation",
-    "recycle": "Reshuffle when cards run out"
+    "motion": "Tilt controls (phone on forehead)",
+    "recycle": "Reshuffle when cards run out",
+    "tiltHint": "Tilt down = Got · tilt up = Pass"
   },
   "spy": {
     "title": "Spyfall",

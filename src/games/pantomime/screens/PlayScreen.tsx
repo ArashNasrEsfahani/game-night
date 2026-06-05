@@ -9,6 +9,7 @@ import {
   TimerRing,
   TeamBadge,
   Scoreboard,
+  TurnAura,
 } from '../../../sdk/ui';
 import type { ScoreRow } from '../../../sdk/ui';
 import * as timerEngine from '../../../engine/timer';
@@ -113,6 +114,7 @@ export function PlayScreen({
   if (s.phase === 'reveal') {
     return (
       <Screen>
+        <TurnAura color={team?.color} />
         <AppBar onBack={() => nav.exit()} />
         <Curtain
           open={gateOpen}
@@ -150,6 +152,7 @@ export function PlayScreen({
   if (s.phase === 'acting') {
     return (
       <Screen>
+        <TurnAura color={team?.color} />
         <div className="flex flex-col items-center gap-6 py-4">
           <TimerRing totalSeconds={s.options.roundSeconds} remainingSeconds={remainingSec} />
           <h1 className="text-center text-5xl font-extrabold">{promptText}</h1>

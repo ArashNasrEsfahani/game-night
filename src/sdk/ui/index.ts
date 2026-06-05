@@ -19,6 +19,7 @@ export * from './Sheet';
 export * from './Motif';
 export * from './Medallion';
 export * from './TileBand';
+export * from './TurnAura';
 export * from './FaravaharBanner';
 export * from './LionSunCrest';
 export * from './LogoMark';

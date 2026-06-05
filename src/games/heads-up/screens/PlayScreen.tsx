@@ -2,10 +2,68 @@ import { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import type { GameScreenProps } from '../../../sdk/types';
-import { Screen, AppBar, Button, TimerRing } from '../../../sdk/ui';
+import { Screen, AppBar, Button, TimerRing, TurnAura } from '../../../sdk/ui';
 import { CARD_BY_KEY } from '../content';
 import { currentParticipant, guesserId } from '../logic';
 import type { HeadsUpAction, HeadsUpState } from '../logic';
+
+/** iOS 13+ gates DeviceOrientation behind a permission prompt that must fire from a user gesture
+ *  (and HTTPS). Other platforms expose it freely. Returns true if motion events may be used. */
+async function requestTiltPermission(): Promise<boolean> {
+  const DOE = window.DeviceOrientationEvent as
+    | (typeof DeviceOrientationEvent & { requestPermission?: () => Promise<'granted' | 'denied'> })
+    | undefined;
+  if (!DOE) return false;
+  if (typeof DOE.requestPermission === 'function') {
+    try {
+      return (await DOE.requestPermission()) === 'granted';
+    } catch {
+      return false;
+    }
+  }
+  return true;
+}
+
+/**
+ * Heads-Up tilt input. While `active`, watches device orientation: a baseline is captured the first
+ * frame (phone held on the forehead), then tilting the top of the phone DOWN past a threshold fires
+ * `onGot`, tilting UP fires `onPass`. The gesture must return near neutral to re-arm — so one tilt =
+ * one action. Falls back to nothing if there's no sensor/permission (the on-screen buttons remain).
+ */
+function useTiltInput({ active, onGot, onPass }: { active: boolean; onGot: () => void; onPass: () => void }) {
+  const cbRef = useRef({ onGot, onPass });
+  useEffect(() => {
+    cbRef.current = { onGot, onPass };
+  });
+  useEffect(() => {
+    if (!active) return;
+    let baseline: number | null = null;
+    let armed = true;
+    const TRIGGER = 32; // degrees from neutral to fire
+    const REARM = 12; // must return within this of neutral before the next fire
+    const handler = (e: DeviceOrientationEvent) => {
+      if (e.beta == null) return;
+      if (baseline === null) {
+        baseline = e.beta;
+        return;
+      }
+      const d = e.beta - baseline;
+      if (armed) {
+        if (d <= -TRIGGER) {
+          armed = false;
+          cbRef.current.onGot();
+        } else if (d >= TRIGGER) {
+          armed = false;
+          cbRef.current.onPass();
+        }
+      } else if (Math.abs(d) < REARM) {
+        armed = true;
+      }
+    };
+    window.addEventListener('deviceorientation', handler);
+    return () => window.removeEventListener('deviceorientation', handler);
+  }, [active]);
+}
 
 export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<HeadsUpState, HeadsUpAction>) {
   const { t } = useTranslation();
@@ -42,6 +100,14 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<HeadsU
     return stop;
   }, [s.flash, clock]);
 
+  // Tilt controls (phone on the forehead): tilt down = got, up = pass. Buttons stay as a fallback.
+  const tiltMode = s.inputMode === 'motion';
+  useTiltInput({
+    active: s.phase === 'playing' && tiltMode,
+    onGot: () => { ctx.sound.play('correct'); ctx.haptics.success(); dispatch({ type: 'MARK_GOT', seed: ctx.random.seed() }); },
+    onPass: () => { ctx.sound.play('pass'); ctx.haptics.light(); dispatch({ type: 'MARK_PASS', seed: ctx.random.seed() }); },
+  });
+
   const participant = currentParticipant(s);
   const guesserName = participant ? s.playerNames[guesserId(participant)] : '';
   const card = s.currentCardId ? CARD_BY_KEY[s.currentCardId] : undefined;
@@ -63,6 +129,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<HeadsU
   if (s.phase === 'handoff') {
     return (
       <Screen>
+        <TurnAura color={participant?.color} />
         <AppBar onBack={() => nav.exit()} />
         <div className="grid flex-1 place-items-center gap-4 text-center">
           {participant?.kind === 'team' && (
@@ -72,7 +139,17 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<HeadsU
           <p className="text-lg text-[var(--text-muted)]">{t('hu.passTo')}</p>
           <h1 className="text-4xl font-extrabold dp-accent">{guesserName}</h1>
           <p className="px-8 text-sm text-[var(--text-muted)]">{t('hu.foreheadHint')}</p>
-          <Button size="lg" onClick={() => { ctx.sound.play('tap'); dispatch({ type: 'CONFIRM_READY' }); }}>
+          {tiltMode && (
+            <p className="px-8 text-xs font-semibold text-[var(--game-accent-strong)]">{t('hu.tiltHint')}</p>
+          )}
+          <Button
+            size="lg"
+            onClick={async () => {
+              ctx.sound.play('tap');
+              if (tiltMode) await requestTiltPermission();
+              dispatch({ type: 'CONFIRM_READY' });
+            }}
+          >
             {t('hu.ready')}
           </Button>
         </div>
@@ -107,6 +184,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<HeadsU
           : '';
     return (
       <Screen>
+        <TurnAura color={participant?.color} />
         <div className="relative flex flex-1 flex-col items-center justify-center gap-6 py-4">
           {s.flash && <div className={`pointer-events-none absolute inset-0 -z-0 opacity-40 ${flashBg}`} />}
           <TimerRing totalSeconds={s.roundSeconds} remainingSeconds={s.secondsLeft} />
@@ -124,6 +202,9 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<HeadsU
             <p className="z-10 text-2xl text-[var(--text-muted)]">{t('hu.outOfWords')}</p>
           )}
           <p className="z-10 text-sm text-[var(--text-muted)]">{t('hu.gotCount', { n: got })}</p>
+          {tiltMode && (
+            <p className="z-10 text-xs font-semibold text-[var(--game-accent-strong)]">{t('hu.tiltHint')}</p>
+          )}
           <div className="z-10 grid w-full grid-cols-2 gap-3">
             <Button
               size="lg"

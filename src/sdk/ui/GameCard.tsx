@@ -41,7 +41,7 @@ export function GameCard({
       {/* Lit niche / arch (طاق) with the glowing emblem — theme-aware: a warm cream alcove by
           day, a jewel-dark alcove at night. Identical formula on every card → consistent family. */}
       <div
-        className="relative grid h-28 place-items-center transition-[filter] duration-300 group-hover:brightness-110"
+        className="relative grid h-28 w-full place-items-center transition-[filter] duration-300 group-hover:brightness-110"
         style={{
           background:
             'radial-gradient(80% 120% at 50% 122%, var(--game-accent) 0%, var(--game-accent-strong) 55%, transparent 100%), linear-gradient(180deg, color-mix(in oklab, var(--game-accent) 28%, var(--lapis)), var(--lapis-2))',

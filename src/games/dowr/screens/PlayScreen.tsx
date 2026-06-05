@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import type { GameScreenProps } from '../../../sdk/types';
-import { Screen, AppBar, Button, TimerRing } from '../../../sdk/ui';
+import { Screen, AppBar, Button, TimerRing, TurnAura } from '../../../sdk/ui';
 import { reveal as revealVariant } from '../../../sdk/motion';
 import { CARD_BY_ID } from '../content';
 import {
@@ -117,6 +117,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<DowrSt
 
   return (
     <Screen>
+      <TurnAura color={team.color} />
       <AppBar onBack={() => nav.exit()} />
       <div className="relative flex flex-1 flex-col gap-3 py-1">
         {/* Bomb flash */}
