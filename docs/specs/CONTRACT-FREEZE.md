@@ -47,3 +47,25 @@
 
 ## Build order
 Follow `99-review-and-build-order.md` §3. Keystone = `src/sdk/types.ts` (get it right once).
+
+## Build status (current)
+
+> The contract above is **fully realized**. All 15 decisions held through implementation.
+
+- **All 10 games shipped**, each conforming to the frozen `GameModule` shape: `dowr`, `pantomime`,
+  `never-have-i-ever`, `most-likely-to`, `would-you-rather`, `truth-or-dare`, `heads-up`, `spyfall`,
+  `codenames`, `mafia`. (The per-game `docs/specs/games/*.md` sketches predate this freeze and
+  diverge — mirror **Dowr** + this file, not the sketches.)
+- **Theme:** the design system (01) is realized as the **Disco Persian** theme — dual light
+  (Persian day / parchment) + dark (disco night / lapis) driven by a `.dark` class and semantic CSS
+  vars; the host bridges each manifest `color: ColorToken` → `--game-accent*`. **Light is the
+  default** (`settingsStore.theme = 'light'`). Persian SVG emblems per game live in
+  `src/sdk/ui/emblems.ts`.
+- **Content:** ~853-item bilingual (en/fa) content databases across the games, generated via a
+  multi-agent workflow. Resolved content ids cross the purity boundary via `config.options`
+  (Decision 3) — unchanged.
+- **Sound:** `src/services/sound.ts` **synthesizes** all `SoundId`s via the Web Audio API (no asset
+  files). The `SoundId` union is unchanged (Decision 6).
+- **Win UX:** `Confetti` + `WinnerBanner` (framer-motion, reduced-motion aware) added to the SDK UI.
+- **Gates:** 505 unit tests across 25 files pass; typecheck clean; production build + PWA succeed.
+

@@ -1,6 +1,13 @@
 # 99 — Adversarial Review & Phase-1 Build Order
 
-> **Status:** Critique. Read this BEFORE writing any code.
+> **⚠️ HISTORICAL.** This adversarial review drove the **contract freeze** (see
+> `CONTRACT-FREEZE.md`) and the Phase-1 build. Both are now **complete**: the contract was frozen,
+> Phase-1 (foundation + Dowr) shipped, and **all 10 games are built** on top of it. The mismatches
+> catalogued below were the inputs to that reconciliation — they have all been resolved in
+> `src/sdk/types.ts`, `CONTRACT-FREEZE.md`, and the implemented games. Keep this file for the
+> rationale/build-order; for current truth read `CONTRACT-FREEZE.md` + the Dowr reference game.
+>
+> **Status:** Critique (resolved). Read this BEFORE writing any code.
 > **Verdict:** The architecture spec (`00`) is internally coherent and well-designed. **But almost no other spec actually conforms to it**, despite every one of them claiming "Conforms to 00-architecture.md." Spec `03` (app-shell) and all 10 game specs each invented their own divergent versions of `GameModule`, `GameManifest`, `GameContext`, the registry, and the routing/host contract. If you implement the games as written, none of them will compile against the `00` types. **The single most important pre-build task is to pick ONE contract (00) and rewrite the others to match — or amend 00 and cascade.**
 
 This file enumerates every mismatch, the cross-cutting gaps, a concrete Phase-1 build order, and the top risks.

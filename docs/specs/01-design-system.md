@@ -4,7 +4,15 @@
 >
 > **Audience.** Implementers building the SDK UI layer (`src/sdk/ui/*`) and the app shell. Game plugins consume these primitives only — they never redefine tokens or re‑implement components.
 >
-> **Status.** Implementation‑ready. Everything here is concrete enough to build with no further design questions. Where a value is a *choice* rather than a constraint, it is marked `(tunable)`.
+> **Status.** Implementation‑ready — and **implemented** as the **"Disco Persian"** theme. The token
+> system, light/dark strategy, per‑game accent re‑theming, motion language, and SFX set described here
+> are live. Notable realizations vs. this spec: (1) tokens + base layer live in `src/index.css` (not
+> split into `src/styles/*`); (2) the theme is **dual light (Persian day / parchment) + dark (disco
+> night / lapis)** toggled by a `.dark` class via `ThemeProvider`, with **light as the default**;
+> (3) per‑game emblems are Persian SVGs in `src/sdk/ui/emblems.ts`; (4) SFX are **synthesized at
+> runtime via the Web Audio API** in `src/services/sound.ts` (no Howler asset files); (5) win UX adds
+> `Confetti` + `WinnerBanner`. Where a value is a *choice* rather than a constraint, it is marked
+> `(tunable)`.
 
 ---
 
