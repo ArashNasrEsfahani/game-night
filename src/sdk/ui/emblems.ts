@@ -1,10 +1,14 @@
 // src/sdk/ui/emblems.ts — Disco Persian heraldry. Bespoke geometric SVG emblems per game.
 // All figures use currentColor for the game accent + gold/steel accents. Ported from the design pack.
-/* eslint-disable */
 const GOLD = '#f4c64d',
   GOLD_LT = '#ffe6a6',
   GOLD_DK = '#c9912a',
   DARK = '#0b0922';
+
+/** iOS Safari will not render an inline <svg> injected via innerHTML/dangerouslySetInnerHTML
+ *  unless the root carries the SVG namespace. Chrome infers it; Safari doesn't. Inject xmlns. */
+const fixSvg = (s: string): string =>
+  /<svg[^>]*\bxmlns=/.test(s) ? s : s.replace('<svg', '<svg xmlns="http://www.w3.org/2000/svg"');
 
 const onCircle = (cx: number, cy: number, r: number, a: number): [number, number] => [
   cx + r * Math.cos(a),
@@ -190,7 +194,7 @@ function scallopRing(cx: number, cy: number, r: number, n: number): string {
   return d + 'Z';
 }
 
-const BOTEH = `<svg viewBox="0 0 100 124" fill="none">
+let BOTEH = `<svg viewBox="0 0 100 124" fill="none">
   <path d="M50 120 C20 113 8 86 16 60 C22 39 38 22 60 20 C82 18 95 33 90 53 C86 68 73 73 63 66 C55 60 56 50 63 47 C50 43 39 57 41 75 C43 96 47 110 50 120 Z" fill="currentColor"/>
   <path d="M50 120 C20 113 8 86 16 60 C22 39 38 22 60 20 C82 18 95 33 90 53 C86 68 73 73 63 66 C55 60 56 50 63 47 C50 43 39 57 41 75 C43 96 47 110 50 120 Z" fill="none" stroke="${GOLD}" stroke-width="2.4" stroke-linejoin="round"/>
   <path d="M50 110 C27 104 18 84 24 63 C29 46 42 33 59 31 C76 29 85 41 81 55 C78 65 69 68 62 63" fill="none" stroke="${GOLD}" stroke-width="1.5" opacity=".75"/>
@@ -199,7 +203,7 @@ const BOTEH = `<svg viewBox="0 0 100 124" fill="none">
   <g fill="${GOLD}" opacity=".9"><path d="M50 56 q6 4 0 9 q-6 -5 0 -9 Z"/><path d="M49 44 q5 3 0 8 q-5 -5 0 -8 Z"/></g>
 </svg>`;
 
-const LION_SUN = `<svg viewBox="0 0 124 124" fill="none">
+let LION_SUN = `<svg viewBox="0 0 124 124" fill="none">
   <g>${sunRays(62, 62, 46, 60, 16, GOLD)}</g>
   <path d="${scallopRing(62, 62, 40, 16)}" fill="${GOLD}" stroke="${GOLD_DK}" stroke-width="1.4"/>
   <path d="${scallopRing(62, 63, 30, 13)}" fill="currentColor"/>
@@ -328,5 +332,11 @@ export function motif(name: string): string | undefined {
   if (name === 'lion-sun' || name === 'lionsun') return LION_SUN;
   return PERSIAN[name];
 }
+
+// Inject the SVG namespace into every emblem/motif so they render on iOS Safari (see fixSvg).
+for (const k in EMBLEMS) EMBLEMS[k] = fixSvg(EMBLEMS[k]);
+for (const k in PERSIAN) PERSIAN[k] = fixSvg(PERSIAN[k]);
+BOTEH = fixSvg(BOTEH);
+LION_SUN = fixSvg(LION_SUN);
 
 export { EMBLEMS, PERSIAN, BOTEH, LION_SUN };

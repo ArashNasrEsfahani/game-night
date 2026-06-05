@@ -28,11 +28,12 @@ export function ResultsScreen({ state, ctx, nav }: GameScreenProps<DowrState, Do
   const title =
     winners.length > 1 ? t('results.tie') : t('results.winner', { name: winnerNames[0] ?? '' });
 
+  const timeMode = s.options.endMode === 'time';
   const rows: ScoreRow[] = standings.map((st) => ({
     id: st.subjectId,
     label: st.label,
-    score: st.totalMs,
-    display: fmtTotal(st.totalMs),
+    score: timeMode ? st.words : st.totalMs,
+    display: timeMode ? t('dowr.wordsCount', { n: st.words }) : fmtTotal(st.totalMs),
     rank: st.rank,
     color: st.color,
   }));
@@ -42,7 +43,9 @@ export function ResultsScreen({ state, ctx, nav }: GameScreenProps<DowrState, Do
       <AppBar title={t('results.title')} onBack={() => nav.exit()} />
       <div className="flex flex-col gap-4 pb-8">
         <WinnerBanner title={title} names={winnerNames} />
-        <p className="text-center text-sm text-[var(--text-muted)]">{t('dowr.fastest')}</p>
+        <p className="text-center text-sm text-[var(--text-muted)]">
+          {timeMode ? t('dowr.mostWords') : t('dowr.fastest')}
+        </p>
         <Scoreboard rows={rows} />
         <div className="mt-2 flex flex-col gap-2">
           <Button

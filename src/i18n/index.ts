@@ -9,6 +9,8 @@ void i18n.use(initReactI18next).init({
     en: { translation: en },
     fa: { translation: fa },
   },
+  // Deterministic default for tests/first tick; the running app switches to the user's saved
+  // language (default fa — see settingsStore) via AppProviders on load.
   lng: 'en',
   fallbackLng: 'en',
   supportedLngs: ['en', 'fa'],

@@ -192,6 +192,35 @@ describe('rounds & game end', () => {
   });
 });
 
+describe('time mode', () => {
+  it('ends when the shared clock is spent; most words wins (tie broken by speed)', () => {
+    let s = createInitialState(teamsConfig(4, { endMode: 'time', timeLimitSeconds: 120 }), 1);
+    expect(s.phase).toBe('playing');
+    s = advance(s, 10000); // t0 word #1 (+10s)
+    s = advance(s, 50000); // t1 word #1 (+50s) — elapsed 60s
+    s = advance(s, 10000); // t0 word #2 (+10s) — elapsed 70s
+    s = advance(s, 50000); // t1 word #2 (+50s) — elapsed 120s → over
+    expect(s.phase).toBe('gameOver');
+    // both teams solved 2; tie broken by lower total time → t0 (20s) beats t1 (100s)
+    expect(selectStandings(s)[0].subjectId).toBe('t0');
+    expect(selectWinners(s)).toEqual(['t0']);
+  });
+  it('a blown bomb adds no penalty time in time mode (banks only real seconds)', () => {
+    let s = createInitialState(teamsConfig(4, { endMode: 'time', timeLimitSeconds: 600, bombPenaltySeconds: 30 }), 1);
+    s = advance(s, 12000, 'bomb'); // failed word; no +30s penalty, no word credited
+    expect(s.totals.t0).toBe(12000);
+    expect(selectStandings(s).find((r) => r.subjectId === 't0')?.words).toBe(0);
+  });
+  it('END_TIME banks the in-progress segment and ends without crediting a word', () => {
+    let s = createInitialState(teamsConfig(4, { endMode: 'time', timeLimitSeconds: 60 }), 1);
+    s = advance(s, 20000); // t0 word #1
+    s = reducer(s, { type: 'END_TIME', segmentMs: 50000 }); // clock runs out on t1's word
+    expect(s.phase).toBe('gameOver');
+    expect(s.totals.t1).toBe(50000);
+    expect(selectWinners(s)).toEqual(['t0']); // 1 word vs 0
+  });
+});
+
 describe('guards & purity', () => {
   it('ADVANCE after game over is a no-op', () => {
     let s = createInitialState(teamsConfig(4, { rounds: 1 }), 1);

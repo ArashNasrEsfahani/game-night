@@ -3,9 +3,13 @@ import type { DowrCategory, DowrDifficulty } from './content';
 import { buildPool } from './deck';
 
 export type DowrDifficultySel = DowrDifficulty | 'random';
+/** How a match ends: a fixed number of turns per team, or a shared time budget. */
+export type DowrEndMode = 'turns' | 'time';
 
 export const DOWR_CATEGORIES: DowrCategory[] = ['food', 'objects', 'jobs', 'places', 'animals'];
 
+/** Total game-time choices (seconds) for the 'time' end mode. Most words wins. */
+export const TIME_LIMIT_CHOICES = [120, 180, 300, 420] as const;
 /** Bomb-fuse length choices (seconds). The describing team must score before it blows. */
 export const FUSE_CHOICES = [30, 45, 60, 90] as const;
 /** Extra seconds added to a team's total when the bomb explodes. */
@@ -16,8 +20,13 @@ export const CHANGE_PENALTY_CHOICES = [0, 3, 5, 10] as const;
 export interface DowrOptions {
   categories: DowrCategory[];
   difficulty: DowrDifficultySel;
-  /** Turns per team. Every team describes this many words; lowest total time wins. */
+  /** How the match ends. 'turns' = fixed turns each (lowest total time wins);
+   *  'time' = a shared countdown (most words guessed wins). */
+  endMode: DowrEndMode;
+  /** Turns per team (endMode 'turns'). Every team describes this many words; lowest total time wins. */
   rounds: number;
+  /** Total shared game time in seconds (endMode 'time'). Most words guessed wins. */
+  timeLimitSeconds: number;
   /** Bomb fuse per turn, in seconds. */
   fuseSeconds: number;
   /** Seconds added to the team's total if the bomb explodes. */
@@ -31,7 +40,9 @@ export interface DowrOptions {
 export const DEFAULT_OPTIONS: DowrOptions = {
   categories: [...DOWR_CATEGORIES],
   difficulty: 'random',
+  endMode: 'turns',
   rounds: 3,
+  timeLimitSeconds: 180,
   fuseSeconds: 60,
   bombPenaltySeconds: 20,
   changePenaltySeconds: 5,
@@ -56,7 +67,9 @@ export function normalizeOptions(o: Partial<DowrOptions> | undefined): DowrOptio
   return {
     categories,
     difficulty,
+    endMode: src.endMode === 'time' ? 'time' : 'turns',
     rounds,
+    timeLimitSeconds: oneOf(TIME_LIMIT_CHOICES, src.timeLimitSeconds, DEFAULT_OPTIONS.timeLimitSeconds),
     fuseSeconds: oneOf(FUSE_CHOICES, src.fuseSeconds, DEFAULT_OPTIONS.fuseSeconds),
     bombPenaltySeconds: oneOf(
       BOMB_PENALTY_CHOICES,

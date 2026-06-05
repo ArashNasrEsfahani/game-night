@@ -72,6 +72,7 @@ export interface DowrState extends GameStateBase {
 export type DowrAction =
   | { type: 'ADVANCE'; reason: 'guessed' | 'bomb'; segmentMs: number; seed: number }
   | { type: 'CHANGE_WORD'; seed: number }
+  | { type: 'END_TIME'; segmentMs: number }
   | { type: 'CLEAR_FLASH' }
   | { type: 'RESET' };
 
@@ -106,7 +107,13 @@ export const guesserPlayerId = (s: DowrState): string => {
   return team.memberIds[(roundForTurn(s, s.turnNo) + 1) % 2];
 };
 
-function makeRecord(s: DowrState, reason: TurnEndReason, segmentMs: number, bombPenaltyMs: number): TurnRecord {
+function makeRecord(
+  s: DowrState,
+  reason: TurnEndReason,
+  segmentMs: number,
+  changePenaltyMs: number,
+  bombPenaltyMs: number,
+): TurnRecord {
   return {
     turnNo: s.turnNo,
     round: roundForTurn(s, s.turnNo),
@@ -115,9 +122,9 @@ function makeRecord(s: DowrState, reason: TurnEndReason, segmentMs: number, bomb
     guesserId: guesserPlayerId(s),
     segmentMs,
     changes: s.turnChanges,
-    changePenaltyMs: s.changePenaltyMs,
+    changePenaltyMs,
     bombPenaltyMs,
-    totalMs: segmentMs + s.changePenaltyMs + bombPenaltyMs,
+    totalMs: segmentMs + changePenaltyMs + bombPenaltyMs,
     reason,
     solved: reason === 'guessed',
   };
@@ -199,11 +206,15 @@ export function reducer(state: DowrState, action: DowrAction): DowrState {
   switch (action.type) {
     case 'ADVANCE': {
       if (s.phase !== 'playing' || s.currentCardId === null) return s;
+      const timeMode = s.options.endMode === 'time';
       const team = currentTeam(s);
       const segmentMs = Math.max(0, Math.min(action.segmentMs, s.fuseMs));
-      const bombPenaltyMs = action.reason === 'bomb' ? s.options.bombPenaltySeconds * 1000 : 0;
-      const addMs = segmentMs + s.changePenaltyMs + bombPenaltyMs;
-      const record = makeRecord(s, action.reason, segmentMs, bombPenaltyMs);
+      // In time mode the win condition is "most words", so artificial time penalties don't apply —
+      // a team only ever banks the real seconds it held the phone (which the shared clock counts down).
+      const bombPenaltyMs = !timeMode && action.reason === 'bomb' ? s.options.bombPenaltySeconds * 1000 : 0;
+      const changePenaltyMs = timeMode ? 0 : s.changePenaltyMs;
+      const addMs = segmentMs + changePenaltyMs + bombPenaltyMs;
+      const record = makeRecord(s, action.reason, segmentMs, changePenaltyMs, bombPenaltyMs);
       const totals = { ...s.totals, [team.id]: (s.totals[team.id] ?? 0) + addMs };
       const consumed = deck.discard(s.deck, s.currentCardId);
       const nextTurnNo = s.turnNo + 1;
@@ -216,7 +227,11 @@ export function reducer(state: DowrState, action: DowrAction): DowrState {
         turnChanges: 0,
         changePenaltyMs: 0,
       };
-      if (nextTurnNo >= s.totalTurns) {
+      const elapsedMs = Object.values(totals).reduce((a, b) => a + b, 0);
+      const over = timeMode
+        ? elapsedMs >= s.options.timeLimitSeconds * 1000
+        : nextTurnNo >= s.totalTurns;
+      if (over) {
         return { ...common, phase: 'gameOver', finished: true, deck: consumed, currentCardId: null };
       }
       const { deck: d, cardId } = drawCard(consumed, action.seed);
@@ -244,6 +259,24 @@ export function reducer(state: DowrState, action: DowrAction): DowrState {
         changePenaltyMs: s.changePenaltyMs + s.options.changePenaltySeconds * 1000,
       };
     }
+    case 'END_TIME': {
+      // The shared clock ran out mid-word (time mode only): bank the real seconds spent on the
+      // in-progress word (no solve credited) and end the match. Most words guessed wins.
+      if (s.phase !== 'playing' || s.options.endMode !== 'time') return s;
+      const team = currentTeam(s);
+      const segmentMs = Math.max(0, action.segmentMs);
+      const totals = { ...s.totals, [team.id]: (s.totals[team.id] ?? 0) + segmentMs };
+      return {
+        ...s,
+        totals,
+        phase: 'gameOver',
+        finished: true,
+        currentCardId: null,
+        flash: null,
+        turnChanges: 0,
+        changePenaltyMs: 0,
+      };
+    }
     case 'CLEAR_FLASH': {
       if (!s.flash) return s;
       return { ...s, flash: null };
@@ -262,38 +295,60 @@ export const describerName = (s: DowrState): string => s.playerNames[describerPl
 export const guesserName = (s: DowrState): string => s.playerNames[guesserPlayerId(s)] ?? '';
 export const isLastTurn = (s: DowrState): boolean => s.turnNo >= s.totalTurns - 1;
 
+/** Words a team has solved (endMode 'time' win metric). */
+export const teamWords = (s: DowrState, teamId: string): number =>
+  s.history.reduce((n, r) => n + (r.teamId === teamId && r.solved ? 1 : 0), 0);
+/** Total game time consumed so far (sum of every team's banked seconds). */
+export const elapsedMs = (s: DowrState): number =>
+  Object.values(s.totals).reduce((a, b) => a + b, 0);
+export const timeLimitMs = (s: DowrState): number => s.options.timeLimitSeconds * 1000;
+/** Seconds left on the shared clock (endMode 'time'); pass the live in-progress segment. */
+export const timeRemainingMs = (s: DowrState, liveSegmentMs = 0): number =>
+  Math.max(0, timeLimitMs(s) - elapsedMs(s) - liveSegmentMs);
+
 export interface DowrStanding {
   subjectId: string;
   label: string;
   color?: ColorToken;
   totalMs: number;
+  words: number;
   rank: number;
 }
 
-/** Teams sorted by total time ASCENDING (fastest first); ties share a rank. */
+/** Standings. Turns mode: fastest total time first (ties share rank). Time mode: most words
+ *  first, ties broken by lower time. */
 export function selectStandings(s: DowrState): DowrStanding[] {
-  const rows = s.teams
-    .map((t) => ({
-      subjectId: t.id,
-      label: t.name,
-      color: t.color,
-      totalMs: s.totals[t.id] ?? 0,
-    }))
-    .sort((a, b) => a.totalMs - b.totalMs);
+  const timeMode = s.options.endMode === 'time';
+  const rows = s.teams.map((t) => ({
+    subjectId: t.id,
+    label: t.name,
+    color: t.color,
+    totalMs: s.totals[t.id] ?? 0,
+    words: teamWords(s, t.id),
+  }));
+  rows.sort((a, b) => (timeMode ? b.words - a.words || a.totalMs - b.totalMs : a.totalMs - b.totalMs));
   let rank = 0;
-  let prev: number | null = null;
+  let prevKey: string | null = null;
   return rows.map((row, i) => {
-    if (prev === null || row.totalMs !== prev) {
+    const key = timeMode ? `${row.words}|${row.totalMs}` : `${row.totalMs}`;
+    if (prevKey === null || key !== prevKey) {
       rank = i + 1;
-      prev = row.totalMs;
+      prevKey = key;
     }
     return { ...row, rank };
   });
 }
 
-/** The fastest team(s) — lowest total time. */
+/** The winning team(s). Turns mode: lowest total time. Time mode: most words (ties → fastest). */
 export function selectWinners(s: DowrState): string[] {
   if (s.teams.length === 0) return [];
+  if (s.options.endMode === 'time') {
+    const max = Math.max(...s.teams.map((t) => teamWords(s, t.id)));
+    const top = s.teams.filter((t) => teamWords(s, t.id) === max);
+    if (top.length <= 1) return top.map((t) => t.id);
+    const min = Math.min(...top.map((t) => s.totals[t.id] ?? 0));
+    return top.filter((t) => (s.totals[t.id] ?? 0) === min).map((t) => t.id);
+  }
   const min = Math.min(...s.teams.map((t) => s.totals[t.id] ?? 0));
   return s.teams.filter((t) => (s.totals[t.id] ?? 0) === min).map((t) => t.id);
 }

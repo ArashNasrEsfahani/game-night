@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { getCatalog, getGame } from '../../games/registry';
 import { useSessionStore } from '../../store/sessionStore';
+import { useSettingsStore } from '../../store/settingsStore';
 import {
   Screen,
   GameCard,
@@ -62,6 +63,17 @@ export function HomePage() {
   const sessions = useSessionStore((s) => s.sessions);
   const gamesRef = useRef<HTMLDivElement>(null);
 
+  // Quick toggles live in the header — no separate Settings page needed for the common ones.
+  const theme = useSettingsStore((s) => s.theme);
+  const setTheme = useSettingsStore((s) => s.setTheme);
+  const language = useSettingsStore((s) => s.language);
+  const setLanguage = useSettingsStore((s) => s.setLanguage);
+  const muted = useSettingsStore((s) => s.muted);
+  const setMuted = useSettingsStore((s) => s.setMuted);
+  const isDark =
+    theme === 'dark' ||
+    (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+
   // Most-recently-updated unfinished match, for a quick "Resume" strip.
   const resume = useMemo(() => {
     const open = Object.values(sessions)
@@ -83,14 +95,38 @@ export function HomePage() {
           <Button variant="ghost" size="sm" onClick={() => navigate('/players')}>
             {t('common.players')}
           </Button>
-          <Button
-            variant="ghost"
-            size="sm"
-            aria-label={t('settings.title')}
-            onClick={() => navigate('/settings')}
-          >
-            ⚙️
-          </Button>
+          <div className="flex items-center gap-1.5">
+            {[
+              {
+                key: 'lang',
+                label: language === 'fa' ? 'EN' : 'فا',
+                aria: t('settings.language'),
+                onClick: () => setLanguage(language === 'fa' ? 'en' : 'fa'),
+              },
+              {
+                key: 'theme',
+                label: isDark ? '🌙' : '☀️',
+                aria: t('settings.theme'),
+                onClick: () => setTheme(isDark ? 'light' : 'dark'),
+              },
+              {
+                key: 'sound',
+                label: muted ? '🔇' : '🔊',
+                aria: t('settings.sound'),
+                onClick: () => setMuted(!muted),
+              },
+            ].map((b) => (
+              <motion.button
+                key={b.key}
+                onClick={b.onClick}
+                aria-label={b.aria}
+                whileTap={{ scale: 0.88 }}
+                className="grid h-9 min-w-9 place-items-center rounded-full bg-[var(--surface-2)] px-3 text-sm font-bold text-[var(--text)] shadow-[inset_0_0_0_1px_var(--border-glow)]"
+              >
+                {b.label}
+              </motion.button>
+            ))}
+          </div>
         </header>
 
         {/* ───── HERO ───── the Lion & Sun (شیر و خورشید) over sweeping disco rays is the mark */}

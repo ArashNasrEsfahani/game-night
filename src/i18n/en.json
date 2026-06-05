@@ -135,7 +135,15 @@
       "jobs": "Jobs",
       "places": "Places",
       "animals": "Animals"
-    }
+    },
+    "endMode": "End mode",
+    "endTurns": "Turns each",
+    "endTime": "Time limit",
+    "endTurnsHint": "Each team plays a set number of words — lowest total time wins.",
+    "endTimeHint": "Race one shared clock — the team with the most words wins.",
+    "timeLimit": "Total time",
+    "mostWords": "Most words wins!",
+    "wordsCount": "{{n}} words"
   },
   "pantomime": {
     "title": "Pantomime",

@@ -11,9 +11,10 @@ import {
   FUSE_CHOICES,
   BOMB_PENALTY_CHOICES,
   CHANGE_PENALTY_CHOICES,
+  TIME_LIMIT_CHOICES,
   validateConfig,
 } from '../config';
-import type { DowrDifficultySel, DowrOptions } from '../config';
+import type { DowrDifficultySel, DowrEndMode, DowrOptions } from '../config';
 import type { DowrCategory } from '../content';
 import { buildPool } from '../deck';
 import type { DowrAction, DowrState } from '../logic';
@@ -148,13 +149,39 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<DowrState, DowrAction>
 
         {/* Length + bomb settings */}
         <section className="flex flex-col gap-4">
-          <Stepper
-            label={t('dowr.rounds')}
-            value={opts.rounds}
-            min={1}
-            max={8}
-            onChange={(v) => set('rounds', v)}
-          />
+          <div>
+            <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">{t('dowr.endMode')}</h2>
+            <SegmentedControl<DowrEndMode>
+              value={opts.endMode}
+              onChange={(v) => set('endMode', v)}
+              options={[
+                { value: 'turns', label: t('dowr.endTurns') },
+                { value: 'time', label: t('dowr.endTime') },
+              ]}
+            />
+            <p className="mt-1.5 text-xs text-[var(--text-muted)]">
+              {opts.endMode === 'time' ? t('dowr.endTimeHint') : t('dowr.endTurnsHint')}
+            </p>
+          </div>
+
+          {opts.endMode === 'turns' ? (
+            <Stepper
+              label={t('dowr.rounds')}
+              value={opts.rounds}
+              min={1}
+              max={8}
+              onChange={(v) => set('rounds', v)}
+            />
+          ) : (
+            <div>
+              <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">{t('dowr.timeLimit')}</h2>
+              <SegmentedControl<string>
+                value={String(opts.timeLimitSeconds)}
+                onChange={(v) => set('timeLimitSeconds', Number(v))}
+                options={TIME_LIMIT_CHOICES.map((n) => ({ value: String(n), label: `${n / 60}m` }))}
+              />
+            </div>
+          )}
 
           <div>
             <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">{t('dowr.fuse')}</h2>
@@ -165,30 +192,35 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<DowrState, DowrAction>
             />
           </div>
 
-          <div>
-            <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">
-              {t('dowr.bombPenalty')}
-            </h2>
-            <SegmentedControl<string>
-              value={String(opts.bombPenaltySeconds)}
-              onChange={(v) => set('bombPenaltySeconds', Number(v))}
-              options={BOMB_PENALTY_CHOICES.map((n) => ({ value: String(n), label: `+${n}s` }))}
-            />
-          </div>
+          {/* Time penalties only matter when lowest-time wins (turns mode). */}
+          {opts.endMode === 'turns' && (
+            <>
+              <div>
+                <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">
+                  {t('dowr.bombPenalty')}
+                </h2>
+                <SegmentedControl<string>
+                  value={String(opts.bombPenaltySeconds)}
+                  onChange={(v) => set('bombPenaltySeconds', Number(v))}
+                  options={BOMB_PENALTY_CHOICES.map((n) => ({ value: String(n), label: `+${n}s` }))}
+                />
+              </div>
 
-          <div>
-            <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">
-              {t('dowr.changePenalty')}
-            </h2>
-            <SegmentedControl<string>
-              value={String(opts.changePenaltySeconds)}
-              onChange={(v) => set('changePenaltySeconds', Number(v))}
-              options={CHANGE_PENALTY_CHOICES.map((n) => ({
-                value: String(n),
-                label: n === 0 ? t('dowr.off') : `+${n}s`,
-              }))}
-            />
-          </div>
+              <div>
+                <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">
+                  {t('dowr.changePenalty')}
+                </h2>
+                <SegmentedControl<string>
+                  value={String(opts.changePenaltySeconds)}
+                  onChange={(v) => set('changePenaltySeconds', Number(v))}
+                  options={CHANGE_PENALTY_CHOICES.map((n) => ({
+                    value: String(n),
+                    label: n === 0 ? t('dowr.off') : `+${n}s`,
+                  }))}
+                />
+              </div>
+            </>
+          )}
 
           <Toggle
             label={t('dowr.surpriseBomb')}

@@ -5,7 +5,16 @@ import type { GameScreenProps } from '../../../sdk/types';
 import { Screen, AppBar, Button, TimerRing } from '../../../sdk/ui';
 import { reveal as revealVariant } from '../../../sdk/motion';
 import { CARD_BY_ID } from '../content';
-import { currentTeam, describerName, guesserName, currentRound } from '../logic';
+import {
+  currentTeam,
+  describerName,
+  guesserName,
+  currentRound,
+  elapsedMs,
+  timeLimitMs,
+  timeRemainingMs,
+  teamWords,
+} from '../logic';
 import type { DowrAction, DowrState } from '../logic';
 
 /** Tidy mm:ss / Ns total. */
@@ -30,12 +39,25 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<DowrSt
   const segStartRef = useRef(clock.now());
   const [segMs, setSegMs] = useState(0);
 
-  // The always-running clock: pump elapsed and auto-detonate the bomb when the fuse is spent.
+  const timeMode = s.options.endMode === 'time';
+  const bankedMs = elapsedMs(s); // banked across all turns; changes only on a turn boundary
+  const limitMs = timeLimitMs(s);
+
+  // The always-running clock: pump elapsed, end the match when the shared clock runs out (time
+  // mode), and auto-detonate the per-word bomb when its fuse is spent.
   useEffect(() => {
     if (s.phase !== 'playing') return;
     const stop = clock.interval(120, (n) => {
       const e = Math.max(0, n - segStartRef.current);
       setSegMs(e);
+      if (timeMode && bankedMs + e >= limitMs) {
+        segStartRef.current = n;
+        setSegMs(0);
+        ctx.sound.play('lose');
+        ctx.haptics.error();
+        dispatchRef.current({ type: 'END_TIME', segmentMs: e });
+        return;
+      }
       if (e >= s.fuseMs) {
         segStartRef.current = n; // re-anchor first so the next tick doesn't double-fire
         setSegMs(0);
@@ -45,7 +67,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<DowrSt
       }
     });
     return stop;
-  }, [s.phase, s.turnNo, s.fuseMs, clock, ctx]);
+  }, [s.phase, s.turnNo, s.fuseMs, timeMode, bankedMs, limitMs, clock, ctx]);
 
   // Clear the bomb flash shortly after it fires.
   useEffect(() => {
@@ -71,9 +93,12 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<DowrSt
   const word = card ? ctx.localize(card.word) : '';
   const fuseSec = s.fuseMs / 1000;
   const remainSec = Math.max(0, (s.fuseMs - segMs) / 1000);
-  const changeCost = s.options.changePenaltySeconds;
+  const changeCost = timeMode ? 0 : s.options.changePenaltySeconds;
   const liveTotal = (id: string) =>
     id === team.id ? (s.totals[id] ?? 0) + s.changePenaltyMs + segMs : s.totals[id] ?? 0;
+  // Strip shows each team's word count in time mode (most words wins), running time otherwise.
+  const teamScore = (id: string) => (timeMode ? `${teamWords(s, id)}✓` : fmtTotal(liveTotal(id)));
+  const sharedLeftMs = timeRemainingMs(s, segMs);
 
   const gotIt = () => {
     const n = clock.now();
@@ -117,19 +142,30 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<DowrSt
                   style={{ background: `var(--color-game-${tm.color})` }}
                 />
                 {tm.name}
-                <span className="tabular-nums">{fmtTotal(liveTotal(tm.id))}</span>
+                <span className="tabular-nums">{teamScore(tm.id)}</span>
               </span>
             );
           })}
         </div>
+
+        {/* Shared countdown — the headline pressure in time mode (most words wins when it hits 0). */}
+        {timeMode && (
+          <p
+            className={`z-10 text-center text-3xl font-black tabular-nums ${
+              sharedLeftMs <= 15000 ? 'text-[var(--color-game-rose-strong)]' : 'dp-accent'
+            }`}
+          >
+            ⏱ {fmtTotal(sharedLeftMs)}
+          </p>
+        )}
 
         {/* Whose turn — always visible */}
         <p className="z-10 text-center text-base font-bold dp-accent">
           {t('dowr.describerIs', { name: describerName(s) })}
         </p>
         <p className="z-10 -mt-2 text-center text-xs text-[var(--text-muted)]">
-          {t('dowr.guesserIs', { name: guesserName(s) })} ·{' '}
-          {t('dowr.roundOf', { round: currentRound(s), total: s.options.rounds })}
+          {t('dowr.guesserIs', { name: guesserName(s) })}
+          {!timeMode && <> · {t('dowr.roundOf', { round: currentRound(s), total: s.options.rounds })}</>}
         </p>
 
         {/* Bomb + word */}
