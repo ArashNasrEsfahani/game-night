@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { pressIcon, springSnappy } from '../motion';
+import { useUiSound } from '../../lib/uiSound';
 
 export function Stepper({
   value,
@@ -14,12 +15,13 @@ export function Stepper({
   onChange: (v: number) => void;
   label?: string;
 }) {
+  const ui = useUiSound();
   return (
     <div className="flex items-center justify-between">
       {label && <span className="text-[var(--text)]">{label}</span>}
       <div className="flex items-center gap-3">
         <motion.button
-          onClick={() => onChange(Math.max(min, value - 1))}
+          onClick={() => { ui('tap'); onChange(Math.max(min, value - 1)); }}
           disabled={value <= min}
           aria-label="decrease"
           whileTap={pressIcon.whileTap}
@@ -41,7 +43,7 @@ export function Stepper({
           </motion.span>
         </span>
         <motion.button
-          onClick={() => onChange(Math.min(max, value + 1))}
+          onClick={() => { ui('tap'); onChange(Math.min(max, value + 1)); }}
           disabled={value >= max}
           aria-label="increase"
           whileTap={pressIcon.whileTap}

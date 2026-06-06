@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { springSnappy } from '../motion';
+import { useUiSound } from '../../lib/uiSound';
 
 export function Toggle({
   checked,
@@ -10,13 +11,14 @@ export function Toggle({
   onChange: (v: boolean) => void;
   label?: string;
 }) {
+  const ui = useUiSound();
   return (
     <div className="flex items-center justify-between">
       {label && <span className="text-[var(--text)]">{label}</span>}
       <motion.button
         role="switch"
         aria-checked={checked}
-        onClick={() => onChange(!checked)}
+        onClick={() => { ui('tap'); onChange(!checked); }}
         whileTap={{ scale: 0.92 }}
         transition={springSnappy}
         className={`h-7 w-12 shrink-0 rounded-full p-0.5 transition-colors ${

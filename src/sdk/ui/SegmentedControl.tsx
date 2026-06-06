@@ -2,6 +2,7 @@ import { useId } from 'react';
 import { motion } from 'framer-motion';
 import { cn } from '../../lib/cn';
 import { press, springSnappy } from '../motion';
+import { useUiSound } from '../../lib/uiSound';
 
 export function SegmentedControl<T extends string>({
   options,
@@ -15,6 +16,7 @@ export function SegmentedControl<T extends string>({
   ariaLabel?: string;
 }) {
   const groupId = useId();
+  const ui = useUiSound();
   return (
     <div
       role="radiogroup"
@@ -28,7 +30,7 @@ export function SegmentedControl<T extends string>({
             key={o.value}
             role="radio"
             aria-checked={selected}
-            onClick={() => onChange(o.value)}
+            onClick={() => { if (!selected) ui('select'); onChange(o.value); }}
             whileTap={press.whileTap}
             transition={press.transition}
             className="relative flex-1 rounded-[var(--radius-pill)] px-3 py-2 text-sm font-semibold"

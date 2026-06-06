@@ -2,6 +2,7 @@ import type { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 import { cn } from '../../lib/cn';
 import { press } from '../motion';
+import { useUiSound } from '../../lib/uiSound';
 
 /**
  * A toggleable multi-select chip (decks, categories, intensity tiers…).
@@ -22,13 +23,14 @@ export function SelectChip({
   disabled?: boolean;
   className?: string;
 }) {
+  const ui = useUiSound();
   return (
     <motion.button
       type="button"
       role="checkbox"
       aria-checked={selected}
       disabled={disabled}
-      onClick={onClick}
+      onClick={() => { ui('select'); onClick(); }}
       whileTap={press.whileTap}
       transition={press.transition}
       className={cn(
