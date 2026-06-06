@@ -547,5 +547,779 @@
     },
     "category": "animals",
     "difficulty": "hard"
+  },
+  {
+    "id": "animals-gen-1",
+    "word": {
+      "en": "Goat",
+      "fa": "بز"
+    },
+    "category": "animals",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-gen-2",
+    "word": {
+      "en": "Duck",
+      "fa": "اردک"
+    },
+    "category": "animals",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-gen-3",
+    "word": {
+      "en": "Goose",
+      "fa": "غاز"
+    },
+    "category": "animals",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-gen-4",
+    "word": {
+      "en": "Pig",
+      "fa": "خوک"
+    },
+    "category": "animals",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-gen-5",
+    "word": {
+      "en": "Rat",
+      "fa": "موش صحرایی"
+    },
+    "category": "animals",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-gen-6",
+    "word": {
+      "en": "Bird",
+      "fa": "پرنده"
+    },
+    "category": "animals",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-gen-7",
+    "word": {
+      "en": "Pigeon",
+      "fa": "کبوتر"
+    },
+    "category": "animals",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-gen-8",
+    "word": {
+      "en": "Crow",
+      "fa": "کلاغ"
+    },
+    "category": "animals",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-gen-9",
+    "word": {
+      "en": "Bee",
+      "fa": "زنبور"
+    },
+    "category": "animals",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-gen-10",
+    "word": {
+      "en": "Ant",
+      "fa": "مورچه"
+    },
+    "category": "animals",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-gen-11",
+    "word": {
+      "en": "Otter",
+      "fa": "سمور آبی"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-gen-12",
+    "word": {
+      "en": "Badger",
+      "fa": "گورکن"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-gen-13",
+    "word": {
+      "en": "Raccoon",
+      "fa": "راکون"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-gen-14",
+    "word": {
+      "en": "Weasel",
+      "fa": "راسو"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-gen-15",
+    "word": {
+      "en": "Ferret",
+      "fa": "موش خرما"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-gen-16",
+    "word": {
+      "en": "Mole",
+      "fa": "موش کور"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-gen-17",
+    "word": {
+      "en": "Beaver",
+      "fa": "سگ آبی"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-gen-18",
+    "word": {
+      "en": "Anteater",
+      "fa": "مورچه‌خوار"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-gen-19",
+    "word": {
+      "en": "Mongoose",
+      "fa": "خوک‌موش"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-gen-20",
+    "word": {
+      "en": "Wombat",
+      "fa": "وامبت"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-gen-21",
+    "word": {
+      "en": "Lynx",
+      "fa": "سیاه‌گوش"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-gen-22",
+    "word": {
+      "en": "Bobcat",
+      "fa": "گربه‌سان وحشی"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-gen-23",
+    "word": {
+      "en": "Cheetah",
+      "fa": "یوزپلنگ"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-gen-24",
+    "word": {
+      "en": "Hyena",
+      "fa": "کفتار"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-gen-25",
+    "word": {
+      "en": "Jackal",
+      "fa": "شغال"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-gen-26",
+    "word": {
+      "en": "Wolverine",
+      "fa": "کلسون"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-gen-27",
+    "word": {
+      "en": "Antelope",
+      "fa": "بزکوهی"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-gen-28",
+    "word": {
+      "en": "Gazelle",
+      "fa": "غزال"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-gen-29",
+    "word": {
+      "en": "Moose",
+      "fa": "گوزن شمالی"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-gen-30",
+    "word": {
+      "en": "Bison",
+      "fa": "گاومیش کوهان‌دار"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-gen-31",
+    "word": {
+      "en": "Boar",
+      "fa": "گراز"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-gen-32",
+    "word": {
+      "en": "Llama",
+      "fa": "لاما"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-gen-33",
+    "word": {
+      "en": "Alpaca",
+      "fa": "آلپاکا"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-gen-34",
+    "word": {
+      "en": "Yak",
+      "fa": "یاک"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-gen-35",
+    "word": {
+      "en": "Tapir",
+      "fa": "تاپیر"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-gen-36",
+    "word": {
+      "en": "Baboon",
+      "fa": "بابون"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-gen-37",
+    "word": {
+      "en": "Gibbon",
+      "fa": "گیبون"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-gen-38",
+    "word": {
+      "en": "Orangutan",
+      "fa": "اورانگوتان"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-gen-39",
+    "word": {
+      "en": "Toucan",
+      "fa": "توکان"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-gen-40",
+    "word": {
+      "en": "Pelican",
+      "fa": "پلیکان"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-gen-41",
+    "word": {
+      "en": "Flamingo",
+      "fa": "فلامینگو"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-gen-42",
+    "word": {
+      "en": "Heron",
+      "fa": "حواصیل"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-gen-43",
+    "word": {
+      "en": "Vulture",
+      "fa": "کرکس"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-gen-44",
+    "word": {
+      "en": "Falcon",
+      "fa": "شاهین"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-gen-45",
+    "word": {
+      "en": "Pheasant",
+      "fa": "قرقاول"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-gen-46",
+    "word": {
+      "en": "Newt",
+      "fa": "سمندر آبی"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-gen-47",
+    "word": {
+      "en": "Skunk",
+      "fa": "راسوی بویا"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-gen-48",
+    "word": {
+      "en": "Wildebeest",
+      "fa": "گاومیش وحشی"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-gen-49",
+    "word": {
+      "en": "Buffalo",
+      "fa": "بوفالو"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-gen-50",
+    "word": {
+      "en": "Panther",
+      "fa": "پلنگ سیاه"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-gen-51",
+    "word": {
+      "en": "Jaguar",
+      "fa": "جگوار"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-gen-52",
+    "word": {
+      "en": "Cougar",
+      "fa": "شیر کوهی"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-gen-53",
+    "word": {
+      "en": "Chimpanzee",
+      "fa": "شامپانزه"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-gen-54",
+    "word": {
+      "en": "Walrus",
+      "fa": "شیر دریایی گراز"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-gen-55",
+    "word": {
+      "en": "Manatee",
+      "fa": "گاو دریایی"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-gen-56",
+    "word": {
+      "en": "Koala",
+      "fa": "کوآلا"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-gen-57",
+    "word": {
+      "en": "Possum",
+      "fa": "اپوسوم"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-gen-58",
+    "word": {
+      "en": "Chinchilla",
+      "fa": "چینچیلا"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-gen-59",
+    "word": {
+      "en": "Gopher",
+      "fa": "موش زمینی"
+    },
+    "category": "animals",
+    "difficulty": "med"
+  },
+  {
+    "id": "animals-gen-60",
+    "word": {
+      "en": "Aardvark",
+      "fa": "خوک خاکی"
+    },
+    "category": "animals",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-gen-61",
+    "word": {
+      "en": "Axolotl",
+      "fa": "سمندر مکزیکی"
+    },
+    "category": "animals",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-gen-62",
+    "word": {
+      "en": "Okapi",
+      "fa": "اوکاپی"
+    },
+    "category": "animals",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-gen-63",
+    "word": {
+      "en": "Capybara",
+      "fa": "کاپیبارا"
+    },
+    "category": "animals",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-gen-64",
+    "word": {
+      "en": "Echidna",
+      "fa": "خارپشت‌نما تخم‌گذار"
+    },
+    "category": "animals",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-gen-65",
+    "word": {
+      "en": "Civet",
+      "fa": "زبادگربه"
+    },
+    "category": "animals",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-gen-66",
+    "word": {
+      "en": "Caracal",
+      "fa": "سیاه‌گوش"
+    },
+    "category": "animals",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-gen-67",
+    "word": {
+      "en": "Ocelot",
+      "fa": "اوسلوت"
+    },
+    "category": "animals",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-gen-68",
+    "word": {
+      "en": "Ibex",
+      "fa": "بز کوهی"
+    },
+    "category": "animals",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-gen-69",
+    "word": {
+      "en": "Marmot",
+      "fa": "موش کوهی"
+    },
+    "category": "animals",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-gen-70",
+    "word": {
+      "en": "Quokka",
+      "fa": "کوکا"
+    },
+    "category": "animals",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-gen-71",
+    "word": {
+      "en": "Numbat",
+      "fa": "نامبت"
+    },
+    "category": "animals",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-gen-72",
+    "word": {
+      "en": "Bandicoot",
+      "fa": "باندیکوت"
+    },
+    "category": "animals",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-gen-73",
+    "word": {
+      "en": "Cassowary",
+      "fa": "کاسوواری"
+    },
+    "category": "animals",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-gen-74",
+    "word": {
+      "en": "Kakapo",
+      "fa": "طوطی شب‌زی"
+    },
+    "category": "animals",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-gen-75",
+    "word": {
+      "en": "Mandrill",
+      "fa": "ماندریل"
+    },
+    "category": "animals",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-gen-76",
+    "word": {
+      "en": "Aye-Aye",
+      "fa": "آی‌آی"
+    },
+    "category": "animals",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-gen-77",
+    "word": {
+      "en": "Pika",
+      "fa": "پیکا"
+    },
+    "category": "animals",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-gen-78",
+    "word": {
+      "en": "Coati",
+      "fa": "کواتی"
+    },
+    "category": "animals",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-gen-79",
+    "word": {
+      "en": "Binturong",
+      "fa": "خرس‌گربه"
+    },
+    "category": "animals",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-gen-80",
+    "word": {
+      "en": "Serval",
+      "fa": "سروال"
+    },
+    "category": "animals",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-gen-81",
+    "word": {
+      "en": "Dik-Dik",
+      "fa": "دیک‌دیک"
+    },
+    "category": "animals",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-gen-82",
+    "word": {
+      "en": "Saola",
+      "fa": "سائولا"
+    },
+    "category": "animals",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-gen-83",
+    "word": {
+      "en": "Tarsier",
+      "fa": "تارسیه"
+    },
+    "category": "animals",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-gen-84",
+    "word": {
+      "en": "Galago",
+      "fa": "گالاگو"
+    },
+    "category": "animals",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-gen-85",
+    "word": {
+      "en": "Vicuna",
+      "fa": "ویکونیا"
+    },
+    "category": "animals",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-gen-86",
+    "word": {
+      "en": "Markhor",
+      "fa": "مارخور"
+    },
+    "category": "animals",
+    "difficulty": "hard"
   }
 ]

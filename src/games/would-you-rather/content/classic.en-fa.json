@@ -12,7 +12,6 @@
   "items": [
     {
       "id": "classic-001",
-      "intensity": "mild",
       "optionA": {
         "en": "Be able to fly",
         "fa": "بتونی پرواز کنی"
@@ -20,11 +19,11 @@
       "optionB": {
         "en": "Be able to turn invisible",
         "fa": "بتونی نامرئی بشی"
-      }
+      },
+      "intensity": "mild"
     },
     {
       "id": "classic-002",
-      "intensity": "mild",
       "optionA": {
         "en": "Only ever eat pizza",
         "fa": "تا آخر عمر فقط پیتزا بخوری"
@@ -32,11 +31,11 @@
       "optionB": {
         "en": "Only ever eat kabab",
         "fa": "تا آخر عمر فقط کباب بخوری"
-      }
+      },
+      "intensity": "mild"
     },
     {
       "id": "classic-003",
-      "intensity": "mild",
       "optionA": {
         "en": "Travel to the past",
         "fa": "به گذشته سفر کنی"
@@ -44,11 +43,11 @@
       "optionB": {
         "en": "Travel to the future",
         "fa": "به آینده سفر کنی"
-      }
+      },
+      "intensity": "mild"
     },
     {
       "id": "classic-004",
-      "intensity": "mild",
       "optionA": {
         "en": "Always be 10 minutes late",
         "fa": "همیشه ۱۰ دقیقه دیر برسی"
@@ -56,11 +55,11 @@
       "optionB": {
         "en": "Always be 20 minutes early",
         "fa": "همیشه ۲۰ دقیقه زود برسی"
-      }
+      },
+      "intensity": "mild"
     },
     {
       "id": "classic-005",
-      "intensity": "mild",
       "optionA": {
         "en": "Live somewhere it's always summer",
         "fa": "جایی زندگی کنی که همیشه تابستونه"
@@ -68,11 +67,11 @@
       "optionB": {
         "en": "Live somewhere it's always winter",
         "fa": "جایی زندگی کنی که همیشه زمستونه"
-      }
+      },
+      "intensity": "mild"
     },
     {
       "id": "classic-006",
-      "intensity": "mild",
       "optionA": {
         "en": "Have a dog that talks",
         "fa": "سگی داشته باشی که حرف بزنه"
@@ -80,11 +79,11 @@
       "optionB": {
         "en": "Have a cat that does chores",
         "fa": "گربه‌ای داشته باشی که کارای خونه رو بکنه"
-      }
+      },
+      "intensity": "mild"
     },
     {
       "id": "classic-007",
-      "intensity": "mild",
       "optionA": {
         "en": "Never eat sweets again",
         "fa": "دیگه هیچ‌وقت شیرینی نخوری"
@@ -92,11 +91,11 @@
       "optionB": {
         "en": "Never drink tea again",
         "fa": "دیگه هیچ‌وقت چای نخوری"
-      }
+      },
+      "intensity": "mild"
     },
     {
       "id": "classic-008",
-      "intensity": "mild",
       "optionA": {
         "en": "Live by the sea",
         "fa": "کنار دریا زندگی کنی"
@@ -104,11 +103,11 @@
       "optionB": {
         "en": "Live in the mountains",
         "fa": "تو کوهستون زندگی کنی"
-      }
+      },
+      "intensity": "mild"
     },
     {
       "id": "classic-009",
-      "intensity": "mild",
       "optionA": {
         "en": "Always know the time exactly",
         "fa": "همیشه دقیق بدونی ساعت چنده"
@@ -116,11 +115,11 @@
       "optionB": {
         "en": "Always know the way home",
         "fa": "همیشه راه خونه رو بلد باشی"
-      }
+      },
+      "intensity": "mild"
     },
     {
       "id": "classic-010",
-      "intensity": "mild",
       "optionA": {
         "en": "Have free coffee for life",
         "fa": "تا آخر عمر قهوه‌ی مجانی داشته باشی"
@@ -128,11 +127,11 @@
       "optionB": {
         "en": "Have free ice cream for life",
         "fa": "تا آخر عمر بستنی‌ مجانی داشته باشی"
-      }
+      },
+      "intensity": "mild"
     },
     {
       "id": "classic-011",
-      "intensity": "mild",
       "optionA": {
         "en": "Be the funniest one in the room",
         "fa": "بامزه‌ترین آدم جمع باشی"
@@ -140,11 +139,11 @@
       "optionB": {
         "en": "Be the smartest one in the room",
         "fa": "باهوش‌ترین آدم جمع باشی"
-      }
+      },
+      "intensity": "mild"
     },
     {
       "id": "classic-012",
-      "intensity": "mild",
       "optionA": {
         "en": "Wake up early every day",
         "fa": "هر روز صبح زود بیدار شی"
@@ -152,11 +151,11 @@
       "optionB": {
         "en": "Stay up late every night",
         "fa": "هر شب تا دیروقت بیدار بمونی"
-      }
+      },
+      "intensity": "mild"
     },
     {
       "id": "classic-013",
-      "intensity": "mild",
       "optionA": {
         "en": "Read one book a week",
         "fa": "هفته‌ای یه کتاب بخونی"
@@ -164,11 +163,11 @@
       "optionB": {
         "en": "Watch one movie a night",
         "fa": "هر شب یه فیلم ببینی"
-      }
+      },
+      "intensity": "mild"
     },
     {
       "id": "classic-014",
-      "intensity": "mild",
       "optionA": {
         "en": "Have a pause button for life",
         "fa": "یه دکمه‌ی توقف برای زندگیت داشته باشی"
@@ -176,11 +175,11 @@
       "optionB": {
         "en": "Have a rewind button for life",
         "fa": "یه دکمه‌ی برگشت برای زندگیت داشته باشی"
-      }
+      },
+      "intensity": "mild"
     },
     {
       "id": "classic-015",
-      "intensity": "mild",
       "optionA": {
         "en": "Never get stuck in traffic",
         "fa": "هیچ‌وقت تو ترافیک گیر نکنی"
@@ -188,11 +187,11 @@
       "optionB": {
         "en": "Never wait in a single line",
         "fa": "هیچ‌وقت تو هیچ صفی نمونی"
-      }
+      },
+      "intensity": "mild"
     },
     {
       "id": "classic-016",
-      "intensity": "mild",
       "optionA": {
         "en": "Be a famous singer",
         "fa": "یه خواننده‌ی معروف باشی"
@@ -200,11 +199,11 @@
       "optionB": {
         "en": "Be a famous actor",
         "fa": "یه بازیگر معروف باشی"
-      }
+      },
+      "intensity": "mild"
     },
     {
       "id": "classic-017",
-      "intensity": "medium",
       "optionA": {
         "en": "Lose the ability to lie",
         "fa": "دیگه نتونی دروغ بگی"
@@ -212,11 +211,11 @@
       "optionB": {
         "en": "Believe every lie you hear",
         "fa": "هر دروغی رو که می‌شنوی باور کنی"
-      }
+      },
+      "intensity": "medium"
     },
     {
       "id": "classic-018",
-      "intensity": "medium",
       "optionA": {
         "en": "Be rich but always tired",
         "fa": "پولدار باشی ولی همیشه خسته"
@@ -224,11 +223,11 @@
       "optionB": {
         "en": "Be broke but always rested",
         "fa": "بی‌پول باشی ولی همیشه سرحال"
-      }
+      },
+      "intensity": "medium"
     },
     {
       "id": "classic-019",
-      "intensity": "medium",
       "optionA": {
         "en": "Give up your phone for a month",
         "fa": "یه ماه گوشیت رو کنار بذاری"
@@ -236,11 +235,11 @@
       "optionB": {
         "en": "Give up the internet for a week",
         "fa": "یه هفته اینترنت رو کنار بذاری"
-      }
+      },
+      "intensity": "medium"
     },
     {
       "id": "classic-020",
-      "intensity": "medium",
       "optionA": {
         "en": "Speak every language fluently",
         "fa": "همه‌ی زبون‌ها رو روون بلد باشی"
@@ -248,11 +247,11 @@
       "optionB": {
         "en": "Play every instrument perfectly",
         "fa": "بتونی همه‌ی سازها رو عالی بزنی"
-      }
+      },
+      "intensity": "medium"
     },
     {
       "id": "classic-021",
-      "intensity": "medium",
       "optionA": {
         "en": "Explore deep space",
         "fa": "اعماق فضا رو کشف کنی"
@@ -260,11 +259,11 @@
       "optionB": {
         "en": "Explore the deep ocean",
         "fa": "اعماق اقیانوس رو کشف کنی"
-      }
+      },
+      "intensity": "medium"
     },
     {
       "id": "classic-022",
-      "intensity": "medium",
       "optionA": {
         "en": "Always say what you think",
         "fa": "همیشه حرف دلت رو بزنی"
@@ -272,11 +271,11 @@
       "optionB": {
         "en": "Always keep it to yourself",
         "fa": "همیشه حرفت رو تو دلت نگه داری"
-      }
+      },
+      "intensity": "medium"
     },
     {
       "id": "classic-023",
-      "intensity": "medium",
       "optionA": {
         "en": "Relive your best day forever",
         "fa": "بهترین روز عمرت رو تا ابد تکرار کنی"
@@ -284,11 +283,11 @@
       "optionB": {
         "en": "Skip every bad day forever",
         "fa": "هر روز بدت رو تا ابد رد کنی"
-      }
+      },
+      "intensity": "medium"
     },
     {
       "id": "classic-024",
-      "intensity": "medium",
       "optionA": {
         "en": "Have one true best friend",
         "fa": "یه رفیق واقعی داشته باشی"
@@ -296,11 +295,11 @@
       "optionB": {
         "en": "Have a hundred fun friends",
         "fa": "صد تا دوست بامزه داشته باشی"
-      }
+      },
+      "intensity": "medium"
     },
     {
       "id": "classic-025",
-      "intensity": "medium",
       "optionA": {
         "en": "Know how you'll die",
         "fa": "بدونی چه‌جوری می‌میری"
@@ -308,11 +307,11 @@
       "optionB": {
         "en": "Know when you'll die",
         "fa": "بدونی کی می‌میری"
-      }
+      },
+      "intensity": "medium"
     },
     {
       "id": "classic-026",
-      "intensity": "medium",
       "optionA": {
         "en": "Be loved but not respected",
         "fa": "دوستت داشته باشن ولی احترامت نذارن"
@@ -320,11 +319,11 @@
       "optionB": {
         "en": "Be respected but not loved",
         "fa": "احترامت بذارن ولی دوستت نداشته باشن"
-      }
+      },
+      "intensity": "medium"
     },
     {
       "id": "classic-027",
-      "intensity": "medium",
       "optionA": {
         "en": "Work a job you love for little pay",
         "fa": "کاری که دوست داری رو با حقوق کم بکنی"
@@ -332,11 +331,11 @@
       "optionB": {
         "en": "Work a dull job for great pay",
         "fa": "کار خسته‌کننده رو با حقوق عالی بکنی"
-      }
+      },
+      "intensity": "medium"
     },
     {
       "id": "classic-028",
-      "intensity": "medium",
       "optionA": {
         "en": "Forget every movie you've seen",
         "fa": "همه‌ی فیلم‌هایی که دیدی رو فراموش کنی"
@@ -344,11 +343,11 @@
       "optionB": {
         "en": "Forget every song you've heard",
         "fa": "همه‌ی آهنگ‌هایی که شنیدی رو فراموش کنی"
-      }
+      },
+      "intensity": "medium"
     },
     {
       "id": "classic-029",
-      "intensity": "medium",
       "optionA": {
         "en": "Live the same year twice",
         "fa": "یه سال رو دو بار زندگی کنی"
@@ -356,11 +355,11 @@
       "optionB": {
         "en": "Age two years in one",
         "fa": "تو یه سال دو سال پیر شی"
-      }
+      },
+      "intensity": "medium"
     },
     {
       "id": "classic-030",
-      "intensity": "medium",
       "optionA": {
         "en": "Always win but play alone",
         "fa": "همیشه ببری ولی تنها بازی کنی"
@@ -368,11 +367,11 @@
       "optionB": {
         "en": "Often lose but play together",
         "fa": "بیشتر ببازی ولی با هم بازی کنی"
-      }
+      },
+      "intensity": "medium"
     },
     {
       "id": "classic-031",
-      "intensity": "medium",
       "optionA": {
         "en": "Travel the world but never settle",
         "fa": "دنیا رو بگردی ولی هیچ‌جا موندگار نشی"
@@ -380,11 +379,11 @@
       "optionB": {
         "en": "Settle down but never travel",
         "fa": "یه‌جا موندگار شی ولی هیچ‌جا نری"
-      }
+      },
+      "intensity": "medium"
     },
     {
       "id": "classic-032",
-      "intensity": "medium",
       "optionA": {
         "en": "Remember every face you meet",
         "fa": "صورت هر کسی رو ببینی یادت بمونه"
@@ -392,7 +391,8 @@
       "optionB": {
         "en": "Remember every name you hear",
         "fa": "اسم هر کسی رو بشنوی یادت بمونه"
-      }
+      },
+      "intensity": "medium"
     },
     {
       "id": "wyr-c-x001",
@@ -967,6 +967,2742 @@
       "optionB": {
         "en": "Be able to stop time whenever you want",
         "fa": "بتونی هر وقت خواستی زمان رو متوقف کنی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-1",
+      "optionA": {
+        "en": "Take a job you love that barely pays the bills",
+        "fa": "شغلی را قبول کنی که عاشقش هستی ولی به‌زور خرجت را درمی‌آورد"
+      },
+      "optionB": {
+        "en": "Take a job you hate that makes you rich",
+        "fa": "شغلی را قبول کنی که ازش متنفری ولی پولدارت می‌کند"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-2",
+      "optionA": {
+        "en": "Know the exact date you'll die",
+        "fa": "تاریخ دقیق مرگت را بدانی"
+      },
+      "optionB": {
+        "en": "Know the exact cause but never the date",
+        "fa": "علت دقیق مرگت را بدانی ولی هیچ‌وقت تاریخش را"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-3",
+      "optionA": {
+        "en": "Move far away for a dream career",
+        "fa": "برای شغل رویایی‌ات به جای دوری مهاجرت کنی"
+      },
+      "optionB": {
+        "en": "Stay close to family in a dead-end town",
+        "fa": "کنار خانواده در شهری بدون آینده بمانی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-4",
+      "optionA": {
+        "en": "Marry someone you love who can't have kids",
+        "fa": "با کسی ازدواج کنی که عاشقش هستی ولی نمی‌تواند بچه‌دار شود"
+      },
+      "optionB": {
+        "en": "Marry someone you tolerate who wants a big family",
+        "fa": "با کسی ازدواج کنی که فقط تحملش می‌کنی ولی خانواده‌ی پرجمعیت می‌خواهد"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-5",
+      "optionA": {
+        "en": "Tell a hard truth that ends a friendship",
+        "fa": "حقیقت تلخی بگویی که به دوستی‌ات پایان می‌دهد"
+      },
+      "optionB": {
+        "en": "Keep a lie that saves the friendship",
+        "fa": "دروغی را نگه داری که دوستی را حفظ می‌کند"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-6",
+      "optionA": {
+        "en": "Give up your dream to support a loved one's dream",
+        "fa": "رویایت را کنار بگذاری تا از رویای عزیزت حمایت کنی"
+      },
+      "optionB": {
+        "en": "Chase your dream and risk losing them",
+        "fa": "دنبال رویایت بروی و خطر از دست دادنشان را بپذیری"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-7",
+      "optionA": {
+        "en": "Live a long ordinary life",
+        "fa": "یک عمر طولانی و معمولی زندگی کنی"
+      },
+      "optionB": {
+        "en": "Live a short extraordinary life",
+        "fa": "یک عمر کوتاه ولی فوق‌العاده زندگی کنی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-8",
+      "optionA": {
+        "en": "Forgive someone who never apologizes",
+        "fa": "کسی را ببخشی که هیچ‌وقت عذرخواهی نمی‌کند"
+      },
+      "optionB": {
+        "en": "Cut them off and carry the grudge forever",
+        "fa": "رابطه را قطع کنی و کینه را برای همیشه نگه داری"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-9",
+      "optionA": {
+        "en": "Spend your savings on a once-in-a-lifetime trip",
+        "fa": "تمام پس‌اندازت را خرج یک سفر بی‌نظیر کنی"
+      },
+      "optionB": {
+        "en": "Save it all and never travel",
+        "fa": "همه‌اش را پس‌انداز کنی و هیچ‌وقت سفر نروی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-10",
+      "optionA": {
+        "en": "Quit a stable job to start a risky business",
+        "fa": "شغل پایدارت را رها کنی تا کسب‌وکاری پرریسک راه بیندازی"
+      },
+      "optionB": {
+        "en": "Stay safe and always wonder what if",
+        "fa": "در امنیت بمانی و همیشه با حسرت بپرسی اگر می‌رفتم چه می‌شد"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-11",
+      "optionA": {
+        "en": "Care for an aging parent full-time",
+        "fa": "تمام‌وقت از پدر یا مادر سالمندت مراقبت کنی"
+      },
+      "optionB": {
+        "en": "Pay for their care but rarely visit",
+        "fa": "هزینه‌ی مراقبتشان را بدهی ولی به‌ندرت ببینی‌شان"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-12",
+      "optionA": {
+        "en": "Adopt a child who needs a home",
+        "fa": "کودکی را که به خانه نیاز دارد به فرزندی بپذیری"
+      },
+      "optionB": {
+        "en": "Keep your freedom and have no children",
+        "fa": "آزادی‌ات را حفظ کنی و بچه‌ای نداشته باشی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-13",
+      "optionA": {
+        "en": "Report a friend who broke the law",
+        "fa": "دوستت را که قانون را شکسته لو بدهی"
+      },
+      "optionB": {
+        "en": "Stay silent and become an accomplice",
+        "fa": "سکوت کنی و شریک جرمش شوی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-14",
+      "optionA": {
+        "en": "Accept a promotion that ruins your free time",
+        "fa": "ترفیعی را قبول کنی که وقت آزادت را نابود می‌کند"
+      },
+      "optionB": {
+        "en": "Stay where you are with no growth",
+        "fa": "همان‌جا بمانی بدون هیچ پیشرفتی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-15",
+      "optionA": {
+        "en": "Live where you can never see the ocean again",
+        "fa": "جایی زندگی کنی که هیچ‌وقت دوباره دریا را نبینی"
+      },
+      "optionB": {
+        "en": "Live where you can never see mountains again",
+        "fa": "جایی زندگی کنی که هیچ‌وقت دوباره کوه را نبینی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-16",
+      "optionA": {
+        "en": "Lend money to a friend and risk the friendship",
+        "fa": "به دوستت پول قرض بدهی و خطر دوستی را بپذیری"
+      },
+      "optionB": {
+        "en": "Say no and watch them struggle",
+        "fa": "نه بگویی و تماشا کنی که در سختی دست‌وپا می‌زند"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-17",
+      "optionA": {
+        "en": "Pursue a passion your family disapproves of",
+        "fa": "دنبال علاقه‌ای بروی که خانواده‌ات تأییدش نمی‌کند"
+      },
+      "optionB": {
+        "en": "Follow the path they chose for you",
+        "fa": "مسیری را بروی که آن‌ها برایت انتخاب کرده‌اند"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-18",
+      "optionA": {
+        "en": "Have a guaranteed comfortable life",
+        "fa": "یک زندگی راحت و تضمین‌شده داشته باشی"
+      },
+      "optionB": {
+        "en": "Gamble everything on a 1-in-10 shot at greatness",
+        "fa": "همه‌چیز را روی یک شانس ده‌درصدی برای بزرگ شدن شرط ببندی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-19",
+      "optionA": {
+        "en": "End a long relationship that's gone stale",
+        "fa": "رابطه‌ی طولانی‌ای را که سرد شده تمام کنی"
+      },
+      "optionB": {
+        "en": "Stay together out of fear of starting over",
+        "fa": "از ترس شروع دوباره با هم بمانید"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-20",
+      "optionA": {
+        "en": "Take the blame to protect someone you love",
+        "fa": "تقصیر را به گردن بگیری تا از کسی که دوستش داری محافظت کنی"
+      },
+      "optionB": {
+        "en": "Tell the truth and let them face the fallout",
+        "fa": "حقیقت را بگویی و بگذاری خودش با عواقبش روبه‌رو شود"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-21",
+      "optionA": {
+        "en": "Spend a decade building wealth you can't enjoy yet",
+        "fa": "یک دهه را صرف ساختن ثروتی کنی که هنوز نمی‌توانی از آن لذت ببری"
+      },
+      "optionB": {
+        "en": "Enjoy every year and retire with nothing",
+        "fa": "از هر سال لذت ببری و دست‌خالی بازنشسته شوی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-22",
+      "optionA": {
+        "en": "Stay loyal to a sinking company",
+        "fa": "به شرکتی که رو به ورشکستگی است وفادار بمانی"
+      },
+      "optionB": {
+        "en": "Jump ship and abandon your team",
+        "fa": "بپری بیرون و تیمت را رها کنی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-23",
+      "optionA": {
+        "en": "Raise your kids in your home country",
+        "fa": "بچه‌هایت را در وطن خودت بزرگ کنی"
+      },
+      "optionB": {
+        "en": "Raise them abroad for a better future",
+        "fa": "آن‌ها را در خارج برای آینده‌ای بهتر بزرگ کنی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-24",
+      "optionA": {
+        "en": "Confront a mentor who wronged you",
+        "fa": "با استادی که در حقت ظلم کرده روبه‌رو شوی"
+      },
+      "optionB": {
+        "en": "Stay quiet to protect your career",
+        "fa": "برای حفظ شغلت ساکت بمانی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-25",
+      "optionA": {
+        "en": "Take a year off to find yourself",
+        "fa": "یک سال مرخصی بگیری تا خودت را پیدا کنی"
+      },
+      "optionB": {
+        "en": "Push through and never lose momentum",
+        "fa": "به فشار ادامه بدهی و هیچ‌وقت سرعتت را از دست ندهی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-26",
+      "optionA": {
+        "en": "Choose a partner your heart wants",
+        "fa": "شریکی را انتخاب کنی که دلت می‌خواهد"
+      },
+      "optionB": {
+        "en": "Choose the one your head says is right",
+        "fa": "کسی را انتخاب کنی که عقلت می‌گوید درست است"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-27",
+      "optionA": {
+        "en": "Sell the family home full of memories",
+        "fa": "خانه‌ی خانوادگی پر از خاطره را بفروشی"
+      },
+      "optionB": {
+        "en": "Keep it but go deep into debt",
+        "fa": "نگهش داری ولی به بدهی سنگین فرو بروی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-28",
+      "optionA": {
+        "en": "Devote your life to one perfect cause",
+        "fa": "زندگی‌ات را وقف یک هدف بی‌نقص کنی"
+      },
+      "optionB": {
+        "en": "Keep your options open and commit to nothing",
+        "fa": "همه‌ی راه‌ها را باز نگه داری و به هیچ‌چیز پایبند نشوی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-29",
+      "optionA": {
+        "en": "Inherit a fortune with a painful family secret attached",
+        "fa": "ثروتی به ارث ببری که رازی دردناک از خانواده به آن چسبیده"
+      },
+      "optionB": {
+        "en": "Refuse it and keep your peace of mind",
+        "fa": "ردش کنی و آرامش ذهنت را حفظ کنی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-30",
+      "optionA": {
+        "en": "Pursue the safe degree your parents paid for",
+        "fa": "دنبال رشته‌ی امنی بروی که پدر و مادرت هزینه‌اش را داده‌اند"
+      },
+      "optionB": {
+        "en": "Switch to the field you actually love and start over",
+        "fa": "به رشته‌ای که واقعاً دوستش داری سوئیچ کنی و از نو شروع کنی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-31",
+      "optionA": {
+        "en": "Live near everyone you love but struggle financially",
+        "fa": "نزدیک همه‌ی عزیزانت زندگی کنی ولی از نظر مالی در مضیقه باشی"
+      },
+      "optionB": {
+        "en": "Live in comfort but thousands of miles from them",
+        "fa": "در رفاه زندگی کنی ولی هزاران کیلومتر دورتر از آن‌ها"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-32",
+      "optionA": {
+        "en": "Speak up against your boss and risk being fired",
+        "fa": "در برابر رئیست حرف بزنی و خطر اخراج را بپذیری"
+      },
+      "optionB": {
+        "en": "Stay silent and lose your self-respect",
+        "fa": "ساکت بمانی و احترام به خودت را از دست بدهی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-33",
+      "optionA": {
+        "en": "Have the career you want but never marry",
+        "fa": "شغلی را که می‌خواهی داشته باشی ولی هیچ‌وقت ازدواج نکنی"
+      },
+      "optionB": {
+        "en": "Have the family you want but a job you settle for",
+        "fa": "خانواده‌ای را که می‌خواهی داشته باشی ولی به شغلی پایین‌تر از آرزویت قانع شوی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-34",
+      "optionA": {
+        "en": "Tell your dying relative a comforting lie",
+        "fa": "به خویشاوند رو به مرگت دروغی آرامش‌بخش بگویی"
+      },
+      "optionB": {
+        "en": "Tell them the hard truth before it's too late",
+        "fa": "قبل از اینکه دیر شود حقیقت تلخ را به او بگویی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-35",
+      "optionA": {
+        "en": "Bail out a sibling who keeps making bad choices",
+        "fa": "به دادِ خواهر یا برادرت برسی که مدام تصمیم‌های بد می‌گیرد"
+      },
+      "optionB": {
+        "en": "Let them hit rock bottom to learn",
+        "fa": "بگذاری به ته خط برسد تا درس بگیرد"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-36",
+      "optionA": {
+        "en": "Accept a life-changing offer in a city you hate",
+        "fa": "پیشنهادی زندگی‌ساز را در شهری که ازش متنفری قبول کنی"
+      },
+      "optionB": {
+        "en": "Turn it down to stay where you're happy",
+        "fa": "ردش کنی تا جایی که خوشحالی بمانی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-37",
+      "optionA": {
+        "en": "Spend your final healthy years working hard",
+        "fa": "آخرین سال‌های سلامتی‌ات را به سخت کار کردن بگذرانی"
+      },
+      "optionB": {
+        "en": "Stop working now and risk an uncertain future",
+        "fa": "همین حالا کار را کنار بگذاری و خطر آینده‌ای نامعلوم را بپذیری"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-38",
+      "optionA": {
+        "en": "Keep a stable life that bores you",
+        "fa": "یک زندگی پایدار را نگه داری که حوصله‌ات را سر می‌برد"
+      },
+      "optionB": {
+        "en": "Blow it all up for a fresh, uncertain start",
+        "fa": "همه‌اش را به هم بریزی برای یک شروع تازه و نامطمئن"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-39",
+      "optionA": {
+        "en": "Have a job you love that pays just enough",
+        "fa": "شغلی داشته باشی که عاشقش باشی و فقط به اندازه کافی درآمد داشته باشد"
+      },
+      "optionB": {
+        "en": "Have a job you hate that makes you rich",
+        "fa": "شغلی داشته باشی که ازش متنفری ولی ثروتمندت می‌کند"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-40",
+      "optionA": {
+        "en": "Earn double but work every weekend",
+        "fa": "دو برابر درآمد داشته باشی ولی هر آخر هفته کار کنی"
+      },
+      "optionB": {
+        "en": "Keep your salary but never work weekends",
+        "fa": "حقوقت را نگه داری ولی هیچ‌وقت آخر هفته کار نکنی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-41",
+      "optionA": {
+        "en": "Win a modest lottery once",
+        "fa": "یک‌بار یک قرعه‌کشی متوسط ببری"
+      },
+      "optionB": {
+        "en": "Get a small permanent raise",
+        "fa": "یک افزایش حقوق کوچک ولی دائمی بگیری"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-42",
+      "optionA": {
+        "en": "Be your own boss but earn unpredictably",
+        "fa": "رئیس خودت باشی ولی درآمدت نامطمئن باشد"
+      },
+      "optionB": {
+        "en": "Have a stable salary but answer to a boss",
+        "fa": "حقوق ثابت داشته باشی ولی به یک رئیس جواب پس بدهی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-43",
+      "optionA": {
+        "en": "Retire early but live very simply",
+        "fa": "زود بازنشسته شوی ولی خیلی ساده زندگی کنی"
+      },
+      "optionB": {
+        "en": "Work until 70 but live in luxury",
+        "fa": "تا هفتاد سالگی کار کنی ولی در رفاه زندگی کنی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-44",
+      "optionA": {
+        "en": "Get famous in your career but lose privacy",
+        "fa": "در حرفه‌ات مشهور شوی ولی حریم خصوصی‌ات را از دست بدهی"
+      },
+      "optionB": {
+        "en": "Stay anonymous but very respected by peers",
+        "fa": "گمنام بمانی ولی همکارانت خیلی احترامت بگذارند"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-45",
+      "optionA": {
+        "en": "Have a 5-minute commute to a boring job",
+        "fa": "پنج دقیقه تا یک شغل کسل‌کننده راه داشته باشی"
+      },
+      "optionB": {
+        "en": "Have a 2-hour commute to your dream job",
+        "fa": "دو ساعت تا شغل رویایی‌ات راه داشته باشی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-46",
+      "optionA": {
+        "en": "Always know exactly what you earn",
+        "fa": "همیشه دقیقاً بدانی چقدر درآمد داری"
+      },
+      "optionB": {
+        "en": "Get surprise bonuses but never know when",
+        "fa": "پاداش‌های غافلگیرکننده بگیری ولی هیچ‌وقت ندانی کی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-47",
+      "optionA": {
+        "en": "Be brilliant at a job nobody values",
+        "fa": "در شغلی که هیچ‌کس برایش ارزش قائل نیست نابغه باشی"
+      },
+      "optionB": {
+        "en": "Be mediocre at a job everyone admires",
+        "fa": "در شغلی که همه تحسینش می‌کنند متوسط باشی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-48",
+      "optionA": {
+        "en": "Inherit a struggling family business",
+        "fa": "یک کسب‌وکار خانوادگی در حال ورشکستگی به ارث ببری"
+      },
+      "optionB": {
+        "en": "Start a risky business from scratch",
+        "fa": "یک کسب‌وکار پرریسک را از صفر شروع کنی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-49",
+      "optionA": {
+        "en": "Get paid in cash but no benefits",
+        "fa": "نقدی حقوق بگیری ولی هیچ مزایایی نداشته باشی"
+      },
+      "optionB": {
+        "en": "Get lower pay but full benefits",
+        "fa": "حقوق کمتری بگیری ولی مزایای کامل داشته باشی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-50",
+      "optionA": {
+        "en": "Work fully remote but always alone",
+        "fa": "کاملاً دورکار باشی ولی همیشه تنها"
+      },
+      "optionB": {
+        "en": "Work in an office with great colleagues",
+        "fa": "در یک دفتر با همکاران عالی کار کنی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-51",
+      "optionA": {
+        "en": "Be promoted fast but constantly stressed",
+        "fa": "سریع ترفیع بگیری ولی دائماً استرس داشته باشی"
+      },
+      "optionB": {
+        "en": "Stay in one role but be totally relaxed",
+        "fa": "در یک سمت بمانی ولی کاملاً آرام باشی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-52",
+      "optionA": {
+        "en": "Have a million now but never invest again",
+        "fa": "همین حالا یک میلیون داشته باشی ولی دیگر هرگز سرمایه‌گذاری نکنی"
+      },
+      "optionB": {
+        "en": "Have nothing now but guaranteed wealth at 60",
+        "fa": "حالا هیچ نداشته باشی ولی در شصت سالگی ثروت تضمینی داشته باشی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-53",
+      "optionA": {
+        "en": "Change careers every five years",
+        "fa": "هر پنج سال یک‌بار شغلت را عوض کنی"
+      },
+      "optionB": {
+        "en": "Master one career for life",
+        "fa": "یک شغل را برای تمام عمر استاد شوی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-54",
+      "optionA": {
+        "en": "Work for a famous company at low pay",
+        "fa": "برای یک شرکت معروف با حقوق کم کار کنی"
+      },
+      "optionB": {
+        "en": "Work for an unknown company at high pay",
+        "fa": "برای یک شرکت ناشناخته با حقوق بالا کار کنی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-55",
+      "optionA": {
+        "en": "Get a huge raise but lose all free time",
+        "fa": "افزایش حقوق بزرگی بگیری ولی تمام وقت آزادت را از دست بدهی"
+      },
+      "optionB": {
+        "en": "Keep all free time but never get a raise",
+        "fa": "تمام وقت آزادت را نگه داری ولی هیچ‌وقت افزایش حقوق نگیری"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-56",
+      "optionA": {
+        "en": "Be debt-free but never own a home",
+        "fa": "بی‌بدهی باشی ولی هرگز صاحب خانه نشوی"
+      },
+      "optionB": {
+        "en": "Own a home but always carry debt",
+        "fa": "صاحب خانه باشی ولی همیشه بدهی داشته باشی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-57",
+      "optionA": {
+        "en": "Know the perfect investment but tell no one",
+        "fa": "بهترین سرمایه‌گذاری را بدانی ولی به کسی نگویی"
+      },
+      "optionB": {
+        "en": "Share every tip but profit a little less",
+        "fa": "هر نکته‌ای را با همه به اشتراک بگذاری ولی کمی کمتر سود کنی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-58",
+      "optionA": {
+        "en": "Have an amazing job in a city you dislike",
+        "fa": "شغل فوق‌العاده‌ای در شهری که دوست نداری داشته باشی"
+      },
+      "optionB": {
+        "en": "Have an average job in your favorite city",
+        "fa": "شغل معمولی‌ای در شهر مورد علاقه‌ات داشته باشی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-59",
+      "optionA": {
+        "en": "Be paid for results, not for hours",
+        "fa": "بر اساس نتیجه پول بگیری، نه ساعت کار"
+      },
+      "optionB": {
+        "en": "Be paid for hours, not for results",
+        "fa": "بر اساس ساعت پول بگیری، نه نتیجه"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-60",
+      "optionA": {
+        "en": "Take a year off work fully unpaid",
+        "fa": "یک سال کامل بدون حقوق از کار مرخصی بگیری"
+      },
+      "optionB": {
+        "en": "Never take a break but always be paid",
+        "fa": "هیچ‌وقت استراحت نکنی ولی همیشه حقوق بگیری"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-61",
+      "optionA": {
+        "en": "Be respected at work but disliked",
+        "fa": "در محل کار به تو احترام بگذارند ولی دوستت نداشته باشند"
+      },
+      "optionB": {
+        "en": "Be liked at work but not respected",
+        "fa": "در محل کار دوستت داشته باشند ولی احترامت نگذارند"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-62",
+      "optionA": {
+        "en": "Get a guaranteed safe income forever",
+        "fa": "یک درآمد امن و تضمینی برای همیشه داشته باشی"
+      },
+      "optionB": {
+        "en": "Risk it all for a chance at huge wealth",
+        "fa": "همه‌چیز را به خطر بیندازی برای شانس ثروت عظیم"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-63",
+      "optionA": {
+        "en": "Have a mentor who pushes you hard",
+        "fa": "مربی‌ای داشته باشی که سخت به تو فشار می‌آورد"
+      },
+      "optionB": {
+        "en": "Have an easy boss who never challenges you",
+        "fa": "رئیس راحتی داشته باشی که هرگز تو را به چالش نمی‌کشد"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-64",
+      "optionA": {
+        "en": "Work four long days, then rest three",
+        "fa": "چهار روز طولانی کار کنی، بعد سه روز استراحت"
+      },
+      "optionB": {
+        "en": "Work five short days every week",
+        "fa": "هر هفته پنج روز کوتاه کار کنی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-65",
+      "optionA": {
+        "en": "Be paid extremely well to do nothing",
+        "fa": "حقوق بسیار خوبی بگیری برای انجام هیچ کاری"
+      },
+      "optionB": {
+        "en": "Be paid little to do meaningful work",
+        "fa": "حقوق کمی بگیری برای انجام کاری معنادار"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-66",
+      "optionA": {
+        "en": "Have a job with endless travel",
+        "fa": "شغلی با سفرهای بی‌پایان داشته باشی"
+      },
+      "optionB": {
+        "en": "Have a job that keeps you home every night",
+        "fa": "شغلی داشته باشی که هر شب تو را خانه نگه می‌دارد"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-67",
+      "optionA": {
+        "en": "Be the lowest paid in a rich company",
+        "fa": "کم‌درآمدترین فرد در یک شرکت ثروتمند باشی"
+      },
+      "optionB": {
+        "en": "Be the highest paid in a struggling company",
+        "fa": "پردرآمدترین فرد در یک شرکت در حال ورشکستگی باشی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-68",
+      "optionA": {
+        "en": "Always negotiate your own salary",
+        "fa": "همیشه خودت سر حقوقت چانه بزنی"
+      },
+      "optionB": {
+        "en": "Let an algorithm set your pay fairly",
+        "fa": "بگذاری یک الگوریتم منصفانه حقوقت را تعیین کند"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-69",
+      "optionA": {
+        "en": "Build wealth slowly over forty years",
+        "fa": "در طول چهل سال آرام‌آرام ثروت بسازی"
+      },
+      "optionB": {
+        "en": "Get rich fast but risk losing it all",
+        "fa": "سریع ثروتمند شوی ولی خطر از دست دادن همه‌چیز را داشته باشی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-70",
+      "optionA": {
+        "en": "Have a secure job you find dull",
+        "fa": "شغل امنی داشته باشی که کسل‌کننده می‌بینی"
+      },
+      "optionB": {
+        "en": "Chase a passion with no safety net",
+        "fa": "دنبال یک علاقه بروی بدون هیچ تور ایمنی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-71",
+      "optionA": {
+        "en": "Get credit for your team's best work",
+        "fa": "اعتبار بهترین کار تیمت به نام تو ثبت شود"
+      },
+      "optionB": {
+        "en": "Quietly do great work no one notices",
+        "fa": "بی‌سروصدا کار عالی انجام دهی که کسی متوجه نشود"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-72",
+      "optionA": {
+        "en": "Earn enough to help your family always",
+        "fa": "به اندازه‌ای درآمد داشته باشی که همیشه به خانواده‌ات کمک کنی"
+      },
+      "optionB": {
+        "en": "Earn enough to fully fund your own dreams",
+        "fa": "به اندازه‌ای درآمد داشته باشی که کاملاً رویاهای خودت را تأمین کنی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-73",
+      "optionA": {
+        "en": "Work a job that ages you fast but pays huge",
+        "fa": "شغلی داشته باشی که سریع پیرت می‌کند ولی خیلی پولساز است"
+      },
+      "optionB": {
+        "en": "Work a job that keeps you young but pays little",
+        "fa": "شغلی داشته باشی که جوان نگهت می‌دارد ولی کم‌پول است"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-74",
+      "optionA": {
+        "en": "Get a windfall but it must be spent in a year",
+        "fa": "یک پول بادآورده بگیری ولی باید ظرف یک سال خرجش کنی"
+      },
+      "optionB": {
+        "en": "Get half as much but keep it forever",
+        "fa": "نصف آن را بگیری ولی برای همیشه نگهش داری"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-75",
+      "optionA": {
+        "en": "Be famous for one big professional success",
+        "fa": "به خاطر یک موفقیت حرفه‌ای بزرگ مشهور باشی"
+      },
+      "optionB": {
+        "en": "Be quietly successful in everything you try",
+        "fa": "در هر چیزی که امتحان می‌کنی بی‌سروصدا موفق باشی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-76",
+      "optionA": {
+        "en": "Take a dream job in another country alone",
+        "fa": "یک شغل رویایی در کشوری دیگر را تنها بپذیری"
+      },
+      "optionB": {
+        "en": "Stay near loved ones in an okay job",
+        "fa": "نزدیک عزیزانت در یک شغل معمولی بمانی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-77",
+      "optionA": {
+        "en": "Travel to a new country every month but never stay longer than a week",
+        "fa": "هر ماه به یک کشور جدید سفر کنی اما هیچ‌وقت بیشتر از یک هفته نمانی"
+      },
+      "optionB": {
+        "en": "Live in one foreign city for a full year and truly get to know it",
+        "fa": "یک سال کامل در یک شهر خارجی زندگی کنی و واقعاً آن را بشناسی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-78",
+      "optionA": {
+        "en": "Backpack across a continent with almost no money",
+        "fa": "با تقریباً هیچ پولی کوله‌گردی در یک قاره را تجربه کنی"
+      },
+      "optionB": {
+        "en": "Take one luxury all-inclusive trip a year",
+        "fa": "سالی یک سفر لوکس همه‌چیز-شامل بروی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-79",
+      "optionA": {
+        "en": "Always travel completely alone",
+        "fa": "همیشه کاملاً تنها سفر کنی"
+      },
+      "optionB": {
+        "en": "Always travel with a big noisy group",
+        "fa": "همیشه با یک گروه بزرگ و پرسروصدا سفر کنی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-80",
+      "optionA": {
+        "en": "Explore the deepest part of the ocean",
+        "fa": "عمیق‌ترین بخش اقیانوس را کاوش کنی"
+      },
+      "optionB": {
+        "en": "Climb to the summit of the highest mountain",
+        "fa": "به قله بلندترین کوه صعود کنی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-81",
+      "optionA": {
+        "en": "Spend a week camping in a freezing snowy wilderness",
+        "fa": "یک هفته در طبیعت یخ‌زده و برفی چادر بزنی"
+      },
+      "optionB": {
+        "en": "Spend a week trekking through a sweltering jungle",
+        "fa": "یک هفته در جنگل گرم و شرجی پیاده‌روی کنی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-82",
+      "optionA": {
+        "en": "Get lost in a foreign city with no phone or map",
+        "fa": "در یک شهر خارجی بدون تلفن و نقشه گم شوی"
+      },
+      "optionB": {
+        "en": "Have every minute of your trip planned in advance",
+        "fa": "هر دقیقه از سفرت از قبل برنامه‌ریزی شده باشد"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-83",
+      "optionA": {
+        "en": "Only ever travel by slow scenic train",
+        "fa": "فقط با قطار آهسته و خوش‌منظره سفر کنی"
+      },
+      "optionB": {
+        "en": "Only ever travel by fast cramped airplane",
+        "fa": "فقط با هواپیمای سریع و تنگ سفر کنی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-84",
+      "optionA": {
+        "en": "Eat only unfamiliar street food on every trip",
+        "fa": "در هر سفر فقط غذای خیابانی ناآشنا بخوری"
+      },
+      "optionB": {
+        "en": "Eat only safe familiar food you already know",
+        "fa": "در هر سفر فقط غذای آشنا و مطمئنی که می‌شناسی بخوری"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-85",
+      "optionA": {
+        "en": "Visit every famous landmark but in huge crowds",
+        "fa": "همه بناهای مشهور را ببینی اما در شلوغی زیاد"
+      },
+      "optionB": {
+        "en": "Visit only hidden empty places no one has heard of",
+        "fa": "فقط جاهای پنهان و خلوتی را ببینی که کسی نشنیده"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-86",
+      "optionA": {
+        "en": "Skydive from a plane",
+        "fa": "از هواپیما چتربازی کنی"
+      },
+      "optionB": {
+        "en": "Scuba dive with sharks",
+        "fa": "با کوسه‌ها غواصی کنی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-87",
+      "optionA": {
+        "en": "Travel the world but never take a single photo",
+        "fa": "دنیا را بگردی اما هیچ عکسی نگیری"
+      },
+      "optionB": {
+        "en": "Take thousands of photos but experience it all through a screen",
+        "fa": "هزاران عکس بگیری اما همه‌چیز را از پشت صفحه تجربه کنی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-88",
+      "optionA": {
+        "en": "Sleep in a different hostel bunk every night",
+        "fa": "هر شب در تخت یک خوابگاه متفاوت بخوابی"
+      },
+      "optionB": {
+        "en": "Sleep in your own car at roadside stops",
+        "fa": "هر شب در ماشین خودت کنار جاده بخوابی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-89",
+      "optionA": {
+        "en": "Be fluent in every language but never able to fly",
+        "fa": "به همه زبان‌ها مسلط باشی اما هیچ‌وقت نتوانی پرواز کنی"
+      },
+      "optionB": {
+        "en": "Fly anywhere instantly but never understand a word locals say",
+        "fa": "فوراً به هرجا پرواز کنی اما هیچ‌وقت حرف محلی‌ها را نفهمی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-90",
+      "optionA": {
+        "en": "Go on a road trip with no destination in mind",
+        "fa": "یک سفر جاده‌ای بدون هیچ مقصدی بروی"
+      },
+      "optionB": {
+        "en": "Follow a strict itinerary to a dream destination",
+        "fa": "با برنامه‌ای دقیق به یک مقصد رویایی بروی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-91",
+      "optionA": {
+        "en": "Ride a hot air balloon over a desert at dawn",
+        "fa": "سپیده‌دم با بالن روی کویر پرواز کنی"
+      },
+      "optionB": {
+        "en": "Kayak through glowing caves at night",
+        "fa": "شب با کایاک از میان غارهای درخشان بگذری"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-92",
+      "optionA": {
+        "en": "Always have a perfect view but a terrible bed",
+        "fa": "همیشه منظره‌ای عالی اما تختی افتضاح داشته باشی"
+      },
+      "optionB": {
+        "en": "Always have a luxurious bed but no window",
+        "fa": "همیشه تختی مجلل اما بدون هیچ پنجره‌ای داشته باشی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-93",
+      "optionA": {
+        "en": "Spend a night alone in a remote haunted-looking lighthouse",
+        "fa": "یک شب تنها در یک فانوس دریایی دورافتاده و ترسناک بمانی"
+      },
+      "optionB": {
+        "en": "Spend a night alone deep in a silent old forest",
+        "fa": "یک شب تنها در عمق یک جنگل کهن و خاموش بمانی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-94",
+      "optionA": {
+        "en": "Travel back to see the world 500 years ago",
+        "fa": "به ۵۰۰ سال پیش سفر کنی و دنیا را ببینی"
+      },
+      "optionB": {
+        "en": "Travel forward to see the world 500 years from now",
+        "fa": "به ۵۰۰ سال آینده سفر کنی و دنیا را ببینی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-95",
+      "optionA": {
+        "en": "Hike a famous trail but with a heavy injured leg",
+        "fa": "یک مسیر مشهور را بروی اما با پایی آسیب‌دیده و سنگین"
+      },
+      "optionB": {
+        "en": "Hike an unknown trail with perfect health but no map",
+        "fa": "یک مسیر ناشناخته را با سلامتی کامل اما بدون نقشه بروی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-96",
+      "optionA": {
+        "en": "Always get upgraded to first class but always lose your luggage",
+        "fa": "همیشه به درجه یک ارتقا بگیری اما همیشه چمدانت گم شود"
+      },
+      "optionB": {
+        "en": "Always keep your luggage but always be stuck in the middle seat",
+        "fa": "همیشه چمدانت سالم بماند اما همیشه گیر صندلی وسط بیفتی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-97",
+      "optionA": {
+        "en": "Surf giant waves on a wild ocean",
+        "fa": "روی موج‌های غول‌پیکر یک اقیانوس وحشی موج‌سواری کنی"
+      },
+      "optionB": {
+        "en": "Snowboard down a steep untouched mountain",
+        "fa": "از یک کوه شیب‌دار و دست‌نخورده اسنوبرد کنی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-98",
+      "optionA": {
+        "en": "Visit only places with extreme heat",
+        "fa": "فقط به جاهایی با گرمای شدید سفر کنی"
+      },
+      "optionB": {
+        "en": "Visit only places with extreme cold",
+        "fa": "فقط به جاهایی با سرمای شدید سفر کنی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-99",
+      "optionA": {
+        "en": "See the northern lights but only once in your life",
+        "fa": "شفق قطبی را ببینی اما فقط یک بار در عمرت"
+      },
+      "optionB": {
+        "en": "See countless ordinary sunsets from beautiful places forever",
+        "fa": "تا ابد غروب‌های معمولی بی‌شماری از جاهای زیبا ببینی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-100",
+      "optionA": {
+        "en": "Cross a continent on foot over many months",
+        "fa": "یک قاره را در طول چند ماه پیاده طی کنی"
+      },
+      "optionB": {
+        "en": "Cross an ocean alone on a small sailboat",
+        "fa": "یک اقیانوس را تنها با یک قایق بادبانی کوچک طی کنی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-101",
+      "optionA": {
+        "en": "Get an exotic stamp in your passport from every country",
+        "fa": "از هر کشوری یک مهر عجیب در پاسپورتت بگیری"
+      },
+      "optionB": {
+        "en": "Deeply master one country until it feels like home",
+        "fa": "یک کشور را آنقدر عمیق بشناسی که حس خانه بدهد"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-102",
+      "optionA": {
+        "en": "Have a rugged off-road jeep for any terrain",
+        "fa": "یک جیپ آفرود قدرتمند برای هر زمینی داشته باشی"
+      },
+      "optionB": {
+        "en": "Have a small boat that can reach any coast",
+        "fa": "یک قایق کوچک که به هر ساحلی برسد داشته باشی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-103",
+      "optionA": {
+        "en": "Stay in a glass igloo under the stars",
+        "fa": "در یک ایگلوی شیشه‌ای زیر ستاره‌ها بمانی"
+      },
+      "optionB": {
+        "en": "Stay in a treehouse in the rainforest canopy",
+        "fa": "در یک خانه درختی بالای جنگل بارانی بمانی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-104",
+      "optionA": {
+        "en": "Travel with luggage so light you own almost nothing",
+        "fa": "با بار آنقدر سبک سفر کنی که تقریباً هیچ‌چیز نداشته باشی"
+      },
+      "optionB": {
+        "en": "Travel with everything you could ever need but carry it all",
+        "fa": "همه‌چیزی که ممکن است لازم شود را داشته باشی اما همه را خودت حمل کنی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-105",
+      "optionA": {
+        "en": "Get stranded on a beautiful tropical island for a month",
+        "fa": "یک ماه در یک جزیره گرمسیری زیبا گیر بیفتی"
+      },
+      "optionB": {
+        "en": "Get stranded in a charming foreign city for a month",
+        "fa": "یک ماه در یک شهر خارجی دلنشین گیر بیفتی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-106",
+      "optionA": {
+        "en": "Bungee jump off a massive bridge",
+        "fa": "از یک پل عظیم بانجی‌جامپینگ کنی"
+      },
+      "optionB": {
+        "en": "Zipline across a deep canyon",
+        "fa": "با زیپ‌لاین از روی یک دره عمیق رد شوی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-107",
+      "optionA": {
+        "en": "Always arrive at the perfect season but to crowded places",
+        "fa": "همیشه در فصل عالی برسی اما به جاهای شلوغ"
+      },
+      "optionB": {
+        "en": "Always arrive in the off-season to empty quiet places",
+        "fa": "همیشه در فصل خلوت برسی به جاهای ساکت و خالی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-108",
+      "optionA": {
+        "en": "Spend the trip chasing thrilling adrenaline activities",
+        "fa": "کل سفر را دنبال فعالیت‌های هیجان‌انگیز و آدرنالینی باشی"
+      },
+      "optionB": {
+        "en": "Spend the trip relaxing slowly with zero plans",
+        "fa": "کل سفر را آرام و بی‌برنامه استراحت کنی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-109",
+      "optionA": {
+        "en": "Camp under the open sky with no tent",
+        "fa": "زیر آسمان باز بدون چادر بخوابی"
+      },
+      "optionB": {
+        "en": "Stay in a sealed shelter but never see the view",
+        "fa": "در پناهگاهی بسته بمانی اما هیچ‌وقت منظره را نبینی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-110",
+      "optionA": {
+        "en": "Travel the world but always feel a little homesick",
+        "fa": "دنیا را بگردی اما همیشه کمی دلتنگ خانه باشی"
+      },
+      "optionB": {
+        "en": "Stay home content but always wonder what you missed",
+        "fa": "در خانه راضی بمانی اما همیشه فکر کنی چه چیزی را از دست داده‌ای"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-111",
+      "optionA": {
+        "en": "Explore a city only by its underground tunnels and metro",
+        "fa": "یک شهر را فقط از طریق تونل‌ها و مترویش کشف کنی"
+      },
+      "optionB": {
+        "en": "Explore a city only from its rooftops and high towers",
+        "fa": "یک شهر را فقط از پشت‌بام‌ها و برج‌های بلندش کشف کنی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-112",
+      "optionA": {
+        "en": "Ride a motorcycle across endless open highways",
+        "fa": "با موتورسیکلت در بزرگراه‌های بی‌پایان باز سفر کنی"
+      },
+      "optionB": {
+        "en": "Sail a houseboat down a long winding river",
+        "fa": "با یک خانه‌قایق در طول یک رود پرپیچ‌وخم سفر کنی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-113",
+      "optionA": {
+        "en": "Discover a brand-new species on an expedition",
+        "fa": "در یک اکتشاف یک گونه کاملاً جدید کشف کنی"
+      },
+      "optionB": {
+        "en": "Discover a hidden ancient ruin on an expedition",
+        "fa": "در یک اکتشاف یک ویرانه باستانی پنهان کشف کنی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-114",
+      "optionA": {
+        "en": "Have unlimited free flights but only book them last minute",
+        "fa": "پرواز رایگان نامحدود داشته باشی اما فقط لحظه آخر رزرو کنی"
+      },
+      "optionB": {
+        "en": "Have free hotels anywhere but only the cheapest room",
+        "fa": "هتل رایگان در هرجا داشته باشی اما فقط ارزان‌ترین اتاق"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "wyr-gen-115",
+      "optionA": {
+        "en": "Be able to fly but only as fast as you can walk",
+        "fa": "بتونی پرواز کنی ولی فقط به سرعت راه رفتنت"
+      },
+      "optionB": {
+        "en": "Be able to run as fast as a car but never leave the ground",
+        "fa": "بتونی به سرعت یک ماشین بدوی ولی هیچ‌وقت از زمین جدا نشی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-116",
+      "optionA": {
+        "en": "Have the power to talk to animals",
+        "fa": "قدرت حرف زدن با حیوانات رو داشته باشی"
+      },
+      "optionB": {
+        "en": "Have the power to talk to plants",
+        "fa": "قدرت حرف زدن با گیاهان رو داشته باشی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-117",
+      "optionA": {
+        "en": "Be invisible whenever you want",
+        "fa": "هر وقت بخوای نامرئی بشی"
+      },
+      "optionB": {
+        "en": "Be able to read minds whenever you want",
+        "fa": "هر وقت بخوای فکر دیگران رو بخونی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-118",
+      "optionA": {
+        "en": "Have super strength but move in slow motion",
+        "fa": "قدرت بدنی فوق‌العاده داشته باشی ولی همه‌چیز رو آهسته انجام بدی"
+      },
+      "optionB": {
+        "en": "Have super speed but be physically weak",
+        "fa": "سرعت فوق‌العاده داشته باشی ولی از نظر بدنی ضعیف باشی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-119",
+      "optionA": {
+        "en": "Be able to teleport but only to places you've already been",
+        "fa": "بتونی تله‌پورت کنی ولی فقط به جاهایی که قبلاً رفتی"
+      },
+      "optionB": {
+        "en": "Be able to teleport anywhere but it always hurts",
+        "fa": "بتونی به هر جایی تله‌پورت کنی ولی هر بار دردناک باشه"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-120",
+      "optionA": {
+        "en": "Be able to freeze time for ten seconds a day",
+        "fa": "بتونی روزی ده ثانیه زمان رو متوقف کنی"
+      },
+      "optionB": {
+        "en": "Be able to rewind time by ten seconds once a week",
+        "fa": "بتونی هفته‌ای یک‌بار زمان رو ده ثانیه به عقب برگردونی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-121",
+      "optionA": {
+        "en": "Have a dragon as a loyal pet",
+        "fa": "یک اژدها به عنوان حیوان خانگی وفادار داشته باشی"
+      },
+      "optionB": {
+        "en": "Have a unicorn that grants you one wish a year",
+        "fa": "یک اسب تک‌شاخ داشته باشی که سالی یک آرزوت رو برآورده کنه"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-122",
+      "optionA": {
+        "en": "Be able to breathe underwater",
+        "fa": "بتونی زیر آب نفس بکشی"
+      },
+      "optionB": {
+        "en": "Be able to survive in space without a suit",
+        "fa": "بتونی بدون لباس فضایی توی فضا زنده بمونی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-123",
+      "optionA": {
+        "en": "Have the power to heal others but never yourself",
+        "fa": "قدرت شفا دادن دیگران رو داشته باشی ولی هیچ‌وقت خودت رو"
+      },
+      "optionB": {
+        "en": "Have the power to heal yourself but never others",
+        "fa": "قدرت شفا دادن خودت رو داشته باشی ولی هیچ‌وقت دیگران رو"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-124",
+      "optionA": {
+        "en": "Be able to control fire but never feel warm",
+        "fa": "بتونی آتش رو کنترل کنی ولی هیچ‌وقت احساس گرما نکنی"
+      },
+      "optionB": {
+        "en": "Be able to control ice but never feel cold",
+        "fa": "بتونی یخ رو کنترل کنی ولی هیچ‌وقت احساس سرما نکنی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-125",
+      "optionA": {
+        "en": "Have wings but never be able to hide them",
+        "fa": "بال داشته باشی ولی هیچ‌وقت نتونی پنهانشون کنی"
+      },
+      "optionB": {
+        "en": "Have a tail but never be able to hide it",
+        "fa": "دم داشته باشی ولی هیچ‌وقت نتونی پنهانش کنی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-126",
+      "optionA": {
+        "en": "Be a powerful wizard who forgets a spell after each use",
+        "fa": "یک جادوگر قدرتمند باشی که بعد از هر استفاده طلسمش رو فراموش می‌کنه"
+      },
+      "optionB": {
+        "en": "Be a weak wizard who never forgets a single spell",
+        "fa": "یک جادوگر ضعیف باشی که هیچ طلسمی رو فراموش نمی‌کنه"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-127",
+      "optionA": {
+        "en": "Be able to turn invisible but your clothes stay visible",
+        "fa": "بتونی نامرئی بشی ولی لباس‌هات همچنان دیده بشن"
+      },
+      "optionB": {
+        "en": "Be able to turn invisible but only for one minute at a time",
+        "fa": "بتونی نامرئی بشی ولی هر بار فقط یک دقیقه"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-128",
+      "optionA": {
+        "en": "Have the power to grant wishes to others but never to yourself",
+        "fa": "قدرت برآورده کردن آرزوهای دیگران رو داشته باشی ولی هیچ‌وقت آرزوهای خودت"
+      },
+      "optionB": {
+        "en": "Have one wish for yourself that takes ten years to come true",
+        "fa": "یک آرزو برای خودت داشته باشی که ده سال طول بکشه تا برآورده بشه"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-129",
+      "optionA": {
+        "en": "Be able to shapeshift into any animal",
+        "fa": "بتونی به شکل هر حیوانی دربیای"
+      },
+      "optionB": {
+        "en": "Be able to shapeshift into any person",
+        "fa": "بتونی به شکل هر آدمی دربیای"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-130",
+      "optionA": {
+        "en": "Have x-ray vision you can't turn off",
+        "fa": "دید اشعه ایکس داشته باشی که نتونی خاموشش کنی"
+      },
+      "optionB": {
+        "en": "Have super hearing you can't turn off",
+        "fa": "شنوایی فوق‌العاده داشته باشی که نتونی خاموشش کنی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-131",
+      "optionA": {
+        "en": "Be immortal but age normally forever",
+        "fa": "جاودانه باشی ولی برای همیشه به طور عادی پیر بشی"
+      },
+      "optionB": {
+        "en": "Stop aging at your current age but live a normal lifespan",
+        "fa": "در سن فعلیت پیر شدنت متوقف بشه ولی عمر عادی داشته باشی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-132",
+      "optionA": {
+        "en": "Be able to summon any object but it vanishes after an hour",
+        "fa": "بتونی هر شیئی رو احضار کنی ولی بعد از یک ساعت ناپدید بشه"
+      },
+      "optionB": {
+        "en": "Be able to summon only one object forever, chosen now",
+        "fa": "بتونی فقط یک شیء برای همیشه احضار کنی که همین الان انتخابش کنی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-133",
+      "optionA": {
+        "en": "Have a magic carpet that only flies at night",
+        "fa": "یک فرش پرنده داشته باشی که فقط شب‌ها پرواز کنه"
+      },
+      "optionB": {
+        "en": "Have seven-league boots that only work in daylight",
+        "fa": "چکمه‌های هفت‌فرسخی داشته باشی که فقط توی روز کار کنن"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-134",
+      "optionA": {
+        "en": "Be able to understand every language but never speak",
+        "fa": "بتونی همه‌ی زبان‌ها رو بفهمی ولی هیچ‌وقت حرف نزنی"
+      },
+      "optionB": {
+        "en": "Be able to speak every language but never understand the replies",
+        "fa": "بتونی به همه‌ی زبان‌ها حرف بزنی ولی هیچ‌وقت جواب‌ها رو نفهمی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-135",
+      "optionA": {
+        "en": "Have the power of telekinesis but only with your eyes closed",
+        "fa": "قدرت دورجنبانی داشته باشی ولی فقط با چشم‌های بسته"
+      },
+      "optionB": {
+        "en": "Have the power of telekinesis but it tires you out instantly",
+        "fa": "قدرت دورجنبانی داشته باشی ولی فوراً خسته‌ت کنه"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-136",
+      "optionA": {
+        "en": "Be a knight with an unbreakable sword",
+        "fa": "یک شوالیه با شمشیر نشکن باشی"
+      },
+      "optionB": {
+        "en": "Be a mage with an unlimited mana potion",
+        "fa": "یک جادوگر با معجون مانای بی‌پایان باشی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-137",
+      "optionA": {
+        "en": "Be able to glow in the dark whenever you want",
+        "fa": "هر وقت بخوای توی تاریکی بدرخشی"
+      },
+      "optionB": {
+        "en": "Be able to become weightless whenever you want",
+        "fa": "هر وقت بخوای بی‌وزن بشی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-138",
+      "optionA": {
+        "en": "Have a cloak of invisibility that works once a day",
+        "fa": "یک شنل نامرئی‌کننده داشته باشی که روزی یک‌بار کار کنه"
+      },
+      "optionB": {
+        "en": "Have a ring of strength that works once a week",
+        "fa": "یک حلقه‌ی قدرت داشته باشی که هفته‌ای یک‌بار کار کنه"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-139",
+      "optionA": {
+        "en": "Be able to control the weather but your mood controls it",
+        "fa": "بتونی آب‌وهوا رو کنترل کنی ولی حال و هوات کنترلش کنه"
+      },
+      "optionB": {
+        "en": "Be able to control gravity but only in one room of your home",
+        "fa": "بتونی گرانش رو کنترل کنی ولی فقط توی یک اتاق خونه‌ت"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-140",
+      "optionA": {
+        "en": "Have a phoenix that can revive you once",
+        "fa": "یک ققنوس داشته باشی که یک‌بار بتونه زنده‌ت کنه"
+      },
+      "optionB": {
+        "en": "Have a genie that grants three small wishes a year",
+        "fa": "یک غول چراغ جادو داشته باشی که سالی سه آرزوی کوچک برآورده کنه"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-141",
+      "optionA": {
+        "en": "Be able to walk through walls but never through doors",
+        "fa": "بتونی از دیوارها رد بشی ولی هیچ‌وقت از درها"
+      },
+      "optionB": {
+        "en": "Be able to walk on water but never on dry land barefoot",
+        "fa": "بتونی روی آب راه بری ولی هیچ‌وقت روی خشکی با پای برهنه"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-142",
+      "optionA": {
+        "en": "Have a sword that can cut anything but is too heavy to lift",
+        "fa": "شمشیری داشته باشی که هر چیزی رو ببره ولی برای بلند کردن خیلی سنگین باشه"
+      },
+      "optionB": {
+        "en": "Have a shield that blocks anything but covers your eyes",
+        "fa": "سپری داشته باشی که جلوی هر چیزی رو بگیره ولی جلوی چشم‌هات رو بپوشونه"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-143",
+      "optionA": {
+        "en": "Be able to summon rain but never sunshine",
+        "fa": "بتونی باران رو احضار کنی ولی هیچ‌وقت آفتاب رو"
+      },
+      "optionB": {
+        "en": "Be able to summon sunshine but never rain",
+        "fa": "بتونی آفتاب رو احضار کنی ولی هیچ‌وقت باران رو"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-144",
+      "optionA": {
+        "en": "Have night vision like an owl",
+        "fa": "دید شب مثل جغد داشته باشی"
+      },
+      "optionB": {
+        "en": "Have a sense of smell like a wolf",
+        "fa": "حس بویایی مثل گرگ داشته باشی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-145",
+      "optionA": {
+        "en": "Be able to turn water into any drink",
+        "fa": "بتونی آب رو به هر نوشیدنی‌ای تبدیل کنی"
+      },
+      "optionB": {
+        "en": "Be able to turn any food into your favorite meal",
+        "fa": "بتونی هر غذایی رو به غذای موردعلاقه‌ت تبدیل کنی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-146",
+      "optionA": {
+        "en": "Be a hero everyone forgets after you save them",
+        "fa": "یک قهرمان باشی که همه بعد از نجاتشون فراموشت می‌کنن"
+      },
+      "optionB": {
+        "en": "Be a villain everyone remembers but secretly admires",
+        "fa": "یک شرور باشی که همه به یادت می‌مونن ولی در خفا تحسینت می‌کنن"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-147",
+      "optionA": {
+        "en": "Have the power to duplicate yourself once a day",
+        "fa": "قدرت دو برابر کردن خودت رو روزی یک‌بار داشته باشی"
+      },
+      "optionB": {
+        "en": "Have the power to swap places with anyone once a day",
+        "fa": "قدرت جابه‌جا شدن با هر کسی رو روزی یک‌بار داشته باشی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-148",
+      "optionA": {
+        "en": "Be able to see one minute into the future",
+        "fa": "بتونی یک دقیقه آینده رو ببینی"
+      },
+      "optionB": {
+        "en": "Be able to see one day into the past of any object",
+        "fa": "بتونی یک روز گذشته‌ی هر شیئی رو ببینی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-149",
+      "optionA": {
+        "en": "Have armor made of starlight that's beautiful but fragile",
+        "fa": "زرهی از نور ستاره داشته باشی که زیباست ولی شکننده‌ست"
+      },
+      "optionB": {
+        "en": "Have armor made of stone that's ugly but unbreakable",
+        "fa": "زرهی از سنگ داشته باشی که زشته ولی نشکنه"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-150",
+      "optionA": {
+        "en": "Be able to enter any dream but never your own",
+        "fa": "بتونی وارد هر رویایی بشی ولی هیچ‌وقت رویای خودت"
+      },
+      "optionB": {
+        "en": "Be able to control your own dreams but never remember them",
+        "fa": "بتونی رویاهای خودت رو کنترل کنی ولی هیچ‌وقت یادت نمونه"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-151",
+      "optionA": {
+        "en": "Have a magic mirror that shows the truth but never lies you'd prefer",
+        "fa": "یک آینه‌ی جادویی داشته باشی که حقیقت رو نشون بده، نه دروغ‌هایی که ترجیح می‌دی"
+      },
+      "optionB": {
+        "en": "Have a magic book that answers any question but in riddles",
+        "fa": "یک کتاب جادویی داشته باشی که به هر سؤالی جواب بده ولی به صورت معما"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-152",
+      "optionA": {
+        "en": "Be able to leap over any building in one jump",
+        "fa": "بتونی هر ساختمونی رو با یک پرش رد کنی"
+      },
+      "optionB": {
+        "en": "Be able to dig through the earth like it's sand",
+        "fa": "بتونی زمین رو مثل شن بکَنی و توش حرکت کنی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-153",
+      "optionA": {
+        "en": "Always be 10 minutes late everywhere",
+        "fa": "همیشه همه‌جا ۱۰ دقیقه دیر برسی"
+      },
+      "optionB": {
+        "en": "Always be 20 minutes early everywhere",
+        "fa": "همیشه همه‌جا ۲۰ دقیقه زود برسی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-154",
+      "optionA": {
+        "en": "Never have to do laundry again",
+        "fa": "دیگه هیچ‌وقت مجبور نباشی لباس بشوری"
+      },
+      "optionB": {
+        "en": "Never have to wash dishes again",
+        "fa": "دیگه هیچ‌وقت مجبور نباشی ظرف بشوری"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-155",
+      "optionA": {
+        "en": "Have unlimited free coffee for life",
+        "fa": "تا آخر عمر قهوهٔ رایگان نامحدود داشته باشی"
+      },
+      "optionB": {
+        "en": "Have unlimited free internet for life",
+        "fa": "تا آخر عمر اینترنت رایگان نامحدود داشته باشی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-156",
+      "optionA": {
+        "en": "Hit every green light when you drive",
+        "fa": "موقع رانندگی پشت هر چراغ سبز برسی"
+      },
+      "optionB": {
+        "en": "Never wait in a checkout line again",
+        "fa": "دیگه هیچ‌وقت توی صف صندوق منتظر نمونی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-157",
+      "optionA": {
+        "en": "Always find a parking spot instantly",
+        "fa": "همیشه فوراً جای پارک پیدا کنی"
+      },
+      "optionB": {
+        "en": "Always have exact change in your pocket",
+        "fa": "همیشه پول خرد دقیق توی جیبت داشته باشی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-158",
+      "optionA": {
+        "en": "Wake up an hour earlier but feel rested",
+        "fa": "یک ساعت زودتر بیدار شی ولی سرحال باشی"
+      },
+      "optionB": {
+        "en": "Sleep in an hour later but feel groggy",
+        "fa": "یک ساعت دیرتر بخوابی ولی گیج و خواب‌آلود باشی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-159",
+      "optionA": {
+        "en": "Have a fridge that's always full",
+        "fa": "یخچالی داشته باشی که همیشه پر باشه"
+      },
+      "optionB": {
+        "en": "Have a closet of clothes that never wrinkle",
+        "fa": "کمدی پر از لباسی داشته باشی که هیچ‌وقت چروک نشه"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-160",
+      "optionA": {
+        "en": "Never have to charge your phone again",
+        "fa": "دیگه هیچ‌وقت مجبور نباشی گوشیت رو شارژ کنی"
+      },
+      "optionB": {
+        "en": "Never have your phone screen crack again",
+        "fa": "دیگه هیچ‌وقت صفحهٔ گوشیت نشکنه"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-161",
+      "optionA": {
+        "en": "Get free groceries but you must cook every meal",
+        "fa": "خواربار رایگان بگیری ولی مجبور باشی هر وعده رو خودت بپزی"
+      },
+      "optionB": {
+        "en": "Eat out free but only fast food forever",
+        "fa": "بیرون رایگان غذا بخوری ولی فقط فست‌فود تا ابد"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-162",
+      "optionA": {
+        "en": "Have a 5-minute commute to a job you dislike",
+        "fa": "۵ دقیقه تا سرِ کاری که دوستش نداری راه داشته باشی"
+      },
+      "optionB": {
+        "en": "Have a 90-minute commute to a job you love",
+        "fa": "۹۰ دقیقه تا سرِ کاری که عاشقشی راه داشته باشی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-163",
+      "optionA": {
+        "en": "Always know exactly what to cook for dinner",
+        "fa": "همیشه دقیقاً بدونی شام چی بپزی"
+      },
+      "optionB": {
+        "en": "Always know the fastest route anywhere",
+        "fa": "همیشه سریع‌ترین مسیر به هرجا رو بدونی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-164",
+      "optionA": {
+        "en": "Never lose your keys again",
+        "fa": "دیگه هیچ‌وقت کلیدهات رو گم نکنی"
+      },
+      "optionB": {
+        "en": "Never lose your TV remote again",
+        "fa": "دیگه هیچ‌وقت کنترل تلویزیون رو گم نکنی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-165",
+      "optionA": {
+        "en": "Have perfect weather but a slow internet",
+        "fa": "هوای عالی داشته باشی ولی اینترنت کُند"
+      },
+      "optionB": {
+        "en": "Have terrible weather but lightning-fast internet",
+        "fa": "هوای افتضاح داشته باشی ولی اینترنت برق‌آسا"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-166",
+      "optionA": {
+        "en": "Get one free taxi ride every single day",
+        "fa": "هر روز یک سفر تاکسی رایگان بگیری"
+      },
+      "optionB": {
+        "en": "Get one free home-cooked meal every single day",
+        "fa": "هر روز یک وعده غذای خانگی رایگان بگیری"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-167",
+      "optionA": {
+        "en": "Always have a comfortable bed wherever you sleep",
+        "fa": "هرجا بخوابی همیشه تخت راحت داشته باشی"
+      },
+      "optionB": {
+        "en": "Always have the perfect water temperature in showers",
+        "fa": "هر دوشی که می‌گیری همیشه آب با دمای عالی باشه"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-168",
+      "optionA": {
+        "en": "Fold laundry instantly but it's never quite neat",
+        "fa": "فوری لباس‌ها رو تا کنی ولی هیچ‌وقت کاملاً مرتب نباشه"
+      },
+      "optionB": {
+        "en": "Fold laundry slowly but it comes out perfect",
+        "fa": "آروم لباس‌ها رو تا کنی ولی بی‌نقص دربیاد"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-169",
+      "optionA": {
+        "en": "Live two minutes from work but far from friends",
+        "fa": "دو دقیقه تا محل کار باشی ولی دور از دوستانت"
+      },
+      "optionB": {
+        "en": "Live next to friends but far from everything else",
+        "fa": "کنار دوستانت باشی ولی دور از بقیهٔ چیزها"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-170",
+      "optionA": {
+        "en": "Have a self-cleaning bathroom",
+        "fa": "دستشویی‌ای داشته باشی که خودش رو تمیز کنه"
+      },
+      "optionB": {
+        "en": "Have a self-cleaning kitchen",
+        "fa": "آشپزخانه‌ای داشته باشی که خودش رو تمیز کنه"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-171",
+      "optionA": {
+        "en": "Never run out of phone storage",
+        "fa": "هیچ‌وقت حافظهٔ گوشیت پر نشه"
+      },
+      "optionB": {
+        "en": "Never run out of hot water",
+        "fa": "هیچ‌وقت آب گرمت تموم نشه"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-172",
+      "optionA": {
+        "en": "Always get the window seat on every trip",
+        "fa": "توی هر سفر همیشه صندلی کنار پنجره بگیری"
+      },
+      "optionB": {
+        "en": "Always have extra legroom on every trip",
+        "fa": "توی هر سفر همیشه جای پای اضافه داشته باشی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-173",
+      "optionA": {
+        "en": "Have groceries delivered free but you can't pick them",
+        "fa": "خواربار رایگان برات بیارن ولی نتونی خودت انتخابشون کنی"
+      },
+      "optionB": {
+        "en": "Pick your own groceries but always carry them yourself",
+        "fa": "خودت خواربارت رو انتخاب کنی ولی همیشه خودت حملش کنی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-174",
+      "optionA": {
+        "en": "Have a wardrobe that's always in fashion",
+        "fa": "کمد لباسی داشته باشی که همیشه مُد روز باشه"
+      },
+      "optionB": {
+        "en": "Have shoes that are always perfectly comfortable",
+        "fa": "کفش‌هایی داشته باشی که همیشه کاملاً راحت باشن"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-175",
+      "optionA": {
+        "en": "Always have a clean car but a messy home",
+        "fa": "همیشه ماشین تمیز داشته باشی ولی خانهٔ شلوغ"
+      },
+      "optionB": {
+        "en": "Always have a clean home but a messy car",
+        "fa": "همیشه خانهٔ تمیز داشته باشی ولی ماشین شلوغ"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-176",
+      "optionA": {
+        "en": "Get your morning coffee in 30 seconds every day",
+        "fa": "هر روز قهوهٔ صبحت رو در ۳۰ ثانیه بگیری"
+      },
+      "optionB": {
+        "en": "Get a perfect night's sleep three nights a week",
+        "fa": "هفته‌ای سه شب خواب کامل و بی‌نقص داشته باشی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-177",
+      "optionA": {
+        "en": "Never have to take out the trash",
+        "fa": "دیگه هیچ‌وقت مجبور نباشی آشغال‌ها رو ببری بیرون"
+      },
+      "optionB": {
+        "en": "Never have to vacuum the floors",
+        "fa": "دیگه هیچ‌وقت مجبور نباشی جارو بکشی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-178",
+      "optionA": {
+        "en": "Always reply to messages instantly but briefly",
+        "fa": "همیشه فوری ولی کوتاه به پیام‌ها جواب بدی"
+      },
+      "optionB": {
+        "en": "Reply slowly but always with the perfect words",
+        "fa": "دیر جواب بدی ولی همیشه با بهترین کلمات"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-179",
+      "optionA": {
+        "en": "Have unlimited free streaming but tiny screen",
+        "fa": "استریم رایگان نامحدود داشته باشی ولی صفحهٔ خیلی کوچک"
+      },
+      "optionB": {
+        "en": "Have a huge screen but pay for everything you watch",
+        "fa": "صفحهٔ خیلی بزرگ داشته باشی ولی پول هرچی می‌بینی رو بدی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-180",
+      "optionA": {
+        "en": "Always have a charged power bank in your bag",
+        "fa": "همیشه یک پاوربانک شارژ توی کیفت داشته باشی"
+      },
+      "optionB": {
+        "en": "Always have an umbrella when it rains",
+        "fa": "هر وقت بارون میاد همیشه چتر داشته باشی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-181",
+      "optionA": {
+        "en": "Have a kitchen that never runs out of snacks",
+        "fa": "آشپزخانه‌ای داشته باشی که هیچ‌وقت تنقلاتش تموم نشه"
+      },
+      "optionB": {
+        "en": "Have a freezer that never runs out of ice cream",
+        "fa": "فریزری داشته باشی که هیچ‌وقت بستنیش تموم نشه"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-182",
+      "optionA": {
+        "en": "Always wear comfy clothes but look underdressed",
+        "fa": "همیشه لباس راحت بپوشی ولی ساده به‌نظر بیای"
+      },
+      "optionB": {
+        "en": "Always look sharp but feel slightly uncomfortable",
+        "fa": "همیشه شیک به‌نظر بیای ولی کمی ناراحت باشی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-183",
+      "optionA": {
+        "en": "Have a TV that turns on the moment you sit down",
+        "fa": "تلویزیونی داشته باشی که لحظهٔ نشستنت روشن شه"
+      },
+      "optionB": {
+        "en": "Have lights that adjust perfectly to your mood",
+        "fa": "چراغ‌هایی داشته باشی که کاملاً با حال‌وهوات تنظیم شن"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-184",
+      "optionA": {
+        "en": "Always have a seat on a crowded bus",
+        "fa": "توی اتوبوس شلوغ همیشه جا برای نشستن داشته باشی"
+      },
+      "optionB": {
+        "en": "Always have a quiet ride but stand the whole way",
+        "fa": "همیشه سفر آرام داشته باشی ولی کل راه سرپا باشی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-185",
+      "optionA": {
+        "en": "Cook one amazing dish but only that dish",
+        "fa": "یک غذای فوق‌العاده بپزی ولی فقط همون یک غذا"
+      },
+      "optionB": {
+        "en": "Cook every dish but all of them just okay",
+        "fa": "هر غذایی رو بپزی ولی همه‌شون فقط متوسط باشن"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-186",
+      "optionA": {
+        "en": "Never wait for a download to finish",
+        "fa": "دیگه هیچ‌وقت منتظر تمام شدن دانلود نمونی"
+      },
+      "optionB": {
+        "en": "Never wait for an elevator to arrive",
+        "fa": "دیگه هیچ‌وقت منتظر رسیدن آسانسور نمونی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-187",
+      "optionA": {
+        "en": "Have a perfectly organized phone but a messy desk",
+        "fa": "گوشی‌ات کاملاً مرتب باشه ولی میزت شلوغ"
+      },
+      "optionB": {
+        "en": "Have a perfectly organized desk but a messy phone",
+        "fa": "میزت کاملاً مرتب باشه ولی گوشی‌ات شلوغ"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-188",
+      "optionA": {
+        "en": "Always find money in your old coat pockets",
+        "fa": "همیشه توی جیب کت‌های قدیمی‌ات پول پیدا کنی"
+      },
+      "optionB": {
+        "en": "Always find leftovers you forgot in the fridge",
+        "fa": "همیشه توی یخچال غذای فراموش‌شده‌ای پیدا کنی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-189",
+      "optionA": {
+        "en": "Have a chair that's comfortable but ugly",
+        "fa": "صندلی‌ای داشته باشی که راحت باشه ولی زشت"
+      },
+      "optionB": {
+        "en": "Have a chair that's beautiful but uncomfortable",
+        "fa": "صندلی‌ای داشته باشی که قشنگ باشه ولی ناراحت"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-190",
+      "optionA": {
+        "en": "Get every package delivered a day early",
+        "fa": "هر بسته‌ات یک روز زودتر برسه"
+      },
+      "optionB": {
+        "en": "Never get a package left out in the rain",
+        "fa": "هیچ بسته‌ای زیر بارون جا نمونه"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-191",
+      "optionA": {
+        "en": "Only ever eat sweet foods",
+        "fa": "فقط همیشه غذای شیرین بخوری"
+      },
+      "optionB": {
+        "en": "Only ever eat savory foods",
+        "fa": "فقط همیشه غذای شور بخوری"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-192",
+      "optionA": {
+        "en": "Give up coffee forever",
+        "fa": "برای همیشه قهوه را کنار بگذاری"
+      },
+      "optionB": {
+        "en": "Give up tea forever",
+        "fa": "برای همیشه چای را کنار بگذاری"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-193",
+      "optionA": {
+        "en": "Always cook every meal from scratch",
+        "fa": "همیشه هر وعده را از صفر بپزی"
+      },
+      "optionB": {
+        "en": "Always order takeout",
+        "fa": "همیشه غذای بیرون سفارش بدهی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-194",
+      "optionA": {
+        "en": "Eat your favorite meal every day for a year",
+        "fa": "یک سال هر روز غذای موردعلاقه‌ات را بخوری"
+      },
+      "optionB": {
+        "en": "Never eat the same meal twice",
+        "fa": "هیچ‌وقت یک غذا را دو بار نخوری"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-195",
+      "optionA": {
+        "en": "Have unlimited pizza but no dessert",
+        "fa": "پیتزای نامحدود داشته باشی اما هیچ دسری نه"
+      },
+      "optionB": {
+        "en": "Have unlimited dessert but no pizza",
+        "fa": "دسر نامحدود داشته باشی اما هیچ پیتزایی نه"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-196",
+      "optionA": {
+        "en": "Wake up at 5 a.m. every day",
+        "fa": "هر روز ساعت ۵ صبح بیدار شوی"
+      },
+      "optionB": {
+        "en": "Stay up until 2 a.m. every night",
+        "fa": "هر شب تا ساعت ۲ بامداد بیدار بمانی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-197",
+      "optionA": {
+        "en": "Live somewhere with endless summer",
+        "fa": "جایی با تابستان بی‌پایان زندگی کنی"
+      },
+      "optionB": {
+        "en": "Live somewhere with endless winter",
+        "fa": "جایی با زمستان بی‌پایان زندگی کنی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-198",
+      "optionA": {
+        "en": "Never eat spicy food again",
+        "fa": "دیگر هیچ‌وقت غذای تند نخوری"
+      },
+      "optionB": {
+        "en": "Have every meal be extremely spicy",
+        "fa": "هر وعده‌ات بسیار تند باشد"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-199",
+      "optionA": {
+        "en": "Always have a spotless tidy home",
+        "fa": "همیشه خانه‌ای تمیز و مرتب داشته باشی"
+      },
+      "optionB": {
+        "en": "Always have a fridge full of great food",
+        "fa": "همیشه یخچالی پر از غذای عالی داشته باشی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-200",
+      "optionA": {
+        "en": "Only drink water for the rest of your life",
+        "fa": "تا آخر عمر فقط آب بنوشی"
+      },
+      "optionB": {
+        "en": "Drink anything but water",
+        "fa": "هر چیزی به‌جز آب بنوشی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-201",
+      "optionA": {
+        "en": "Eat breakfast foods for every meal",
+        "fa": "در هر وعده غذای صبحانه بخوری"
+      },
+      "optionB": {
+        "en": "Never eat breakfast again",
+        "fa": "دیگر هیچ‌وقت صبحانه نخوری"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-202",
+      "optionA": {
+        "en": "Cook for a crowd of twenty",
+        "fa": "برای جمعی بیست‌نفره آشپزی کنی"
+      },
+      "optionB": {
+        "en": "Always dine completely alone",
+        "fa": "همیشه کاملاً تنها غذا بخوری"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-203",
+      "optionA": {
+        "en": "Have a personal chef but no kitchen",
+        "fa": "یک سرآشپز شخصی داشته باشی اما هیچ آشپزخانه‌ای نه"
+      },
+      "optionB": {
+        "en": "Have a dream kitchen but cook everything yourself",
+        "fa": "آشپزخانه‌ای رؤیایی داشته باشی اما همه‌چیز را خودت بپزی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-204",
+      "optionA": {
+        "en": "Give up bread, pasta, and rice",
+        "fa": "نان، پاستا و برنج را کنار بگذاری"
+      },
+      "optionB": {
+        "en": "Give up all meat",
+        "fa": "همه‌ی گوشت‌ها را کنار بگذاری"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-205",
+      "optionA": {
+        "en": "Eat only with your hands forever",
+        "fa": "تا ابد فقط با دست غذا بخوری"
+      },
+      "optionB": {
+        "en": "Eat only with chopsticks forever",
+        "fa": "تا ابد فقط با چاپ‌استیک غذا بخوری"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-206",
+      "optionA": {
+        "en": "Have a huge breakfast and tiny dinner",
+        "fa": "صبحانه‌ای بزرگ و شامی کوچک داشته باشی"
+      },
+      "optionB": {
+        "en": "Have a tiny breakfast and huge dinner",
+        "fa": "صبحانه‌ای کوچک و شامی بزرگ داشته باشی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-207",
+      "optionA": {
+        "en": "Always taste salt as sweet",
+        "fa": "همیشه نمک را شیرین حس کنی"
+      },
+      "optionB": {
+        "en": "Always taste sugar as salty",
+        "fa": "همیشه شکر را شور حس کنی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-208",
+      "optionA": {
+        "en": "Live in a tiny home in the city",
+        "fa": "در خانه‌ای کوچک در شهر زندگی کنی"
+      },
+      "optionB": {
+        "en": "Live in a huge house far from everything",
+        "fa": "در خانه‌ای بزرگ دور از همه‌چیز زندگی کنی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-209",
+      "optionA": {
+        "en": "Eat the world's best food but very slowly",
+        "fa": "بهترین غذای دنیا را بخوری اما خیلی آهسته"
+      },
+      "optionB": {
+        "en": "Eat average food but always instantly",
+        "fa": "غذای معمولی بخوری اما همیشه فوری"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-210",
+      "optionA": {
+        "en": "Never use a phone at meals",
+        "fa": "هیچ‌وقت سر غذا از تلفن استفاده نکنی"
+      },
+      "optionB": {
+        "en": "Never talk during meals",
+        "fa": "هیچ‌وقت موقع غذا حرف نزنی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-211",
+      "optionA": {
+        "en": "Have a garden that grows all your food",
+        "fa": "باغی داشته باشی که همه‌ی غذایت را تولید کند"
+      },
+      "optionB": {
+        "en": "Have a fridge that never runs empty",
+        "fa": "یخچالی داشته باشی که هیچ‌وقت خالی نشود"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-212",
+      "optionA": {
+        "en": "Always eat very healthy but bland food",
+        "fa": "همیشه غذای بسیار سالم اما بی‌مزه بخوری"
+      },
+      "optionB": {
+        "en": "Always eat delicious but unhealthy food",
+        "fa": "همیشه غذای خوشمزه اما ناسالم بخوری"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-213",
+      "optionA": {
+        "en": "Have a daily workout you can't skip",
+        "fa": "ورزش روزانه‌ای داشته باشی که نتوانی از آن بزنی"
+      },
+      "optionB": {
+        "en": "Have a strict diet you can't break",
+        "fa": "رژیم سختی داشته باشی که نتوانی بشکنی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-214",
+      "optionA": {
+        "en": "Only eat food cooked by strangers",
+        "fa": "فقط غذای پخته‌ی غریبه‌ها را بخوری"
+      },
+      "optionB": {
+        "en": "Only eat food you cooked yourself",
+        "fa": "فقط غذای پخته‌ی خودت را بخوری"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-215",
+      "optionA": {
+        "en": "Live without a refrigerator",
+        "fa": "بدون یخچال زندگی کنی"
+      },
+      "optionB": {
+        "en": "Live without an oven or stove",
+        "fa": "بدون فر یا اجاق زندگی کنی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-216",
+      "optionA": {
+        "en": "Drink your morning coffee piping hot",
+        "fa": "قهوه‌ی صبحت را داغِ داغ بنوشی"
+      },
+      "optionB": {
+        "en": "Drink it iced no matter the weather",
+        "fa": "در هر هوایی آن را یخ بنوشی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-217",
+      "optionA": {
+        "en": "Have every restaurant meal be free",
+        "fa": "هر غذای رستوران برایت رایگان باشد"
+      },
+      "optionB": {
+        "en": "Have every grocery trip be free",
+        "fa": "هر خرید خواروبارت رایگان باشد"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-218",
+      "optionA": {
+        "en": "Wear the exact same outfit every day",
+        "fa": "هر روز دقیقاً همان لباس را بپوشی"
+      },
+      "optionB": {
+        "en": "Eat the exact same lunch every day",
+        "fa": "هر روز دقیقاً همان ناهار را بخوری"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-219",
+      "optionA": {
+        "en": "Have endless free time but a tight budget",
+        "fa": "وقت آزاد بی‌پایان اما بودجه‌ی کم داشته باشی"
+      },
+      "optionB": {
+        "en": "Have lots of money but no free time",
+        "fa": "پول زیاد اما هیچ وقت آزادی نداشته باشی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-220",
+      "optionA": {
+        "en": "Smell every food but never taste it",
+        "fa": "بوی هر غذا را حس کنی اما هیچ‌وقت آن را نچشی"
+      },
+      "optionB": {
+        "en": "Taste every food but never smell it",
+        "fa": "هر غذا را بچشی اما هیچ‌وقت بویش را حس نکنی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-221",
+      "optionA": {
+        "en": "Always have fresh-baked bread at home",
+        "fa": "همیشه نان تازه‌پخت در خانه داشته باشی"
+      },
+      "optionB": {
+        "en": "Always have fresh fruit at home",
+        "fa": "همیشه میوه‌ی تازه در خانه داشته باشی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-222",
+      "optionA": {
+        "en": "Live by the ocean but cook small meals",
+        "fa": "کنار اقیانوس زندگی کنی اما وعده‌های کوچک بپزی"
+      },
+      "optionB": {
+        "en": "Live in the mountains with a grand feast nightly",
+        "fa": "در کوهستان زندگی کنی با ضیافتی بزرگ هر شب"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-223",
+      "optionA": {
+        "en": "Have your sense of taste twice as strong",
+        "fa": "حس چشایی‌ات دو برابر قوی‌تر شود"
+      },
+      "optionB": {
+        "en": "Have your sense of smell twice as strong",
+        "fa": "حس بویایی‌ات دو برابر قوی‌تر شود"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-224",
+      "optionA": {
+        "en": "Eat a huge meal but feel hungry an hour later",
+        "fa": "یک وعده‌ی بزرگ بخوری اما یک ساعت بعد گرسنه شوی"
+      },
+      "optionB": {
+        "en": "Eat a small snack but feel full all day",
+        "fa": "یک میان‌وعده‌ی کوچک بخوری اما تمام روز سیر بمانی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-225",
+      "optionA": {
+        "en": "Always have to share your dessert",
+        "fa": "همیشه مجبور باشی دسرت را تقسیم کنی"
+      },
+      "optionB": {
+        "en": "Never be allowed to share food with anyone",
+        "fa": "هیچ‌وقت اجازه نداشته باشی غذا را با کسی تقسیم کنی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-226",
+      "optionA": {
+        "en": "Keep a perfectly organized pantry",
+        "fa": "انباری کاملاً منظم داشته باشی"
+      },
+      "optionB": {
+        "en": "Keep a wildly stocked spice rack",
+        "fa": "قفسه‌ی ادویه‌ای بی‌نهایت پر داشته باشی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-227",
+      "optionA": {
+        "en": "Have weekends free but work long weekdays",
+        "fa": "آخر هفته‌ها آزاد باشی اما روزهای کاری طولانی کار کنی"
+      },
+      "optionB": {
+        "en": "Have short workdays but work every day",
+        "fa": "روزهای کاری کوتاه داشته باشی اما هر روز کار کنی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "wyr-gen-228",
+      "optionA": {
+        "en": "Only ever eat hot food",
+        "fa": "فقط همیشه غذای داغ بخوری"
+      },
+      "optionB": {
+        "en": "Only ever eat cold food",
+        "fa": "فقط همیشه غذای سرد بخوری"
       },
       "intensity": "mild"
     }

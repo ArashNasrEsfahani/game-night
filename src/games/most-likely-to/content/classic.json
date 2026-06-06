@@ -12,858 +12,2899 @@
   "prompts": [
     {
       "id": "mlt-reply-all-email",
-      "intensity": "casual",
-      "emoji": "📧",
       "text": {
         "en": "Most likely to accidentally reply-all to a company email",
         "fa": "به احتمال زیاد ایمیل کاری رو اشتباهی به همه ریپلای می‌کنه"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-burn-toast",
-      "intensity": "family",
-      "emoji": "🍞",
       "text": {
         "en": "Most likely to burn even the simplest meal",
         "fa": "به احتمال زیاد ساده‌ترین غذا رو هم می‌سوزونه"
-      }
+      },
+      "intensity": "family"
     },
     {
       "id": "mlt-talk-to-pets",
-      "intensity": "family",
-      "emoji": "🐶",
       "text": {
         "en": "Most likely to have full conversations with their pet",
         "fa": "به احتمال زیاد با حیوون خونگیش کلی حرف می‌زنه"
-      }
+      },
+      "intensity": "family"
     },
     {
       "id": "mlt-cancel-plans",
-      "intensity": "casual",
-      "emoji": "🛋️",
       "text": {
         "en": "Most likely to cancel plans to stay home",
         "fa": "به احتمال زیاد قرارش رو کنسل می‌کنه که خونه بمونه"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-trip-flat-ground",
-      "intensity": "family",
-      "emoji": "🤕",
       "text": {
         "en": "Most likely to trip over absolutely nothing",
         "fa": "به احتمال زیاد سر هیچی زمین می‌خوره"
-      }
+      },
+      "intensity": "family"
     },
     {
       "id": "mlt-forget-name",
-      "intensity": "casual",
-      "emoji": "🤔",
       "text": {
         "en": "Most likely to forget someone's name two seconds after meeting them",
         "fa": "به احتمال زیاد دو ثانیه بعد آشنایی اسم طرف رو یادش می‌ره"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-overpack-trip",
-      "intensity": "family",
-      "emoji": "🧳",
       "text": {
         "en": "Most likely to overpack for a weekend trip",
         "fa": "به احتمال زیاد واسه یه سفر دو روزه کل کمدش رو می‌بنده"
-      }
+      },
+      "intensity": "family"
     },
     {
       "id": "mlt-binge-series",
-      "intensity": "casual",
-      "emoji": "📺",
       "text": {
         "en": "Most likely to binge a whole series in one night",
         "fa": "به احتمال زیاد یه سریال کامل رو توی یه شب می‌بینه"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-lose-keys",
-      "intensity": "family",
-      "emoji": "🔑",
       "text": {
         "en": "Most likely to lose their keys inside their own house",
         "fa": "به احتمال زیاد کلیدش رو توی خونه‌ی خودش گم می‌کنه"
-      }
+      },
+      "intensity": "family"
     },
     {
       "id": "mlt-give-advice",
-      "intensity": "casual",
-      "emoji": "🧠",
       "text": {
         "en": "Most likely to give advice nobody asked for",
         "fa": "به احتمال زیاد بدون اینکه کسی بپرسه نصیحت می‌کنه"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-adopt-stray",
-      "intensity": "family",
-      "emoji": "🐱",
       "text": {
         "en": "Most likely to adopt a stray animal on the spot",
         "fa": "به احتمال زیاد همون لحظه یه حیوون ولگرد رو برمی‌داره می‌بره خونه"
-      }
+      },
+      "intensity": "family"
     },
     {
       "id": "mlt-sing-shower",
-      "intensity": "family",
-      "emoji": "🚿",
       "text": {
         "en": "Most likely to sing loudly in the shower",
         "fa": "به احتمال زیاد توی حموم با صدای بلند آواز می‌خونه"
-      }
+      },
+      "intensity": "family"
     },
     {
       "id": "mlt-procrastinate",
-      "intensity": "casual",
-      "emoji": "⏳",
       "text": {
         "en": "Most likely to leave everything until the last minute",
         "fa": "به احتمال زیاد همه‌چی رو می‌ندازه دقیقه‌ی نود"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-take-food-photos",
-      "intensity": "family",
-      "emoji": "📸",
       "text": {
         "en": "Most likely to photograph their food before eating",
         "fa": "به احتمال زیاد قبل خوردن از غذاش عکس می‌گیره"
-      }
+      },
+      "intensity": "family"
     },
     {
       "id": "mlt-win-lottery",
-      "intensity": "casual",
-      "emoji": "🎰",
       "text": {
         "en": "Most likely to win the lottery and tell no one",
         "fa": "به احتمال زیاد بخت‌آزمایی می‌بره و به هیچ‌کس نمی‌گه"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-argue-referee",
-      "intensity": "casual",
-      "emoji": "⚽",
       "text": {
         "en": "Most likely to yell at the referee on TV",
         "fa": "به احتمال زیاد سر داور توی تلویزیون داد می‌زنه"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-fall-asleep-party",
-      "intensity": "casual",
-      "emoji": "😴",
       "text": {
         "en": "Most likely to fall asleep at a party",
         "fa": "به احتمال زیاد وسط مهمونی خوابش می‌بره"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-buy-gadgets",
-      "intensity": "casual",
-      "emoji": "📱",
       "text": {
         "en": "Most likely to buy a gadget they'll never use",
         "fa": "به احتمال زیاد یه وسیله می‌خره که هیچ‌وقت ازش استفاده نمی‌کنه"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-get-emotional-ad",
-      "intensity": "family",
-      "emoji": "🥹",
       "text": {
         "en": "Most likely to get emotional over a TV commercial",
         "fa": "به احتمال زیاد سر یه تبلیغ تلویزیونی احساساتی می‌شه"
-      }
+      },
+      "intensity": "family"
     },
     {
       "id": "mlt-talk-strangers",
-      "intensity": "casual",
-      "emoji": "💬",
       "text": {
         "en": "Most likely to make friends with a stranger in line",
         "fa": "به احتمال زیاد توی صف با یه غریبه رفیق می‌شه"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-skip-breakfast",
-      "intensity": "family",
-      "emoji": "🥐",
       "text": {
         "en": "Most likely to skip breakfast and regret it by noon",
         "fa": "به احتمال زیاد صبحونه نمی‌خوره و ظهر پشیمون می‌شه"
-      }
+      },
+      "intensity": "family"
     },
     {
       "id": "mlt-host-party",
-      "intensity": "casual",
-      "emoji": "🎉",
       "text": {
         "en": "Most likely to throw a party for no reason",
         "fa": "به احتمال زیاد بی‌دلیل یه مهمونی راه می‌ندازه"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-lose-bet",
-      "intensity": "casual",
-      "emoji": "🎲",
       "text": {
         "en": "Most likely to make a bet and instantly regret it",
         "fa": "به احتمال زیاد یه شرط می‌بنده و همون لحظه پشیمون می‌شه"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-quote-movies",
-      "intensity": "family",
-      "emoji": "🎬",
       "text": {
         "en": "Most likely to quote movies in everyday conversation",
         "fa": "به احتمال زیاد وسط حرف زدن از فیلم‌ها دیالوگ می‌گه"
-      }
+      },
+      "intensity": "family"
     },
     {
       "id": "mlt-forget-where-parked",
-      "intensity": "family",
-      "emoji": "🚗",
       "text": {
         "en": "Most likely to forget where they parked",
         "fa": "به احتمال زیاد یادش می‌ره ماشینش رو کجا پارک کرده"
-      }
+      },
+      "intensity": "family"
     },
     {
       "id": "mlt-overthink-text",
-      "intensity": "casual",
-      "emoji": "💭",
       "text": {
         "en": "Most likely to overthink a one-word text",
         "fa": "به احتمال زیاد سر یه پیام یه‌کلمه‌ای کلی فکر می‌کنه"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-volunteer-first",
-      "intensity": "casual",
-      "emoji": "🙋",
       "text": {
         "en": "Most likely to volunteer before hearing the question",
         "fa": "به احتمال زیاد قبل از شنیدن سوال داوطلب می‌شه"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-collect-receipts",
-      "intensity": "family",
-      "emoji": "🧾",
       "text": {
         "en": "Most likely to keep every receipt they've ever gotten",
         "fa": "به احتمال زیاد هر رسیدی که گرفته رو نگه می‌داره"
-      }
+      },
+      "intensity": "family"
     },
     {
       "id": "mlt-dance-no-music",
-      "intensity": "family",
-      "emoji": "🕺",
       "text": {
         "en": "Most likely to start dancing when there's no music",
         "fa": "به احتمال زیاد بدون موزیک هم شروع می‌کنه به رقصیدن"
-      }
+      },
+      "intensity": "family"
     },
     {
       "id": "mlt-fix-everything",
-      "intensity": "casual",
-      "emoji": "🔧",
       "text": {
         "en": "Most likely to try to fix something and make it worse",
         "fa": "به احتمال زیاد می‌خواد یه چیزی رو درست کنه ولی خراب‌ترش می‌کنه"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-laugh-own-joke",
-      "intensity": "family",
-      "emoji": "😆",
       "text": {
         "en": "Most likely to laugh at their own jokes the hardest",
         "fa": "به احتمال زیاد بیشتر از همه به جوک خودش می‌خنده"
-      }
+      },
+      "intensity": "family"
     },
     {
       "id": "mlt-google-symptoms",
-      "intensity": "casual",
-      "emoji": "🩺",
       "text": {
         "en": "Most likely to google a symptom and assume the worst",
         "fa": "به احتمال زیاد یه علامت رو سرچ می‌کنه و فکر می‌کنه داره می‌میره"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-stay-calm-crisis",
-      "intensity": "casual",
-      "emoji": "🧊",
       "text": {
         "en": "Most likely to stay calm in a crisis",
         "fa": "به احتمال زیاد تو شرایط بحرانی خونسردیش رو حفظ می‌کنه"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-leave-on-read",
-      "intensity": "casual",
-      "emoji": "👀",
       "text": {
         "en": "Most likely to leave you on read for days",
         "fa": "به احتمال زیاد پیامت رو روزها سین می‌کنه و جواب نمی‌ده"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-organize-everything",
-      "intensity": "family",
-      "emoji": "🗂️",
       "text": {
         "en": "Most likely to color-code and label everything",
         "fa": "به احتمال زیاد همه‌چی رو دسته‌بندی و برچسب‌گذاری می‌کنه"
-      }
+      },
+      "intensity": "family"
     },
     {
       "id": "mlt-share-snack",
-      "intensity": "family",
-      "emoji": "🍫",
       "text": {
         "en": "Most likely to share their last snack with you",
         "fa": "به احتمال زیاد آخرین خوراکیش رو هم باهات تقسیم می‌کنه"
-      }
+      },
+      "intensity": "family"
     },
     {
       "id": "mlt-c-x001",
-      "intensity": "family",
-      "emoji": "😭",
       "text": {
         "en": "Most likely to cry at a wedding",
         "fa": "به احتمال زیاد سر عروسی گریه‌اش بگیره"
-      }
+      },
+      "intensity": "family"
     },
     {
       "id": "mlt-c-x002",
-      "intensity": "casual",
-      "emoji": "💰",
       "text": {
         "en": "Most likely to become a millionaire",
         "fa": "به احتمال زیاد یه روز میلیونر بشه"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-c-x003",
-      "intensity": "family",
-      "emoji": "🎂",
       "text": {
         "en": "Most likely to forget their own birthday",
         "fa": "به احتمال زیاد تولد خودشو یادش بره"
-      }
+      },
+      "intensity": "family"
     },
     {
       "id": "mlt-c-x004",
-      "intensity": "casual",
-      "emoji": "⭐",
       "text": {
         "en": "Most likely to become famous",
         "fa": "به احتمال زیاد یه روز معروف بشه"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-c-x005",
-      "intensity": "casual",
-      "emoji": "🧟",
       "text": {
         "en": "Most likely to survive a zombie apocalypse",
         "fa": "به احتمال زیاد تو حمله زامبی‌ها زنده بمونه"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-c-x006",
-      "intensity": "family",
-      "emoji": "🐱",
       "text": {
         "en": "Most likely to adopt ten cats",
         "fa": "به احتمال زیاد ده تا گربه نگه داره"
-      }
+      },
+      "intensity": "family"
     },
     {
       "id": "mlt-c-x007",
-      "intensity": "casual",
-      "emoji": "🤕",
       "text": {
         "en": "Most likely to trip in public",
         "fa": "به احتمال زیاد جلوی جمع زمین بخوره"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-c-x008",
-      "intensity": "family",
-      "emoji": "🗺️",
       "text": {
         "en": "Most likely to get lost using a map",
         "fa": "به احتمال زیاد با وجود نقشه هم گم بشه"
-      }
+      },
+      "intensity": "family"
     },
     {
       "id": "mlt-c-x009",
-      "intensity": "casual",
-      "emoji": "😂",
       "text": {
         "en": "Most likely to laugh at the wrong moment",
         "fa": "به احتمال زیاد سر بزنگاه خنده‌اش بگیره"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-c-x010",
-      "intensity": "family",
-      "emoji": "👩‍🏫",
       "text": {
         "en": "Most likely to become a teacher",
         "fa": "به احتمال زیاد یه روز معلم بشه"
-      }
+      },
+      "intensity": "family"
     },
     {
       "id": "mlt-c-x011",
-      "intensity": "casual",
-      "emoji": "💼",
       "text": {
         "en": "Most likely to start a business",
         "fa": "به احتمال زیاد یه کسب‌وکار راه بندازه"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-c-x012",
-      "intensity": "family",
-      "emoji": "😴",
       "text": {
         "en": "Most likely to fall asleep during a movie",
         "fa": "به احتمال زیاد وسط فیلم خوابش ببره"
-      }
+      },
+      "intensity": "family"
     },
     {
       "id": "mlt-c-x013",
-      "intensity": "family",
-      "emoji": "🚿",
       "text": {
         "en": "Most likely to sing in the shower",
         "fa": "به احتمال زیاد زیر دوش آواز بخونه"
-      }
+      },
+      "intensity": "family"
     },
     {
       "id": "mlt-c-x014",
-      "intensity": "casual",
-      "emoji": "🏆",
       "text": {
         "en": "Most likely to win an award",
         "fa": "به احتمال زیاد یه جایزه ببره"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-c-x015",
-      "intensity": "casual",
-      "emoji": "🗣️",
       "text": {
         "en": "Most likely to talk to strangers",
         "fa": "به احتمال زیاد با غریبه‌ها سر صحبت رو باز کنه"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-c-x016",
-      "intensity": "casual",
-      "emoji": "🍕",
       "text": {
         "en": "Most likely to eat the last slice of pizza",
         "fa": "به احتمال زیاد آخرین تکه پیتزا رو بخوره"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-c-x017",
-      "intensity": "family",
-      "emoji": "👨‍🍳",
       "text": {
         "en": "Most likely to become a chef",
         "fa": "به احتمال زیاد یه روز سرآشپز بشه"
-      }
+      },
+      "intensity": "family"
     },
     {
       "id": "mlt-c-x018",
-      "intensity": "casual",
-      "emoji": "📱",
       "text": {
         "en": "Most likely to break a phone screen",
         "fa": "به احتمال زیاد صفحه گوشیش رو بشکنه"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-c-x019",
-      "intensity": "casual",
-      "emoji": "🌍",
       "text": {
         "en": "Most likely to travel the world",
         "fa": "به احتمال زیاد دور دنیا رو بگرده"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-c-x020",
-      "intensity": "family",
-      "emoji": "🩺",
       "text": {
         "en": "Most likely to become a doctor",
         "fa": "به احتمال زیاد یه روز دکتر بشه"
-      }
+      },
+      "intensity": "family"
     },
     {
       "id": "mlt-c-x021",
-      "intensity": "casual",
-      "emoji": "💃",
       "text": {
         "en": "Most likely to win a dance-off",
         "fa": "به احتمال زیاد تو مسابقه رقص برنده بشه"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-c-x022",
-      "intensity": "casual",
-      "emoji": "🍫",
       "text": {
         "en": "Most likely to spend all their money on snacks",
         "fa": "به احتمال زیاد تمام پولش رو خرج خوراکی کنه"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-c-x023",
-      "intensity": "casual",
-      "emoji": "⏰",
       "text": {
         "en": "Most likely to be late to their own party",
         "fa": "به احتمال زیاد به مهمونی خودش هم دیر برسه"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-c-x024",
-      "intensity": "family",
-      "emoji": "📚",
       "text": {
         "en": "Most likely to read every book in the library",
         "fa": "به احتمال زیاد همه کتاب‌های کتابخونه رو بخونه"
-      }
+      },
+      "intensity": "family"
     },
     {
       "id": "mlt-c-x025",
-      "intensity": "family",
-      "emoji": "🏅",
       "text": {
         "en": "Most likely to become a famous athlete",
         "fa": "به احتمال زیاد یه ورزشکار معروف بشه"
-      }
+      },
+      "intensity": "family"
     },
     {
       "id": "mlt-c-x026",
-      "intensity": "spicy",
-      "emoji": "😤",
       "text": {
         "en": "Most likely to start an argument over nothing",
         "fa": "به احتمال زیاد سر هیچ و پوچ دعوا راه بندازه"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-c-x027",
-      "intensity": "spicy",
-      "emoji": "📲",
       "text": {
         "en": "Most likely to send a risky text",
         "fa": "به احتمال زیاد یه پیام جسورانه بفرسته"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-c-x028",
-      "intensity": "spicy",
-      "emoji": "😏",
       "text": {
         "en": "Most likely to flirt with the waiter",
         "fa": "به احتمال زیاد با پیشخدمت لاس بزنه"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-c-x029",
-      "intensity": "casual",
-      "emoji": "🎤",
       "text": {
         "en": "Most likely to become a stand-up comedian",
         "fa": "به احتمال زیاد یه روز کمدین استندآپ بشه"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-c-x030",
-      "intensity": "family",
-      "emoji": "🎉",
       "text": {
         "en": "Most likely to plan a surprise party",
         "fa": "به احتمال زیاد یه جشن سورپرایز ترتیب بده"
-      }
+      },
+      "intensity": "family"
     },
     {
       "id": "mlt-c-x031",
-      "intensity": "spicy",
-      "emoji": "🕺",
       "text": {
         "en": "Most likely to dance on the table",
         "fa": "به احتمال زیاد روی میز برقصه"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-c-x032",
-      "intensity": "casual",
-      "emoji": "🎰",
       "text": {
         "en": "Most likely to win the lottery",
         "fa": "به احتمال زیاد تو بخت‌آزمایی برنده بشه"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-c-x033",
-      "intensity": "casual",
-      "emoji": "🏛️",
       "text": {
         "en": "Most likely to become a politician",
         "fa": "به احتمال زیاد یه روز سیاستمدار بشه"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-c-x034",
-      "intensity": "spicy",
-      "emoji": "💉",
       "text": {
         "en": "Most likely to get a tattoo on a dare",
         "fa": "به احتمال زیاد سر شرط‌بندی خالکوبی کنه"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-c-x035",
-      "intensity": "casual",
-      "emoji": "🤔",
       "text": {
         "en": "Most likely to forget someone's name right after meeting them",
         "fa": "به احتمال زیاد بلافاصله بعد آشنایی اسم طرف رو یادش بره"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-c-x036",
-      "intensity": "casual",
-      "emoji": "🎬",
       "text": {
         "en": "Most likely to become a movie star",
         "fa": "به احتمال زیاد یه روز ستاره سینما بشه"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-c-x037",
-      "intensity": "casual",
-      "emoji": "💭",
       "text": {
         "en": "Most likely to overthink a text message",
         "fa": "به احتمال زیاد روی یه پیام ساده بیش از حد فکر کنه"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-c-x038",
-      "intensity": "family",
-      "emoji": "🧠",
       "text": {
         "en": "Most likely to give the best advice",
         "fa": "به احتمال زیاد بهترین نصیحت‌ها رو بده"
-      }
+      },
+      "intensity": "family"
     },
     {
       "id": "mlt-c-x039",
-      "intensity": "spicy",
-      "emoji": "👻",
       "text": {
         "en": "Most likely to ghost someone",
         "fa": "به احتمال زیاد یهو طرف رو بی‌جواب بذاره و غیب بشه"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-c-x040",
-      "intensity": "family",
-      "emoji": "🥺",
       "text": {
         "en": "Most likely to cry over a sad commercial",
         "fa": "به احتمال زیاد با یه تبلیغ غم‌انگیز گریه‌اش بگیره"
-      }
+      },
+      "intensity": "family"
     },
     {
       "id": "mlt-c-x041",
-      "intensity": "casual",
-      "emoji": "📹",
       "text": {
         "en": "Most likely to become a successful YouTuber",
         "fa": "به احتمال زیاد یه یوتیوبر موفق بشه"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-c-x042",
-      "intensity": "casual",
-      "emoji": "🙊",
       "text": {
         "en": "Most likely to get caught talking to themselves",
         "fa": "به احتمال زیاد موقع حرف زدن با خودش مچش رو بگیرن"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-c-x043",
-      "intensity": "casual",
-      "emoji": "💻",
       "text": {
         "en": "Most likely to become a workaholic",
         "fa": "به احتمال زیاد معتاد به کار بشه"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-c-x044",
-      "intensity": "spicy",
-      "emoji": "🌙",
       "text": {
         "en": "Most likely to text their ex at midnight",
         "fa": "به احتمال زیاد نصف‌شب به اکسش پیام بده"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-c-x045",
-      "intensity": "family",
-      "emoji": "🎲",
       "text": {
         "en": "Most likely to win every board game",
         "fa": "به احتمال زیاد تو هر بازی رومیزی برنده بشه"
-      }
+      },
+      "intensity": "family"
     },
     {
       "id": "mlt-c-x046",
-      "intensity": "family",
-      "emoji": "✍️",
       "text": {
         "en": "Most likely to become a famous author",
         "fa": "به احتمال زیاد یه نویسنده معروف بشه"
-      }
+      },
+      "intensity": "family"
     },
     {
       "id": "mlt-c-x047",
-      "intensity": "casual",
-      "emoji": "👗",
       "text": {
         "en": "Most likely to spend an hour choosing an outfit",
         "fa": "به احتمال زیاد یه ساعت سر انتخاب لباس وقت بذاره"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-c-x048",
-      "intensity": "family",
-      "emoji": "🤱",
       "text": {
         "en": "Most likely to become the group's mom friend",
         "fa": "به احتمال زیاد نقش مامان گروه رو بازی کنه"
-      }
+      },
+      "intensity": "family"
     },
     {
       "id": "mlt-c-x049",
-      "intensity": "casual",
-      "emoji": "🛸",
       "text": {
         "en": "Most likely to start a conspiracy theory",
         "fa": "به احتمال زیاد یه نظریه توطئه راه بندازه"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-c-x050",
-      "intensity": "casual",
-      "emoji": "🎣",
       "text": {
         "en": "Most likely to fall for a scam",
         "fa": "به احتمال زیاد گول یه کلاهبرداری رو بخوره"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-c-x051",
-      "intensity": "spicy",
-      "emoji": "😍",
       "text": {
         "en": "Most likely to brag about their crush",
         "fa": "به احتمال زیاد درباره کراشش پز بده"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-c-x052",
-      "intensity": "casual",
-      "emoji": "📉",
       "text": {
         "en": "Most likely to become a millionaire then lose it all",
         "fa": "به احتمال زیاد میلیونر بشه و بعد همه‌اش رو از دست بده"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-c-x053",
-      "intensity": "casual",
-      "emoji": "🎶",
       "text": {
         "en": "Most likely to win a karaoke contest",
         "fa": "به احتمال زیاد تو مسابقه کارائوکه برنده بشه"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-c-x054",
-      "intensity": "family",
-      "emoji": "🤐",
       "text": {
         "en": "Most likely to keep a secret forever",
         "fa": "به احتمال زیاد یه راز رو تا ابد نگه داره"
-      }
+      },
+      "intensity": "family"
     },
     {
       "id": "mlt-c-x055",
-      "intensity": "spicy",
-      "emoji": "🙈",
       "text": {
         "en": "Most likely to spill a secret accidentally",
         "fa": "به احتمال زیاد ناخواسته یه راز رو لو بده"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-c-x056",
-      "intensity": "family",
-      "emoji": "🎨",
       "text": {
         "en": "Most likely to become a famous artist",
         "fa": "به احتمال زیاد یه هنرمند معروف بشه"
-      }
+      },
+      "intensity": "family"
     },
     {
       "id": "mlt-c-x057",
-      "intensity": "casual",
-      "emoji": "🤣",
       "text": {
         "en": "Most likely to start crying from laughing too hard",
         "fa": "به احتمال زیاد از زور خنده اشکش دربیاد"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-c-x058",
-      "intensity": "casual",
-      "emoji": "✈️",
       "text": {
         "en": "Most likely to move to another country",
         "fa": "به احتمال زیاد به یه کشور دیگه مهاجرت کنه"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-c-x059",
-      "intensity": "spicy",
-      "emoji": "🚓",
       "text": {
         "en": "Most likely to flirt their way out of a parking ticket",
         "fa": "به احتمال زیاد با دلبری از جریمه پارکینگ در بره"
-      }
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-1",
+      "text": {
+        "en": "show up an hour late to every hangout",
+        "fa": "به هر دورهمی یه ساعت دیر برسه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-2",
+      "text": {
+        "en": "have a friend in every single city",
+        "fa": "تو هر شهری یه دوست داشته باشه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-3",
+      "text": {
+        "en": "reply to a text three days later",
+        "fa": "سه روز بعد جواب پیام رو بده"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-4",
+      "text": {
+        "en": "organize the whole group trip",
+        "fa": "کل سفر گروهی رو برنامه‌ریزی کنه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-5",
+      "text": {
+        "en": "forget someone's name right after meeting them",
+        "fa": "بلافاصله بعد آشنایی اسم طرف رو فراموش کنه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-6",
+      "text": {
+        "en": "become best friends with a stranger on the bus",
+        "fa": "تو اتوبوس با یه غریبه صمیمی‌ترین دوست بشه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-7",
+      "text": {
+        "en": "start a group chat that nobody asked for",
+        "fa": "یه گروه چت بسازه که کسی نخواسته بوده"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-8",
+      "text": {
+        "en": "be the last one to leave the party",
+        "fa": "آخرین نفری باشه که از مهمونی میره"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-9",
+      "text": {
+        "en": "give the best advice but never take it",
+        "fa": "بهترین نصیحت رو بده ولی خودش گوش نده"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-10",
+      "text": {
+        "en": "cancel plans at the last minute",
+        "fa": "تو آخرین لحظه قرار رو کنسل کنه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-11",
+      "text": {
+        "en": "remember everyone's birthday",
+        "fa": "تولد همه رو یادش باشه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-12",
+      "text": {
+        "en": "talk to the waiter like an old friend",
+        "fa": "با گارسون مثل یه دوست قدیمی حرف بزنه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-13",
+      "text": {
+        "en": "keep a friendship alive for twenty years",
+        "fa": "یه دوستی رو بیست سال زنده نگه داره"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-14",
+      "text": {
+        "en": "bring an uninvited plus-one to dinner",
+        "fa": "یه مهمون دعوت‌نشده با خودش به شام بیاره"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-15",
+      "text": {
+        "en": "start the group's inside jokes",
+        "fa": "جوک‌های خودمونی گروه رو راه بندازه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-16",
+      "text": {
+        "en": "fall asleep first at every sleepover",
+        "fa": "تو هر شب‌نشینی اول از همه خوابش ببره"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-17",
+      "text": {
+        "en": "reconnect with a friend after years of silence",
+        "fa": "بعد سال‌ها سکوت دوباره با یه دوست ارتباط بگیره"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-18",
+      "text": {
+        "en": "be the designated driver every time",
+        "fa": "هر دفعه رانندهٔ مشخص‌شدهٔ گروه باشه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-19",
+      "text": {
+        "en": "overshare a secret to the wrong person",
+        "fa": "یه راز رو به آدم اشتباهی لو بده"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-20",
+      "text": {
+        "en": "host everyone at their place every weekend",
+        "fa": "هر آخر هفته همه رو خونه‌شون مهمون کنه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-21",
+      "text": {
+        "en": "text back with just one word",
+        "fa": "فقط با یه کلمه جواب پیام بده"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-22",
+      "text": {
+        "en": "make friends faster than anyone in a new place",
+        "fa": "تو یه جای جدید سریع‌تر از همه دوست پیدا کنه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-23",
+      "text": {
+        "en": "start a friendly debate at the dinner table",
+        "fa": "سر میز شام یه بحث دوستانه راه بندازه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-24",
+      "text": {
+        "en": "keep the conversation going when it goes quiet",
+        "fa": "وقتی جمع ساکت میشه گفت‌وگو رو ادامه بده"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-25",
+      "text": {
+        "en": "lose touch with a friend after moving away",
+        "fa": "بعد از نقل‌مکان با یه دوست رابطه‌اش رو از دست بده"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-26",
+      "text": {
+        "en": "plan a surprise party for someone",
+        "fa": "برای یه نفر مهمونی غافلگیرکننده بگیره"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-27",
+      "text": {
+        "en": "be the friend everyone calls for help",
+        "fa": "دوستی باشه که همه برای کمک بهش زنگ می‌زنن"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-28",
+      "text": {
+        "en": "tell the same story at every gathering",
+        "fa": "تو هر دورهمی همون داستان همیشگی رو تعریف کنه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-29",
+      "text": {
+        "en": "split the bill down to the last coin",
+        "fa": "صورت‌حساب رو تا آخرین سکه دقیق تقسیم کنه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-30",
+      "text": {
+        "en": "always pick up the whole tab",
+        "fa": "همیشه کل حساب رو خودش حساب کنه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-31",
+      "text": {
+        "en": "crash on a friend's couch unannounced",
+        "fa": "بدون خبر روی کاناپهٔ یه دوست بخوابه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-32",
+      "text": {
+        "en": "keep everyone updated in the group chat",
+        "fa": "همه رو تو گروه چت در جریان بذاره"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-33",
+      "text": {
+        "en": "introduce two friends who become a couple",
+        "fa": "دو دوست رو معرفی کنه که زوج بشن"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-34",
+      "text": {
+        "en": "ghost a new acquaintance for no reason",
+        "fa": "بی‌دلیل یه آشنای جدید رو نادیده بگیره"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-35",
+      "text": {
+        "en": "be the peacemaker in every group argument",
+        "fa": "تو هر دعوای گروهی نقش آشتی‌دهنده رو داشته باشه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-36",
+      "text": {
+        "en": "show up to a party with snacks for everyone",
+        "fa": "با خوراکی برای همه به مهمونی بیاد"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-37",
+      "text": {
+        "en": "remember an embarrassing story from years ago",
+        "fa": "یه داستان خجالت‌آور از سال‌ها پیش رو یادش باشه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-38",
+      "text": {
+        "en": "turn a small get-together into a huge event",
+        "fa": "یه دورهمی کوچیک رو به یه برنامهٔ بزرگ تبدیل کنه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-39",
+      "text": {
+        "en": "be the first to know all the gossip",
+        "fa": "اولین نفری باشه که از همهٔ شایعه‌ها خبردار میشه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-40",
+      "text": {
+        "en": "add new people to the friend group all the time",
+        "fa": "همیشه آدم‌های جدید رو به جمع دوستان اضافه کنه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-41",
+      "text": {
+        "en": "stay friends with an ex's whole family",
+        "fa": "با کل خانوادهٔ کسی که قبلاً باهاش بوده دوست بمونه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-42",
+      "text": {
+        "en": "send a meme instead of replying properly",
+        "fa": "به جای جواب درست‌وحسابی یه میم بفرسته"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-43",
+      "text": {
+        "en": "keep a long-distance friendship strong",
+        "fa": "یه دوستی از راه دور رو محکم نگه داره"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-44",
+      "text": {
+        "en": "be the loudest one in the whole group",
+        "fa": "پرسروصداترین نفر کل جمع باشه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-45",
+      "text": {
+        "en": "throw a reunion to get the old crew together",
+        "fa": "یه دورهمی بگیره تا رفقای قدیمی رو دور هم جمع کنه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-46",
+      "text": {
+        "en": "have 47 browser tabs open right now",
+        "fa": "همین الان ۴۷ تا تب مرورگر باز داشته باشه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-47",
+      "text": {
+        "en": "reply-all to the entire company by accident",
+        "fa": "به اشتباه به کل شرکت ریپلای آل بزنه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-48",
+      "text": {
+        "en": "fall for an obvious phishing email",
+        "fa": "گول یه ایمیل فیشینگ تابلو رو بخوره"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-49",
+      "text": {
+        "en": "google something instead of asking the person next to them",
+        "fa": "به‌جای پرسیدن از بغل‌دستی‌شون توی گوگل سرچ کنه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-50",
+      "text": {
+        "en": "forget their password and reset it every single time",
+        "fa": "رمزشون رو فراموش کنن و هر بار ریستش کنن"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-51",
+      "text": {
+        "en": "argue with a stranger in the comments at 2am",
+        "fa": "ساعت دو نصفه‌شب توی کامنت‌ها با یه غریبه بحث کنه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-52",
+      "text": {
+        "en": "keep their phone on 1% battery for hours",
+        "fa": "گوشی‌شون رو ساعت‌ها روی یک درصد باتری نگه داره"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-53",
+      "text": {
+        "en": "have over 30,000 unread emails",
+        "fa": "بیشتر از سی هزار ایمیل خونده‌نشده داشته باشه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-54",
+      "text": {
+        "en": "accidentally like an ex's photo from 2014",
+        "fa": "اتفاقی عکس سال ۲۰۱۴ کراش قبلی‌شون رو لایک کنه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-55",
+      "text": {
+        "en": "believe a fake news headline without reading the article",
+        "fa": "یه تیتر خبر جعلی رو بدون خوندن مقاله باور کنه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-56",
+      "text": {
+        "en": "screen-record everything just in case",
+        "fa": "محض احتیاط از همه‌چی اسکرین‌رکورد بگیره"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-57",
+      "text": {
+        "en": "ask Siri something embarrassing out loud in public",
+        "fa": "توی جمع بلندبلند یه سؤال خجالت‌آور از سیری بپرسه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-58",
+      "text": {
+        "en": "have the same password for every account",
+        "fa": "برای همه‌ی حساب‌هاش یه رمز واحد داشته باشه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-59",
+      "text": {
+        "en": "rage-quit a video game and throw the controller",
+        "fa": "وسط بازی عصبانی بشه و دسته رو پرت کنه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-60",
+      "text": {
+        "en": "leave someone on read for three days",
+        "fa": "پیام یه نفر رو سه روز سین کنه و جواب نده"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-61",
+      "text": {
+        "en": "buy something from an Instagram ad at midnight",
+        "fa": "نصفه‌شب از یه تبلیغ اینستاگرام چیزی بخره"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-62",
+      "text": {
+        "en": "watch a 10-minute tutorial to fix a 2-minute task",
+        "fa": "برای یه کار دو دقیقه‌ای یه آموزش ده‌دقیقه‌ای ببینه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-63",
+      "text": {
+        "en": "never update their apps until the phone forces them",
+        "fa": "تا وقتی گوشی مجبورشون نکنه اپ‌هاشون رو آپدیت نکنن"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-64",
+      "text": {
+        "en": "have 200 unfinished Netflix shows",
+        "fa": "دویست تا سریال نیمه‌تموم توی نتفلیکس داشته باشه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-65",
+      "text": {
+        "en": "share their location with way too many people",
+        "fa": "موقعیت مکانی‌شون رو با کلی آدم اضافی به اشتراک بذارن"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-66",
+      "text": {
+        "en": "send a voice message that's eight minutes long",
+        "fa": "یه ویس هشت‌دقیقه‌ای بفرسته"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-67",
+      "text": {
+        "en": "get scammed by a too-good-to-be-true online deal",
+        "fa": "گول یه پیشنهاد آنلاینِ خیلی‌خوب‌که‌واقعی‌نیست رو بخوره"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-68",
+      "text": {
+        "en": "refuse to learn keyboard shortcuts ever",
+        "fa": "حاضر نباشه هیچ‌وقت میانبرهای کیبورد رو یاد بگیره"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-69",
+      "text": {
+        "en": "post a typo and edit it ten times",
+        "fa": "یه پست با غلط تایپی بذاره و ده بار ویرایشش کنه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-70",
+      "text": {
+        "en": "keep 9,000 photos and never delete a single one",
+        "fa": "نه هزار تا عکس نگه داره و هیچ‌کدوم رو پاک نکنه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-71",
+      "text": {
+        "en": "start a podcast that no one asked for",
+        "fa": "یه پادکست راه بندازه که هیچ‌کس درخواستش رو نداده"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-72",
+      "text": {
+        "en": "believe their phone is listening to their conversations",
+        "fa": "باور کنه گوشی‌شون داره به حرف‌هاشون گوش می‌ده"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-73",
+      "text": {
+        "en": "open the laptop just to close it again",
+        "fa": "لپ‌تاپ رو باز کنه فقط برای اینکه دوباره ببندتش"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-74",
+      "text": {
+        "en": "send a text to the wrong group chat",
+        "fa": "یه پیام رو اشتباهی توی گروه چت اشتباه بفرسته"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-75",
+      "text": {
+        "en": "ignore every software update for two years",
+        "fa": "دو سال هر آپدیت نرم‌افزاری رو نادیده بگیره"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-76",
+      "text": {
+        "en": "have their ringtone go off in the quietest moment",
+        "fa": "زنگ گوشی‌شون توی ساکت‌ترین لحظه به صدا دربیاد"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-77",
+      "text": {
+        "en": "fall down a Wikipedia rabbit hole for three hours",
+        "fa": "سه ساعت توی هزارتوی ویکی‌پدیا گم بشه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-78",
+      "text": {
+        "en": "type with one finger super slowly",
+        "fa": "با یه انگشت و خیلی آروم تایپ کنه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-79",
+      "text": {
+        "en": "forget to mute themselves on a video call",
+        "fa": "یادشون بره توی تماس تصویری خودشون رو میوت کنن"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-80",
+      "text": {
+        "en": "have an embarrassing autocorrect fail",
+        "fa": "یه سوتیِ خجالت‌آور تصحیح خودکار داشته باشن"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-81",
+      "text": {
+        "en": "download a sketchy app and get a virus",
+        "fa": "یه اپ مشکوک دانلود کنه و ویروس بگیره"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-82",
+      "text": {
+        "en": "take a screenshot instead of saving the actual file",
+        "fa": "به‌جای ذخیره‌ی خود فایل ازش اسکرین‌شات بگیره"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-83",
+      "text": {
+        "en": "ghost everyone and then post a vacation photo",
+        "fa": "همه رو قال بذاره و بعد یه عکس مسافرت بذاره"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-84",
+      "text": {
+        "en": "yell 'is it loading?' at a slow internet connection",
+        "fa": "سر اینترنت کند داد بزنه «داره لود می‌شه؟»"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-85",
+      "text": {
+        "en": "set 15 alarms and snooze every one",
+        "fa": "پونزده تا آلارم بذاره و همه‌شون رو به تعویق بندازه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-86",
+      "text": {
+        "en": "keep an old phone with a cracked screen forever",
+        "fa": "یه گوشی قدیمی با صفحه‌ی شکسته رو تا ابد نگه داره"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-87",
+      "text": {
+        "en": "comment 'first' on a video they didn't watch",
+        "fa": "زیر یه ویدیویی که ندیدن کامنت بذارن «اول»"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-88",
+      "text": {
+        "en": "accidentally start sharing their whole screen",
+        "fa": "به اشتباه کل صفحه‌نمایششون رو به اشتراک بذارن"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-89",
+      "text": {
+        "en": "trust a horoscope app more than the weather app",
+        "fa": "به اپ طالع‌بینی بیشتر از اپ هواشناسی اعتماد کنه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-90",
+      "text": {
+        "en": "unsend a message right after everyone saw it",
+        "fa": "درست بعد از اینکه همه دیدنش پیام رو پس بگیره"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-91",
+      "text": {
+        "en": "forget to pay a bill until the final warning",
+        "fa": "قبض رو تا اخطار آخر یادش بره پرداخت کنه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-92",
+      "text": {
+        "en": "impulse-buy something they'll never use",
+        "fa": "یهویی یه چیزی بخره که هیچ‌وقت ازش استفاده نکنه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-93",
+      "text": {
+        "en": "have a fridge full of expired condiments",
+        "fa": "یخچالش پر از سس‌های تاریخ‌گذشته باشه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-94",
+      "text": {
+        "en": "call a parent to ask how to do taxes",
+        "fa": "به پدر یا مادرش زنگ بزنه بپرسه مالیات چطوری حساب میشه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-95",
+      "text": {
+        "en": "keep way too many subscriptions they forgot about",
+        "fa": "کلی اشتراک یادش رفته داشته باشه که پولش میره"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-96",
+      "text": {
+        "en": "blow the whole paycheck the first weekend",
+        "fa": "همهٔ حقوقش رو همون آخر هفتهٔ اول خرج کنه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-97",
+      "text": {
+        "en": "have an empty savings account but a full closet",
+        "fa": "حساب پس‌اندازش خالی باشه ولی کمدش پر"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-98",
+      "text": {
+        "en": "return something just before the deadline",
+        "fa": "یه جنس رو درست قبل از آخرین مهلت پس بده"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-99",
+      "text": {
+        "en": "forget where they parked at the mall",
+        "fa": "یادش بره تو پارکینگ پاساژ کجا پارک کرده"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-100",
+      "text": {
+        "en": "buy the extended warranty every single time",
+        "fa": "هر بار گارانتی تمدیدشده رو هم بخره"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-101",
+      "text": {
+        "en": "survive a week on instant noodles before payday",
+        "fa": "تا روز حقوق یه هفته با نودل آماده سر کنه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-102",
+      "text": {
+        "en": "have a drawer full of mystery cables",
+        "fa": "یه کشو پر از کابل‌های ناشناس داشته باشه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-103",
+      "text": {
+        "en": "negotiate a discount on literally anything",
+        "fa": "سر هر چیزی که شده چونه بزنه تخفیف بگیره"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-104",
+      "text": {
+        "en": "put off a doctor's appointment for months",
+        "fa": "چند ماه نوبت دکتر رو عقب بندازه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-105",
+      "text": {
+        "en": "keep receipts for years just in case",
+        "fa": "رسیدها رو سال‌ها نگه داره محض احتیاط"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-106",
+      "text": {
+        "en": "max out a credit card on a vacation",
+        "fa": "کارت اعتباری رو سر یه سفر تا ته خرج کنه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-107",
+      "text": {
+        "en": "have a budgeting app they never open",
+        "fa": "یه اپ مدیریت بودجه داشته باشه که هیچ‌وقت بازش نکنه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-108",
+      "text": {
+        "en": "tip generously even when they can't afford it",
+        "fa": "حتی وقتی پول نداره دست‌ودلباز انعام بده"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-109",
+      "text": {
+        "en": "forget to cancel a free trial in time",
+        "fa": "یادش بره به‌موقع دورهٔ آزمایشی رایگان رو لغو کنه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-110",
+      "text": {
+        "en": "own three half-finished home projects",
+        "fa": "سه‌تا پروژهٔ نیمه‌کارهٔ خونه داشته باشه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-111",
+      "text": {
+        "en": "panic when the boss asks for a quick chat",
+        "fa": "وقتی رئیس بگه بیا یه صحبت کوتاه کنیم هول بشه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-112",
+      "text": {
+        "en": "keep hitting snooze and almost miss work",
+        "fa": "مدام آلارم رو خاموش کنه و نزدیک باشه دیرش بشه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-113",
+      "text": {
+        "en": "spend more on coffee than on groceries",
+        "fa": "بیشتر از خرید خونه پول قهوه بده"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-114",
+      "text": {
+        "en": "hoard loyalty cards they never redeem",
+        "fa": "کلی کارت باشگاه مشتری جمع کنه که هیچ‌وقت ازشون استفاده نکنه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-115",
+      "text": {
+        "en": "buy in bulk and let half of it spoil",
+        "fa": "عمده بخره و نصفش خراب بشه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-116",
+      "text": {
+        "en": "avoid checking their bank balance for weeks",
+        "fa": "هفته‌ها از دیدن موجودی حسابش طفره بره"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-117",
+      "text": {
+        "en": "fix something with tape instead of calling a pro",
+        "fa": "به‌جای خبر کردن متخصص یه چیزی رو با چسب درست کنه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-118",
+      "text": {
+        "en": "lend money and never see it again",
+        "fa": "پول قرض بده و دیگه پسش نگیره"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-119",
+      "text": {
+        "en": "have a junk drawer that won't close",
+        "fa": "یه کشوی خرت‌وپرت داشته باشه که بسته نمیشه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-120",
+      "text": {
+        "en": "start a side hustle that lasts a week",
+        "fa": "یه شغل جانبی شروع کنه که یه هفته بیشتر دوام نیاره"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-121",
+      "text": {
+        "en": "refuse to read the instruction manual",
+        "fa": "حاضر نشه دفترچهٔ راهنما رو بخونه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-122",
+      "text": {
+        "en": "buy a plant and forget to water it",
+        "fa": "یه گلدون بخره و یادش بره آبش بده"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-123",
+      "text": {
+        "en": "clip coupons but never use them at checkout",
+        "fa": "کوپن تخفیف جمع کنه ولی موقع پرداخت ازشون استفاده نکنه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-124",
+      "text": {
+        "en": "reschedule the dentist three times in a row",
+        "fa": "سه بار پشت‌سرهم نوبت دندون‌پزشکی رو عقب بندازه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-125",
+      "text": {
+        "en": "keep the heating low to save on the bill",
+        "fa": "بخاری رو کم کنه که قبضش کمتر بشه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-126",
+      "text": {
+        "en": "lose a debit card and find it a month later",
+        "fa": "کارت بانکیش رو گم کنه و یه ماه بعد پیداش کنه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-127",
+      "text": {
+        "en": "do all their laundry only when nothing's left to wear",
+        "fa": "فقط وقتی هیچ لباسی برای پوشیدن نمونده لباس‌هاش رو بشوره"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-128",
+      "text": {
+        "en": "argue with a customer service bot for an hour",
+        "fa": "یه ساعت با ربات پشتیبانی مشتری کل‌کل کنه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-129",
+      "text": {
+        "en": "buy a gym membership in January and quit in February",
+        "fa": "دی‌ماه عضو باشگاه بشه و بهمن بی‌خیال بشه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-130",
+      "text": {
+        "en": "keep a piggy bank they never crack open",
+        "fa": "یه قلک داشته باشه که هیچ‌وقت نمی‌شکوندش"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-131",
+      "text": {
+        "en": "order takeout because the kitchen sink is full",
+        "fa": "چون ظرف‌ها روی هم تلنبار شده غذا سفارش بده"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-132",
+      "text": {
+        "en": "forget a friend's birthday and scramble for a gift",
+        "fa": "تولد دوستش رو یادش بره و سراسیمه دنبال کادو بگرده"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-133",
+      "text": {
+        "en": "keep a broken appliance for years to fix someday",
+        "fa": "یه وسیلهٔ خراب رو سال‌ها نگه داره که یه روزی درستش کنه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-134",
+      "text": {
+        "en": "round up every purchase and lose track of spending",
+        "fa": "هر خریدش رو رُند کنه و حساب خرجش از دستش در بره"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-135",
+      "text": {
+        "en": "adopt a stray animal on the spot",
+        "fa": "همون‌جا یه حیوون ولگرد رو سرپرستی کنه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-136",
+      "text": {
+        "en": "write a heartfelt thank-you note",
+        "fa": "یه یادداشت تشکر از ته دل بنویسه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-137",
+      "text": {
+        "en": "give up their seat for a stranger",
+        "fa": "صندلیشو به یه غریبه بده"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-138",
+      "text": {
+        "en": "bake cookies for the new neighbors",
+        "fa": "برای همسایه‌های جدید کلوچه بپزه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-139",
+      "text": {
+        "en": "hug everyone goodbye twice",
+        "fa": "موقع خداحافظی همه رو دو بار بغل کنه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-140",
+      "text": {
+        "en": "cry at a happy wedding",
+        "fa": "تو یه عروسی شاد گریه‌اش بگیره"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-141",
+      "text": {
+        "en": "send good-morning texts to friends",
+        "fa": "برای دوستاش پیام صبح‌بخیر بفرسته"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-142",
+      "text": {
+        "en": "plant a tree for the future",
+        "fa": "برای آینده یه درخت بکاره"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-143",
+      "text": {
+        "en": "compliment a stranger's outfit",
+        "fa": "از لباس یه غریبه تعریف کنه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-144",
+      "text": {
+        "en": "return a lost wallet untouched",
+        "fa": "یه کیف پول گمشده رو دست‌نخورده برگردونه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-145",
+      "text": {
+        "en": "share their last bite of dessert",
+        "fa": "آخرین لقمهٔ دسرشو با بقیه شریک بشه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-146",
+      "text": {
+        "en": "tuck the kids in with a bedtime story",
+        "fa": "بچه‌ها رو با یه قصهٔ قبل خواب بخوابونه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-147",
+      "text": {
+        "en": "leave an encouraging note in a library book",
+        "fa": "تو کتاب کتابخونه یه یادداشت دلگرم‌کننده بذاره"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-148",
+      "text": {
+        "en": "rescue a worm off the sidewalk",
+        "fa": "یه کرم رو از وسط پیاده‌رو نجات بده"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-149",
+      "text": {
+        "en": "call their grandparents just to chat",
+        "fa": "فقط برای گپ زدن به پدربزرگ‌مادربزرگشون زنگ بزنه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-150",
+      "text": {
+        "en": "forgive a friend before they apologize",
+        "fa": "قبل از اینکه دوستش عذرخواهی کنه ببخشدش"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-151",
+      "text": {
+        "en": "make a homemade gift instead of buying one",
+        "fa": "به‌جای خریدن، یه هدیهٔ دست‌ساز درست کنه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-152",
+      "text": {
+        "en": "hold the door open for everyone",
+        "fa": "در رو برای همه باز نگه داره"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-153",
+      "text": {
+        "en": "name every plant in their house",
+        "fa": "روی هر گلدون خونه‌شون اسم بذاره"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-154",
+      "text": {
+        "en": "comfort someone who's crying",
+        "fa": "کسی رو که گریه می‌کنه آروم کنه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-155",
+      "text": {
+        "en": "feed the ducks at the park",
+        "fa": "تو پارک به اردک‌ها غذا بده"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-156",
+      "text": {
+        "en": "save the last slice for someone else",
+        "fa": "آخرین تیکه رو برای یکی دیگه نگه داره"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-157",
+      "text": {
+        "en": "learn sign language to talk to a new friend",
+        "fa": "برای حرف زدن با یه دوست جدید زبان اشاره یاد بگیره"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-158",
+      "text": {
+        "en": "surprise mom with breakfast in bed",
+        "fa": "برای مامان صبحونه رو تو تخت ببره و سورپرایزش کنه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-159",
+      "text": {
+        "en": "cheer the loudest for everyone else",
+        "fa": "از همه بلندتر برای بقیه تشویق کنه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-160",
+      "text": {
+        "en": "keep a friend's secret forever",
+        "fa": "راز یه دوست رو تا ابد نگه داره"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-161",
+      "text": {
+        "en": "donate their allowance to charity",
+        "fa": "پول توجیبیشو به خیریه ببخشه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-162",
+      "text": {
+        "en": "check in on a quiet classmate",
+        "fa": "حال یه همکلاسی کم‌حرف رو بپرسه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-163",
+      "text": {
+        "en": "water the neighbor's plants while they're away",
+        "fa": "وقتی همسایه نیست به گل‌هاش آب بده"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-164",
+      "text": {
+        "en": "make friends with the shyest person in the room",
+        "fa": "با خجالتی‌ترین آدم تو جمع دوست بشه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-165",
+      "text": {
+        "en": "leave a generous tip for good service",
+        "fa": "برای خدمت خوب انعام دست‌ودلبازانه بذاره"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-166",
+      "text": {
+        "en": "sing a lullaby to a fussy baby",
+        "fa": "برای یه نوزاد بی‌قرار لالایی بخونه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-167",
+      "text": {
+        "en": "pick wildflowers to give away",
+        "fa": "گل‌های وحشی بچینه که هدیه بده"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-168",
+      "text": {
+        "en": "send a care package to a homesick friend",
+        "fa": "برای یه دوست دلتنگ خونه یه بستهٔ محبت بفرسته"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-169",
+      "text": {
+        "en": "praise a child's drawing like it's a masterpiece",
+        "fa": "نقاشی یه بچه رو مثل یه شاهکار تحسین کنه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-170",
+      "text": {
+        "en": "volunteer at an animal shelter",
+        "fa": "تو پناهگاه حیوانات داوطلب بشه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-171",
+      "text": {
+        "en": "write a poem about their best friend",
+        "fa": "دربارهٔ بهترین دوستش یه شعر بنویسه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-172",
+      "text": {
+        "en": "share an umbrella with a stranger",
+        "fa": "چترشو با یه غریبه شریک بشه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-173",
+      "text": {
+        "en": "remember exactly how you like your tea",
+        "fa": "دقیقاً یادش بمونه چجوری چاییتو دوست داری"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-174",
+      "text": {
+        "en": "build a snowman with the kids next door",
+        "fa": "با بچه‌های همسایه آدم‌برفی بسازه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-175",
+      "text": {
+        "en": "send flowers just to say thank you",
+        "fa": "فقط برای تشکر گل بفرسته"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-176",
+      "text": {
+        "en": "read the same bedtime book a hundred times",
+        "fa": "یه کتاب قبل خواب رو صد بار بخونه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-177",
+      "text": {
+        "en": "clap for the dishwasher loading they just finished",
+        "fa": "برای چیدن ظرف‌هایی که تازه تموم کرده برای خودش دست بزنه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-178",
+      "text": {
+        "en": "befriend the lonely kid at recess",
+        "fa": "تو زنگ تفریح با بچهٔ تنها دوست بشه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-179",
+      "text": {
+        "en": "ace a test without studying",
+        "fa": "بدون درس خوندن تو امتحان بیست بگیره"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-180",
+      "text": {
+        "en": "raise their hand for every question",
+        "fa": "برای هر سوال دستشو بلند کنه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-181",
+      "text": {
+        "en": "win the school spelling bee",
+        "fa": "مسابقهٔ املای مدرسه رو ببره"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-182",
+      "text": {
+        "en": "forget their homework at home",
+        "fa": "تکالیفشو خونه جا بذاره"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-183",
+      "text": {
+        "en": "become a famous teacher one day",
+        "fa": "یه روز معلم معروفی بشه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-184",
+      "text": {
+        "en": "learn to play three instruments",
+        "fa": "یاد بگیره سه تا ساز بزنه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-185",
+      "text": {
+        "en": "finish a book in a single day",
+        "fa": "یه کتابو تو یه روز تموم کنه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-186",
+      "text": {
+        "en": "win a science fair with a cool project",
+        "fa": "با یه پروژهٔ باحال جشنوارهٔ علمی رو ببره"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-187",
+      "text": {
+        "en": "doodle in the margins of every notebook",
+        "fa": "تو حاشیهٔ هر دفتری نقاشی بکشه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-188",
+      "text": {
+        "en": "be the first to finish an exam",
+        "fa": "اولین نفری باشه که امتحانشو تموم می‌کنه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-189",
+      "text": {
+        "en": "memorize a whole poem by heart",
+        "fa": "یه شعر کاملو از حفظ یاد بگیره"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-190",
+      "text": {
+        "en": "start a school club from scratch",
+        "fa": "یه کانون مدرسه رو از صفر راه بندازه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-191",
+      "text": {
+        "en": "get picked first for a class project",
+        "fa": "برای کار گروهی اول از همه انتخاب بشه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-192",
+      "text": {
+        "en": "draw an amazing portrait in minutes",
+        "fa": "تو چند دقیقه یه چهرهٔ عالی بکشه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-193",
+      "text": {
+        "en": "solve a math problem in their head",
+        "fa": "یه مسئلهٔ ریاضی رو ذهنی حل کنه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-194",
+      "text": {
+        "en": "learn a new language really fast",
+        "fa": "خیلی سریع یه زبون جدید یاد بگیره"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-195",
+      "text": {
+        "en": "win the school talent show",
+        "fa": "مسابقهٔ استعدادیابی مدرسه رو ببره"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-196",
+      "text": {
+        "en": "daydream during a boring lesson",
+        "fa": "وسط درس خسته‌کننده خیال‌بافی کنه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-197",
+      "text": {
+        "en": "give a confident speech in front of the class",
+        "fa": "جلوی کلاس با اعتماد به نفس سخنرانی کنه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-198",
+      "text": {
+        "en": "juggle while telling a joke",
+        "fa": "همزمان با گفتن جوک شعبده‌بازی کنه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-199",
+      "text": {
+        "en": "build a robot for the science class",
+        "fa": "برای کلاس علوم یه ربات بسازه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-200",
+      "text": {
+        "en": "sing a solo at the school concert",
+        "fa": "تو کنسرت مدرسه تک‌خوانی کنه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-201",
+      "text": {
+        "en": "help a classmate understand a tough topic",
+        "fa": "به همکلاسی کمک کنه یه موضوع سخت رو بفهمه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-202",
+      "text": {
+        "en": "have the neatest handwriting in class",
+        "fa": "خوشخط‌ترین دست‌خط کلاسو داشته باشه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-203",
+      "text": {
+        "en": "win a chess tournament",
+        "fa": "یه مسابقهٔ شطرنج رو ببره"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-204",
+      "text": {
+        "en": "paint a mural for the school hallway",
+        "fa": "برای راهروی مدرسه یه نقاشی دیواری بکشه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-205",
+      "text": {
+        "en": "recite multiplication tables backwards",
+        "fa": "جدول ضرب رو برعکس بخونه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-206",
+      "text": {
+        "en": "be the class clown but still get good grades",
+        "fa": "دلقک کلاس باشه ولی بازم نمرهٔ خوب بگیره"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-207",
+      "text": {
+        "en": "discover a talent nobody knew they had",
+        "fa": "استعدادی رو کشف کنه که هیچکس نمی‌دونست داره"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-208",
+      "text": {
+        "en": "win a dance competition at school",
+        "fa": "یه مسابقهٔ رقص مدرسه رو ببره"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-209",
+      "text": {
+        "en": "read ahead of the whole class",
+        "fa": "از کل کلاس جلوتر بخونه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-210",
+      "text": {
+        "en": "fix the teacher's computer",
+        "fa": "کامپیوتر معلمو درست کنه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-211",
+      "text": {
+        "en": "write a story that wins a prize",
+        "fa": "یه داستان بنویسه که جایزه ببره"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-212",
+      "text": {
+        "en": "learn every flag in the world",
+        "fa": "پرچم همهٔ کشورهای دنیا رو یاد بگیره"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-213",
+      "text": {
+        "en": "become class president",
+        "fa": "رئیس کلاس بشه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-214",
+      "text": {
+        "en": "play the lead role in the school play",
+        "fa": "نقش اصلی نمایش مدرسه رو بازی کنه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-215",
+      "text": {
+        "en": "win a poetry recital contest",
+        "fa": "یه مسابقهٔ شعرخوانی رو ببره"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-216",
+      "text": {
+        "en": "teach themselves to code",
+        "fa": "خودشون به خودشون برنامه‌نویسی یاد بدن"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-217",
+      "text": {
+        "en": "name every planet and its moons",
+        "fa": "اسم هر سیاره و قمرهاشو بگه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-218",
+      "text": {
+        "en": "organize the best group study session",
+        "fa": "بهترین جلسهٔ درس گروهی رو ترتیب بده"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-219",
+      "text": {
+        "en": "sketch the teacher when they're not looking",
+        "fa": "وقتی معلم حواسش نیست ازش نقاشی بکشه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-220",
+      "text": {
+        "en": "win a debate against the whole class",
+        "fa": "تو مناظره با کل کلاس برنده بشه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-221",
+      "text": {
+        "en": "master a magic trick over the weekend",
+        "fa": "یه شعبده‌بازی رو تو آخر هفته یاد بگیره"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-222",
+      "text": {
+        "en": "get a perfect attendance award",
+        "fa": "جایزهٔ حضور کامل بگیره"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-223",
+      "text": {
+        "en": "invent a clever way to remember facts",
+        "fa": "یه روش باهوشانه برای حفظ کردن مطالب اختراع کنه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-224",
+      "text": {
+        "en": "trip over absolutely nothing",
+        "fa": "روی هیچی سکندری بخوره"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-225",
+      "text": {
+        "en": "forget why they walked into a room",
+        "fa": "یادش بره چرا اومده توی اتاق"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-226",
+      "text": {
+        "en": "laugh at their own joke before finishing it",
+        "fa": "قبل از تموم کردن جوکش به جوک خودش بخنده"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-227",
+      "text": {
+        "en": "wave back at someone who wasn't waving at them",
+        "fa": "برای کسی که اصلاً باهاش سلام نمی‌کرده دست تکون بده"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-228",
+      "text": {
+        "en": "put their phone in the fridge by accident",
+        "fa": "اتفاقی گوشیش رو بذاره توی یخچال"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-229",
+      "text": {
+        "en": "talk to a pet like it understands every word",
+        "fa": "با حیوون خونگی جوری حرف بزنه انگار همه‌چی رو می‌فهمه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-230",
+      "text": {
+        "en": "lose their glasses while wearing them",
+        "fa": "عینکش رو گم کنه در حالی که روی چشمشه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-231",
+      "text": {
+        "en": "reply to a text three days late",
+        "fa": "سه روز بعد جواب پیام رو بده"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-232",
+      "text": {
+        "en": "sing the wrong lyrics with full confidence",
+        "fa": "متن اشتباه آهنگ رو با اعتماد به نفس کامل بخونه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-233",
+      "text": {
+        "en": "miss the high five and pretend it was on purpose",
+        "fa": "دستش به دست طرف نخوره و وانمود کنه عمدی بوده"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-234",
+      "text": {
+        "en": "start a sentence and forget the ending",
+        "fa": "یه جمله رو شروع کنه و آخرش یادش بره"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-235",
+      "text": {
+        "en": "snooze the alarm ten times in a row",
+        "fa": "ده بار پشت سر هم زنگ ساعت رو بزنه روی چرت"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-236",
+      "text": {
+        "en": "narrate everything they're doing out loud",
+        "fa": "هر کاری می‌کنه رو با صدای بلند تعریف کنه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-237",
+      "text": {
+        "en": "trip while trying to look cool",
+        "fa": "موقع باکلاس راه رفتن زمین بخوره"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-238",
+      "text": {
+        "en": "laugh at the wrong moment in a serious conversation",
+        "fa": "وسط یه حرف جدی یه لحظهٔ نامناسب بخنده"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-239",
+      "text": {
+        "en": "keep searching for the remote while holding it",
+        "fa": "کنترل تو دستش باشه و دنبالش بگرده"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-240",
+      "text": {
+        "en": "pour cereal before realizing there's no milk",
+        "fa": "غلات رو بریزه بعد بفهمه شیر نداره"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-241",
+      "text": {
+        "en": "say goodbye and then walk the same direction",
+        "fa": "خداحافظی کنه و بعد همون مسیر رو با طرف بره"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-242",
+      "text": {
+        "en": "get lost in their own neighborhood",
+        "fa": "تو محلهٔ خودشون گم بشه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-243",
+      "text": {
+        "en": "wear their shirt inside out all day",
+        "fa": "تمام روز لباسش رو پشت‌ورو بپوشه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-244",
+      "text": {
+        "en": "forget the punchline halfway through a joke",
+        "fa": "وسط تعریف جوک نکتهٔ آخرش یادش بره"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-245",
+      "text": {
+        "en": "push a pull door several times",
+        "fa": "دری که باید بکشه رو چند بار هل بده"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-246",
+      "text": {
+        "en": "talk during a movie everyone is watching",
+        "fa": "وسط فیلمی که همه می‌بینن حرف بزنه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-247",
+      "text": {
+        "en": "forget where they parked the car",
+        "fa": "یادش بره ماشین رو کجا پارک کرده"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-248",
+      "text": {
+        "en": "answer a question that nobody asked",
+        "fa": "به سوالی که کسی نپرسیده جواب بده"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-249",
+      "text": {
+        "en": "send a message to the wrong group chat",
+        "fa": "پیام رو به گروه اشتباهی بفرسته"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-250",
+      "text": {
+        "en": "burn toast even with the timer on",
+        "fa": "با وجود تایمر باز هم نون تست رو بسوزونه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-251",
+      "text": {
+        "en": "laugh so hard no sound comes out",
+        "fa": "اون‌قدر بخنده که اصلاً صدا ازش درنیاد"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-252",
+      "text": {
+        "en": "trip up the stairs instead of down",
+        "fa": "موقع بالا رفتن از پله سکندری بخوره به‌جای پایین"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-253",
+      "text": {
+        "en": "forget their own phone number",
+        "fa": "شمارهٔ تلفن خودش رو فراموش کنه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-254",
+      "text": {
+        "en": "clap when the plane lands",
+        "fa": "وقتی هواپیما می‌نشینه دست بزنه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-255",
+      "text": {
+        "en": "start telling a story they already told you",
+        "fa": "داستانی رو شروع کنه که قبلاً برات تعریف کرده"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-256",
+      "text": {
+        "en": "mistake a stranger for a friend across the street",
+        "fa": "یه غریبه رو از اون طرف خیابون با دوستش اشتباه بگیره"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-257",
+      "text": {
+        "en": "put salt in their coffee instead of sugar",
+        "fa": "به‌جای شکر نمک بریزه توی قهوه‌ش"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-258",
+      "text": {
+        "en": "freeze when their phone rings unexpectedly",
+        "fa": "وقتی گوشیش ناگهانی زنگ بخوره خشکش بزنه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-259",
+      "text": {
+        "en": "trip over the same step every single day",
+        "fa": "هر روز سر همون یه پله سکندری بخوره"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-260",
+      "text": {
+        "en": "keep talking after everyone has left the room",
+        "fa": "بعد از اینکه همه از اتاق رفتن هنوز حرف بزنه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-261",
+      "text": {
+        "en": "forget to hit send on an important message",
+        "fa": "یادش بره دکمهٔ ارسال یه پیام مهم رو بزنه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-262",
+      "text": {
+        "en": "wear mismatched socks without noticing",
+        "fa": "بدون اینکه بفهمه دو تا جوراب لنگه‌به‌لنگه بپوشه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-263",
+      "text": {
+        "en": "laugh at a meme during a quiet meeting",
+        "fa": "وسط یه جلسهٔ ساکت به یه میم بخنده"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-264",
+      "text": {
+        "en": "open the fridge and forget what they wanted",
+        "fa": "در یخچال رو باز کنه و یادش بره چی می‌خواست"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-265",
+      "text": {
+        "en": "reply 'you too' to the waiter's 'enjoy your meal'",
+        "fa": "به جملهٔ 'نوش جان' گارسون بگه 'شما هم همین‌طور'"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-266",
+      "text": {
+        "en": "spend ten minutes looking for sunglasses on their head",
+        "fa": "ده دقیقه دنبال عینک آفتابی‌ای بگرده که روی سرشه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-gen-267",
+      "text": {
+        "en": "trip into the house carrying all the grocery bags at once",
+        "fa": "همهٔ کیسه‌های خرید رو با هم بیاره تو و سکندری بخوره"
+      },
+      "intensity": "family"
     }
   ]
 }

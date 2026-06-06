@@ -475,5 +475,662 @@
     },
     "category": "jobs",
     "difficulty": "hard"
+  },
+  {
+    "id": "jobs-gen-1",
+    "word": {
+      "en": "Cook",
+      "fa": "آشپز"
+    },
+    "category": "jobs",
+    "difficulty": "easy"
+  },
+  {
+    "id": "jobs-gen-2",
+    "word": {
+      "en": "Barber",
+      "fa": "آرایشگر"
+    },
+    "category": "jobs",
+    "difficulty": "easy"
+  },
+  {
+    "id": "jobs-gen-3",
+    "word": {
+      "en": "Cashier",
+      "fa": "صندوق‌دار"
+    },
+    "category": "jobs",
+    "difficulty": "easy"
+  },
+  {
+    "id": "jobs-gen-4",
+    "word": {
+      "en": "Shopkeeper",
+      "fa": "مغازه‌دار"
+    },
+    "category": "jobs",
+    "difficulty": "easy"
+  },
+  {
+    "id": "jobs-gen-5",
+    "word": {
+      "en": "Judge",
+      "fa": "قاضی"
+    },
+    "category": "jobs",
+    "difficulty": "easy"
+  },
+  {
+    "id": "jobs-gen-6",
+    "word": {
+      "en": "Writer",
+      "fa": "نویسنده"
+    },
+    "category": "jobs",
+    "difficulty": "easy"
+  },
+  {
+    "id": "jobs-gen-7",
+    "word": {
+      "en": "Postman",
+      "fa": "پستچی"
+    },
+    "category": "jobs",
+    "difficulty": "easy"
+  },
+  {
+    "id": "jobs-gen-8",
+    "word": {
+      "en": "Cleaner",
+      "fa": "نظافتچی"
+    },
+    "category": "jobs",
+    "difficulty": "easy"
+  },
+  {
+    "id": "jobs-gen-9",
+    "word": {
+      "en": "Shoemaker",
+      "fa": "کفاش"
+    },
+    "category": "jobs",
+    "difficulty": "easy"
+  },
+  {
+    "id": "jobs-gen-10",
+    "word": {
+      "en": "Musician",
+      "fa": "نوازنده"
+    },
+    "category": "jobs",
+    "difficulty": "easy"
+  },
+  {
+    "id": "jobs-gen-11",
+    "word": {
+      "en": "Shepherd",
+      "fa": "چوپان"
+    },
+    "category": "jobs",
+    "difficulty": "easy"
+  },
+  {
+    "id": "jobs-gen-12",
+    "word": {
+      "en": "Sailor",
+      "fa": "ملوان"
+    },
+    "category": "jobs",
+    "difficulty": "easy"
+  },
+  {
+    "id": "jobs-gen-13",
+    "word": {
+      "en": "Banker",
+      "fa": "بانکدار"
+    },
+    "category": "jobs",
+    "difficulty": "easy"
+  },
+  {
+    "id": "jobs-gen-14",
+    "word": {
+      "en": "Salesman",
+      "fa": "فروشنده"
+    },
+    "category": "jobs",
+    "difficulty": "easy"
+  },
+  {
+    "id": "jobs-gen-15",
+    "word": {
+      "en": "Jeweler",
+      "fa": "جواهرفروش"
+    },
+    "category": "jobs",
+    "difficulty": "med"
+  },
+  {
+    "id": "jobs-gen-16",
+    "word": {
+      "en": "Surveyor",
+      "fa": "نقشه‌بردار"
+    },
+    "category": "jobs",
+    "difficulty": "med"
+  },
+  {
+    "id": "jobs-gen-17",
+    "word": {
+      "en": "Midwife",
+      "fa": "ماما"
+    },
+    "category": "jobs",
+    "difficulty": "med"
+  },
+  {
+    "id": "jobs-gen-18",
+    "word": {
+      "en": "Paramedic",
+      "fa": "امدادگر"
+    },
+    "category": "jobs",
+    "difficulty": "med"
+  },
+  {
+    "id": "jobs-gen-19",
+    "word": {
+      "en": "Plasterer",
+      "fa": "گچ‌کار"
+    },
+    "category": "jobs",
+    "difficulty": "med"
+  },
+  {
+    "id": "jobs-gen-20",
+    "word": {
+      "en": "Tiler",
+      "fa": "کاشی‌کار"
+    },
+    "category": "jobs",
+    "difficulty": "med"
+  },
+  {
+    "id": "jobs-gen-21",
+    "word": {
+      "en": "Florist",
+      "fa": "گل‌فروش"
+    },
+    "category": "jobs",
+    "difficulty": "med"
+  },
+  {
+    "id": "jobs-gen-22",
+    "word": {
+      "en": "Tour Guide",
+      "fa": "راهنمای تور"
+    },
+    "category": "jobs",
+    "difficulty": "med"
+  },
+  {
+    "id": "jobs-gen-23",
+    "word": {
+      "en": "Conductor",
+      "fa": "رهبر ارکستر"
+    },
+    "category": "jobs",
+    "difficulty": "med"
+  },
+  {
+    "id": "jobs-gen-24",
+    "word": {
+      "en": "Lifeguard",
+      "fa": "غریق‌نجات"
+    },
+    "category": "jobs",
+    "difficulty": "med"
+  },
+  {
+    "id": "jobs-gen-25",
+    "word": {
+      "en": "Notary",
+      "fa": "سردفتر"
+    },
+    "category": "jobs",
+    "difficulty": "med"
+  },
+  {
+    "id": "jobs-gen-26",
+    "word": {
+      "en": "Appraiser",
+      "fa": "کارشناس قیمت"
+    },
+    "category": "jobs",
+    "difficulty": "med"
+  },
+  {
+    "id": "jobs-gen-27",
+    "word": {
+      "en": "Upholsterer",
+      "fa": "مبل‌ساز"
+    },
+    "category": "jobs",
+    "difficulty": "med"
+  },
+  {
+    "id": "jobs-gen-28",
+    "word": {
+      "en": "Glazier",
+      "fa": "شیشه‌بر"
+    },
+    "category": "jobs",
+    "difficulty": "med"
+  },
+  {
+    "id": "jobs-gen-29",
+    "word": {
+      "en": "Cobbler",
+      "fa": "کفاش"
+    },
+    "category": "jobs",
+    "difficulty": "med"
+  },
+  {
+    "id": "jobs-gen-30",
+    "word": {
+      "en": "Stonemason",
+      "fa": "سنگ‌تراش"
+    },
+    "category": "jobs",
+    "difficulty": "med"
+  },
+  {
+    "id": "jobs-gen-31",
+    "word": {
+      "en": "Goldsmith",
+      "fa": "زرگر"
+    },
+    "category": "jobs",
+    "difficulty": "med"
+  },
+  {
+    "id": "jobs-gen-32",
+    "word": {
+      "en": "Mason",
+      "fa": "بنا"
+    },
+    "category": "jobs",
+    "difficulty": "med"
+  },
+  {
+    "id": "jobs-gen-33",
+    "word": {
+      "en": "Miner",
+      "fa": "معدنچی"
+    },
+    "category": "jobs",
+    "difficulty": "med"
+  },
+  {
+    "id": "jobs-gen-34",
+    "word": {
+      "en": "Lumberjack",
+      "fa": "هیزم‌شکن"
+    },
+    "category": "jobs",
+    "difficulty": "med"
+  },
+  {
+    "id": "jobs-gen-35",
+    "word": {
+      "en": "Potter",
+      "fa": "سفالگر"
+    },
+    "category": "jobs",
+    "difficulty": "med"
+  },
+  {
+    "id": "jobs-gen-36",
+    "word": {
+      "en": "Weaver",
+      "fa": "بافنده"
+    },
+    "category": "jobs",
+    "difficulty": "med"
+  },
+  {
+    "id": "jobs-gen-37",
+    "word": {
+      "en": "Sculptor",
+      "fa": "مجسمه‌ساز"
+    },
+    "category": "jobs",
+    "difficulty": "med"
+  },
+  {
+    "id": "jobs-gen-38",
+    "word": {
+      "en": "Tattoo Artist",
+      "fa": "خال‌کوب"
+    },
+    "category": "jobs",
+    "difficulty": "med"
+  },
+  {
+    "id": "jobs-gen-39",
+    "word": {
+      "en": "Actuary",
+      "fa": "کارشناس آمار بیمه"
+    },
+    "category": "jobs",
+    "difficulty": "hard"
+  },
+  {
+    "id": "jobs-gen-40",
+    "word": {
+      "en": "Cryptographer",
+      "fa": "رمزنگار"
+    },
+    "category": "jobs",
+    "difficulty": "hard"
+  },
+  {
+    "id": "jobs-gen-41",
+    "word": {
+      "en": "Epidemiologist",
+      "fa": "اپیدمیولوژیست"
+    },
+    "category": "jobs",
+    "difficulty": "hard"
+  },
+  {
+    "id": "jobs-gen-42",
+    "word": {
+      "en": "Lexicographer",
+      "fa": "فرهنگ‌نویس"
+    },
+    "category": "jobs",
+    "difficulty": "hard"
+  },
+  {
+    "id": "jobs-gen-43",
+    "word": {
+      "en": "Sommelier",
+      "fa": "کارشناس شراب"
+    },
+    "category": "jobs",
+    "difficulty": "hard"
+  },
+  {
+    "id": "jobs-gen-44",
+    "word": {
+      "en": "Curator",
+      "fa": "موزه‌دار"
+    },
+    "category": "jobs",
+    "difficulty": "hard"
+  },
+  {
+    "id": "jobs-gen-45",
+    "word": {
+      "en": "Archivist",
+      "fa": "بایگان"
+    },
+    "category": "jobs",
+    "difficulty": "hard"
+  },
+  {
+    "id": "jobs-gen-46",
+    "word": {
+      "en": "Seismologist",
+      "fa": "زلزله‌شناس"
+    },
+    "category": "jobs",
+    "difficulty": "hard"
+  },
+  {
+    "id": "jobs-gen-47",
+    "word": {
+      "en": "Meteorologist",
+      "fa": "هواشناس"
+    },
+    "category": "jobs",
+    "difficulty": "hard"
+  },
+  {
+    "id": "jobs-gen-48",
+    "word": {
+      "en": "Anthropologist",
+      "fa": "انسان‌شناس"
+    },
+    "category": "jobs",
+    "difficulty": "hard"
+  },
+  {
+    "id": "jobs-gen-49",
+    "word": {
+      "en": "Philosopher",
+      "fa": "فیلسوف"
+    },
+    "category": "jobs",
+    "difficulty": "hard"
+  },
+  {
+    "id": "jobs-gen-50",
+    "word": {
+      "en": "Statistician",
+      "fa": "آماردان"
+    },
+    "category": "jobs",
+    "difficulty": "hard"
+  },
+  {
+    "id": "jobs-gen-51",
+    "word": {
+      "en": "Botanist",
+      "fa": "گیاه‌شناس"
+    },
+    "category": "jobs",
+    "difficulty": "hard"
+  },
+  {
+    "id": "jobs-gen-52",
+    "word": {
+      "en": "Zoologist",
+      "fa": "جانورشناس"
+    },
+    "category": "jobs",
+    "difficulty": "hard"
+  },
+  {
+    "id": "jobs-gen-53",
+    "word": {
+      "en": "Ornithologist",
+      "fa": "پرنده‌شناس"
+    },
+    "category": "jobs",
+    "difficulty": "hard"
+  },
+  {
+    "id": "jobs-gen-54",
+    "word": {
+      "en": "Paleontologist",
+      "fa": "دیرینه‌شناس"
+    },
+    "category": "jobs",
+    "difficulty": "hard"
+  },
+  {
+    "id": "jobs-gen-55",
+    "word": {
+      "en": "Stenographer",
+      "fa": "تندنویس"
+    },
+    "category": "jobs",
+    "difficulty": "hard"
+  },
+  {
+    "id": "jobs-gen-56",
+    "word": {
+      "en": "Taxidermist",
+      "fa": "تاکسیدرمیست"
+    },
+    "category": "jobs",
+    "difficulty": "hard"
+  },
+  {
+    "id": "jobs-gen-57",
+    "word": {
+      "en": "Auditor",
+      "fa": "حسابرس"
+    },
+    "category": "jobs",
+    "difficulty": "hard"
+  },
+  {
+    "id": "jobs-gen-58",
+    "word": {
+      "en": "Underwriter",
+      "fa": "پذیره‌نویس بیمه"
+    },
+    "category": "jobs",
+    "difficulty": "hard"
+  },
+  {
+    "id": "jobs-gen-59",
+    "word": {
+      "en": "Lobbyist",
+      "fa": "لابی‌گر"
+    },
+    "category": "jobs",
+    "difficulty": "hard"
+  },
+  {
+    "id": "jobs-gen-60",
+    "word": {
+      "en": "Ombudsman",
+      "fa": "بازرس شکایات"
+    },
+    "category": "jobs",
+    "difficulty": "hard"
+  },
+  {
+    "id": "jobs-gen-61",
+    "word": {
+      "en": "Apiarist",
+      "fa": "زنبوردار"
+    },
+    "category": "jobs",
+    "difficulty": "hard"
+  },
+  {
+    "id": "jobs-gen-62",
+    "word": {
+      "en": "Vintner",
+      "fa": "شراب‌ساز"
+    },
+    "category": "jobs",
+    "difficulty": "hard"
+  },
+  {
+    "id": "jobs-gen-63",
+    "word": {
+      "en": "Horologist",
+      "fa": "ساعت‌ساز"
+    },
+    "category": "jobs",
+    "difficulty": "hard"
+  },
+  {
+    "id": "jobs-gen-64",
+    "word": {
+      "en": "Philatelist",
+      "fa": "تمبرشناس"
+    },
+    "category": "jobs",
+    "difficulty": "hard"
+  },
+  {
+    "id": "jobs-gen-65",
+    "word": {
+      "en": "Numismatist",
+      "fa": "سکه‌شناس"
+    },
+    "category": "jobs",
+    "difficulty": "hard"
+  },
+  {
+    "id": "jobs-gen-66",
+    "word": {
+      "en": "Mortician",
+      "fa": "متصدی کفن‌ودفن"
+    },
+    "category": "jobs",
+    "difficulty": "hard"
+  },
+  {
+    "id": "jobs-gen-67",
+    "word": {
+      "en": "Perfumer",
+      "fa": "عطرساز"
+    },
+    "category": "jobs",
+    "difficulty": "hard"
+  },
+  {
+    "id": "jobs-gen-68",
+    "word": {
+      "en": "Restorer",
+      "fa": "مرمت‌گر آثار"
+    },
+    "category": "jobs",
+    "difficulty": "hard"
+  },
+  {
+    "id": "jobs-gen-69",
+    "word": {
+      "en": "Demographer",
+      "fa": "جمعیت‌شناس"
+    },
+    "category": "jobs",
+    "difficulty": "hard"
+  },
+  {
+    "id": "jobs-gen-70",
+    "word": {
+      "en": "Linguist",
+      "fa": "زبان‌شناس"
+    },
+    "category": "jobs",
+    "difficulty": "hard"
+  },
+  {
+    "id": "jobs-gen-71",
+    "word": {
+      "en": "Astronomer",
+      "fa": "ستاره‌شناس"
+    },
+    "category": "jobs",
+    "difficulty": "hard"
+  },
+  {
+    "id": "jobs-gen-72",
+    "word": {
+      "en": "Ethnographer",
+      "fa": "مردم‌نگار"
+    },
+    "category": "jobs",
+    "difficulty": "hard"
+  },
+  {
+    "id": "jobs-gen-73",
+    "word": {
+      "en": "Conservator",
+      "fa": "حافظ آثار هنری"
+    },
+    "category": "jobs",
+    "difficulty": "hard"
   }
 ]

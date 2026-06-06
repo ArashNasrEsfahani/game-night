@@ -4,907 +4,2035 @@
   "items": [
     {
       "id": "nhie-w-101",
-      "intensity": "wild",
-      "tags": [
-        "romance",
-        "party"
-      ],
       "text": {
         "en": "Never have I ever kissed someone whose name I'd already forgotten.",
         "fa": "من هیچ‌وقت کسی رو نبوسیدم که اون موقع اسمش یادم رفته بود."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-102",
-      "intensity": "wild",
-      "tags": [
-        "romance"
-      ],
       "text": {
         "en": "Never have I ever flirted my way out of a parking ticket.",
         "fa": "من هیچ‌وقت با عشوه و خوش‌زبونی از زیر جریمه‌ی پارک در نرفتم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-103",
-      "intensity": "wild",
-      "tags": [
-        "party"
-      ],
       "text": {
         "en": "Never have I ever woken up somewhere and had no idea how I got there.",
         "fa": "من هیچ‌وقت یه جایی بیدار نشدم که اصلاً نفهمم چطوری اونجا رسیده‌م."
-      }
-    },
-    {
-      "id": "nhie-w-104",
-      "intensity": "wild",
-      "tags": [
-        "romance",
-        "social"
-      ],
-      "text": {
-        "en": "Never have I ever dated two people in the same week.",
-        "fa": "من هیچ‌وقت تو یه هفته با دو نفر همزمان قرار نذاشتم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-105",
-      "intensity": "wild",
-      "tags": [
-        "embarrassing",
-        "party"
-      ],
       "text": {
         "en": "Never have I ever skinny-dipped where I definitely shouldn't have.",
         "fa": "من هیچ‌وقت جایی که اصلاً نباید، لخت شنا نکردم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-106",
-      "intensity": "wild",
-      "tags": [
-        "romance",
-        "tech"
-      ],
       "text": {
         "en": "Never have I ever swiped on a dating app while on a date.",
         "fa": "من هیچ‌وقت وسطِ خودِ قرار، تو اپ دوست‌یابی نچرخیدم دنبال یکی دیگه."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-107",
-      "intensity": "wild",
-      "tags": [
-        "social"
-      ],
       "text": {
         "en": "Never have I ever pretended to be someone's partner to get a free drink.",
         "fa": "من هیچ‌وقت خودم رو جای پارتنرِ یکی جا نزدم که یه نوشیدنی مفت بگیرم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-108",
-      "intensity": "wild",
-      "tags": [
-        "romance"
-      ],
       "text": {
         "en": "Never have I ever fancied two friends in the same friend group.",
         "fa": "من هیچ‌وقت تو یه جمعِ دوستانه همزمان از دو نفر خوشم نیومده."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-109",
-      "intensity": "wild",
-      "tags": [
-        "party",
-        "embarrassing"
-      ],
       "text": {
         "en": "Never have I ever danced on a table when I really shouldn't have.",
         "fa": "من هیچ‌وقت یه جایی که اصلاً جاش نبود رو میز نرقصیدم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-110",
-      "intensity": "wild",
-      "tags": [
-        "romance",
-        "social"
-      ],
       "text": {
         "en": "Never have I ever made out with someone in a bathroom at a party.",
         "fa": "من هیچ‌وقت تو مهمونی تو دستشویی با کسی لب نگرفتم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-111",
-      "intensity": "wild",
-      "tags": [
-        "embarrassing",
-        "tech"
-      ],
       "text": {
         "en": "Never have I ever sent a flirty text to the wrong group chat.",
         "fa": "من هیچ‌وقت یه پیامِ عاشقونه رو اشتباهی تو گروهِ اشتباهی نفرستادم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-112",
-      "intensity": "wild",
-      "tags": [
-        "romance"
-      ],
       "text": {
         "en": "Never have I ever gotten back with an ex I swore I was done with.",
         "fa": "من هیچ‌وقت با اکسی که قسم خورده بودم دیگه تموم شده، برنگشتم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-113",
-      "intensity": "wild",
-      "tags": [
-        "party"
-      ],
       "text": {
         "en": "Never have I ever lost a piece of clothing during a night out.",
         "fa": "من هیچ‌وقت یه تیکه از لباسام رو وسط یه شبِ بیرون گم نکردم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-114",
-      "intensity": "wild",
-      "tags": [
-        "social",
-        "embarrassing"
-      ],
       "text": {
         "en": "Never have I ever told someone I was single when I really wasn't.",
         "fa": "من هیچ‌وقت به کسی نگفتم مجردم در حالی که اصلاً نبودم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-115",
-      "intensity": "wild",
-      "tags": [
-        "romance",
-        "party"
-      ],
       "text": {
         "en": "Never have I ever hooked up with someone the night I met them.",
         "fa": "من هیچ‌وقت همون شبی که یکی رو دیدم باهاش نریختم رو هم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-116",
-      "intensity": "wild",
-      "tags": [
-        "embarrassing",
-        "work"
-      ],
       "text": {
         "en": "Never have I ever had a crush on my boss.",
         "fa": "من هیچ‌وقت از رئیسم خوشم نیومده."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-117",
-      "intensity": "wild",
-      "tags": [
-        "romance",
-        "tech"
-      ],
       "text": {
         "en": "Never have I ever screenshotted someone's profile to send to my friends.",
         "fa": "من هیچ‌وقت از پروفایلِ یکی اسکرین‌شات نگرفتم که برای رفقام بفرستم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-118",
-      "intensity": "wild",
-      "tags": [
-        "party"
-      ],
       "text": {
         "en": "Never have I ever snuck out of a party without saying goodbye to anyone.",
         "fa": "من هیچ‌وقت از یه مهمونی بدون خداحافظی با هیچکس در نرفتم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-119",
-      "intensity": "wild",
-      "tags": [
-        "romance",
-        "social"
-      ],
       "text": {
         "en": "Never have I ever kissed a friend and pretended it never happened.",
         "fa": "من هیچ‌وقت یه دوست رو نبوسیدم و بعد وانمود کنم انگار اصلاً نشده."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-120",
-      "intensity": "wild",
-      "tags": [
-        "embarrassing",
-        "party"
-      ],
       "text": {
         "en": "Never have I ever sent a voice message I prayed nobody would replay.",
         "fa": "من هیچ‌وقت یه ویس نفرستادم که دعا کنم هیشکی دوباره گوشش نده."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-121",
-      "intensity": "wild",
-      "tags": [
-        "romance"
-      ],
       "text": {
         "en": "Never have I ever lied about how many people I've dated.",
         "fa": "من هیچ‌وقت درباره‌ی تعدادِ آدمایی که باهاشون بودم دروغ نگفتم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-122",
-      "intensity": "wild",
-      "tags": [
-        "social",
-        "party"
-      ],
       "text": {
         "en": "Never have I ever stayed at an afterparty until the sun came up.",
         "fa": "من هیچ‌وقت تو افترپارتی تا طلوعِ آفتاب نموندم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-123",
-      "intensity": "wild",
-      "tags": [
-        "romance",
-        "embarrassing"
-      ],
       "text": {
         "en": "Never have I ever called a date by my ex's name.",
         "fa": "من هیچ‌وقت وسطِ قرار، طرف رو با اسمِ اکسم صدا نزدم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-124",
-      "intensity": "wild",
-      "tags": [
-        "tech",
-        "social"
-      ],
       "text": {
         "en": "Never have I ever made a fake profile just to see what someone was up to.",
         "fa": "من هیچ‌وقت یه پروفایلِ فیک نساختم فقط که ببینم یکی چیکار می‌کنه."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-125",
-      "intensity": "wild",
-      "tags": [
-        "party",
-        "romance"
-      ],
       "text": {
         "en": "Never have I ever played spin the bottle as a grown adult.",
         "fa": "من هیچ‌وقت تو بزرگسالی بطری‌بازی نکردم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-126",
-      "intensity": "wild",
-      "tags": [
-        "embarrassing",
-        "social"
-      ],
       "text": {
         "en": "Never have I ever spilled someone's biggest secret after a few drinks.",
         "fa": "من هیچ‌وقت بعد از چندتا پیک، بزرگ‌ترین رازِ یکی رو لو ندادم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-x001",
-      "intensity": "wild",
-      "tags": [
-        "skinny-dipping",
-        "ocean"
-      ],
       "text": {
         "en": "Never have I ever gone skinny-dipping in the ocean at midnight.",
         "fa": "من هیچ‌وقت نصفه‌شب لخت تو دریا شنا نکردم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-x002",
-      "intensity": "wild",
-      "tags": [
-        "tattoo",
-        "impulsive"
-      ],
       "text": {
         "en": "Never have I ever gotten a tattoo on a complete whim.",
         "fa": "من هیچ‌وقت یهویی و بدون فکر خالکوبی نکردم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-x003",
-      "intensity": "wild",
-      "tags": [
-        "sneaking",
-        "concert"
-      ],
       "text": {
         "en": "Never have I ever snuck into a sold-out concert without a ticket.",
         "fa": "من هیچ‌وقت بدون بلیت یواشکی نرفتم تو یه کنسرتِ سولد‌اوت."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-x004",
-      "intensity": "wild",
-      "tags": [
-        "gambling",
-        "reckless"
-      ],
       "text": {
         "en": "Never have I ever gambled away my last bit of cash in a single night.",
         "fa": "من هیچ‌وقت آخرین پولم رو تو یه شب سرِ قمار نباختم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-x005",
-      "intensity": "wild",
-      "tags": [
-        "dancing",
-        "bold"
-      ],
       "text": {
         "en": "Never have I ever danced on top of a bar in front of strangers.",
         "fa": "من هیچ‌وقت جلوی غریبه‌ها رو پیشخونِ بار نرقصیدم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-x006",
-      "intensity": "wild",
-      "tags": [
-        "cliff-jump",
-        "thrill"
-      ],
       "text": {
         "en": "Never have I ever jumped off a cliff into open water.",
         "fa": "من هیچ‌وقت از روی یه صخره نپریدم تو آب."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-x007",
-      "intensity": "wild",
-      "tags": [
-        "crashing",
-        "wedding"
-      ],
       "text": {
         "en": "Never have I ever crashed a wedding I wasn't invited to.",
         "fa": "من هیچ‌وقت سرزده نرفتم تو عروسی‌ای که دعوت نبودم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-x008",
-      "intensity": "wild",
-      "tags": [
-        "partying",
-        "all-nighter"
-      ],
       "text": {
         "en": "Never have I ever stayed out partying until the sun came up.",
         "fa": "من هیچ‌وقت تا طلوعِ آفتاب بیرون پارتی نکردم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-x009",
-      "intensity": "wild",
-      "tags": [
-        "travel",
-        "impulsive"
-      ],
       "text": {
         "en": "Never have I ever booked a one-way flight on a sudden impulse.",
         "fa": "من هیچ‌وقت یهویی بلیت یه‌طرفه‌ی پرواز نگرفتم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-x010",
-      "intensity": "wild",
-      "tags": [
-        "streaking",
-        "wild"
-      ],
       "text": {
         "en": "Never have I ever gone streaking across a public field.",
         "fa": "من هیچ‌وقت لخت تو یه زمینِ عمومی ندویدم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-x011",
-      "intensity": "wild",
-      "tags": [
-        "kissing",
-        "stranger"
-      ],
       "text": {
         "en": "Never have I ever kissed a total stranger at a party.",
         "fa": "من هیچ‌وقت تو یه مهمونی یه غریبه‌ی کامل رو نبوسیدم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-x012",
-      "intensity": "wild",
-      "tags": [
-        "adventure",
-        "rebel"
-      ],
       "text": {
         "en": "Never have I ever skipped work to chase a spontaneous adventure.",
         "fa": "من هیچ‌وقت سرِ کار نرفتم که دنبالِ یه ماجراجویی یهویی برم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-x013",
-      "intensity": "wild",
-      "tags": [
-        "hair",
-        "bold"
-      ],
       "text": {
         "en": "Never have I ever dyed my hair a wild color overnight.",
         "fa": "من هیچ‌وقت یه‌شبه موهام رو یه رنگِ عجیب‌غریب نکردم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-x014",
-      "intensity": "wild",
-      "tags": [
-        "thrill",
-        "reckless"
-      ],
       "text": {
         "en": "Never have I ever gone cliff-diving with no training at all.",
         "fa": "من هیچ‌وقت بدونِ هیچ آموزشی از روی صخره شیرجه نزدم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-x015",
-      "intensity": "wild",
-      "tags": [
-        "karaoke",
-        "bold"
-      ],
       "text": {
         "en": "Never have I ever sung karaoke completely sober in front of a packed room.",
         "fa": "من هیچ‌وقت کاملاً هوشیار جلوی یه سالنِ پر کارائوکه نخوندم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-x016",
-      "intensity": "wild",
-      "tags": [
-        "motorcycle",
-        "stranger"
-      ],
       "text": {
         "en": "Never have I ever ridden a motorcycle with someone I just met.",
         "fa": "من هیچ‌وقت با کسی که تازه دیده بودمش سوارِ موتور نشدم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-x017",
-      "intensity": "wild",
-      "tags": [
-        "sneaking",
-        "rooftop"
-      ],
       "text": {
         "en": "Never have I ever snuck onto a rooftop for the view.",
         "fa": "من هیچ‌وقت یواشکی برای دیدنِ منظره نرفتم رو پشت‌بوم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-x018",
-      "intensity": "wild",
-      "tags": [
-        "bet",
-        "wild"
-      ],
       "text": {
         "en": "Never have I ever bet on something completely ridiculous and won.",
         "fa": "من هیچ‌وقت سرِ یه چیزِ کاملاً مسخره شرط نبستم و نبردم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-x019",
-      "intensity": "wild",
-      "tags": [
-        "roadtrip",
-        "spontaneous"
-      ],
       "text": {
         "en": "Never have I ever gone on a road trip with zero plan.",
         "fa": "من هیچ‌وقت بدونِ هیچ برنامه‌ای نرفتم سفرِ جاده‌ای."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-x020",
-      "intensity": "wild",
-      "tags": [
-        "concert",
-        "wild"
-      ],
       "text": {
         "en": "Never have I ever crowd-surfed at a live show.",
         "fa": "من هیچ‌وقت تو یه کنسرتِ زنده رو دستِ جمعیت سوار نشدم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-x021",
-      "intensity": "wild",
-      "tags": [
-        "dancing",
-        "rain"
-      ],
       "text": {
         "en": "Never have I ever danced in the rain in the middle of the street.",
         "fa": "من هیچ‌وقت وسطِ خیابون زیرِ بارون نرقصیدم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-x022",
-      "intensity": "wild",
-      "tags": [
-        "sneaking",
-        "vip"
-      ],
       "text": {
         "en": "Never have I ever talked my way past security into a VIP area.",
         "fa": "من هیچ‌وقت با حرف زدن از کنارِ نگهبون رد نشدم و نرفتم تو بخشِ ویژه."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-x023",
-      "intensity": "wild",
-      "tags": [
-        "sunrise",
-        "adventure"
-      ],
       "text": {
         "en": "Never have I ever pulled an all-nighter just to watch the sunrise somewhere wild.",
         "fa": "من هیچ‌وقت تا صبح بیدار نموندم فقط واسه دیدنِ طلوعِ آفتاب تو یه جای بکر."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-x024",
-      "intensity": "wild",
-      "tags": [
-        "bungee",
-        "thrill"
-      ],
       "text": {
         "en": "Never have I ever gone bungee jumping off a tall bridge.",
         "fa": "من هیچ‌وقت از روی یه پلِ بلند بانجی‌جامپینگ نکردم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-x025",
-      "intensity": "wild",
-      "tags": [
-        "stranger",
-        "partying"
-      ],
       "text": {
         "en": "Never have I ever joined a stranger's table and partied with them all night.",
         "fa": "من هیچ‌وقت سرِ میزِ یه غریبه ننشستم و تمومِ شب باهاش پارتی نکردم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-x026",
-      "intensity": "wild",
-      "tags": [
-        "spending",
-        "reckless"
-      ],
       "text": {
         "en": "Never have I ever spent way more than I could afford on a wild night out.",
         "fa": "من هیچ‌وقت واسه یه شبِ دیوونه‌وارِ بیرون خیلی بیشتر از توانم خرج نکردم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-x027",
-      "intensity": "wild",
-      "tags": [
-        "fountain",
-        "wild"
-      ],
       "text": {
         "en": "Never have I ever jumped into a fountain fully clothed.",
         "fa": "من هیچ‌وقت با لباسِ کامل نپریدم تو یه فواره."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-x028",
-      "intensity": "wild",
-      "tags": [
-        "flirting",
-        "bold"
-      ],
       "text": {
         "en": "Never have I ever flirted my way into a free drink.",
         "fa": "من هیچ‌وقت با لاس زدن یه نوشیدنیِ مجانی نگرفتم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-x029",
-      "intensity": "wild",
-      "tags": [
-        "festival",
-        "wild"
-      ],
       "text": {
         "en": "Never have I ever gone to a festival and lost track of all my friends.",
         "fa": "من هیچ‌وقت نرفتم یه فستیوال که ردِ همه‌ی دوستام رو گم کنم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-x030",
-      "intensity": "wild",
-      "tags": [
-        "piercing",
-        "dare"
-      ],
       "text": {
         "en": "Never have I ever gotten a piercing on a dare.",
         "fa": "من هیچ‌وقت سرِ یه شرط بدنم رو پیرسینگ نکردم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-x031",
-      "intensity": "wild",
-      "tags": [
-        "sharks",
-        "thrill"
-      ],
       "text": {
         "en": "Never have I ever swum with sharks on purpose.",
         "fa": "من هیچ‌وقت عمداً با کوسه‌ها شنا نکردم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-x032",
-      "intensity": "wild",
-      "tags": [
-        "casino",
-        "gambling"
-      ],
       "text": {
         "en": "Never have I ever stayed up all night gambling at a casino.",
         "fa": "من هیچ‌وقت تمومِ شب رو تو یه کازینو قمار نکردم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-x033",
-      "intensity": "wild",
-      "tags": [
-        "escape",
-        "spontaneous"
-      ],
       "text": {
         "en": "Never have I ever skipped town for a weekend without telling anyone.",
         "fa": "من هیچ‌وقت بدونِ اینکه به کسی بگم واسه یه آخرِ هفته از شهر نزدم بیرون."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-x034",
-      "intensity": "wild",
-      "tags": [
-        "climbing",
-        "reckless"
-      ],
       "text": {
         "en": "Never have I ever climbed something I definitely shouldn't have.",
         "fa": "من هیچ‌وقت از چیزی که قطعاً نباید، بالا نرفتم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-x035",
-      "intensity": "wild",
-      "tags": [
-        "dancing",
-        "bold"
-      ],
       "text": {
         "en": "Never have I ever started a dance floor when nobody else was dancing.",
         "fa": "من هیچ‌وقت وقتی هیشکی نمی‌رقصید پیستِ رقص رو راه نندختم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-x036",
-      "intensity": "wild",
-      "tags": [
-        "date",
-        "adventure"
-      ],
       "text": {
         "en": "Never have I ever gone on a blind date that turned into a wild adventure.",
         "fa": "من هیچ‌وقت نرفتم سرِ یه قرارِ کور که بعد به یه ماجراجوییِ دیوونه‌وار تبدیل بشه."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-x037",
-      "intensity": "wild",
-      "tags": [
-        "confession",
-        "bold"
-      ],
       "text": {
         "en": "Never have I ever shouted a confession from a rooftop.",
         "fa": "من هیچ‌وقت از روی یه پشت‌بوم یه اعتراف رو داد نزدم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-x038",
-      "intensity": "wild",
-      "tags": [
-        "paragliding",
-        "thrill"
-      ],
       "text": {
         "en": "Never have I ever gone paragliding off a mountain.",
         "fa": "من هیچ‌وقت از روی یه کوه پاراگلایدینگ نکردم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-x039",
-      "intensity": "wild",
-      "tags": [
-        "bar",
-        "bold"
-      ],
       "text": {
         "en": "Never have I ever convinced a whole bar to do a group toast with me.",
         "fa": "من هیچ‌وقت کلِ یه بار رو راضی نکردم که با من دسته‌جمعی نوش بزنن."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-x040",
-      "intensity": "wild",
-      "tags": [
-        "stage",
-        "wild"
-      ],
       "text": {
         "en": "Never have I ever gone on stage uninvited and grabbed the mic.",
         "fa": "من هیچ‌وقت سرزده نرفتم رو صحنه و میکروفون رو برندارم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-x041",
-      "intensity": "wild",
-      "tags": [
-        "travel",
-        "solo"
-      ],
       "text": {
         "en": "Never have I ever wandered into a new city alone with no map.",
         "fa": "من هیچ‌وقت تنها و بدونِ نقشه تو یه شهرِ جدید پرسه نزدم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-x042",
-      "intensity": "wild",
-      "tags": [
-        "prank",
-        "bold"
-      ],
       "text": {
         "en": "Never have I ever pulled off a daring prank in public.",
         "fa": "من هیچ‌وقت یه شوخیِ جسورانه رو جلوی مردم در نیاوردم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-x043",
-      "intensity": "wild",
-      "tags": [
-        "swimming",
-        "rebel"
-      ],
       "text": {
         "en": "Never have I ever gone night-swimming in a place I wasn't allowed.",
         "fa": "من هیچ‌وقت شبونه جایی که اجازه نداشتم شنا نکردم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-x044",
-      "intensity": "wild",
-      "tags": [
-        "partying",
-        "last-one"
-      ],
       "text": {
         "en": "Never have I ever stayed at a party long after everyone else left.",
         "fa": "من هیچ‌وقت خیلی بعد از رفتنِ بقیه تو یه مهمونی نموندم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-x045",
-      "intensity": "wild",
-      "tags": [
-        "dare",
-        "thrill"
-      ],
       "text": {
         "en": "Never have I ever taken a dare that scared me half to death.",
         "fa": "من هیچ‌وقت شرطی رو قبول نکردم که از ترس نصفه‌جون بشم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-x046",
-      "intensity": "wild",
-      "tags": [
-        "rollercoaster",
-        "wild"
-      ],
       "text": {
         "en": "Never have I ever ridden a roller coaster more than ten times in a row.",
         "fa": "من هیچ‌وقت بیشتر از ده بار پشتِ‌سرِهم سوارِ ترنِ هوایی نشدم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-x047",
-      "intensity": "wild",
-      "tags": [
-        "boat",
-        "stranger"
-      ],
       "text": {
         "en": "Never have I ever flagged down a stranger's boat for a ride.",
         "fa": "من هیچ‌وقت قایقِ یه غریبه رو واسه سوار شدن نگه نداشتم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-x048",
-      "intensity": "wild",
-      "tags": [
-        "dancing",
-        "festival"
-      ],
       "text": {
         "en": "Never have I ever danced barefoot through a crowded street festival.",
         "fa": "من هیچ‌وقت پابرهنه وسطِ یه جشنِ خیابونیِ شلوغ نرقصیدم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-x049",
-      "intensity": "wild",
-      "tags": [
-        "storm",
-        "thrill"
-      ],
       "text": {
         "en": "Never have I ever chased a thunderstorm just for the rush.",
         "fa": "من هیچ‌وقت فقط به‌خاطرِ هیجانش دنبالِ یه طوفان نرفتم."
-      }
+      },
+      "intensity": "wild"
     },
     {
       "id": "nhie-w-x050",
-      "intensity": "wild",
-      "tags": [
-        "bet",
-        "wild"
-      ],
       "text": {
         "en": "Never have I ever made a wild bet and had to follow through on it.",
         "fa": "من هیچ‌وقت یه شرطِ دیوونه‌وار نبستم که بعد مجبور شم انجامش بدم."
-      }
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-351",
+      "text": {
+        "en": "Never have I ever rewashed the same load of laundry three times because I kept forgetting it in the machine.",
+        "fa": "من هیچ‌وقت یه بار لباس رو سه بار نشسته‌ام چون مدام یادم می‌رفت تو ماشین لباس‌شویی مونده."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-352",
+      "text": {
+        "en": "Never have I ever sniffed a pile of clothes to decide whether it was clean or dirty.",
+        "fa": "من هیچ‌وقت یه تپه لباس رو بو نکرده‌ام تا تصمیم بگیرم تمیزه یا کثیف."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-353",
+      "text": {
+        "en": "Never have I ever worn the same underwear two days in a row by flipping it inside out.",
+        "fa": "من هیچ‌وقت یه لباس زیر رو دو روز پشت سر هم با برگردوندنش نپوشیده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-354",
+      "text": {
+        "en": "Never have I ever peed in the shower to save time in the morning.",
+        "fa": "من هیچ‌وقت تو حموم برای صرفه‌جویی در وقت صبح نشاشیده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-355",
+      "text": {
+        "en": "Never have I ever eaten food that fell on the floor after the five-second rule expired.",
+        "fa": "من هیچ‌وقت غذایی رو که افتاده زمین بعد از تموم شدن قانون پنج ثانیه نخورده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-356",
+      "text": {
+        "en": "Never have I ever gone a whole week without changing my bedsheets and pretended it was clean.",
+        "fa": "من هیچ‌وقت یه هفته تمام ملحفه‌ام رو عوض نکرده‌ام و وانمود نکرده‌ام که تمیزه."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-357",
+      "text": {
+        "en": "Never have I ever picked my nose at a red light thinking nobody could see me.",
+        "fa": "من هیچ‌وقت پشت چراغ قرمز دماغم رو نکنده‌ام به خیال اینکه کسی نمی‌بینه."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-358",
+      "text": {
+        "en": "Never have I ever blamed the dog for a smell that was actually me.",
+        "fa": "من هیچ‌وقت تقصیر یه بویی که در واقع از خودم بود رو گردن سگ ننداخته‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-359",
+      "text": {
+        "en": "Never have I ever pretended to be on the phone to avoid talking to a neighbor.",
+        "fa": "من هیچ‌وقت وانمود نکرده‌ام که پای تلفنم تا با یه همسایه حرف نزنم."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-360",
+      "text": {
+        "en": "Never have I ever left the dishes soaking for so long that the water turned into a science experiment.",
+        "fa": "من هیچ‌وقت ظرف‌ها رو اون‌قدر تو آب خیس نگه نداشته‌ام که آبش به یه آزمایش علمی تبدیل بشه."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-361",
+      "text": {
+        "en": "Never have I ever used my phone on the toilet until my legs went numb.",
+        "fa": "من هیچ‌وقت اون‌قدر روی توالت با گوشی‌ام ور نرفته‌ام که پاهام بی‌حس بشن."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-362",
+      "text": {
+        "en": "Never have I ever sprayed deodorant instead of actually taking a shower.",
+        "fa": "من هیچ‌وقت به جای اینکه واقعاً دوش بگیرم اسپری دئودورانت نزده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-363",
+      "text": {
+        "en": "Never have I ever finished a whole tub of ice cream alone in one sitting and hidden the evidence.",
+        "fa": "من هیچ‌وقت یه ظرف کامل بستنی رو تنهایی یه‌جا تموم نکرده‌ام و مدرکش رو قایم نکرده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-364",
+      "text": {
+        "en": "Never have I ever pretended to be asleep so someone else would deal with the doorbell.",
+        "fa": "من هیچ‌وقت وانمود نکرده‌ام که خوابم تا یکی دیگه بره در رو باز کنه."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-365",
+      "text": {
+        "en": "Never have I ever worn dirty socks because I ran out of clean ones and didn't care.",
+        "fa": "من هیچ‌وقت جوراب کثیف نپوشیده‌ام چون جوراب تمیز تموم شده بود و اهمیتی هم ندادم."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-366",
+      "text": {
+        "en": "Never have I ever eaten straight out of the pot to avoid washing a plate.",
+        "fa": "من هیچ‌وقت برای اینکه بشقاب نشورم مستقیم از تو قابلمه غذا نخورده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-367",
+      "text": {
+        "en": "Never have I ever left a wet towel on the bed and slept next to it anyway.",
+        "fa": "من هیچ‌وقت یه حوله خیس رو روی تخت نذاشته‌ام و با این حال کنارش نخوابیده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-368",
+      "text": {
+        "en": "Never have I ever clogged a toilet at someone else's house and never said a word.",
+        "fa": "من هیچ‌وقت تو خونه‌ی یکی دیگه توالت رو گرفته نکرده‌ام و یه کلمه هم نگفته‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-369",
+      "text": {
+        "en": "Never have I ever rebrushed my hair instead of washing it for the third day in a row.",
+        "fa": "من هیچ‌وقت برای سومین روز پشت سر هم به جای شستن موهام فقط شونه‌شون نکرده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-370",
+      "text": {
+        "en": "Never have I ever microwaved fish in a shared kitchen and pretended I didn't smell anything.",
+        "fa": "من هیچ‌وقت تو یه آشپزخونه مشترک ماهی رو تو مایکروویو گرم نکرده‌ام و وانمود نکرده‌ام که هیچ بویی حس نمی‌کنم."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-371",
+      "text": {
+        "en": "Never have I ever picked food out of my teeth in front of the mirror and eaten it.",
+        "fa": "من هیچ‌وقت جلوی آینه غذای لای دندونم رو در نیاورده‌ام و نخورده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-372",
+      "text": {
+        "en": "Never have I ever worn the same jeans for two weeks without washing them.",
+        "fa": "من هیچ‌وقت یه شلوار جین رو دو هفته بدون شستن نپوشیده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-373",
+      "text": {
+        "en": "Never have I ever hidden a mess in a closet right before guests arrived.",
+        "fa": "من هیچ‌وقت درست قبل از رسیدن مهمون‌ها یه آشغال‌دونی رو تو کمد قایم نکرده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-374",
+      "text": {
+        "en": "Never have I ever scratched an itch in a very private spot in public when I thought nobody was looking.",
+        "fa": "من هیچ‌وقت تو جمع یه جای خیلی خصوصی رو وقتی فکر می‌کردم کسی نگاه نمی‌کنه نخارونده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-375",
+      "text": {
+        "en": "Never have I ever used the same coffee mug for a week without rinsing it.",
+        "fa": "من هیچ‌وقت یه لیوان قهوه رو یه هفته بدون آب کشیدن استفاده نکرده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-376",
+      "text": {
+        "en": "Never have I ever pretended to flush at work just to keep sitting on the toilet on my phone.",
+        "fa": "من هیچ‌وقت سر کار وانمود نکرده‌ام که سیفون رو کشیدم فقط برای اینکه با گوشی روی توالت بشینم."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-377",
+      "text": {
+        "en": "Never have I ever eaten leftovers that were way past their date and just hoped for the best.",
+        "fa": "من هیچ‌وقت غذای مونده‌ای که تاریخش خیلی گذشته بود رو نخورده‌ام و فقط امیدوار نبوده‌ام که اتفاقی نیفته."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-378",
+      "text": {
+        "en": "Never have I ever picked an outfit based purely on what didn't smell bad.",
+        "fa": "من هیچ‌وقت یه لباس رو فقط بر اساس اینکه بوی بد نمی‌داد انتخاب نکرده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-379",
+      "text": {
+        "en": "Never have I ever pretended a delivery never came so I could keep eating the snacks myself.",
+        "fa": "من هیچ‌وقت وانمود نکرده‌ام که یه بسته اصلاً نرسیده تا خودم بتونم تنقلاتش رو بخورم."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-380",
+      "text": {
+        "en": "Never have I ever fallen asleep without brushing my teeth and lied that I did.",
+        "fa": "من هیچ‌وقت بدون مسواک زدن خوابم نبرده‌ام و دروغ نگفته‌ام که زده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-381",
+      "text": {
+        "en": "Never have I ever reused a paper towel because I felt too lazy to grab a new one.",
+        "fa": "من هیچ‌وقت یه دستمال کاغذی رو دوباره استفاده نکرده‌ام چون تنبلم می‌اومد یکی تازه بردارم."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-382",
+      "text": {
+        "en": "Never have I ever pretended to listen to someone for ten minutes without hearing a single word.",
+        "fa": "من هیچ‌وقت ده دقیقه وانمود نکرده‌ام که به یکی گوش می‌دم بدون اینکه حتی یه کلمه شنیده باشم."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-383",
+      "text": {
+        "en": "Never have I ever spat toothpaste in the shower drain because I was too lazy to walk to the sink.",
+        "fa": "من هیچ‌وقت خمیردندون رو تو راه‌آب حموم تف نکرده‌ام چون تنبلم می‌اومد تا روشویی برم."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-384",
+      "text": {
+        "en": "Never have I ever worn pajamas to the store and acted like it was a deliberate fashion choice.",
+        "fa": "من هیچ‌وقت با لباس خواب به فروشگاه نرفته‌ام و وانمود نکرده‌ام که یه انتخاب عمدی مُد بوده."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-385",
+      "text": {
+        "en": "Never have I ever eaten something off a plate I knew hadn't been properly washed.",
+        "fa": "من هیچ‌وقت چیزی رو از روی بشقابی که می‌دونستم درست شسته نشده نخورده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-386",
+      "text": {
+        "en": "Never have I ever skipped doing dishes for so long I bought new utensils instead.",
+        "fa": "من هیچ‌وقت اون‌قدر ظرف نشستن رو عقب ننداخته‌ام که به جاش قاشق چنگال نو بخرم."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-387",
+      "text": {
+        "en": "Never have I ever sneakily smelled my own armpit in a meeting to check if I needed deodorant.",
+        "fa": "من هیچ‌وقت تو یه جلسه یواشکی زیر بغل خودم رو بو نکرده‌ام تا ببینم به دئودورانت احتیاج دارم یا نه."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-388",
+      "text": {
+        "en": "Never have I ever left a glass of water by the bed for so long that dust formed on top.",
+        "fa": "من هیچ‌وقت یه لیوان آب رو کنار تخت اون‌قدر نذاشته‌ام که روش گرد و خاک بشینه."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-389",
+      "text": {
+        "en": "Never have I ever pretended my phone died to get out of replying to a long message.",
+        "fa": "من هیچ‌وقت وانمود نکرده‌ام که گوشی‌ام خاموش شده تا از جواب دادن به یه پیام طولانی فرار کنم."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-390",
+      "text": {
+        "en": "Never have I ever worn the same pajamas for an entire week of working from home.",
+        "fa": "من هیچ‌وقت تو یه هفته‌ی کامل دورکاری یه لباس خواب رو نپوشیده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-391",
+      "text": {
+        "en": "Never have I ever dug through the trash to find something I accidentally threw away.",
+        "fa": "من هیچ‌وقت تو سطل آشغال نگشته‌ام تا چیزی رو که اشتباهی دور انداخته بودم پیدا کنم."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-392",
+      "text": {
+        "en": "Never have I ever scraped mold off a piece of food and eaten the rest anyway.",
+        "fa": "من هیچ‌وقت کپک روی یه تیکه غذا رو نتراشیده‌ام و بقیه‌اش رو با این حال نخورده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-393",
+      "text": {
+        "en": "Never have I ever turned my pillow over to the dry side and gone back to sleep on drool.",
+        "fa": "من هیچ‌وقت بالش رو روی سمت خشکش برنگردونده‌ام و دوباره روی آب دهنم نخوابیده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-394",
+      "text": {
+        "en": "Never have I ever pretended to be busy cleaning when someone walked in but I was just on my phone.",
+        "fa": "من هیچ‌وقت وانمود نکرده‌ام که سرم به نظافت گرمه وقتی یکی وارد شد ولی در واقع فقط با گوشی‌ام ور می‌رفتم."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-395",
+      "text": {
+        "en": "Never have I ever worn shoes with a hole in them for months because I didn't want to shop.",
+        "fa": "من هیچ‌وقت کفشی که سوراخ داشت رو ماه‌ها نپوشیده‌ام چون نمی‌خواستم برم خرید."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-396",
+      "text": {
+        "en": "Never have I ever hooked up with a coworker in the office after hours.",
+        "fa": "من هیچ‌وقت بعد از ساعت کاری توی دفتر با یک همکار رابطه برقرار نکرده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-397",
+      "text": {
+        "en": "Never have I ever made out with my boss at a work party.",
+        "fa": "من هیچ‌وقت توی مهمانی شرکت با رئیسم لب نگرفته‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-398",
+      "text": {
+        "en": "Never have I ever gotten so drunk at the office holiday party that I had to be sent home.",
+        "fa": "من هیچ‌وقت توی مهمانی تعطیلات شرکت آن‌قدر مست نشده‌ام که مجبور شوند بفرستندم خانه."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-399",
+      "text": {
+        "en": "Never have I ever flirted my way out of getting fired.",
+        "fa": "من هیچ‌وقت با لاس زدن از اخراج شدن فرار نکرده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-400",
+      "text": {
+        "en": "Never have I ever slept with someone purely to get a promotion.",
+        "fa": "من هیچ‌وقت فقط برای گرفتن ترفیع با کسی نخوابیده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-401",
+      "text": {
+        "en": "Never have I ever sent a nude to a colleague by mistake.",
+        "fa": "من هیچ‌وقت به اشتباه عکس لخت برای یک همکار نفرستاده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-402",
+      "text": {
+        "en": "Never have I ever skipped an entire semester of classes just to party.",
+        "fa": "من هیچ‌وقت یک ترم کامل کلاس‌ها را فقط برای پارتی گرفتن نپیچانده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-403",
+      "text": {
+        "en": "Never have I ever shown up to work still drunk from the night before.",
+        "fa": "من هیچ‌وقت از مستی شب قبل هنوز مست سرِ کار نرفته‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-404",
+      "text": {
+        "en": "Never have I ever stolen money from a workplace cash register.",
+        "fa": "من هیچ‌وقت از صندوق پول محل کار پول برنداشته‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-405",
+      "text": {
+        "en": "Never have I ever lied about my entire degree to land a job.",
+        "fa": "من هیچ‌وقت درباره کل مدرکم دروغ نگفته‌ام تا یک شغل بگیرم."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-406",
+      "text": {
+        "en": "Never have I ever had a crush on a teacher and made it obvious.",
+        "fa": "من هیچ‌وقت به یک معلم علاقه پیدا نکرده‌ام و آن را آشکار نکرده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-407",
+      "text": {
+        "en": "Never have I ever fooled around in a school bathroom.",
+        "fa": "من هیچ‌وقت توی دستشویی مدرسه با کسی ور نرفته‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-408",
+      "text": {
+        "en": "Never have I ever blown an entire paycheck in a single wild night out.",
+        "fa": "من هیچ‌وقت کل حقوق یک ماهم را در یک شب دیوانه‌وار خرج نکرده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-409",
+      "text": {
+        "en": "Never have I ever gambled away rent money.",
+        "fa": "من هیچ‌وقت پول اجاره خانه را سرِ قمار نباخته‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-410",
+      "text": {
+        "en": "Never have I ever faked being sick to skip work and go on a date.",
+        "fa": "من هیچ‌وقت برای پیچاندن کار و رفتن سرِ قرار خودم را به مریضی نزده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-411",
+      "text": {
+        "en": "Never have I ever cheated on a final exam and gotten away with it.",
+        "fa": "من هیچ‌وقت سرِ امتحان پایان‌ترم تقلب نکرده‌ام و قسر در نرفته‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-412",
+      "text": {
+        "en": "Never have I ever sexted during a boring work meeting.",
+        "fa": "من هیچ‌وقت وسط یک جلسه کاری خسته‌کننده پیام داغ نفرستاده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-413",
+      "text": {
+        "en": "Never have I ever taken a nap under my desk to sleep off a hangover.",
+        "fa": "من هیچ‌وقت برای رفع خماری زیر میزم چرت نزده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-414",
+      "text": {
+        "en": "Never have I ever spread a wild rumor about a coworker for revenge.",
+        "fa": "من هیچ‌وقت برای انتقام یک شایعه جنجالی درباره یک همکار پخش نکرده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-415",
+      "text": {
+        "en": "Never have I ever maxed out a credit card on a stripper.",
+        "fa": "من هیچ‌وقت سقف کارت اعتباری‌ام را خرج یک رقاص لخت نکرده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-416",
+      "text": {
+        "en": "Never have I ever drunk-emailed my entire department something embarrassing.",
+        "fa": "من هیچ‌وقت در حالت مستی یک ایمیل خجالت‌آور به کل بخش‌مان نفرستاده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-417",
+      "text": {
+        "en": "Never have I ever gotten a tattoo on a dare with my coworkers.",
+        "fa": "من هیچ‌وقت سرِ یک شرط‌بندی با همکارانم خالکوبی نکرده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-418",
+      "text": {
+        "en": "Never have I ever lied on a loan application to get cash for a party.",
+        "fa": "من هیچ‌وقت توی فرم وام دروغ ننوشته‌ام تا برای پارتی پول جور کنم."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-419",
+      "text": {
+        "en": "Never have I ever streaked across campus on a bet.",
+        "fa": "من هیچ‌وقت سرِ شرط‌بندی لخت توی محوطه دانشگاه ندویده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-420",
+      "text": {
+        "en": "Never have I ever gotten caught in a compromising position in a parked work car.",
+        "fa": "من هیچ‌وقت توی ماشین پارک‌شده محل کار در وضعیت خجالت‌آوری گیر نیفتاده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-421",
+      "text": {
+        "en": "Never have I ever spent my student loan on a vacation instead of tuition.",
+        "fa": "من هیچ‌وقت وام دانشجویی‌ام را به‌جای شهریه خرج یک سفر نکرده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-422",
+      "text": {
+        "en": "Never have I ever danced on a table at a work event.",
+        "fa": "من هیچ‌وقت توی یک مراسم کاری روی میز نرقصیده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-423",
+      "text": {
+        "en": "Never have I ever secretly dated two coworkers at the same time.",
+        "fa": "من هیچ‌وقت مخفیانه هم‌زمان با دو همکار قرار نگذاشته‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-424",
+      "text": {
+        "en": "Never have I ever told off my boss while drunk and somehow kept my job.",
+        "fa": "من هیچ‌وقت در حالت مستی به رئیسم پرخاش نکرده‌ام و به‌طور معجزه‌آسا شغلم را حفظ نکرده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-425",
+      "text": {
+        "en": "Never have I ever pawned something to cover a wild weekend.",
+        "fa": "من هیچ‌وقت چیزی را گرو نگذاشته‌ام تا خرج یک آخرهفته دیوانه‌وار را درآورم."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-426",
+      "text": {
+        "en": "Never have I ever made a fake ID to get into a college bar.",
+        "fa": "من هیچ‌وقت کارت شناسایی جعلی نساخته‌ام تا وارد یک بارِ دانشجویی شوم."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-427",
+      "text": {
+        "en": "Never have I ever hooked up with someone at a conference and ditched the sessions.",
+        "fa": "من هیچ‌وقت توی یک کنفرانس با کسی رابطه برقرار نکرده‌ام و جلسات را نپیچانده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-428",
+      "text": {
+        "en": "Never have I ever lied about a sick relative to score a day off and party.",
+        "fa": "من هیچ‌وقت درباره یک فامیلِ مریض دروغ نگفته‌ام تا یک روز مرخصی بگیرم و پارتی کنم."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-429",
+      "text": {
+        "en": "Never have I ever stripped or danced for tips to pay tuition.",
+        "fa": "من هیچ‌وقت برای پرداخت شهریه لخت نرقصیده‌ام یا برای انعام نرقصیده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-430",
+      "text": {
+        "en": "Never have I ever hidden a one-night stand in my dorm from my roommate.",
+        "fa": "من هیچ‌وقت یک رابطه یک‌شبه را توی خوابگاه از هم‌اتاقی‌ام پنهان نکرده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-431",
+      "text": {
+        "en": "Never have I ever gotten a lap dance billed to a company expense account.",
+        "fa": "من هیچ‌وقت هزینه یک رقص خصوصی را روی حساب هزینه‌های شرکت ننوشته‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-432",
+      "text": {
+        "en": "Never have I ever woken up next to a coworker with no memory of the night.",
+        "fa": "من هیچ‌وقت کنار یک همکار بیدار نشده‌ام بدون اینکه چیزی از آن شب یادم بیاید."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-433",
+      "text": {
+        "en": "Never have I ever gotten kicked out of a class for being hungover.",
+        "fa": "من هیچ‌وقت به‌خاطر خماری از یک کلاس بیرون انداخته نشده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-434",
+      "text": {
+        "en": "Never have I ever sold something I didn't own to make quick cash.",
+        "fa": "من هیچ‌وقت چیزی را که مال خودم نبوده برای پول سریع نفروخته‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-435",
+      "text": {
+        "en": "Never have I ever flashed someone to win a drinking game at a frat party.",
+        "fa": "من هیچ‌وقت توی یک پارتی دانشجویی برای بردن یک بازی مشروب بدنم را به کسی نشان نداده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-436",
+      "text": {
+        "en": "Never have I ever borrowed money from a friend and blown it all at a casino.",
+        "fa": "من هیچ‌وقت از یک دوست پول قرض نگرفته‌ام و همه‌اش را توی کازینو نباخته‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-437",
+      "text": {
+        "en": "Never have I ever gotten frisky in the back of a lecture hall.",
+        "fa": "من هیچ‌وقت توی ردیف‌های آخر یک سالن درس با کسی ور نرفته‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-438",
+      "text": {
+        "en": "Never have I ever quit a job dramatically in the middle of a wild night out.",
+        "fa": "من هیچ‌وقت وسط یک شبِ دیوانه‌وار با ژست دراماتیک از کارم استعفا نداده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-439",
+      "text": {
+        "en": "Never have I ever dared a coworker to send our boss a ridiculous drunk message.",
+        "fa": "من هیچ‌وقت یک همکار را به فرستادن یک پیام مستِ مسخره برای رئیس‌مان وادار نکرده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-440",
+      "text": {
+        "en": "Never have I ever blown my first big paycheck entirely on alcohol and a party.",
+        "fa": "من هیچ‌وقت اولین حقوق کلانم را کاملاً خرج مشروب و یک پارتی نکرده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-441",
+      "text": {
+        "en": "Never have I ever skinny-dipped in a hotel pool after hours on a trip.",
+        "fa": "من هیچ‌وقت تو سفر بعد از ساعت کاری لخت تو استخر هتل شنا نکرده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-442",
+      "text": {
+        "en": "Never have I ever hooked up with someone I met on the first night of a vacation.",
+        "fa": "من هیچ‌وقت با کسی که شب اول تعطیلات دیدم رابطه برقرار نکرده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-443",
+      "text": {
+        "en": "Never have I ever joined the mile-high club on a flight.",
+        "fa": "من هیچ‌وقت تو هواپیما عضو باشگاه ارتفاع نشده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-444",
+      "text": {
+        "en": "Never have I ever flashed someone from a balcony abroad.",
+        "fa": "من هیچ‌وقت تو خارج از کشور از بالکن بدنم رو به کسی نشان نداده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-445",
+      "text": {
+        "en": "Never have I ever gotten so drunk at a dinner party that I passed out at the table.",
+        "fa": "من هیچ‌وقت تو مهمونی شام اونقدر مست نشده‌ام که سر میز از حال بروم."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-446",
+      "text": {
+        "en": "Never have I ever made out with a stranger in a foreign nightclub.",
+        "fa": "من هیچ‌وقت تو یه کلاب شبانه خارجی با یه غریبه لب نگرفته‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-447",
+      "text": {
+        "en": "Never have I ever sneaked two people into a single hotel room to split the bill.",
+        "fa": "من هیچ‌وقت برای نصف کردن صورتحساب دو نفر رو یواشکی تو یه اتاق هتل نبرده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-448",
+      "text": {
+        "en": "Never have I ever danced on a bar table while travelling.",
+        "fa": "من هیچ‌وقت تو سفر روی میز بار نرقصیده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-449",
+      "text": {
+        "en": "Never have I ever eaten something off another person's body at a party.",
+        "fa": "من هیچ‌وقت تو یه مهمونی چیزی رو از روی بدن یه نفر دیگه نخورده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-450",
+      "text": {
+        "en": "Never have I ever been kicked out of a restaurant for being too rowdy.",
+        "fa": "من هیچ‌وقت به خاطر شلوغ‌کاری از یه رستوران بیرون انداخته نشده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-451",
+      "text": {
+        "en": "Never have I ever taken a stranger back to my hostel dorm.",
+        "fa": "من هیچ‌وقت یه غریبه رو به خوابگاه هاستلم نبرده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-452",
+      "text": {
+        "en": "Never have I ever streaked across a beach on a dare.",
+        "fa": "من هیچ‌وقت سر یه شرط‌بندی لخت از روی ساحل ندویده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-453",
+      "text": {
+        "en": "Never have I ever lied to my travel companions about who I spent the night with.",
+        "fa": "من هیچ‌وقت به هم‌سفرهام درباره‌ی اینکه شب رو با کی گذروندم دروغ نگفته‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-454",
+      "text": {
+        "en": "Never have I ever gotten a tattoo I regretted while drunk on holiday.",
+        "fa": "من هیچ‌وقت تو تعطیلات مست یه خالکوبی که ازش پشیمون شدم نزده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-455",
+      "text": {
+        "en": "Never have I ever woken up in a city I didn't remember travelling to.",
+        "fa": "من هیچ‌وقت تو شهری که یادم نبود چطور بهش رفتم بیدار نشده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-456",
+      "text": {
+        "en": "Never have I ever sent a flirty drunk text to an ex from a vacation.",
+        "fa": "من هیچ‌وقت از تو تعطیلات مست یه پیام عاشقانه به یه کات‌کرده نفرستاده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-457",
+      "text": {
+        "en": "Never have I ever crashed a stranger's wedding for the free food and drinks.",
+        "fa": "من هیچ‌وقت برای غذا و نوشیدنی مجانی به عروسی یه غریبه نرفته‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-458",
+      "text": {
+        "en": "Never have I ever had a fling with a tour guide or bartender on a trip.",
+        "fa": "من هیچ‌وقت تو سفر با یه راهنمای تور یا باری‌من رابطه‌ی گذرا نداشته‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-459",
+      "text": {
+        "en": "Never have I ever skipped out on a restaurant bill and run.",
+        "fa": "من هیچ‌وقت بدون پرداخت صورتحساب رستوران فرار نکرده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-460",
+      "text": {
+        "en": "Never have I ever thrown up on someone during a wild night out.",
+        "fa": "من هیچ‌وقت تو یه شب پرهیجان روی یه نفر بالا نیاورده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-461",
+      "text": {
+        "en": "Never have I ever swapped partners with a couple I met while travelling.",
+        "fa": "من هیچ‌وقت با یه زوجی که تو سفر دیدم پارتنر عوض نکرده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-462",
+      "text": {
+        "en": "Never have I ever kissed two different people in one night at a party.",
+        "fa": "من هیچ‌وقت تو یه مهمونی تو یه شب دو نفر مختلف رو نبوسیده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-463",
+      "text": {
+        "en": "Never have I ever gone commando at a fancy dinner.",
+        "fa": "من هیچ‌وقت تو یه شام شیک بدون لباس زیر نرفته‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-464",
+      "text": {
+        "en": "Never have I ever pretended to be a different person to a hookup on a trip.",
+        "fa": "من هیچ‌وقت تو سفر خودم رو به کسی که باهاش بودم یه آدم دیگه جا نزده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-465",
+      "text": {
+        "en": "Never have I ever drunk so much at an open bar that I lost my shoes.",
+        "fa": "من هیچ‌وقت تو یه بار رایگان اونقدر ننوشیده‌ام که کفش‌هام رو گم کنم."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-466",
+      "text": {
+        "en": "Never have I ever hooked up in an airplane bathroom.",
+        "fa": "من هیچ‌وقت تو دستشویی هواپیما با کسی رابطه نداشته‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-467",
+      "text": {
+        "en": "Never have I ever stolen a kiss from someone at a dinner party in front of their date.",
+        "fa": "من هیچ‌وقت تو یه مهمونی شام جلوی پارتنر یه نفر ازش بوسه ندزدیده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-468",
+      "text": {
+        "en": "Never have I ever gambled away my food budget at a casino abroad.",
+        "fa": "من هیچ‌وقت تو یه کازینو خارجی پول غذام رو سر قمار نباخته‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-469",
+      "text": {
+        "en": "Never have I ever skipped a whole day of a trip because I was too hungover.",
+        "fa": "من هیچ‌وقت به خاطر خماری یه روز کامل از سفرم رو از دست نداده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-470",
+      "text": {
+        "en": "Never have I ever fed a stranger a bite of my food just to start flirting.",
+        "fa": "من هیچ‌وقت فقط برای شروع لاس زدن یه لقمه از غذام رو به یه غریبه نداده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-471",
+      "text": {
+        "en": "Never have I ever gone to a clothing-optional beach on holiday.",
+        "fa": "من هیچ‌وقت تو تعطیلات به یه ساحل بدون اجبار پوشش نرفته‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-472",
+      "text": {
+        "en": "Never have I ever lied about being single to someone I met on a trip.",
+        "fa": "من هیچ‌وقت به کسی که تو سفر دیدم درباره‌ی مجرد بودنم دروغ نگفته‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-473",
+      "text": {
+        "en": "Never have I ever woken up next to someone whose name I forgot after a party.",
+        "fa": "من هیچ‌وقت بعد از یه مهمونی کنار کسی که اسمش رو فراموش کرده بودم بیدار نشده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-474",
+      "text": {
+        "en": "Never have I ever made out in the back of a taxi on a night out.",
+        "fa": "من هیچ‌وقت تو یه شب بیرون پشت یه تاکسی لب نگرفته‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-475",
+      "text": {
+        "en": "Never have I ever drunkenly proposed to someone I'd just met on vacation.",
+        "fa": "من هیچ‌وقت تو تعطیلات مست به کسی که تازه دیده بودم پیشنهاد ازدواج نداده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-476",
+      "text": {
+        "en": "Never have I ever taken a risqué photo at a tourist landmark.",
+        "fa": "من هیچ‌وقت کنار یه جاذبه‌ی توریستی عکس جسورانه نگرفته‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-477",
+      "text": {
+        "en": "Never have I ever spiked the punch at a party without telling anyone.",
+        "fa": "من هیچ‌وقت بدون اینکه به کسی بگم تو پانچ مهمونی الکل نریخته‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-478",
+      "text": {
+        "en": "Never have I ever shared a bed with two friends on a trip and things got awkward.",
+        "fa": "من هیچ‌وقت تو سفر با دو تا دوست تو یه تخت نخوابیده‌ام که اوضاع معذب‌کننده بشه."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-479",
+      "text": {
+        "en": "Never have I ever sneaked a kiss in a restaurant photo booth.",
+        "fa": "من هیچ‌وقت تو غرفه‌ی عکس یه رستوران یواشکی بوسه ندزدیده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-480",
+      "text": {
+        "en": "Never have I ever ended up in a stranger's hot tub at a house party.",
+        "fa": "من هیچ‌وقت تو یه مهمونی خونگی سر از جکوزی یه غریبه درنیاورده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-481",
+      "text": {
+        "en": "Never have I ever flirted my way into a free meal at a restaurant.",
+        "fa": "من هیچ‌وقت با لاس زدن یه وعده‌ی غذای مجانی تو رستوران به دست نیاورده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-482",
+      "text": {
+        "en": "Never have I ever lost a bet and had to eat something disgusting at a party.",
+        "fa": "من هیچ‌وقت تو یه مهمونی شرط رو نباختم که مجبور بشم یه چیز چندش بخورم."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-483",
+      "text": {
+        "en": "Never have I ever booked a romantic getaway with someone I barely knew.",
+        "fa": "من هیچ‌وقت با کسی که به‌سختی می‌شناختم یه سفر عاشقانه رزرو نکرده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-484",
+      "text": {
+        "en": "Never have I ever danced until sunrise at a beach party and skipped my flight.",
+        "fa": "من هیچ‌وقت تو یه پارتی ساحلی تا طلوع آفتاب نرقصیده‌ام و پروازم رو از دست نداده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-485",
+      "text": {
+        "en": "Never have I ever swapped seats on a plane just to sit next to someone attractive.",
+        "fa": "من هیچ‌وقت فقط برای نشستن کنار یه آدم جذاب صندلی هواپیمام رو عوض نکرده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-486",
+      "text": {
+        "en": "Never have I ever ripped my pants on a dance floor and kept dancing.",
+        "fa": "من هیچ‌وقت شلوارم رو وسط پیست رقص پاره نکرده‌ام و به رقصیدن ادامه نداده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-487",
+      "text": {
+        "en": "Never have I ever called my boss the wrong name to their face.",
+        "fa": "من هیچ‌وقت رئیسم رو جلوی خودش به اسم اشتباه صدا نزده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-488",
+      "text": {
+        "en": "Never have I ever walked out of a bathroom with toilet paper stuck to my shoe.",
+        "fa": "من هیچ‌وقت با دستمال توالت چسبیده به کفشم از دستشویی بیرون نیامده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-489",
+      "text": {
+        "en": "Never have I ever drunk-texted my ex and regretted it the next morning.",
+        "fa": "من هیچ‌وقت مست به اکسم پیام نداده‌ام و صبح روز بعد پشیمان نشده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-490",
+      "text": {
+        "en": "Never have I ever tripped on a completely flat floor in front of a crowd.",
+        "fa": "من هیچ‌وقت روی یک کف کاملاً صاف جلوی جمعیت زمین نخورده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-491",
+      "text": {
+        "en": "Never have I ever accidentally liked an old photo while stalking someone online.",
+        "fa": "من هیچ‌وقت موقع چک کردن پروفایل یک نفر، یک عکس قدیمی‌اش رو اشتباهی لایک نکرده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-492",
+      "text": {
+        "en": "Never have I ever shown up to a party on the totally wrong day.",
+        "fa": "من هیچ‌وقت در روز کاملاً اشتباه به یک مهمانی نرفته‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-493",
+      "text": {
+        "en": "Never have I ever loudly insulted someone who was standing right behind me.",
+        "fa": "من هیچ‌وقت با صدای بلند به کسی توهین نکرده‌ام که دقیقاً پشت سرم ایستاده بود."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-494",
+      "text": {
+        "en": "Never have I ever sent a screenshot of a chat to the very person it was about.",
+        "fa": "من هیچ‌وقت اسکرین‌شاتِ یک چت رو برای همان کسی که دربارهٔ او بود نفرستاده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-495",
+      "text": {
+        "en": "Never have I ever spilled an entire drink on a stranger at a bar.",
+        "fa": "من هیچ‌وقت یک نوشیدنی کامل رو روی یک غریبه توی بار نریخته‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-496",
+      "text": {
+        "en": "Never have I ever fallen asleep and snored loudly during a meeting.",
+        "fa": "من هیچ‌وقت وسط یک جلسه خوابم نبرده و با صدای بلند خرناس نکشیده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-497",
+      "text": {
+        "en": "Never have I ever pushed a pull door for way too long while people watched.",
+        "fa": "من هیچ‌وقت در حالی که آدم‌ها نگاه می‌کردند یک درِ کششی رو مدت زیادی هل نداده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-498",
+      "text": {
+        "en": "Never have I ever called my partner by my ex's name in front of friends.",
+        "fa": "من هیچ‌وقت جلوی دوستان، شریک عاطفی‌ام رو به اسم اکسم صدا نزده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-499",
+      "text": {
+        "en": "Never have I ever left a voicemail rambling because I forgot to hang up.",
+        "fa": "من هیچ‌وقت چون یادم رفت قطع کنم، یک پیام صوتی پرحرف و بی‌سر و ته نگذاشته‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-500",
+      "text": {
+        "en": "Never have I ever sneezed so hard that something embarrassing flew out.",
+        "fa": "من هیچ‌وقت آنقدر شدید عطسه نکرده‌ام که یک چیز خجالت‌آور بیرون بپرد."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-501",
+      "text": {
+        "en": "Never have I ever sat on a whoopee cushion in a dead-silent room.",
+        "fa": "من هیچ‌وقت در یک اتاق کاملاً ساکت روی یک بالشتکِ صدادار ننشسته‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-502",
+      "text": {
+        "en": "Never have I ever sent a flirty message to the wrong group chat.",
+        "fa": "من هیچ‌وقت یک پیام عشوه‌گرانه رو به گروه چت اشتباهی نفرستاده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-503",
+      "text": {
+        "en": "Never have I ever laughed so hard at a funeral that I had to leave.",
+        "fa": "من هیچ‌وقت سر یک مراسم ختم آنقدر نخندیده‌ام که مجبور به ترک آنجا شوم."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-504",
+      "text": {
+        "en": "Never have I ever forgotten to mute myself and trash-talked on a live call.",
+        "fa": "من هیچ‌وقت یادم نرفته خودم رو بی‌صدا کنم و وسط یک تماس زنده پشت سر کسی حرف نزده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-505",
+      "text": {
+        "en": "Never have I ever realized mid-presentation that my fly was open.",
+        "fa": "من هیچ‌وقت وسط یک ارائه متوجه نشده‌ام که زیپ شلوارم باز است."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-506",
+      "text": {
+        "en": "Never have I ever waved goodbye and then walked in the same direction as them.",
+        "fa": "من هیچ‌وقت خداحافظی نکرده‌ام و بعد همان مسیری که او می‌رفت را نرفته‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-507",
+      "text": {
+        "en": "Never have I ever mistaken a stranger for my friend and hugged them tight.",
+        "fa": "من هیچ‌وقت یک غریبه رو با دوستم اشتباه نگرفته‌ام و محکم بغلش نکرده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-508",
+      "text": {
+        "en": "Never have I ever danced wildly thinking no one was filming me.",
+        "fa": "من هیچ‌وقت به خیال اینکه کسی فیلم نمی‌گیرد، دیوانه‌وار نرقصیده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-509",
+      "text": {
+        "en": "Never have I ever sent a voice note that captured something I never meant to say.",
+        "fa": "من هیچ‌وقت یک پیام صوتی نفرستاده‌ام که چیزی رو که اصلاً نمی‌خواستم بگویم ضبط کرده باشد."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-510",
+      "text": {
+        "en": "Never have I ever walked into a glass door in front of a whole café.",
+        "fa": "من هیچ‌وقت جلوی یک کافهٔ پر آدم با یک درِ شیشه‌ای برخورد نکرده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-511",
+      "text": {
+        "en": "Never have I ever burped loudly right as the room went quiet.",
+        "fa": "من هیچ‌وقت دقیقاً وقتی اتاق ساکت شد با صدای بلند آروغ نزده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-512",
+      "text": {
+        "en": "Never have I ever gotten caught talking to myself by a coworker.",
+        "fa": "من هیچ‌وقت موقع حرف زدن با خودم توسط یک همکار غافلگیر نشده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-513",
+      "text": {
+        "en": "Never have I ever locked myself out wearing only a towel.",
+        "fa": "من هیچ‌وقت در حالی که فقط یک حوله تنم بود خودم رو بیرونِ در جا نگذاشته‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-514",
+      "text": {
+        "en": "Never have I ever accidentally posted a private story to my main feed.",
+        "fa": "من هیچ‌وقت یک استوریِ خصوصی رو اشتباهی در فید اصلی‌ام منتشر نکرده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-515",
+      "text": {
+        "en": "Never have I ever clapped at the wrong moment when no one else did.",
+        "fa": "من هیچ‌وقت در لحظهٔ اشتباه که هیچ‌کس دیگری دست نزد، دست نزده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-516",
+      "text": {
+        "en": "Never have I ever fallen off a chair while leaning back to look cool.",
+        "fa": "من هیچ‌وقت موقع لم دادن روی صندلی برای باکلاس به نظر رسیدن، از روی آن نیفتاده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-517",
+      "text": {
+        "en": "Never have I ever replied 'you too' when the waiter said 'enjoy your meal'.",
+        "fa": "من هیچ‌وقت وقتی پیشخدمت گفت «نوش جان»، جواب نداده‌ام «شما هم همینطور»."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-518",
+      "text": {
+        "en": "Never have I ever gotten stuck in a piece of clothing in a fitting room.",
+        "fa": "من هیچ‌وقت توی اتاق پرو داخل یک لباس گیر نکرده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-519",
+      "text": {
+        "en": "Never have I ever drunkenly confessed a secret crush at a party.",
+        "fa": "من هیچ‌وقت سر یک مهمانی در حالت مستی به یک عشقِ پنهانی اعتراف نکرده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-520",
+      "text": {
+        "en": "Never have I ever called out 'Mom!' to a stranger in a store.",
+        "fa": "من هیچ‌وقت توی یک فروشگاه یک غریبه رو «مامان!» صدا نزده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-521",
+      "text": {
+        "en": "Never have I ever sat down right as my chair was being pulled away.",
+        "fa": "من هیچ‌وقت دقیقاً وقتی صندلی‌ام داشت کشیده می‌شد ننشسته‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-522",
+      "text": {
+        "en": "Never have I ever forwarded a meme to a family group instead of my friend.",
+        "fa": "من هیچ‌وقت یک میم رو به جای دوستم به گروه خانوادگی نفرستاده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-523",
+      "text": {
+        "en": "Never have I ever started singing out loud with earbuds in by accident.",
+        "fa": "من هیچ‌وقت با هندزفری توی گوشم اشتباهی با صدای بلند آواز نخوانده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-524",
+      "text": {
+        "en": "Never have I ever introduced two people and forgotten both their names.",
+        "fa": "من هیچ‌وقت دو نفر رو به هم معرفی نکرده‌ام و اسم هر دو را فراموش نکرده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-525",
+      "text": {
+        "en": "Never have I ever tucked my skirt into my underwear and walked around like that.",
+        "fa": "من هیچ‌وقت دامنم رو داخل لباس زیرم گیر نداده‌ام و همان‌طور راه نرفته‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-526",
+      "text": {
+        "en": "Never have I ever sent a screenshot to the very group I was complaining about.",
+        "fa": "من هیچ‌وقت یک اسکرین‌شات رو به همان گروهی که از آن شکایت داشتم نفرستاده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-527",
+      "text": {
+        "en": "Never have I ever hidden in a closet to avoid an awkward conversation.",
+        "fa": "من هیچ‌وقت برای فرار از یک گفتگوی معذب‌کننده توی کمد قایم نشده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-528",
+      "text": {
+        "en": "Never have I ever blown a kiss to the wrong person across a room.",
+        "fa": "من هیچ‌وقت از آن سر اتاق برای آدم اشتباهی بوس نفرستاده‌ام."
+      },
+      "intensity": "wild"
+    },
+    {
+      "id": "nhie-gen-529",
+      "text": {
+        "en": "Never have I ever realized my microphone was on while I was in the bathroom.",
+        "fa": "من هیچ‌وقت متوجه نشده‌ام که میکروفونم روشن بوده در حالی که توی دستشویی بودم."
+      },
+      "intensity": "wild"
     }
   ]
 }

@@ -12,434 +12,5008 @@
       "word": {
         "en": "Tahdig",
         "fa": "ته‌دیگ"
-      }
+      },
+      "difficulty": "easy"
     },
     {
       "id": "food-kebab",
       "word": {
         "en": "Kebab",
         "fa": "کباب"
-      }
+      },
+      "difficulty": "easy"
     },
     {
       "id": "food-ghormeh-sabzi",
       "word": {
         "en": "Ghormeh Sabzi",
         "fa": "قورمه‌سبزی"
-      }
+      },
+      "difficulty": "easy"
     },
     {
       "id": "food-fesenjan",
       "word": {
         "en": "Fesenjan",
         "fa": "فسنجون"
-      }
+      },
+      "difficulty": "easy"
     },
     {
       "id": "food-dizi",
       "word": {
         "en": "Dizi",
         "fa": "دیزی"
-      }
+      },
+      "difficulty": "easy"
     },
     {
       "id": "food-ash-reshteh",
       "word": {
         "en": "Ash Reshteh",
         "fa": "آش رشته"
-      }
+      },
+      "difficulty": "easy"
     },
     {
       "id": "food-kashk-bademjan",
       "word": {
         "en": "Kashk Bademjan",
         "fa": "کشک بادمجون"
-      }
+      },
+      "difficulty": "easy"
     },
     {
       "id": "food-pizza",
       "word": {
         "en": "Pizza",
         "fa": "پیتزا"
-      }
+      },
+      "difficulty": "easy"
     },
     {
       "id": "food-hamburger",
       "word": {
         "en": "Hamburger",
         "fa": "همبرگر"
-      }
+      },
+      "difficulty": "easy"
     },
     {
       "id": "food-french-fries",
       "word": {
         "en": "French Fries",
         "fa": "سیب‌زمینی سرخ‌کرده"
-      }
+      },
+      "difficulty": "easy"
     },
     {
       "id": "food-sushi",
       "word": {
         "en": "Sushi",
         "fa": "سوشی"
-      }
+      },
+      "difficulty": "easy"
     },
     {
       "id": "food-spaghetti",
       "word": {
         "en": "Spaghetti",
         "fa": "اسپاگتی"
-      }
+      },
+      "difficulty": "easy"
     },
     {
       "id": "food-falafel",
       "word": {
         "en": "Falafel",
         "fa": "فلافل"
-      }
+      },
+      "difficulty": "easy"
     },
     {
       "id": "food-doogh",
       "word": {
         "en": "Doogh",
         "fa": "دوغ"
-      }
+      },
+      "difficulty": "easy"
     },
     {
       "id": "food-saffron-ice-cream",
       "word": {
         "en": "Saffron Ice Cream",
         "fa": "بستنی زعفرونی"
-      }
+      },
+      "difficulty": "easy"
     },
     {
       "id": "food-watermelon",
       "word": {
         "en": "Watermelon",
         "fa": "هندوانه"
-      }
+      },
+      "difficulty": "easy"
     },
     {
       "id": "food-pomegranate",
       "word": {
         "en": "Pomegranate",
         "fa": "انار"
-      }
+      },
+      "difficulty": "easy"
     },
     {
       "id": "food-pistachio",
       "word": {
         "en": "Pistachio",
         "fa": "پسته"
-      }
+      },
+      "difficulty": "easy"
     },
     {
       "id": "food-dates",
       "word": {
         "en": "Dates",
         "fa": "خرما"
-      }
+      },
+      "difficulty": "easy"
     },
     {
       "id": "food-saffron",
       "word": {
         "en": "Saffron",
         "fa": "زعفران"
-      }
+      },
+      "difficulty": "easy"
     },
     {
       "id": "food-sangak-bread",
       "word": {
         "en": "Sangak Bread",
         "fa": "نون سنگک"
-      }
+      },
+      "difficulty": "easy"
     },
     {
       "id": "food-feta-cheese",
       "word": {
         "en": "Feta Cheese",
         "fa": "پنیر و سبزی"
-      }
+      },
+      "difficulty": "easy"
     },
     {
       "id": "food-omelet",
       "word": {
         "en": "Omelet",
         "fa": "املت"
-      }
+      },
+      "difficulty": "easy"
     },
     {
       "id": "food-popcorn",
       "word": {
         "en": "Popcorn",
         "fa": "پاپ‌کورن"
-      }
+      },
+      "difficulty": "easy"
     },
     {
-      "id": "food-gaz",
+      "id": "food-gaz-nougat",
       "word": {
         "en": "Gaz Nougat",
         "fa": "گز"
-      }
+      },
+      "difficulty": "easy"
     },
     {
       "id": "food-zoolbia-bamieh",
       "word": {
         "en": "Zoolbia Bamieh",
         "fa": "زولبیا بامیه"
-      }
+      },
+      "difficulty": "easy"
     },
     {
-      "id": "food-chai-tea",
+      "id": "food-tea",
       "word": {
         "en": "Tea",
         "fa": "چایی"
-      }
+      },
+      "difficulty": "easy"
     },
     {
       "id": "food-saffron-rice",
       "word": {
         "en": "Saffron Rice",
         "fa": "پلو زعفرونی"
-      }
+      },
+      "difficulty": "easy"
     },
     {
       "id": "food-grilled-tomato",
       "word": {
         "en": "Grilled Tomato",
         "fa": "گوجه کبابی"
-      }
+      },
+      "difficulty": "easy"
     },
     {
       "id": "food-roasted-corn",
       "word": {
         "en": "Roasted Corn",
         "fa": "بلال"
-      }
+      },
+      "difficulty": "easy"
     },
     {
-      "id": "hu-food-x001",
+      "id": "food-tacos",
       "word": {
         "en": "Tacos",
         "fa": "تاکو"
-      }
+      },
+      "difficulty": "easy"
     },
     {
-      "id": "hu-food-x002",
+      "id": "food-fried-chicken",
       "word": {
         "en": "Fried Chicken",
         "fa": "مرغ سوخاری"
-      }
+      },
+      "difficulty": "easy"
     },
     {
-      "id": "hu-food-x003",
+      "id": "food-pancakes",
       "word": {
         "en": "Pancakes",
         "fa": "پنکیک"
-      }
+      },
+      "difficulty": "easy"
     },
     {
-      "id": "hu-food-x004",
+      "id": "food-ice-cream",
       "word": {
         "en": "Ice Cream",
         "fa": "بستنی"
-      }
+      },
+      "difficulty": "easy"
     },
     {
-      "id": "hu-food-x005",
+      "id": "food-chocolate",
       "word": {
         "en": "Chocolate",
         "fa": "شکلات"
-      }
+      },
+      "difficulty": "easy"
     },
     {
-      "id": "hu-food-x006",
+      "id": "food-doughnut",
       "word": {
         "en": "Doughnut",
         "fa": "دونات"
-      }
+      },
+      "difficulty": "easy"
     },
     {
-      "id": "hu-food-x007",
+      "id": "food-cheesecake",
       "word": {
         "en": "Cheesecake",
         "fa": "چیزکیک"
-      }
+      },
+      "difficulty": "easy"
     },
     {
-      "id": "hu-food-x008",
+      "id": "food-strawberry",
       "word": {
         "en": "Strawberry",
         "fa": "توت‌فرنگی"
-      }
+      },
+      "difficulty": "easy"
     },
     {
-      "id": "hu-food-x009",
+      "id": "food-pineapple",
       "word": {
         "en": "Pineapple",
         "fa": "آناناس"
-      }
+      },
+      "difficulty": "easy"
     },
     {
-      "id": "hu-food-x010",
+      "id": "food-banana",
       "word": {
         "en": "Banana",
         "fa": "موز"
-      }
+      },
+      "difficulty": "easy"
     },
     {
-      "id": "hu-food-x011",
+      "id": "food-grapes",
       "word": {
         "en": "Grapes",
         "fa": "انگور"
-      }
+      },
+      "difficulty": "easy"
     },
     {
-      "id": "hu-food-x012",
+      "id": "food-mango",
       "word": {
         "en": "Mango",
         "fa": "انبه"
-      }
+      },
+      "difficulty": "easy"
     },
     {
-      "id": "hu-food-x013",
+      "id": "food-dolma",
       "word": {
         "en": "Dolma",
         "fa": "دلمه"
-      }
+      },
+      "difficulty": "easy"
     },
     {
-      "id": "hu-food-x014",
+      "id": "food-kebab-koobideh",
       "word": {
         "en": "Kebab Koobideh",
         "fa": "کباب کوبیده"
-      }
+      },
+      "difficulty": "easy"
     },
     {
-      "id": "hu-food-x015",
+      "id": "food-zereshk-polo",
       "word": {
         "en": "Zereshk Polo",
         "fa": "زرشک‌پلو"
-      }
+      },
+      "difficulty": "easy"
     },
     {
-      "id": "hu-food-x016",
+      "id": "food-mirza-ghasemi",
       "word": {
         "en": "Mirza Ghasemi",
         "fa": "میرزاقاسمی"
-      }
+      },
+      "difficulty": "easy"
     },
     {
-      "id": "hu-food-x017",
+      "id": "food-hummus",
       "word": {
         "en": "Hummus",
         "fa": "حمص"
-      }
+      },
+      "difficulty": "easy"
     },
     {
-      "id": "hu-food-x018",
+      "id": "food-shawarma",
       "word": {
         "en": "Shawarma",
         "fa": "شاورما"
-      }
+      },
+      "difficulty": "easy"
     },
     {
-      "id": "hu-food-x019",
+      "id": "food-baklava",
       "word": {
         "en": "Baklava",
         "fa": "باقلوا"
-      }
+      },
+      "difficulty": "easy"
     },
     {
-      "id": "hu-food-x020",
+      "id": "food-tabbouleh",
       "word": {
         "en": "Tabbouleh",
         "fa": "تبوله"
-      }
+      },
+      "difficulty": "easy"
     },
     {
-      "id": "hu-food-x021",
+      "id": "food-lentil-soup",
       "word": {
         "en": "Lentil Soup",
         "fa": "سوپ عدس"
-      }
+      },
+      "difficulty": "easy"
     },
     {
-      "id": "hu-food-x022",
-      "word": {
-        "en": "Omelette",
-        "fa": "املت"
-      }
-    },
-    {
-      "id": "hu-food-x023",
+      "id": "food-lasagna",
       "word": {
         "en": "Lasagna",
         "fa": "لازانیا"
-      }
+      },
+      "difficulty": "easy"
     },
     {
-      "id": "hu-food-x024",
+      "id": "food-dumplings",
       "word": {
         "en": "Dumplings",
         "fa": "دامپلینگ"
-      }
+      },
+      "difficulty": "easy"
     },
     {
-      "id": "hu-food-x025",
+      "id": "food-noodles",
       "word": {
         "en": "Noodles",
         "fa": "نودل"
-      }
+      },
+      "difficulty": "easy"
     },
     {
-      "id": "hu-food-x026",
+      "id": "food-curry",
       "word": {
         "en": "Curry",
         "fa": "کاری"
-      }
+      },
+      "difficulty": "easy"
     },
     {
-      "id": "hu-food-x027",
+      "id": "food-salad",
       "word": {
         "en": "Salad",
         "fa": "سالاد"
-      }
+      },
+      "difficulty": "easy"
     },
     {
-      "id": "hu-food-x028",
+      "id": "food-sandwich",
       "word": {
         "en": "Sandwich",
         "fa": "ساندویچ"
-      }
+      },
+      "difficulty": "easy"
     },
     {
-      "id": "hu-food-x029",
+      "id": "food-coffee",
       "word": {
         "en": "Coffee",
         "fa": "قهوه"
-      }
+      },
+      "difficulty": "easy"
     },
     {
-      "id": "hu-food-x030",
+      "id": "food-lemonade",
       "word": {
         "en": "Lemonade",
         "fa": "لیموناد"
-      }
+      },
+      "difficulty": "easy"
     },
     {
-      "id": "hu-food-x031",
+      "id": "food-smoothie",
       "word": {
         "en": "Smoothie",
         "fa": "اسموتی"
-      }
+      },
+      "difficulty": "easy"
     },
     {
-      "id": "hu-food-x032",
+      "id": "food-hot-chocolate",
       "word": {
         "en": "Hot Chocolate",
         "fa": "شکلات داغ"
-      }
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-apple",
+      "word": {
+        "en": "Apple",
+        "fa": "سیب"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-orange",
+      "word": {
+        "en": "Orange",
+        "fa": "پرتقال"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-pear",
+      "word": {
+        "en": "Pear",
+        "fa": "گلابی"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-peach",
+      "word": {
+        "en": "Peach",
+        "fa": "هلو"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-cherry",
+      "word": {
+        "en": "Cherry",
+        "fa": "گیلاس"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-lemon",
+      "word": {
+        "en": "Lemon",
+        "fa": "لیمو"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-kiwi",
+      "word": {
+        "en": "Kiwi",
+        "fa": "کیوی"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-melon",
+      "word": {
+        "en": "Melon",
+        "fa": "خربزه"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-plum",
+      "word": {
+        "en": "Plum",
+        "fa": "آلو"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-apricot",
+      "word": {
+        "en": "Apricot",
+        "fa": "زردآلو"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-fig",
+      "word": {
+        "en": "Fig",
+        "fa": "انجیر"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-coconut",
+      "word": {
+        "en": "Coconut",
+        "fa": "نارگیل"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-lime",
+      "word": {
+        "en": "Lime",
+        "fa": "لیموترش"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-tangerine",
+      "word": {
+        "en": "Tangerine",
+        "fa": "نارنگی"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-raisin",
+      "word": {
+        "en": "Raisin",
+        "fa": "کشمش"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-cantaloupe",
+      "word": {
+        "en": "Cantaloupe",
+        "fa": "طالبی"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-raspberry",
+      "word": {
+        "en": "Raspberry",
+        "fa": "تمشک"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-blueberry",
+      "word": {
+        "en": "Blueberry",
+        "fa": "بلوبری"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-blackberry",
+      "word": {
+        "en": "Blackberry",
+        "fa": "شاه‌توت"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-mulberry",
+      "word": {
+        "en": "Mulberry",
+        "fa": "توت"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-grapefruit",
+      "word": {
+        "en": "Grapefruit",
+        "fa": "گریپ‌فروت"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-avocado",
+      "word": {
+        "en": "Avocado",
+        "fa": "آووکادو"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-guava",
+      "word": {
+        "en": "Guava",
+        "fa": "گواوا"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-papaya",
+      "word": {
+        "en": "Papaya",
+        "fa": "پاپایا"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-persimmon",
+      "word": {
+        "en": "Persimmon",
+        "fa": "خرمالو"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-quince",
+      "word": {
+        "en": "Quince",
+        "fa": "به"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-sour-cherry",
+      "word": {
+        "en": "Sour Cherry",
+        "fa": "آلبالو"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-nectarine",
+      "word": {
+        "en": "Nectarine",
+        "fa": "شلیل"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-green-plum",
+      "word": {
+        "en": "Green Plum",
+        "fa": "گوجه‌سبز"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-cranberry",
+      "word": {
+        "en": "Cranberry",
+        "fa": "کرن‌بری"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-passion-fruit",
+      "word": {
+        "en": "Passion Fruit",
+        "fa": "پشن‌فروت"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-dragon-fruit",
+      "word": {
+        "en": "Dragon Fruit",
+        "fa": "میوه اژدها"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-lychee",
+      "word": {
+        "en": "Lychee",
+        "fa": "لیچی"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-star-fruit",
+      "word": {
+        "en": "Star Fruit",
+        "fa": "میوه ستاره‌ای"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-jujube",
+      "word": {
+        "en": "Jujube",
+        "fa": "عناب"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-barberry",
+      "word": {
+        "en": "Barberry",
+        "fa": "زرشک"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-gooseberry",
+      "word": {
+        "en": "Gooseberry",
+        "fa": "انگور فرنگی"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-plantain",
+      "word": {
+        "en": "Plantain",
+        "fa": "موز سبز"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-olive",
+      "word": {
+        "en": "Olive",
+        "fa": "زیتون"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-tomato",
+      "word": {
+        "en": "Tomato",
+        "fa": "گوجه‌فرنگی"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-loquat",
+      "word": {
+        "en": "Loquat",
+        "fa": "ازگیل ژاپنی"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-bergamot",
+      "word": {
+        "en": "Bergamot",
+        "fa": "بالنگ"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-bitter-orange",
+      "word": {
+        "en": "Bitter Orange",
+        "fa": "نارنج"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-honeydew",
+      "word": {
+        "en": "Honeydew",
+        "fa": "خربزه عسلی"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-clementine",
+      "word": {
+        "en": "Clementine",
+        "fa": "کلمانتین"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-cherry-plum",
+      "word": {
+        "en": "Cherry Plum",
+        "fa": "آلوچه"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-sweet-lemon",
+      "word": {
+        "en": "Sweet Lemon",
+        "fa": "لیمو شیرین"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-carrot",
+      "word": {
+        "en": "Carrot",
+        "fa": "هویج"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-potato",
+      "word": {
+        "en": "Potato",
+        "fa": "سیب‌زمینی"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-onion",
+      "word": {
+        "en": "Onion",
+        "fa": "پیاز"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-cucumber",
+      "word": {
+        "en": "Cucumber",
+        "fa": "خیار"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-lettuce",
+      "word": {
+        "en": "Lettuce",
+        "fa": "کاهو"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-cabbage",
+      "word": {
+        "en": "Cabbage",
+        "fa": "کلم"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-broccoli",
+      "word": {
+        "en": "Broccoli",
+        "fa": "کلم بروکلی"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-cauliflower",
+      "word": {
+        "en": "Cauliflower",
+        "fa": "گل‌کلم"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-spinach",
+      "word": {
+        "en": "Spinach",
+        "fa": "اسفناج"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-pepper",
+      "word": {
+        "en": "Pepper",
+        "fa": "فلفل دلمه‌ای"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-garlic",
+      "word": {
+        "en": "Garlic",
+        "fa": "سیر"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-corn",
+      "word": {
+        "en": "Corn",
+        "fa": "ذرت"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-peas",
+      "word": {
+        "en": "Peas",
+        "fa": "نخود فرنگی"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-eggplant",
+      "word": {
+        "en": "Eggplant",
+        "fa": "بادمجان"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-pumpkin",
+      "word": {
+        "en": "Pumpkin",
+        "fa": "کدو تنبل"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-zucchini",
+      "word": {
+        "en": "Zucchini",
+        "fa": "کدو سبز"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-celery",
+      "word": {
+        "en": "Celery",
+        "fa": "کرفس"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-radish",
+      "word": {
+        "en": "Radish",
+        "fa": "تربچه"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-beet",
+      "word": {
+        "en": "Beet",
+        "fa": "چغندر"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-turnip",
+      "word": {
+        "en": "Turnip",
+        "fa": "شلغم"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-mushroom",
+      "word": {
+        "en": "Mushroom",
+        "fa": "قارچ"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-green-bean",
+      "word": {
+        "en": "Green Bean",
+        "fa": "لوبیا سبز"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-okra",
+      "word": {
+        "en": "Okra",
+        "fa": "بامیه"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-parsley",
+      "word": {
+        "en": "Parsley",
+        "fa": "جعفری"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-mint",
+      "word": {
+        "en": "Mint",
+        "fa": "نعنا"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-basil",
+      "word": {
+        "en": "Basil",
+        "fa": "ریحان"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-cilantro",
+      "word": {
+        "en": "Cilantro",
+        "fa": "گشنیز"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-dill",
+      "word": {
+        "en": "Dill",
+        "fa": "شوید"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-leek",
+      "word": {
+        "en": "Leek",
+        "fa": "تره‌فرنگی"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-green-onion",
+      "word": {
+        "en": "Green Onion",
+        "fa": "پیازچه"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-asparagus",
+      "word": {
+        "en": "Asparagus",
+        "fa": "مارچوبه"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-artichoke",
+      "word": {
+        "en": "Artichoke",
+        "fa": "کنگر فرنگی"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-sweet-potato",
+      "word": {
+        "en": "Sweet Potato",
+        "fa": "سیب‌زمینی شیرین"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-ginger",
+      "word": {
+        "en": "Ginger",
+        "fa": "زنجبیل"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-chili-pepper",
+      "word": {
+        "en": "Chili Pepper",
+        "fa": "فلفل قرمز"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-kale",
+      "word": {
+        "en": "Kale",
+        "fa": "کلم پیچ"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-brussels-sprout",
+      "word": {
+        "en": "Brussels Sprout",
+        "fa": "کلم بروکسل"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-squash",
+      "word": {
+        "en": "Squash",
+        "fa": "کدو حلوایی"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-watercress",
+      "word": {
+        "en": "Watercress",
+        "fa": "شاهی"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-fennel",
+      "word": {
+        "en": "Fennel",
+        "fa": "رازیانه"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-chard",
+      "word": {
+        "en": "Chard",
+        "fa": "برگ چغندر"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-arugula",
+      "word": {
+        "en": "Arugula",
+        "fa": "اروگولا"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-bell-pepper",
+      "word": {
+        "en": "Bell Pepper",
+        "fa": "فلفل دلمه‌ای سبز"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-cherry-tomato",
+      "word": {
+        "en": "Cherry Tomato",
+        "fa": "گوجه گیلاسی"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-bok-choy",
+      "word": {
+        "en": "Bok Choy",
+        "fa": "کلم چینی"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-yam",
+      "word": {
+        "en": "Yam",
+        "fa": "یام"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-cassava",
+      "word": {
+        "en": "Cassava",
+        "fa": "کاساوا"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-rhubarb",
+      "word": {
+        "en": "Rhubarb",
+        "fa": "ریواس"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-endive",
+      "word": {
+        "en": "Endive",
+        "fa": "کاسنی"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-scallion",
+      "word": {
+        "en": "Scallion",
+        "fa": "موسیر"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-snow-pea",
+      "word": {
+        "en": "Snow Pea",
+        "fa": "نخود برفی"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-lima-bean",
+      "word": {
+        "en": "Lima Bean",
+        "fa": "لوبیا لیما"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-acorn-squash",
+      "word": {
+        "en": "Acorn Squash",
+        "fa": "کدو بلوطی"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-butternut-squash",
+      "word": {
+        "en": "Butternut Squash",
+        "fa": "کدو گردنی"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-water",
+      "word": {
+        "en": "Water",
+        "fa": "آب"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-milk",
+      "word": {
+        "en": "Milk",
+        "fa": "شیر"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-orange-juice",
+      "word": {
+        "en": "Orange Juice",
+        "fa": "آب پرتقال"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-apple-juice",
+      "word": {
+        "en": "Apple Juice",
+        "fa": "آب سیب"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-coca-cola",
+      "word": {
+        "en": "Coca-Cola",
+        "fa": "کوکاکولا"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-pepsi",
+      "word": {
+        "en": "Pepsi",
+        "fa": "پپسی"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-fanta",
+      "word": {
+        "en": "Fanta",
+        "fa": "فانتا"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-sprite",
+      "word": {
+        "en": "Sprite",
+        "fa": "اسپرایت"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-soda",
+      "word": {
+        "en": "Soda",
+        "fa": "نوشابه"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-milkshake",
+      "word": {
+        "en": "Milkshake",
+        "fa": "میلک‌شیک"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-iced-tea",
+      "word": {
+        "en": "Iced Tea",
+        "fa": "چای سرد"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-green-tea",
+      "word": {
+        "en": "Green Tea",
+        "fa": "چای سبز"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-cherry-juice",
+      "word": {
+        "en": "Cherry Juice",
+        "fa": "آب آلبالو"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-pomegranate-juice",
+      "word": {
+        "en": "Pomegranate Juice",
+        "fa": "آب انار"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-grape-juice",
+      "word": {
+        "en": "Grape Juice",
+        "fa": "آب انگور"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-pineapple-juice",
+      "word": {
+        "en": "Pineapple Juice",
+        "fa": "آب آناناس"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-mango-juice",
+      "word": {
+        "en": "Mango Juice",
+        "fa": "آب انبه"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-carrot-juice",
+      "word": {
+        "en": "Carrot Juice",
+        "fa": "آب هویج"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-watermelon-juice",
+      "word": {
+        "en": "Watermelon Juice",
+        "fa": "آب هندوانه"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-banana-milk",
+      "word": {
+        "en": "Banana Milk",
+        "fa": "شیرموز"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-chocolate-milk",
+      "word": {
+        "en": "Chocolate Milk",
+        "fa": "شیرکاکائو"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-coconut-water",
+      "word": {
+        "en": "Coconut Water",
+        "fa": "آب نارگیل"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-sparkling-water",
+      "word": {
+        "en": "Sparkling Water",
+        "fa": "آب گازدار"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-espresso",
+      "word": {
+        "en": "Espresso",
+        "fa": "اسپرسو"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-cappuccino",
+      "word": {
+        "en": "Cappuccino",
+        "fa": "کاپوچینو"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-latte",
+      "word": {
+        "en": "Latte",
+        "fa": "لاته"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-nescafe",
+      "word": {
+        "en": "Nescafe",
+        "fa": "نسکافه"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-energy-drink",
+      "word": {
+        "en": "Energy Drink",
+        "fa": "نوشیدنی انرژی‌زا"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-sherbet",
+      "word": {
+        "en": "Sherbet",
+        "fa": "شربت"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-rosewater-drink",
+      "word": {
+        "en": "Rosewater Drink",
+        "fa": "شربت گلاب"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-mint-drink",
+      "word": {
+        "en": "Mint Drink",
+        "fa": "شربت نعنا"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-saffron-drink",
+      "word": {
+        "en": "Saffron Drink",
+        "fa": "شربت زعفران"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-sour-cherry-sherbet",
+      "word": {
+        "en": "Sour Cherry Sherbet",
+        "fa": "شربت آلبالو"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-lemon-drink",
+      "word": {
+        "en": "Lemon Drink",
+        "fa": "آبلیمو"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-barley-water",
+      "word": {
+        "en": "Barley Water",
+        "fa": "آب جو"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-vimto",
+      "word": {
+        "en": "Vimto",
+        "fa": "ویمتو"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-mirinda",
+      "word": {
+        "en": "Mirinda",
+        "fa": "میراندا"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-seven-up",
+      "word": {
+        "en": "Seven Up",
+        "fa": "سون‌آپ"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-strawberry-juice",
+      "word": {
+        "en": "Strawberry Juice",
+        "fa": "آب توت‌فرنگی"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-peach-juice",
+      "word": {
+        "en": "Peach Juice",
+        "fa": "آب هلو"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-apricot-juice",
+      "word": {
+        "en": "Apricot Juice",
+        "fa": "آب زردآلو"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-tamarind-drink",
+      "word": {
+        "en": "Tamarind Drink",
+        "fa": "شربت تمر هندی"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-buttermilk",
+      "word": {
+        "en": "Buttermilk",
+        "fa": "دوغ کره"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-cocoa",
+      "word": {
+        "en": "Cocoa",
+        "fa": "کاکائو"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-herbal-tea",
+      "word": {
+        "en": "Herbal Tea",
+        "fa": "دمنوش"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-turkish-coffee",
+      "word": {
+        "en": "Turkish Coffee",
+        "fa": "قهوه ترک"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-cold-brew",
+      "word": {
+        "en": "Cold Brew",
+        "fa": "قهوه سرد دم"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-mojito",
+      "word": {
+        "en": "Mojito",
+        "fa": "موهیتو"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-cucumber-drink",
+      "word": {
+        "en": "Cucumber Drink",
+        "fa": "شربت خاکشیر"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-egg",
+      "word": {
+        "en": "Egg",
+        "fa": "تخم‌مرغ"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-toast",
+      "word": {
+        "en": "Toast",
+        "fa": "نان تست"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-waffle",
+      "word": {
+        "en": "Waffle",
+        "fa": "وافل"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-cereal",
+      "word": {
+        "en": "Cereal",
+        "fa": "کورن‌فلکس"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-oatmeal",
+      "word": {
+        "en": "Oatmeal",
+        "fa": "فرنی جو"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-bacon",
+      "word": {
+        "en": "Bacon",
+        "fa": "بیکن"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-sausage",
+      "word": {
+        "en": "Sausage",
+        "fa": "سوسیس"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-bread",
+      "word": {
+        "en": "Bread",
+        "fa": "نان"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-butter",
+      "word": {
+        "en": "Butter",
+        "fa": "کره"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-jam",
+      "word": {
+        "en": "Jam",
+        "fa": "مربا"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-honey",
+      "word": {
+        "en": "Honey",
+        "fa": "عسل"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-yogurt",
+      "word": {
+        "en": "Yogurt",
+        "fa": "ماست"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-cheese",
+      "word": {
+        "en": "Cheese",
+        "fa": "پنیر"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-croissant",
+      "word": {
+        "en": "Croissant",
+        "fa": "کروسان"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-muffin",
+      "word": {
+        "en": "Muffin",
+        "fa": "مافین"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-bagel",
+      "word": {
+        "en": "Bagel",
+        "fa": "بیگل"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-fried-egg",
+      "word": {
+        "en": "Fried Egg",
+        "fa": "تخم‌مرغ نیمرو"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-boiled-egg",
+      "word": {
+        "en": "Boiled Egg",
+        "fa": "تخم‌مرغ آب‌پز"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-scrambled-egg",
+      "word": {
+        "en": "Scrambled Egg",
+        "fa": "تخم‌مرغ همزده"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-porridge",
+      "word": {
+        "en": "Porridge",
+        "fa": "حلیم"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-granola",
+      "word": {
+        "en": "Granola",
+        "fa": "گرانولا"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-walnut",
+      "word": {
+        "en": "Walnut",
+        "fa": "گردو"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-crepe",
+      "word": {
+        "en": "Crepe",
+        "fa": "کرپ"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-hash-brown",
+      "word": {
+        "en": "Hash Brown",
+        "fa": "سیب‌زمینی سرخ‌شده"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-cream",
+      "word": {
+        "en": "Cream",
+        "fa": "خامه"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-pita",
+      "word": {
+        "en": "Pita",
+        "fa": "نان پیتا"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-lavash",
+      "word": {
+        "en": "Lavash",
+        "fa": "نان لواش"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-barbari-bread",
+      "word": {
+        "en": "Barbari Bread",
+        "fa": "نان بربری"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-halva",
+      "word": {
+        "en": "Halva",
+        "fa": "حلوا"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-herb-omelet",
+      "word": {
+        "en": "Herb Omelet",
+        "fa": "کوکو سبزی"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-carrot-jam",
+      "word": {
+        "en": "Carrot Jam",
+        "fa": "مربای هویج"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-sour-cherry-jam",
+      "word": {
+        "en": "Sour Cherry Jam",
+        "fa": "مربای آلبالو"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-clotted-cream",
+      "word": {
+        "en": "Clotted Cream",
+        "fa": "سرشیر"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-sesame-paste",
+      "word": {
+        "en": "Sesame Paste",
+        "fa": "ارده"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-cookie",
+      "word": {
+        "en": "Cookie",
+        "fa": "کلوچه"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-candy",
+      "word": {
+        "en": "Candy",
+        "fa": "آبنبات"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-lollipop",
+      "word": {
+        "en": "Lollipop",
+        "fa": "آبنبات چوبی"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-popsicle",
+      "word": {
+        "en": "Popsicle",
+        "fa": "بستنی یخی"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-cake",
+      "word": {
+        "en": "Cake",
+        "fa": "کیک"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-cupcake",
+      "word": {
+        "en": "Cupcake",
+        "fa": "کاپ‌کیک"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-chips",
+      "word": {
+        "en": "Chips",
+        "fa": "چیپس"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-pretzel",
+      "word": {
+        "en": "Pretzel",
+        "fa": "چوب‌شور"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-cracker",
+      "word": {
+        "en": "Cracker",
+        "fa": "بیسکویت ترد"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-biscuit",
+      "word": {
+        "en": "Biscuit",
+        "fa": "بیسکویت"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-marshmallow",
+      "word": {
+        "en": "Marshmallow",
+        "fa": "مارشمالو"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-gummy-bear",
+      "word": {
+        "en": "Gummy Bear",
+        "fa": "پاستیل خرسی"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-jelly",
+      "word": {
+        "en": "Jelly",
+        "fa": "ژله"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-pudding",
+      "word": {
+        "en": "Pudding",
+        "fa": "پودینگ"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-chocolate-bar",
+      "word": {
+        "en": "Chocolate Bar",
+        "fa": "شکلات تخته‌ای"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-bubble-gum",
+      "word": {
+        "en": "Bubble Gum",
+        "fa": "آدامس بادکنکی"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-chewing-gum",
+      "word": {
+        "en": "Chewing Gum",
+        "fa": "آدامس"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-wafer",
+      "word": {
+        "en": "Wafer",
+        "fa": "ویفر"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-brownie",
+      "word": {
+        "en": "Brownie",
+        "fa": "براونی"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-pie",
+      "word": {
+        "en": "Pie",
+        "fa": "پای"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-caramel",
+      "word": {
+        "en": "Caramel",
+        "fa": "کارامل"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-toffee",
+      "word": {
+        "en": "Toffee",
+        "fa": "تافی"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-nougat",
+      "word": {
+        "en": "Nougat",
+        "fa": "نوقا"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-peanut",
+      "word": {
+        "en": "Peanut",
+        "fa": "بادام‌زمینی"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-almond",
+      "word": {
+        "en": "Almond",
+        "fa": "بادام"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-sunflower-seeds",
+      "word": {
+        "en": "Sunflower Seeds",
+        "fa": "تخمه آفتابگردان"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-roasted-chickpeas",
+      "word": {
+        "en": "Roasted Chickpeas",
+        "fa": "نخودچی"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-cotton-candy",
+      "word": {
+        "en": "Cotton Candy",
+        "fa": "پشمک"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-sugar-cube",
+      "word": {
+        "en": "Sugar Cube",
+        "fa": "قند"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-tart",
+      "word": {
+        "en": "Tart",
+        "fa": "تارت"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-jelly-bean",
+      "word": {
+        "en": "Jelly Bean",
+        "fa": "آبنبات لوبیایی"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-granola-bar",
+      "word": {
+        "en": "Granola Bar",
+        "fa": "بار غلات"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-fruit-snack",
+      "word": {
+        "en": "Fruit Snack",
+        "fa": "لواشک"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-cream-puff",
+      "word": {
+        "en": "Cream Puff",
+        "fa": "نان خامه‌ای"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-nut-mix",
+      "word": {
+        "en": "Nut Mix",
+        "fa": "آجیل"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "food-shepherd-s-pie",
+      "word": {
+        "en": "Shepherd's Pie",
+        "fa": "شپردز پای"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-beef-wellington",
+      "word": {
+        "en": "Beef Wellington",
+        "fa": "بیف ولینگتون"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-spring-roll",
+      "word": {
+        "en": "Spring Roll",
+        "fa": "اسپرینگ رول"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-chicken-cordon-bleu",
+      "word": {
+        "en": "Chicken Cordon Bleu",
+        "fa": "چیکن کوردن بلو"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-eggs-benedict",
+      "word": {
+        "en": "Eggs Benedict",
+        "fa": "تخم‌مرغ بندیکت"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-fish-and-chips",
+      "word": {
+        "en": "Fish and Chips",
+        "fa": "ماهی و چیپس"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-bangers-and-mash",
+      "word": {
+        "en": "Bangers and Mash",
+        "fa": "سوسیس و پوره سیب‌زمینی"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-chicken-tikka-masala",
+      "word": {
+        "en": "Chicken Tikka Masala",
+        "fa": "چیکن تیکا ماسالا"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-pad-thai",
+      "word": {
+        "en": "Pad Thai",
+        "fa": "پد تای"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-peking-duck",
+      "word": {
+        "en": "Peking Duck",
+        "fa": "اردک پکنی"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-cottage-pie",
+      "word": {
+        "en": "Cottage Pie",
+        "fa": "کاتیج پای"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-beef-bourguignon",
+      "word": {
+        "en": "Beef Bourguignon",
+        "fa": "بیف بورگینیون"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-coq-au-vin",
+      "word": {
+        "en": "Coq au Vin",
+        "fa": "کوک او ون"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-chicken-parmesan",
+      "word": {
+        "en": "Chicken Parmesan",
+        "fa": "چیکن پارمزان"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-sweet-and-sour-pork",
+      "word": {
+        "en": "Sweet and Sour Pork",
+        "fa": "گوشت ترش و شیرین"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-general-tso-s-chicken",
+      "word": {
+        "en": "General Tso's Chicken",
+        "fa": "مرغ ژنرال تسو"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-kung-pao-chicken",
+      "word": {
+        "en": "Kung Pao Chicken",
+        "fa": "کونگ پائو چیکن"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-lobster-thermidor",
+      "word": {
+        "en": "Lobster Thermidor",
+        "fa": "لابستر ترمیدور"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-duck-confit",
+      "word": {
+        "en": "Duck Confit",
+        "fa": "کونفی اردک"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-pulled-pork",
+      "word": {
+        "en": "Pulled Pork",
+        "fa": "گوشت خوک تکه‌تکه"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-buffalo-wings",
+      "word": {
+        "en": "Buffalo Wings",
+        "fa": "بال‌های بوفالو"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-caesar-salad",
+      "word": {
+        "en": "Caesar Salad",
+        "fa": "سالاد سزار"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-greek-salad",
+      "word": {
+        "en": "Greek Salad",
+        "fa": "سالاد یونانی"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-french-onion-soup",
+      "word": {
+        "en": "French Onion Soup",
+        "fa": "سوپ پیاز فرانسوی"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-clam-chowder",
+      "word": {
+        "en": "Clam Chowder",
+        "fa": "چودر صدف"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-tom-yum-soup",
+      "word": {
+        "en": "Tom Yum Soup",
+        "fa": "سوپ تام یوم"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-miso-soup",
+      "word": {
+        "en": "Miso Soup",
+        "fa": "سوپ میسو"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-chicken-pot-pie",
+      "word": {
+        "en": "Chicken Pot Pie",
+        "fa": "چیکن پات پای"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-bubble-and-squeak",
+      "word": {
+        "en": "Bubble and Squeak",
+        "fa": "بابل اند اسکوئیک"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-toad-in-the-hole",
+      "word": {
+        "en": "Toad in the Hole",
+        "fa": "تود این د هول"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-sausage-roll",
+      "word": {
+        "en": "Sausage Roll",
+        "fa": "سوسیس رول"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-yorkshire-pudding",
+      "word": {
+        "en": "Yorkshire Pudding",
+        "fa": "یورکشایر پودینگ"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-croque-monsieur",
+      "word": {
+        "en": "Croque Monsieur",
+        "fa": "کروک موسیو"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-ratatouille",
+      "word": {
+        "en": "Ratatouille",
+        "fa": "راتاتویی"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-moussaka",
+      "word": {
+        "en": "Moussaka",
+        "fa": "موساکا"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-beef-stroganoff",
+      "word": {
+        "en": "Beef Stroganoff",
+        "fa": "بیف استروگانوف"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-chicken-kiev",
+      "word": {
+        "en": "Chicken Kiev",
+        "fa": "چیکن کیف"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-fried-rice",
+      "word": {
+        "en": "Fried Rice",
+        "fa": "برنج سرخ‌شده"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-lamb-rogan-josh",
+      "word": {
+        "en": "Lamb Rogan Josh",
+        "fa": "لمب روگان جاش"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-pork-schnitzel",
+      "word": {
+        "en": "Pork Schnitzel",
+        "fa": "اشنیتسل گوشت خوک"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-surf-and-turf",
+      "word": {
+        "en": "Surf and Turf",
+        "fa": "سرف اند ترف"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-egg-fried-rice",
+      "word": {
+        "en": "Egg Fried Rice",
+        "fa": "برنج سرخ‌شده با تخم‌مرغ"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-chicken-satay",
+      "word": {
+        "en": "Chicken Satay",
+        "fa": "چیکن ساتای"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-beef-rendang",
+      "word": {
+        "en": "Beef Rendang",
+        "fa": "بیف رندانگ"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-spinach-artichoke-dip",
+      "word": {
+        "en": "Spinach Artichoke Dip",
+        "fa": "دیپ اسفناج و کنگر فرنگی"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-creme-brulee",
+      "word": {
+        "en": "Creme Brulee",
+        "fa": "کرم بروله"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-apple-strudel",
+      "word": {
+        "en": "Apple Strudel",
+        "fa": "اشترودل سیب"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-black-forest-cake",
+      "word": {
+        "en": "Black Forest Cake",
+        "fa": "کیک جنگل سیاه"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-tiramisu-cake",
+      "word": {
+        "en": "Tiramisu Cake",
+        "fa": "کیک تیرامیسو"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-lemon-meringue-pie",
+      "word": {
+        "en": "Lemon Meringue Pie",
+        "fa": "پای مرنگ لیمو"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-pecan-pie",
+      "word": {
+        "en": "Pecan Pie",
+        "fa": "پای گردوی آمریکایی"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-banoffee-pie",
+      "word": {
+        "en": "Banoffee Pie",
+        "fa": "پای بنافی"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-bread-pudding",
+      "word": {
+        "en": "Bread Pudding",
+        "fa": "پودینگ نان"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-rice-pudding",
+      "word": {
+        "en": "Rice Pudding",
+        "fa": "شیر برنج"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-pumpkin-pie",
+      "word": {
+        "en": "Pumpkin Pie",
+        "fa": "پای کدو حلوایی"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-cinnamon-roll",
+      "word": {
+        "en": "Cinnamon Roll",
+        "fa": "رول دارچینی"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-vanilla-cupcake",
+      "word": {
+        "en": "Vanilla Cupcake",
+        "fa": "کاپ‌کیک وانیلی"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-chocolate-eclair",
+      "word": {
+        "en": "Chocolate Eclair",
+        "fa": "اکلر شکلاتی"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-fruit-tart",
+      "word": {
+        "en": "Fruit Tart",
+        "fa": "تارت میوه"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-cheese-danish",
+      "word": {
+        "en": "Cheese Danish",
+        "fa": "دانمارکی پنیری"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-carrot-cake",
+      "word": {
+        "en": "Carrot Cake",
+        "fa": "کیک هویج"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-red-velvet-cake",
+      "word": {
+        "en": "Red Velvet Cake",
+        "fa": "کیک رد ولوت"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-molten-lava-cake",
+      "word": {
+        "en": "Molten Lava Cake",
+        "fa": "کیک مذاب شکلاتی"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-panna-cotta",
+      "word": {
+        "en": "Panna Cotta",
+        "fa": "پانا کوتا"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-chocolate-mousse",
+      "word": {
+        "en": "Chocolate Mousse",
+        "fa": "موس شکلاتی"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-baked-alaska",
+      "word": {
+        "en": "Baked Alaska",
+        "fa": "آلاسکای پخته"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-profiterole-tower",
+      "word": {
+        "en": "Profiterole Tower",
+        "fa": "برج پروفیترول"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-almond-croissant",
+      "word": {
+        "en": "Almond Croissant",
+        "fa": "کروسان بادامی"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-persian-baklava",
+      "word": {
+        "en": "Persian Baklava",
+        "fa": "باقلوای ایرانی"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-sholeh-zard",
+      "word": {
+        "en": "Sholeh Zard",
+        "fa": "شله زرد"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-faloodeh-shirazi",
+      "word": {
+        "en": "Faloodeh Shirazi",
+        "fa": "فالوده شیرازی"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-rosewater-pudding",
+      "word": {
+        "en": "Rosewater Pudding",
+        "fa": "فرنی گلاب"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-date-cake",
+      "word": {
+        "en": "Date Cake",
+        "fa": "کیک خرما"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-honey-cake",
+      "word": {
+        "en": "Honey Cake",
+        "fa": "کیک عسلی"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-sticky-toffee-pudding",
+      "word": {
+        "en": "Sticky Toffee Pudding",
+        "fa": "پودینگ تافی چسبناک"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-strawberry-cheesecake",
+      "word": {
+        "en": "Strawberry Cheesecake",
+        "fa": "چیزکیک توت‌فرنگی"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-macaron-tower",
+      "word": {
+        "en": "Macaron Tower",
+        "fa": "برج ماکارون"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-custard-tart",
+      "word": {
+        "en": "Custard Tart",
+        "fa": "تارت کاستارد"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-gingerbread-house",
+      "word": {
+        "en": "Gingerbread House",
+        "fa": "خانه شیرینی زنجبیلی"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-chocolate-brownie",
+      "word": {
+        "en": "Chocolate Brownie",
+        "fa": "براونی شکلاتی"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-funnel-cake",
+      "word": {
+        "en": "Funnel Cake",
+        "fa": "کیک قیفی"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-churros-with-chocolate",
+      "word": {
+        "en": "Churros With Chocolate",
+        "fa": "چوروس با شکلات"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-mille-feuille",
+      "word": {
+        "en": "Mille Feuille",
+        "fa": "میل فوی"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-opera-cake",
+      "word": {
+        "en": "Opera Cake",
+        "fa": "کیک اپرا"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-pistachio-nougat",
+      "word": {
+        "en": "Pistachio Nougat",
+        "fa": "نوقای پسته‌ای"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-coconut-macaroon",
+      "word": {
+        "en": "Coconut Macaroon",
+        "fa": "ماکارون نارگیلی"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-pavlova-cake",
+      "word": {
+        "en": "Pavlova Cake",
+        "fa": "کیک پاولووا"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-pho-bo",
+      "word": {
+        "en": "Pho Bo",
+        "fa": "فو بو"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-bibimbap",
+      "word": {
+        "en": "Bibimbap",
+        "fa": "بی‌بیم‌باپ"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-spaghetti-carbonara",
+      "word": {
+        "en": "Spaghetti Carbonara",
+        "fa": "اسپاگتی کاربونارا"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-pulled-pork-sandwich",
+      "word": {
+        "en": "Pulled Pork Sandwich",
+        "fa": "ساندویچ گوشت خوک ریش‌ریش"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-chicken-fajitas",
+      "word": {
+        "en": "Chicken Fajitas",
+        "fa": "فاهیتا مرغ"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-lamb-vindaloo",
+      "word": {
+        "en": "Lamb Vindaloo",
+        "fa": "بره ویندالو"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-seafood-paella",
+      "word": {
+        "en": "Seafood Paella",
+        "fa": "پایه‌یا با غذای دریایی"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-butter-chicken",
+      "word": {
+        "en": "Butter Chicken",
+        "fa": "مرغ کره‌ای"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-chicken-souvlaki",
+      "word": {
+        "en": "Chicken Souvlaki",
+        "fa": "سووولاکی مرغ"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-fettuccine-alfredo",
+      "word": {
+        "en": "Fettuccine Alfredo",
+        "fa": "فتوچینی آلفردو"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-pierogi",
+      "word": {
+        "en": "Pierogi",
+        "fa": "پیروگی"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-chicken-biryani",
+      "word": {
+        "en": "Chicken Biryani",
+        "fa": "بریانی مرغ"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-goulash",
+      "word": {
+        "en": "Goulash",
+        "fa": "گولاش"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-wiener-schnitzel",
+      "word": {
+        "en": "Wiener Schnitzel",
+        "fa": "اشنیتسل وینی"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-lamb-tagine",
+      "word": {
+        "en": "Lamb Tagine",
+        "fa": "تاجین بره"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-pad-see-ew",
+      "word": {
+        "en": "Pad See Ew",
+        "fa": "پد سی او"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-nasi-goreng",
+      "word": {
+        "en": "Nasi Goreng",
+        "fa": "ناسی گورنگ"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-carne-asada",
+      "word": {
+        "en": "Carne Asada",
+        "fa": "کارنه آسادا"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-eggplant-parmesan",
+      "word": {
+        "en": "Eggplant Parmesan",
+        "fa": "بادمجان پارمزان"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-steak-frites",
+      "word": {
+        "en": "Steak Frites",
+        "fa": "استیک فریت"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-tahchin",
+      "word": {
+        "en": "Tahchin",
+        "fa": "ته‌چین"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-baghali-polo",
+      "word": {
+        "en": "Baghali Polo",
+        "fa": "باقالی پلو"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-gheymeh-bademjan",
+      "word": {
+        "en": "Gheymeh Bademjan",
+        "fa": "قیمه بادمجان"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-khoresh-karafs",
+      "word": {
+        "en": "Khoresh Karafs",
+        "fa": "خورش کرفس"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-khoresh-bademjan",
+      "word": {
+        "en": "Khoresh Bademjan",
+        "fa": "خورش بادمجان"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-loobia-polo",
+      "word": {
+        "en": "Loobia Polo",
+        "fa": "لوبیا پلو"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-adas-polo",
+      "word": {
+        "en": "Adas Polo",
+        "fa": "عدس پلو"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-sabzi-polo-mahi",
+      "word": {
+        "en": "Sabzi Polo Mahi",
+        "fa": "سبزی پلو ماهی"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-albaloo-polo",
+      "word": {
+        "en": "Albaloo Polo",
+        "fa": "آلبالو پلو"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-shirin-polo",
+      "word": {
+        "en": "Shirin Polo",
+        "fa": "شیرین پلو"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-kalam-polo",
+      "word": {
+        "en": "Kalam Polo",
+        "fa": "کلم پلو"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-khoresh-gheymeh",
+      "word": {
+        "en": "Khoresh Gheymeh",
+        "fa": "خورش قیمه"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-khoresh-mast",
+      "word": {
+        "en": "Khoresh Mast",
+        "fa": "خورش ماست"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-abgoosht-dizi",
+      "word": {
+        "en": "Abgoosht Dizi",
+        "fa": "آبگوشت دیزی"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-kookoo-sibzamini",
+      "word": {
+        "en": "Kookoo Sibzamini",
+        "fa": "کوکو سیب‌زمینی"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-joojeh-kabab",
+      "word": {
+        "en": "Joojeh Kabab",
+        "fa": "جوجه کباب"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-kabab-barg",
+      "word": {
+        "en": "Kabab Barg",
+        "fa": "کباب برگ"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-dolmeh-barg-mo",
+      "word": {
+        "en": "Dolmeh Barg Mo",
+        "fa": "دلمه برگ مو"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-dolmeh-felfel",
+      "word": {
+        "en": "Dolmeh Felfel",
+        "fa": "دلمه فلفل"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-halim-bademjan",
+      "word": {
+        "en": "Halim Bademjan",
+        "fa": "حلیم بادمجان"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-mahi-shekam-por",
+      "word": {
+        "en": "Mahi Shekam Por",
+        "fa": "ماهی شکم پر"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-khoresh-fesenjan-morgh",
+      "word": {
+        "en": "Khoresh Fesenjan Morgh",
+        "fa": "خورش فسنجان مرغ"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-estamboli-polo",
+      "word": {
+        "en": "Estamboli Polo",
+        "fa": "استانبولی پلو"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-reshteh-polo",
+      "word": {
+        "en": "Reshteh Polo",
+        "fa": "رشته پلو"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-morgh-shekam-por",
+      "word": {
+        "en": "Morgh Shekam Por",
+        "fa": "مرغ شکم پر"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-khoresh-aloo-esfenaj",
+      "word": {
+        "en": "Khoresh Aloo Esfenaj",
+        "fa": "خورش آلو اسفناج"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-khoresh-kadoo",
+      "word": {
+        "en": "Khoresh Kadoo",
+        "fa": "خورش کدو"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-ash-doogh",
+      "word": {
+        "en": "Ash Doogh",
+        "fa": "آش دوغ"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-halim-gandom",
+      "word": {
+        "en": "Halim Gandom",
+        "fa": "حلیم گندم"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-kalleh-pacheh",
+      "word": {
+        "en": "Kalleh Pacheh",
+        "fa": "کله پاچه"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-beryani-esfahani",
+      "word": {
+        "en": "Beryani Esfahani",
+        "fa": "بریانی اصفهانی"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-tabrizi-kufteh",
+      "word": {
+        "en": "Tabrizi Kufteh",
+        "fa": "کوفته تبریزی"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-yatimcheh-bademjan",
+      "word": {
+        "en": "Yatimcheh Bademjan",
+        "fa": "یتیمچه بادمجان"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-khoresh-gharch",
+      "word": {
+        "en": "Khoresh Gharch",
+        "fa": "خورش قارچ"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-shami-lapeh",
+      "word": {
+        "en": "Shami Lapeh",
+        "fa": "شامی لپه"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-morasa-polo",
+      "word": {
+        "en": "Morasa Polo",
+        "fa": "مرصع پلو"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-iced-latte",
+      "word": {
+        "en": "Iced Latte",
+        "fa": "لاته سرد"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-mango-lassi",
+      "word": {
+        "en": "Mango Lassi",
+        "fa": "لسی انبه"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-caramel-macchiato",
+      "word": {
+        "en": "Caramel Macchiato",
+        "fa": "کارامل ماکیاتو"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-pina-colada",
+      "word": {
+        "en": "Pina Colada",
+        "fa": "پینا کولادا"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-bloody-mary",
+      "word": {
+        "en": "Bloody Mary",
+        "fa": "بلادی مری"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-espresso-martini",
+      "word": {
+        "en": "Espresso Martini",
+        "fa": "اسپرسو مارتینی"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-long-island-iced-tea",
+      "word": {
+        "en": "Long Island Iced Tea",
+        "fa": "آیس تی لانگ آیلند"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-virgin-mojito",
+      "word": {
+        "en": "Virgin Mojito",
+        "fa": "موخیتو بدون الکل"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-strawberry-milkshake",
+      "word": {
+        "en": "Strawberry Milkshake",
+        "fa": "میلک شیک توت‌فرنگی"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-salted-caramel-frappe",
+      "word": {
+        "en": "Salted Caramel Frappe",
+        "fa": "فراپه کارامل نمکی"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-matcha-green-tea",
+      "word": {
+        "en": "Matcha Green Tea",
+        "fa": "چای سبز ماچا"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-rose-water-lemonade",
+      "word": {
+        "en": "Rose Water Lemonade",
+        "fa": "لیموناد گلاب"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-apple-cider",
+      "word": {
+        "en": "Apple Cider",
+        "fa": "سایدر سیب"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-ginger-ale",
+      "word": {
+        "en": "Ginger Ale",
+        "fa": "نوشابه زنجبیل"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-cold-brew-coffee",
+      "word": {
+        "en": "Cold Brew Coffee",
+        "fa": "قهوه دم سرد"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-vanilla-milkshake",
+      "word": {
+        "en": "Vanilla Milkshake",
+        "fa": "میلک شیک وانیل"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-chai-latte",
+      "word": {
+        "en": "Chai Latte",
+        "fa": "چای لاته"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-bubble-tea",
+      "word": {
+        "en": "Bubble Tea",
+        "fa": "چای حبابی"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-pumpkin-spice-latte",
+      "word": {
+        "en": "Pumpkin Spice Latte",
+        "fa": "لاته کدو حلوایی"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-whiskey-sour",
+      "word": {
+        "en": "Whiskey Sour",
+        "fa": "ویسکی ساور"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-old-fashioned",
+      "word": {
+        "en": "Old Fashioned",
+        "fa": "اولد فشن"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-tom-collins",
+      "word": {
+        "en": "Tom Collins",
+        "fa": "تام کالینز"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-margarita",
+      "word": {
+        "en": "Margarita",
+        "fa": "مارگاریتا"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-mint-lemonade",
+      "word": {
+        "en": "Mint Lemonade",
+        "fa": "لیموناد نعنا"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-banana-smoothie",
+      "word": {
+        "en": "Banana Smoothie",
+        "fa": "اسموتی موز"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-hot-toddy",
+      "word": {
+        "en": "Hot Toddy",
+        "fa": "هات تادی"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-irish-coffee",
+      "word": {
+        "en": "Irish Coffee",
+        "fa": "قهوه ایرلندی"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-spiced-mulled-wine",
+      "word": {
+        "en": "Spiced Mulled Wine",
+        "fa": "شراب گرم ادویه‌دار"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-cranberry-juice",
+      "word": {
+        "en": "Cranberry Juice",
+        "fa": "آب کرنبری"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-aperol-spritz",
+      "word": {
+        "en": "Aperol Spritz",
+        "fa": "آپرول اسپریتز"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-mai-tai",
+      "word": {
+        "en": "Mai Tai",
+        "fa": "مای تای"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-dirty-chai",
+      "word": {
+        "en": "Dirty Chai",
+        "fa": "دۆرتی چای"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-frozen-daiquiri",
+      "word": {
+        "en": "Frozen Daiquiri",
+        "fa": "دایکیری یخ‌زده"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-lavender-latte",
+      "word": {
+        "en": "Lavender Latte",
+        "fa": "لاته اسطوخودوس"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-tamarind-juice",
+      "word": {
+        "en": "Tamarind Juice",
+        "fa": "آب تمر هندی"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-watermelon-slushie",
+      "word": {
+        "en": "Watermelon Slushie",
+        "fa": "اسلاشی هندوانه"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "food-paella",
+      "word": {
+        "en": "Paella",
+        "fa": "پائیا"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-jambalaya",
+      "word": {
+        "en": "Jambalaya",
+        "fa": "جامبالایا"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-pho",
+      "word": {
+        "en": "Pho",
+        "fa": "فو"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-ramen",
+      "word": {
+        "en": "Ramen",
+        "fa": "رامن"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-beef-and-broccoli",
+      "word": {
+        "en": "Beef And Broccoli",
+        "fa": "گوشت و بروکلی"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-chicken-curry",
+      "word": {
+        "en": "Chicken Curry",
+        "fa": "مرغ کاری"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-biryani",
+      "word": {
+        "en": "Biryani",
+        "fa": "بریانی"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-falafel-wrap",
+      "word": {
+        "en": "Falafel Wrap",
+        "fa": "رپ فلافل"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-couscous",
+      "word": {
+        "en": "Couscous",
+        "fa": "کوسکوس"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-tandoori-chicken",
+      "word": {
+        "en": "Tandoori Chicken",
+        "fa": "مرغ تنوری"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-naan-bread",
+      "word": {
+        "en": "Naan Bread",
+        "fa": "نان نان"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-carbonara",
+      "word": {
+        "en": "Carbonara",
+        "fa": "کاربونارا"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-risotto",
+      "word": {
+        "en": "Risotto",
+        "fa": "ریزوتو"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-gnocchi",
+      "word": {
+        "en": "Gnocchi",
+        "fa": "نیوکی"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-minestrone-soup",
+      "word": {
+        "en": "Minestrone Soup",
+        "fa": "سوپ مینسترونه"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-chicken-alfredo",
+      "word": {
+        "en": "Chicken Alfredo",
+        "fa": "چیکن آلفردو"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-margherita-pizza",
+      "word": {
+        "en": "Margherita Pizza",
+        "fa": "پیتزا مارگاریتا"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-caprese-salad",
+      "word": {
+        "en": "Caprese Salad",
+        "fa": "سالاد کاپرزه"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-gumbo",
+      "word": {
+        "en": "Gumbo",
+        "fa": "گامبو"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-enchiladas",
+      "word": {
+        "en": "Enchiladas",
+        "fa": "انچیلادا"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-quesadilla",
+      "word": {
+        "en": "Quesadilla",
+        "fa": "کوئسادیا"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-fajitas",
+      "word": {
+        "en": "Fajitas",
+        "fa": "فاهیتا"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-burrito-bowl",
+      "word": {
+        "en": "Burrito Bowl",
+        "fa": "بوریتو بول"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-empanada",
+      "word": {
+        "en": "Empanada",
+        "fa": "امپانادا"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-schnitzel",
+      "word": {
+        "en": "Schnitzel",
+        "fa": "شنیتسل"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-bratwurst",
+      "word": {
+        "en": "Bratwurst",
+        "fa": "براتورست"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-borscht",
+      "word": {
+        "en": "Borscht",
+        "fa": "بورش"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-teriyaki-chicken",
+      "word": {
+        "en": "Teriyaki Chicken",
+        "fa": "مرغ تریاکی"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-apple-pie",
+      "word": {
+        "en": "Apple Pie",
+        "fa": "پای سیب"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-banana-bread",
+      "word": {
+        "en": "Banana Bread",
+        "fa": "نان موزی"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-tiramisu",
+      "word": {
+        "en": "Tiramisu",
+        "fa": "تیرامیسو"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-lemon-tart",
+      "word": {
+        "en": "Lemon Tart",
+        "fa": "تارت لیمو"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-sohan",
+      "word": {
+        "en": "Sohan",
+        "fa": "سوهان"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-faloodeh",
+      "word": {
+        "en": "Faloodeh",
+        "fa": "فالوده"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-macaron",
+      "word": {
+        "en": "Macaron",
+        "fa": "ماکارون"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-eclair",
+      "word": {
+        "en": "Eclair",
+        "fa": "اکلر"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-profiterole",
+      "word": {
+        "en": "Profiterole",
+        "fa": "پروفیترول"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-custard",
+      "word": {
+        "en": "Custard",
+        "fa": "کاستارد"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-mousse",
+      "word": {
+        "en": "Mousse",
+        "fa": "موس"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-gingerbread",
+      "word": {
+        "en": "Gingerbread",
+        "fa": "نان زنجبیلی"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-shortbread",
+      "word": {
+        "en": "Shortbread",
+        "fa": "شورت برد"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-scone",
+      "word": {
+        "en": "Scone",
+        "fa": "اسکون"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-sponge-cake",
+      "word": {
+        "en": "Sponge Cake",
+        "fa": "کیک اسفنجی"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-chocolate-chip-cookie",
+      "word": {
+        "en": "Chocolate Chip Cookie",
+        "fa": "کوکی شکلاتی"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-cobbler",
+      "word": {
+        "en": "Cobbler",
+        "fa": "کوبلر میوه"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-strudel",
+      "word": {
+        "en": "Strudel",
+        "fa": "اشترودل"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-churros",
+      "word": {
+        "en": "Churros",
+        "fa": "چوروز"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-caramel-pudding",
+      "word": {
+        "en": "Caramel Pudding",
+        "fa": "کارامل پودینگ"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-trifle",
+      "word": {
+        "en": "Trifle",
+        "fa": "ترایفل"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-roulade",
+      "word": {
+        "en": "Roulade",
+        "fa": "رولت بیسکویتی"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-madeleine",
+      "word": {
+        "en": "Madeleine",
+        "fa": "مادلن"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-biscotti",
+      "word": {
+        "en": "Biscotti",
+        "fa": "بیسکوتی"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-brioche",
+      "word": {
+        "en": "Brioche",
+        "fa": "بریوش"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-big-mac",
+      "word": {
+        "en": "Big Mac",
+        "fa": "بیگ مک"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-chicken-nuggets",
+      "word": {
+        "en": "Chicken Nuggets",
+        "fa": "ناگت مرغ"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-cheeseburger",
+      "word": {
+        "en": "Cheeseburger",
+        "fa": "چیزبرگر"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-onion-rings",
+      "word": {
+        "en": "Onion Rings",
+        "fa": "حلقه پیاز سوخاری"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-chicken-wings",
+      "word": {
+        "en": "Chicken Wings",
+        "fa": "بال مرغ"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-hot-dog",
+      "word": {
+        "en": "Hot Dog",
+        "fa": "هات داگ"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-chili-dog",
+      "word": {
+        "en": "Chili Dog",
+        "fa": "هات داگ با چیلی"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-corn-dog",
+      "word": {
+        "en": "Corn Dog",
+        "fa": "کورن داگ"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-chicken-sandwich",
+      "word": {
+        "en": "Chicken Sandwich",
+        "fa": "ساندویچ مرغ"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-quarter-pounder",
+      "word": {
+        "en": "Quarter Pounder",
+        "fa": "کوارتر پاندر"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-whopper",
+      "word": {
+        "en": "Whopper",
+        "fa": "واپر"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-filet-o-fish",
+      "word": {
+        "en": "Filet-O-Fish",
+        "fa": "ساندویچ ماهی"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-chicken-tenders",
+      "word": {
+        "en": "Chicken Tenders",
+        "fa": "فیله مرغ سوخاری"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-mozzarella-sticks",
+      "word": {
+        "en": "Mozzarella Sticks",
+        "fa": "استیک پنیر موزارلا"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-loaded-fries",
+      "word": {
+        "en": "Loaded Fries",
+        "fa": "سیب‌زمینی با سس و پنیر"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-curly-fries",
+      "word": {
+        "en": "Curly Fries",
+        "fa": "سیب‌زمینی فنری"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-crispy-chicken",
+      "word": {
+        "en": "Crispy Chicken",
+        "fa": "مرغ کریسپی"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-double-cheeseburger",
+      "word": {
+        "en": "Double Cheeseburger",
+        "fa": "دابل چیزبرگر"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-bacon-cheeseburger",
+      "word": {
+        "en": "Bacon Cheeseburger",
+        "fa": "چیزبرگر با بیکن"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-veggie-burger",
+      "word": {
+        "en": "Veggie Burger",
+        "fa": "برگر گیاهی"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-beef-taco",
+      "word": {
+        "en": "Beef Taco",
+        "fa": "تاکوی گوشت"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-chicken-burrito",
+      "word": {
+        "en": "Chicken Burrito",
+        "fa": "بوریتوی مرغ"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-cheese-quesadilla",
+      "word": {
+        "en": "Cheese Quesadilla",
+        "fa": "کاسادیای پنیر"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-nachos",
+      "word": {
+        "en": "Nachos",
+        "fa": "ناچو"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-pepperoni-pizza",
+      "word": {
+        "en": "Pepperoni Pizza",
+        "fa": "پیتزا پپرونی"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-cheese-pizza",
+      "word": {
+        "en": "Cheese Pizza",
+        "fa": "پیتزا پنیر"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-pizza-slice",
+      "word": {
+        "en": "Pizza Slice",
+        "fa": "یک تکه پیتزا"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-garlic-bread",
+      "word": {
+        "en": "Garlic Bread",
+        "fa": "نان سیر"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-chicken-shawarma",
+      "word": {
+        "en": "Chicken Shawarma",
+        "fa": "شاورمای مرغ"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-doner-kebab",
+      "word": {
+        "en": "Doner Kebab",
+        "fa": "دونر کباب"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-chicken-caesar-wrap",
+      "word": {
+        "en": "Chicken Caesar Wrap",
+        "fa": "رپ سزار مرغ"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-club-sandwich",
+      "word": {
+        "en": "Club Sandwich",
+        "fa": "کلاب ساندویچ"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-grilled-cheese",
+      "word": {
+        "en": "Grilled Cheese",
+        "fa": "ساندویچ پنیر گریل‌شده"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-sloppy-joe",
+      "word": {
+        "en": "Sloppy Joe",
+        "fa": "اسلاپی جو"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-philly-cheesesteak",
+      "word": {
+        "en": "Philly Cheesesteak",
+        "fa": "فیلی چیزاستیک"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-meatball-sub",
+      "word": {
+        "en": "Meatball Sub",
+        "fa": "ساندویچ کوفته"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-blt-sandwich",
+      "word": {
+        "en": "BLT Sandwich",
+        "fa": "ساندویچ بیکن کاهو گوجه"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-chili-cheese-fries",
+      "word": {
+        "en": "Chili Cheese Fries",
+        "fa": "سیب‌زمینی با چیلی و پنیر"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-chicken-quesadilla",
+      "word": {
+        "en": "Chicken Quesadilla",
+        "fa": "کاسادیای مرغ"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-beef-burrito",
+      "word": {
+        "en": "Beef Burrito",
+        "fa": "بوریتوی گوشت"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-spicy-wings",
+      "word": {
+        "en": "Spicy Wings",
+        "fa": "بال تند"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-egg-roll",
+      "word": {
+        "en": "Egg Roll",
+        "fa": "رول تخم‌مرغ"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-soft-serve",
+      "word": {
+        "en": "Soft Serve",
+        "fa": "بستنی قیفی"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-onion-soup",
+      "word": {
+        "en": "Onion Soup",
+        "fa": "سوپ پیاز"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-cheese-fries",
+      "word": {
+        "en": "Cheese Fries",
+        "fa": "سیب‌زمینی با پنیر"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-double-whopper",
+      "word": {
+        "en": "Double Whopper",
+        "fa": "دابل واپر"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-chicken-popcorn",
+      "word": {
+        "en": "Chicken Popcorn",
+        "fa": "پاپ‌کورن مرغ"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-black-pepper",
+      "word": {
+        "en": "Black Pepper",
+        "fa": "فلفل سیاه"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-turmeric",
+      "word": {
+        "en": "Turmeric",
+        "fa": "زردچوبه"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-cinnamon",
+      "word": {
+        "en": "Cinnamon",
+        "fa": "دارچین"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-cumin",
+      "word": {
+        "en": "Cumin",
+        "fa": "زیره"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-cardamom",
+      "word": {
+        "en": "Cardamom",
+        "fa": "هل"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-nutmeg",
+      "word": {
+        "en": "Nutmeg",
+        "fa": "جوز هندی"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-cloves",
+      "word": {
+        "en": "Cloves",
+        "fa": "میخک"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-paprika",
+      "word": {
+        "en": "Paprika",
+        "fa": "پاپریکا"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-chili-powder",
+      "word": {
+        "en": "Chili Powder",
+        "fa": "پودر فلفل قرمز"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-bay-leaf",
+      "word": {
+        "en": "Bay Leaf",
+        "fa": "برگ بو"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-oregano",
+      "word": {
+        "en": "Oregano",
+        "fa": "پونه کوهی"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-rosemary",
+      "word": {
+        "en": "Rosemary",
+        "fa": "رزماری"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-thyme",
+      "word": {
+        "en": "Thyme",
+        "fa": "آویشن"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-tarragon",
+      "word": {
+        "en": "Tarragon",
+        "fa": "ترخون"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-fenugreek",
+      "word": {
+        "en": "Fenugreek",
+        "fa": "شنبلیله"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-chives",
+      "word": {
+        "en": "Chives",
+        "fa": "تره"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-sumac",
+      "word": {
+        "en": "Sumac",
+        "fa": "سماق"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-vanilla",
+      "word": {
+        "en": "Vanilla",
+        "fa": "وانیل"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-nigella-seeds",
+      "word": {
+        "en": "Nigella Seeds",
+        "fa": "سیاه‌دانه"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-sesame-seeds",
+      "word": {
+        "en": "Sesame Seeds",
+        "fa": "کنجد"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-star-anise",
+      "word": {
+        "en": "Star Anise",
+        "fa": "بادیان"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-cayenne-pepper",
+      "word": {
+        "en": "Cayenne Pepper",
+        "fa": "فلفل کایِن"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-curry-powder",
+      "word": {
+        "en": "Curry Powder",
+        "fa": "پودر کاری"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-garlic-powder",
+      "word": {
+        "en": "Garlic Powder",
+        "fa": "پودر سیر"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-onion-powder",
+      "word": {
+        "en": "Onion Powder",
+        "fa": "پودر پیاز"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-dried-lime",
+      "word": {
+        "en": "Dried Lime",
+        "fa": "لیمو عمانی"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-ketchup",
+      "word": {
+        "en": "Ketchup",
+        "fa": "سس کچاپ"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-mayonnaise",
+      "word": {
+        "en": "Mayonnaise",
+        "fa": "سس مایونز"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-mustard",
+      "word": {
+        "en": "Mustard",
+        "fa": "سس خردل"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-soy-sauce",
+      "word": {
+        "en": "Soy Sauce",
+        "fa": "سس سویا"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-vinegar",
+      "word": {
+        "en": "Vinegar",
+        "fa": "سرکه"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-olive-oil",
+      "word": {
+        "en": "Olive Oil",
+        "fa": "روغن زیتون"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-pesto",
+      "word": {
+        "en": "Pesto",
+        "fa": "سس پستو"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-hot-sauce",
+      "word": {
+        "en": "Hot Sauce",
+        "fa": "سس تند"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-barbecue-sauce",
+      "word": {
+        "en": "Barbecue Sauce",
+        "fa": "سس باربیکیو"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-salsa",
+      "word": {
+        "en": "Salsa",
+        "fa": "سس سالسا"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-worcestershire-sauce",
+      "word": {
+        "en": "Worcestershire Sauce",
+        "fa": "سس ورستر"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-pomegranate-molasses",
+      "word": {
+        "en": "Pomegranate Molasses",
+        "fa": "رب انار"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-tomato-paste",
+      "word": {
+        "en": "Tomato Paste",
+        "fa": "رب گوجه‌فرنگی"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-rose-water",
+      "word": {
+        "en": "Rose Water",
+        "fa": "گلاب"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-allspice",
+      "word": {
+        "en": "Allspice",
+        "fa": "فلفل فرنگی"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-marjoram",
+      "word": {
+        "en": "Marjoram",
+        "fa": "مرزنجوش"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-sea-salt",
+      "word": {
+        "en": "Sea Salt",
+        "fa": "نمک دریا"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-saffron-water",
+      "word": {
+        "en": "Saffron Water",
+        "fa": "عرق زعفران"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-pickle",
+      "word": {
+        "en": "Pickle",
+        "fa": "ترشی"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-lubia-polo",
+      "word": {
+        "en": "Lubia Polo",
+        "fa": "لوبیاپلو"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-dami-gojeh",
+      "word": {
+        "en": "Dami Gojeh",
+        "fa": "دمی گوجه"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-chelo-kabab",
+      "word": {
+        "en": "Chelo Kabab",
+        "fa": "چلوکباب"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-khoresht-gheymeh-bademjan",
+      "word": {
+        "en": "Khoresht Gheymeh Bademjan",
+        "fa": "قیمه‌بادمجان"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-aabgoosht",
+      "word": {
+        "en": "Aabgoosht",
+        "fa": "آبگوشت"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-kookoo-sabzi",
+      "word": {
+        "en": "Kookoo Sabzi",
+        "fa": "کوکوسبزی"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-kookoo-sib-zamini",
+      "word": {
+        "en": "Kookoo Sib Zamini",
+        "fa": "کوکوسیب‌زمینی"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-kotlet",
+      "word": {
+        "en": "Kotlet",
+        "fa": "کتلت"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-shami-kabab",
+      "word": {
+        "en": "Shami Kabab",
+        "fa": "شامی‌کباب"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-eshkeneh",
+      "word": {
+        "en": "Eshkeneh",
+        "fa": "اشکنه"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-loobia-sabz-polo",
+      "word": {
+        "en": "Loobia Sabz Polo",
+        "fa": "لوبیاسبزپلو"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-morgh-polo",
+      "word": {
+        "en": "Morgh Polo",
+        "fa": "مرغ‌پلو"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-gheymeh-nesar",
+      "word": {
+        "en": "Gheymeh Nesar",
+        "fa": "قیمه‌نثار"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-khoresht-aloo-esfenaj",
+      "word": {
+        "en": "Khoresht Aloo Esfenaj",
+        "fa": "خورش آلواسفناج"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-mahicheh",
+      "word": {
+        "en": "Mahicheh",
+        "fa": "ماهیچه"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-ghalyeh-mahi",
+      "word": {
+        "en": "Ghalyeh Mahi",
+        "fa": "قلیه‌ماهی"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-salad-olivieh",
+      "word": {
+        "en": "Salad Olivieh",
+        "fa": "سالاد الویه"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-mast-o-khiar",
+      "word": {
+        "en": "Mast O Khiar",
+        "fa": "ماست و خیار"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-borani-esfenaj",
+      "word": {
+        "en": "Borani Esfenaj",
+        "fa": "بورانی اسفناج"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-tah-anar",
+      "word": {
+        "en": "Tah Anar",
+        "fa": "ته‌انار"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-bastani-sonnati",
+      "word": {
+        "en": "Bastani Sonnati",
+        "fa": "بستنی سنتی"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "food-naan-sangak",
+      "word": {
+        "en": "Naan Sangak",
+        "fa": "نان سنگک"
+      },
+      "difficulty": "medium"
     }
   ]
 }

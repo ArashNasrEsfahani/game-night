@@ -942,768 +942,5446 @@
       "text": {
         "en": "bank",
         "fa": "بانک"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x002",
       "text": {
         "en": "spring",
         "fa": "بهار"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x003",
       "text": {
         "en": "mouse",
         "fa": "موش"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x004",
       "text": {
         "en": "bond",
         "fa": "پیوند"
-      },
-      "difficulty": 2
+      }
     },
     {
       "id": "cn-x005",
       "text": {
         "en": "cow",
         "fa": "گاو"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x006",
       "text": {
         "en": "sheep",
         "fa": "گوسفند"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x007",
       "text": {
         "en": "rabbit",
         "fa": "خرگوش"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x008",
       "text": {
         "en": "frog",
         "fa": "قورباغه"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x009",
       "text": {
         "en": "ant",
         "fa": "مورچه"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x010",
       "text": {
         "en": "duck",
         "fa": "اردک"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x011",
       "text": {
         "en": "deer",
         "fa": "آهو"
-      },
-      "difficulty": 2
+      }
     },
     {
       "id": "cn-x012",
       "text": {
         "en": "grass",
         "fa": "چمن"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x013",
       "text": {
         "en": "lake",
         "fa": "دریاچه"
-      },
-      "difficulty": 2
+      }
     },
     {
       "id": "cn-x014",
       "text": {
         "en": "rock",
         "fa": "سنگ"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x015",
       "text": {
         "en": "sand",
         "fa": "ماسه"
-      },
-      "difficulty": 2
+      }
     },
     {
       "id": "cn-x016",
       "text": {
         "en": "head",
         "fa": "سر"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x017",
       "text": {
         "en": "hand",
         "fa": "دست"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x018",
       "text": {
         "en": "foot",
         "fa": "پا"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x019",
       "text": {
         "en": "eye",
         "fa": "چشم"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x020",
       "text": {
         "en": "ear",
         "fa": "گوش"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x021",
       "text": {
         "en": "nose",
         "fa": "بینی"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x022",
       "text": {
         "en": "mouth",
         "fa": "دهان"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x023",
       "text": {
         "en": "tooth",
         "fa": "دندان"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x024",
       "text": {
         "en": "heart",
         "fa": "قلب"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x025",
       "text": {
         "en": "bone",
         "fa": "استخوان"
-      },
-      "difficulty": 2
+      }
     },
     {
       "id": "cn-x026",
       "text": {
         "en": "hair",
         "fa": "مو"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x027",
       "text": {
         "en": "finger",
         "fa": "انگشت"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x028",
       "text": {
         "en": "arm",
         "fa": "بازو"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x029",
       "text": {
         "en": "neck",
         "fa": "گردن"
-      },
-      "difficulty": 2
+      }
     },
     {
       "id": "cn-x030",
       "text": {
         "en": "skin",
         "fa": "پوست"
-      },
-      "difficulty": 2
+      }
     },
     {
       "id": "cn-x031",
       "text": {
         "en": "cheese",
         "fa": "پنیر"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x032",
       "text": {
         "en": "orange",
         "fa": "پرتقال"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x033",
       "text": {
         "en": "onion",
         "fa": "پیاز"
-      },
-      "difficulty": 2
+      }
     },
     {
       "id": "cn-x034",
       "text": {
         "en": "valley",
         "fa": "دره"
-      },
-      "difficulty": 2
+      }
     },
     {
       "id": "cn-x035",
       "text": {
         "en": "harbor",
         "fa": "بندرگاه"
-      },
-      "difficulty": 2
+      }
     },
     {
       "id": "cn-x036",
       "text": {
         "en": "castle",
         "fa": "قلعه"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x037",
       "text": {
         "en": "tower",
         "fa": "برج"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x038",
       "text": {
         "en": "capital",
         "fa": "پایتخت"
-      },
-      "difficulty": 2
+      }
     },
     {
       "id": "cn-x039",
       "text": {
         "en": "border",
         "fa": "مرز"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x040",
       "text": {
         "en": "village",
         "fa": "روستا"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x041",
       "text": {
         "en": "canal",
         "fa": "کانال"
-      },
-      "difficulty": 2
+      }
     },
     {
       "id": "cn-x042",
       "text": {
         "en": "compass",
         "fa": "قطب‌نما"
-      },
-      "difficulty": 2
+      }
     },
     {
       "id": "cn-x043",
       "text": {
         "en": "pole",
         "fa": "قطب"
-      },
-      "difficulty": 2
+      }
     },
     {
       "id": "cn-x044",
       "text": {
         "en": "court",
         "fa": "دادگاه"
-      },
-      "difficulty": 2
+      }
     },
     {
       "id": "cn-x045",
       "text": {
         "en": "palace",
         "fa": "کاخ"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x046",
       "text": {
         "en": "temple",
         "fa": "معبد"
-      },
-      "difficulty": 2
+      }
     },
     {
       "id": "cn-x047",
       "text": {
         "en": "tunnel",
         "fa": "تونل"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x048",
       "text": {
         "en": "doctor",
         "fa": "دکتر"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x049",
       "text": {
         "en": "judge",
         "fa": "قاضی"
-      },
-      "difficulty": 2
+      }
     },
     {
       "id": "cn-x050",
       "text": {
         "en": "pilot",
         "fa": "خلبان"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x051",
       "text": {
         "en": "captain",
         "fa": "ناخدا"
-      },
-      "difficulty": 2
+      }
     },
     {
       "id": "cn-x052",
       "text": {
         "en": "soldier",
         "fa": "سرباز"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x053",
       "text": {
         "en": "queen",
         "fa": "ملکه"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x054",
       "text": {
         "en": "knight",
         "fa": "شوالیه"
-      },
-      "difficulty": 2
+      }
     },
     {
       "id": "cn-x055",
       "text": {
         "en": "nurse",
         "fa": "پرستار"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x056",
       "text": {
         "en": "teacher",
         "fa": "معلم"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x057",
       "text": {
         "en": "farmer",
         "fa": "کشاورز"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x058",
       "text": {
         "en": "hunter",
         "fa": "شکارچی"
-      },
-      "difficulty": 2
+      }
     },
     {
       "id": "cn-x059",
       "text": {
         "en": "thief",
         "fa": "دزد"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x060",
       "text": {
         "en": "spy",
         "fa": "جاسوس"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x061",
       "text": {
         "en": "guard",
         "fa": "نگهبان"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x062",
       "text": {
         "en": "agent",
         "fa": "مأمور"
-      },
-      "difficulty": 2
+      }
     },
     {
       "id": "cn-x063",
       "text": {
         "en": "clown",
         "fa": "دلقک"
-      },
-      "difficulty": 2
+      }
     },
     {
       "id": "cn-x064",
       "text": {
         "en": "engine",
         "fa": "موتور"
-      },
-      "difficulty": 2
+      }
     },
     {
       "id": "cn-x065",
       "text": {
         "en": "anchor",
         "fa": "لنگر"
-      },
-      "difficulty": 2
+      }
     },
     {
       "id": "cn-x066",
       "text": {
         "en": "sail",
         "fa": "بادبان"
-      },
-      "difficulty": 2
+      }
     },
     {
       "id": "cn-x067",
       "text": {
         "en": "wagon",
         "fa": "واگن"
-      },
-      "difficulty": 2
+      }
     },
     {
       "id": "cn-x068",
       "text": {
         "en": "ticket",
         "fa": "بلیت"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x069",
       "text": {
         "en": "station",
         "fa": "ایستگاه"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x070",
       "text": {
         "en": "battery",
         "fa": "باتری"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x071",
       "text": {
         "en": "screen",
         "fa": "صفحه"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x072",
       "text": {
         "en": "satellite",
         "fa": "ماهواره"
-      },
-      "difficulty": 2
+      }
     },
     {
       "id": "cn-x073",
       "text": {
         "en": "signal",
         "fa": "سیگنال"
-      },
-      "difficulty": 2
+      }
     },
     {
       "id": "cn-x074",
       "text": {
         "en": "circuit",
         "fa": "مدار"
-      },
-      "difficulty": 3
+      }
     },
     {
       "id": "cn-x075",
       "text": {
         "en": "antenna",
         "fa": "آنتن"
-      },
-      "difficulty": 2
+      }
     },
     {
       "id": "cn-x076",
       "text": {
         "en": "laser",
         "fa": "لیزر"
-      },
-      "difficulty": 2
+      }
     },
     {
       "id": "cn-x077",
       "text": {
         "en": "cable",
         "fa": "کابل"
-      },
-      "difficulty": 2
+      }
     },
     {
       "id": "cn-x078",
       "text": {
         "en": "drone",
         "fa": "پهپاد"
-      },
-      "difficulty": 2
+      }
     },
     {
       "id": "cn-x079",
       "text": {
         "en": "goal",
         "fa": "گل"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x080",
       "text": {
         "en": "racket",
         "fa": "راکت"
-      },
-      "difficulty": 2
+      }
     },
     {
       "id": "cn-x081",
       "text": {
         "en": "net",
         "fa": "تور"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x082",
       "text": {
         "en": "medal",
         "fa": "مدال"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x083",
       "text": {
         "en": "trophy",
         "fa": "جام"
-      },
-      "difficulty": 2
+      }
     },
     {
       "id": "cn-x084",
       "text": {
         "en": "referee",
         "fa": "داور"
-      },
-      "difficulty": 2
+      }
     },
     {
       "id": "cn-x085",
       "text": {
         "en": "stadium",
         "fa": "ورزشگاه"
-      },
-      "difficulty": 2
+      }
     },
     {
       "id": "cn-x086",
       "text": {
         "en": "chess",
         "fa": "شطرنج"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x087",
       "text": {
         "en": "card",
         "fa": "کارت"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x088",
       "text": {
         "en": "puzzle",
         "fa": "پازل"
-      },
-      "difficulty": 2
+      }
     },
     {
       "id": "cn-x089",
       "text": {
         "en": "luck",
         "fa": "شانس"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x090",
       "text": {
         "en": "secret",
         "fa": "راز"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x091",
       "text": {
         "en": "power",
         "fa": "قدرت"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x092",
       "text": {
         "en": "freedom",
         "fa": "آزادی"
-      },
-      "difficulty": 2
+      }
     },
     {
       "id": "cn-x093",
       "text": {
         "en": "war",
         "fa": "جنگ"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x094",
       "text": {
         "en": "peace",
         "fa": "صلح"
-      },
-      "difficulty": 1
+      }
     },
     {
       "id": "cn-x095",
       "text": {
         "en": "myth",
         "fa": "اسطوره"
-      },
-      "difficulty": 2
+      }
     },
     {
       "id": "cn-x096",
       "text": {
         "en": "hero",
         "fa": "قهرمان"
-      },
-      "difficulty": 1
+      }
+    },
+    {
+      "id": "cn-river",
+      "text": {
+        "en": "River",
+        "fa": "رودخانه"
+      }
+    },
+    {
+      "id": "cn-ocean",
+      "text": {
+        "en": "Ocean",
+        "fa": "اقیانوس"
+      }
+    },
+    {
+      "id": "cn-cliff",
+      "text": {
+        "en": "Cliff",
+        "fa": "صخره"
+      }
+    },
+    {
+      "id": "cn-hill",
+      "text": {
+        "en": "Hill",
+        "fa": "تپه"
+      }
+    },
+    {
+      "id": "cn-waterfall",
+      "text": {
+        "en": "Waterfall",
+        "fa": "آبشار"
+      }
+    },
+    {
+      "id": "cn-glacier",
+      "text": {
+        "en": "Glacier",
+        "fa": "یخچال طبیعی"
+      }
+    },
+    {
+      "id": "cn-canyon",
+      "text": {
+        "en": "Canyon",
+        "fa": "تنگه"
+      }
+    },
+    {
+      "id": "cn-swamp",
+      "text": {
+        "en": "Swamp",
+        "fa": "باتلاق"
+      }
+    },
+    {
+      "id": "cn-meadow",
+      "text": {
+        "en": "Meadow",
+        "fa": "چمنزار"
+      }
+    },
+    {
+      "id": "cn-plateau",
+      "text": {
+        "en": "Plateau",
+        "fa": "فلات"
+      }
+    },
+    {
+      "id": "cn-dune",
+      "text": {
+        "en": "Dune",
+        "fa": "تپه شنی"
+      }
+    },
+    {
+      "id": "cn-marsh",
+      "text": {
+        "en": "Marsh",
+        "fa": "مرداب"
+      }
+    },
+    {
+      "id": "cn-jungle",
+      "text": {
+        "en": "Jungle",
+        "fa": "جنگل انبوه"
+      }
+    },
+    {
+      "id": "cn-spring",
+      "text": {
+        "en": "Spring",
+        "fa": "چشمه"
+      }
+    },
+    {
+      "id": "cn-stream",
+      "text": {
+        "en": "Stream",
+        "fa": "جویبار"
+      }
+    },
+    {
+      "id": "cn-pond",
+      "text": {
+        "en": "Pond",
+        "fa": "برکه"
+      }
+    },
+    {
+      "id": "cn-bay",
+      "text": {
+        "en": "Bay",
+        "fa": "خلیج"
+      }
+    },
+    {
+      "id": "cn-coast",
+      "text": {
+        "en": "Coast",
+        "fa": "کرانه"
+      }
+    },
+    {
+      "id": "cn-peak",
+      "text": {
+        "en": "Peak",
+        "fa": "قله"
+      }
+    },
+    {
+      "id": "cn-ridge",
+      "text": {
+        "en": "Ridge",
+        "fa": "یال"
+      }
+    },
+    {
+      "id": "cn-slope",
+      "text": {
+        "en": "Slope",
+        "fa": "شیب"
+      }
+    },
+    {
+      "id": "cn-plain",
+      "text": {
+        "en": "Plain",
+        "fa": "دشت"
+      }
+    },
+    {
+      "id": "cn-field",
+      "text": {
+        "en": "Field",
+        "fa": "مزرعه"
+      }
+    },
+    {
+      "id": "cn-prairie",
+      "text": {
+        "en": "Prairie",
+        "fa": "علفزار"
+      }
+    },
+    {
+      "id": "cn-tundra",
+      "text": {
+        "en": "Tundra",
+        "fa": "توندرا"
+      }
+    },
+    {
+      "id": "cn-crater",
+      "text": {
+        "en": "Crater",
+        "fa": "دهانه"
+      }
+    },
+    {
+      "id": "cn-reef",
+      "text": {
+        "en": "Reef",
+        "fa": "صخره مرجانی"
+      }
+    },
+    {
+      "id": "cn-lagoon",
+      "text": {
+        "en": "Lagoon",
+        "fa": "تالاب"
+      }
+    },
+    {
+      "id": "cn-delta",
+      "text": {
+        "en": "Delta",
+        "fa": "دلتا"
+      }
+    },
+    {
+      "id": "cn-oasis",
+      "text": {
+        "en": "Oasis",
+        "fa": "واحه"
+      }
+    },
+    {
+      "id": "cn-gorge",
+      "text": {
+        "en": "Gorge",
+        "fa": "دره عمیق"
+      }
+    },
+    {
+      "id": "cn-pass",
+      "text": {
+        "en": "Pass",
+        "fa": "گردنه"
+      }
+    },
+    {
+      "id": "cn-summit",
+      "text": {
+        "en": "Summit",
+        "fa": "اوج"
+      }
+    },
+    {
+      "id": "cn-shore",
+      "text": {
+        "en": "Shore",
+        "fa": "کناره"
+      }
+    },
+    {
+      "id": "cn-wetland",
+      "text": {
+        "en": "Wetland",
+        "fa": "تالاب"
+      }
+    },
+    {
+      "id": "cn-grassland",
+      "text": {
+        "en": "Grassland",
+        "fa": "چراگاه"
+      }
+    },
+    {
+      "id": "cn-rainforest",
+      "text": {
+        "en": "Rainforest",
+        "fa": "جنگل بارانی"
+      }
+    },
+    {
+      "id": "cn-estuary",
+      "text": {
+        "en": "Estuary",
+        "fa": "خور"
+      }
+    },
+    {
+      "id": "cn-fjord",
+      "text": {
+        "en": "Fjord",
+        "fa": "فیورد"
+      }
+    },
+    {
+      "id": "cn-geyser",
+      "text": {
+        "en": "Geyser",
+        "fa": "آبفشان"
+      }
+    },
+    {
+      "id": "cn-quicksand",
+      "text": {
+        "en": "Quicksand",
+        "fa": "شن روان"
+      }
+    },
+    {
+      "id": "cn-boulder",
+      "text": {
+        "en": "Boulder",
+        "fa": "تخته‌سنگ"
+      }
+    },
+    {
+      "id": "cn-sandbar",
+      "text": {
+        "en": "Sandbar",
+        "fa": "پشته شنی"
+      }
+    },
+    {
+      "id": "cn-headland",
+      "text": {
+        "en": "Headland",
+        "fa": "دماغه"
+      }
+    },
+    {
+      "id": "cn-foothill",
+      "text": {
+        "en": "Foothill",
+        "fa": "کوهپایه"
+      }
+    },
+    {
+      "id": "cn-highland",
+      "text": {
+        "en": "Highland",
+        "fa": "کوهستان"
+      }
+    },
+    {
+      "id": "cn-broom",
+      "text": {
+        "en": "Broom",
+        "fa": "جارو"
+      }
+    },
+    {
+      "id": "cn-pillow",
+      "text": {
+        "en": "Pillow",
+        "fa": "بالش"
+      }
+    },
+    {
+      "id": "cn-blanket",
+      "text": {
+        "en": "Blanket",
+        "fa": "پتو"
+      }
+    },
+    {
+      "id": "cn-clock",
+      "text": {
+        "en": "Clock",
+        "fa": "ساعت"
+      }
+    },
+    {
+      "id": "cn-curtain",
+      "text": {
+        "en": "Curtain",
+        "fa": "پرده"
+      }
+    },
+    {
+      "id": "cn-towel",
+      "text": {
+        "en": "Towel",
+        "fa": "حوله"
+      }
+    },
+    {
+      "id": "cn-fork",
+      "text": {
+        "en": "Fork",
+        "fa": "چنگال"
+      }
+    },
+    {
+      "id": "cn-cup",
+      "text": {
+        "en": "Cup",
+        "fa": "فنجان"
+      }
+    },
+    {
+      "id": "cn-bowl",
+      "text": {
+        "en": "Bowl",
+        "fa": "کاسه"
+      }
+    },
+    {
+      "id": "cn-kettle",
+      "text": {
+        "en": "Kettle",
+        "fa": "کتری"
+      }
+    },
+    {
+      "id": "cn-teapot",
+      "text": {
+        "en": "Teapot",
+        "fa": "قوری"
+      }
+    },
+    {
+      "id": "cn-pan",
+      "text": {
+        "en": "Pan",
+        "fa": "تابه"
+      }
+    },
+    {
+      "id": "cn-pot",
+      "text": {
+        "en": "Pot",
+        "fa": "قابلمه"
+      }
+    },
+    {
+      "id": "cn-bucket",
+      "text": {
+        "en": "Bucket",
+        "fa": "سطل"
+      }
+    },
+    {
+      "id": "cn-sofa",
+      "text": {
+        "en": "Sofa",
+        "fa": "مبل"
+      }
+    },
+    {
+      "id": "cn-drawer",
+      "text": {
+        "en": "Drawer",
+        "fa": "کشو"
+      }
+    },
+    {
+      "id": "cn-shelf",
+      "text": {
+        "en": "Shelf",
+        "fa": "قفسه"
+      }
+    },
+    {
+      "id": "cn-vase",
+      "text": {
+        "en": "Vase",
+        "fa": "گلدان"
+      }
+    },
+    {
+      "id": "cn-soap",
+      "text": {
+        "en": "Soap",
+        "fa": "صابون"
+      }
+    },
+    {
+      "id": "cn-sponge",
+      "text": {
+        "en": "Sponge",
+        "fa": "اسفنج"
+      }
+    },
+    {
+      "id": "cn-comb",
+      "text": {
+        "en": "Comb",
+        "fa": "شانه"
+      }
+    },
+    {
+      "id": "cn-brush",
+      "text": {
+        "en": "Brush",
+        "fa": "برس"
+      }
+    },
+    {
+      "id": "cn-scissors",
+      "text": {
+        "en": "Scissors",
+        "fa": "قیچی"
+      }
+    },
+    {
+      "id": "cn-thread",
+      "text": {
+        "en": "Thread",
+        "fa": "نخ"
+      }
+    },
+    {
+      "id": "cn-button",
+      "text": {
+        "en": "Button",
+        "fa": "دکمه"
+      }
+    },
+    {
+      "id": "cn-lock",
+      "text": {
+        "en": "Lock",
+        "fa": "قفل"
+      }
+    },
+    {
+      "id": "cn-doorknob",
+      "text": {
+        "en": "Doorknob",
+        "fa": "دستگیره"
+      }
+    },
+    {
+      "id": "cn-ladder",
+      "text": {
+        "en": "Ladder",
+        "fa": "نردبان"
+      }
+    },
+    {
+      "id": "cn-nail",
+      "text": {
+        "en": "Nail",
+        "fa": "میخ"
+      }
+    },
+    {
+      "id": "cn-plug",
+      "text": {
+        "en": "Plug",
+        "fa": "دوشاخه"
+      }
+    },
+    {
+      "id": "cn-fan",
+      "text": {
+        "en": "Fan",
+        "fa": "پنکه"
+      }
+    },
+    {
+      "id": "cn-iron",
+      "text": {
+        "en": "Iron",
+        "fa": "اتو"
+      }
+    },
+    {
+      "id": "cn-stove",
+      "text": {
+        "en": "Stove",
+        "fa": "اجاق"
+      }
+    },
+    {
+      "id": "cn-fridge",
+      "text": {
+        "en": "Fridge",
+        "fa": "یخچال"
+      }
+    },
+    {
+      "id": "cn-oven",
+      "text": {
+        "en": "Oven",
+        "fa": "فر"
+      }
+    },
+    {
+      "id": "cn-sink",
+      "text": {
+        "en": "Sink",
+        "fa": "سینک"
+      }
+    },
+    {
+      "id": "cn-faucet",
+      "text": {
+        "en": "Faucet",
+        "fa": "شیر آب"
+      }
+    },
+    {
+      "id": "cn-mattress",
+      "text": {
+        "en": "Mattress",
+        "fa": "تشک"
+      }
+    },
+    {
+      "id": "cn-napkin",
+      "text": {
+        "en": "Napkin",
+        "fa": "دستمال"
+      }
+    },
+    {
+      "id": "cn-hat",
+      "text": {
+        "en": "Hat",
+        "fa": "کلاه"
+      }
+    },
+    {
+      "id": "cn-scarf",
+      "text": {
+        "en": "Scarf",
+        "fa": "شال‌گردن"
+      }
+    },
+    {
+      "id": "cn-glove",
+      "text": {
+        "en": "Glove",
+        "fa": "دستکش"
+      }
+    },
+    {
+      "id": "cn-sock",
+      "text": {
+        "en": "Sock",
+        "fa": "جوراب"
+      }
+    },
+    {
+      "id": "cn-shoe",
+      "text": {
+        "en": "Shoe",
+        "fa": "کفش"
+      }
+    },
+    {
+      "id": "cn-boot",
+      "text": {
+        "en": "Boot",
+        "fa": "چکمه"
+      }
+    },
+    {
+      "id": "cn-sandal",
+      "text": {
+        "en": "Sandal",
+        "fa": "صندل"
+      }
+    },
+    {
+      "id": "cn-slipper",
+      "text": {
+        "en": "Slipper",
+        "fa": "دمپایی"
+      }
+    },
+    {
+      "id": "cn-shirt",
+      "text": {
+        "en": "Shirt",
+        "fa": "پیراهن"
+      }
+    },
+    {
+      "id": "cn-sweater",
+      "text": {
+        "en": "Sweater",
+        "fa": "ژاکت"
+      }
+    },
+    {
+      "id": "cn-jacket",
+      "text": {
+        "en": "Jacket",
+        "fa": "کت"
+      }
+    },
+    {
+      "id": "cn-coat",
+      "text": {
+        "en": "Coat",
+        "fa": "پالتو"
+      }
+    },
+    {
+      "id": "cn-vest",
+      "text": {
+        "en": "Vest",
+        "fa": "جلیقه"
+      }
+    },
+    {
+      "id": "cn-skirt",
+      "text": {
+        "en": "Skirt",
+        "fa": "دامن"
+      }
+    },
+    {
+      "id": "cn-dress",
+      "text": {
+        "en": "Dress",
+        "fa": "لباس"
+      }
+    },
+    {
+      "id": "cn-pants",
+      "text": {
+        "en": "Pants",
+        "fa": "شلوار"
+      }
+    },
+    {
+      "id": "cn-jeans",
+      "text": {
+        "en": "Jeans",
+        "fa": "شلوار جین"
+      }
+    },
+    {
+      "id": "cn-shorts",
+      "text": {
+        "en": "Shorts",
+        "fa": "شلوارک"
+      }
+    },
+    {
+      "id": "cn-belt",
+      "text": {
+        "en": "Belt",
+        "fa": "کمربند"
+      }
+    },
+    {
+      "id": "cn-tie",
+      "text": {
+        "en": "Tie",
+        "fa": "کراوات"
+      }
+    },
+    {
+      "id": "cn-zipper",
+      "text": {
+        "en": "Zipper",
+        "fa": "زیپ"
+      }
+    },
+    {
+      "id": "cn-pocket",
+      "text": {
+        "en": "Pocket",
+        "fa": "جیب"
+      }
+    },
+    {
+      "id": "cn-collar",
+      "text": {
+        "en": "Collar",
+        "fa": "یقه"
+      }
+    },
+    {
+      "id": "cn-sleeve",
+      "text": {
+        "en": "Sleeve",
+        "fa": "آستین"
+      }
+    },
+    {
+      "id": "cn-cap",
+      "text": {
+        "en": "Cap",
+        "fa": "کلاه لبه‌دار"
+      }
+    },
+    {
+      "id": "cn-helmet",
+      "text": {
+        "en": "Helmet",
+        "fa": "کلاه‌ایمنی"
+      }
+    },
+    {
+      "id": "cn-glasses",
+      "text": {
+        "en": "Glasses",
+        "fa": "عینک"
+      }
+    },
+    {
+      "id": "cn-sunglasses",
+      "text": {
+        "en": "Sunglasses",
+        "fa": "عینک آفتابی"
+      }
+    },
+    {
+      "id": "cn-watch",
+      "text": {
+        "en": "Watch",
+        "fa": "ساعت مچی"
+      }
+    },
+    {
+      "id": "cn-ring",
+      "text": {
+        "en": "Ring",
+        "fa": "حلقه"
+      }
+    },
+    {
+      "id": "cn-necklace",
+      "text": {
+        "en": "Necklace",
+        "fa": "گردنبند"
+      }
+    },
+    {
+      "id": "cn-bracelet",
+      "text": {
+        "en": "Bracelet",
+        "fa": "دستبند"
+      }
+    },
+    {
+      "id": "cn-earring",
+      "text": {
+        "en": "Earring",
+        "fa": "گوشواره"
+      }
+    },
+    {
+      "id": "cn-brooch",
+      "text": {
+        "en": "Brooch",
+        "fa": "سنجاق‌سینه"
+      }
+    },
+    {
+      "id": "cn-wallet",
+      "text": {
+        "en": "Wallet",
+        "fa": "کیف‌پول"
+      }
+    },
+    {
+      "id": "cn-purse",
+      "text": {
+        "en": "Purse",
+        "fa": "کیف‌دستی"
+      }
+    },
+    {
+      "id": "cn-backpack",
+      "text": {
+        "en": "Backpack",
+        "fa": "کوله‌پشتی"
+      }
+    },
+    {
+      "id": "cn-umbrella",
+      "text": {
+        "en": "Umbrella",
+        "fa": "چتر"
+      }
+    },
+    {
+      "id": "cn-gown",
+      "text": {
+        "en": "Gown",
+        "fa": "ردا"
+      }
+    },
+    {
+      "id": "cn-robe",
+      "text": {
+        "en": "Robe",
+        "fa": "روپوش"
+      }
+    },
+    {
+      "id": "cn-apron",
+      "text": {
+        "en": "Apron",
+        "fa": "پیش‌بند"
+      }
+    },
+    {
+      "id": "cn-pajamas",
+      "text": {
+        "en": "Pajamas",
+        "fa": "لباس‌خواب"
+      }
+    },
+    {
+      "id": "cn-uniform",
+      "text": {
+        "en": "Uniform",
+        "fa": "اونیفورم"
+      }
+    },
+    {
+      "id": "cn-mitten",
+      "text": {
+        "en": "Mitten",
+        "fa": "دستکش یک‌انگشتی"
+      }
+    },
+    {
+      "id": "cn-cufflink",
+      "text": {
+        "en": "Cufflink",
+        "fa": "دکمه‌سردست"
+      }
+    },
+    {
+      "id": "cn-bow",
+      "text": {
+        "en": "Bow",
+        "fa": "پاپیون"
+      }
+    },
+    {
+      "id": "cn-veil",
+      "text": {
+        "en": "Veil",
+        "fa": "حجاب"
+      }
+    },
+    {
+      "id": "cn-sash",
+      "text": {
+        "en": "Sash",
+        "fa": "شال‌کمر"
+      }
+    },
+    {
+      "id": "cn-hood",
+      "text": {
+        "en": "Hood",
+        "fa": "کلاه‌سرخود"
+      }
+    },
+    {
+      "id": "cn-bib",
+      "text": {
+        "en": "Bib",
+        "fa": "پیش‌بند کودک"
+      }
+    },
+    {
+      "id": "cn-tiara",
+      "text": {
+        "en": "Tiara",
+        "fa": "نیم‌تاج"
+      }
+    },
+    {
+      "id": "cn-cape",
+      "text": {
+        "en": "Cape",
+        "fa": "شنل"
+      }
+    },
+    {
+      "id": "cn-sneaker",
+      "text": {
+        "en": "Sneaker",
+        "fa": "کفش کتانی"
+      }
+    },
+    {
+      "id": "cn-screwdriver",
+      "text": {
+        "en": "Screwdriver",
+        "fa": "پیچ‌گوشتی"
+      }
+    },
+    {
+      "id": "cn-wrench",
+      "text": {
+        "en": "Wrench",
+        "fa": "آچار"
+      }
+    },
+    {
+      "id": "cn-pliers",
+      "text": {
+        "en": "Pliers",
+        "fa": "انبردست"
+      }
+    },
+    {
+      "id": "cn-drill",
+      "text": {
+        "en": "Drill",
+        "fa": "دریل"
+      }
+    },
+    {
+      "id": "cn-saw",
+      "text": {
+        "en": "Saw",
+        "fa": "اره"
+      }
+    },
+    {
+      "id": "cn-chisel",
+      "text": {
+        "en": "Chisel",
+        "fa": "اسکنه"
+      }
+    },
+    {
+      "id": "cn-file",
+      "text": {
+        "en": "File",
+        "fa": "سوهان"
+      }
+    },
+    {
+      "id": "cn-clamp",
+      "text": {
+        "en": "Clamp",
+        "fa": "گیره"
+      }
+    },
+    {
+      "id": "cn-vise",
+      "text": {
+        "en": "Vise",
+        "fa": "گیره رومیزی"
+      }
+    },
+    {
+      "id": "cn-screw",
+      "text": {
+        "en": "Screw",
+        "fa": "پیچ"
+      }
+    },
+    {
+      "id": "cn-bolt",
+      "text": {
+        "en": "Bolt",
+        "fa": "پیچ مهره"
+      }
+    },
+    {
+      "id": "cn-nut",
+      "text": {
+        "en": "Nut",
+        "fa": "مهره"
+      }
+    },
+    {
+      "id": "cn-washer",
+      "text": {
+        "en": "Washer",
+        "fa": "واشر"
+      }
+    },
+    {
+      "id": "cn-hinge",
+      "text": {
+        "en": "Hinge",
+        "fa": "لولا"
+      }
+    },
+    {
+      "id": "cn-wire",
+      "text": {
+        "en": "Wire",
+        "fa": "سیم"
+      }
+    },
+    {
+      "id": "cn-tape",
+      "text": {
+        "en": "Tape",
+        "fa": "چسب نواری"
+      }
+    },
+    {
+      "id": "cn-glue",
+      "text": {
+        "en": "Glue",
+        "fa": "چسب"
+      }
+    },
+    {
+      "id": "cn-toolbox",
+      "text": {
+        "en": "Toolbox",
+        "fa": "جعبه‌ابزار"
+      }
+    },
+    {
+      "id": "cn-axe",
+      "text": {
+        "en": "Axe",
+        "fa": "تبر"
+      }
+    },
+    {
+      "id": "cn-shovel",
+      "text": {
+        "en": "Shovel",
+        "fa": "بیل"
+      }
+    },
+    {
+      "id": "cn-rake",
+      "text": {
+        "en": "Rake",
+        "fa": "شن‌کش"
+      }
+    },
+    {
+      "id": "cn-hoe",
+      "text": {
+        "en": "Hoe",
+        "fa": "کج‌بیل"
+      }
+    },
+    {
+      "id": "cn-pickaxe",
+      "text": {
+        "en": "Pickaxe",
+        "fa": "کلنگ"
+      }
+    },
+    {
+      "id": "cn-crowbar",
+      "text": {
+        "en": "Crowbar",
+        "fa": "دیلم"
+      }
+    },
+    {
+      "id": "cn-mallet",
+      "text": {
+        "en": "Mallet",
+        "fa": "چکش چوبی"
+      }
+    },
+    {
+      "id": "cn-wedge",
+      "text": {
+        "en": "Wedge",
+        "fa": "گوه"
+      }
+    },
+    {
+      "id": "cn-level",
+      "text": {
+        "en": "Level",
+        "fa": "تراز"
+      }
+    },
+    {
+      "id": "cn-ruler",
+      "text": {
+        "en": "Ruler",
+        "fa": "خط‌کش"
+      }
+    },
+    {
+      "id": "cn-tape-measure",
+      "text": {
+        "en": "Tape Measure",
+        "fa": "متر نواری"
+      }
+    },
+    {
+      "id": "cn-compass",
+      "text": {
+        "en": "Compass",
+        "fa": "پرگار"
+      }
+    },
+    {
+      "id": "cn-anvil",
+      "text": {
+        "en": "Anvil",
+        "fa": "سندان"
+      }
+    },
+    {
+      "id": "cn-sandpaper",
+      "text": {
+        "en": "Sandpaper",
+        "fa": "سنباده"
+      }
+    },
+    {
+      "id": "cn-grinder",
+      "text": {
+        "en": "Grinder",
+        "fa": "سنگ‌فرز"
+      }
+    },
+    {
+      "id": "cn-welder",
+      "text": {
+        "en": "Welder",
+        "fa": "دستگاه جوش"
+      }
+    },
+    {
+      "id": "cn-pump",
+      "text": {
+        "en": "Pump",
+        "fa": "پمپ"
+      }
+    },
+    {
+      "id": "cn-hose",
+      "text": {
+        "en": "Hose",
+        "fa": "شلنگ"
+      }
+    },
+    {
+      "id": "cn-valve",
+      "text": {
+        "en": "Valve",
+        "fa": "شیر"
+      }
+    },
+    {
+      "id": "cn-pipe",
+      "text": {
+        "en": "Pipe",
+        "fa": "لوله"
+      }
+    },
+    {
+      "id": "cn-gear",
+      "text": {
+        "en": "Gear",
+        "fa": "چرخ‌دنده"
+      }
+    },
+    {
+      "id": "cn-spring-2",
+      "text": {
+        "en": "Spring",
+        "fa": "فنر"
+      }
+    },
+    {
+      "id": "cn-magnet",
+      "text": {
+        "en": "Magnet",
+        "fa": "آهنربا"
+      }
+    },
+    {
+      "id": "cn-flashlight",
+      "text": {
+        "en": "Flashlight",
+        "fa": "چراغ‌قوه"
+      }
+    },
+    {
+      "id": "cn-trowel",
+      "text": {
+        "en": "Trowel",
+        "fa": "ماله"
+      }
+    },
+    {
+      "id": "cn-blade",
+      "text": {
+        "en": "Blade",
+        "fa": "تیغه"
+      }
+    },
+    {
+      "id": "cn-rain",
+      "text": {
+        "en": "Rain",
+        "fa": "باران"
+      }
+    },
+    {
+      "id": "cn-storm",
+      "text": {
+        "en": "Storm",
+        "fa": "طوفان"
+      }
+    },
+    {
+      "id": "cn-thunder",
+      "text": {
+        "en": "Thunder",
+        "fa": "رعد"
+      }
+    },
+    {
+      "id": "cn-lightning",
+      "text": {
+        "en": "Lightning",
+        "fa": "آذرخش"
+      }
+    },
+    {
+      "id": "cn-fog",
+      "text": {
+        "en": "Fog",
+        "fa": "مه"
+      }
+    },
+    {
+      "id": "cn-mist",
+      "text": {
+        "en": "Mist",
+        "fa": "غبار"
+      }
+    },
+    {
+      "id": "cn-hail",
+      "text": {
+        "en": "Hail",
+        "fa": "تگرگ"
+      }
+    },
+    {
+      "id": "cn-rainbow",
+      "text": {
+        "en": "Rainbow",
+        "fa": "رنگین‌کمان"
+      }
+    },
+    {
+      "id": "cn-sky",
+      "text": {
+        "en": "Sky",
+        "fa": "آسمان"
+      }
+    },
+    {
+      "id": "cn-cloudburst",
+      "text": {
+        "en": "Cloudburst",
+        "fa": "رگبار"
+      }
+    },
+    {
+      "id": "cn-drizzle",
+      "text": {
+        "en": "Drizzle",
+        "fa": "نم‌نم باران"
+      }
+    },
+    {
+      "id": "cn-frost",
+      "text": {
+        "en": "Frost",
+        "fa": "یخبندان"
+      }
+    },
+    {
+      "id": "cn-dew",
+      "text": {
+        "en": "Dew",
+        "fa": "شبنم"
+      }
+    },
+    {
+      "id": "cn-sleet",
+      "text": {
+        "en": "Sleet",
+        "fa": "برف و باران"
+      }
+    },
+    {
+      "id": "cn-breeze",
+      "text": {
+        "en": "Breeze",
+        "fa": "نسیم"
+      }
+    },
+    {
+      "id": "cn-gale",
+      "text": {
+        "en": "Gale",
+        "fa": "تندباد"
+      }
+    },
+    {
+      "id": "cn-hurricane",
+      "text": {
+        "en": "Hurricane",
+        "fa": "گردباد"
+      }
+    },
+    {
+      "id": "cn-tornado",
+      "text": {
+        "en": "Tornado",
+        "fa": "گردباد قیفی"
+      }
+    },
+    {
+      "id": "cn-cyclone",
+      "text": {
+        "en": "Cyclone",
+        "fa": "سیکلون"
+      }
+    },
+    {
+      "id": "cn-drought",
+      "text": {
+        "en": "Drought",
+        "fa": "خشکسالی"
+      }
+    },
+    {
+      "id": "cn-flood",
+      "text": {
+        "en": "Flood",
+        "fa": "سیل"
+      }
+    },
+    {
+      "id": "cn-sunshine",
+      "text": {
+        "en": "Sunshine",
+        "fa": "آفتاب"
+      }
+    },
+    {
+      "id": "cn-sunrise",
+      "text": {
+        "en": "Sunrise",
+        "fa": "طلوع"
+      }
+    },
+    {
+      "id": "cn-sunset",
+      "text": {
+        "en": "Sunset",
+        "fa": "غروب"
+      }
+    },
+    {
+      "id": "cn-dawn",
+      "text": {
+        "en": "Dawn",
+        "fa": "سپیده‌دم"
+      }
+    },
+    {
+      "id": "cn-dusk",
+      "text": {
+        "en": "Dusk",
+        "fa": "شامگاه"
+      }
+    },
+    {
+      "id": "cn-twilight",
+      "text": {
+        "en": "Twilight",
+        "fa": "گرگ‌ومیش"
+      }
+    },
+    {
+      "id": "cn-horizon",
+      "text": {
+        "en": "Horizon",
+        "fa": "افق"
+      }
+    },
+    {
+      "id": "cn-comet",
+      "text": {
+        "en": "Comet",
+        "fa": "دنباله‌دار"
+      }
+    },
+    {
+      "id": "cn-meteor",
+      "text": {
+        "en": "Meteor",
+        "fa": "شهاب"
+      }
+    },
+    {
+      "id": "cn-eclipse",
+      "text": {
+        "en": "Eclipse",
+        "fa": "خسوف"
+      }
+    },
+    {
+      "id": "cn-aurora",
+      "text": {
+        "en": "Aurora",
+        "fa": "شفق قطبی"
+      }
+    },
+    {
+      "id": "cn-galaxy",
+      "text": {
+        "en": "Galaxy",
+        "fa": "کهکشان"
+      }
+    },
+    {
+      "id": "cn-planet",
+      "text": {
+        "en": "Planet",
+        "fa": "سیاره"
+      }
+    },
+    {
+      "id": "cn-heat",
+      "text": {
+        "en": "Heat",
+        "fa": "گرما"
+      }
+    },
+    {
+      "id": "cn-cold",
+      "text": {
+        "en": "Cold",
+        "fa": "سرما"
+      }
+    },
+    {
+      "id": "cn-humidity",
+      "text": {
+        "en": "Humidity",
+        "fa": "رطوبت"
+      }
+    },
+    {
+      "id": "cn-puddle",
+      "text": {
+        "en": "Puddle",
+        "fa": "چاله آب"
+      }
+    },
+    {
+      "id": "cn-icicle",
+      "text": {
+        "en": "Icicle",
+        "fa": "قندیل"
+      }
+    },
+    {
+      "id": "cn-snowflake",
+      "text": {
+        "en": "Snowflake",
+        "fa": "دانه برف"
+      }
+    },
+    {
+      "id": "cn-raindrop",
+      "text": {
+        "en": "Raindrop",
+        "fa": "قطره باران"
+      }
+    },
+    {
+      "id": "cn-whirlwind",
+      "text": {
+        "en": "Whirlwind",
+        "fa": "گردباد خاک"
+      }
+    },
+    {
+      "id": "cn-monsoon",
+      "text": {
+        "en": "Monsoon",
+        "fa": "موسمی"
+      }
+    },
+    {
+      "id": "cn-blizzard",
+      "text": {
+        "en": "Blizzard",
+        "fa": "کولاک"
+      }
+    },
+    {
+      "id": "cn-avalanche",
+      "text": {
+        "en": "Avalanche",
+        "fa": "بهمن"
+      }
+    },
+    {
+      "id": "cn-crescent",
+      "text": {
+        "en": "Crescent",
+        "fa": "هلال"
+      }
+    },
+    {
+      "id": "cn-climate",
+      "text": {
+        "en": "Climate",
+        "fa": "اقلیم"
+      }
+    },
+    {
+      "id": "cn-piano",
+      "text": {
+        "en": "Piano",
+        "fa": "پیانو"
+      }
+    },
+    {
+      "id": "cn-violin",
+      "text": {
+        "en": "Violin",
+        "fa": "ویولن"
+      }
+    },
+    {
+      "id": "cn-flute",
+      "text": {
+        "en": "Flute",
+        "fa": "فلوت"
+      }
+    },
+    {
+      "id": "cn-trumpet",
+      "text": {
+        "en": "Trumpet",
+        "fa": "ترومپت"
+      }
+    },
+    {
+      "id": "cn-harp",
+      "text": {
+        "en": "Harp",
+        "fa": "چنگ"
+      }
+    },
+    {
+      "id": "cn-cello",
+      "text": {
+        "en": "Cello",
+        "fa": "ویولنسل"
+      }
+    },
+    {
+      "id": "cn-saxophone",
+      "text": {
+        "en": "Saxophone",
+        "fa": "ساکسیفون"
+      }
+    },
+    {
+      "id": "cn-clarinet",
+      "text": {
+        "en": "Clarinet",
+        "fa": "کلارینت"
+      }
+    },
+    {
+      "id": "cn-banjo",
+      "text": {
+        "en": "Banjo",
+        "fa": "بانجو"
+      }
+    },
+    {
+      "id": "cn-trombone",
+      "text": {
+        "en": "Trombone",
+        "fa": "ترومبون"
+      }
+    },
+    {
+      "id": "cn-tambourine",
+      "text": {
+        "en": "Tambourine",
+        "fa": "دایره"
+      }
+    },
+    {
+      "id": "cn-accordion",
+      "text": {
+        "en": "Accordion",
+        "fa": "آکاردئون"
+      }
+    },
+    {
+      "id": "cn-organ",
+      "text": {
+        "en": "Organ",
+        "fa": "ارگ"
+      }
+    },
+    {
+      "id": "cn-cymbal",
+      "text": {
+        "en": "Cymbal",
+        "fa": "سنج"
+      }
+    },
+    {
+      "id": "cn-whistle",
+      "text": {
+        "en": "Whistle",
+        "fa": "سوت"
+      }
+    },
+    {
+      "id": "cn-bow-2",
+      "text": {
+        "en": "Bow",
+        "fa": "آرشه"
+      }
+    },
+    {
+      "id": "cn-string",
+      "text": {
+        "en": "String",
+        "fa": "سیم"
+      }
+    },
+    {
+      "id": "cn-note",
+      "text": {
+        "en": "Note",
+        "fa": "نت"
+      }
+    },
+    {
+      "id": "cn-song",
+      "text": {
+        "en": "Song",
+        "fa": "آهنگ"
+      }
+    },
+    {
+      "id": "cn-melody",
+      "text": {
+        "en": "Melody",
+        "fa": "ملودی"
+      }
+    },
+    {
+      "id": "cn-rhythm",
+      "text": {
+        "en": "Rhythm",
+        "fa": "ریتم"
+      }
+    },
+    {
+      "id": "cn-beat",
+      "text": {
+        "en": "Beat",
+        "fa": "ضرب"
+      }
+    },
+    {
+      "id": "cn-chord",
+      "text": {
+        "en": "Chord",
+        "fa": "آکورد"
+      }
+    },
+    {
+      "id": "cn-scale",
+      "text": {
+        "en": "Scale",
+        "fa": "گام"
+      }
+    },
+    {
+      "id": "cn-octave",
+      "text": {
+        "en": "Octave",
+        "fa": "اکتاو"
+      }
+    },
+    {
+      "id": "cn-choir",
+      "text": {
+        "en": "Choir",
+        "fa": "گروه‌کر"
+      }
+    },
+    {
+      "id": "cn-band",
+      "text": {
+        "en": "Band",
+        "fa": "گروه موسیقی"
+      }
+    },
+    {
+      "id": "cn-orchestra",
+      "text": {
+        "en": "Orchestra",
+        "fa": "ارکستر"
+      }
+    },
+    {
+      "id": "cn-conductor",
+      "text": {
+        "en": "Conductor",
+        "fa": "رهبر ارکستر"
+      }
+    },
+    {
+      "id": "cn-microphone",
+      "text": {
+        "en": "Microphone",
+        "fa": "میکروفون"
+      }
+    },
+    {
+      "id": "cn-speaker",
+      "text": {
+        "en": "Speaker",
+        "fa": "بلندگو"
+      }
+    },
+    {
+      "id": "cn-headphone",
+      "text": {
+        "en": "Headphone",
+        "fa": "هدفون"
+      }
+    },
+    {
+      "id": "cn-record",
+      "text": {
+        "en": "Record",
+        "fa": "صفحه گرامافون"
+      }
+    },
+    {
+      "id": "cn-stage",
+      "text": {
+        "en": "Stage",
+        "fa": "صحنه"
+      }
+    },
+    {
+      "id": "cn-concert",
+      "text": {
+        "en": "Concert",
+        "fa": "کنسرت"
+      }
+    },
+    {
+      "id": "cn-bagpipe",
+      "text": {
+        "en": "Bagpipe",
+        "fa": "نی‌انبان"
+      }
+    },
+    {
+      "id": "cn-harmonica",
+      "text": {
+        "en": "Harmonica",
+        "fa": "سازدهنی"
+      }
+    },
+    {
+      "id": "cn-xylophone",
+      "text": {
+        "en": "Xylophone",
+        "fa": "زایلوفون"
+      }
+    },
+    {
+      "id": "cn-triangle",
+      "text": {
+        "en": "Triangle",
+        "fa": "مثلث"
+      }
+    },
+    {
+      "id": "cn-gong",
+      "text": {
+        "en": "Gong",
+        "fa": "گنگ"
+      }
+    },
+    {
+      "id": "cn-maraca",
+      "text": {
+        "en": "Maraca",
+        "fa": "ماراکاس"
+      }
+    },
+    {
+      "id": "cn-ukulele",
+      "text": {
+        "en": "Ukulele",
+        "fa": "یوکلیلی"
+      }
+    },
+    {
+      "id": "cn-mandolin",
+      "text": {
+        "en": "Mandolin",
+        "fa": "ماندولین"
+      }
+    },
+    {
+      "id": "cn-tuba",
+      "text": {
+        "en": "Tuba",
+        "fa": "توبا"
+      }
+    },
+    {
+      "id": "cn-oboe",
+      "text": {
+        "en": "Oboe",
+        "fa": "ابوا"
+      }
+    },
+    {
+      "id": "cn-pipe-2",
+      "text": {
+        "en": "Pipe",
+        "fa": "نی"
+      }
+    },
+    {
+      "id": "cn-keyboard",
+      "text": {
+        "en": "Keyboard",
+        "fa": "کیبورد"
+      }
+    },
+    {
+      "id": "cn-lyric",
+      "text": {
+        "en": "Lyric",
+        "fa": "شعر آهنگ"
+      }
+    },
+    {
+      "id": "cn-tune",
+      "text": {
+        "en": "Tune",
+        "fa": "نغمه"
+      }
+    },
+    {
+      "id": "cn-singer",
+      "text": {
+        "en": "Singer",
+        "fa": "خواننده"
+      }
+    },
+    {
+      "id": "cn-tambour",
+      "text": {
+        "en": "Tambour",
+        "fa": "تنبک"
+      }
+    },
+    {
+      "id": "cn-sitar",
+      "text": {
+        "en": "Sitar",
+        "fa": "سیتار"
+      }
+    },
+    {
+      "id": "cn-unicorn",
+      "text": {
+        "en": "Unicorn",
+        "fa": "تک‌شاخ"
+      }
+    },
+    {
+      "id": "cn-phoenix",
+      "text": {
+        "en": "Phoenix",
+        "fa": "ققنوس"
+      }
+    },
+    {
+      "id": "cn-griffin",
+      "text": {
+        "en": "Griffin",
+        "fa": "شیردال"
+      }
+    },
+    {
+      "id": "cn-mermaid",
+      "text": {
+        "en": "Mermaid",
+        "fa": "پری دریایی"
+      }
+    },
+    {
+      "id": "cn-dwarf",
+      "text": {
+        "en": "Dwarf",
+        "fa": "کوتوله"
+      }
+    },
+    {
+      "id": "cn-elf",
+      "text": {
+        "en": "Elf",
+        "fa": "الف"
+      }
+    },
+    {
+      "id": "cn-goblin",
+      "text": {
+        "en": "Goblin",
+        "fa": "جن خبیث"
+      }
+    },
+    {
+      "id": "cn-troll",
+      "text": {
+        "en": "Troll",
+        "fa": "ترول"
+      }
+    },
+    {
+      "id": "cn-wizard",
+      "text": {
+        "en": "Wizard",
+        "fa": "ساحر"
+      }
+    },
+    {
+      "id": "cn-sorcerer",
+      "text": {
+        "en": "Sorcerer",
+        "fa": "جادوپیشه"
+      }
+    },
+    {
+      "id": "cn-vampire",
+      "text": {
+        "en": "Vampire",
+        "fa": "خون‌آشام"
+      }
+    },
+    {
+      "id": "cn-werewolf",
+      "text": {
+        "en": "Werewolf",
+        "fa": "گرگینه"
+      }
+    },
+    {
+      "id": "cn-demon",
+      "text": {
+        "en": "Demon",
+        "fa": "دیو"
+      }
+    },
+    {
+      "id": "cn-fairy",
+      "text": {
+        "en": "Fairy",
+        "fa": "پری"
+      }
+    },
+    {
+      "id": "cn-genie",
+      "text": {
+        "en": "Genie",
+        "fa": "جن"
+      }
+    },
+    {
+      "id": "cn-centaur",
+      "text": {
+        "en": "Centaur",
+        "fa": "قنطورس"
+      }
+    },
+    {
+      "id": "cn-minotaur",
+      "text": {
+        "en": "Minotaur",
+        "fa": "گاومرد"
+      }
+    },
+    {
+      "id": "cn-cyclops",
+      "text": {
+        "en": "Cyclops",
+        "fa": "غول یک‌چشم"
+      }
+    },
+    {
+      "id": "cn-medusa",
+      "text": {
+        "en": "Medusa",
+        "fa": "مدوسا"
+      }
+    },
+    {
+      "id": "cn-hydra",
+      "text": {
+        "en": "Hydra",
+        "fa": "هیدرا"
+      }
+    },
+    {
+      "id": "cn-sphinx",
+      "text": {
+        "en": "Sphinx",
+        "fa": "ابوالهول"
+      }
+    },
+    {
+      "id": "cn-pegasus",
+      "text": {
+        "en": "Pegasus",
+        "fa": "اسب بالدار"
+      }
+    },
+    {
+      "id": "cn-kraken",
+      "text": {
+        "en": "Kraken",
+        "fa": "کراکن"
+      }
+    },
+    {
+      "id": "cn-basilisk",
+      "text": {
+        "en": "Basilisk",
+        "fa": "باسیلیسک"
+      }
+    },
+    {
+      "id": "cn-chimera",
+      "text": {
+        "en": "Chimera",
+        "fa": "کایمرا"
+      }
+    },
+    {
+      "id": "cn-wand",
+      "text": {
+        "en": "Wand",
+        "fa": "عصای جادو"
+      }
+    },
+    {
+      "id": "cn-spell",
+      "text": {
+        "en": "Spell",
+        "fa": "طلسم"
+      }
+    },
+    {
+      "id": "cn-potion",
+      "text": {
+        "en": "Potion",
+        "fa": "معجون"
+      }
+    },
+    {
+      "id": "cn-curse",
+      "text": {
+        "en": "Curse",
+        "fa": "نفرین"
+      }
+    },
+    {
+      "id": "cn-shield",
+      "text": {
+        "en": "Shield",
+        "fa": "سپر"
+      }
+    },
+    {
+      "id": "cn-throne",
+      "text": {
+        "en": "Throne",
+        "fa": "تخت سلطنت"
+      }
+    },
+    {
+      "id": "cn-dungeon",
+      "text": {
+        "en": "Dungeon",
+        "fa": "سیاه‌چال"
+      }
+    },
+    {
+      "id": "cn-prince",
+      "text": {
+        "en": "Prince",
+        "fa": "شاهزاده"
+      }
+    },
+    {
+      "id": "cn-princess",
+      "text": {
+        "en": "Princess",
+        "fa": "شاهدخت"
+      }
+    },
+    {
+      "id": "cn-crystal",
+      "text": {
+        "en": "Crystal",
+        "fa": "بلور"
+      }
+    },
+    {
+      "id": "cn-amulet",
+      "text": {
+        "en": "Amulet",
+        "fa": "طلسم گردنی"
+      }
+    },
+    {
+      "id": "cn-scroll",
+      "text": {
+        "en": "Scroll",
+        "fa": "طومار"
+      }
+    },
+    {
+      "id": "cn-cauldron",
+      "text": {
+        "en": "Cauldron",
+        "fa": "دیگ جادو"
+      }
+    },
+    {
+      "id": "cn-oracle",
+      "text": {
+        "en": "Oracle",
+        "fa": "غیب‌گو"
+      }
+    },
+    {
+      "id": "cn-titan",
+      "text": {
+        "en": "Titan",
+        "fa": "تیتان"
+      }
+    },
+    {
+      "id": "cn-goddess",
+      "text": {
+        "en": "Goddess",
+        "fa": "الهه"
+      }
+    },
+    {
+      "id": "cn-mummy",
+      "text": {
+        "en": "Mummy",
+        "fa": "مومیایی"
+      }
+    },
+    {
+      "id": "cn-zombie",
+      "text": {
+        "en": "Zombie",
+        "fa": "زامبی"
+      }
+    },
+    {
+      "id": "cn-time",
+      "text": {
+        "en": "Time",
+        "fa": "زمان"
+      }
+    },
+    {
+      "id": "cn-hope",
+      "text": {
+        "en": "Hope",
+        "fa": "امید"
+      }
+    },
+    {
+      "id": "cn-fear",
+      "text": {
+        "en": "Fear",
+        "fa": "ترس"
+      }
+    },
+    {
+      "id": "cn-truth",
+      "text": {
+        "en": "Truth",
+        "fa": "حقیقت"
+      }
+    },
+    {
+      "id": "cn-love",
+      "text": {
+        "en": "Love",
+        "fa": "عشق"
+      }
+    },
+    {
+      "id": "cn-justice",
+      "text": {
+        "en": "Justice",
+        "fa": "عدالت"
+      }
+    },
+    {
+      "id": "cn-wisdom",
+      "text": {
+        "en": "Wisdom",
+        "fa": "خرد"
+      }
+    },
+    {
+      "id": "cn-courage",
+      "text": {
+        "en": "Courage",
+        "fa": "شجاعت"
+      }
+    },
+    {
+      "id": "cn-memory",
+      "text": {
+        "en": "Memory",
+        "fa": "خاطره"
+      }
+    },
+    {
+      "id": "cn-faith",
+      "text": {
+        "en": "Faith",
+        "fa": "ایمان"
+      }
+    },
+    {
+      "id": "cn-doubt",
+      "text": {
+        "en": "Doubt",
+        "fa": "تردید"
+      }
+    },
+    {
+      "id": "cn-joy",
+      "text": {
+        "en": "Joy",
+        "fa": "شادی"
+      }
+    },
+    {
+      "id": "cn-sorrow",
+      "text": {
+        "en": "Sorrow",
+        "fa": "اندوه"
+      }
+    },
+    {
+      "id": "cn-anger",
+      "text": {
+        "en": "Anger",
+        "fa": "خشم"
+      }
+    },
+    {
+      "id": "cn-pride",
+      "text": {
+        "en": "Pride",
+        "fa": "غرور"
+      }
+    },
+    {
+      "id": "cn-shame",
+      "text": {
+        "en": "Shame",
+        "fa": "شرم"
+      }
+    },
+    {
+      "id": "cn-trust",
+      "text": {
+        "en": "Trust",
+        "fa": "اعتماد"
+      }
+    },
+    {
+      "id": "cn-beauty",
+      "text": {
+        "en": "Beauty",
+        "fa": "زیبایی"
+      }
+    },
+    {
+      "id": "cn-chaos",
+      "text": {
+        "en": "Chaos",
+        "fa": "آشوب"
+      }
+    },
+    {
+      "id": "cn-order",
+      "text": {
+        "en": "Order",
+        "fa": "نظم"
+      }
+    },
+    {
+      "id": "cn-destiny",
+      "text": {
+        "en": "Destiny",
+        "fa": "سرنوشت"
+      }
+    },
+    {
+      "id": "cn-chance",
+      "text": {
+        "en": "Chance",
+        "fa": "بخت"
+      }
+    },
+    {
+      "id": "cn-patience",
+      "text": {
+        "en": "Patience",
+        "fa": "صبر"
+      }
+    },
+    {
+      "id": "cn-honor",
+      "text": {
+        "en": "Honor",
+        "fa": "شرافت"
+      }
+    },
+    {
+      "id": "cn-greed",
+      "text": {
+        "en": "Greed",
+        "fa": "طمع"
+      }
+    },
+    {
+      "id": "cn-mercy",
+      "text": {
+        "en": "Mercy",
+        "fa": "رحم"
+      }
+    },
+    {
+      "id": "cn-silence",
+      "text": {
+        "en": "Silence",
+        "fa": "سکوت"
+      }
+    },
+    {
+      "id": "cn-wealth",
+      "text": {
+        "en": "Wealth",
+        "fa": "ثروت"
+      }
+    },
+    {
+      "id": "cn-poverty",
+      "text": {
+        "en": "Poverty",
+        "fa": "فقر"
+      }
+    },
+    {
+      "id": "cn-knowledge",
+      "text": {
+        "en": "Knowledge",
+        "fa": "دانش"
+      }
+    },
+    {
+      "id": "cn-ignorance",
+      "text": {
+        "en": "Ignorance",
+        "fa": "نادانی"
+      }
+    },
+    {
+      "id": "cn-loyalty",
+      "text": {
+        "en": "Loyalty",
+        "fa": "وفاداری"
+      }
+    },
+    {
+      "id": "cn-betrayal",
+      "text": {
+        "en": "Betrayal",
+        "fa": "خیانت"
+      }
+    },
+    {
+      "id": "cn-victory",
+      "text": {
+        "en": "Victory",
+        "fa": "پیروزی"
+      }
+    },
+    {
+      "id": "cn-defeat",
+      "text": {
+        "en": "Defeat",
+        "fa": "شکست"
+      }
+    },
+    {
+      "id": "cn-death",
+      "text": {
+        "en": "Death",
+        "fa": "مرگ"
+      }
+    },
+    {
+      "id": "cn-life",
+      "text": {
+        "en": "Life",
+        "fa": "زندگی"
+      }
+    },
+    {
+      "id": "cn-soul",
+      "text": {
+        "en": "Soul",
+        "fa": "روح"
+      }
+    },
+    {
+      "id": "cn-mind",
+      "text": {
+        "en": "Mind",
+        "fa": "ذهن"
+      }
+    },
+    {
+      "id": "cn-spirit",
+      "text": {
+        "en": "Spirit",
+        "fa": "روان"
+      }
+    },
+    {
+      "id": "cn-future",
+      "text": {
+        "en": "Future",
+        "fa": "آینده"
+      }
+    },
+    {
+      "id": "cn-past",
+      "text": {
+        "en": "Past",
+        "fa": "گذشته"
+      }
+    },
+    {
+      "id": "cn-eternity",
+      "text": {
+        "en": "Eternity",
+        "fa": "ابدیت"
+      }
+    },
+    {
+      "id": "cn-energy",
+      "text": {
+        "en": "Energy",
+        "fa": "انرژی"
+      }
+    },
+    {
+      "id": "cn-health",
+      "text": {
+        "en": "Health",
+        "fa": "سلامتی"
+      }
+    },
+    {
+      "id": "cn-curiosity",
+      "text": {
+        "en": "Curiosity",
+        "fa": "کنجکاوی"
+      }
+    },
+    {
+      "id": "cn-kindness",
+      "text": {
+        "en": "Kindness",
+        "fa": "مهربانی"
+      }
+    },
+    {
+      "id": "cn-cruelty",
+      "text": {
+        "en": "Cruelty",
+        "fa": "بی‌رحمی"
+      }
+    },
+    {
+      "id": "cn-imagination",
+      "text": {
+        "en": "Imagination",
+        "fa": "تخیل"
+      }
+    },
+    {
+      "id": "cn-reality",
+      "text": {
+        "en": "Reality",
+        "fa": "واقعیت"
+      }
+    },
+    {
+      "id": "cn-bread",
+      "text": {
+        "en": "Bread",
+        "fa": "نان"
+      }
+    },
+    {
+      "id": "cn-banana",
+      "text": {
+        "en": "Banana",
+        "fa": "موز"
+      }
+    },
+    {
+      "id": "cn-butter",
+      "text": {
+        "en": "Butter",
+        "fa": "کره"
+      }
+    },
+    {
+      "id": "cn-tomato",
+      "text": {
+        "en": "Tomato",
+        "fa": "گوجه"
+      }
+    },
+    {
+      "id": "cn-potato",
+      "text": {
+        "en": "Potato",
+        "fa": "سیب‌زمینی"
+      }
+    },
+    {
+      "id": "cn-garlic",
+      "text": {
+        "en": "Garlic",
+        "fa": "سیر"
+      }
+    },
+    {
+      "id": "cn-carrot",
+      "text": {
+        "en": "Carrot",
+        "fa": "هویج"
+      }
+    },
+    {
+      "id": "cn-cucumber",
+      "text": {
+        "en": "Cucumber",
+        "fa": "خیار"
+      }
+    },
+    {
+      "id": "cn-peach",
+      "text": {
+        "en": "Peach",
+        "fa": "هلو"
+      }
+    },
+    {
+      "id": "cn-watermelon",
+      "text": {
+        "en": "Watermelon",
+        "fa": "هندوانه"
+      }
+    },
+    {
+      "id": "cn-strawberry",
+      "text": {
+        "en": "Strawberry",
+        "fa": "توت‌فرنگی"
+      }
+    },
+    {
+      "id": "cn-walnut",
+      "text": {
+        "en": "Walnut",
+        "fa": "گردو"
+      }
+    },
+    {
+      "id": "cn-almond",
+      "text": {
+        "en": "Almond",
+        "fa": "بادام"
+      }
+    },
+    {
+      "id": "cn-pistachio",
+      "text": {
+        "en": "Pistachio",
+        "fa": "پسته"
+      }
+    },
+    {
+      "id": "cn-cookie",
+      "text": {
+        "en": "Cookie",
+        "fa": "شیرینی"
+      }
+    },
+    {
+      "id": "cn-ice-cream",
+      "text": {
+        "en": "Ice Cream",
+        "fa": "بستنی"
+      }
+    },
+    {
+      "id": "cn-pizza",
+      "text": {
+        "en": "Pizza",
+        "fa": "پیتزا"
+      }
+    },
+    {
+      "id": "cn-sandwich",
+      "text": {
+        "en": "Sandwich",
+        "fa": "ساندویچ"
+      }
+    },
+    {
+      "id": "cn-pasta",
+      "text": {
+        "en": "Pasta",
+        "fa": "ماکارونی"
+      }
+    },
+    {
+      "id": "cn-chicken",
+      "text": {
+        "en": "Chicken",
+        "fa": "مرغ"
+      }
+    },
+    {
+      "id": "cn-meat",
+      "text": {
+        "en": "Meat",
+        "fa": "گوشت"
+      }
+    },
+    {
+      "id": "cn-kebab",
+      "text": {
+        "en": "Kebab",
+        "fa": "کباب"
+      }
+    },
+    {
+      "id": "cn-yogurt",
+      "text": {
+        "en": "Yogurt",
+        "fa": "ماست"
+      }
+    },
+    {
+      "id": "cn-water",
+      "text": {
+        "en": "Water",
+        "fa": "آب"
+      }
+    },
+    {
+      "id": "cn-juice",
+      "text": {
+        "en": "Juice",
+        "fa": "آبمیوه"
+      }
+    },
+    {
+      "id": "cn-wine",
+      "text": {
+        "en": "Wine",
+        "fa": "شراب"
+      }
+    },
+    {
+      "id": "cn-beer",
+      "text": {
+        "en": "Beer",
+        "fa": "آبجو"
+      }
+    },
+    {
+      "id": "cn-soda",
+      "text": {
+        "en": "Soda",
+        "fa": "نوشابه"
+      }
+    },
+    {
+      "id": "cn-spinach",
+      "text": {
+        "en": "Spinach",
+        "fa": "اسفناج"
+      }
+    },
+    {
+      "id": "cn-mushroom",
+      "text": {
+        "en": "Mushroom",
+        "fa": "قارچ"
+      }
+    },
+    {
+      "id": "cn-corn",
+      "text": {
+        "en": "Corn",
+        "fa": "ذرت"
+      }
+    },
+    {
+      "id": "cn-olive",
+      "text": {
+        "en": "Olive",
+        "fa": "زیتون"
+      }
+    },
+    {
+      "id": "cn-pickle",
+      "text": {
+        "en": "Pickle",
+        "fa": "ترشی"
+      }
+    },
+    {
+      "id": "cn-saffron",
+      "text": {
+        "en": "Saffron",
+        "fa": "زعفران"
+      }
+    },
+    {
+      "id": "cn-lion",
+      "text": {
+        "en": "Lion",
+        "fa": "شیر"
+      }
+    },
+    {
+      "id": "cn-tiger",
+      "text": {
+        "en": "Tiger",
+        "fa": "ببر"
+      }
+    },
+    {
+      "id": "cn-deer",
+      "text": {
+        "en": "Deer",
+        "fa": "گوزن"
+      }
+    },
+    {
+      "id": "cn-zebra",
+      "text": {
+        "en": "Zebra",
+        "fa": "گورخر"
+      }
+    },
+    {
+      "id": "cn-giraffe",
+      "text": {
+        "en": "Giraffe",
+        "fa": "زرافه"
+      }
+    },
+    {
+      "id": "cn-monkey",
+      "text": {
+        "en": "Monkey",
+        "fa": "میمون"
+      }
+    },
+    {
+      "id": "cn-leopard",
+      "text": {
+        "en": "Leopard",
+        "fa": "پلنگ"
+      }
+    },
+    {
+      "id": "cn-cheetah",
+      "text": {
+        "en": "Cheetah",
+        "fa": "یوزپلنگ"
+      }
+    },
+    {
+      "id": "cn-rhino",
+      "text": {
+        "en": "Rhino",
+        "fa": "کرگدن"
+      }
+    },
+    {
+      "id": "cn-hippo",
+      "text": {
+        "en": "Hippo",
+        "fa": "اسب آبی"
+      }
+    },
+    {
+      "id": "cn-kangaroo",
+      "text": {
+        "en": "Kangaroo",
+        "fa": "کانگورو"
+      }
+    },
+    {
+      "id": "cn-squirrel",
+      "text": {
+        "en": "Squirrel",
+        "fa": "سنجاب"
+      }
+    },
+    {
+      "id": "cn-bat",
+      "text": {
+        "en": "Bat",
+        "fa": "خفاش"
+      }
+    },
+    {
+      "id": "cn-hedgehog",
+      "text": {
+        "en": "Hedgehog",
+        "fa": "جوجه‌تیغی"
+      }
+    },
+    {
+      "id": "cn-parrot",
+      "text": {
+        "en": "Parrot",
+        "fa": "طوطی"
+      }
+    },
+    {
+      "id": "cn-penguin",
+      "text": {
+        "en": "Penguin",
+        "fa": "پنگوئن"
+      }
+    },
+    {
+      "id": "cn-swan",
+      "text": {
+        "en": "Swan",
+        "fa": "قو"
+      }
+    },
+    {
+      "id": "cn-rooster",
+      "text": {
+        "en": "Rooster",
+        "fa": "خروس"
+      }
+    },
+    {
+      "id": "cn-crow",
+      "text": {
+        "en": "Crow",
+        "fa": "کلاغ"
+      }
+    },
+    {
+      "id": "cn-pigeon",
+      "text": {
+        "en": "Pigeon",
+        "fa": "کبوتر"
+      }
+    },
+    {
+      "id": "cn-sparrow",
+      "text": {
+        "en": "Sparrow",
+        "fa": "گنجشک"
+      }
+    },
+    {
+      "id": "cn-stork",
+      "text": {
+        "en": "Stork",
+        "fa": "لک‌لک"
+      }
+    },
+    {
+      "id": "cn-lizard",
+      "text": {
+        "en": "Lizard",
+        "fa": "مارمولک"
+      }
+    },
+    {
+      "id": "cn-crocodile",
+      "text": {
+        "en": "Crocodile",
+        "fa": "تمساح"
+      }
+    },
+    {
+      "id": "cn-turtle",
+      "text": {
+        "en": "Turtle",
+        "fa": "لاک‌پشت"
+      }
+    },
+    {
+      "id": "cn-dolphin",
+      "text": {
+        "en": "Dolphin",
+        "fa": "دلفین"
+      }
+    },
+    {
+      "id": "cn-octopus",
+      "text": {
+        "en": "Octopus",
+        "fa": "اختاپوس"
+      }
+    },
+    {
+      "id": "cn-crab",
+      "text": {
+        "en": "Crab",
+        "fa": "خرچنگ"
+      }
+    },
+    {
+      "id": "cn-jellyfish",
+      "text": {
+        "en": "Jellyfish",
+        "fa": "عروس دریایی"
+      }
+    },
+    {
+      "id": "cn-starfish",
+      "text": {
+        "en": "Starfish",
+        "fa": "ستاره دریایی"
+      }
+    },
+    {
+      "id": "cn-seahorse",
+      "text": {
+        "en": "Seahorse",
+        "fa": "اسب دریایی"
+      }
+    },
+    {
+      "id": "cn-scorpion",
+      "text": {
+        "en": "Scorpion",
+        "fa": "عقرب"
+      }
+    },
+    {
+      "id": "cn-snail",
+      "text": {
+        "en": "Snail",
+        "fa": "حلزون"
+      }
+    },
+    {
+      "id": "cn-dragonfly",
+      "text": {
+        "en": "Dragonfly",
+        "fa": "سنجاقک"
+      }
+    },
+    {
+      "id": "cn-ladybug",
+      "text": {
+        "en": "Ladybug",
+        "fa": "کفشدوزک"
+      }
+    },
+    {
+      "id": "cn-church",
+      "text": {
+        "en": "Church",
+        "fa": "کلیسا"
+      }
+    },
+    {
+      "id": "cn-mosque",
+      "text": {
+        "en": "Mosque",
+        "fa": "مسجد"
+      }
+    },
+    {
+      "id": "cn-hospital",
+      "text": {
+        "en": "Hospital",
+        "fa": "بیمارستان"
+      }
+    },
+    {
+      "id": "cn-school",
+      "text": {
+        "en": "School",
+        "fa": "مدرسه"
+      }
+    },
+    {
+      "id": "cn-library",
+      "text": {
+        "en": "Library",
+        "fa": "کتابخانه"
+      }
+    },
+    {
+      "id": "cn-museum",
+      "text": {
+        "en": "Museum",
+        "fa": "موزه"
+      }
+    },
+    {
+      "id": "cn-theater",
+      "text": {
+        "en": "Theater",
+        "fa": "تئاتر"
+      }
+    },
+    {
+      "id": "cn-cinema",
+      "text": {
+        "en": "Cinema",
+        "fa": "سینما"
+      }
+    },
+    {
+      "id": "cn-factory",
+      "text": {
+        "en": "Factory",
+        "fa": "کارخانه"
+      }
+    },
+    {
+      "id": "cn-hotel",
+      "text": {
+        "en": "Hotel",
+        "fa": "هتل"
+      }
+    },
+    {
+      "id": "cn-restaurant",
+      "text": {
+        "en": "Restaurant",
+        "fa": "رستوران"
+      }
+    },
+    {
+      "id": "cn-bakery",
+      "text": {
+        "en": "Bakery",
+        "fa": "نانوایی"
+      }
+    },
+    {
+      "id": "cn-pharmacy",
+      "text": {
+        "en": "Pharmacy",
+        "fa": "داروخانه"
+      }
+    },
+    {
+      "id": "cn-prison",
+      "text": {
+        "en": "Prison",
+        "fa": "زندان"
+      }
+    },
+    {
+      "id": "cn-airport",
+      "text": {
+        "en": "Airport",
+        "fa": "فرودگاه"
+      }
+    },
+    {
+      "id": "cn-harbor",
+      "text": {
+        "en": "Harbor",
+        "fa": "بندر"
+      }
+    },
+    {
+      "id": "cn-lighthouse",
+      "text": {
+        "en": "Lighthouse",
+        "fa": "فانوس دریایی"
+      }
+    },
+    {
+      "id": "cn-windmill",
+      "text": {
+        "en": "Windmill",
+        "fa": "آسیاب بادی"
+      }
+    },
+    {
+      "id": "cn-barn",
+      "text": {
+        "en": "Barn",
+        "fa": "انبار غله"
+      }
+    },
+    {
+      "id": "cn-cabin",
+      "text": {
+        "en": "Cabin",
+        "fa": "کلبه"
+      }
+    },
+    {
+      "id": "cn-tent",
+      "text": {
+        "en": "Tent",
+        "fa": "چادر"
+      }
+    },
+    {
+      "id": "cn-cottage",
+      "text": {
+        "en": "Cottage",
+        "fa": "کلبه روستایی"
+      }
+    },
+    {
+      "id": "cn-mansion",
+      "text": {
+        "en": "Mansion",
+        "fa": "عمارت"
+      }
+    },
+    {
+      "id": "cn-apartment",
+      "text": {
+        "en": "Apartment",
+        "fa": "آپارتمان"
+      }
+    },
+    {
+      "id": "cn-garage",
+      "text": {
+        "en": "Garage",
+        "fa": "گاراژ"
+      }
+    },
+    {
+      "id": "cn-warehouse",
+      "text": {
+        "en": "Warehouse",
+        "fa": "انبار"
+      }
+    },
+    {
+      "id": "cn-office",
+      "text": {
+        "en": "Office",
+        "fa": "دفتر"
+      }
+    },
+    {
+      "id": "cn-embassy",
+      "text": {
+        "en": "Embassy",
+        "fa": "سفارت"
+      }
+    },
+    {
+      "id": "cn-university",
+      "text": {
+        "en": "University",
+        "fa": "دانشگاه"
+      }
+    },
+    {
+      "id": "cn-cathedral",
+      "text": {
+        "en": "Cathedral",
+        "fa": "کلیسای جامع"
+      }
+    },
+    {
+      "id": "cn-pyramid",
+      "text": {
+        "en": "Pyramid",
+        "fa": "هرم"
+      }
+    },
+    {
+      "id": "cn-fortress",
+      "text": {
+        "en": "Fortress",
+        "fa": "دژ"
+      }
+    },
+    {
+      "id": "cn-monastery",
+      "text": {
+        "en": "Monastery",
+        "fa": "صومعه"
+      }
+    },
+    {
+      "id": "cn-shrine",
+      "text": {
+        "en": "Shrine",
+        "fa": "زیارتگاه"
+      }
+    },
+    {
+      "id": "cn-pavilion",
+      "text": {
+        "en": "Pavilion",
+        "fa": "غرفه"
+      }
+    },
+    {
+      "id": "cn-dam",
+      "text": {
+        "en": "Dam",
+        "fa": "سد"
+      }
+    },
+    {
+      "id": "cn-aquarium",
+      "text": {
+        "en": "Aquarium",
+        "fa": "آبزی‌دان"
+      }
+    },
+    {
+      "id": "cn-zoo",
+      "text": {
+        "en": "Zoo",
+        "fa": "باغ‌وحش"
+      }
+    },
+    {
+      "id": "cn-park",
+      "text": {
+        "en": "Park",
+        "fa": "پارک"
+      }
+    },
+    {
+      "id": "cn-gallery",
+      "text": {
+        "en": "Gallery",
+        "fa": "نگارخانه"
+      }
+    },
+    {
+      "id": "cn-bazaar",
+      "text": {
+        "en": "Bazaar",
+        "fa": "بازارچه"
+      }
+    },
+    {
+      "id": "cn-stable",
+      "text": {
+        "en": "Stable",
+        "fa": "اصطبل"
+      }
+    },
+    {
+      "id": "cn-mill",
+      "text": {
+        "en": "Mill",
+        "fa": "آسیاب"
+      }
+    },
+    {
+      "id": "cn-inn",
+      "text": {
+        "en": "Inn",
+        "fa": "مسافرخانه"
+      }
+    },
+    {
+      "id": "cn-brain",
+      "text": {
+        "en": "Brain",
+        "fa": "مغز"
+      }
+    },
+    {
+      "id": "cn-lung",
+      "text": {
+        "en": "Lung",
+        "fa": "ریه"
+      }
+    },
+    {
+      "id": "cn-liver",
+      "text": {
+        "en": "Liver",
+        "fa": "کبد"
+      }
+    },
+    {
+      "id": "cn-kidney",
+      "text": {
+        "en": "Kidney",
+        "fa": "کلیه"
+      }
+    },
+    {
+      "id": "cn-stomach",
+      "text": {
+        "en": "Stomach",
+        "fa": "معده"
+      }
+    },
+    {
+      "id": "cn-skull",
+      "text": {
+        "en": "Skull",
+        "fa": "جمجمه"
+      }
+    },
+    {
+      "id": "cn-rib",
+      "text": {
+        "en": "Rib",
+        "fa": "دنده"
+      }
+    },
+    {
+      "id": "cn-spine",
+      "text": {
+        "en": "Spine",
+        "fa": "ستون فقرات"
+      }
+    },
+    {
+      "id": "cn-muscle",
+      "text": {
+        "en": "Muscle",
+        "fa": "ماهیچه"
+      }
+    },
+    {
+      "id": "cn-nerve",
+      "text": {
+        "en": "Nerve",
+        "fa": "عصب"
+      }
+    },
+    {
+      "id": "cn-vein",
+      "text": {
+        "en": "Vein",
+        "fa": "رگ"
+      }
+    },
+    {
+      "id": "cn-blood",
+      "text": {
+        "en": "Blood",
+        "fa": "خون"
+      }
+    },
+    {
+      "id": "cn-tongue",
+      "text": {
+        "en": "Tongue",
+        "fa": "زبان"
+      }
+    },
+    {
+      "id": "cn-throat",
+      "text": {
+        "en": "Throat",
+        "fa": "گلو"
+      }
+    },
+    {
+      "id": "cn-thumb",
+      "text": {
+        "en": "Thumb",
+        "fa": "شست"
+      }
+    },
+    {
+      "id": "cn-knee",
+      "text": {
+        "en": "Knee",
+        "fa": "زانو"
+      }
+    },
+    {
+      "id": "cn-elbow",
+      "text": {
+        "en": "Elbow",
+        "fa": "آرنج"
+      }
+    },
+    {
+      "id": "cn-shoulder",
+      "text": {
+        "en": "Shoulder",
+        "fa": "شانه"
+      }
+    },
+    {
+      "id": "cn-ankle",
+      "text": {
+        "en": "Ankle",
+        "fa": "مچ پا"
+      }
+    },
+    {
+      "id": "cn-wrist",
+      "text": {
+        "en": "Wrist",
+        "fa": "مچ دست"
+      }
+    },
+    {
+      "id": "cn-lip",
+      "text": {
+        "en": "Lip",
+        "fa": "لب"
+      }
+    },
+    {
+      "id": "cn-jaw",
+      "text": {
+        "en": "Jaw",
+        "fa": "فک"
+      }
+    },
+    {
+      "id": "cn-surgeon",
+      "text": {
+        "en": "Surgeon",
+        "fa": "جراح"
+      }
+    },
+    {
+      "id": "cn-dentist",
+      "text": {
+        "en": "Dentist",
+        "fa": "دندان‌پزشک"
+      }
+    },
+    {
+      "id": "cn-ambulance",
+      "text": {
+        "en": "Ambulance",
+        "fa": "آمبولانس"
+      }
+    },
+    {
+      "id": "cn-medicine",
+      "text": {
+        "en": "Medicine",
+        "fa": "دارو"
+      }
+    },
+    {
+      "id": "cn-pill",
+      "text": {
+        "en": "Pill",
+        "fa": "قرص"
+      }
+    },
+    {
+      "id": "cn-syringe",
+      "text": {
+        "en": "Syringe",
+        "fa": "سرنگ"
+      }
+    },
+    {
+      "id": "cn-bandage",
+      "text": {
+        "en": "Bandage",
+        "fa": "باند"
+      }
+    },
+    {
+      "id": "cn-cast",
+      "text": {
+        "en": "Cast",
+        "fa": "گچ"
+      }
+    },
+    {
+      "id": "cn-crutch",
+      "text": {
+        "en": "Crutch",
+        "fa": "عصا"
+      }
+    },
+    {
+      "id": "cn-stethoscope",
+      "text": {
+        "en": "Stethoscope",
+        "fa": "گوشی پزشکی"
+      }
+    },
+    {
+      "id": "cn-thermometer",
+      "text": {
+        "en": "Thermometer",
+        "fa": "دماسنج"
+      }
+    },
+    {
+      "id": "cn-vaccine",
+      "text": {
+        "en": "Vaccine",
+        "fa": "واکسن"
+      }
+    },
+    {
+      "id": "cn-fever",
+      "text": {
+        "en": "Fever",
+        "fa": "تب"
+      }
+    },
+    {
+      "id": "cn-cough",
+      "text": {
+        "en": "Cough",
+        "fa": "سرفه"
+      }
+    },
+    {
+      "id": "cn-wound",
+      "text": {
+        "en": "Wound",
+        "fa": "زخم"
+      }
+    },
+    {
+      "id": "cn-scar",
+      "text": {
+        "en": "Scar",
+        "fa": "جای زخم"
+      }
+    },
+    {
+      "id": "cn-pulse",
+      "text": {
+        "en": "Pulse",
+        "fa": "نبض"
+      }
+    },
+    {
+      "id": "cn-breath",
+      "text": {
+        "en": "Breath",
+        "fa": "نفس"
+      }
+    },
+    {
+      "id": "cn-allergy",
+      "text": {
+        "en": "Allergy",
+        "fa": "حساسیت"
+      }
+    },
+    {
+      "id": "cn-virus",
+      "text": {
+        "en": "Virus",
+        "fa": "ویروس"
+      }
+    },
+    {
+      "id": "cn-germ",
+      "text": {
+        "en": "Germ",
+        "fa": "میکروب"
+      }
+    },
+    {
+      "id": "cn-chef",
+      "text": {
+        "en": "Chef",
+        "fa": "سرآشپز"
+      }
+    },
+    {
+      "id": "cn-sailor",
+      "text": {
+        "en": "Sailor",
+        "fa": "ملوان"
+      }
+    },
+    {
+      "id": "cn-lawyer",
+      "text": {
+        "en": "Lawyer",
+        "fa": "وکیل"
+      }
+    },
+    {
+      "id": "cn-engineer",
+      "text": {
+        "en": "Engineer",
+        "fa": "مهندس"
+      }
+    },
+    {
+      "id": "cn-architect",
+      "text": {
+        "en": "Architect",
+        "fa": "معمار"
+      }
+    },
+    {
+      "id": "cn-plumber",
+      "text": {
+        "en": "Plumber",
+        "fa": "لوله‌کش"
+      }
+    },
+    {
+      "id": "cn-carpenter",
+      "text": {
+        "en": "Carpenter",
+        "fa": "نجار"
+      }
+    },
+    {
+      "id": "cn-butcher",
+      "text": {
+        "en": "Butcher",
+        "fa": "قصاب"
+      }
+    },
+    {
+      "id": "cn-baker",
+      "text": {
+        "en": "Baker",
+        "fa": "نانوا"
+      }
+    },
+    {
+      "id": "cn-barber",
+      "text": {
+        "en": "Barber",
+        "fa": "آرایشگر"
+      }
+    },
+    {
+      "id": "cn-tailor",
+      "text": {
+        "en": "Tailor",
+        "fa": "خیاط"
+      }
+    },
+    {
+      "id": "cn-painter",
+      "text": {
+        "en": "Painter",
+        "fa": "نقاش"
+      }
+    },
+    {
+      "id": "cn-dancer",
+      "text": {
+        "en": "Dancer",
+        "fa": "رقصنده"
+      }
+    },
+    {
+      "id": "cn-actor",
+      "text": {
+        "en": "Actor",
+        "fa": "بازیگر"
+      }
+    },
+    {
+      "id": "cn-writer",
+      "text": {
+        "en": "Writer",
+        "fa": "نویسنده"
+      }
+    },
+    {
+      "id": "cn-driver",
+      "text": {
+        "en": "Driver",
+        "fa": "راننده"
+      }
+    },
+    {
+      "id": "cn-waiter",
+      "text": {
+        "en": "Waiter",
+        "fa": "پیشخدمت"
+      }
+    },
+    {
+      "id": "cn-cook",
+      "text": {
+        "en": "Cook",
+        "fa": "آشپز"
+      }
+    },
+    {
+      "id": "cn-fisherman",
+      "text": {
+        "en": "Fisherman",
+        "fa": "ماهیگیر"
+      }
+    },
+    {
+      "id": "cn-miner",
+      "text": {
+        "en": "Miner",
+        "fa": "معدنچی"
+      }
+    },
+    {
+      "id": "cn-blacksmith",
+      "text": {
+        "en": "Blacksmith",
+        "fa": "آهنگر"
+      }
+    },
+    {
+      "id": "cn-jeweler",
+      "text": {
+        "en": "Jeweler",
+        "fa": "جواهرفروش"
+      }
+    },
+    {
+      "id": "cn-mechanic",
+      "text": {
+        "en": "Mechanic",
+        "fa": "مکانیک"
+      }
+    },
+    {
+      "id": "cn-electrician",
+      "text": {
+        "en": "Electrician",
+        "fa": "برق‌کار"
+      }
+    },
+    {
+      "id": "cn-gardener",
+      "text": {
+        "en": "Gardener",
+        "fa": "باغبان"
+      }
+    },
+    {
+      "id": "cn-shepherd",
+      "text": {
+        "en": "Shepherd",
+        "fa": "چوپان"
+      }
+    },
+    {
+      "id": "cn-detective",
+      "text": {
+        "en": "Detective",
+        "fa": "کارآگاه"
+      }
+    },
+    {
+      "id": "cn-police",
+      "text": {
+        "en": "Police",
+        "fa": "پلیس"
+      }
+    },
+    {
+      "id": "cn-firefighter",
+      "text": {
+        "en": "Firefighter",
+        "fa": "آتش‌نشان"
+      }
+    },
+    {
+      "id": "cn-dentist-2",
+      "text": {
+        "en": "Dentist",
+        "fa": "دندانپزشک"
+      }
+    },
+    {
+      "id": "cn-scientist",
+      "text": {
+        "en": "Scientist",
+        "fa": "دانشمند"
+      }
+    },
+    {
+      "id": "cn-professor",
+      "text": {
+        "en": "Professor",
+        "fa": "استاد"
+      }
+    },
+    {
+      "id": "cn-student",
+      "text": {
+        "en": "Student",
+        "fa": "دانش‌آموز"
+      }
+    },
+    {
+      "id": "cn-librarian",
+      "text": {
+        "en": "Librarian",
+        "fa": "کتابدار"
+      }
+    },
+    {
+      "id": "cn-banker",
+      "text": {
+        "en": "Banker",
+        "fa": "بانکدار"
+      }
+    },
+    {
+      "id": "cn-merchant",
+      "text": {
+        "en": "Merchant",
+        "fa": "بازرگان"
+      }
+    },
+    {
+      "id": "cn-cashier",
+      "text": {
+        "en": "Cashier",
+        "fa": "صندوقدار"
+      }
+    },
+    {
+      "id": "cn-astronaut",
+      "text": {
+        "en": "Astronaut",
+        "fa": "فضانورد"
+      }
+    },
+    {
+      "id": "cn-photographer",
+      "text": {
+        "en": "Photographer",
+        "fa": "عکاس"
+      }
+    },
+    {
+      "id": "cn-musician",
+      "text": {
+        "en": "Musician",
+        "fa": "نوازنده"
+      }
+    },
+    {
+      "id": "cn-goal",
+      "text": {
+        "en": "Goal",
+        "fa": "دروازه"
+      }
+    },
+    {
+      "id": "cn-skate",
+      "text": {
+        "en": "Skate",
+        "fa": "اسکیت"
+      }
+    },
+    {
+      "id": "cn-ski",
+      "text": {
+        "en": "Ski",
+        "fa": "اسکی"
+      }
+    },
+    {
+      "id": "cn-bat-2",
+      "text": {
+        "en": "Bat",
+        "fa": "چوگان‌بیسبال"
+      }
+    },
+    {
+      "id": "cn-puck",
+      "text": {
+        "en": "Puck",
+        "fa": "توپ‌هاکی"
+      }
+    },
+    {
+      "id": "cn-dart",
+      "text": {
+        "en": "Dart",
+        "fa": "دارت"
+      }
+    },
+    {
+      "id": "cn-bowling",
+      "text": {
+        "en": "Bowling",
+        "fa": "بولینگ"
+      }
+    },
+    {
+      "id": "cn-marble",
+      "text": {
+        "en": "Marble",
+        "fa": "تیله"
+      }
+    },
+    {
+      "id": "cn-pawn",
+      "text": {
+        "en": "Pawn",
+        "fa": "سرباز"
+      }
+    },
+    {
+      "id": "cn-domino",
+      "text": {
+        "en": "Domino",
+        "fa": "دومینو"
+      }
+    },
+    {
+      "id": "cn-hoop",
+      "text": {
+        "en": "Hoop",
+        "fa": "حلقه"
+      }
+    },
+    {
+      "id": "cn-hurdle",
+      "text": {
+        "en": "Hurdle",
+        "fa": "مانع"
+      }
+    },
+    {
+      "id": "cn-javelin",
+      "text": {
+        "en": "Javelin",
+        "fa": "نیزه"
+      }
+    },
+    {
+      "id": "cn-discus",
+      "text": {
+        "en": "Discus",
+        "fa": "دیسک"
+      }
+    },
+    {
+      "id": "cn-coach",
+      "text": {
+        "en": "Coach",
+        "fa": "مربی"
+      }
+    },
+    {
+      "id": "cn-team",
+      "text": {
+        "en": "Team",
+        "fa": "تیم"
+      }
+    },
+    {
+      "id": "cn-match",
+      "text": {
+        "en": "Match",
+        "fa": "مسابقه"
+      }
+    },
+    {
+      "id": "cn-ring-2",
+      "text": {
+        "en": "Ring",
+        "fa": "رینگ"
+      }
+    },
+    {
+      "id": "cn-saddle",
+      "text": {
+        "en": "Saddle",
+        "fa": "زین"
+      }
+    },
+    {
+      "id": "cn-paddle",
+      "text": {
+        "en": "Paddle",
+        "fa": "پارو"
+      }
+    },
+    {
+      "id": "cn-goalkeeper",
+      "text": {
+        "en": "Goalkeeper",
+        "fa": "دروازه‌بان"
+      }
+    },
+    {
+      "id": "cn-jersey",
+      "text": {
+        "en": "Jersey",
+        "fa": "پیراهن‌ورزشی"
+      }
+    },
+    {
+      "id": "cn-stopwatch",
+      "text": {
+        "en": "Stopwatch",
+        "fa": "کرنومتر"
+      }
+    },
+    {
+      "id": "cn-track",
+      "text": {
+        "en": "Track",
+        "fa": "پیست"
+      }
+    },
+    {
+      "id": "cn-court",
+      "text": {
+        "en": "Court",
+        "fa": "زمین‌بازی"
+      }
+    },
+    {
+      "id": "cn-pitch",
+      "text": {
+        "en": "Pitch",
+        "fa": "چمن"
+      }
+    },
+    {
+      "id": "cn-cue",
+      "text": {
+        "en": "Cue",
+        "fa": "چوب‌بیلیارد"
+      }
+    },
+    {
+      "id": "cn-checker",
+      "text": {
+        "en": "Checker",
+        "fa": "مهره"
+      }
+    },
+    {
+      "id": "cn-card",
+      "text": {
+        "en": "Card",
+        "fa": "کارت‌بازی"
+      }
+    },
+    {
+      "id": "cn-joker",
+      "text": {
+        "en": "Joker",
+        "fa": "جوکر"
+      }
+    },
+    {
+      "id": "cn-swing",
+      "text": {
+        "en": "Swing",
+        "fa": "تاب"
+      }
+    },
+    {
+      "id": "cn-slide",
+      "text": {
+        "en": "Slide",
+        "fa": "سرسره"
+      }
+    },
+    {
+      "id": "cn-trampoline",
+      "text": {
+        "en": "Trampoline",
+        "fa": "ترامپولین"
+      }
+    },
+    {
+      "id": "cn-surfboard",
+      "text": {
+        "en": "Surfboard",
+        "fa": "تخته‌موج‌سواری"
+      }
+    },
+    {
+      "id": "cn-parachute",
+      "text": {
+        "en": "Parachute",
+        "fa": "چتر‌نجات"
+      }
+    },
+    {
+      "id": "cn-archery",
+      "text": {
+        "en": "Archery",
+        "fa": "تیراندازی‌با‌کمان"
+      }
+    },
+    {
+      "id": "cn-fencing",
+      "text": {
+        "en": "Fencing",
+        "fa": "شمشیربازی"
+      }
+    },
+    {
+      "id": "cn-wrestling",
+      "text": {
+        "en": "Wrestling",
+        "fa": "کشتی"
+      }
+    },
+    {
+      "id": "cn-yoga",
+      "text": {
+        "en": "Yoga",
+        "fa": "یوگا"
+      }
+    },
+    {
+      "id": "cn-sprint",
+      "text": {
+        "en": "Sprint",
+        "fa": "دوسرعت"
+      }
+    },
+    {
+      "id": "cn-laptop",
+      "text": {
+        "en": "Laptop",
+        "fa": "لپ‌تاپ"
+      }
+    },
+    {
+      "id": "cn-keyboard-2",
+      "text": {
+        "en": "Keyboard",
+        "fa": "صفحه‌کلید"
+      }
+    },
+    {
+      "id": "cn-mouse",
+      "text": {
+        "en": "Mouse",
+        "fa": "ماوس"
+      }
+    },
+    {
+      "id": "cn-monitor",
+      "text": {
+        "en": "Monitor",
+        "fa": "مانیتور"
+      }
+    },
+    {
+      "id": "cn-printer",
+      "text": {
+        "en": "Printer",
+        "fa": "چاپگر"
+      }
+    },
+    {
+      "id": "cn-charger",
+      "text": {
+        "en": "Charger",
+        "fa": "شارژر"
+      }
+    },
+    {
+      "id": "cn-modem",
+      "text": {
+        "en": "Modem",
+        "fa": "مودم"
+      }
+    },
+    {
+      "id": "cn-router",
+      "text": {
+        "en": "Router",
+        "fa": "روتر"
+      }
+    },
+    {
+      "id": "cn-server",
+      "text": {
+        "en": "Server",
+        "fa": "سرور"
+      }
+    },
+    {
+      "id": "cn-screen",
+      "text": {
+        "en": "Screen",
+        "fa": "صفحه‌نمایش"
+      }
+    },
+    {
+      "id": "cn-phone",
+      "text": {
+        "en": "Phone",
+        "fa": "تلفن"
+      }
+    },
+    {
+      "id": "cn-tablet",
+      "text": {
+        "en": "Tablet",
+        "fa": "تبلت"
+      }
+    },
+    {
+      "id": "cn-microchip",
+      "text": {
+        "en": "Microchip",
+        "fa": "ریزتراشه"
+      }
+    },
+    {
+      "id": "cn-processor",
+      "text": {
+        "en": "Processor",
+        "fa": "پردازنده"
+      }
+    },
+    {
+      "id": "cn-joystick",
+      "text": {
+        "en": "Joystick",
+        "fa": "دسته‌بازی"
+      }
+    },
+    {
+      "id": "cn-projector",
+      "text": {
+        "en": "Projector",
+        "fa": "پروژکتور"
+      }
+    },
+    {
+      "id": "cn-scanner",
+      "text": {
+        "en": "Scanner",
+        "fa": "اسکنر"
+      }
+    },
+    {
+      "id": "cn-remote",
+      "text": {
+        "en": "Remote",
+        "fa": "کنترل"
+      }
+    },
+    {
+      "id": "cn-console",
+      "text": {
+        "en": "Console",
+        "fa": "کنسول"
+      }
+    },
+    {
+      "id": "cn-television",
+      "text": {
+        "en": "Television",
+        "fa": "تلویزیون"
+      }
+    },
+    {
+      "id": "cn-radio",
+      "text": {
+        "en": "Radio",
+        "fa": "رادیو"
+      }
+    },
+    {
+      "id": "cn-calculator",
+      "text": {
+        "en": "Calculator",
+        "fa": "ماشین‌حساب"
+      }
+    },
+    {
+      "id": "cn-telescope",
+      "text": {
+        "en": "Telescope",
+        "fa": "تلسکوپ"
+      }
+    },
+    {
+      "id": "cn-microscope",
+      "text": {
+        "en": "Microscope",
+        "fa": "میکروسکوپ"
+      }
+    },
+    {
+      "id": "cn-radar",
+      "text": {
+        "en": "Radar",
+        "fa": "رادار"
+      }
+    },
+    {
+      "id": "cn-sensor",
+      "text": {
+        "en": "Sensor",
+        "fa": "حسگر"
+      }
+    },
+    {
+      "id": "cn-switch",
+      "text": {
+        "en": "Switch",
+        "fa": "کلید"
+      }
+    },
+    {
+      "id": "cn-bulb",
+      "text": {
+        "en": "Bulb",
+        "fa": "لامپ"
+      }
+    },
+    {
+      "id": "cn-lens",
+      "text": {
+        "en": "Lens",
+        "fa": "لنز"
+      }
+    },
+    {
+      "id": "cn-disk",
+      "text": {
+        "en": "Disk",
+        "fa": "دیسک"
+      }
+    },
+    {
+      "id": "cn-memory-2",
+      "text": {
+        "en": "Memory",
+        "fa": "حافظه"
+      }
+    },
+    {
+      "id": "cn-cursor",
+      "text": {
+        "en": "Cursor",
+        "fa": "نشانگر"
+      }
+    },
+    {
+      "id": "cn-robot-arm",
+      "text": {
+        "en": "Robot Arm",
+        "fa": "بازوی ربات"
+      }
+    },
+    {
+      "id": "cn-webcam",
+      "text": {
+        "en": "Webcam",
+        "fa": "وبکم"
+      }
+    },
+    {
+      "id": "cn-truck",
+      "text": {
+        "en": "Truck",
+        "fa": "کامیون"
+      }
+    },
+    {
+      "id": "cn-bus",
+      "text": {
+        "en": "Bus",
+        "fa": "اتوبوس"
+      }
+    },
+    {
+      "id": "cn-motorcycle",
+      "text": {
+        "en": "Motorcycle",
+        "fa": "موتورسیکلت"
+      }
+    },
+    {
+      "id": "cn-airplane",
+      "text": {
+        "en": "Airplane",
+        "fa": "هواپیما"
+      }
+    },
+    {
+      "id": "cn-helicopter",
+      "text": {
+        "en": "Helicopter",
+        "fa": "هلیکوپتر"
+      }
+    },
+    {
+      "id": "cn-boat",
+      "text": {
+        "en": "Boat",
+        "fa": "قایق"
+      }
+    },
+    {
+      "id": "cn-submarine",
+      "text": {
+        "en": "Submarine",
+        "fa": "زیردریایی"
+      }
+    },
+    {
+      "id": "cn-tractor",
+      "text": {
+        "en": "Tractor",
+        "fa": "تراکتور"
+      }
+    },
+    {
+      "id": "cn-taxi",
+      "text": {
+        "en": "Taxi",
+        "fa": "تاکسی"
+      }
+    },
+    {
+      "id": "cn-tank",
+      "text": {
+        "en": "Tank",
+        "fa": "تانک"
+      }
+    },
+    {
+      "id": "cn-scooter",
+      "text": {
+        "en": "Scooter",
+        "fa": "اسکوتر"
+      }
+    },
+    {
+      "id": "cn-sled",
+      "text": {
+        "en": "Sled",
+        "fa": "سورتمه"
+      }
+    },
+    {
+      "id": "cn-canoe",
+      "text": {
+        "en": "Canoe",
+        "fa": "کانو"
+      }
+    },
+    {
+      "id": "cn-ferry",
+      "text": {
+        "en": "Ferry",
+        "fa": "کشتی مسافری"
+      }
+    },
+    {
+      "id": "cn-yacht",
+      "text": {
+        "en": "Yacht",
+        "fa": "قایق تفریحی"
+      }
+    },
+    {
+      "id": "cn-jet",
+      "text": {
+        "en": "Jet",
+        "fa": "جت"
+      }
+    },
+    {
+      "id": "cn-glider",
+      "text": {
+        "en": "Glider",
+        "fa": "گلایدر"
+      }
+    },
+    {
+      "id": "cn-balloon",
+      "text": {
+        "en": "Balloon",
+        "fa": "بالن"
+      }
+    },
+    {
+      "id": "cn-wagon",
+      "text": {
+        "en": "Wagon",
+        "fa": "گاری"
+      }
+    },
+    {
+      "id": "cn-carriage",
+      "text": {
+        "en": "Carriage",
+        "fa": "کالسکه"
+      }
+    },
+    {
+      "id": "cn-subway",
+      "text": {
+        "en": "Subway",
+        "fa": "مترو"
+      }
+    },
+    {
+      "id": "cn-tram",
+      "text": {
+        "en": "Tram",
+        "fa": "تراموا"
+      }
+    },
+    {
+      "id": "cn-van",
+      "text": {
+        "en": "Van",
+        "fa": "ون"
+      }
+    },
+    {
+      "id": "cn-jeep",
+      "text": {
+        "en": "Jeep",
+        "fa": "جیپ"
+      }
+    },
+    {
+      "id": "cn-limousine",
+      "text": {
+        "en": "Limousine",
+        "fa": "لیموزین"
+      }
+    },
+    {
+      "id": "cn-bulldozer",
+      "text": {
+        "en": "Bulldozer",
+        "fa": "بولدوزر"
+      }
+    },
+    {
+      "id": "cn-crane",
+      "text": {
+        "en": "Crane",
+        "fa": "جرثقیل"
+      }
+    },
+    {
+      "id": "cn-forklift",
+      "text": {
+        "en": "Forklift",
+        "fa": "لیفتراک"
+      }
+    },
+    {
+      "id": "cn-skateboard",
+      "text": {
+        "en": "Skateboard",
+        "fa": "اسکیت‌بورد"
+      }
+    },
+    {
+      "id": "cn-sailboat",
+      "text": {
+        "en": "Sailboat",
+        "fa": "قایق بادبانی"
+      }
+    },
+    {
+      "id": "cn-kayak",
+      "text": {
+        "en": "Kayak",
+        "fa": "کایاک"
+      }
+    },
+    {
+      "id": "cn-raft",
+      "text": {
+        "en": "Raft",
+        "fa": "کلک"
+      }
+    },
+    {
+      "id": "cn-gondola",
+      "text": {
+        "en": "Gondola",
+        "fa": "گاندولا"
+      }
+    },
+    {
+      "id": "cn-parachute-2",
+      "text": {
+        "en": "Parachute",
+        "fa": "چتر نجات"
+      }
+    },
+    {
+      "id": "cn-propeller",
+      "text": {
+        "en": "Propeller",
+        "fa": "ملخ"
+      }
+    },
+    {
+      "id": "cn-highway",
+      "text": {
+        "en": "Highway",
+        "fa": "بزرگراه"
+      }
+    },
+    {
+      "id": "cn-runway",
+      "text": {
+        "en": "Runway",
+        "fa": "باند فرودگاه"
+      }
+    },
+    {
+      "id": "cn-sleigh",
+      "text": {
+        "en": "Sleigh",
+        "fa": "سورتمه اسبی"
+      }
     }
   ]
 }

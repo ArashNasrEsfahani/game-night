@@ -12,7 +12,6 @@
   "items": [
     {
       "id": "spicy-001",
-      "intensity": "spicy",
       "optionA": {
         "en": "Have your last text message read out loud to the whole group",
         "fa": "آخرین پیامی که فرستادی رو بلند برای کل جمع بخونن"
@@ -20,11 +19,11 @@
       "optionB": {
         "en": "Let the group scroll your photo gallery for one minute",
         "fa": "بذاری جمع یه دقیقه گالری عکس‌هات رو بالا پایین کنه"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "spicy-002",
-      "intensity": "spicy",
       "optionA": {
         "en": "Confess your worst date story right now",
         "fa": "همین الان بدترین قرار عاشقانه‌ی عمرت رو تعریف کنی"
@@ -32,11 +31,11 @@
       "optionB": {
         "en": "Let your ex describe you in three words",
         "fa": "بذاری اکست با سه تا کلمه توصیفت کنه"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "spicy-003",
-      "intensity": "medium",
       "optionA": {
         "en": "Date someone gorgeous but clingy",
         "fa": "با یه آدم خوش‌قیافه ولی چسبناک باشی"
@@ -44,11 +43,11 @@
       "optionB": {
         "en": "Date someone plain but totally chill",
         "fa": "با یه آدم معمولی ولی کاملاً بی‌خیال و راحت باشی"
-      }
+      },
+      "intensity": "medium"
     },
     {
       "id": "spicy-004",
-      "intensity": "spicy",
       "optionA": {
         "en": "Tell the group who you secretly find attractive",
         "fa": "به جمع بگی مخفیانه از کی خوشت میاد"
@@ -56,11 +55,11 @@
       "optionB": {
         "en": "Have the group guess your crush out loud",
         "fa": "بذاری جمع بلند بلند حدس بزنن کراشت کیه"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "spicy-005",
-      "intensity": "medium",
       "optionA": {
         "en": "Be caught singing badly in the shower",
         "fa": "موقع آواز خوندن افتضاحت زیر دوش مچت رو بگیرن"
@@ -68,11 +67,11 @@
       "optionB": {
         "en": "Be caught talking to yourself in the mirror",
         "fa": "موقع حرف زدن با خودت جلوی آینه مچت رو بگیرن"
-      }
+      },
+      "intensity": "medium"
     },
     {
       "id": "spicy-006",
-      "intensity": "spicy",
       "optionA": {
         "en": "Reveal how many people you've kissed",
         "fa": "بگی تا حالا با چند نفر بوس و ماچ داشتی"
@@ -80,11 +79,11 @@
       "optionB": {
         "en": "Reveal your most embarrassing nickname",
         "fa": "خجالت‌آورترین لقبی که روت گذاشتن رو لو بدی"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "spicy-007",
-      "intensity": "medium",
       "optionA": {
         "en": "Always flirt by being super awkward",
         "fa": "همیشه موقع لاس زدن خیلی دست‌وپا چلفتی بشی"
@@ -92,11 +91,11 @@
       "optionB": {
         "en": "Always flirt by being way too forward",
         "fa": "همیشه موقع لاس زدن زیادی رک و بی‌پروا باشی"
-      }
+      },
+      "intensity": "medium"
     },
     {
       "id": "spicy-008",
-      "intensity": "spicy",
       "optionA": {
         "en": "Have your browser search history leaked",
         "fa": "تاریخچه‌ی سرچ مرورگرت لو بره"
@@ -104,11 +103,11 @@
       "optionB": {
         "en": "Have your DMs projected on the wall",
         "fa": "پیام‌های دایرکتت روی دیوار پروژکت بشه"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "spicy-009",
-      "intensity": "medium",
       "optionA": {
         "en": "Go on a blind date set up by your mom",
         "fa": "بری سر قرار عاشقانه‌ای که مامانت جور کرده"
@@ -116,11 +115,11 @@
       "optionB": {
         "en": "Go on a blind date set up by your nosiest friend",
         "fa": "بری سر قراری که فضول‌ترین دوستت جور کرده"
-      }
+      },
+      "intensity": "medium"
     },
     {
       "id": "spicy-010",
-      "intensity": "spicy",
       "optionA": {
         "en": "Drunk-text your boss by accident",
         "fa": "اشتباهی تو حالت مستی به رئیست پیام بدی"
@@ -128,11 +127,11 @@
       "optionB": {
         "en": "Drunk-text your crush by accident",
         "fa": "اشتباهی تو حالت مستی به کراشت پیام بدی"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "spicy-011",
-      "intensity": "medium",
       "optionA": {
         "en": "Have everyone know your weight",
         "fa": "همه وزنت رو بدونن"
@@ -140,11 +139,11 @@
       "optionB": {
         "en": "Have everyone know your bank balance",
         "fa": "همه موجودی حسابت رو بدونن"
-      }
+      },
+      "intensity": "medium"
     },
     {
       "id": "spicy-012",
-      "intensity": "spicy",
       "optionA": {
         "en": "Kiss the person to your left on the cheek",
         "fa": "گونه‌ی نفر سمت چپت رو بوس کنی"
@@ -152,11 +151,11 @@
       "optionB": {
         "en": "Whisper a compliment to the person on your right",
         "fa": "در گوش نفر سمت راستت یه تعریف زمزمه کنی"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "spicy-013",
-      "intensity": "medium",
       "optionA": {
         "en": "Wear last night's outfit for a week",
         "fa": "یه هفته همون لباس دیشب رو بپوشی"
@@ -164,11 +163,11 @@
       "optionB": {
         "en": "Wear your pajamas everywhere for a week",
         "fa": "یه هفته همه جا با لباس خواب بری"
-      }
+      },
+      "intensity": "medium"
     },
     {
       "id": "spicy-014",
-      "intensity": "spicy",
       "optionA": {
         "en": "Have your camera roll set to your phone wallpaper randomly",
         "fa": "یه عکس رندوم از گالریت بشه پس‌زمینه‌ی گوشیت"
@@ -176,11 +175,11 @@
       "optionB": {
         "en": "Have your most-played song play whenever you enter a room",
         "fa": "هر بار وارد یه اتاق شدی، آهنگی که بیشتر از همه گوش دادی پخش بشه"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "spicy-015",
-      "intensity": "medium",
       "optionA": {
         "en": "Always laugh at the worst possible moment",
         "fa": "همیشه تو بدترین لحظه‌ی ممکن خنده‌ت بگیره"
@@ -188,11 +187,11 @@
       "optionB": {
         "en": "Always blush whenever someone says your name",
         "fa": "هر بار کسی اسمت رو بگه سرخ بشی"
-      }
+      },
+      "intensity": "medium"
     },
     {
       "id": "spicy-016",
-      "intensity": "spicy",
       "optionA": {
         "en": "Spill your biggest dating regret to the group",
         "fa": "بزرگ‌ترین پشیمونی عاشقانه‌ت رو به جمع لو بدی"
@@ -200,11 +199,11 @@
       "optionB": {
         "en": "Let the group rate your flirting skills out of ten",
         "fa": "بذاری جمع مهارت لاس زدنت رو از ده نمره بده"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "spicy-017",
-      "intensity": "medium",
       "optionA": {
         "en": "Be the friend who always overshares",
         "fa": "همون دوستی باشی که همیشه زیادی از همه‌چی حرف می‌زنه"
@@ -212,11 +211,11 @@
       "optionB": {
         "en": "Be the friend who never tells anyone anything",
         "fa": "همون دوستی باشی که هیچ‌وقت هیچی به کسی نمی‌گه"
-      }
+      },
+      "intensity": "medium"
     },
     {
       "id": "spicy-018",
-      "intensity": "spicy",
       "optionA": {
         "en": "Have a love song dedicated to you in public",
         "fa": "تو جمع یه آهنگ عاشقانه به اسمت تقدیم بشه"
@@ -224,11 +223,11 @@
       "optionB": {
         "en": "Have to slow dance with a stranger at a party",
         "fa": "مجبور بشی تو مهمونی با یه غریبه رقص آروم بری"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "spicy-019",
-      "intensity": "medium",
       "optionA": {
         "en": "Always say exactly what you're thinking",
         "fa": "همیشه دقیقاً همون چیزی که تو فکرته رو بگی"
@@ -236,11 +235,11 @@
       "optionB": {
         "en": "Never be able to give a compliment again",
         "fa": "دیگه هیچ‌وقت نتونی از کسی تعریف کنی"
-      }
+      },
+      "intensity": "medium"
     },
     {
       "id": "spicy-020",
-      "intensity": "spicy",
       "optionA": {
         "en": "Tell the group your weirdest habit when you're alone",
         "fa": "عجیب‌ترین عادتت موقع تنهایی رو به جمع بگی"
@@ -248,11 +247,11 @@
       "optionB": {
         "en": "Reenact your worst dance move right now",
         "fa": "همین الان بدترین حرکت رقصت رو اجرا کنی"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "spicy-021",
-      "intensity": "medium",
       "optionA": {
         "en": "Be stuck on a long road trip with your ex",
         "fa": "تو یه سفر جاده‌ای طولانی با اکست گیر بیفتی"
@@ -260,11 +259,11 @@
       "optionB": {
         "en": "Be stuck on a long road trip with your boss",
         "fa": "تو یه سفر جاده‌ای طولانی با رئیست گیر بیفتی"
-      }
+      },
+      "intensity": "medium"
     },
     {
       "id": "spicy-022",
-      "intensity": "spicy",
       "optionA": {
         "en": "Have your group chat nicknames revealed to those people",
         "fa": "لقب‌هایی که تو گروه برای بقیه گذاشتی، خودشون بفهمن"
@@ -272,11 +271,11 @@
       "optionB": {
         "en": "Have your voice notes played at full volume",
         "fa": "ویس‌هات با صدای بلند پخش بشه"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "spicy-023",
-      "intensity": "medium",
       "optionA": {
         "en": "Always be the one who says 'I love you' first",
         "fa": "همیشه تو اولین نفری باشی که می‌گه دوستت دارم"
@@ -284,11 +283,11 @@
       "optionB": {
         "en": "Always be the one waiting to hear it back",
         "fa": "همیشه تو منتظر بمونی که طرف اول بگه"
-      }
+      },
+      "intensity": "medium"
     },
     {
       "id": "spicy-024",
-      "intensity": "spicy",
       "optionA": {
         "en": "Let the group pick your dating profile photo",
         "fa": "بذاری جمع عکس پروفایل دوستیابیت رو انتخاب کنه"
@@ -296,11 +295,11 @@
       "optionB": {
         "en": "Let the group write your dating profile bio",
         "fa": "بذاری جمع بیوی پروفایل دوستیابیت رو بنویسه"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "spicy-025",
-      "intensity": "medium",
       "optionA": {
         "en": "Have every awkward silence be your fault",
         "fa": "هر سکوت معذب‌کننده‌ای تقصیر تو باشه"
@@ -308,11 +307,11 @@
       "optionB": {
         "en": "Have every bad joke at the table be yours",
         "fa": "هر جوک بی‌مزه‌ای سر میز مال تو باشه"
-      }
+      },
+      "intensity": "medium"
     },
     {
       "id": "spicy-026",
-      "intensity": "spicy",
       "optionA": {
         "en": "Admit which celebrity you'd run away with",
         "fa": "بگی با کدوم سلبریتی حاضری فرار کنی"
@@ -320,11 +319,11 @@
       "optionB": {
         "en": "Admit which friend's wardrobe you'd steal",
         "fa": "بگی کمد لباس کدوم دوستت رو حاضری بدزدی"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "spicy-027",
-      "intensity": "medium",
       "optionA": {
         "en": "Always overdress for every occasion",
         "fa": "همیشه برای هر مناسبتی زیادی شیک‌پوش باشی"
@@ -332,11 +331,11 @@
       "optionB": {
         "en": "Always underdress for every occasion",
         "fa": "همیشه برای هر مناسبتی زیادی ساده و دم‌دستی لباس بپوشی"
-      }
+      },
+      "intensity": "medium"
     },
     {
       "id": "spicy-028",
-      "intensity": "spicy",
       "optionA": {
         "en": "Have your most-used emoji tattooed on your hand",
         "fa": "ایموجی‌ای که بیشتر از همه استفاده می‌کنی رو روی دستت خالکوبی کنن"
@@ -344,7 +343,8 @@
       "optionB": {
         "en": "Have your worst selfie become your ID photo forever",
         "fa": "بدترین سلفیت تا ابد بشه عکس کارت شناساییت"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "wyr-s-x001",
@@ -1197,6 +1197,1686 @@
         "fa": "هر سلفی‌ای که می‌ذاری اکست زیرش کامنت بذاره"
       },
       "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-229",
+      "optionA": {
+        "en": "Tell the whole party your most embarrassing drunk story",
+        "fa": "جلوی همه‌ی مهمونی خجالت‌آورترین خاطره‌ی مستی‌ت رو تعریف کنی"
+      },
+      "optionB": {
+        "en": "Let the party read your last three texts out loud",
+        "fa": "بذاری مهمونی سه‌تا پیام آخرت رو بلند بخونه"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-230",
+      "optionA": {
+        "en": "Do a body shot off a stranger",
+        "fa": "از روی بدن یه غریبه شات بخوری"
+      },
+      "optionB": {
+        "en": "Let a stranger do a body shot off you",
+        "fa": "بذاری یه غریبه از روی بدن تو شات بخوره"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-231",
+      "optionA": {
+        "en": "Spend the night skinny-dipping with the group",
+        "fa": "کل شب با گروه لخت تو آب شنا کنی"
+      },
+      "optionB": {
+        "en": "Spend the night playing strip poker with the group",
+        "fa": "کل شب با گروه پوکر لختی بازی کنی"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-232",
+      "optionA": {
+        "en": "Kiss the person on your left for ten seconds",
+        "fa": "ده ثانیه نفر سمت چپت رو ببوسی"
+      },
+      "optionB": {
+        "en": "Give the person on your right a slow lap dance",
+        "fa": "برای نفر سمت راستت یه رقص آروم روی پا انجام بدی"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-233",
+      "optionA": {
+        "en": "Confess your hottest crush to the entire room",
+        "fa": "داغ‌ترین کراشت رو جلوی کل اتاق اعتراف کنی"
+      },
+      "optionB": {
+        "en": "Reenact your most awkward hookup as charades",
+        "fa": "بدترین رابطه‌ی ناجورت رو با پانتومیم بازی کنی"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-234",
+      "optionA": {
+        "en": "Wear only a towel for the rest of the party",
+        "fa": "تا آخر مهمونی فقط با حوله بمونی"
+      },
+      "optionB": {
+        "en": "Swap one item of clothing with whoever you pick",
+        "fa": "یه تیکه لباس با هر کی انتخاب کنی عوض کنی"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-235",
+      "optionA": {
+        "en": "Let the group pick your outfit for next week",
+        "fa": "بذاری گروه لباس کل هفته‌ی بعدت رو انتخاب کنه"
+      },
+      "optionB": {
+        "en": "Let the group post anything they want on your story",
+        "fa": "بذاری گروه هرچی بخوان تو استوری‌ت پست کنن"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-236",
+      "optionA": {
+        "en": "Whisper your wildest fantasy to one player",
+        "fa": "وحشی‌ترین فانتزی‌ت رو دم گوش یه بازیکن بگی"
+      },
+      "optionB": {
+        "en": "Text it anonymously to the group chat",
+        "fa": "ناشناس تو گروه چت بفرستیش"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-237",
+      "optionA": {
+        "en": "Take a shot every time someone says your name tonight",
+        "fa": "هر بار امشب اسمت رو بگن یه شات بزنی"
+      },
+      "optionB": {
+        "en": "Down a mystery drink the bartender mixes",
+        "fa": "یه نوشیدنی مرموز که بارتندر درست می‌کنه رو سر بکشی"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-238",
+      "optionA": {
+        "en": "Slow dance with someone you just met",
+        "fa": "با کسی که تازه دیدی رقص آروم کنی"
+      },
+      "optionB": {
+        "en": "Serenade your secret crush in front of everyone",
+        "fa": "جلوی همه برای کراش مخفیت آواز عاشقانه بخونی"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-239",
+      "optionA": {
+        "en": "Reveal your search history to the player beside you",
+        "fa": "تاریخچه‌ی سرچت رو به بازیکن کنارت نشون بدی"
+      },
+      "optionB": {
+        "en": "Hand your unlocked phone to your ex for one minute",
+        "fa": "گوشی بازت رو یه دقیقه بدی دست اکست"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-240",
+      "optionA": {
+        "en": "Make eye contact and dance for one full song",
+        "fa": "چشم تو چشم یه آهنگ کامل برقصی"
+      },
+      "optionB": {
+        "en": "Sit in someone's lap until your next turn",
+        "fa": "تا نوبت بعدیت رو پای یکی بشینی"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-241",
+      "optionA": {
+        "en": "Take a tequila shot off a spoon held by your rival",
+        "fa": "شات تکیلا رو از روی قاشقی که رقیبت گرفته بخوری"
+      },
+      "optionB": {
+        "en": "Let your rival pour the next round down your throat",
+        "fa": "بذاری رقیبت دور بعدی رو تو حلقت بریزه"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-242",
+      "optionA": {
+        "en": "Spill your number of past partners to the table",
+        "fa": "تعداد پارتنرهای قبلیت رو به جمع بگی"
+      },
+      "optionB": {
+        "en": "Rate everyone at the table out loud",
+        "fa": "همه‌ی دور میز رو بلند نمره بدی"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-243",
+      "optionA": {
+        "en": "Crash a stranger's table and flirt for a minute",
+        "fa": "بپری سر میز یه غریبه و یه دقیقه لاس بزنی"
+      },
+      "optionB": {
+        "en": "Ask a stranger to dance and not look away",
+        "fa": "از یه غریبه بخوای برقصه و نگاهت رو برنگردونی"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-244",
+      "optionA": {
+        "en": "Let the group dare you to text one risky person",
+        "fa": "بذاری گروه جرئتت بده به یه آدم خطرناک پیام بدی"
+      },
+      "optionB": {
+        "en": "Let the group choose who you call right now",
+        "fa": "بذاری گروه انتخاب کنه الان به کی زنگ بزنی"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-245",
+      "optionA": {
+        "en": "Strip down to your underwear for one dare",
+        "fa": "برای یه جرئت تا لباس زیر دربیاری"
+      },
+      "optionB": {
+        "en": "Take an ice cube from someone's mouth with yours",
+        "fa": "یه تیکه یخ رو با دهنت از دهن یکی برداری"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-246",
+      "optionA": {
+        "en": "Confess which guest you'd most want to kiss",
+        "fa": "اعتراف کنی کدوم مهمون رو بیشتر دلت می‌خواد ببوسی"
+      },
+      "optionB": {
+        "en": "Confess which guest you find most annoying",
+        "fa": "اعتراف کنی کدوم مهمون رو رو مخ‌تره"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-247",
+      "optionA": {
+        "en": "Let someone blindfold you and feed you a shot",
+        "fa": "بذاری یکی چشمت رو ببنده و بهت شات بده"
+      },
+      "optionB": {
+        "en": "Blindfold someone and guess who by touch",
+        "fa": "چشم یکی رو ببندی و با لمس حدس بزنی کیه"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-248",
+      "optionA": {
+        "en": "Twerk on the dance floor for thirty seconds",
+        "fa": "سی ثانیه وسط پیست برقصی و قر بدی"
+      },
+      "optionB": {
+        "en": "Do your sexiest catwalk down the hallway",
+        "fa": "داغ‌ترین راه‌رفتن مدلینگت رو تو راهرو انجام بدی"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-249",
+      "optionA": {
+        "en": "Let the player across confess a secret about you",
+        "fa": "بذاری بازیکن روبه‌رو یه راز درباره‌ت لو بده"
+      },
+      "optionB": {
+        "en": "Confess a secret about the player across from you",
+        "fa": "یه راز درباره‌ی بازیکن روبه‌روت لو بدی"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-250",
+      "optionA": {
+        "en": "Take a shot blindfolded chosen by the loudest guest",
+        "fa": "یه شات چشم‌بسته که پرسروصداترین مهمون انتخاب کرده بخوری"
+      },
+      "optionB": {
+        "en": "Let two guests arm-wrestle to decide your dare",
+        "fa": "بذاری دو مهمون مچ بندازن تا جرئتت رو تعیین کنن"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-251",
+      "optionA": {
+        "en": "Send a flirty voice note to the last person you texted",
+        "fa": "به آخرین نفری که پیام دادی یه ویس عشوه‌ای بفرستی"
+      },
+      "optionB": {
+        "en": "Like every photo from someone's profile right now",
+        "fa": "همین الان همه‌ی عکس‌های پروفایل یکی رو لایک کنی"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-252",
+      "optionA": {
+        "en": "Reveal your wildest night ever in full detail",
+        "fa": "وحشی‌ترین شب زندگیت رو با همه‌ی جزئیات تعریف کنی"
+      },
+      "optionB": {
+        "en": "Let the group ask you three no-lie questions",
+        "fa": "بذاری گروه سه سوال بدون دروغ ازت بپرسه"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-253",
+      "optionA": {
+        "en": "Let your partner pick a stranger for you to compliment boldly",
+        "fa": "بذاری پارتنرت یه غریبه انتخاب کنه که جسورانه تعریفش کنی"
+      },
+      "optionB": {
+        "en": "Boldly compliment the person who scares you most here",
+        "fa": "جسورانه از کسی که اینجا بیشتر ازش می‌ترسی تعریف کنی"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-254",
+      "optionA": {
+        "en": "Trade your shirt with the next person to laugh",
+        "fa": "پیراهنت رو با اولین کسی که خندید عوض کنی"
+      },
+      "optionB": {
+        "en": "Wear someone else's makeup for the rest of the night",
+        "fa": "تا آخر شب آرایش یکی دیگه رو بزنی"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-255",
+      "optionA": {
+        "en": "Whisper a pickup line to everyone in the circle",
+        "fa": "به همه‌ی حلقه یه جمله‌ی مخ‌زنی دم گوششون بگی"
+      },
+      "optionB": {
+        "en": "Get a pickup line whispered to you by each player",
+        "fa": "بذاری هر بازیکن یه جمله‌ی مخ‌زنی دم گوشت بگه"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-256",
+      "optionA": {
+        "en": "Down your drink if you've ever crushed on someone here",
+        "fa": "اگه تا حالا رو یکی اینجا کراش داشتی نوشیدنیت رو بزن"
+      },
+      "optionB": {
+        "en": "Reveal exactly who that crush was",
+        "fa": "دقیقاً بگی اون کراش کی بوده"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-257",
+      "optionA": {
+        "en": "Let the group choose a tattoo you must draw on yourself in marker",
+        "fa": "بذاری گروه یه تتو انتخاب کنه که با ماژیک روی خودت بکشی"
+      },
+      "optionB": {
+        "en": "Let the group write a confession on your arm in marker",
+        "fa": "بذاری گروه یه اعتراف روی بازوت با ماژیک بنویسه"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-258",
+      "optionA": {
+        "en": "Dance on the table until someone joins you",
+        "fa": "روی میز برقصی تا یکی بهت ملحق بشه"
+      },
+      "optionB": {
+        "en": "Lead a conga line through the entire house",
+        "fa": "یه صف رقص رو از کل خونه رهبری کنی"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-259",
+      "optionA": {
+        "en": "Tell the room your most scandalous regret",
+        "fa": "رسوایی‌ترین پشیمونی زندگیت رو به اتاق بگی"
+      },
+      "optionB": {
+        "en": "Act out your most scandalous moment in mime",
+        "fa": "رسواترین لحظه‌ت رو با پانتومیم بازی کنی"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-260",
+      "optionA": {
+        "en": "Let a guest blindfold-paint on your bare back",
+        "fa": "بذاری یه مهمون چشم‌بسته روی کمر لختت نقاشی کنه"
+      },
+      "optionB": {
+        "en": "Blindfold-paint on a guest's bare back yourself",
+        "fa": "خودت چشم‌بسته روی کمر لخت یه مهمون نقاشی کنی"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-261",
+      "optionA": {
+        "en": "Take a shot for every guest you've ever flirted with",
+        "fa": "به ازای هر مهمونی که تا حالا باهاش لاس زدی یه شات بزنی"
+      },
+      "optionB": {
+        "en": "Name every guest you've ever flirted with out loud",
+        "fa": "اسم هر مهمونی که تا حالا باهاش لاس زدی رو بلند بگی"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-262",
+      "optionA": {
+        "en": "Let the boldest guest plan your entire next date",
+        "fa": "بذاری جسورترین مهمون کل قرار بعدیت رو برنامه‌ریزی کنه"
+      },
+      "optionB": {
+        "en": "Let the shyest guest plan your entire next date",
+        "fa": "بذاری خجالتی‌ترین مهمون کل قرار بعدیت رو برنامه‌ریزی کنه"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-263",
+      "optionA": {
+        "en": "Wake up tomorrow able to read everyone's minds but unable to ever turn it off",
+        "fa": "فردا با توانایی خواندن ذهن همه بیدار شوی ولی هیچ‌وقت نتوانی خاموشش کنی"
+      },
+      "optionB": {
+        "en": "Be able to make anyone forget the last hour, but lose one of your own memories each time",
+        "fa": "بتوانی هر کسی را وادار کنی یک ساعت گذشته را فراموش کند، اما هر بار یکی از خاطرات خودت پاک شود"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-264",
+      "optionA": {
+        "en": "Live in a world where everyone is naked but no one feels shame",
+        "fa": "در دنیایی زندگی کنی که همه لخت‌اند ولی هیچ‌کس خجالت نمی‌کشد"
+      },
+      "optionB": {
+        "en": "Live in a world where everyone can see your most private fantasy as a halo",
+        "fa": "در دنیایی زندگی کنی که همه می‌توانند خصوصی‌ترین خیال‌پردازی‌ات را مثل یک هاله ببینند"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-265",
+      "optionA": {
+        "en": "Swap bodies with a stranger for a week with no warning to either of you",
+        "fa": "یک هفته بدون هیچ هشداری با یک غریبه جابه‌جا شوی"
+      },
+      "optionB": {
+        "en": "Keep your body but have a stranger control it for one wild night each month",
+        "fa": "بدنت برای خودت بماند ولی هر ماه یک شب وحشی یک غریبه کنترلش را به دست بگیرد"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-266",
+      "optionA": {
+        "en": "Be irresistibly attractive to everyone but never know who's sincere",
+        "fa": "برای همه به‌طرز مقاومت‌ناپذیری جذاب باشی ولی هیچ‌وقت ندانی چه کسی صادق است"
+      },
+      "optionB": {
+        "en": "Be invisible to everyone you desire but adored by everyone you don't",
+        "fa": "برای هر که می‌خواهی نامرئی باشی ولی هر که نمی‌خواهی عاشقت باشد"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-267",
+      "optionA": {
+        "en": "Have a button that pauses time but ages you a day each press",
+        "fa": "دکمه‌ای داشته باشی که زمان را متوقف می‌کند ولی هر بار فشار یک روز پیرت می‌کند"
+      },
+      "optionB": {
+        "en": "Have a button that rewinds time one hour but everyone remembers what you did",
+        "fa": "دکمه‌ای داشته باشی که زمان را یک ساعت به عقب می‌برد ولی همه کاری که کردی را به یاد می‌آورند"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-268",
+      "optionA": {
+        "en": "Be the last person alive on Earth with unlimited everything",
+        "fa": "آخرین آدم زنده روی زمین باشی با همه‌چیز نامحدود"
+      },
+      "optionB": {
+        "en": "Live forever in a crowded world where you never get a moment alone",
+        "fa": "تا ابد در دنیایی شلوغ زندگی کنی که هرگز یک لحظه تنهایی نداری"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-269",
+      "optionA": {
+        "en": "Wake up in the body of your wildest celebrity crush for 24 hours",
+        "fa": "۲۴ ساعت در بدن وحشی‌ترین آدم مشهوری که دوست داری بیدار شوی"
+      },
+      "optionB": {
+        "en": "Spend 24 hours as your own future self at age 80",
+        "fa": "۲۴ ساعت را به‌جای خودِ آینده‌ات در ۸۰ سالگی بگذرانی"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-270",
+      "optionA": {
+        "en": "Have everything you say out loud come true, but only if you whisper it during sex",
+        "fa": "هر چیزی که با صدای بلند بگویی محقق شود، اما فقط اگر هنگام رابطه نجوا کنی"
+      },
+      "optionB": {
+        "en": "Read the exact thoughts of anyone you've kissed, forever",
+        "fa": "تا ابد افکار دقیق هر کسی را که بوسیده‌ای بخوانی"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-271",
+      "optionA": {
+        "en": "Be teleported to a random bed somewhere on Earth every time you fall asleep",
+        "fa": "هر بار که بخوابی به تخت تصادفی جایی روی زمین تله‌پورت شوی"
+      },
+      "optionB": {
+        "en": "Stay in your bed forever but it shrinks one inch every night",
+        "fa": "برای همیشه در تخت خودت بمانی ولی هر شب یک اینچ کوچک‌تر شود"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-272",
+      "optionA": {
+        "en": "Be able to seduce anyone with a single sentence but forget it instantly",
+        "fa": "بتوانی هر کسی را با یک جمله اغوا کنی ولی فوراً آن را فراموش کنی"
+      },
+      "optionB": {
+        "en": "Remember every flirtation ever aimed at you but be unable to act on any",
+        "fa": "هر لاسی که تا حالا با تو شده را به یاد بیاوری ولی نتوانی روی هیچ‌کدام عمل کنی"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-273",
+      "optionA": {
+        "en": "Live a life where every door leads to a different decade",
+        "fa": "در زندگی‌ای باشی که هر در به یک دهه‌ی متفاوت باز می‌شود"
+      },
+      "optionB": {
+        "en": "Live a life where every mirror shows a different version of who you could be",
+        "fa": "در زندگی‌ای باشی که هر آینه نسخه‌ای متفاوت از کسی که می‌توانستی بشوی را نشان می‌دهد"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-274",
+      "optionA": {
+        "en": "Be able to taste any food just by looking at a photo of it",
+        "fa": "بتوانی طعم هر غذایی را فقط با نگاه کردن به عکسش بچشی"
+      },
+      "optionB": {
+        "en": "Be able to feel any touch you imagine as if it were real",
+        "fa": "بتوانی هر لمسی را که تصور می‌کنی طوری حس کنی که انگار واقعی است"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-275",
+      "optionA": {
+        "en": "Trade places with the most desired person in the world but for only one night",
+        "fa": "جایت را با خواستنی‌ترین آدم دنیا عوض کنی ولی فقط برای یک شب"
+      },
+      "optionB": {
+        "en": "Become the secret crush of everyone you meet but never be told",
+        "fa": "به عشق پنهان هر کسی که می‌بینی تبدیل شوی ولی هرگز به تو گفته نشود"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-276",
+      "optionA": {
+        "en": "Have one wild superpower that only works when you're completely drunk",
+        "fa": "یک ابرقدرت وحشی داشته باشی که فقط وقتی کاملاً مست هستی کار کند"
+      },
+      "optionB": {
+        "en": "Have flawless control of your body but lose all inhibition every full moon",
+        "fa": "کنترل بی‌نقص بدنت را داشته باشی ولی هر ماه کامل تمام بازدارندگی‌ات را از دست بدهی"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-277",
+      "optionA": {
+        "en": "Wake up one day with no memory of who you slept with, but everyone else remembers",
+        "fa": "یک روز بدون هیچ خاطره‌ای از کسانی که با آن‌ها خوابیده‌ای بیدار شوی، ولی بقیه به یاد می‌آورند"
+      },
+      "optionB": {
+        "en": "Remember every detail forever but be unable to ever speak about it",
+        "fa": "تا ابد هر جزئیات را به یاد بیاوری ولی هرگز نتوانی درباره‌اش حرف بزنی"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-278",
+      "optionA": {
+        "en": "Be granted a clone of yourself who acts on every impulse you suppress",
+        "fa": "یک نسخه‌ی شبیه‌سازی‌شده از خودت داشته باشی که هر تکانه‌ای را که سرکوب می‌کنی انجام می‌دهد"
+      },
+      "optionB": {
+        "en": "Be able to delete one impulse forever but also one good trait with it",
+        "fa": "بتوانی یک تکانه را برای همیشه پاک کنی ولی همراهش یک ویژگی خوب هم برود"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-279",
+      "optionA": {
+        "en": "Live in a world where lying is physically impossible during pillow talk",
+        "fa": "در دنیایی زندگی کنی که دروغ گفتن هنگام صحبت در رختخواب فیزیکی غیرممکن است"
+      },
+      "optionB": {
+        "en": "Live in a world where every secret desire glows on your skin when you're aroused",
+        "fa": "در دنیایی زندگی کنی که هر آرزوی پنهانت وقتی تحریک می‌شوی روی پوستت می‌درخشد"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-280",
+      "optionA": {
+        "en": "Be able to summon any person to your bedroom but they choose whether to stay",
+        "fa": "بتوانی هر کسی را به اتاق‌خوابت احضار کنی ولی او انتخاب می‌کند که بماند یا نه"
+      },
+      "optionB": {
+        "en": "Be summoned by anyone who wants you, with no say in when",
+        "fa": "هر کسی که تو را بخواهد بتواند احضارت کند، بدون اینکه تو در زمانش حرفی داشته باشی"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-281",
+      "optionA": {
+        "en": "Have a dream every night so real you can't tell which life is the dream",
+        "fa": "هر شب رویایی چنان واقعی ببینی که نتوانی تشخیص دهی کدام زندگی رویاست"
+      },
+      "optionB": {
+        "en": "Never dream again but live one extra reckless lifetime in your sleep, once",
+        "fa": "دیگر هرگز رویا نبینی ولی یک‌بار یک عمر بی‌پروای اضافه را در خواب زندگی کنی"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-282",
+      "optionA": {
+        "en": "Be able to make anyone fall madly in love with you for exactly 48 hours",
+        "fa": "بتوانی هر کسی را دقیقاً ۴۸ ساعت دیوانه‌وار عاشق خودت کنی"
+      },
+      "optionB": {
+        "en": "Make one person love you forever but you can never touch them",
+        "fa": "یک نفر را برای همیشه عاشق خودت کنی ولی هرگز نتوانی لمسش کنی"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-283",
+      "optionA": {
+        "en": "Wake up irresistibly skilled at everything in the bedroom but clumsy everywhere else",
+        "fa": "در رختخواب در هر کاری به‌طرز مقاومت‌ناپذیری ماهر بیدار شوی ولی همه‌جای دیگر دست‌وپاچلفتی باشی"
+      },
+      "optionB": {
+        "en": "Be brilliant at everything in life but freeze the moment things get intimate",
+        "fa": "در همه‌چیزِ زندگی فوق‌العاده باشی ولی لحظه‌ای که اوضاع صمیمی می‌شود قفل کنی"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-284",
+      "optionA": {
+        "en": "Live as the opposite gender for a year then choose which life to keep",
+        "fa": "یک سال به‌عنوان جنس مخالف زندگی کنی و بعد انتخاب کنی کدام زندگی را نگه داری"
+      },
+      "optionB": {
+        "en": "Switch genders randomly every morning for the rest of your life",
+        "fa": "تا آخر عمر هر صبح جنسیتت تصادفی عوض شود"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-285",
+      "optionA": {
+        "en": "Have the power to undress anyone with a blink, but it's permanent for the day",
+        "fa": "قدرت لخت کردن هر کسی با یک پلک زدن را داشته باشی، ولی تا آخر آن روز ماندگار باشد"
+      },
+      "optionB": {
+        "en": "Have x-ray vision you can never switch off in any crowd",
+        "fa": "دید اشعه‌ی ایکس داشته باشی که در هیچ جمعیتی نتوانی خاموشش کنی"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-286",
+      "optionA": {
+        "en": "Be reborn as the most scandalous person in history and relive their life",
+        "fa": "دوباره به‌عنوان رسوایی‌ترین آدم تاریخ متولد شوی و زندگی‌اش را دوباره زندگی کنی"
+      },
+      "optionB": {
+        "en": "Stay yourself but inherit one shocking secret from every ancestor you had",
+        "fa": "خودت بمانی ولی یک راز شوکه‌کننده از هر یک از اجدادت را به ارث ببری"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-287",
+      "optionA": {
+        "en": "Be able to feel exactly what your partner feels during every touch",
+        "fa": "بتوانی دقیقاً همان چیزی را که شریکت هنگام هر لمس حس می‌کند حس کنی"
+      },
+      "optionB": {
+        "en": "Be able to broadcast your own pleasure to anyone within ten meters",
+        "fa": "بتوانی لذت خودت را به هر کسی در فاصله‌ی ده‌متری پخش کنی"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-288",
+      "optionA": {
+        "en": "Wake up in a world where everyone's number of past lovers floats above their head",
+        "fa": "در دنیایی بیدار شوی که تعداد عشاق گذشته‌ی هرکس بالای سرش معلق است"
+      },
+      "optionB": {
+        "en": "Wake up in a world where everyone hears your inner monologue during dates",
+        "fa": "در دنیایی بیدار شوی که همه هنگام قرارهایت تک‌گویی درونی‌ات را می‌شنوند"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-289",
+      "optionA": {
+        "en": "Have one night with anyone in history but forget your real life for a week after",
+        "fa": "یک شب با هر کسی در تاریخ داشته باشی ولی یک هفته بعدش زندگی واقعی‌ات را فراموش کنی"
+      },
+      "optionB": {
+        "en": "Relive your single most thrilling night on loop for one full month",
+        "fa": "هیجان‌انگیزترین شب زندگی‌ات را یک ماه کامل به‌صورت تکرار زندگی کنی"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-290",
+      "optionA": {
+        "en": "Be able to shapeshift into anyone but lose your real face a little each time",
+        "fa": "بتوانی به شکل هرکسی دربیایی ولی هر بار کمی از چهره‌ی واقعی‌ات را از دست بدهی"
+      },
+      "optionB": {
+        "en": "Keep your face forever but have everyone see you as a different person daily",
+        "fa": "چهره‌ات برای همیشه بماند ولی هرکس هر روز تو را آدمی متفاوت ببیند"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-291",
+      "optionA": {
+        "en": "Gain the ability to make any fantasy real for one minute a day",
+        "fa": "توانایی واقعی کردن هر خیالی را برای یک دقیقه در روز به دست آوری"
+      },
+      "optionB": {
+        "en": "Gain the ability to live inside any fantasy forever but never come back",
+        "fa": "توانایی زندگی درون هر خیالی را برای همیشه به دست آوری ولی هرگز برنگردی"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-292",
+      "optionA": {
+        "en": "Have a tattoo that names your true desire appear where everyone can see it",
+        "fa": "خالکوبی‌ای داشته باشی که نام آرزوی واقعی‌ات را جایی که همه می‌بینند نشان می‌دهد"
+      },
+      "optionB": {
+        "en": "Have everyone's true desire for you whispered in your ear constantly",
+        "fa": "آرزوی واقعی همه نسبت به خودت مدام در گوشت نجوا شود"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-293",
+      "optionA": {
+        "en": "Wake up able to speak every language but only seductively",
+        "fa": "با توانایی صحبت به هر زبانی بیدار شوی ولی فقط به شکل اغواگرانه"
+      },
+      "optionB": {
+        "en": "Wake up mute but able to make anyone blush with a single glance",
+        "fa": "لال بیدار شوی ولی بتوانی هرکسی را با یک نگاه سرخ کنی"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-294",
+      "optionA": {
+        "en": "Live in a world where one wish a year always backfires deliciously",
+        "fa": "در دنیایی زندگی کنی که سالی یک آرزو همیشه به شکلی لذت‌بخش برعکس می‌شود"
+      },
+      "optionB": {
+        "en": "Live in a world where your wishes come true only for the person beside you",
+        "fa": "در دنیایی زندگی کنی که آرزوهایت فقط برای کسی که کنارت است محقق می‌شوند"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-295",
+      "optionA": {
+        "en": "Be able to pause anyone's heartbeat with a kiss for one thrilling second",
+        "fa": "بتوانی با یک بوسه ضربان قلب هرکسی را برای یک ثانیه‌ی هیجان‌انگیز متوقف کنی"
+      },
+      "optionB": {
+        "en": "Be able to make anyone's heart race uncontrollably just by entering a room",
+        "fa": "بتوانی فقط با وارد شدن به یک اتاق قلب هرکسی را به‌طرز مهارناپذیری به تپش بیندازی"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-296",
+      "optionA": {
+        "en": "Wake up tomorrow with one secret of every person you've ever slept with revealed to you",
+        "fa": "فردا با فاش شدن یک راز از هر کسی که تا حالا با او خوابیده‌ای بیدار شوی"
+      },
+      "optionB": {
+        "en": "Have one of your own secrets revealed at random to a new person every day",
+        "fa": "هر روز یکی از رازهای خودت به‌صورت تصادفی برای یک نفر جدید فاش شود"
+      },
+      "intensity": "risky"
+    },
+    {
+      "id": "wyr-gen-297",
+      "optionA": {
+        "en": "Have your search history read aloud at a family dinner",
+        "fa": "تاریخچه جست‌وجوت رو سر شام خانوادگی با صدای بلند بخونن"
+      },
+      "optionB": {
+        "en": "Have your last ten texts to your crush projected on a wall",
+        "fa": "ده پیام آخرت به کسی که دوستش داری روی دیوار نمایش بدن"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-298",
+      "optionA": {
+        "en": "Be caught flirting with someone you shouldn't",
+        "fa": "موقع لاس زدن با کسی که نباید، مچت رو بگیرن"
+      },
+      "optionB": {
+        "en": "Be caught practising your flirting in the mirror",
+        "fa": "موقع تمرین لاس زدن جلوی آینه مچت رو بگیرن"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-299",
+      "optionA": {
+        "en": "Moan someone's name in your sleep next to your partner",
+        "fa": "کنار شریک زندگیت توی خواب اسم یکی دیگه رو با ناله صدا بزنی"
+      },
+      "optionB": {
+        "en": "Call your partner by your ex's name out loud",
+        "fa": "شریک زندگیت رو بلند با اسم اکست صدا بزنی"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-300",
+      "optionA": {
+        "en": "Have one drunk voicemail to your ex go viral",
+        "fa": "یه پیام صوتی مستی‌ت به اکست وایرال بشه"
+      },
+      "optionB": {
+        "en": "Have your saved 'do not text after midnight' list leaked",
+        "fa": "لیست «بعد نصفه‌شب بهش پیام نده»‌ت لو بره"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-301",
+      "optionA": {
+        "en": "Let your partner read every flirty DM you've ever sent",
+        "fa": "بذاری شریکت همه‌ی پیام‌های ناز و خط‌ونشونی که فرستادی رو بخونه"
+      },
+      "optionB": {
+        "en": "Let your partner watch a replay of every time you've checked someone out",
+        "fa": "بذاری شریکت بازپخش هر باری که کسی رو دید زدی رو ببینه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-302",
+      "optionA": {
+        "en": "Accidentally like a stranger's photo from three years ago",
+        "fa": "تصادفی عکس سه سال پیش یه غریبه رو لایک کنی"
+      },
+      "optionB": {
+        "en": "Accidentally send a screenshot of someone to that exact someone",
+        "fa": "تصادفی اسکرین‌شاتی از یه نفر رو دقیقاً برای همون نفر بفرستی"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-303",
+      "optionA": {
+        "en": "Have everyone learn the nickname you call your partner in private",
+        "fa": "همه اسم مستعاری که خصوصی شریکت رو صدا می‌زنی بفهمن"
+      },
+      "optionB": {
+        "en": "Have everyone hear the playlist you saved for date nights",
+        "fa": "همه پلی‌لیستی که برای شب‌های قرار ذخیره کردی رو بشنون"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-304",
+      "optionA": {
+        "en": "Wear a shirt that lists your three worst dating habits",
+        "fa": "تی‌شرتی بپوشی که سه تا بدترین عادت قرارگذاریت رو لیست کرده"
+      },
+      "optionB": {
+        "en": "Wear a shirt that ranks your exes from best to worst",
+        "fa": "تی‌شرتی بپوشی که اکس‌هات رو از بهترین تا بدترین رتبه‌بندی کرده"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-305",
+      "optionA": {
+        "en": "Be honest about every white lie you've told a date",
+        "fa": "درباره هر دروغ مصلحتی که سر قرار گفتی صادق باشی"
+      },
+      "optionB": {
+        "en": "Be honest about every time you faked being busy to avoid one",
+        "fa": "درباره هر باری که برای فرار از قرار وانمود کردی سرت شلوغه صادق باشی"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-306",
+      "optionA": {
+        "en": "Have your flirting style narrated by a sports commentator",
+        "fa": "یه گزارشگر ورزشی استایل لاس زدنت رو گزارش کنه"
+      },
+      "optionB": {
+        "en": "Have your rejections replayed in dramatic slow motion",
+        "fa": "دست رد خوردن‌هات با اسلوموشن دراماتیک بازپخش بشه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-307",
+      "optionA": {
+        "en": "Swap phones with your crush for one hour",
+        "fa": "یه ساعت گوشیت رو با کسی که دوستش داری عوض کنی"
+      },
+      "optionB": {
+        "en": "Swap phones with your ex for one hour",
+        "fa": "یه ساعت گوشیت رو با اکست عوض کنی"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-308",
+      "optionA": {
+        "en": "Confess your wildest fantasy to a room of strangers",
+        "fa": "جسورانه‌ترین رویای ذهنیت رو به یه اتاق پر از غریبه اعتراف کنی"
+      },
+      "optionB": {
+        "en": "Confess it only to the one person it's about",
+        "fa": "فقط به همون یه نفری که موضوعشه اعتراف کنی"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-309",
+      "optionA": {
+        "en": "Have a billboard reveal your celebrity crush in your hometown",
+        "fa": "یه بیلبورد توی شهرت کراش سلبریتی‌ت رو فاش کنه"
+      },
+      "optionB": {
+        "en": "Have a billboard reveal how many times you've stalked their profile",
+        "fa": "یه بیلبورد فاش کنه چند بار پروفایلش رو زیر و رو کردی"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-310",
+      "optionA": {
+        "en": "Be set up on a blind date by your most chaotic friend",
+        "fa": "شلوغ‌ترین دوستت یه قرار کور برات جور کنه"
+      },
+      "optionB": {
+        "en": "Be set up on a blind date by your mother",
+        "fa": "مادرت یه قرار کور برات جور کنه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-311",
+      "optionA": {
+        "en": "Have your inner monologue on a first date played out loud",
+        "fa": "تک‌گویی درونیت توی قرار اول با صدای بلند پخش بشه"
+      },
+      "optionB": {
+        "en": "Have your date's inner monologue about you played out loud",
+        "fa": "تک‌گویی درونی طرف قرارت درباره‌ی تو با صدای بلند پخش بشه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-312",
+      "optionA": {
+        "en": "Send a risky text and get left on read for a week",
+        "fa": "یه پیام جسورانه بفرستی و یه هفته بی‌جواب بمونی"
+      },
+      "optionB": {
+        "en": "Send it to the wrong chat entirely",
+        "fa": "همون پیام رو کاملاً به چت اشتباه بفرستی"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-313",
+      "optionA": {
+        "en": "Have your dating app bio rewritten by your nosiest relative",
+        "fa": "فضول‌ترین فامیلت بیوی اپ دوست‌یابیت رو بازنویسی کنه"
+      },
+      "optionB": {
+        "en": "Have it rewritten by your last three exes together",
+        "fa": "سه اکس آخرت با هم بیوت رو بازنویسی کنن"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-314",
+      "optionA": {
+        "en": "Reveal the pet name you secretly hate being called",
+        "fa": "اسم مستعاری که از مخفیانه شنیدنش متنفری رو فاش کنی"
+      },
+      "optionB": {
+        "en": "Reveal the pet name you secretly love being called",
+        "fa": "اسم مستعاری که مخفیانه عاشق شنیدنشی رو فاش کنی"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-315",
+      "optionA": {
+        "en": "Have everyone you've ghosted show up at your party",
+        "fa": "همه‌ی کسایی که قال گذاشتی توی مهمونیت پیداشون بشه"
+      },
+      "optionB": {
+        "en": "Have everyone who ghosted you show up at your party",
+        "fa": "همه‌ی کسایی که قالت گذاشتن توی مهمونیت پیداشون بشه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-316",
+      "optionA": {
+        "en": "Dance way too close to a stranger at a wedding",
+        "fa": "سر یه عروسی خیلی نزدیک به یه غریبه برقصی"
+      },
+      "optionB": {
+        "en": "Get caught winking at the wrong person across the room",
+        "fa": "موقع چشمک زدن به آدم اشتباه اون‌ور سالن مچت رو بگیرن"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-317",
+      "optionA": {
+        "en": "Have your flirtatious texts auto-corrected to brutal honesty",
+        "fa": "پیام‌های دلبرانه‌ت خودکار به صداقت بی‌رحم تبدیل بشن"
+      },
+      "optionB": {
+        "en": "Have your honest texts auto-corrected to over-the-top flirting",
+        "fa": "پیام‌های صادقانه‌ت خودکار به لاس زدن اغراق‌آمیز تبدیل بشن"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-318",
+      "optionA": {
+        "en": "Tell your crush exactly what you think when they walk in",
+        "fa": "به کراشت دقیقاً بگی موقع ورودش چی فکر می‌کنی"
+      },
+      "optionB": {
+        "en": "Have your face show it whether you want to or not",
+        "fa": "بخوای نخوای صورتت لوش بده"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-319",
+      "optionA": {
+        "en": "Be the friend who always overshares about their love life",
+        "fa": "همون دوستی باشی که همیشه از زندگی عاشقانه‌ش زیادی تعریف می‌کنه"
+      },
+      "optionB": {
+        "en": "Be the friend whose love life everyone speculates about endlessly",
+        "fa": "همون دوستی باشی که همه بی‌وقفه درباره زندگی عاشقانه‌ش حدس می‌زنن"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-320",
+      "optionA": {
+        "en": "Have a truth serum kick in at your in-laws' dinner",
+        "fa": "سر شام خونه‌ی خانواده‌ی همسرت سرم راستگویی روت اثر کنه"
+      },
+      "optionB": {
+        "en": "Have it kick in during a first date",
+        "fa": "وسط قرار اول روت اثر کنه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-321",
+      "optionA": {
+        "en": "Let your group chat decide who you date for a month",
+        "fa": "بذاری گروه چتت تصمیم بگیره یه ماه با کی قرار بذاری"
+      },
+      "optionB": {
+        "en": "Let your group chat narrate every date in real time",
+        "fa": "بذاری گروه چتت هر قرار رو لحظه‌به‌لحظه گزارش کنه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-322",
+      "optionA": {
+        "en": "Have an alarm blare your real opinion of every guest",
+        "fa": "یه زنگ هشدار نظر واقعیت درباره هر مهمون رو جار بزنه"
+      },
+      "optionB": {
+        "en": "Have a sign reveal which guest you'd secretly date",
+        "fa": "یه تابلو فاش کنه مخفیانه با کدوم مهمون قرار می‌ذاشتی"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-323",
+      "optionA": {
+        "en": "Recreate your most awkward kiss in front of friends",
+        "fa": "معذب‌کننده‌ترین بوسه‌ت رو جلوی دوستات بازسازی کنی"
+      },
+      "optionB": {
+        "en": "Describe it in painful detail instead",
+        "fa": "به‌جاش با جزئیات دردناک تعریفش کنی"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-324",
+      "optionA": {
+        "en": "Have your 'type' announced over the office intercom",
+        "fa": "تیپ موردپسندت از بلندگوی اداره اعلام بشه"
+      },
+      "optionB": {
+        "en": "Have your dealbreakers announced instead",
+        "fa": "به‌جاش خط قرمزهات اعلام بشه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-325",
+      "optionA": {
+        "en": "Wake up able to hear every flirty thought aimed at you",
+        "fa": "بیدار شی و بتونی هر فکر دلبرانه‌ای که سمتته رو بشنوی"
+      },
+      "optionB": {
+        "en": "Wake up unable to hide any flirty thought you have",
+        "fa": "بیدار شی و نتونی هیچ فکر دلبرانه‌ای که داری رو پنهان کنی"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-326",
+      "optionA": {
+        "en": "Have your bad pickup lines graded by a panel live",
+        "fa": "تیکه‌های مخ‌زنی افتضاحت رو یه هیئت داوران زنده نمره بدن"
+      },
+      "optionB": {
+        "en": "Have your best ones stolen and used against you",
+        "fa": "بهترین‌هاش رو بدزدن و علیه خودت استفاده کنن"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-327",
+      "optionA": {
+        "en": "Be locked in an elevator with the one you ghosted",
+        "fa": "با کسی که قالش گذاشتی توی آسانسور حبس بشی"
+      },
+      "optionB": {
+        "en": "Be locked in an elevator with the one who broke your heart",
+        "fa": "با کسی که دلت رو شکست توی آسانسور حبس بشی"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-328",
+      "optionA": {
+        "en": "Have your blush turn neon every time you lie about a crush",
+        "fa": "هر بار درباره کراشت دروغ بگی، سرخ شدنت نئونی بشه"
+      },
+      "optionB": {
+        "en": "Have a drumroll play every time you fancy someone new",
+        "fa": "هر بار از یکی خوشت بیاد یه نقاره بزنن"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-329",
+      "optionA": {
+        "en": "Let your ex give the toast at your next big celebration",
+        "fa": "بذاری اکست توی جشن بزرگ بعدیت سخنرانی کنه"
+      },
+      "optionB": {
+        "en": "Let your future date hear that toast beforehand",
+        "fa": "بذاری طرف قرار آینده‌ت قبلش اون سخنرانی رو بشنوه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-330",
+      "optionA": {
+        "en": "Have the lights flash whenever you're attracted to someone",
+        "fa": "هر وقت از کسی خوشت بیاد چراغ‌ها چشمک بزنن"
+      },
+      "optionB": {
+        "en": "Have a tiny voice say it out loud for you",
+        "fa": "یه صدای کوچولو به‌جات بلند بگه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-331",
+      "optionA": {
+        "en": "Reveal the most embarrassing thing you've done for love",
+        "fa": "شرم‌آورترین کاری که برای عشق کردی رو فاش کنی"
+      },
+      "optionB": {
+        "en": "Reveal the pettiest thing you've done after heartbreak",
+        "fa": "حقیرترین کاری که بعد دل‌شکستگی کردی رو فاش کنی"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-332",
+      "optionA": {
+        "en": "Have your flirtiest selfie become your passport photo forever",
+        "fa": "دلبرانه‌ترین سلفیت برای همیشه عکس پاسپورتت بشه"
+      },
+      "optionB": {
+        "en": "Have your worst breakup text become your ringtone",
+        "fa": "بدترین پیام جدایی‌ت زنگ گوشیت بشه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-333",
+      "optionA": {
+        "en": "Date someone breathtakingly hot who bores you in conversation",
+        "fa": "با کسی نفس‌گیر جذاب باشی که حرف‌زدن باهاش خسته‌کننده‌ست"
+      },
+      "optionB": {
+        "en": "Date someone average-looking who keeps you up talking all night",
+        "fa": "با کسی معمولی باشی که تا صبح حرف‌زدن باهاش بیدارت نگه می‌داره"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-334",
+      "optionA": {
+        "en": "Read every text your partner ever sent their ex",
+        "fa": "همه پیام‌هایی که پارتنرت تا حالا به اکسش داده رو بخونی"
+      },
+      "optionB": {
+        "en": "Let them read every text you ever sent yours",
+        "fa": "بذاری اونا همه پیام‌هایی که تو به اکست دادی رو بخونن"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-335",
+      "optionA": {
+        "en": "Have mind-blowing chemistry but constant fights",
+        "fa": "یک شیمی بی‌نظیر داشته باشی ولی دائم دعوا کنید"
+      },
+      "optionB": {
+        "en": "Have a calm, peaceful bond with zero spark",
+        "fa": "یک رابطه آروم و بی‌دردسر داشته باشی ولی هیچ جرقه‌ای نباشه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-336",
+      "optionA": {
+        "en": "Find out your crush likes you only after they move away",
+        "fa": "بفهمی کراشت دوستت داره فقط بعد از اینکه رفته"
+      },
+      "optionB": {
+        "en": "Never know if your crush ever liked you back",
+        "fa": "هیچ‌وقت نفهمی کراشت اصلاً دوستت داشته یا نه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-337",
+      "optionA": {
+        "en": "Marry your soulmate and stay broke forever",
+        "fa": "با عشق واقعیت ازدواج کنی و تا ابد بی‌پول بمونی"
+      },
+      "optionB": {
+        "en": "Marry for money and feel nothing in bed",
+        "fa": "به خاطر پول ازدواج کنی و توی رختخواب هیچ حسی نداشته باشی"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-338",
+      "optionA": {
+        "en": "Date a jealous partner who adores you",
+        "fa": "با پارتنر حسودی باشی که می‌پرستت‌ت"
+      },
+      "optionB": {
+        "en": "Date a chill partner who barely notices you",
+        "fa": "با پارتنر بی‌خیالی باشی که تقریباً اصلاً حواسش بهت نیست"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-339",
+      "optionA": {
+        "en": "Have one unforgettable night with a stranger",
+        "fa": "یک شب فراموش‌نشدنی با یک غریبه داشته باشی"
+      },
+      "optionB": {
+        "en": "Have a lukewarm decade with someone safe",
+        "fa": "یک دهه ولرم با کسی امن و بی‌خطر داشته باشی"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-340",
+      "optionA": {
+        "en": "Know the exact moment your partner will leave you",
+        "fa": "دقیقاً لحظه‌ای که پارتنرت ترکت می‌کنه رو بدونی"
+      },
+      "optionB": {
+        "en": "Know exactly how many people they've slept with",
+        "fa": "دقیقاً بدونی با چند نفر خوابیده"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-341",
+      "optionA": {
+        "en": "Be irresistibly flirty but unable to commit",
+        "fa": "به‌شدت دلربا و عشوه‌گر باشی ولی نتونی پایبند بمونی"
+      },
+      "optionB": {
+        "en": "Be deeply loyal but awkward and shy with everyone",
+        "fa": "به‌شدت وفادار باشی ولی با همه دست‌وپاچلفتی و خجالتی باشی"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-342",
+      "optionA": {
+        "en": "Have your partner text their ex 'goodnight' nightly",
+        "fa": "پارتنرت هر شب به اکسش 'شب‌بخیر' پیام بده"
+      },
+      "optionB": {
+        "en": "Have them keep a private folder of old flirty photos",
+        "fa": "یک پوشه مخفی از عکس‌های لوند قدیمی نگه داره"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-343",
+      "optionA": {
+        "en": "Date someone who's openly out of your league",
+        "fa": "با کسی باشی که آشکارا از تو سرتره"
+      },
+      "optionB": {
+        "en": "Date someone who openly thinks they settled for you",
+        "fa": "با کسی باشی که آشکارا فکر می‌کنه با تو از سر ناچاری ساخته"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-344",
+      "optionA": {
+        "en": "Fall for your best friend's ex",
+        "fa": "عاشق اکس بهترین دوستت بشی"
+      },
+      "optionB": {
+        "en": "Watch your best friend fall for your ex",
+        "fa": "ببینی بهترین دوستت عاشق اکس تو شده"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-345",
+      "optionA": {
+        "en": "Have a partner who's amazing in bed but lies constantly",
+        "fa": "پارتنری داشته باشی که توی رختخواب فوق‌العاده‌ست ولی دائم دروغ می‌گه"
+      },
+      "optionB": {
+        "en": "Have one who's painfully honest but cold under the sheets",
+        "fa": "یکی که دردناک رک و صادقه ولی زیر ملافه‌ها سرده"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-346",
+      "optionA": {
+        "en": "Let your partner pick your outfits for a year",
+        "fa": "بذاری پارتنرت یک سال لباس‌هات رو انتخاب کنه"
+      },
+      "optionB": {
+        "en": "Let them pick everyone you're allowed to text",
+        "fa": "بذاری اون انتخاب کنه به کی اجازه داری پیام بدی"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-347",
+      "optionA": {
+        "en": "Date someone whose family hates you",
+        "fa": "با کسی باشی که خانواده‌اش ازت متنفره"
+      },
+      "optionB": {
+        "en": "Date someone whose ex still lives with them",
+        "fa": "با کسی باشی که اکسش هنوز باهاش زندگی می‌کنه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-348",
+      "optionA": {
+        "en": "Always orgasm but never feel emotionally close",
+        "fa": "همیشه به اوج برسی ولی هیچ‌وقت احساس نزدیکی عاطفی نکنی"
+      },
+      "optionB": {
+        "en": "Always feel deeply connected but never physically satisfied",
+        "fa": "همیشه عمیقاً وصل باشی ولی هیچ‌وقت از نظر جسمی ارضا نشی"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-349",
+      "optionA": {
+        "en": "Reunite with the one who got away, now married",
+        "fa": "با کسی که از دستت رفت دوباره روبه‌رو بشی، که حالا متأهله"
+      },
+      "optionB": {
+        "en": "Never see them again but always wonder",
+        "fa": "دیگه هیچ‌وقت نبینیش ولی همیشه فکرش باشی"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-350",
+      "optionA": {
+        "en": "Have a partner who flirts with everyone but stays faithful",
+        "fa": "پارتنری داشته باشی که با همه لاس می‌زنه ولی وفادار می‌مونه"
+      },
+      "optionB": {
+        "en": "Have one who's reserved in public but secretly cheats",
+        "fa": "یکی که جلوی جمع باوقاره ولی پنهانی خیانت می‌کنه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-351",
+      "optionA": {
+        "en": "Know your partner's wildest fantasy involves someone else",
+        "fa": "بدونی داغ‌ترین فانتزی پارتنرت یکی دیگه‌ست"
+      },
+      "optionB": {
+        "en": "Never know any of your partner's fantasies at all",
+        "fa": "هیچ‌وقت هیچ‌کدوم از فانتزی‌های پارتنرت رو ندونی"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-352",
+      "optionA": {
+        "en": "Date a hopeless romantic who smothers you",
+        "fa": "با یک عاشق‌پیشه بی‌حد باشی که خفه‌ت می‌کنه"
+      },
+      "optionB": {
+        "en": "Date a free spirit who forgets your birthday",
+        "fa": "با یک روح آزاد باشی که تولدت رو فراموش می‌کنه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-353",
+      "optionA": {
+        "en": "Have everyone you date fall hard, then ghost you",
+        "fa": "هرکی باهاش دوست شدی شدید عاشق بشه، بعد غیبش بزنه"
+      },
+      "optionB": {
+        "en": "Have everyone stay forever but never truly desire you",
+        "fa": "همه برای همیشه بمونن ولی هیچ‌وقت واقعاً تو رو نخوان"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-354",
+      "optionA": {
+        "en": "Confess your feelings and get publicly rejected",
+        "fa": "احساست رو ابراز کنی و جلوی جمع رد بشی"
+      },
+      "optionB": {
+        "en": "Stay silent and watch them date someone worse",
+        "fa": "ساکت بمونی و ببینی با یکی بدتر دوست می‌شه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-355",
+      "optionA": {
+        "en": "Date someone who's a 10 in private, a 2 in public",
+        "fa": "با کسی باشی که خصوصی عالیه، جلوی جمع افتضاحه"
+      },
+      "optionB": {
+        "en": "Date someone who's a 10 in public, a 2 in private",
+        "fa": "با کسی باشی که جلوی جمع عالیه، خصوصی افتضاحه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-356",
+      "optionA": {
+        "en": "Have your dirtiest texts read aloud at your wedding",
+        "fa": "داغ‌ترین پیام‌هات توی عروسیت بلند خونده بشه"
+      },
+      "optionB": {
+        "en": "Have your search history shown to your in-laws",
+        "fa": "تاریخچه جستجوت به خانواده همسرت نشون داده بشه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-357",
+      "optionA": {
+        "en": "Date someone obsessed with their ex",
+        "fa": "با کسی باشی که وسواس اکسش رو داره"
+      },
+      "optionB": {
+        "en": "Date someone obsessed with their own reflection",
+        "fa": "با کسی باشی که وسواس تصویر خودش توی آینه رو داره"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-358",
+      "optionA": {
+        "en": "Be loved fiercely by someone you only kind of like",
+        "fa": "کسی که فقط یه‌جورایی دوستش داری دیوانه‌وار عاشقت باشه"
+      },
+      "optionB": {
+        "en": "Quietly love someone who barely tolerates you",
+        "fa": "بی‌صدا عاشق کسی باشی که به‌زور تحملت می‌کنه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-359",
+      "optionA": {
+        "en": "Have a partner who's great until the lights go off",
+        "fa": "پارتنری داشته باشی که عالیه تا وقتی چراغ‌ها خاموش می‌شن"
+      },
+      "optionB": {
+        "en": "Have one who's electric in bed but exhausting all day",
+        "fa": "یکی که توی رختخواب برق می‌زنه ولی تموم روز خسته‌کننده‌ست"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-360",
+      "optionA": {
+        "en": "Get caught checking out someone on your anniversary",
+        "fa": "توی سالگردتون مچت رو موقع دید زدن یکی دیگه بگیرن"
+      },
+      "optionB": {
+        "en": "Catch your partner doing the same to you",
+        "fa": "مچ پارتنرت رو بگیری که داره با تو همین کارو می‌کنه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-361",
+      "optionA": {
+        "en": "Date someone who's perfect except they lie about their past",
+        "fa": "با کسی باشی که بی‌نقصه جز اینکه درباره گذشته‌اش دروغ می‌گه"
+      },
+      "optionB": {
+        "en": "Date someone whose ugly past is fully out in the open",
+        "fa": "با کسی باشی که گذشته زشتش کاملاً رو شده"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-362",
+      "optionA": {
+        "en": "Have a one-night stand you can never tell anyone about",
+        "fa": "یک رابطه یک‌شبه داشته باشی که هیچ‌وقت نتونی به کسی بگی"
+      },
+      "optionB": {
+        "en": "Have a crush everyone knows about except them",
+        "fa": "یک کراش داشته باشی که همه ازش خبر دارن جز خودش"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-363",
+      "optionA": {
+        "en": "Date someone who proposes after two weeks",
+        "fa": "با کسی باشی که بعد دو هفته بهت پیشنهاد ازدواج می‌ده"
+      },
+      "optionB": {
+        "en": "Date someone who won't define it after two years",
+        "fa": "با کسی باشی که بعد دو سال هم رابطه رو مشخص نمی‌کنه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-364",
+      "optionA": {
+        "en": "Have your partner's friends all secretly want you",
+        "fa": "همه دوست‌های پارتنرت پنهانی تو رو بخوان"
+      },
+      "optionB": {
+        "en": "Have your friends all secretly want your partner",
+        "fa": "همه دوست‌های تو پنهانی پارتنرت رو بخوان"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-365",
+      "optionA": {
+        "en": "Date someone irresistible who never says 'I love you'",
+        "fa": "با کسی وسوسه‌انگیز باشی که هیچ‌وقت نمی‌گه 'دوستت دارم'"
+      },
+      "optionB": {
+        "en": "Date someone plain who says it ten times a day",
+        "fa": "با کسی ساده باشی که روزی ده بار می‌گه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-366",
+      "optionA": {
+        "en": "Relive your most embarrassing date forever",
+        "fa": "شرم‌آورترین قرارت رو تا ابد دوباره زندگی کنی"
+      },
+      "optionB": {
+        "en": "Forget the best night of your love life entirely",
+        "fa": "بهترین شب زندگی عاشقانه‌ات رو کاملاً فراموش کنی"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-367",
+      "optionA": {
+        "en": "Date someone who's wildly passionate but cheats once a year",
+        "fa": "با کسی پرشور و آتشین باشی که سالی یک‌بار خیانت می‌کنه"
+      },
+      "optionB": {
+        "en": "Date someone faithful who hasn't touched you in a year",
+        "fa": "با کسی وفادار باشی که یک ساله بهت دست نزده"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "wyr-gen-368",
+      "optionA": {
+        "en": "Have a partner who's secretly recorded every fight",
+        "fa": "پارتنری داشته باشی که پنهانی همه دعواها رو ضبط کرده"
+      },
+      "optionB": {
+        "en": "Have one who's secretly told their mom everything",
+        "fa": "یکی که پنهانی همه‌چیز رو به مامانش گفته"
+      },
+      "intensity": "spicy"
     }
   ]
 }

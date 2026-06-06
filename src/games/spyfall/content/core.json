@@ -22,7 +22,7 @@
           }
         },
         {
-          "id": "flight_attendant",
+          "id": "flight-attendant",
           "name": {
             "en": "Flight Attendant",
             "fa": "مهماندار هواپیما"
@@ -36,28 +36,28 @@
           }
         },
         {
-          "id": "security_officer",
+          "id": "security-officer",
           "name": {
             "en": "Security Officer",
             "fa": "مأمور حراست"
           }
         },
         {
-          "id": "check_in_clerk",
+          "id": "check-in-clerk",
           "name": {
             "en": "Check-in Clerk",
             "fa": "متصدی باجه چک‌این"
           }
         },
         {
-          "id": "customs_officer",
+          "id": "customs-officer",
           "name": {
             "en": "Customs Officer",
             "fa": "مأمور گمرک"
           }
         },
         {
-          "id": "baggage_handler",
+          "id": "baggage-handler",
           "name": {
             "en": "Baggage Handler",
             "fa": "باربر چمدان‌ها"
@@ -175,7 +175,7 @@
           }
         },
         {
-          "id": "food_critic",
+          "id": "food-critic",
           "name": {
             "en": "Food Critic",
             "fa": "منتقد غذا"
@@ -220,21 +220,21 @@
           }
         },
         {
-          "id": "gym_teacher",
+          "id": "gym-teacher",
           "name": {
             "en": "Gym Teacher",
             "fa": "معلم ورزش"
           }
         },
         {
-          "id": "hall_monitor",
+          "id": "hall-monitor",
           "name": {
             "en": "Hall Monitor",
             "fa": "ناظم"
           }
         },
         {
-          "id": "parent",
+          "id": "visiting-parent",
           "name": {
             "en": "Visiting Parent",
             "fa": "اولیای دانش‌آموز"
@@ -258,7 +258,7 @@
           }
         },
         {
-          "id": "manager",
+          "id": "branch-manager",
           "name": {
             "en": "Branch Manager",
             "fa": "رئیس شعبه"
@@ -272,7 +272,7 @@
           }
         },
         {
-          "id": "guard",
+          "id": "security-guard",
           "name": {
             "en": "Security Guard",
             "fa": "نگهبان"
@@ -286,14 +286,14 @@
           }
         },
         {
-          "id": "loan_officer",
+          "id": "loan-officer",
           "name": {
             "en": "Loan Officer",
             "fa": "کارمند وام"
           }
         },
         {
-          "id": "armored_courier",
+          "id": "armored-courier",
           "name": {
             "en": "Armored Courier",
             "fa": "مأمور پول‌رسانی"
@@ -324,7 +324,7 @@
           }
         },
         {
-          "id": "ice_cream_vendor",
+          "id": "ice-cream-vendor",
           "name": {
             "en": "Ice-cream Vendor",
             "fa": "بستنی‌فروش دوره‌گرد"
@@ -352,7 +352,7 @@
           }
         },
         {
-          "id": "sandcastle_kid",
+          "id": "sandcastle-kid",
           "name": {
             "en": "Sandcastle Kid",
             "fa": "بچه‌ای که قلعه شنی می‌سازد"
@@ -376,7 +376,7 @@
           }
         },
         {
-          "id": "actor",
+          "id": "lead-actor",
           "name": {
             "en": "Lead Actor",
             "fa": "بازیگر نقش اول"
@@ -390,14 +390,14 @@
           }
         },
         {
-          "id": "makeup_artist",
+          "id": "makeup-artist",
           "name": {
             "en": "Makeup Artist",
             "fa": "گریمور"
           }
         },
         {
-          "id": "stunt_double",
+          "id": "stunt-double",
           "name": {
             "en": "Stunt Double",
             "fa": "بدلکار"
@@ -411,7 +411,7 @@
           }
         },
         {
-          "id": "sound_engineer",
+          "id": "sound-engineer",
           "name": {
             "en": "Sound Engineer",
             "fa": "صدابردار"
@@ -456,21 +456,21 @@
           }
         },
         {
-          "id": "vip_guest",
+          "id": "vip-guest",
           "name": {
             "en": "VIP Guest",
             "fa": "مهمان ویژه"
           }
         },
         {
-          "id": "pit_boss",
+          "id": "pit-boss",
           "name": {
             "en": "Pit Boss",
             "fa": "ناظر میزها"
           }
         },
         {
-          "id": "card_counter",
+          "id": "card-counter",
           "name": {
             "en": "Card Counter",
             "fa": "ورق‌شمار حرفه‌ای"
@@ -508,7 +508,7 @@
           }
         },
         {
-          "id": "fan",
+          "id": "die-hard-fan",
           "name": {
             "en": "Die-hard Fan",
             "fa": "هوادار دوآتشه"
@@ -529,7 +529,7 @@
           }
         },
         {
-          "id": "snack_seller",
+          "id": "snack-seller",
           "name": {
             "en": "Snack Seller",
             "fa": "تخمه‌فروش جایگاه"
@@ -612,7 +612,7 @@
           }
         },
         {
-          "id": "patrol_officer",
+          "id": "patrol-officer",
           "name": {
             "en": "Patrol Officer",
             "fa": "افسر گشت"
@@ -664,35 +664,35 @@
       },
       "roles": [
         {
-          "id": "ride_operator",
+          "id": "ride-operator",
           "name": {
             "en": "Ride Operator",
             "fa": "متصدی دستگاه‌ها"
           }
         },
         {
-          "id": "ticket_taker",
+          "id": "ticket-taker",
           "name": {
             "en": "Ticket Taker",
             "fa": "بلیت‌گیر"
           }
         },
         {
-          "id": "mascot",
+          "id": "costumed-mascot",
           "name": {
             "en": "Costumed Mascot",
             "fa": "عروسک تبلیغاتی"
           }
         },
         {
-          "id": "child",
+          "id": "excited-child",
           "name": {
             "en": "Excited Child",
             "fa": "بچه ذوق‌زده"
           }
         },
         {
-          "id": "cotton_candy_seller",
+          "id": "cotton-candy-seller",
           "name": {
             "en": "Cotton Candy Seller",
             "fa": "پشمک‌فروش"
@@ -706,7 +706,7 @@
           }
         },
         {
-          "id": "maintenance",
+          "id": "maintenance-worker",
           "name": {
             "en": "Maintenance Worker",
             "fa": "تعمیرکار دستگاه‌ها"
@@ -723,21 +723,21 @@
       },
       "roles": [
         {
-          "id": "owner",
+          "id": "teahouse-owner",
           "name": {
             "en": "Teahouse Owner",
             "fa": "قهوه‌چی"
           }
         },
         {
-          "id": "hookah_prep",
+          "id": "hookah-attendant",
           "name": {
             "en": "Hookah Attendant",
             "fa": "قلیون‌چی"
           }
         },
         {
-          "id": "regular",
+          "id": "regular-customer",
           "name": {
             "en": "Regular Customer",
             "fa": "مشتری همیشگی"
@@ -751,21 +751,21 @@
           }
         },
         {
-          "id": "dizi_cook",
+          "id": "dizi-cook",
           "name": {
             "en": "Dizi Cook",
             "fa": "آبگوشت‌پز"
           }
         },
         {
-          "id": "backgammon_player",
+          "id": "backgammon-player",
           "name": {
             "en": "Backgammon Player",
             "fa": "تخته‌نردباز"
           }
         },
         {
-          "id": "tea_server",
+          "id": "tea-server",
           "name": {
             "en": "Tea Server",
             "fa": "چای‌بیار"
@@ -782,14 +782,14 @@
       },
       "roles": [
         {
-          "id": "carpet_seller",
+          "id": "carpet-seller",
           "name": {
             "en": "Carpet Seller",
             "fa": "فرش‌فروش"
           }
         },
         {
-          "id": "spice_merchant",
+          "id": "spice-merchant",
           "name": {
             "en": "Spice Merchant",
             "fa": "عطار"
@@ -824,7 +824,7 @@
           }
         },
         {
-          "id": "tea_runner",
+          "id": "tea-runner",
           "name": {
             "en": "Tea Runner",
             "fa": "پادوی چای"
@@ -848,42 +848,42 @@
           }
         },
         {
-          "id": "custodian",
+          "id": "shrine-custodian",
           "name": {
             "en": "Shrine Custodian",
             "fa": "خادم حرم"
           }
         },
         {
-          "id": "reciter",
+          "id": "quran-reciter",
           "name": {
             "en": "Quran Reciter",
             "fa": "قاری قرآن"
           }
         },
         {
-          "id": "shoe_keeper",
+          "id": "shoe-keeper",
           "name": {
             "en": "Shoe Keeper",
             "fa": "کفش‌دار"
           }
         },
         {
-          "id": "vendor",
+          "id": "souvenir-vendor",
           "name": {
             "en": "Souvenir Vendor",
             "fa": "فروشنده سوغاتی"
           }
         },
         {
-          "id": "cleaner",
+          "id": "carpet-cleaner",
           "name": {
             "en": "Carpet Cleaner",
             "fa": "فرّاش حرم"
           }
         },
         {
-          "id": "guide",
+          "id": "pilgrim-guide",
           "name": {
             "en": "Pilgrim Guide",
             "fa": "راهنمای زائران"
@@ -935,14 +935,14 @@
           }
         },
         {
-          "id": "uninvited_guest",
+          "id": "uninvited-guest",
           "name": {
             "en": "Uninvited Guest",
             "fa": "مهمانِ ناخوانده"
           }
         },
         {
-          "id": "officiant",
+          "id": "marriage-registrar",
           "name": {
             "en": "Marriage Registrar",
             "fa": "عاقد"
@@ -959,35 +959,35 @@
       },
       "roles": [
         {
-          "id": "instructor",
+          "id": "ski-instructor",
           "name": {
             "en": "Ski Instructor",
             "fa": "مربی اسکی"
           }
         },
         {
-          "id": "beginner",
+          "id": "nervous-beginner",
           "name": {
             "en": "Nervous Beginner",
             "fa": "تازه‌کارِ دست‌وپاچلفتی"
           }
         },
         {
-          "id": "lift_operator",
+          "id": "lift-operator",
           "name": {
             "en": "Lift Operator",
             "fa": "متصدی تله‌کابین"
           }
         },
         {
-          "id": "rescue_patrol",
+          "id": "rescue-patrol",
           "name": {
             "en": "Rescue Patrol",
             "fa": "گروه امداد و نجات"
           }
         },
         {
-          "id": "cafe_owner",
+          "id": "lodge-caf-owner",
           "name": {
             "en": "Lodge Café Owner",
             "fa": "صاحب کافه‌ی کلبه"
@@ -1001,7 +1001,7 @@
           }
         },
         {
-          "id": "gear_renter",
+          "id": "gear-rental-clerk",
           "name": {
             "en": "Gear Rental Clerk",
             "fa": "متصدی کرایه‌ی وسایل"
@@ -1018,7 +1018,7 @@
       },
       "roles": [
         {
-          "id": "trainer",
+          "id": "personal-trainer",
           "name": {
             "en": "Personal Trainer",
             "fa": "مربی بدنسازی"
@@ -1046,14 +1046,14 @@
           }
         },
         {
-          "id": "yoga_instructor",
+          "id": "yoga-instructor",
           "name": {
             "en": "Yoga Instructor",
             "fa": "مربی یوگا"
           }
         },
         {
-          "id": "supplement_seller",
+          "id": "supplement-seller",
           "name": {
             "en": "Supplement Seller",
             "fa": "فروشنده‌ی مکمل"
@@ -1077,14 +1077,14 @@
       },
       "roles": [
         {
-          "id": "host",
+          "id": "show-host",
           "name": {
             "en": "Show Host",
             "fa": "مجری برنامه"
           }
         },
         {
-          "id": "guest",
+          "id": "celebrity-guest",
           "name": {
             "en": "Celebrity Guest",
             "fa": "مهمانِ سرشناس"
@@ -1098,28 +1098,28 @@
           }
         },
         {
-          "id": "camera_operator",
+          "id": "camera-operator",
           "name": {
             "en": "Camera Operator",
             "fa": "تصویربردار"
           }
         },
         {
-          "id": "audience",
+          "id": "studio-audience",
           "name": {
             "en": "Studio Audience",
             "fa": "تماشاگرِ استودیو"
           }
         },
         {
-          "id": "makeup_artist",
+          "id": "makeup-artist",
           "name": {
             "en": "Makeup Artist",
             "fa": "گریمور"
           }
         },
         {
-          "id": "floor_manager",
+          "id": "floor-manager",
           "name": {
             "en": "Floor Manager",
             "fa": "مدیر صحنه"
@@ -1136,7 +1136,7 @@
       },
       "roles": [
         {
-          "id": "scout_leader",
+          "id": "scout-leader",
           "name": {
             "en": "Scout Leader",
             "fa": "سرگروهِ طبیعت‌گردی"
@@ -1150,14 +1150,14 @@
           }
         },
         {
-          "id": "cook",
+          "id": "camp-cook",
           "name": {
             "en": "Camp Cook",
             "fa": "آشپزِ اردو"
           }
         },
         {
-          "id": "ranger",
+          "id": "park-ranger",
           "name": {
             "en": "Park Ranger",
             "fa": "محیط‌بان"
@@ -1171,14 +1171,14 @@
           }
         },
         {
-          "id": "lost_tourist",
+          "id": "lost-tourist",
           "name": {
             "en": "Lost Tourist",
             "fa": "گردشگرِ راه‌گم‌کرده"
           }
         },
         {
-          "id": "storyteller",
+          "id": "campfire-storyteller",
           "name": {
             "en": "Campfire Storyteller",
             "fa": "قصه‌گوی دور آتش"
@@ -1202,21 +1202,21 @@
           }
         },
         {
-          "id": "technician",
+          "id": "pharmacy-technician",
           "name": {
             "en": "Pharmacy Technician",
             "fa": "تکنسین داروخانه"
           }
         },
         {
-          "id": "sick_customer",
+          "id": "sick-customer",
           "name": {
             "en": "Sick Customer",
             "fa": "مشتریِ مریض‌احوال"
           }
         },
         {
-          "id": "delivery",
+          "id": "delivery-courier",
           "name": {
             "en": "Delivery Courier",
             "fa": "پیک دارو"
@@ -1230,14 +1230,14 @@
           }
         },
         {
-          "id": "sales_rep",
+          "id": "drug-sales-rep",
           "name": {
             "en": "Drug Sales Rep",
             "fa": "ویزیتورِ شرکت دارویی"
           }
         },
         {
-          "id": "insurance_clerk",
+          "id": "insurance-clerk",
           "name": {
             "en": "Insurance Clerk",
             "fa": "مسئولِ نسخه‌ی بیمه"
@@ -1268,28 +1268,28 @@
           }
         },
         {
-          "id": "collector",
+          "id": "wealthy-collector",
           "name": {
             "en": "Wealthy Collector",
             "fa": "کلکسیونرِ پولدار"
           }
         },
         {
-          "id": "critic",
+          "id": "art-critic",
           "name": {
             "en": "Art Critic",
             "fa": "منتقد هنری"
           }
         },
         {
-          "id": "guard",
+          "id": "gallery-guard",
           "name": {
             "en": "Gallery Guard",
             "fa": "نگهبانِ گالری"
           }
         },
         {
-          "id": "confused_visitor",
+          "id": "confused-visitor",
           "name": {
             "en": "Confused Visitor",
             "fa": "بازدیدکننده‌ی سردرگم"
@@ -2158,6 +2158,7322 @@
           "name": {
             "en": "Painter",
             "fa": "نقاش"
+          }
+        }
+      ]
+    },
+    {
+      "id": "airport-terminal",
+      "icon": "🛫",
+      "name": {
+        "en": "Airport Terminal",
+        "fa": "ترمینال فرودگاه"
+      },
+      "roles": [
+        {
+          "id": "check-in-agent",
+          "name": {
+            "en": "Check-in Agent",
+            "fa": "مأمور پذیرش"
+          }
+        },
+        {
+          "id": "security-screener",
+          "name": {
+            "en": "Security Screener",
+            "fa": "بازرس امنیتی"
+          }
+        },
+        {
+          "id": "gate-attendant",
+          "name": {
+            "en": "Gate Attendant",
+            "fa": "مأمور گیت"
+          }
+        },
+        {
+          "id": "baggage-handler",
+          "name": {
+            "en": "Baggage Handler",
+            "fa": "باربر چمدان"
+          }
+        },
+        {
+          "id": "duty-free-cashier",
+          "name": {
+            "en": "Duty-Free Cashier",
+            "fa": "صندوق‌دار فروشگاه معاف از مالیات"
+          }
+        },
+        {
+          "id": "customs-officer",
+          "name": {
+            "en": "Customs Officer",
+            "fa": "مأمور گمرک"
+          }
+        },
+        {
+          "id": "air-traffic-controller",
+          "name": {
+            "en": "Air Traffic Controller",
+            "fa": "کنترلر ترافیک هوایی"
+          }
+        }
+      ]
+    },
+    {
+      "id": "train-station",
+      "icon": "🚉",
+      "name": {
+        "en": "Train Station",
+        "fa": "ایستگاه قطار"
+      },
+      "roles": [
+        {
+          "id": "ticket-clerk",
+          "name": {
+            "en": "Ticket Clerk",
+            "fa": "باجه‌دار بلیت"
+          }
+        },
+        {
+          "id": "conductor",
+          "name": {
+            "en": "Conductor",
+            "fa": "رئیس قطار"
+          }
+        },
+        {
+          "id": "platform-guard",
+          "name": {
+            "en": "Platform Guard",
+            "fa": "نگهبان سکو"
+          }
+        },
+        {
+          "id": "locomotive-driver",
+          "name": {
+            "en": "Locomotive Driver",
+            "fa": "راننده لوکوموتیو"
+          }
+        },
+        {
+          "id": "porter",
+          "name": {
+            "en": "Porter",
+            "fa": "باربر"
+          }
+        },
+        {
+          "id": "stationmaster",
+          "name": {
+            "en": "Stationmaster",
+            "fa": "رئیس ایستگاه"
+          }
+        },
+        {
+          "id": "waiting-passenger",
+          "name": {
+            "en": "Waiting Passenger",
+            "fa": "مسافر منتظر"
+          }
+        }
+      ]
+    },
+    {
+      "id": "subway-station",
+      "icon": "🚇",
+      "name": {
+        "en": "Subway Station",
+        "fa": "ایستگاه مترو"
+      },
+      "roles": [
+        {
+          "id": "turnstile-inspector",
+          "name": {
+            "en": "Turnstile Inspector",
+            "fa": "بازرس گیت ورودی"
+          }
+        },
+        {
+          "id": "token-booth-cashier",
+          "name": {
+            "en": "Token Booth Cashier",
+            "fa": "صندوق‌دار باجه بلیت"
+          }
+        },
+        {
+          "id": "train-operator",
+          "name": {
+            "en": "Train Operator",
+            "fa": "راننده قطار مترو"
+          }
+        },
+        {
+          "id": "maintenance-worker",
+          "name": {
+            "en": "Maintenance Worker",
+            "fa": "کارگر تعمیرات"
+          }
+        },
+        {
+          "id": "busker",
+          "name": {
+            "en": "Busker",
+            "fa": "نوازنده خیابانی"
+          }
+        },
+        {
+          "id": "transit-police",
+          "name": {
+            "en": "Transit Police",
+            "fa": "پلیس حمل‌ونقل"
+          }
+        },
+        {
+          "id": "daily-commuter",
+          "name": {
+            "en": "Daily Commuter",
+            "fa": "مسافر روزانه"
+          }
+        }
+      ]
+    },
+    {
+      "id": "seaport-harbor",
+      "icon": "⚓",
+      "name": {
+        "en": "Seaport Harbor",
+        "fa": "بندر دریایی"
+      },
+      "roles": [
+        {
+          "id": "harbor-master",
+          "name": {
+            "en": "Harbor Master",
+            "fa": "رئیس بندر"
+          }
+        },
+        {
+          "id": "crane-operator",
+          "name": {
+            "en": "Crane Operator",
+            "fa": "اپراتور جرثقیل"
+          }
+        },
+        {
+          "id": "longshoreman",
+          "name": {
+            "en": "Longshoreman",
+            "fa": "کارگر اسکله"
+          }
+        },
+        {
+          "id": "customs-inspector",
+          "name": {
+            "en": "Customs Inspector",
+            "fa": "بازرس گمرک"
+          }
+        },
+        {
+          "id": "ship-captain",
+          "name": {
+            "en": "Ship Captain",
+            "fa": "ناخدای کشتی"
+          }
+        },
+        {
+          "id": "tugboat-pilot",
+          "name": {
+            "en": "Tugboat Pilot",
+            "fa": "خلبان یدک‌کش"
+          }
+        },
+        {
+          "id": "fish-merchant",
+          "name": {
+            "en": "Fish Merchant",
+            "fa": "تاجر ماهی"
+          }
+        }
+      ]
+    },
+    {
+      "id": "bus-terminal",
+      "icon": "🚌",
+      "name": {
+        "en": "Bus Terminal",
+        "fa": "پایانه اتوبوس"
+      },
+      "roles": [
+        {
+          "id": "bus-driver",
+          "name": {
+            "en": "Bus Driver",
+            "fa": "راننده اتوبوس"
+          }
+        },
+        {
+          "id": "ticket-seller",
+          "name": {
+            "en": "Ticket Seller",
+            "fa": "فروشنده بلیت"
+          }
+        },
+        {
+          "id": "dispatcher",
+          "name": {
+            "en": "Dispatcher",
+            "fa": "مأمور اعزام"
+          }
+        },
+        {
+          "id": "luggage-loader",
+          "name": {
+            "en": "Luggage Loader",
+            "fa": "باربر چمدان"
+          }
+        },
+        {
+          "id": "cleaner",
+          "name": {
+            "en": "Cleaner",
+            "fa": "نظافتچی"
+          }
+        },
+        {
+          "id": "snack-vendor",
+          "name": {
+            "en": "Snack Vendor",
+            "fa": "دستفروش خوراکی"
+          }
+        },
+        {
+          "id": "waiting-traveler",
+          "name": {
+            "en": "Waiting Traveler",
+            "fa": "مسافر منتظر"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ferry-dock",
+      "icon": "⛴️",
+      "name": {
+        "en": "Ferry Dock",
+        "fa": "اسکله کشتی مسافری"
+      },
+      "roles": [
+        {
+          "id": "ferry-captain",
+          "name": {
+            "en": "Ferry Captain",
+            "fa": "ناخدای کشتی مسافری"
+          }
+        },
+        {
+          "id": "deckhand",
+          "name": {
+            "en": "Deckhand",
+            "fa": "ملوان عرشه"
+          }
+        },
+        {
+          "id": "ticket-collector",
+          "name": {
+            "en": "Ticket Collector",
+            "fa": "بلیت‌گیر"
+          }
+        },
+        {
+          "id": "vehicle-marshal",
+          "name": {
+            "en": "Vehicle Marshal",
+            "fa": "راهنمای ورود خودرو"
+          }
+        },
+        {
+          "id": "lifeguard",
+          "name": {
+            "en": "Lifeguard",
+            "fa": "غریق‌نجات"
+          }
+        },
+        {
+          "id": "galley-cook",
+          "name": {
+            "en": "Galley Cook",
+            "fa": "آشپز کشتی"
+          }
+        },
+        {
+          "id": "foot-passenger",
+          "name": {
+            "en": "Foot Passenger",
+            "fa": "مسافر پیاده"
+          }
+        }
+      ]
+    },
+    {
+      "id": "highway-rest-stop",
+      "icon": "🛣️",
+      "name": {
+        "en": "Highway Rest Stop",
+        "fa": "مجتمع خدماتی بین‌راهی"
+      },
+      "roles": [
+        {
+          "id": "fuel-attendant",
+          "name": {
+            "en": "Fuel Attendant",
+            "fa": "متصدی پمپ بنزین"
+          }
+        },
+        {
+          "id": "diner-waiter",
+          "name": {
+            "en": "Diner Waiter",
+            "fa": "گارسون رستوران"
+          }
+        },
+        {
+          "id": "truck-driver",
+          "name": {
+            "en": "Truck Driver",
+            "fa": "راننده کامیون"
+          }
+        },
+        {
+          "id": "shop-cashier",
+          "name": {
+            "en": "Shop Cashier",
+            "fa": "صندوق‌دار فروشگاه"
+          }
+        },
+        {
+          "id": "restroom-cleaner",
+          "name": {
+            "en": "Restroom Cleaner",
+            "fa": "نظافتچی سرویس بهداشتی"
+          }
+        },
+        {
+          "id": "mechanic",
+          "name": {
+            "en": "Mechanic",
+            "fa": "مکانیک"
+          }
+        },
+        {
+          "id": "road-trip-family",
+          "name": {
+            "en": "Road-Trip Family",
+            "fa": "خانواده مسافر"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toll-plaza",
+      "icon": "🚧",
+      "name": {
+        "en": "Toll Plaza",
+        "fa": "عوارضی"
+      },
+      "roles": [
+        {
+          "id": "toll-collector",
+          "name": {
+            "en": "Toll Collector",
+            "fa": "مأمور دریافت عوارض"
+          }
+        },
+        {
+          "id": "lane-supervisor",
+          "name": {
+            "en": "Lane Supervisor",
+            "fa": "سرپرست باند"
+          }
+        },
+        {
+          "id": "traffic-officer",
+          "name": {
+            "en": "Traffic Officer",
+            "fa": "افسر راهنمایی"
+          }
+        },
+        {
+          "id": "maintenance-crew",
+          "name": {
+            "en": "Maintenance Crew",
+            "fa": "اکیپ تعمیرات"
+          }
+        },
+        {
+          "id": "camera-technician",
+          "name": {
+            "en": "Camera Technician",
+            "fa": "تکنسین دوربین"
+          }
+        },
+        {
+          "id": "tow-truck-driver",
+          "name": {
+            "en": "Tow Truck Driver",
+            "fa": "راننده یدک‌کش"
+          }
+        },
+        {
+          "id": "passing-motorist",
+          "name": {
+            "en": "Passing Motorist",
+            "fa": "راننده عبوری"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cable-car-station",
+      "icon": "🚠",
+      "name": {
+        "en": "Cable Car Station",
+        "fa": "ایستگاه تله‌کابین"
+      },
+      "roles": [
+        {
+          "id": "lift-operator",
+          "name": {
+            "en": "Lift Operator",
+            "fa": "اپراتور تله‌کابین"
+          }
+        },
+        {
+          "id": "cabin-attendant",
+          "name": {
+            "en": "Cabin Attendant",
+            "fa": "مأمور کابین"
+          }
+        },
+        {
+          "id": "cable-technician",
+          "name": {
+            "en": "Cable Technician",
+            "fa": "تکنسین کابل"
+          }
+        },
+        {
+          "id": "ticket-agent",
+          "name": {
+            "en": "Ticket Agent",
+            "fa": "مأمور بلیت"
+          }
+        },
+        {
+          "id": "mountain-guide",
+          "name": {
+            "en": "Mountain Guide",
+            "fa": "راهنمای کوهستان"
+          }
+        },
+        {
+          "id": "safety-inspector",
+          "name": {
+            "en": "Safety Inspector",
+            "fa": "بازرس ایمنی"
+          }
+        },
+        {
+          "id": "sightseeing-tourist",
+          "name": {
+            "en": "Sightseeing Tourist",
+            "fa": "گردشگر تماشاگر"
+          }
+        }
+      ]
+    },
+    {
+      "id": "truck-weigh-station",
+      "icon": "⚖️",
+      "name": {
+        "en": "Truck Weigh Station",
+        "fa": "ایستگاه باسکول کامیون"
+      },
+      "roles": [
+        {
+          "id": "scale-operator",
+          "name": {
+            "en": "Scale Operator",
+            "fa": "اپراتور باسکول"
+          }
+        },
+        {
+          "id": "weight-inspector",
+          "name": {
+            "en": "Weight Inspector",
+            "fa": "بازرس وزن"
+          }
+        },
+        {
+          "id": "logbook-auditor",
+          "name": {
+            "en": "Logbook Auditor",
+            "fa": "حسابرس دفترچه سفر"
+          }
+        },
+        {
+          "id": "cargo-examiner",
+          "name": {
+            "en": "Cargo Examiner",
+            "fa": "بازرس بار"
+          }
+        },
+        {
+          "id": "trucker",
+          "name": {
+            "en": "Trucker",
+            "fa": "کامیون‌دار"
+          }
+        },
+        {
+          "id": "highway-patrol",
+          "name": {
+            "en": "Highway Patrol",
+            "fa": "گشت بزرگراه"
+          }
+        },
+        {
+          "id": "permit-clerk",
+          "name": {
+            "en": "Permit Clerk",
+            "fa": "متصدی مجوز"
+          }
+        }
+      ]
+    },
+    {
+      "id": "border-crossing-checkpoint",
+      "icon": "🛂",
+      "name": {
+        "en": "Border Crossing Checkpoint",
+        "fa": "گذرگاه مرزی"
+      },
+      "roles": [
+        {
+          "id": "passport-officer",
+          "name": {
+            "en": "Passport Officer",
+            "fa": "افسر گذرنامه"
+          }
+        },
+        {
+          "id": "customs-agent",
+          "name": {
+            "en": "Customs Agent",
+            "fa": "مأمور گمرک"
+          }
+        },
+        {
+          "id": "border-guard",
+          "name": {
+            "en": "Border Guard",
+            "fa": "مرزبان"
+          }
+        },
+        {
+          "id": "sniffer-dog-handler",
+          "name": {
+            "en": "Sniffer-Dog Handler",
+            "fa": "مأمور سگ مواد‌یاب"
+          }
+        },
+        {
+          "id": "visa-clerk",
+          "name": {
+            "en": "Visa Clerk",
+            "fa": "متصدی ویزا"
+          }
+        },
+        {
+          "id": "currency-exchanger",
+          "name": {
+            "en": "Currency Exchanger",
+            "fa": "صراف"
+          }
+        },
+        {
+          "id": "crossing-traveler",
+          "name": {
+            "en": "Crossing Traveler",
+            "fa": "مسافر عبوری"
+          }
+        }
+      ]
+    },
+    {
+      "id": "nightclub",
+      "icon": "🪩",
+      "name": {
+        "en": "Nightclub",
+        "fa": "کلوپ شبانه"
+      },
+      "roles": [
+        {
+          "id": "dj",
+          "name": {
+            "en": "DJ",
+            "fa": "دی‌جی"
+          }
+        },
+        {
+          "id": "bouncer",
+          "name": {
+            "en": "Bouncer",
+            "fa": "نگهبان در"
+          }
+        },
+        {
+          "id": "bartender",
+          "name": {
+            "en": "Bartender",
+            "fa": "باریستا مشروب"
+          }
+        },
+        {
+          "id": "cocktail-waitress",
+          "name": {
+            "en": "Cocktail Waitress",
+            "fa": "پیشخدمت کوکتل"
+          }
+        },
+        {
+          "id": "vip-host",
+          "name": {
+            "en": "VIP Host",
+            "fa": "میزبان وی‌آی‌پی"
+          }
+        },
+        {
+          "id": "go-go-dancer",
+          "name": {
+            "en": "Go-Go Dancer",
+            "fa": "رقصنده صحنه"
+          }
+        },
+        {
+          "id": "coat-check-attendant",
+          "name": {
+            "en": "Coat Check Attendant",
+            "fa": "مسئول رختکن"
+          }
+        }
+      ]
+    },
+    {
+      "id": "karaoke-bar",
+      "icon": "🎤",
+      "name": {
+        "en": "Karaoke Bar",
+        "fa": "بار کارائوکه"
+      },
+      "roles": [
+        {
+          "id": "kj-karaoke-host",
+          "name": {
+            "en": "KJ (Karaoke Host)",
+            "fa": "مجری کارائوکه"
+          }
+        },
+        {
+          "id": "sound-technician",
+          "name": {
+            "en": "Sound Technician",
+            "fa": "تکنسین صدا"
+          }
+        },
+        {
+          "id": "bartender",
+          "name": {
+            "en": "Bartender",
+            "fa": "باریستا"
+          }
+        },
+        {
+          "id": "birthday-singer",
+          "name": {
+            "en": "Birthday Singer",
+            "fa": "خواننده تولد"
+          }
+        },
+        {
+          "id": "tone-deaf-regular",
+          "name": {
+            "en": "Tone-Deaf Regular",
+            "fa": "مشتری بدصدا"
+          }
+        },
+        {
+          "id": "song-picker",
+          "name": {
+            "en": "Song Picker",
+            "fa": "انتخاب‌کننده آهنگ"
+          }
+        },
+        {
+          "id": "waiter",
+          "name": {
+            "en": "Waiter",
+            "fa": "گارسون"
+          }
+        }
+      ]
+    },
+    {
+      "id": "comedy-club",
+      "icon": "🎙️",
+      "name": {
+        "en": "Comedy Club",
+        "fa": "کلوپ کمدی"
+      },
+      "roles": [
+        {
+          "id": "stand-up-comedian",
+          "name": {
+            "en": "Stand-Up Comedian",
+            "fa": "کمدین استندآپ"
+          }
+        },
+        {
+          "id": "mc",
+          "name": {
+            "en": "MC",
+            "fa": "مجری برنامه"
+          }
+        },
+        {
+          "id": "heckler",
+          "name": {
+            "en": "Heckler",
+            "fa": "تماشاگر مزاحم"
+          }
+        },
+        {
+          "id": "spotlight-operator",
+          "name": {
+            "en": "Spotlight Operator",
+            "fa": "اپراتور نورافکن"
+          }
+        },
+        {
+          "id": "open-mic-newbie",
+          "name": {
+            "en": "Open-Mic Newbie",
+            "fa": "تازه‌کار میکروفون آزاد"
+          }
+        },
+        {
+          "id": "cocktail-waitress",
+          "name": {
+            "en": "Cocktail Waitress",
+            "fa": "پیشخدمت کوکتل"
+          }
+        },
+        {
+          "id": "booking-manager",
+          "name": {
+            "en": "Booking Manager",
+            "fa": "مدیر رزرو اجرا"
+          }
+        }
+      ]
+    },
+    {
+      "id": "bowling-alley",
+      "icon": "🎳",
+      "name": {
+        "en": "Bowling Alley",
+        "fa": "سالن بولینگ"
+      },
+      "roles": [
+        {
+          "id": "lane-attendant",
+          "name": {
+            "en": "Lane Attendant",
+            "fa": "مسئول خطوط"
+          }
+        },
+        {
+          "id": "shoe-rental-clerk",
+          "name": {
+            "en": "Shoe Rental Clerk",
+            "fa": "متصدی کرایه کفش"
+          }
+        },
+        {
+          "id": "league-bowler",
+          "name": {
+            "en": "League Bowler",
+            "fa": "بازیکن لیگ"
+          }
+        },
+        {
+          "id": "pin-mechanic",
+          "name": {
+            "en": "Pin Mechanic",
+            "fa": "تعمیرکار دستگاه پین"
+          }
+        },
+        {
+          "id": "snack-bar-cook",
+          "name": {
+            "en": "Snack Bar Cook",
+            "fa": "آشپز بوفه"
+          }
+        },
+        {
+          "id": "birthday-party-host",
+          "name": {
+            "en": "Birthday Party Host",
+            "fa": "میزبان جشن تولد"
+          }
+        },
+        {
+          "id": "arcade-cashier",
+          "name": {
+            "en": "Arcade Cashier",
+            "fa": "صندوقدار گیم‌نت"
+          }
+        }
+      ]
+    },
+    {
+      "id": "strip-club",
+      "icon": "💃",
+      "name": {
+        "en": "Strip Club",
+        "fa": "کلوپ استریپ"
+      },
+      "roles": [
+        {
+          "id": "exotic-dancer",
+          "name": {
+            "en": "Exotic Dancer",
+            "fa": "رقصنده"
+          }
+        },
+        {
+          "id": "stage-mc",
+          "name": {
+            "en": "Stage MC",
+            "fa": "مجری صحنه"
+          }
+        },
+        {
+          "id": "bouncer",
+          "name": {
+            "en": "Bouncer",
+            "fa": "نگهبان در"
+          }
+        },
+        {
+          "id": "bartender",
+          "name": {
+            "en": "Bartender",
+            "fa": "باریستا"
+          }
+        },
+        {
+          "id": "dj",
+          "name": {
+            "en": "DJ",
+            "fa": "دی‌جی"
+          }
+        },
+        {
+          "id": "vip-room-host",
+          "name": {
+            "en": "VIP Room Host",
+            "fa": "میزبان اتاق ویژه"
+          }
+        },
+        {
+          "id": "cashier",
+          "name": {
+            "en": "Cashier",
+            "fa": "صندوقدار"
+          }
+        }
+      ]
+    },
+    {
+      "id": "concert-arena",
+      "icon": "🎸",
+      "name": {
+        "en": "Concert Arena",
+        "fa": "سالن کنسرت"
+      },
+      "roles": [
+        {
+          "id": "lead-singer",
+          "name": {
+            "en": "Lead Singer",
+            "fa": "خواننده اصلی"
+          }
+        },
+        {
+          "id": "roadie",
+          "name": {
+            "en": "Roadie",
+            "fa": "کارگر صحنه"
+          }
+        },
+        {
+          "id": "lighting-technician",
+          "name": {
+            "en": "Lighting Technician",
+            "fa": "تکنسین نور"
+          }
+        },
+        {
+          "id": "security-guard",
+          "name": {
+            "en": "Security Guard",
+            "fa": "نگهبان امنیتی"
+          }
+        },
+        {
+          "id": "merch-seller",
+          "name": {
+            "en": "Merch Seller",
+            "fa": "فروشنده یادگاری"
+          }
+        },
+        {
+          "id": "sound-engineer",
+          "name": {
+            "en": "Sound Engineer",
+            "fa": "مهندس صدا"
+          }
+        },
+        {
+          "id": "screaming-fan",
+          "name": {
+            "en": "Screaming Fan",
+            "fa": "طرفدار پرشور"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cocktail-lounge",
+      "icon": "🍸",
+      "name": {
+        "en": "Cocktail Lounge",
+        "fa": "لانژ کوکتل"
+      },
+      "roles": [
+        {
+          "id": "mixologist",
+          "name": {
+            "en": "Mixologist",
+            "fa": "میکسولوژیست"
+          }
+        },
+        {
+          "id": "lounge-singer",
+          "name": {
+            "en": "Lounge Singer",
+            "fa": "خواننده لانژ"
+          }
+        },
+        {
+          "id": "piano-player",
+          "name": {
+            "en": "Piano Player",
+            "fa": "نوازنده پیانو"
+          }
+        },
+        {
+          "id": "ma-tre-d",
+          "name": {
+            "en": "Maître d'",
+            "fa": "سرپرست سالن"
+          }
+        },
+        {
+          "id": "regular-patron",
+          "name": {
+            "en": "Regular Patron",
+            "fa": "مشتری همیشگی"
+          }
+        },
+        {
+          "id": "cigar-sommelier",
+          "name": {
+            "en": "Cigar Sommelier",
+            "fa": "سامِلیه سیگار برگ"
+          }
+        },
+        {
+          "id": "cocktail-server",
+          "name": {
+            "en": "Cocktail Server",
+            "fa": "پیشخدمت کوکتل"
+          }
+        }
+      ]
+    },
+    {
+      "id": "music-festival",
+      "icon": "🎪",
+      "name": {
+        "en": "Music Festival",
+        "fa": "جشنواره موسیقی"
+      },
+      "roles": [
+        {
+          "id": "headliner",
+          "name": {
+            "en": "Headliner",
+            "fa": "اجراکننده اصلی"
+          }
+        },
+        {
+          "id": "stagehand",
+          "name": {
+            "en": "Stagehand",
+            "fa": "دستیار صحنه"
+          }
+        },
+        {
+          "id": "food-truck-vendor",
+          "name": {
+            "en": "Food Truck Vendor",
+            "fa": "فروشنده کامیون غذا"
+          }
+        },
+        {
+          "id": "festival-volunteer",
+          "name": {
+            "en": "Festival Volunteer",
+            "fa": "داوطلب جشنواره"
+          }
+        },
+        {
+          "id": "wristband-checker",
+          "name": {
+            "en": "Wristband Checker",
+            "fa": "بازرس دستبند"
+          }
+        },
+        {
+          "id": "mosh-pit-reveler",
+          "name": {
+            "en": "Mosh Pit Reveler",
+            "fa": "رقصنده وسط جمعیت"
+          }
+        },
+        {
+          "id": "stage-manager",
+          "name": {
+            "en": "Stage Manager",
+            "fa": "مدیر صحنه"
+          }
+        }
+      ]
+    },
+    {
+      "id": "jazz-club",
+      "icon": "🎷",
+      "name": {
+        "en": "Jazz Club",
+        "fa": "کلوپ جاز"
+      },
+      "roles": [
+        {
+          "id": "saxophonist",
+          "name": {
+            "en": "Saxophonist",
+            "fa": "نوازنده ساکسیفون"
+          }
+        },
+        {
+          "id": "double-bass-player",
+          "name": {
+            "en": "Double Bass Player",
+            "fa": "نوازنده کنترباس"
+          }
+        },
+        {
+          "id": "crooner",
+          "name": {
+            "en": "Crooner",
+            "fa": "خواننده جاز"
+          }
+        },
+        {
+          "id": "bartender",
+          "name": {
+            "en": "Bartender",
+            "fa": "باریستا"
+          }
+        },
+        {
+          "id": "jazz-aficionado",
+          "name": {
+            "en": "Jazz Aficionado",
+            "fa": "عاشق جاز"
+          }
+        },
+        {
+          "id": "drummer",
+          "name": {
+            "en": "Drummer",
+            "fa": "درامر"
+          }
+        },
+        {
+          "id": "waiter",
+          "name": {
+            "en": "Waiter",
+            "fa": "گارسون"
+          }
+        }
+      ]
+    },
+    {
+      "id": "corporate-headquarters",
+      "icon": "🏢",
+      "name": {
+        "en": "Corporate Headquarters",
+        "fa": "دفتر مرکزی شرکت"
+      },
+      "roles": [
+        {
+          "id": "chief-executive-officer",
+          "name": {
+            "en": "Chief Executive Officer",
+            "fa": "مدیرعامل"
+          }
+        },
+        {
+          "id": "executive-assistant",
+          "name": {
+            "en": "Executive Assistant",
+            "fa": "دستیار اجرایی"
+          }
+        },
+        {
+          "id": "receptionist",
+          "name": {
+            "en": "Receptionist",
+            "fa": "مسئول پذیرش"
+          }
+        },
+        {
+          "id": "accountant",
+          "name": {
+            "en": "Accountant",
+            "fa": "حسابدار"
+          }
+        },
+        {
+          "id": "hr-manager",
+          "name": {
+            "en": "HR Manager",
+            "fa": "مدیر منابع انسانی"
+          }
+        },
+        {
+          "id": "it-technician",
+          "name": {
+            "en": "IT Technician",
+            "fa": "تکنسین فناوری اطلاعات"
+          }
+        },
+        {
+          "id": "janitor",
+          "name": {
+            "en": "Janitor",
+            "fa": "نظافتچی"
+          }
+        }
+      ]
+    },
+    {
+      "id": "call-center",
+      "icon": "📞",
+      "name": {
+        "en": "Call Center",
+        "fa": "مرکز تماس"
+      },
+      "roles": [
+        {
+          "id": "call-agent",
+          "name": {
+            "en": "Call Agent",
+            "fa": "اپراتور تماس"
+          }
+        },
+        {
+          "id": "team-leader",
+          "name": {
+            "en": "Team Leader",
+            "fa": "سرپرست تیم"
+          }
+        },
+        {
+          "id": "quality-monitor",
+          "name": {
+            "en": "Quality Monitor",
+            "fa": "ناظر کیفیت"
+          }
+        },
+        {
+          "id": "trainer",
+          "name": {
+            "en": "Trainer",
+            "fa": "مربی"
+          }
+        },
+        {
+          "id": "shift-supervisor",
+          "name": {
+            "en": "Shift Supervisor",
+            "fa": "سرپرست شیفت"
+          }
+        },
+        {
+          "id": "technical-support",
+          "name": {
+            "en": "Technical Support",
+            "fa": "پشتیبانی فنی"
+          }
+        },
+        {
+          "id": "workforce-planner",
+          "name": {
+            "en": "Workforce Planner",
+            "fa": "برنامه‌ریز نیروی کار"
+          }
+        }
+      ]
+    },
+    {
+      "id": "law-firm",
+      "icon": "⚖️",
+      "name": {
+        "en": "Law Firm",
+        "fa": "دفتر وکالت"
+      },
+      "roles": [
+        {
+          "id": "senior-partner",
+          "name": {
+            "en": "Senior Partner",
+            "fa": "شریک ارشد"
+          }
+        },
+        {
+          "id": "associate-lawyer",
+          "name": {
+            "en": "Associate Lawyer",
+            "fa": "وکیل دستیار"
+          }
+        },
+        {
+          "id": "paralegal",
+          "name": {
+            "en": "Paralegal",
+            "fa": "دستیار حقوقی"
+          }
+        },
+        {
+          "id": "legal-secretary",
+          "name": {
+            "en": "Legal Secretary",
+            "fa": "منشی حقوقی"
+          }
+        },
+        {
+          "id": "court-clerk",
+          "name": {
+            "en": "Court Clerk",
+            "fa": "کارمند دادگاه"
+          }
+        },
+        {
+          "id": "client",
+          "name": {
+            "en": "Client",
+            "fa": "موکل"
+          }
+        },
+        {
+          "id": "notary",
+          "name": {
+            "en": "Notary",
+            "fa": "سردفتر اسناد رسمی"
+          }
+        }
+      ]
+    },
+    {
+      "id": "newspaper-office",
+      "icon": "📰",
+      "name": {
+        "en": "Newspaper Office",
+        "fa": "دفتر روزنامه"
+      },
+      "roles": [
+        {
+          "id": "editor-in-chief",
+          "name": {
+            "en": "Editor-in-Chief",
+            "fa": "سردبیر"
+          }
+        },
+        {
+          "id": "reporter",
+          "name": {
+            "en": "Reporter",
+            "fa": "خبرنگار"
+          }
+        },
+        {
+          "id": "photographer",
+          "name": {
+            "en": "Photographer",
+            "fa": "عکاس"
+          }
+        },
+        {
+          "id": "copy-editor",
+          "name": {
+            "en": "Copy Editor",
+            "fa": "ویراستار"
+          }
+        },
+        {
+          "id": "columnist",
+          "name": {
+            "en": "Columnist",
+            "fa": "ستون‌نویس"
+          }
+        },
+        {
+          "id": "layout-designer",
+          "name": {
+            "en": "Layout Designer",
+            "fa": "طراح صفحه‌آرایی"
+          }
+        },
+        {
+          "id": "delivery-driver",
+          "name": {
+            "en": "Delivery Driver",
+            "fa": "راننده پخش"
+          }
+        }
+      ]
+    },
+    {
+      "id": "architecture-studio",
+      "icon": "📐",
+      "name": {
+        "en": "Architecture Studio",
+        "fa": "استودیو معماری"
+      },
+      "roles": [
+        {
+          "id": "principal-architect",
+          "name": {
+            "en": "Principal Architect",
+            "fa": "معمار اصلی"
+          }
+        },
+        {
+          "id": "draftsman",
+          "name": {
+            "en": "Draftsman",
+            "fa": "نقشه‌کش"
+          }
+        },
+        {
+          "id": "interior-designer",
+          "name": {
+            "en": "Interior Designer",
+            "fa": "طراح داخلی"
+          }
+        },
+        {
+          "id": "model-maker",
+          "name": {
+            "en": "Model Maker",
+            "fa": "ماکت‌ساز"
+          }
+        },
+        {
+          "id": "structural-engineer",
+          "name": {
+            "en": "Structural Engineer",
+            "fa": "مهندس سازه"
+          }
+        },
+        {
+          "id": "project-manager",
+          "name": {
+            "en": "Project Manager",
+            "fa": "مدیر پروژه"
+          }
+        },
+        {
+          "id": "intern",
+          "name": {
+            "en": "Intern",
+            "fa": "کارآموز"
+          }
+        }
+      ]
+    },
+    {
+      "id": "advertising-agency",
+      "icon": "📢",
+      "name": {
+        "en": "Advertising Agency",
+        "fa": "آژانس تبلیغاتی"
+      },
+      "roles": [
+        {
+          "id": "creative-director",
+          "name": {
+            "en": "Creative Director",
+            "fa": "مدیر خلاقیت"
+          }
+        },
+        {
+          "id": "copywriter",
+          "name": {
+            "en": "Copywriter",
+            "fa": "متن‌نویس تبلیغات"
+          }
+        },
+        {
+          "id": "art-director",
+          "name": {
+            "en": "Art Director",
+            "fa": "مدیر هنری"
+          }
+        },
+        {
+          "id": "account-manager",
+          "name": {
+            "en": "Account Manager",
+            "fa": "مدیر مشتری"
+          }
+        },
+        {
+          "id": "media-buyer",
+          "name": {
+            "en": "Media Buyer",
+            "fa": "خریدار رسانه"
+          }
+        },
+        {
+          "id": "graphic-designer",
+          "name": {
+            "en": "Graphic Designer",
+            "fa": "طراح گرافیک"
+          }
+        },
+        {
+          "id": "market-researcher",
+          "name": {
+            "en": "Market Researcher",
+            "fa": "پژوهشگر بازار"
+          }
+        }
+      ]
+    },
+    {
+      "id": "software-company",
+      "icon": "💻",
+      "name": {
+        "en": "Software Company",
+        "fa": "شرکت نرم‌افزاری"
+      },
+      "roles": [
+        {
+          "id": "software-developer",
+          "name": {
+            "en": "Software Developer",
+            "fa": "توسعه‌دهنده نرم‌افزار"
+          }
+        },
+        {
+          "id": "product-manager",
+          "name": {
+            "en": "Product Manager",
+            "fa": "مدیر محصول"
+          }
+        },
+        {
+          "id": "ux-designer",
+          "name": {
+            "en": "UX Designer",
+            "fa": "طراح تجربه کاربری"
+          }
+        },
+        {
+          "id": "qa-tester",
+          "name": {
+            "en": "QA Tester",
+            "fa": "آزمونگر کیفیت"
+          }
+        },
+        {
+          "id": "devops-engineer",
+          "name": {
+            "en": "DevOps Engineer",
+            "fa": "مهندس دواپس"
+          }
+        },
+        {
+          "id": "scrum-master",
+          "name": {
+            "en": "Scrum Master",
+            "fa": "اسکرام مستر"
+          }
+        },
+        {
+          "id": "system-administrator",
+          "name": {
+            "en": "System Administrator",
+            "fa": "مدیر سیستم"
+          }
+        }
+      ]
+    },
+    {
+      "id": "bank-branch",
+      "icon": "🏦",
+      "name": {
+        "en": "Bank Branch",
+        "fa": "شعبه بانک"
+      },
+      "roles": [
+        {
+          "id": "branch-manager",
+          "name": {
+            "en": "Branch Manager",
+            "fa": "رئیس شعبه"
+          }
+        },
+        {
+          "id": "teller",
+          "name": {
+            "en": "Teller",
+            "fa": "تحویل‌دار"
+          }
+        },
+        {
+          "id": "loan-officer",
+          "name": {
+            "en": "Loan Officer",
+            "fa": "کارشناس وام"
+          }
+        },
+        {
+          "id": "security-guard",
+          "name": {
+            "en": "Security Guard",
+            "fa": "نگهبان"
+          }
+        },
+        {
+          "id": "financial-advisor",
+          "name": {
+            "en": "Financial Advisor",
+            "fa": "مشاور مالی"
+          }
+        },
+        {
+          "id": "customer",
+          "name": {
+            "en": "Customer",
+            "fa": "مشتری"
+          }
+        },
+        {
+          "id": "vault-keeper",
+          "name": {
+            "en": "Vault Keeper",
+            "fa": "مسئول گاوصندوق"
+          }
+        }
+      ]
+    },
+    {
+      "id": "factory-floor",
+      "icon": "🏭",
+      "name": {
+        "en": "Factory Floor",
+        "fa": "سالن کارخانه"
+      },
+      "roles": [
+        {
+          "id": "line-worker",
+          "name": {
+            "en": "Line Worker",
+            "fa": "کارگر خط تولید"
+          }
+        },
+        {
+          "id": "shift-foreman",
+          "name": {
+            "en": "Shift Foreman",
+            "fa": "سرکارگر شیفت"
+          }
+        },
+        {
+          "id": "machine-operator",
+          "name": {
+            "en": "Machine Operator",
+            "fa": "اپراتور دستگاه"
+          }
+        },
+        {
+          "id": "quality-inspector",
+          "name": {
+            "en": "Quality Inspector",
+            "fa": "بازرس کیفیت"
+          }
+        },
+        {
+          "id": "maintenance-technician",
+          "name": {
+            "en": "Maintenance Technician",
+            "fa": "تکنسین تعمیرات"
+          }
+        },
+        {
+          "id": "forklift-driver",
+          "name": {
+            "en": "Forklift Driver",
+            "fa": "راننده لیفتراک"
+          }
+        },
+        {
+          "id": "warehouse-manager",
+          "name": {
+            "en": "Warehouse Manager",
+            "fa": "مدیر انبار"
+          }
+        }
+      ]
+    },
+    {
+      "id": "insurance-office",
+      "icon": "📋",
+      "name": {
+        "en": "Insurance Office",
+        "fa": "دفتر بیمه"
+      },
+      "roles": [
+        {
+          "id": "insurance-agent",
+          "name": {
+            "en": "Insurance Agent",
+            "fa": "نماینده بیمه"
+          }
+        },
+        {
+          "id": "claims-adjuster",
+          "name": {
+            "en": "Claims Adjuster",
+            "fa": "کارشناس خسارت"
+          }
+        },
+        {
+          "id": "underwriter",
+          "name": {
+            "en": "Underwriter",
+            "fa": "بیمه‌گر ارزیاب"
+          }
+        },
+        {
+          "id": "actuary",
+          "name": {
+            "en": "Actuary",
+            "fa": "اکچوئر"
+          }
+        },
+        {
+          "id": "policyholder",
+          "name": {
+            "en": "Policyholder",
+            "fa": "بیمه‌گزار"
+          }
+        },
+        {
+          "id": "branch-manager",
+          "name": {
+            "en": "Branch Manager",
+            "fa": "مدیر شعبه"
+          }
+        },
+        {
+          "id": "data-entry-clerk",
+          "name": {
+            "en": "Data Entry Clerk",
+            "fa": "کارمند ورود اطلاعات"
+          }
+        }
+      ]
+    },
+    {
+      "id": "television-studio-office",
+      "icon": "📺",
+      "name": {
+        "en": "Television Studio Office",
+        "fa": "دفتر استودیو تلویزیون"
+      },
+      "roles": [
+        {
+          "id": "producer",
+          "name": {
+            "en": "Producer",
+            "fa": "تهیه‌کننده"
+          }
+        },
+        {
+          "id": "scriptwriter",
+          "name": {
+            "en": "Scriptwriter",
+            "fa": "فیلمنامه‌نویس"
+          }
+        },
+        {
+          "id": "casting-director",
+          "name": {
+            "en": "Casting Director",
+            "fa": "مدیر انتخاب بازیگر"
+          }
+        },
+        {
+          "id": "production-assistant",
+          "name": {
+            "en": "Production Assistant",
+            "fa": "دستیار تولید"
+          }
+        },
+        {
+          "id": "scheduling-coordinator",
+          "name": {
+            "en": "Scheduling Coordinator",
+            "fa": "هماهنگ‌کننده برنامه‌ریزی"
+          }
+        },
+        {
+          "id": "budget-controller",
+          "name": {
+            "en": "Budget Controller",
+            "fa": "کنترلر بودجه"
+          }
+        },
+        {
+          "id": "talent-manager",
+          "name": {
+            "en": "Talent Manager",
+            "fa": "مدیر استعدادها"
+          }
+        }
+      ]
+    },
+    {
+      "id": "supermarket",
+      "icon": "🛒",
+      "name": {
+        "en": "Supermarket",
+        "fa": "سوپرمارکت"
+      },
+      "roles": [
+        {
+          "id": "cashier",
+          "name": {
+            "en": "Cashier",
+            "fa": "صندوق‌دار"
+          }
+        },
+        {
+          "id": "shelf-stocker",
+          "name": {
+            "en": "Shelf Stocker",
+            "fa": "قفسه‌چین"
+          }
+        },
+        {
+          "id": "store-manager",
+          "name": {
+            "en": "Store Manager",
+            "fa": "مدیر فروشگاه"
+          }
+        },
+        {
+          "id": "butcher",
+          "name": {
+            "en": "Butcher",
+            "fa": "قصاب"
+          }
+        },
+        {
+          "id": "bakery-clerk",
+          "name": {
+            "en": "Bakery Clerk",
+            "fa": "فروشنده نانوایی"
+          }
+        },
+        {
+          "id": "security-guard",
+          "name": {
+            "en": "Security Guard",
+            "fa": "نگهبان"
+          }
+        },
+        {
+          "id": "bag-packer",
+          "name": {
+            "en": "Bag Packer",
+            "fa": "بسته‌بند خرید"
+          }
+        }
+      ]
+    },
+    {
+      "id": "bazaar-2",
+      "icon": "🏪",
+      "name": {
+        "en": "Bazaar",
+        "fa": "بازار"
+      },
+      "roles": [
+        {
+          "id": "carpet-merchant",
+          "name": {
+            "en": "Carpet Merchant",
+            "fa": "فرش‌فروش"
+          }
+        },
+        {
+          "id": "spice-seller",
+          "name": {
+            "en": "Spice Seller",
+            "fa": "عطار"
+          }
+        },
+        {
+          "id": "coppersmith",
+          "name": {
+            "en": "Coppersmith",
+            "fa": "مسگر"
+          }
+        },
+        {
+          "id": "tea-house-owner",
+          "name": {
+            "en": "Tea House Owner",
+            "fa": "صاحب چای‌خانه"
+          }
+        },
+        {
+          "id": "money-changer",
+          "name": {
+            "en": "Money Changer",
+            "fa": "صراف"
+          }
+        },
+        {
+          "id": "porter",
+          "name": {
+            "en": "Porter",
+            "fa": "باربر"
+          }
+        },
+        {
+          "id": "goldsmith",
+          "name": {
+            "en": "Goldsmith",
+            "fa": "زرگر"
+          }
+        }
+      ]
+    },
+    {
+      "id": "bakery",
+      "icon": "🥖",
+      "name": {
+        "en": "Bakery",
+        "fa": "نانوایی"
+      },
+      "roles": [
+        {
+          "id": "baker",
+          "name": {
+            "en": "Baker",
+            "fa": "نانوا"
+          }
+        },
+        {
+          "id": "pastry-chef",
+          "name": {
+            "en": "Pastry Chef",
+            "fa": "شیرینی‌پز"
+          }
+        },
+        {
+          "id": "cake-decorator",
+          "name": {
+            "en": "Cake Decorator",
+            "fa": "تزیین‌کننده کیک"
+          }
+        },
+        {
+          "id": "counter-clerk",
+          "name": {
+            "en": "Counter Clerk",
+            "fa": "فروشنده پیشخوان"
+          }
+        },
+        {
+          "id": "dough-mixer",
+          "name": {
+            "en": "Dough Mixer",
+            "fa": "خمیرگیر"
+          }
+        },
+        {
+          "id": "oven-operator",
+          "name": {
+            "en": "Oven Operator",
+            "fa": "کوره‌کار"
+          }
+        },
+        {
+          "id": "delivery-rider",
+          "name": {
+            "en": "Delivery Rider",
+            "fa": "پیک تحویل"
+          }
+        }
+      ]
+    },
+    {
+      "id": "butcher-shop",
+      "icon": "🥩",
+      "name": {
+        "en": "Butcher Shop",
+        "fa": "قصابی"
+      },
+      "roles": [
+        {
+          "id": "head-butcher",
+          "name": {
+            "en": "Head Butcher",
+            "fa": "قصاب اصلی"
+          }
+        },
+        {
+          "id": "meat-cutter",
+          "name": {
+            "en": "Meat Cutter",
+            "fa": "گوشت‌بُر"
+          }
+        },
+        {
+          "id": "cashier",
+          "name": {
+            "en": "Cashier",
+            "fa": "صندوق‌دار"
+          }
+        },
+        {
+          "id": "sausage-maker",
+          "name": {
+            "en": "Sausage Maker",
+            "fa": "سوسیس‌ساز"
+          }
+        },
+        {
+          "id": "cold-room-worker",
+          "name": {
+            "en": "Cold Room Worker",
+            "fa": "کارگر سردخانه"
+          }
+        },
+        {
+          "id": "delivery-boy",
+          "name": {
+            "en": "Delivery Boy",
+            "fa": "پیک"
+          }
+        },
+        {
+          "id": "shop-owner",
+          "name": {
+            "en": "Shop Owner",
+            "fa": "صاحب مغازه"
+          }
+        }
+      ]
+    },
+    {
+      "id": "fish-market",
+      "icon": "🐟",
+      "name": {
+        "en": "Fish Market",
+        "fa": "بازار ماهی"
+      },
+      "roles": [
+        {
+          "id": "fishmonger",
+          "name": {
+            "en": "Fishmonger",
+            "fa": "ماهی‌فروش"
+          }
+        },
+        {
+          "id": "fish-cleaner",
+          "name": {
+            "en": "Fish Cleaner",
+            "fa": "پاک‌کننده ماهی"
+          }
+        },
+        {
+          "id": "auctioneer",
+          "name": {
+            "en": "Auctioneer",
+            "fa": "حراج‌گذار"
+          }
+        },
+        {
+          "id": "ice-supplier",
+          "name": {
+            "en": "Ice Supplier",
+            "fa": "تأمین‌کننده یخ"
+          }
+        },
+        {
+          "id": "boat-captain",
+          "name": {
+            "en": "Boat Captain",
+            "fa": "ناخدای قایق"
+          }
+        },
+        {
+          "id": "weigher",
+          "name": {
+            "en": "Weigher",
+            "fa": "وزن‌کننده"
+          }
+        },
+        {
+          "id": "stall-owner",
+          "name": {
+            "en": "Stall Owner",
+            "fa": "صاحب غرفه"
+          }
+        }
+      ]
+    },
+    {
+      "id": "flower-shop",
+      "icon": "💐",
+      "name": {
+        "en": "Flower Shop",
+        "fa": "گل‌فروشی"
+      },
+      "roles": [
+        {
+          "id": "florist",
+          "name": {
+            "en": "Florist",
+            "fa": "گل‌فروش"
+          }
+        },
+        {
+          "id": "bouquet-arranger",
+          "name": {
+            "en": "Bouquet Arranger",
+            "fa": "دسته‌گل‌ساز"
+          }
+        },
+        {
+          "id": "delivery-driver",
+          "name": {
+            "en": "Delivery Driver",
+            "fa": "راننده تحویل"
+          }
+        },
+        {
+          "id": "cashier",
+          "name": {
+            "en": "Cashier",
+            "fa": "صندوق‌دار"
+          }
+        },
+        {
+          "id": "greenhouse-grower",
+          "name": {
+            "en": "Greenhouse Grower",
+            "fa": "پرورش‌دهنده گلخانه"
+          }
+        },
+        {
+          "id": "shop-owner",
+          "name": {
+            "en": "Shop Owner",
+            "fa": "صاحب مغازه"
+          }
+        },
+        {
+          "id": "wedding-decorator",
+          "name": {
+            "en": "Wedding Decorator",
+            "fa": "تزیین‌کننده عروسی"
+          }
+        }
+      ]
+    },
+    {
+      "id": "bookstore",
+      "icon": "📚",
+      "name": {
+        "en": "Bookstore",
+        "fa": "کتاب‌فروشی"
+      },
+      "roles": [
+        {
+          "id": "bookseller",
+          "name": {
+            "en": "Bookseller",
+            "fa": "کتاب‌فروش"
+          }
+        },
+        {
+          "id": "cashier",
+          "name": {
+            "en": "Cashier",
+            "fa": "صندوق‌دار"
+          }
+        },
+        {
+          "id": "shelf-organizer",
+          "name": {
+            "en": "Shelf Organizer",
+            "fa": "قفسه‌چین"
+          }
+        },
+        {
+          "id": "caf-barista",
+          "name": {
+            "en": "Café Barista",
+            "fa": "باریستای کافه"
+          }
+        },
+        {
+          "id": "stockroom-clerk",
+          "name": {
+            "en": "Stockroom Clerk",
+            "fa": "کارمند انبار"
+          }
+        },
+        {
+          "id": "store-manager",
+          "name": {
+            "en": "Store Manager",
+            "fa": "مدیر فروشگاه"
+          }
+        },
+        {
+          "id": "book-signing-author",
+          "name": {
+            "en": "Book Signing Author",
+            "fa": "نویسنده مهمان"
+          }
+        }
+      ]
+    },
+    {
+      "id": "jewelry-store",
+      "icon": "💍",
+      "name": {
+        "en": "Jewelry Store",
+        "fa": "جواهرفروشی"
+      },
+      "roles": [
+        {
+          "id": "jeweler",
+          "name": {
+            "en": "Jeweler",
+            "fa": "جواهرفروش"
+          }
+        },
+        {
+          "id": "gem-appraiser",
+          "name": {
+            "en": "Gem Appraiser",
+            "fa": "ارزیاب جواهر"
+          }
+        },
+        {
+          "id": "sales-clerk",
+          "name": {
+            "en": "Sales Clerk",
+            "fa": "فروشنده"
+          }
+        },
+        {
+          "id": "security-guard",
+          "name": {
+            "en": "Security Guard",
+            "fa": "نگهبان"
+          }
+        },
+        {
+          "id": "watch-repairer",
+          "name": {
+            "en": "Watch Repairer",
+            "fa": "ساعت‌ساز"
+          }
+        },
+        {
+          "id": "goldsmith",
+          "name": {
+            "en": "Goldsmith",
+            "fa": "زرگر"
+          }
+        },
+        {
+          "id": "store-owner",
+          "name": {
+            "en": "Store Owner",
+            "fa": "صاحب فروشگاه"
+          }
+        }
+      ]
+    },
+    {
+      "id": "shopping-mall",
+      "icon": "🏬",
+      "name": {
+        "en": "Shopping Mall",
+        "fa": "مرکز خرید"
+      },
+      "roles": [
+        {
+          "id": "boutique-clerk",
+          "name": {
+            "en": "Boutique Clerk",
+            "fa": "فروشنده بوتیک"
+          }
+        },
+        {
+          "id": "security-guard",
+          "name": {
+            "en": "Security Guard",
+            "fa": "نگهبان"
+          }
+        },
+        {
+          "id": "janitor",
+          "name": {
+            "en": "Janitor",
+            "fa": "نظافت‌چی"
+          }
+        },
+        {
+          "id": "food-court-cook",
+          "name": {
+            "en": "Food Court Cook",
+            "fa": "آشپز فست‌فود"
+          }
+        },
+        {
+          "id": "information-desk-clerk",
+          "name": {
+            "en": "Information Desk Clerk",
+            "fa": "کارمند باجه اطلاعات"
+          }
+        },
+        {
+          "id": "mall-manager",
+          "name": {
+            "en": "Mall Manager",
+            "fa": "مدیر مرکز خرید"
+          }
+        },
+        {
+          "id": "window-display-designer",
+          "name": {
+            "en": "Window Display Designer",
+            "fa": "طراح ویترین"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greengrocer",
+      "icon": "🍎",
+      "name": {
+        "en": "Greengrocer",
+        "fa": "میوه‌فروشی"
+      },
+      "roles": [
+        {
+          "id": "greengrocer",
+          "name": {
+            "en": "Greengrocer",
+            "fa": "میوه‌فروش"
+          }
+        },
+        {
+          "id": "produce-sorter",
+          "name": {
+            "en": "Produce Sorter",
+            "fa": "دسته‌بندی‌کننده میوه"
+          }
+        },
+        {
+          "id": "cashier",
+          "name": {
+            "en": "Cashier",
+            "fa": "صندوق‌دار"
+          }
+        },
+        {
+          "id": "crate-stacker",
+          "name": {
+            "en": "Crate Stacker",
+            "fa": "چیدمان جعبه"
+          }
+        },
+        {
+          "id": "delivery-driver",
+          "name": {
+            "en": "Delivery Driver",
+            "fa": "راننده تحویل"
+          }
+        },
+        {
+          "id": "scale-operator",
+          "name": {
+            "en": "Scale Operator",
+            "fa": "وزن‌کننده ترازو"
+          }
+        },
+        {
+          "id": "shop-owner",
+          "name": {
+            "en": "Shop Owner",
+            "fa": "صاحب مغازه"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ancient-pyramid",
+      "icon": "🔺",
+      "name": {
+        "en": "Ancient Pyramid",
+        "fa": "هرم باستانی"
+      },
+      "roles": [
+        {
+          "id": "archaeologist",
+          "name": {
+            "en": "Archaeologist",
+            "fa": "باستان‌شناس"
+          }
+        },
+        {
+          "id": "tour-guide",
+          "name": {
+            "en": "Tour Guide",
+            "fa": "راهنمای تور"
+          }
+        },
+        {
+          "id": "excavation-worker",
+          "name": {
+            "en": "Excavation Worker",
+            "fa": "کارگر حفاری"
+          }
+        },
+        {
+          "id": "egyptologist",
+          "name": {
+            "en": "Egyptologist",
+            "fa": "مصرشناس"
+          }
+        },
+        {
+          "id": "photographer",
+          "name": {
+            "en": "Photographer",
+            "fa": "عکاس"
+          }
+        },
+        {
+          "id": "site-guard",
+          "name": {
+            "en": "Site Guard",
+            "fa": "نگهبان محوطه"
+          }
+        },
+        {
+          "id": "ticket-seller",
+          "name": {
+            "en": "Ticket Seller",
+            "fa": "بلیت‌فروش"
+          }
+        }
+      ]
+    },
+    {
+      "id": "medieval-castle",
+      "icon": "🏰",
+      "name": {
+        "en": "Medieval Castle",
+        "fa": "قلعه قرون وسطایی"
+      },
+      "roles": [
+        {
+          "id": "castle-steward",
+          "name": {
+            "en": "Castle Steward",
+            "fa": "پیشکار قلعه"
+          }
+        },
+        {
+          "id": "heritage-curator",
+          "name": {
+            "en": "Heritage Curator",
+            "fa": "متصدی میراث"
+          }
+        },
+        {
+          "id": "tour-guide",
+          "name": {
+            "en": "Tour Guide",
+            "fa": "راهنمای تور"
+          }
+        },
+        {
+          "id": "costumed-reenactor",
+          "name": {
+            "en": "Costumed Reenactor",
+            "fa": "بازآفرین لباس‌پوش"
+          }
+        },
+        {
+          "id": "restoration-mason",
+          "name": {
+            "en": "Restoration Mason",
+            "fa": "بنّای مرمت"
+          }
+        },
+        {
+          "id": "gift-shop-clerk",
+          "name": {
+            "en": "Gift Shop Clerk",
+            "fa": "فروشنده فروشگاه هدایا"
+          }
+        },
+        {
+          "id": "gatekeeper",
+          "name": {
+            "en": "Gatekeeper",
+            "fa": "دروازه‌بان"
+          }
+        }
+      ]
+    },
+    {
+      "id": "royal-palace",
+      "icon": "👑",
+      "name": {
+        "en": "Royal Palace",
+        "fa": "کاخ سلطنتی"
+      },
+      "roles": [
+        {
+          "id": "palace-curator",
+          "name": {
+            "en": "Palace Curator",
+            "fa": "متصدی کاخ"
+          }
+        },
+        {
+          "id": "royal-guard",
+          "name": {
+            "en": "Royal Guard",
+            "fa": "گارد سلطنتی"
+          }
+        },
+        {
+          "id": "tour-guide",
+          "name": {
+            "en": "Tour Guide",
+            "fa": "راهنمای تور"
+          }
+        },
+        {
+          "id": "gardener",
+          "name": {
+            "en": "Gardener",
+            "fa": "باغبان"
+          }
+        },
+        {
+          "id": "chandelier-cleaner",
+          "name": {
+            "en": "Chandelier Cleaner",
+            "fa": "تمیزکار لوستر"
+          }
+        },
+        {
+          "id": "protocol-officer",
+          "name": {
+            "en": "Protocol Officer",
+            "fa": "افسر تشریفات"
+          }
+        },
+        {
+          "id": "visitor",
+          "name": {
+            "en": "Visitor",
+            "fa": "بازدیدکننده"
+          }
+        }
+      ]
+    },
+    {
+      "id": "roman-colosseum",
+      "icon": "🏛️",
+      "name": {
+        "en": "Roman Colosseum",
+        "fa": "کلوسئوم روم"
+      },
+      "roles": [
+        {
+          "id": "archaeology-guide",
+          "name": {
+            "en": "Archaeology Guide",
+            "fa": "راهنمای باستان‌شناسی"
+          }
+        },
+        {
+          "id": "history-professor",
+          "name": {
+            "en": "History Professor",
+            "fa": "استاد تاریخ"
+          }
+        },
+        {
+          "id": "tourist",
+          "name": {
+            "en": "Tourist",
+            "fa": "گردشگر"
+          }
+        },
+        {
+          "id": "souvenir-vendor",
+          "name": {
+            "en": "Souvenir Vendor",
+            "fa": "دستفروش سوغاتی"
+          }
+        },
+        {
+          "id": "restoration-engineer",
+          "name": {
+            "en": "Restoration Engineer",
+            "fa": "مهندس مرمت"
+          }
+        },
+        {
+          "id": "site-patrol-officer",
+          "name": {
+            "en": "Site Patrol Officer",
+            "fa": "افسر گشت محوطه"
+          }
+        },
+        {
+          "id": "street-performer",
+          "name": {
+            "en": "Street Performer",
+            "fa": "هنرمند خیابانی"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ancient-temple",
+      "icon": "🛕",
+      "name": {
+        "en": "Ancient Temple",
+        "fa": "معبد باستانی"
+      },
+      "roles": [
+        {
+          "id": "temple-priest",
+          "name": {
+            "en": "Temple Priest",
+            "fa": "کاهن معبد"
+          }
+        },
+        {
+          "id": "pilgrim",
+          "name": {
+            "en": "Pilgrim",
+            "fa": "زائر"
+          }
+        },
+        {
+          "id": "stone-carver",
+          "name": {
+            "en": "Stone Carver",
+            "fa": "سنگ‌تراش"
+          }
+        },
+        {
+          "id": "epigrapher",
+          "name": {
+            "en": "Epigrapher",
+            "fa": "کتیبه‌شناس"
+          }
+        },
+        {
+          "id": "tour-guide",
+          "name": {
+            "en": "Tour Guide",
+            "fa": "راهنمای تور"
+          }
+        },
+        {
+          "id": "offering-keeper",
+          "name": {
+            "en": "Offering Keeper",
+            "fa": "نگهبان نذورات"
+          }
+        },
+        {
+          "id": "visitor",
+          "name": {
+            "en": "Visitor",
+            "fa": "بازدیدکننده"
+          }
+        }
+      ]
+    },
+    {
+      "id": "historic-bazaar",
+      "icon": "🏺",
+      "name": {
+        "en": "Historic Bazaar",
+        "fa": "بازار تاریخی"
+      },
+      "roles": [
+        {
+          "id": "carpet-merchant",
+          "name": {
+            "en": "Carpet Merchant",
+            "fa": "تاجر فرش"
+          }
+        },
+        {
+          "id": "spice-seller",
+          "name": {
+            "en": "Spice Seller",
+            "fa": "ادویه‌فروش"
+          }
+        },
+        {
+          "id": "coppersmith",
+          "name": {
+            "en": "Coppersmith",
+            "fa": "مسگر"
+          }
+        },
+        {
+          "id": "tour-guide",
+          "name": {
+            "en": "Tour Guide",
+            "fa": "راهنمای تور"
+          }
+        },
+        {
+          "id": "tea-house-owner",
+          "name": {
+            "en": "Tea House Owner",
+            "fa": "صاحب چایخانه"
+          }
+        },
+        {
+          "id": "caravanserai-keeper",
+          "name": {
+            "en": "Caravanserai Keeper",
+            "fa": "کاروانسرادار"
+          }
+        },
+        {
+          "id": "tourist",
+          "name": {
+            "en": "Tourist",
+            "fa": "گردشگر"
+          }
+        }
+      ]
+    },
+    {
+      "id": "great-cathedral",
+      "icon": "⛪",
+      "name": {
+        "en": "Great Cathedral",
+        "fa": "کلیسای جامع بزرگ"
+      },
+      "roles": [
+        {
+          "id": "priest",
+          "name": {
+            "en": "Priest",
+            "fa": "کشیش"
+          }
+        },
+        {
+          "id": "organist",
+          "name": {
+            "en": "Organist",
+            "fa": "ارگ‌نواز"
+          }
+        },
+        {
+          "id": "bell-ringer",
+          "name": {
+            "en": "Bell Ringer",
+            "fa": "ناقوس‌زن"
+          }
+        },
+        {
+          "id": "stained-glass-restorer",
+          "name": {
+            "en": "Stained Glass Restorer",
+            "fa": "مرمتگر شیشه رنگی"
+          }
+        },
+        {
+          "id": "tour-guide",
+          "name": {
+            "en": "Tour Guide",
+            "fa": "راهنمای تور"
+          }
+        },
+        {
+          "id": "choir-singer",
+          "name": {
+            "en": "Choir Singer",
+            "fa": "خواننده گروه کر"
+          }
+        },
+        {
+          "id": "pilgrim",
+          "name": {
+            "en": "Pilgrim",
+            "fa": "زائر"
+          }
+        }
+      ]
+    },
+    {
+      "id": "archaeological-dig-site",
+      "icon": "⛏️",
+      "name": {
+        "en": "Archaeological Dig Site",
+        "fa": "محوطه کاوش باستان‌شناسی"
+      },
+      "roles": [
+        {
+          "id": "lead-archaeologist",
+          "name": {
+            "en": "Lead Archaeologist",
+            "fa": "باستان‌شناس ارشد"
+          }
+        },
+        {
+          "id": "field-surveyor",
+          "name": {
+            "en": "Field Surveyor",
+            "fa": "نقشه‌بردار میدانی"
+          }
+        },
+        {
+          "id": "artifact-cataloguer",
+          "name": {
+            "en": "Artifact Cataloguer",
+            "fa": "فهرست‌نویس اشیا"
+          }
+        },
+        {
+          "id": "excavation-volunteer",
+          "name": {
+            "en": "Excavation Volunteer",
+            "fa": "داوطلب حفاری"
+          }
+        },
+        {
+          "id": "site-photographer",
+          "name": {
+            "en": "Site Photographer",
+            "fa": "عکاس محوطه"
+          }
+        },
+        {
+          "id": "conservator",
+          "name": {
+            "en": "Conservator",
+            "fa": "حفاظت‌کار"
+          }
+        },
+        {
+          "id": "geologist",
+          "name": {
+            "en": "Geologist",
+            "fa": "زمین‌شناس"
+          }
+        }
+      ]
+    },
+    {
+      "id": "great-wall-watchtower",
+      "icon": "🧱",
+      "name": {
+        "en": "Great Wall Watchtower",
+        "fa": "برج دیده‌بانی دیوار بزرگ"
+      },
+      "roles": [
+        {
+          "id": "heritage-guide",
+          "name": {
+            "en": "Heritage Guide",
+            "fa": "راهنمای میراث"
+          }
+        },
+        {
+          "id": "hiker",
+          "name": {
+            "en": "Hiker",
+            "fa": "کوهنورد"
+          }
+        },
+        {
+          "id": "restoration-worker",
+          "name": {
+            "en": "Restoration Worker",
+            "fa": "کارگر مرمت"
+          }
+        },
+        {
+          "id": "photographer",
+          "name": {
+            "en": "Photographer",
+            "fa": "عکاس"
+          }
+        },
+        {
+          "id": "souvenir-vendor",
+          "name": {
+            "en": "Souvenir Vendor",
+            "fa": "دستفروش سوغاتی"
+          }
+        },
+        {
+          "id": "park-ranger",
+          "name": {
+            "en": "Park Ranger",
+            "fa": "جنگل‌بان"
+          }
+        },
+        {
+          "id": "tourist",
+          "name": {
+            "en": "Tourist",
+            "fa": "گردشگر"
+          }
+        }
+      ]
+    },
+    {
+      "id": "pharaoh-s-tomb",
+      "icon": "⚰️",
+      "name": {
+        "en": "Pharaoh's Tomb",
+        "fa": "مقبره فرعون"
+      },
+      "roles": [
+        {
+          "id": "egyptologist",
+          "name": {
+            "en": "Egyptologist",
+            "fa": "مصرشناس"
+          }
+        },
+        {
+          "id": "tomb-guard",
+          "name": {
+            "en": "Tomb Guard",
+            "fa": "نگهبان مقبره"
+          }
+        },
+        {
+          "id": "hieroglyph-translator",
+          "name": {
+            "en": "Hieroglyph Translator",
+            "fa": "مترجم هیروگلیف"
+          }
+        },
+        {
+          "id": "lantern-bearer",
+          "name": {
+            "en": "Lantern Bearer",
+            "fa": "فانوس‌دار"
+          }
+        },
+        {
+          "id": "conservator",
+          "name": {
+            "en": "Conservator",
+            "fa": "حفاظت‌کار"
+          }
+        },
+        {
+          "id": "documentary-filmmaker",
+          "name": {
+            "en": "Documentary Filmmaker",
+            "fa": "مستندساز"
+          }
+        },
+        {
+          "id": "treasure-cataloguer",
+          "name": {
+            "en": "Treasure Cataloguer",
+            "fa": "فهرست‌نویس گنجینه"
+          }
+        }
+      ]
+    },
+    {
+      "id": "indoor-climbing-gym",
+      "icon": "🧗",
+      "name": {
+        "en": "Indoor Climbing Gym",
+        "fa": "سالن سنگ‌نوردی"
+      },
+      "roles": [
+        {
+          "id": "belay-instructor",
+          "name": {
+            "en": "Belay Instructor",
+            "fa": "مربی حمایت طناب"
+          }
+        },
+        {
+          "id": "route-setter",
+          "name": {
+            "en": "Route Setter",
+            "fa": "مسیرچین"
+          }
+        },
+        {
+          "id": "boulderer",
+          "name": {
+            "en": "Boulderer",
+            "fa": "سنگ‌نورد بولدرینگ"
+          }
+        },
+        {
+          "id": "gear-rental-clerk",
+          "name": {
+            "en": "Gear Rental Clerk",
+            "fa": "متصدی کرایه تجهیزات"
+          }
+        },
+        {
+          "id": "safety-inspector",
+          "name": {
+            "en": "Safety Inspector",
+            "fa": "بازرس ایمنی"
+          }
+        },
+        {
+          "id": "first-time-climber",
+          "name": {
+            "en": "First-Time Climber",
+            "fa": "سنگ‌نورد تازه‌کار"
+          }
+        },
+        {
+          "id": "front-desk-receptionist",
+          "name": {
+            "en": "Front Desk Receptionist",
+            "fa": "مسئول پذیرش"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ice-hockey-rink",
+      "icon": "🏒",
+      "name": {
+        "en": "Ice Hockey Rink",
+        "fa": "زمین هاکی روی یخ"
+      },
+      "roles": [
+        {
+          "id": "goaltender",
+          "name": {
+            "en": "Goaltender",
+            "fa": "دروازه‌بان"
+          }
+        },
+        {
+          "id": "referee",
+          "name": {
+            "en": "Referee",
+            "fa": "داور"
+          }
+        },
+        {
+          "id": "zamboni-driver",
+          "name": {
+            "en": "Zamboni Driver",
+            "fa": "راننده دستگاه یخ‌ساز"
+          }
+        },
+        {
+          "id": "team-coach",
+          "name": {
+            "en": "Team Coach",
+            "fa": "سرمربی تیم"
+          }
+        },
+        {
+          "id": "equipment-manager",
+          "name": {
+            "en": "Equipment Manager",
+            "fa": "مدیر تجهیزات"
+          }
+        },
+        {
+          "id": "penalty-box-attendant",
+          "name": {
+            "en": "Penalty Box Attendant",
+            "fa": "متصدی جایگاه جریمه"
+          }
+        },
+        {
+          "id": "cheering-fan",
+          "name": {
+            "en": "Cheering Fan",
+            "fa": "هوادار مشتاق"
+          }
+        }
+      ]
+    },
+    {
+      "id": "golf-course",
+      "icon": "⛳",
+      "name": {
+        "en": "Golf Course",
+        "fa": "زمین گلف"
+      },
+      "roles": [
+        {
+          "id": "caddie",
+          "name": {
+            "en": "Caddie",
+            "fa": "کدی"
+          }
+        },
+        {
+          "id": "greenskeeper",
+          "name": {
+            "en": "Greenskeeper",
+            "fa": "باغبان زمین"
+          }
+        },
+        {
+          "id": "golf-pro-instructor",
+          "name": {
+            "en": "Golf Pro Instructor",
+            "fa": "مربی حرفه‌ای گلف"
+          }
+        },
+        {
+          "id": "pro-shop-clerk",
+          "name": {
+            "en": "Pro Shop Clerk",
+            "fa": "فروشنده فروشگاه"
+          }
+        },
+        {
+          "id": "cart-attendant",
+          "name": {
+            "en": "Cart Attendant",
+            "fa": "متصدی گلف‌کارت"
+          }
+        },
+        {
+          "id": "clubhouse-bartender",
+          "name": {
+            "en": "Clubhouse Bartender",
+            "fa": "بارمن کلوب"
+          }
+        },
+        {
+          "id": "tournament-marshal",
+          "name": {
+            "en": "Tournament Marshal",
+            "fa": "ناظر مسابقه"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tennis-club",
+      "icon": "🎾",
+      "name": {
+        "en": "Tennis Club",
+        "fa": "باشگاه تنیس"
+      },
+      "roles": [
+        {
+          "id": "tennis-coach",
+          "name": {
+            "en": "Tennis Coach",
+            "fa": "مربی تنیس"
+          }
+        },
+        {
+          "id": "chair-umpire",
+          "name": {
+            "en": "Chair Umpire",
+            "fa": "داور صندلی"
+          }
+        },
+        {
+          "id": "ball-boy",
+          "name": {
+            "en": "Ball Boy",
+            "fa": "توپ‌جمع‌کن"
+          }
+        },
+        {
+          "id": "court-groundskeeper",
+          "name": {
+            "en": "Court Groundskeeper",
+            "fa": "نگهبان زمین"
+          }
+        },
+        {
+          "id": "racquet-stringer",
+          "name": {
+            "en": "Racquet Stringer",
+            "fa": "زه‌بند راکت"
+          }
+        },
+        {
+          "id": "club-member",
+          "name": {
+            "en": "Club Member",
+            "fa": "عضو باشگاه"
+          }
+        },
+        {
+          "id": "pro-shop-attendant",
+          "name": {
+            "en": "Pro Shop Attendant",
+            "fa": "متصدی فروشگاه باشگاه"
+          }
+        }
+      ]
+    },
+    {
+      "id": "swimming-pool",
+      "icon": "🏊",
+      "name": {
+        "en": "Swimming Pool",
+        "fa": "استخر شنا"
+      },
+      "roles": [
+        {
+          "id": "lifeguard",
+          "name": {
+            "en": "Lifeguard",
+            "fa": "نجات‌غریق"
+          }
+        },
+        {
+          "id": "swim-coach",
+          "name": {
+            "en": "Swim Coach",
+            "fa": "مربی شنا"
+          }
+        },
+        {
+          "id": "pool-maintenance-worker",
+          "name": {
+            "en": "Pool Maintenance Worker",
+            "fa": "کارگر نگهداری استخر"
+          }
+        },
+        {
+          "id": "lap-swimmer",
+          "name": {
+            "en": "Lap Swimmer",
+            "fa": "شناگر دور استخر"
+          }
+        },
+        {
+          "id": "locker-room-attendant",
+          "name": {
+            "en": "Locker Room Attendant",
+            "fa": "متصدی رختکن"
+          }
+        },
+        {
+          "id": "diving-instructor",
+          "name": {
+            "en": "Diving Instructor",
+            "fa": "مربی شیرجه"
+          }
+        },
+        {
+          "id": "ticket-cashier",
+          "name": {
+            "en": "Ticket Cashier",
+            "fa": "صندوقدار بلیت"
+          }
+        }
+      ]
+    },
+    {
+      "id": "skate-park",
+      "icon": "🛹",
+      "name": {
+        "en": "Skate Park",
+        "fa": "اسکیت‌پارک"
+      },
+      "roles": [
+        {
+          "id": "skateboarder",
+          "name": {
+            "en": "Skateboarder",
+            "fa": "اسکیت‌بازِ تخته"
+          }
+        },
+        {
+          "id": "bmx-rider",
+          "name": {
+            "en": "BMX Rider",
+            "fa": "دوچرخه‌سوار بی‌ام‌ایکس"
+          }
+        },
+        {
+          "id": "ramp-builder",
+          "name": {
+            "en": "Ramp Builder",
+            "fa": "سازنده رمپ"
+          }
+        },
+        {
+          "id": "trick-coach",
+          "name": {
+            "en": "Trick Coach",
+            "fa": "مربی حرکات نمایشی"
+          }
+        },
+        {
+          "id": "safety-gear-vendor",
+          "name": {
+            "en": "Safety Gear Vendor",
+            "fa": "فروشنده تجهیزات ایمنی"
+          }
+        },
+        {
+          "id": "filmer",
+          "name": {
+            "en": "Filmer",
+            "fa": "فیلم‌بردار"
+          }
+        },
+        {
+          "id": "park-supervisor",
+          "name": {
+            "en": "Park Supervisor",
+            "fa": "سرپرست پارک"
+          }
+        }
+      ]
+    },
+    {
+      "id": "boxing-gym",
+      "icon": "🥊",
+      "name": {
+        "en": "Boxing Gym",
+        "fa": "باشگاه بوکس"
+      },
+      "roles": [
+        {
+          "id": "boxing-trainer",
+          "name": {
+            "en": "Boxing Trainer",
+            "fa": "مربی بوکس"
+          }
+        },
+        {
+          "id": "sparring-partner",
+          "name": {
+            "en": "Sparring Partner",
+            "fa": "حریف تمرینی"
+          }
+        },
+        {
+          "id": "cutman",
+          "name": {
+            "en": "Cutman",
+            "fa": "زخم‌بند گوشه رینگ"
+          }
+        },
+        {
+          "id": "ring-announcer",
+          "name": {
+            "en": "Ring Announcer",
+            "fa": "اعلام‌گر رینگ"
+          }
+        },
+        {
+          "id": "heavyweight-boxer",
+          "name": {
+            "en": "Heavyweight Boxer",
+            "fa": "بوکسور سنگین‌وزن"
+          }
+        },
+        {
+          "id": "equipment-wrapper",
+          "name": {
+            "en": "Equipment Wrapper",
+            "fa": "باندپیچ دست"
+          }
+        },
+        {
+          "id": "gym-manager",
+          "name": {
+            "en": "Gym Manager",
+            "fa": "مدیر باشگاه"
+          }
+        }
+      ]
+    },
+    {
+      "id": "stadium",
+      "icon": "🏟️",
+      "name": {
+        "en": "Stadium",
+        "fa": "ورزشگاه"
+      },
+      "roles": [
+        {
+          "id": "star-striker",
+          "name": {
+            "en": "Star Striker",
+            "fa": "مهاجم ستاره"
+          }
+        },
+        {
+          "id": "match-referee",
+          "name": {
+            "en": "Match Referee",
+            "fa": "داور مسابقه"
+          }
+        },
+        {
+          "id": "stadium-announcer",
+          "name": {
+            "en": "Stadium Announcer",
+            "fa": "گوینده ورزشگاه"
+          }
+        },
+        {
+          "id": "vendor",
+          "name": {
+            "en": "Vendor",
+            "fa": "دستفروش"
+          }
+        },
+        {
+          "id": "groundskeeper",
+          "name": {
+            "en": "Groundskeeper",
+            "fa": "نگهبان چمن"
+          }
+        },
+        {
+          "id": "security-guard",
+          "name": {
+            "en": "Security Guard",
+            "fa": "نگهبان امنیتی"
+          }
+        },
+        {
+          "id": "ticket-usher",
+          "name": {
+            "en": "Ticket Usher",
+            "fa": "راهنمای جایگاه"
+          }
+        }
+      ]
+    },
+    {
+      "id": "yoga-studio",
+      "icon": "🧘",
+      "name": {
+        "en": "Yoga Studio",
+        "fa": "استودیوی یوگا"
+      },
+      "roles": [
+        {
+          "id": "yoga-instructor",
+          "name": {
+            "en": "Yoga Instructor",
+            "fa": "مربی یوگا"
+          }
+        },
+        {
+          "id": "studio-receptionist",
+          "name": {
+            "en": "Studio Receptionist",
+            "fa": "پذیرشگر استودیو"
+          }
+        },
+        {
+          "id": "meditation-guide",
+          "name": {
+            "en": "Meditation Guide",
+            "fa": "راهنمای مدیتیشن"
+          }
+        },
+        {
+          "id": "regular-practitioner",
+          "name": {
+            "en": "Regular Practitioner",
+            "fa": "تمرین‌کننده همیشگی"
+          }
+        },
+        {
+          "id": "mat-supplier",
+          "name": {
+            "en": "Mat Supplier",
+            "fa": "تأمین‌کننده تشک"
+          }
+        },
+        {
+          "id": "wellness-coach",
+          "name": {
+            "en": "Wellness Coach",
+            "fa": "مربی تندرستی"
+          }
+        },
+        {
+          "id": "cleaner",
+          "name": {
+            "en": "Cleaner",
+            "fa": "نظافتچی"
+          }
+        }
+      ]
+    },
+    {
+      "id": "hospital-emergency-room",
+      "icon": "🚑",
+      "name": {
+        "en": "Hospital Emergency Room",
+        "fa": "اورژانس بیمارستان"
+      },
+      "roles": [
+        {
+          "id": "triage-nurse",
+          "name": {
+            "en": "Triage Nurse",
+            "fa": "پرستار تریاژ"
+          }
+        },
+        {
+          "id": "er-doctor",
+          "name": {
+            "en": "ER Doctor",
+            "fa": "پزشک اورژانس"
+          }
+        },
+        {
+          "id": "paramedic",
+          "name": {
+            "en": "Paramedic",
+            "fa": "تکنسین فوریت‌های پزشکی"
+          }
+        },
+        {
+          "id": "trauma-surgeon",
+          "name": {
+            "en": "Trauma Surgeon",
+            "fa": "جراح ترومای"
+          }
+        },
+        {
+          "id": "anxious-patient",
+          "name": {
+            "en": "Anxious Patient",
+            "fa": "بیمار مضطرب"
+          }
+        },
+        {
+          "id": "registration-clerk",
+          "name": {
+            "en": "Registration Clerk",
+            "fa": "متصدی پذیرش"
+          }
+        },
+        {
+          "id": "x-ray-technician",
+          "name": {
+            "en": "X-ray Technician",
+            "fa": "تکنسین رادیولوژی"
+          }
+        }
+      ]
+    },
+    {
+      "id": "operating-theater",
+      "icon": "🔪",
+      "name": {
+        "en": "Operating Theater",
+        "fa": "اتاق عمل"
+      },
+      "roles": [
+        {
+          "id": "lead-surgeon",
+          "name": {
+            "en": "Lead Surgeon",
+            "fa": "جراح اصلی"
+          }
+        },
+        {
+          "id": "anesthesiologist",
+          "name": {
+            "en": "Anesthesiologist",
+            "fa": "متخصص بیهوشی"
+          }
+        },
+        {
+          "id": "scrub-nurse",
+          "name": {
+            "en": "Scrub Nurse",
+            "fa": "پرستار اسکراب"
+          }
+        },
+        {
+          "id": "surgical-assistant",
+          "name": {
+            "en": "Surgical Assistant",
+            "fa": "دستیار جراح"
+          }
+        },
+        {
+          "id": "perfusionist",
+          "name": {
+            "en": "Perfusionist",
+            "fa": "پرفیوژنیست"
+          }
+        },
+        {
+          "id": "circulating-nurse",
+          "name": {
+            "en": "Circulating Nurse",
+            "fa": "پرستار سیار"
+          }
+        },
+        {
+          "id": "medical-student",
+          "name": {
+            "en": "Medical Student",
+            "fa": "دانشجوی پزشکی"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ambulance",
+      "icon": "🚨",
+      "name": {
+        "en": "Ambulance",
+        "fa": "آمبولانس"
+      },
+      "roles": [
+        {
+          "id": "driver",
+          "name": {
+            "en": "Driver",
+            "fa": "راننده"
+          }
+        },
+        {
+          "id": "lead-paramedic",
+          "name": {
+            "en": "Lead Paramedic",
+            "fa": "تکنسین ارشد فوریت‌ها"
+          }
+        },
+        {
+          "id": "emergency-dispatcher",
+          "name": {
+            "en": "Emergency Dispatcher",
+            "fa": "اپراتور اعزام"
+          }
+        },
+        {
+          "id": "injured-passenger",
+          "name": {
+            "en": "Injured Passenger",
+            "fa": "مصدوم"
+          }
+        },
+        {
+          "id": "worried-relative",
+          "name": {
+            "en": "Worried Relative",
+            "fa": "همراه نگران"
+          }
+        },
+        {
+          "id": "emt-trainee",
+          "name": {
+            "en": "EMT Trainee",
+            "fa": "کارآموز فوریت‌های پزشکی"
+          }
+        },
+        {
+          "id": "first-responder",
+          "name": {
+            "en": "First Responder",
+            "fa": "امدادگر اولیه"
+          }
+        }
+      ]
+    },
+    {
+      "id": "dental-clinic",
+      "icon": "🦷",
+      "name": {
+        "en": "Dental Clinic",
+        "fa": "کلینیک دندان‌پزشکی"
+      },
+      "roles": [
+        {
+          "id": "dentist",
+          "name": {
+            "en": "Dentist",
+            "fa": "دندان‌پزشک"
+          }
+        },
+        {
+          "id": "dental-hygienist",
+          "name": {
+            "en": "Dental Hygienist",
+            "fa": "بهداشت‌کار دهان و دندان"
+          }
+        },
+        {
+          "id": "dental-assistant",
+          "name": {
+            "en": "Dental Assistant",
+            "fa": "دستیار دندان‌پزشک"
+          }
+        },
+        {
+          "id": "orthodontist",
+          "name": {
+            "en": "Orthodontist",
+            "fa": "متخصص ارتودنسی"
+          }
+        },
+        {
+          "id": "nervous-patient",
+          "name": {
+            "en": "Nervous Patient",
+            "fa": "بیمار مضطرب"
+          }
+        },
+        {
+          "id": "receptionist",
+          "name": {
+            "en": "Receptionist",
+            "fa": "منشی"
+          }
+        },
+        {
+          "id": "dental-lab-technician",
+          "name": {
+            "en": "Dental Lab Technician",
+            "fa": "تکنسین لابراتوار دندان"
+          }
+        }
+      ]
+    },
+    {
+      "id": "maternity-ward",
+      "icon": "👶",
+      "name": {
+        "en": "Maternity Ward",
+        "fa": "بخش زایمان"
+      },
+      "roles": [
+        {
+          "id": "obstetrician",
+          "name": {
+            "en": "Obstetrician",
+            "fa": "متخصص زنان و زایمان"
+          }
+        },
+        {
+          "id": "midwife",
+          "name": {
+            "en": "Midwife",
+            "fa": "ماما"
+          }
+        },
+        {
+          "id": "new-mother",
+          "name": {
+            "en": "New Mother",
+            "fa": "مادر تازه‌زا"
+          }
+        },
+        {
+          "id": "expectant-father",
+          "name": {
+            "en": "Expectant Father",
+            "fa": "پدر چشم‌انتظار"
+          }
+        },
+        {
+          "id": "neonatal-nurse",
+          "name": {
+            "en": "Neonatal Nurse",
+            "fa": "پرستار نوزادان"
+          }
+        },
+        {
+          "id": "lactation-consultant",
+          "name": {
+            "en": "Lactation Consultant",
+            "fa": "مشاور شیردهی"
+          }
+        },
+        {
+          "id": "pediatrician",
+          "name": {
+            "en": "Pediatrician",
+            "fa": "متخصص اطفال"
+          }
+        }
+      ]
+    },
+    {
+      "id": "psychiatric-hospital",
+      "icon": "🧠",
+      "name": {
+        "en": "Psychiatric Hospital",
+        "fa": "بیمارستان روان‌پزشکی"
+      },
+      "roles": [
+        {
+          "id": "psychiatrist",
+          "name": {
+            "en": "Psychiatrist",
+            "fa": "روان‌پزشک"
+          }
+        },
+        {
+          "id": "psychologist",
+          "name": {
+            "en": "Psychologist",
+            "fa": "روان‌شناس"
+          }
+        },
+        {
+          "id": "psychiatric-nurse",
+          "name": {
+            "en": "Psychiatric Nurse",
+            "fa": "پرستار روان"
+          }
+        },
+        {
+          "id": "inpatient",
+          "name": {
+            "en": "Inpatient",
+            "fa": "بیمار بستری"
+          }
+        },
+        {
+          "id": "orderly",
+          "name": {
+            "en": "Orderly",
+            "fa": "خدمتیار بخش"
+          }
+        },
+        {
+          "id": "social-worker",
+          "name": {
+            "en": "Social Worker",
+            "fa": "مددکار اجتماعی"
+          }
+        },
+        {
+          "id": "occupational-therapist",
+          "name": {
+            "en": "Occupational Therapist",
+            "fa": "کاردرمانگر"
+          }
+        }
+      ]
+    },
+    {
+      "id": "blood-donation-center",
+      "icon": "🩸",
+      "name": {
+        "en": "Blood Donation Center",
+        "fa": "مرکز اهدای خون"
+      },
+      "roles": [
+        {
+          "id": "phlebotomist",
+          "name": {
+            "en": "Phlebotomist",
+            "fa": "فلبوتومیست"
+          }
+        },
+        {
+          "id": "blood-donor",
+          "name": {
+            "en": "Blood Donor",
+            "fa": "اهداکننده خون"
+          }
+        },
+        {
+          "id": "screening-nurse",
+          "name": {
+            "en": "Screening Nurse",
+            "fa": "پرستار غربالگری"
+          }
+        },
+        {
+          "id": "lab-technician",
+          "name": {
+            "en": "Lab Technician",
+            "fa": "تکنسین آزمایشگاه"
+          }
+        },
+        {
+          "id": "donor-coordinator",
+          "name": {
+            "en": "Donor Coordinator",
+            "fa": "هماهنگ‌کننده اهدا"
+          }
+        },
+        {
+          "id": "first-time-volunteer",
+          "name": {
+            "en": "First-time Volunteer",
+            "fa": "داوطلب بار اول"
+          }
+        },
+        {
+          "id": "refreshment-attendant",
+          "name": {
+            "en": "Refreshment Attendant",
+            "fa": "متصدی پذیرایی"
+          }
+        }
+      ]
+    },
+    {
+      "id": "intensive-care-unit",
+      "icon": "🫀",
+      "name": {
+        "en": "Intensive Care Unit",
+        "fa": "بخش مراقبت‌های ویژه"
+      },
+      "roles": [
+        {
+          "id": "intensivist",
+          "name": {
+            "en": "Intensivist",
+            "fa": "متخصص مراقبت ویژه"
+          }
+        },
+        {
+          "id": "critical-care-nurse",
+          "name": {
+            "en": "Critical Care Nurse",
+            "fa": "پرستار مراقبت ویژه"
+          }
+        },
+        {
+          "id": "respiratory-therapist",
+          "name": {
+            "en": "Respiratory Therapist",
+            "fa": "تنفس‌درمانگر"
+          }
+        },
+        {
+          "id": "comatose-patient",
+          "name": {
+            "en": "Comatose Patient",
+            "fa": "بیمار در کما"
+          }
+        },
+        {
+          "id": "on-call-resident",
+          "name": {
+            "en": "On-call Resident",
+            "fa": "دستیار آنکال"
+          }
+        },
+        {
+          "id": "worried-family-member",
+          "name": {
+            "en": "Worried Family Member",
+            "fa": "عضو نگران خانواده"
+          }
+        },
+        {
+          "id": "biomedical-engineer",
+          "name": {
+            "en": "Biomedical Engineer",
+            "fa": "مهندس تجهیزات پزشکی"
+          }
+        }
+      ]
+    },
+    {
+      "id": "mountain-rescue-station",
+      "icon": "⛑️",
+      "name": {
+        "en": "Mountain Rescue Station",
+        "fa": "ایستگاه نجات کوهستان"
+      },
+      "roles": [
+        {
+          "id": "rescue-team-leader",
+          "name": {
+            "en": "Rescue Team Leader",
+            "fa": "سرپرست تیم نجات"
+          }
+        },
+        {
+          "id": "helicopter-pilot",
+          "name": {
+            "en": "Helicopter Pilot",
+            "fa": "خلبان بالگرد"
+          }
+        },
+        {
+          "id": "wilderness-medic",
+          "name": {
+            "en": "Wilderness Medic",
+            "fa": "امدادگر کوهستان"
+          }
+        },
+        {
+          "id": "search-dog-handler",
+          "name": {
+            "en": "Search Dog Handler",
+            "fa": "مربی سگ جست‌وجو"
+          }
+        },
+        {
+          "id": "stranded-hiker",
+          "name": {
+            "en": "Stranded Hiker",
+            "fa": "کوهنورد گرفتار"
+          }
+        },
+        {
+          "id": "radio-operator",
+          "name": {
+            "en": "Radio Operator",
+            "fa": "اپراتور بی‌سیم"
+          }
+        },
+        {
+          "id": "volunteer-climber",
+          "name": {
+            "en": "Volunteer Climber",
+            "fa": "کوهنورد داوطلب"
+          }
+        }
+      ]
+    },
+    {
+      "id": "veterinary-clinic",
+      "icon": "🐾",
+      "name": {
+        "en": "Veterinary Clinic",
+        "fa": "کلینیک دامپزشکی"
+      },
+      "roles": [
+        {
+          "id": "veterinarian",
+          "name": {
+            "en": "Veterinarian",
+            "fa": "دامپزشک"
+          }
+        },
+        {
+          "id": "vet-technician",
+          "name": {
+            "en": "Vet Technician",
+            "fa": "تکنسین دامپزشکی"
+          }
+        },
+        {
+          "id": "pet-owner",
+          "name": {
+            "en": "Pet Owner",
+            "fa": "صاحب حیوان خانگی"
+          }
+        },
+        {
+          "id": "animal-groomer",
+          "name": {
+            "en": "Animal Groomer",
+            "fa": "آرایشگر حیوانات"
+          }
+        },
+        {
+          "id": "front-desk-receptionist",
+          "name": {
+            "en": "Front Desk Receptionist",
+            "fa": "منشی پذیرش"
+          }
+        },
+        {
+          "id": "veterinary-surgeon",
+          "name": {
+            "en": "Veterinary Surgeon",
+            "fa": "جراح دامپزشک"
+          }
+        },
+        {
+          "id": "kennel-attendant",
+          "name": {
+            "en": "Kennel Attendant",
+            "fa": "متصدی نگهداری حیوانات"
+          }
+        }
+      ]
+    },
+    {
+      "id": "elementary-school",
+      "icon": "🏫",
+      "name": {
+        "en": "Elementary School",
+        "fa": "دبستان"
+      },
+      "roles": [
+        {
+          "id": "principal",
+          "name": {
+            "en": "Principal",
+            "fa": "مدیر مدرسه"
+          }
+        },
+        {
+          "id": "first-grade-teacher",
+          "name": {
+            "en": "First-Grade Teacher",
+            "fa": "معلم کلاس اول"
+          }
+        },
+        {
+          "id": "janitor",
+          "name": {
+            "en": "Janitor",
+            "fa": "سرایدار"
+          }
+        },
+        {
+          "id": "school-nurse",
+          "name": {
+            "en": "School Nurse",
+            "fa": "پرستار مدرسه"
+          }
+        },
+        {
+          "id": "hall-monitor",
+          "name": {
+            "en": "Hall Monitor",
+            "fa": "مبصر راهرو"
+          }
+        },
+        {
+          "id": "cafeteria-cook",
+          "name": {
+            "en": "Cafeteria Cook",
+            "fa": "آشپز سلف"
+          }
+        },
+        {
+          "id": "crossing-guard",
+          "name": {
+            "en": "Crossing Guard",
+            "fa": "مأمور عبور دانش‌آموزان"
+          }
+        }
+      ]
+    },
+    {
+      "id": "university-lecture-hall",
+      "icon": "🎓",
+      "name": {
+        "en": "University Lecture Hall",
+        "fa": "تالار درس دانشگاه"
+      },
+      "roles": [
+        {
+          "id": "professor",
+          "name": {
+            "en": "Professor",
+            "fa": "استاد"
+          }
+        },
+        {
+          "id": "teaching-assistant",
+          "name": {
+            "en": "Teaching Assistant",
+            "fa": "دستیار آموزشی"
+          }
+        },
+        {
+          "id": "freshman-student",
+          "name": {
+            "en": "Freshman Student",
+            "fa": "دانشجوی سال اول"
+          }
+        },
+        {
+          "id": "auditing-listener",
+          "name": {
+            "en": "Auditing Listener",
+            "fa": "شنونده آزاد"
+          }
+        },
+        {
+          "id": "note-taker",
+          "name": {
+            "en": "Note-Taker",
+            "fa": "یادداشت‌بردار"
+          }
+        },
+        {
+          "id": "projector-technician",
+          "name": {
+            "en": "Projector Technician",
+            "fa": "تکنسین پروژکتور"
+          }
+        },
+        {
+          "id": "exchange-student",
+          "name": {
+            "en": "Exchange Student",
+            "fa": "دانشجوی تبادلی"
+          }
+        }
+      ]
+    },
+    {
+      "id": "public-library",
+      "icon": "📚",
+      "name": {
+        "en": "Public Library",
+        "fa": "کتابخانه عمومی"
+      },
+      "roles": [
+        {
+          "id": "head-librarian",
+          "name": {
+            "en": "Head Librarian",
+            "fa": "کتابدار ارشد"
+          }
+        },
+        {
+          "id": "reference-assistant",
+          "name": {
+            "en": "Reference Assistant",
+            "fa": "دستیار مرجع"
+          }
+        },
+        {
+          "id": "archivist",
+          "name": {
+            "en": "Archivist",
+            "fa": "بایگان"
+          }
+        },
+        {
+          "id": "student-reader",
+          "name": {
+            "en": "Student Reader",
+            "fa": "دانش‌آموز مطالعه‌کننده"
+          }
+        },
+        {
+          "id": "shelving-clerk",
+          "name": {
+            "en": "Shelving Clerk",
+            "fa": "کارمند قفسه‌چینی"
+          }
+        },
+        {
+          "id": "genealogy-researcher",
+          "name": {
+            "en": "Genealogy Researcher",
+            "fa": "پژوهشگر تبارشناسی"
+          }
+        },
+        {
+          "id": "story-time-reader",
+          "name": {
+            "en": "Story-Time Reader",
+            "fa": "قصه‌گوی کودکان"
+          }
+        }
+      ]
+    },
+    {
+      "id": "driving-school",
+      "icon": "🚗",
+      "name": {
+        "en": "Driving School",
+        "fa": "آموزشگاه رانندگی"
+      },
+      "roles": [
+        {
+          "id": "driving-instructor",
+          "name": {
+            "en": "Driving Instructor",
+            "fa": "مربی رانندگی"
+          }
+        },
+        {
+          "id": "learner-driver",
+          "name": {
+            "en": "Learner Driver",
+            "fa": "کارآموز رانندگی"
+          }
+        },
+        {
+          "id": "theory-examiner",
+          "name": {
+            "en": "Theory Examiner",
+            "fa": "ممتحن آیین‌نامه"
+          }
+        },
+        {
+          "id": "road-test-examiner",
+          "name": {
+            "en": "Road-Test Examiner",
+            "fa": "ممتحن آزمون عملی"
+          }
+        },
+        {
+          "id": "office-receptionist",
+          "name": {
+            "en": "Office Receptionist",
+            "fa": "منشی دفتر"
+          }
+        },
+        {
+          "id": "vehicle-mechanic",
+          "name": {
+            "en": "Vehicle Mechanic",
+            "fa": "مکانیک خودرو"
+          }
+        },
+        {
+          "id": "traffic-sign-tutor",
+          "name": {
+            "en": "Traffic Sign Tutor",
+            "fa": "مدرس علائم راهنمایی"
+          }
+        }
+      ]
+    },
+    {
+      "id": "music-conservatory",
+      "icon": "🎼",
+      "name": {
+        "en": "Music Conservatory",
+        "fa": "هنرستان موسیقی"
+      },
+      "roles": [
+        {
+          "id": "conductor",
+          "name": {
+            "en": "Conductor",
+            "fa": "رهبر ارکستر"
+          }
+        },
+        {
+          "id": "piano-teacher",
+          "name": {
+            "en": "Piano Teacher",
+            "fa": "معلم پیانو"
+          }
+        },
+        {
+          "id": "violin-student",
+          "name": {
+            "en": "Violin Student",
+            "fa": "هنرجوی ویولن"
+          }
+        },
+        {
+          "id": "vocal-coach",
+          "name": {
+            "en": "Vocal Coach",
+            "fa": "مربی آواز"
+          }
+        },
+        {
+          "id": "instrument-tuner",
+          "name": {
+            "en": "Instrument Tuner",
+            "fa": "کوک‌کننده ساز"
+          }
+        },
+        {
+          "id": "recital-accompanist",
+          "name": {
+            "en": "Recital Accompanist",
+            "fa": "همنواز کنسرت"
+          }
+        },
+        {
+          "id": "sheet-music-librarian",
+          "name": {
+            "en": "Sheet-Music Librarian",
+            "fa": "بایگان نت‌ها"
+          }
+        }
+      ]
+    },
+    {
+      "id": "medical-school-anatomy-lab",
+      "icon": "🔬",
+      "name": {
+        "en": "Medical School Anatomy Lab",
+        "fa": "آزمایشگاه تشریح دانشکده پزشکی"
+      },
+      "roles": [
+        {
+          "id": "anatomy-professor",
+          "name": {
+            "en": "Anatomy Professor",
+            "fa": "استاد آناتومی"
+          }
+        },
+        {
+          "id": "medical-student",
+          "name": {
+            "en": "Medical Student",
+            "fa": "دانشجوی پزشکی"
+          }
+        },
+        {
+          "id": "lab-technician",
+          "name": {
+            "en": "Lab Technician",
+            "fa": "تکنسین آزمایشگاه"
+          }
+        },
+        {
+          "id": "cadaver-preparator",
+          "name": {
+            "en": "Cadaver Preparator",
+            "fa": "آماده‌ساز جسد"
+          }
+        },
+        {
+          "id": "pathology-resident",
+          "name": {
+            "en": "Pathology Resident",
+            "fa": "دستیار آسیب‌شناسی"
+          }
+        },
+        {
+          "id": "specimen-curator",
+          "name": {
+            "en": "Specimen Curator",
+            "fa": "متصدی نمونه‌ها"
+          }
+        },
+        {
+          "id": "biosafety-officer",
+          "name": {
+            "en": "Biosafety Officer",
+            "fa": "افسر ایمنی زیستی"
+          }
+        }
+      ]
+    },
+    {
+      "id": "military-academy",
+      "icon": "🎖️",
+      "name": {
+        "en": "Military Academy",
+        "fa": "دانشکده افسری"
+      },
+      "roles": [
+        {
+          "id": "commandant",
+          "name": {
+            "en": "Commandant",
+            "fa": "فرمانده دانشکده"
+          }
+        },
+        {
+          "id": "drill-sergeant",
+          "name": {
+            "en": "Drill Sergeant",
+            "fa": "گروهبان رزم"
+          }
+        },
+        {
+          "id": "officer-cadet",
+          "name": {
+            "en": "Officer Cadet",
+            "fa": "دانشجوی افسری"
+          }
+        },
+        {
+          "id": "tactics-instructor",
+          "name": {
+            "en": "Tactics Instructor",
+            "fa": "مربی تاکتیک"
+          }
+        },
+        {
+          "id": "quartermaster",
+          "name": {
+            "en": "Quartermaster",
+            "fa": "افسر تدارکات"
+          }
+        },
+        {
+          "id": "color-bearer",
+          "name": {
+            "en": "Color Bearer",
+            "fa": "پرچم‌دار"
+          }
+        },
+        {
+          "id": "physical-trainer",
+          "name": {
+            "en": "Physical Trainer",
+            "fa": "مربی بدنسازی"
+          }
+        }
+      ]
+    },
+    {
+      "id": "boarding-school-dormitory",
+      "icon": "🛏️",
+      "name": {
+        "en": "Boarding School Dormitory",
+        "fa": "خوابگاه شبانه‌روزی"
+      },
+      "roles": [
+        {
+          "id": "housemaster",
+          "name": {
+            "en": "Housemaster",
+            "fa": "سرپرست خوابگاه"
+          }
+        },
+        {
+          "id": "resident-pupil",
+          "name": {
+            "en": "Resident Pupil",
+            "fa": "دانش‌آموز مقیم"
+          }
+        },
+        {
+          "id": "dorm-prefect",
+          "name": {
+            "en": "Dorm Prefect",
+            "fa": "مبصر خوابگاه"
+          }
+        },
+        {
+          "id": "night-supervisor",
+          "name": {
+            "en": "Night Supervisor",
+            "fa": "ناظر شب"
+          }
+        },
+        {
+          "id": "laundry-attendant",
+          "name": {
+            "en": "Laundry Attendant",
+            "fa": "مسئول رختشویخانه"
+          }
+        },
+        {
+          "id": "matron",
+          "name": {
+            "en": "Matron",
+            "fa": "سرپرستار خوابگاه"
+          }
+        },
+        {
+          "id": "homesick-newcomer",
+          "name": {
+            "en": "Homesick Newcomer",
+            "fa": "تازه‌وارد دلتنگ خانه"
+          }
+        }
+      ]
+    },
+    {
+      "id": "kindergarten",
+      "icon": "🧸",
+      "name": {
+        "en": "Kindergarten",
+        "fa": "مهدکودک"
+      },
+      "roles": [
+        {
+          "id": "kindergarten-teacher",
+          "name": {
+            "en": "Kindergarten Teacher",
+            "fa": "مربی مهدکودک"
+          }
+        },
+        {
+          "id": "teacher-s-aide",
+          "name": {
+            "en": "Teacher's Aide",
+            "fa": "کمک‌مربی"
+          }
+        },
+        {
+          "id": "toddler",
+          "name": {
+            "en": "Toddler",
+            "fa": "کودک نوپا"
+          }
+        },
+        {
+          "id": "nap-time-supervisor",
+          "name": {
+            "en": "Nap-Time Supervisor",
+            "fa": "ناظر زمان خواب"
+          }
+        },
+        {
+          "id": "snack-helper",
+          "name": {
+            "en": "Snack Helper",
+            "fa": "کمک تغذیه"
+          }
+        },
+        {
+          "id": "playground-attendant",
+          "name": {
+            "en": "Playground Attendant",
+            "fa": "مسئول زمین بازی"
+          }
+        },
+        {
+          "id": "worried-parent",
+          "name": {
+            "en": "Worried Parent",
+            "fa": "والد نگران"
+          }
+        }
+      ]
+    },
+    {
+      "id": "vocational-trade-school",
+      "icon": "🔧",
+      "name": {
+        "en": "Vocational Trade School",
+        "fa": "هنرستان فنی و حرفه‌ای"
+      },
+      "roles": [
+        {
+          "id": "workshop-instructor",
+          "name": {
+            "en": "Workshop Instructor",
+            "fa": "استادکار کارگاه"
+          }
+        },
+        {
+          "id": "welding-apprentice",
+          "name": {
+            "en": "Welding Apprentice",
+            "fa": "کارآموز جوشکاری"
+          }
+        },
+        {
+          "id": "electrician-trainee",
+          "name": {
+            "en": "Electrician Trainee",
+            "fa": "کارآموز برق"
+          }
+        },
+        {
+          "id": "safety-inspector",
+          "name": {
+            "en": "Safety Inspector",
+            "fa": "بازرس ایمنی"
+          }
+        },
+        {
+          "id": "tool-room-clerk",
+          "name": {
+            "en": "Tool-Room Clerk",
+            "fa": "انباردار ابزار"
+          }
+        },
+        {
+          "id": "carpentry-student",
+          "name": {
+            "en": "Carpentry Student",
+            "fa": "هنرجوی نجاری"
+          }
+        },
+        {
+          "id": "curriculum-coordinator",
+          "name": {
+            "en": "Curriculum Coordinator",
+            "fa": "هماهنگ‌کننده برنامه درسی"
+          }
+        }
+      ]
+    },
+    {
+      "id": "research-institute",
+      "icon": "🧪",
+      "name": {
+        "en": "Research Institute",
+        "fa": "مؤسسه پژوهشی"
+      },
+      "roles": [
+        {
+          "id": "director-of-research",
+          "name": {
+            "en": "Director of Research",
+            "fa": "رئیس پژوهش"
+          }
+        },
+        {
+          "id": "principal-investigator",
+          "name": {
+            "en": "Principal Investigator",
+            "fa": "پژوهشگر اصلی"
+          }
+        },
+        {
+          "id": "doctoral-candidate",
+          "name": {
+            "en": "Doctoral Candidate",
+            "fa": "دانشجوی دکتری"
+          }
+        },
+        {
+          "id": "grant-officer",
+          "name": {
+            "en": "Grant Officer",
+            "fa": "مسئول بودجه پژوهشی"
+          }
+        },
+        {
+          "id": "lab-manager",
+          "name": {
+            "en": "Lab Manager",
+            "fa": "مدیر آزمایشگاه"
+          }
+        },
+        {
+          "id": "peer-reviewer",
+          "name": {
+            "en": "Peer Reviewer",
+            "fa": "داور علمی"
+          }
+        },
+        {
+          "id": "data-analyst",
+          "name": {
+            "en": "Data Analyst",
+            "fa": "تحلیلگر داده"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sushi-restaurant",
+      "icon": "🍣",
+      "name": {
+        "en": "Sushi Restaurant",
+        "fa": "رستوران سوشی"
+      },
+      "roles": [
+        {
+          "id": "sushi-chef",
+          "name": {
+            "en": "Sushi Chef",
+            "fa": "سرآشپز سوشی"
+          }
+        },
+        {
+          "id": "waiter",
+          "name": {
+            "en": "Waiter",
+            "fa": "پیشخدمت"
+          }
+        },
+        {
+          "id": "sake-sommelier",
+          "name": {
+            "en": "Sake Sommelier",
+            "fa": "کارشناس ساکی"
+          }
+        },
+        {
+          "id": "host",
+          "name": {
+            "en": "Host",
+            "fa": "میزبان"
+          }
+        },
+        {
+          "id": "fish-supplier",
+          "name": {
+            "en": "Fish Supplier",
+            "fa": "تأمین‌کننده ماهی"
+          }
+        },
+        {
+          "id": "dishwasher",
+          "name": {
+            "en": "Dishwasher",
+            "fa": "ظرف‌شوی"
+          }
+        },
+        {
+          "id": "regular-customer",
+          "name": {
+            "en": "Regular Customer",
+            "fa": "مشتری همیشگی"
+          }
+        }
+      ]
+    },
+    {
+      "id": "pizzeria",
+      "icon": "🍕",
+      "name": {
+        "en": "Pizzeria",
+        "fa": "پیتزافروشی"
+      },
+      "roles": [
+        {
+          "id": "pizzaiolo",
+          "name": {
+            "en": "Pizzaiolo",
+            "fa": "پیتزاپز"
+          }
+        },
+        {
+          "id": "delivery-driver",
+          "name": {
+            "en": "Delivery Driver",
+            "fa": "پیک"
+          }
+        },
+        {
+          "id": "cashier",
+          "name": {
+            "en": "Cashier",
+            "fa": "صندوق‌دار"
+          }
+        },
+        {
+          "id": "dough-maker",
+          "name": {
+            "en": "Dough Maker",
+            "fa": "خمیرگیر"
+          }
+        },
+        {
+          "id": "waiter",
+          "name": {
+            "en": "Waiter",
+            "fa": "پیشخدمت"
+          }
+        },
+        {
+          "id": "hungry-customer",
+          "name": {
+            "en": "Hungry Customer",
+            "fa": "مشتری گرسنه"
+          }
+        },
+        {
+          "id": "oven-operator",
+          "name": {
+            "en": "Oven Operator",
+            "fa": "اپراتور فر"
+          }
+        }
+      ]
+    },
+    {
+      "id": "fast-food-joint",
+      "icon": "🍔",
+      "name": {
+        "en": "Fast Food Joint",
+        "fa": "رستوران فست‌فود"
+      },
+      "roles": [
+        {
+          "id": "grill-cook",
+          "name": {
+            "en": "Grill Cook",
+            "fa": "کباب‌پز گریل"
+          }
+        },
+        {
+          "id": "cashier",
+          "name": {
+            "en": "Cashier",
+            "fa": "صندوق‌دار"
+          }
+        },
+        {
+          "id": "drive-thru-operator",
+          "name": {
+            "en": "Drive-Thru Operator",
+            "fa": "اپراتور دریافت از خودرو"
+          }
+        },
+        {
+          "id": "fry-cook",
+          "name": {
+            "en": "Fry Cook",
+            "fa": "سرخ‌کن"
+          }
+        },
+        {
+          "id": "shift-manager",
+          "name": {
+            "en": "Shift Manager",
+            "fa": "سرپرست شیفت"
+          }
+        },
+        {
+          "id": "cleaner",
+          "name": {
+            "en": "Cleaner",
+            "fa": "نظافت‌چی"
+          }
+        },
+        {
+          "id": "teenage-customer",
+          "name": {
+            "en": "Teenage Customer",
+            "fa": "مشتری نوجوان"
+          }
+        }
+      ]
+    },
+    {
+      "id": "caf",
+      "icon": "☕",
+      "name": {
+        "en": "Café",
+        "fa": "کافه"
+      },
+      "roles": [
+        {
+          "id": "barista",
+          "name": {
+            "en": "Barista",
+            "fa": "باریستا"
+          }
+        },
+        {
+          "id": "pastry-baker",
+          "name": {
+            "en": "Pastry Baker",
+            "fa": "شیرینی‌پز"
+          }
+        },
+        {
+          "id": "cashier",
+          "name": {
+            "en": "Cashier",
+            "fa": "صندوق‌دار"
+          }
+        },
+        {
+          "id": "waiter",
+          "name": {
+            "en": "Waiter",
+            "fa": "پیشخدمت"
+          }
+        },
+        {
+          "id": "laptop-student",
+          "name": {
+            "en": "Laptop Student",
+            "fa": "دانشجوی لپ‌تاپ‌به‌دست"
+          }
+        },
+        {
+          "id": "coffee-roaster",
+          "name": {
+            "en": "Coffee Roaster",
+            "fa": "بو‌دهنده قهوه"
+          }
+        },
+        {
+          "id": "regular-patron",
+          "name": {
+            "en": "Regular Patron",
+            "fa": "مشتری همیشگی"
+          }
+        }
+      ]
+    },
+    {
+      "id": "fine-dining-restaurant",
+      "icon": "🍽️",
+      "name": {
+        "en": "Fine Dining Restaurant",
+        "fa": "رستوران لوکس"
+      },
+      "roles": [
+        {
+          "id": "head-chef",
+          "name": {
+            "en": "Head Chef",
+            "fa": "سرآشپز ارشد"
+          }
+        },
+        {
+          "id": "ma-tre-d",
+          "name": {
+            "en": "Maître d'",
+            "fa": "رئیس سالن"
+          }
+        },
+        {
+          "id": "sommelier",
+          "name": {
+            "en": "Sommelier",
+            "fa": "شراب‌شناس"
+          }
+        },
+        {
+          "id": "waiter",
+          "name": {
+            "en": "Waiter",
+            "fa": "پیشخدمت"
+          }
+        },
+        {
+          "id": "pastry-chef",
+          "name": {
+            "en": "Pastry Chef",
+            "fa": "شیرینی‌پز"
+          }
+        },
+        {
+          "id": "food-critic",
+          "name": {
+            "en": "Food Critic",
+            "fa": "منتقد غذا"
+          }
+        },
+        {
+          "id": "coat-check-attendant",
+          "name": {
+            "en": "Coat Check Attendant",
+            "fa": "مسئول رخت‌کن"
+          }
+        }
+      ]
+    },
+    {
+      "id": "steakhouse",
+      "icon": "🥩",
+      "name": {
+        "en": "Steakhouse",
+        "fa": "استیک‌هاوس"
+      },
+      "roles": [
+        {
+          "id": "grill-master",
+          "name": {
+            "en": "Grill Master",
+            "fa": "استاد گریل"
+          }
+        },
+        {
+          "id": "butcher",
+          "name": {
+            "en": "Butcher",
+            "fa": "قصاب"
+          }
+        },
+        {
+          "id": "waiter",
+          "name": {
+            "en": "Waiter",
+            "fa": "پیشخدمت"
+          }
+        },
+        {
+          "id": "sommelier",
+          "name": {
+            "en": "Sommelier",
+            "fa": "شراب‌شناس"
+          }
+        },
+        {
+          "id": "host",
+          "name": {
+            "en": "Host",
+            "fa": "میزبان"
+          }
+        },
+        {
+          "id": "line-cook",
+          "name": {
+            "en": "Line Cook",
+            "fa": "آشپز خط"
+          }
+        },
+        {
+          "id": "carnivore-diner",
+          "name": {
+            "en": "Carnivore Diner",
+            "fa": "مهمان گوشت‌دوست"
+          }
+        }
+      ]
+    },
+    {
+      "id": "food-truck",
+      "icon": "🚚",
+      "name": {
+        "en": "Food Truck",
+        "fa": "کامیون غذا"
+      },
+      "roles": [
+        {
+          "id": "owner-cook",
+          "name": {
+            "en": "Owner-Cook",
+            "fa": "صاحب-آشپز"
+          }
+        },
+        {
+          "id": "order-taker",
+          "name": {
+            "en": "Order Taker",
+            "fa": "سفارش‌گیر"
+          }
+        },
+        {
+          "id": "grill-cook",
+          "name": {
+            "en": "Grill Cook",
+            "fa": "آشپز گریل"
+          }
+        },
+        {
+          "id": "generator-tender",
+          "name": {
+            "en": "Generator Tender",
+            "fa": "مسئول ژنراتور"
+          }
+        },
+        {
+          "id": "festival-goer",
+          "name": {
+            "en": "Festival Goer",
+            "fa": "رهگذر جشنواره"
+          }
+        },
+        {
+          "id": "street-cleaner",
+          "name": {
+            "en": "Street Cleaner",
+            "fa": "رفتگر خیابان"
+          }
+        },
+        {
+          "id": "loyal-foodie",
+          "name": {
+            "en": "Loyal Foodie",
+            "fa": "خوراک‌دوست وفادار"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ramen-shop",
+      "icon": "🍜",
+      "name": {
+        "en": "Ramen Shop",
+        "fa": "رامن‌فروشی"
+      },
+      "roles": [
+        {
+          "id": "ramen-chef",
+          "name": {
+            "en": "Ramen Chef",
+            "fa": "سرآشپز رامن"
+          }
+        },
+        {
+          "id": "broth-master",
+          "name": {
+            "en": "Broth Master",
+            "fa": "استاد آبگوشت"
+          }
+        },
+        {
+          "id": "noodle-maker",
+          "name": {
+            "en": "Noodle Maker",
+            "fa": "نودل‌ساز"
+          }
+        },
+        {
+          "id": "waiter",
+          "name": {
+            "en": "Waiter",
+            "fa": "پیشخدمت"
+          }
+        },
+        {
+          "id": "cashier",
+          "name": {
+            "en": "Cashier",
+            "fa": "صندوق‌دار"
+          }
+        },
+        {
+          "id": "slurping-customer",
+          "name": {
+            "en": "Slurping Customer",
+            "fa": "مشتری سرکش"
+          }
+        },
+        {
+          "id": "dishwasher",
+          "name": {
+            "en": "Dishwasher",
+            "fa": "ظرف‌شوی"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ice-cream-parlour",
+      "icon": "🍨",
+      "name": {
+        "en": "Ice Cream Parlour",
+        "fa": "بستنی‌فروشی"
+      },
+      "roles": [
+        {
+          "id": "scooper",
+          "name": {
+            "en": "Scooper",
+            "fa": "بستنی‌کش"
+          }
+        },
+        {
+          "id": "cashier",
+          "name": {
+            "en": "Cashier",
+            "fa": "صندوق‌دار"
+          }
+        },
+        {
+          "id": "flavour-inventor",
+          "name": {
+            "en": "Flavour Inventor",
+            "fa": "مخترع طعم"
+          }
+        },
+        {
+          "id": "cone-baker",
+          "name": {
+            "en": "Cone Baker",
+            "fa": "قیف‌پز"
+          }
+        },
+        {
+          "id": "child-customer",
+          "name": {
+            "en": "Child Customer",
+            "fa": "مشتری کودک"
+          }
+        },
+        {
+          "id": "cleaner",
+          "name": {
+            "en": "Cleaner",
+            "fa": "نظافت‌چی"
+          }
+        },
+        {
+          "id": "birthday-party-host",
+          "name": {
+            "en": "Birthday Party Host",
+            "fa": "میزبان جشن تولد"
+          }
+        }
+      ]
+    },
+    {
+      "id": "buffet-restaurant",
+      "icon": "🍱",
+      "name": {
+        "en": "Buffet Restaurant",
+        "fa": "رستوران بوفه"
+      },
+      "roles": [
+        {
+          "id": "carving-chef",
+          "name": {
+            "en": "Carving Chef",
+            "fa": "آشپز برش گوشت"
+          }
+        },
+        {
+          "id": "station-cook",
+          "name": {
+            "en": "Station Cook",
+            "fa": "آشپز ایستگاه"
+          }
+        },
+        {
+          "id": "plate-collector",
+          "name": {
+            "en": "Plate Collector",
+            "fa": "جمع‌کننده بشقاب"
+          }
+        },
+        {
+          "id": "host",
+          "name": {
+            "en": "Host",
+            "fa": "میزبان"
+          }
+        },
+        {
+          "id": "cashier",
+          "name": {
+            "en": "Cashier",
+            "fa": "صندوق‌دار"
+          }
+        },
+        {
+          "id": "hungry-family",
+          "name": {
+            "en": "Hungry Family",
+            "fa": "خانواده گرسنه"
+          }
+        },
+        {
+          "id": "food-replenisher",
+          "name": {
+            "en": "Food Replenisher",
+            "fa": "مسئول پر کردن غذا"
+          }
+        }
+      ]
+    },
+    {
+      "id": "national-park",
+      "icon": "🏞️",
+      "name": {
+        "en": "National Park",
+        "fa": "پارک ملی"
+      },
+      "roles": [
+        {
+          "id": "park-ranger",
+          "name": {
+            "en": "Park Ranger",
+            "fa": "جنگل‌بان"
+          }
+        },
+        {
+          "id": "hiker",
+          "name": {
+            "en": "Hiker",
+            "fa": "کوهپیما"
+          }
+        },
+        {
+          "id": "wildlife-photographer",
+          "name": {
+            "en": "Wildlife Photographer",
+            "fa": "عکاس حیات وحش"
+          }
+        },
+        {
+          "id": "tour-guide",
+          "name": {
+            "en": "Tour Guide",
+            "fa": "راهنمای تور"
+          }
+        },
+        {
+          "id": "campsite-host",
+          "name": {
+            "en": "Campsite Host",
+            "fa": "مسئول کمپ"
+          }
+        },
+        {
+          "id": "trail-volunteer",
+          "name": {
+            "en": "Trail Volunteer",
+            "fa": "داوطلب مسیر"
+          }
+        },
+        {
+          "id": "geologist",
+          "name": {
+            "en": "Geologist",
+            "fa": "زمین‌شناس"
+          }
+        }
+      ]
+    },
+    {
+      "id": "mountain-summit",
+      "icon": "⛰️",
+      "name": {
+        "en": "Mountain Summit",
+        "fa": "قله کوه"
+      },
+      "roles": [
+        {
+          "id": "mountaineer",
+          "name": {
+            "en": "Mountaineer",
+            "fa": "کوهنورد"
+          }
+        },
+        {
+          "id": "climbing-guide",
+          "name": {
+            "en": "Climbing Guide",
+            "fa": "راهنمای صعود"
+          }
+        },
+        {
+          "id": "porter",
+          "name": {
+            "en": "Porter",
+            "fa": "باربر"
+          }
+        },
+        {
+          "id": "rescue-volunteer",
+          "name": {
+            "en": "Rescue Volunteer",
+            "fa": "داوطلب نجات"
+          }
+        },
+        {
+          "id": "meteorologist",
+          "name": {
+            "en": "Meteorologist",
+            "fa": "هواشناس"
+          }
+        },
+        {
+          "id": "novice-climber",
+          "name": {
+            "en": "Novice Climber",
+            "fa": "کوهنورد تازه‌کار"
+          }
+        },
+        {
+          "id": "drone-pilot",
+          "name": {
+            "en": "Drone Pilot",
+            "fa": "خلبان پهپاد"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sandy-beach",
+      "icon": "🏖️",
+      "name": {
+        "en": "Sandy Beach",
+        "fa": "ساحل شنی"
+      },
+      "roles": [
+        {
+          "id": "lifeguard",
+          "name": {
+            "en": "Lifeguard",
+            "fa": "غریق‌نجات"
+          }
+        },
+        {
+          "id": "surfer",
+          "name": {
+            "en": "Surfer",
+            "fa": "موج‌سوار"
+          }
+        },
+        {
+          "id": "sunbather",
+          "name": {
+            "en": "Sunbather",
+            "fa": "آفتاب‌گیر"
+          }
+        },
+        {
+          "id": "ice-cream-vendor",
+          "name": {
+            "en": "Ice Cream Vendor",
+            "fa": "بستنی‌فروش"
+          }
+        },
+        {
+          "id": "sandcastle-builder",
+          "name": {
+            "en": "Sandcastle Builder",
+            "fa": "قلعه‌شن‌ساز"
+          }
+        },
+        {
+          "id": "beach-volleyball-player",
+          "name": {
+            "en": "Beach Volleyball Player",
+            "fa": "بازیکن والیبال ساحلی"
+          }
+        },
+        {
+          "id": "shell-collector",
+          "name": {
+            "en": "Shell Collector",
+            "fa": "صدف‌جمع‌کن"
+          }
+        }
+      ]
+    },
+    {
+      "id": "pine-forest",
+      "icon": "🌲",
+      "name": {
+        "en": "Pine Forest",
+        "fa": "جنگل کاج"
+      },
+      "roles": [
+        {
+          "id": "forester",
+          "name": {
+            "en": "Forester",
+            "fa": "جنگلبان"
+          }
+        },
+        {
+          "id": "mushroom-forager",
+          "name": {
+            "en": "Mushroom Forager",
+            "fa": "قارچ‌چین"
+          }
+        },
+        {
+          "id": "birdwatcher",
+          "name": {
+            "en": "Birdwatcher",
+            "fa": "پرنده‌نگر"
+          }
+        },
+        {
+          "id": "lumberjack",
+          "name": {
+            "en": "Lumberjack",
+            "fa": "چوب‌بر"
+          }
+        },
+        {
+          "id": "trail-runner",
+          "name": {
+            "en": "Trail Runner",
+            "fa": "دونده مسیر"
+          }
+        },
+        {
+          "id": "beekeeper",
+          "name": {
+            "en": "Beekeeper",
+            "fa": "زنبوردار"
+          }
+        },
+        {
+          "id": "botanist",
+          "name": {
+            "en": "Botanist",
+            "fa": "گیاه‌شناس"
+          }
+        }
+      ]
+    },
+    {
+      "id": "waterfall",
+      "icon": "💦",
+      "name": {
+        "en": "Waterfall",
+        "fa": "آبشار"
+      },
+      "roles": [
+        {
+          "id": "tour-guide",
+          "name": {
+            "en": "Tour Guide",
+            "fa": "راهنمای تور"
+          }
+        },
+        {
+          "id": "adventure-photographer",
+          "name": {
+            "en": "Adventure Photographer",
+            "fa": "عکاس ماجراجویی"
+          }
+        },
+        {
+          "id": "canyoneer",
+          "name": {
+            "en": "Canyoneer",
+            "fa": "دره‌نورد"
+          }
+        },
+        {
+          "id": "souvenir-seller",
+          "name": {
+            "en": "Souvenir Seller",
+            "fa": "سوغات‌فروش"
+          }
+        },
+        {
+          "id": "lifeguard",
+          "name": {
+            "en": "Lifeguard",
+            "fa": "غریق‌نجات"
+          }
+        },
+        {
+          "id": "local-storyteller",
+          "name": {
+            "en": "Local Storyteller",
+            "fa": "قصه‌گوی محلی"
+          }
+        },
+        {
+          "id": "hydrologist",
+          "name": {
+            "en": "Hydrologist",
+            "fa": "آب‌شناس"
+          }
+        }
+      ]
+    },
+    {
+      "id": "desert-dunes",
+      "icon": "🏜️",
+      "name": {
+        "en": "Desert Dunes",
+        "fa": "تپه‌های شنی کویر"
+      },
+      "roles": [
+        {
+          "id": "camel-guide",
+          "name": {
+            "en": "Camel Guide",
+            "fa": "ساربان"
+          }
+        },
+        {
+          "id": "sandboarder",
+          "name": {
+            "en": "Sandboarder",
+            "fa": "شن‌سوار"
+          }
+        },
+        {
+          "id": "bedouin-host",
+          "name": {
+            "en": "Bedouin Host",
+            "fa": "میزبان صحرانشین"
+          }
+        },
+        {
+          "id": "stargazing-guide",
+          "name": {
+            "en": "Stargazing Guide",
+            "fa": "راهنمای ستاره‌شناسی"
+          }
+        },
+        {
+          "id": "off-road-driver",
+          "name": {
+            "en": "Off-Road Driver",
+            "fa": "راننده آفرود"
+          }
+        },
+        {
+          "id": "archaeologist",
+          "name": {
+            "en": "Archaeologist",
+            "fa": "باستان‌شناس"
+          }
+        },
+        {
+          "id": "water-bearer",
+          "name": {
+            "en": "Water Bearer",
+            "fa": "آبرسان"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lakeside-campground",
+      "icon": "🏕️",
+      "name": {
+        "en": "Lakeside Campground",
+        "fa": "اردوگاه کنار دریاچه"
+      },
+      "roles": [
+        {
+          "id": "camp-host",
+          "name": {
+            "en": "Camp Host",
+            "fa": "مسئول اردوگاه"
+          }
+        },
+        {
+          "id": "fisherman",
+          "name": {
+            "en": "Fisherman",
+            "fa": "ماهیگیر"
+          }
+        },
+        {
+          "id": "kayaker",
+          "name": {
+            "en": "Kayaker",
+            "fa": "کایاک‌سوار"
+          }
+        },
+        {
+          "id": "scout-leader",
+          "name": {
+            "en": "Scout Leader",
+            "fa": "سرگروه پیشاهنگی"
+          }
+        },
+        {
+          "id": "campfire-cook",
+          "name": {
+            "en": "Campfire Cook",
+            "fa": "آشپز کنار آتش"
+          }
+        },
+        {
+          "id": "park-ranger",
+          "name": {
+            "en": "Park Ranger",
+            "fa": "جنگل‌بان"
+          }
+        },
+        {
+          "id": "stargazer",
+          "name": {
+            "en": "Stargazer",
+            "fa": "ستاره‌نگر"
+          }
+        }
+      ]
+    },
+    {
+      "id": "botanical-garden",
+      "icon": "🌷",
+      "name": {
+        "en": "Botanical Garden",
+        "fa": "باغ گیاه‌شناسی"
+      },
+      "roles": [
+        {
+          "id": "gardener",
+          "name": {
+            "en": "Gardener",
+            "fa": "باغبان"
+          }
+        },
+        {
+          "id": "tour-guide",
+          "name": {
+            "en": "Tour Guide",
+            "fa": "راهنمای تور"
+          }
+        },
+        {
+          "id": "botanist",
+          "name": {
+            "en": "Botanist",
+            "fa": "گیاه‌شناس"
+          }
+        },
+        {
+          "id": "ticket-seller",
+          "name": {
+            "en": "Ticket Seller",
+            "fa": "فروشنده بلیط"
+          }
+        },
+        {
+          "id": "school-group-teacher",
+          "name": {
+            "en": "School Group Teacher",
+            "fa": "معلم گروه مدرسه"
+          }
+        },
+        {
+          "id": "greenhouse-keeper",
+          "name": {
+            "en": "Greenhouse Keeper",
+            "fa": "مسئول گلخانه"
+          }
+        },
+        {
+          "id": "landscape-photographer",
+          "name": {
+            "en": "Landscape Photographer",
+            "fa": "عکاس منظره"
+          }
+        }
+      ]
+    },
+    {
+      "id": "caves-caverns",
+      "icon": "🕳️",
+      "name": {
+        "en": "Caves & Caverns",
+        "fa": "غارها"
+      },
+      "roles": [
+        {
+          "id": "cave-guide",
+          "name": {
+            "en": "Cave Guide",
+            "fa": "راهنمای غار"
+          }
+        },
+        {
+          "id": "spelunker",
+          "name": {
+            "en": "Spelunker",
+            "fa": "غارنورد"
+          }
+        },
+        {
+          "id": "geologist",
+          "name": {
+            "en": "Geologist",
+            "fa": "زمین‌شناس"
+          }
+        },
+        {
+          "id": "bat-researcher",
+          "name": {
+            "en": "Bat Researcher",
+            "fa": "پژوهشگر خفاش"
+          }
+        },
+        {
+          "id": "lantern-bearer",
+          "name": {
+            "en": "Lantern Bearer",
+            "fa": "چراغ‌دار"
+          }
+        },
+        {
+          "id": "rescue-worker",
+          "name": {
+            "en": "Rescue Worker",
+            "fa": "امدادگر"
+          }
+        },
+        {
+          "id": "curious-tourist",
+          "name": {
+            "en": "Curious Tourist",
+            "fa": "گردشگر کنجکاو"
+          }
+        }
+      ]
+    },
+    {
+      "id": "coral-reef",
+      "icon": "🐠",
+      "name": {
+        "en": "Coral Reef",
+        "fa": "صخره مرجانی"
+      },
+      "roles": [
+        {
+          "id": "scuba-diver",
+          "name": {
+            "en": "Scuba Diver",
+            "fa": "غواص"
+          }
+        },
+        {
+          "id": "marine-biologist",
+          "name": {
+            "en": "Marine Biologist",
+            "fa": "زیست‌شناس دریایی"
+          }
+        },
+        {
+          "id": "dive-instructor",
+          "name": {
+            "en": "Dive Instructor",
+            "fa": "مربی غواصی"
+          }
+        },
+        {
+          "id": "snorkeler",
+          "name": {
+            "en": "Snorkeler",
+            "fa": "اسنورکل‌سوار"
+          }
+        },
+        {
+          "id": "boat-captain",
+          "name": {
+            "en": "Boat Captain",
+            "fa": "ناخدای قایق"
+          }
+        },
+        {
+          "id": "underwater-photographer",
+          "name": {
+            "en": "Underwater Photographer",
+            "fa": "عکاس زیرآب"
+          }
+        },
+        {
+          "id": "reef-conservationist",
+          "name": {
+            "en": "Reef Conservationist",
+            "fa": "حافظ صخره مرجانی"
+          }
+        }
+      ]
+    },
+    {
+      "id": "hot-spring",
+      "icon": "♨️",
+      "name": {
+        "en": "Hot Spring",
+        "fa": "چشمه آب‌گرم"
+      },
+      "roles": [
+        {
+          "id": "spa-attendant",
+          "name": {
+            "en": "Spa Attendant",
+            "fa": "متصدی آبگرم"
+          }
+        },
+        {
+          "id": "bather",
+          "name": {
+            "en": "Bather",
+            "fa": "آب‌تنی‌کننده"
+          }
+        },
+        {
+          "id": "masseur",
+          "name": {
+            "en": "Masseur",
+            "fa": "ماساژور"
+          }
+        },
+        {
+          "id": "towel-keeper",
+          "name": {
+            "en": "Towel Keeper",
+            "fa": "مسئول حوله"
+          }
+        },
+        {
+          "id": "geothermal-engineer",
+          "name": {
+            "en": "Geothermal Engineer",
+            "fa": "مهندس زمین‌گرمایی"
+          }
+        },
+        {
+          "id": "wellness-guide",
+          "name": {
+            "en": "Wellness Guide",
+            "fa": "راهنمای تندرستی"
+          }
+        },
+        {
+          "id": "tea-server",
+          "name": {
+            "en": "Tea Server",
+            "fa": "چای‌دار"
+          }
+        }
+      ]
+    },
+    {
+      "id": "steel-mill",
+      "icon": "🏭",
+      "name": {
+        "en": "Steel Mill",
+        "fa": "کارخانه فولاد"
+      },
+      "roles": [
+        {
+          "id": "furnace-operator",
+          "name": {
+            "en": "Furnace Operator",
+            "fa": "اپراتور کوره"
+          }
+        },
+        {
+          "id": "crane-driver",
+          "name": {
+            "en": "Crane Driver",
+            "fa": "راننده جرثقیل"
+          }
+        },
+        {
+          "id": "metallurgist",
+          "name": {
+            "en": "Metallurgist",
+            "fa": "متالورژیست"
+          }
+        },
+        {
+          "id": "rolling-mill-worker",
+          "name": {
+            "en": "Rolling Mill Worker",
+            "fa": "کارگر نورد"
+          }
+        },
+        {
+          "id": "safety-inspector",
+          "name": {
+            "en": "Safety Inspector",
+            "fa": "بازرس ایمنی"
+          }
+        },
+        {
+          "id": "shift-supervisor",
+          "name": {
+            "en": "Shift Supervisor",
+            "fa": "سرپرست شیفت"
+          }
+        },
+        {
+          "id": "quality-control-tester",
+          "name": {
+            "en": "Quality Control Tester",
+            "fa": "آزمونگر کنترل کیفیت"
+          }
+        }
+      ]
+    },
+    {
+      "id": "oil-refinery",
+      "icon": "⛽",
+      "name": {
+        "en": "Oil Refinery",
+        "fa": "پالایشگاه نفت"
+      },
+      "roles": [
+        {
+          "id": "process-engineer",
+          "name": {
+            "en": "Process Engineer",
+            "fa": "مهندس فرایند"
+          }
+        },
+        {
+          "id": "control-room-operator",
+          "name": {
+            "en": "Control Room Operator",
+            "fa": "اپراتور اتاق کنترل"
+          }
+        },
+        {
+          "id": "pipe-fitter",
+          "name": {
+            "en": "Pipe Fitter",
+            "fa": "لوله‌کش"
+          }
+        },
+        {
+          "id": "fire-marshal",
+          "name": {
+            "en": "Fire Marshal",
+            "fa": "مأمور آتش‌نشانی"
+          }
+        },
+        {
+          "id": "laboratory-chemist",
+          "name": {
+            "en": "Laboratory Chemist",
+            "fa": "شیمیدان آزمایشگاه"
+          }
+        },
+        {
+          "id": "pump-technician",
+          "name": {
+            "en": "Pump Technician",
+            "fa": "تکنسین پمپ"
+          }
+        },
+        {
+          "id": "plant-manager",
+          "name": {
+            "en": "Plant Manager",
+            "fa": "مدیر کارخانه"
+          }
+        }
+      ]
+    },
+    {
+      "id": "power-plant",
+      "icon": "⚡",
+      "name": {
+        "en": "Power Plant",
+        "fa": "نیروگاه برق"
+      },
+      "roles": [
+        {
+          "id": "turbine-operator",
+          "name": {
+            "en": "Turbine Operator",
+            "fa": "اپراتور توربین"
+          }
+        },
+        {
+          "id": "electrical-engineer",
+          "name": {
+            "en": "Electrical Engineer",
+            "fa": "مهندس برق"
+          }
+        },
+        {
+          "id": "boiler-technician",
+          "name": {
+            "en": "Boiler Technician",
+            "fa": "تکنسین دیگ بخار"
+          }
+        },
+        {
+          "id": "grid-dispatcher",
+          "name": {
+            "en": "Grid Dispatcher",
+            "fa": "دیسپچر شبکه"
+          }
+        },
+        {
+          "id": "maintenance-worker",
+          "name": {
+            "en": "Maintenance Worker",
+            "fa": "کارگر تعمیرات"
+          }
+        },
+        {
+          "id": "control-engineer",
+          "name": {
+            "en": "Control Engineer",
+            "fa": "مهندس کنترل"
+          }
+        },
+        {
+          "id": "coal-handler",
+          "name": {
+            "en": "Coal Handler",
+            "fa": "متصدی زغال‌سنگ"
+          }
+        }
+      ]
+    },
+    {
+      "id": "automobile-factory",
+      "icon": "🚗",
+      "name": {
+        "en": "Automobile Factory",
+        "fa": "کارخانه خودروسازی"
+      },
+      "roles": [
+        {
+          "id": "assembly-line-worker",
+          "name": {
+            "en": "Assembly Line Worker",
+            "fa": "کارگر خط مونتاژ"
+          }
+        },
+        {
+          "id": "welding-robot-operator",
+          "name": {
+            "en": "Welding Robot Operator",
+            "fa": "اپراتور ربات جوشکاری"
+          }
+        },
+        {
+          "id": "paint-shop-technician",
+          "name": {
+            "en": "Paint Shop Technician",
+            "fa": "تکنسین رنگ‌آمیزی"
+          }
+        },
+        {
+          "id": "quality-inspector",
+          "name": {
+            "en": "Quality Inspector",
+            "fa": "بازرس کیفیت"
+          }
+        },
+        {
+          "id": "line-foreman",
+          "name": {
+            "en": "Line Foreman",
+            "fa": "سرکارگر خط"
+          }
+        },
+        {
+          "id": "logistics-coordinator",
+          "name": {
+            "en": "Logistics Coordinator",
+            "fa": "هماهنگ‌کننده لجستیک"
+          }
+        },
+        {
+          "id": "test-driver",
+          "name": {
+            "en": "Test Driver",
+            "fa": "راننده آزمایشی"
+          }
+        }
+      ]
+    },
+    {
+      "id": "textile-mill",
+      "icon": "🧵",
+      "name": {
+        "en": "Textile Mill",
+        "fa": "کارخانه نساجی"
+      },
+      "roles": [
+        {
+          "id": "loom-operator",
+          "name": {
+            "en": "Loom Operator",
+            "fa": "اپراتور دستگاه بافندگی"
+          }
+        },
+        {
+          "id": "spinner",
+          "name": {
+            "en": "Spinner",
+            "fa": "ریسنده"
+          }
+        },
+        {
+          "id": "dye-master",
+          "name": {
+            "en": "Dye Master",
+            "fa": "استاد رنگرزی"
+          }
+        },
+        {
+          "id": "pattern-cutter",
+          "name": {
+            "en": "Pattern Cutter",
+            "fa": "برش‌کار الگو"
+          }
+        },
+        {
+          "id": "machine-mechanic",
+          "name": {
+            "en": "Machine Mechanic",
+            "fa": "مکانیک ماشین"
+          }
+        },
+        {
+          "id": "floor-supervisor",
+          "name": {
+            "en": "Floor Supervisor",
+            "fa": "سرپرست سالن"
+          }
+        },
+        {
+          "id": "fabric-inspector",
+          "name": {
+            "en": "Fabric Inspector",
+            "fa": "بازرس پارچه"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cement-plant",
+      "icon": "🏗️",
+      "name": {
+        "en": "Cement Plant",
+        "fa": "کارخانه سیمان"
+      },
+      "roles": [
+        {
+          "id": "kiln-operator",
+          "name": {
+            "en": "Kiln Operator",
+            "fa": "اپراتور کوره دوار"
+          }
+        },
+        {
+          "id": "quarry-worker",
+          "name": {
+            "en": "Quarry Worker",
+            "fa": "کارگر معدن سنگ"
+          }
+        },
+        {
+          "id": "crusher-operator",
+          "name": {
+            "en": "Crusher Operator",
+            "fa": "اپراتور سنگ‌شکن"
+          }
+        },
+        {
+          "id": "bag-packer",
+          "name": {
+            "en": "Bag Packer",
+            "fa": "بسته‌بند کیسه"
+          }
+        },
+        {
+          "id": "process-chemist",
+          "name": {
+            "en": "Process Chemist",
+            "fa": "شیمیدان فرایند"
+          }
+        },
+        {
+          "id": "loader-driver",
+          "name": {
+            "en": "Loader Driver",
+            "fa": "راننده لودر"
+          }
+        },
+        {
+          "id": "plant-electrician",
+          "name": {
+            "en": "Plant Electrician",
+            "fa": "برق‌کار کارخانه"
+          }
+        }
+      ]
+    },
+    {
+      "id": "brewery",
+      "icon": "🍺",
+      "name": {
+        "en": "Brewery",
+        "fa": "کارخانه آبجوسازی"
+      },
+      "roles": [
+        {
+          "id": "brewmaster",
+          "name": {
+            "en": "Brewmaster",
+            "fa": "استاد دم‌آوری"
+          }
+        },
+        {
+          "id": "fermentation-technician",
+          "name": {
+            "en": "Fermentation Technician",
+            "fa": "تکنسین تخمیر"
+          }
+        },
+        {
+          "id": "bottling-line-operator",
+          "name": {
+            "en": "Bottling Line Operator",
+            "fa": "اپراتور خط بطری‌پرکنی"
+          }
+        },
+        {
+          "id": "quality-taster",
+          "name": {
+            "en": "Quality Taster",
+            "fa": "چشنده کنترل کیفیت"
+          }
+        },
+        {
+          "id": "malt-handler",
+          "name": {
+            "en": "Malt Handler",
+            "fa": "متصدی مالت"
+          }
+        },
+        {
+          "id": "warehouse-manager",
+          "name": {
+            "en": "Warehouse Manager",
+            "fa": "مدیر انبار"
+          }
+        },
+        {
+          "id": "lab-microbiologist",
+          "name": {
+            "en": "Lab Microbiologist",
+            "fa": "میکروبیولوژیست آزمایشگاه"
+          }
+        }
+      ]
+    },
+    {
+      "id": "shipyard",
+      "icon": "🛳️",
+      "name": {
+        "en": "Shipyard",
+        "fa": "کشتی‌سازی"
+      },
+      "roles": [
+        {
+          "id": "hull-welder",
+          "name": {
+            "en": "Hull Welder",
+            "fa": "جوشکار بدنه"
+          }
+        },
+        {
+          "id": "gantry-crane-operator",
+          "name": {
+            "en": "Gantry Crane Operator",
+            "fa": "اپراتور جرثقیل دروازه‌ای"
+          }
+        },
+        {
+          "id": "naval-architect",
+          "name": {
+            "en": "Naval Architect",
+            "fa": "معمار دریایی"
+          }
+        },
+        {
+          "id": "pipefitter",
+          "name": {
+            "en": "Pipefitter",
+            "fa": "لوله‌کش کشتی"
+          }
+        },
+        {
+          "id": "dock-master",
+          "name": {
+            "en": "Dock Master",
+            "fa": "رئیس حوضچه"
+          }
+        },
+        {
+          "id": "painter",
+          "name": {
+            "en": "Painter",
+            "fa": "نقاش بدنه"
+          }
+        },
+        {
+          "id": "safety-officer",
+          "name": {
+            "en": "Safety Officer",
+            "fa": "افسر ایمنی"
+          }
+        }
+      ]
+    },
+    {
+      "id": "paper-mill",
+      "icon": "📄",
+      "name": {
+        "en": "Paper Mill",
+        "fa": "کارخانه کاغذسازی"
+      },
+      "roles": [
+        {
+          "id": "pulp-operator",
+          "name": {
+            "en": "Pulp Operator",
+            "fa": "اپراتور خمیر کاغذ"
+          }
+        },
+        {
+          "id": "paper-machine-tender",
+          "name": {
+            "en": "Paper Machine Tender",
+            "fa": "متصدی ماشین کاغذ"
+          }
+        },
+        {
+          "id": "roll-cutter",
+          "name": {
+            "en": "Roll Cutter",
+            "fa": "برش‌کار رول"
+          }
+        },
+        {
+          "id": "chemical-mixer",
+          "name": {
+            "en": "Chemical Mixer",
+            "fa": "مخلوط‌کننده مواد شیمیایی"
+          }
+        },
+        {
+          "id": "forklift-driver",
+          "name": {
+            "en": "Forklift Driver",
+            "fa": "راننده لیفتراک"
+          }
+        },
+        {
+          "id": "maintenance-engineer",
+          "name": {
+            "en": "Maintenance Engineer",
+            "fa": "مهندس تعمیرات"
+          }
+        },
+        {
+          "id": "quality-grader",
+          "name": {
+            "en": "Quality Grader",
+            "fa": "درجه‌بند کیفیت"
+          }
+        }
+      ]
+    },
+    {
+      "id": "mine-site",
+      "icon": "⛏️",
+      "name": {
+        "en": "Mine Site",
+        "fa": "محوطه معدن"
+      },
+      "roles": [
+        {
+          "id": "miner",
+          "name": {
+            "en": "Miner",
+            "fa": "معدن‌کار"
+          }
+        },
+        {
+          "id": "geologist",
+          "name": {
+            "en": "Geologist",
+            "fa": "زمین‌شناس"
+          }
+        },
+        {
+          "id": "blasting-engineer",
+          "name": {
+            "en": "Blasting Engineer",
+            "fa": "مهندس انفجار"
+          }
+        },
+        {
+          "id": "haul-truck-driver",
+          "name": {
+            "en": "Haul Truck Driver",
+            "fa": "راننده کامیون معدن"
+          }
+        },
+        {
+          "id": "ventilation-technician",
+          "name": {
+            "en": "Ventilation Technician",
+            "fa": "تکنسین تهویه"
+          }
+        },
+        {
+          "id": "mine-surveyor",
+          "name": {
+            "en": "Mine Surveyor",
+            "fa": "نقشه‌بردار معدن"
+          }
+        },
+        {
+          "id": "site-foreman",
+          "name": {
+            "en": "Site Foreman",
+            "fa": "سرکارگر محوطه"
+          }
+        }
+      ]
+    },
+    {
+      "id": "bottling-plant",
+      "icon": "🥤",
+      "name": {
+        "en": "Bottling Plant",
+        "fa": "کارخانه بطری‌پرکنی"
+      },
+      "roles": [
+        {
+          "id": "filling-line-operator",
+          "name": {
+            "en": "Filling Line Operator",
+            "fa": "اپراتور خط پرکن"
+          }
+        },
+        {
+          "id": "capping-technician",
+          "name": {
+            "en": "Capping Technician",
+            "fa": "تکنسین درب‌بندی"
+          }
+        },
+        {
+          "id": "labeling-operator",
+          "name": {
+            "en": "Labeling Operator",
+            "fa": "اپراتور برچسب‌زنی"
+          }
+        },
+        {
+          "id": "syrup-mixer",
+          "name": {
+            "en": "Syrup Mixer",
+            "fa": "مخلوط‌کننده شربت"
+          }
+        },
+        {
+          "id": "quality-sampler",
+          "name": {
+            "en": "Quality Sampler",
+            "fa": "نمونه‌گیر کیفیت"
+          }
+        },
+        {
+          "id": "packaging-supervisor",
+          "name": {
+            "en": "Packaging Supervisor",
+            "fa": "سرپرست بسته‌بندی"
+          }
+        },
+        {
+          "id": "conveyor-mechanic",
+          "name": {
+            "en": "Conveyor Mechanic",
+            "fa": "مکانیک نوار نقاله"
+          }
+        }
+      ]
+    },
+    {
+      "id": "volcano-expedition-camp",
+      "icon": "🌋",
+      "name": {
+        "en": "Volcano Expedition Camp",
+        "fa": "اردوگاه اکتشاف آتش‌فشان"
+      },
+      "roles": [
+        {
+          "id": "volcanologist",
+          "name": {
+            "en": "Volcanologist",
+            "fa": "آتش‌فشان‌شناس"
+          }
+        },
+        {
+          "id": "mountain-guide",
+          "name": {
+            "en": "Mountain Guide",
+            "fa": "راهنمای کوهستان"
+          }
+        },
+        {
+          "id": "gas-sampler",
+          "name": {
+            "en": "Gas Sampler",
+            "fa": "نمونه‌بردار گاز"
+          }
+        },
+        {
+          "id": "drone-pilot",
+          "name": {
+            "en": "Drone Pilot",
+            "fa": "خلبان پهپاد"
+          }
+        },
+        {
+          "id": "camp-cook",
+          "name": {
+            "en": "Camp Cook",
+            "fa": "آشپز اردوگاه"
+          }
+        },
+        {
+          "id": "safety-officer",
+          "name": {
+            "en": "Safety Officer",
+            "fa": "افسر ایمنی"
+          }
+        },
+        {
+          "id": "documentary-cameraman",
+          "name": {
+            "en": "Documentary Cameraman",
+            "fa": "فیلم‌بردار مستند"
+          }
+        }
+      ]
+    },
+    {
+      "id": "deep-cave-system",
+      "icon": "🕳️",
+      "name": {
+        "en": "Deep Cave System",
+        "fa": "غار عمیق"
+      },
+      "roles": [
+        {
+          "id": "cave-explorer",
+          "name": {
+            "en": "Cave Explorer",
+            "fa": "غارنورد"
+          }
+        },
+        {
+          "id": "rope-technician",
+          "name": {
+            "en": "Rope Technician",
+            "fa": "تکنسین طناب"
+          }
+        },
+        {
+          "id": "geologist",
+          "name": {
+            "en": "Geologist",
+            "fa": "زمین‌شناس"
+          }
+        },
+        {
+          "id": "lamp-bearer",
+          "name": {
+            "en": "Lamp Bearer",
+            "fa": "چراغ‌دار"
+          }
+        },
+        {
+          "id": "map-surveyor",
+          "name": {
+            "en": "Map Surveyor",
+            "fa": "نقشه‌بردار"
+          }
+        },
+        {
+          "id": "rescue-diver",
+          "name": {
+            "en": "Rescue Diver",
+            "fa": "غواص نجات"
+          }
+        },
+        {
+          "id": "bat-researcher",
+          "name": {
+            "en": "Bat Researcher",
+            "fa": "پژوهشگر خفاش"
+          }
+        }
+      ]
+    },
+    {
+      "id": "hot-air-balloon",
+      "icon": "🎈",
+      "name": {
+        "en": "Hot Air Balloon",
+        "fa": "بالون هوای گرم"
+      },
+      "roles": [
+        {
+          "id": "balloon-pilot",
+          "name": {
+            "en": "Balloon Pilot",
+            "fa": "خلبان بالون"
+          }
+        },
+        {
+          "id": "burner-operator",
+          "name": {
+            "en": "Burner Operator",
+            "fa": "اپراتور مشعل"
+          }
+        },
+        {
+          "id": "ground-crew",
+          "name": {
+            "en": "Ground Crew",
+            "fa": "خدمه زمینی"
+          }
+        },
+        {
+          "id": "aerial-photographer",
+          "name": {
+            "en": "Aerial Photographer",
+            "fa": "عکاس هوایی"
+          }
+        },
+        {
+          "id": "thrill-seeking-tourist",
+          "name": {
+            "en": "Thrill-Seeking Tourist",
+            "fa": "گردشگر ماجراجو"
+          }
+        },
+        {
+          "id": "weather-forecaster",
+          "name": {
+            "en": "Weather Forecaster",
+            "fa": "هواشناس"
+          }
+        },
+        {
+          "id": "chase-driver",
+          "name": {
+            "en": "Chase Driver",
+            "fa": "راننده تعقیب"
+          }
+        }
+      ]
+    },
+    {
+      "id": "antarctic-research-station",
+      "icon": "🧊",
+      "name": {
+        "en": "Antarctic Research Station",
+        "fa": "ایستگاه تحقیقاتی قطب جنوب"
+      },
+      "roles": [
+        {
+          "id": "glaciologist",
+          "name": {
+            "en": "Glaciologist",
+            "fa": "یخچال‌شناس"
+          }
+        },
+        {
+          "id": "station-chief",
+          "name": {
+            "en": "Station Chief",
+            "fa": "رئیس ایستگاه"
+          }
+        },
+        {
+          "id": "penguin-biologist",
+          "name": {
+            "en": "Penguin Biologist",
+            "fa": "زیست‌شناس پنگوئن"
+          }
+        },
+        {
+          "id": "ice-driller",
+          "name": {
+            "en": "Ice Driller",
+            "fa": "حفار یخ"
+          }
+        },
+        {
+          "id": "radio-operator",
+          "name": {
+            "en": "Radio Operator",
+            "fa": "اپراتور رادیو"
+          }
+        },
+        {
+          "id": "cook",
+          "name": {
+            "en": "Cook",
+            "fa": "آشپز"
+          }
+        },
+        {
+          "id": "mechanic",
+          "name": {
+            "en": "Mechanic",
+            "fa": "مکانیک"
+          }
+        }
+      ]
+    },
+    {
+      "id": "white-water-rafting-run",
+      "icon": "🛶",
+      "name": {
+        "en": "White-Water Rafting Run",
+        "fa": "مسیر رفتینگ آب‌خروشان"
+      },
+      "roles": [
+        {
+          "id": "raft-guide",
+          "name": {
+            "en": "Raft Guide",
+            "fa": "راهنمای قایق"
+          }
+        },
+        {
+          "id": "safety-kayaker",
+          "name": {
+            "en": "Safety Kayaker",
+            "fa": "کایاک‌سوار ایمنی"
+          }
+        },
+        {
+          "id": "paddler",
+          "name": {
+            "en": "Paddler",
+            "fa": "پاروزن"
+          }
+        },
+        {
+          "id": "lifeguard",
+          "name": {
+            "en": "Lifeguard",
+            "fa": "نجات‌غریق"
+          }
+        },
+        {
+          "id": "gear-manager",
+          "name": {
+            "en": "Gear Manager",
+            "fa": "مسئول تجهیزات"
+          }
+        },
+        {
+          "id": "first-timer",
+          "name": {
+            "en": "First-Timer",
+            "fa": "تازه‌کار"
+          }
+        },
+        {
+          "id": "action-photographer",
+          "name": {
+            "en": "Action Photographer",
+            "fa": "عکاس اکشن"
+          }
+        }
+      ]
+    },
+    {
+      "id": "skydiving-drop-zone",
+      "icon": "🪂",
+      "name": {
+        "en": "Skydiving Drop Zone",
+        "fa": "منطقه پرش چتربازی"
+      },
+      "roles": [
+        {
+          "id": "skydiving-instructor",
+          "name": {
+            "en": "Skydiving Instructor",
+            "fa": "مربی چتربازی"
+          }
+        },
+        {
+          "id": "jump-pilot",
+          "name": {
+            "en": "Jump Pilot",
+            "fa": "خلبان پرش"
+          }
+        },
+        {
+          "id": "parachute-rigger",
+          "name": {
+            "en": "Parachute Rigger",
+            "fa": "چترباز فنی"
+          }
+        },
+        {
+          "id": "tandem-diver",
+          "name": {
+            "en": "Tandem Diver",
+            "fa": "چترباز دونفره"
+          }
+        },
+        {
+          "id": "drop-zone-manager",
+          "name": {
+            "en": "Drop-Zone Manager",
+            "fa": "مدیر منطقه پرش"
+          }
+        },
+        {
+          "id": "videographer",
+          "name": {
+            "en": "Videographer",
+            "fa": "فیلم‌بردار سقوط آزاد"
+          }
+        },
+        {
+          "id": "nervous-student",
+          "name": {
+            "en": "Nervous Student",
+            "fa": "دانشجوی مضطرب"
+          }
+        }
+      ]
+    },
+    {
+      "id": "mountaineering-base-camp",
+      "icon": "⛰️",
+      "name": {
+        "en": "Mountaineering Base Camp",
+        "fa": "اردوگاه پایه کوهنوردی"
+      },
+      "roles": [
+        {
+          "id": "lead-climber",
+          "name": {
+            "en": "Lead Climber",
+            "fa": "کوهنورد پیشرو"
+          }
+        },
+        {
+          "id": "sherpa-porter",
+          "name": {
+            "en": "Sherpa Porter",
+            "fa": "باربر شرپا"
+          }
+        },
+        {
+          "id": "expedition-doctor",
+          "name": {
+            "en": "Expedition Doctor",
+            "fa": "پزشک اعزام"
+          }
+        },
+        {
+          "id": "base-camp-manager",
+          "name": {
+            "en": "Base Camp Manager",
+            "fa": "مدیر اردوگاه پایه"
+          }
+        },
+        {
+          "id": "weather-watcher",
+          "name": {
+            "en": "Weather Watcher",
+            "fa": "رصدگر هوا"
+          }
+        },
+        {
+          "id": "equipment-sherpa",
+          "name": {
+            "en": "Equipment Sherpa",
+            "fa": "شرپای تجهیزات"
+          }
+        },
+        {
+          "id": "acclimatizing-trekker",
+          "name": {
+            "en": "Acclimatizing Trekker",
+            "fa": "کوه‌پیمای در حال سازگاری"
+          }
+        }
+      ]
+    },
+    {
+      "id": "desert-safari-camp",
+      "icon": "🏜️",
+      "name": {
+        "en": "Desert Safari Camp",
+        "fa": "اردوگاه سافاری کویری"
+      },
+      "roles": [
+        {
+          "id": "dune-buggy-driver",
+          "name": {
+            "en": "Dune Buggy Driver",
+            "fa": "راننده باگی شنی"
+          }
+        },
+        {
+          "id": "camel-handler",
+          "name": {
+            "en": "Camel Handler",
+            "fa": "شتربان"
+          }
+        },
+        {
+          "id": "bedouin-guide",
+          "name": {
+            "en": "Bedouin Guide",
+            "fa": "راهنمای بادیه‌نشین"
+          }
+        },
+        {
+          "id": "sandboarder",
+          "name": {
+            "en": "Sandboarder",
+            "fa": "اسکی‌باز شنی"
+          }
+        },
+        {
+          "id": "stargazing-guide",
+          "name": {
+            "en": "Stargazing Guide",
+            "fa": "راهنمای ستاره‌بینی"
+          }
+        },
+        {
+          "id": "camp-chef",
+          "name": {
+            "en": "Camp Chef",
+            "fa": "سرآشپز اردوگاه"
+          }
+        },
+        {
+          "id": "adventure-tourist",
+          "name": {
+            "en": "Adventure Tourist",
+            "fa": "گردشگر ماجراجو"
+          }
+        }
+      ]
+    },
+    {
+      "id": "shipwreck-dive-site",
+      "icon": "🤿",
+      "name": {
+        "en": "Shipwreck Dive Site",
+        "fa": "محل غواصی کشتی غرق‌شده"
+      },
+      "roles": [
+        {
+          "id": "dive-master",
+          "name": {
+            "en": "Dive Master",
+            "fa": "استاد غواصی"
+          }
+        },
+        {
+          "id": "marine-archaeologist",
+          "name": {
+            "en": "Marine Archaeologist",
+            "fa": "باستان‌شناس دریایی"
+          }
+        },
+        {
+          "id": "underwater-photographer",
+          "name": {
+            "en": "Underwater Photographer",
+            "fa": "عکاس زیرآب"
+          }
+        },
+        {
+          "id": "treasure-hunter",
+          "name": {
+            "en": "Treasure Hunter",
+            "fa": "شکارچی گنج"
+          }
+        },
+        {
+          "id": "boat-captain",
+          "name": {
+            "en": "Boat Captain",
+            "fa": "ناخدای قایق"
+          }
+        },
+        {
+          "id": "safety-diver",
+          "name": {
+            "en": "Safety Diver",
+            "fa": "غواص ایمنی"
+          }
+        },
+        {
+          "id": "air-tank-supplier",
+          "name": {
+            "en": "Air Tank Supplier",
+            "fa": "تأمین‌کننده مخزن هوا"
+          }
+        }
+      ]
+    },
+    {
+      "id": "jungle-canopy-walkway",
+      "icon": "🌳",
+      "name": {
+        "en": "Jungle Canopy Walkway",
+        "fa": "گذرگاه تاج جنگل"
+      },
+      "roles": [
+        {
+          "id": "canopy-guide",
+          "name": {
+            "en": "Canopy Guide",
+            "fa": "راهنمای تاج جنگل"
+          }
+        },
+        {
+          "id": "zipline-operator",
+          "name": {
+            "en": "Zipline Operator",
+            "fa": "اپراتور زیپ‌لاین"
+          }
+        },
+        {
+          "id": "wildlife-biologist",
+          "name": {
+            "en": "Wildlife Biologist",
+            "fa": "زیست‌شناس حیات‌وحش"
+          }
+        },
+        {
+          "id": "bird-watcher",
+          "name": {
+            "en": "Bird Watcher",
+            "fa": "پرنده‌نگر"
+          }
+        },
+        {
+          "id": "rope-bridge-inspector",
+          "name": {
+            "en": "Rope Bridge Inspector",
+            "fa": "بازرس پل طنابی"
+          }
+        },
+        {
+          "id": "botanist",
+          "name": {
+            "en": "Botanist",
+            "fa": "گیاه‌شناس"
+          }
+        },
+        {
+          "id": "eco-tourist",
+          "name": {
+            "en": "Eco-Tourist",
+            "fa": "بوم‌گرد"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ice-climbing-wall",
+      "icon": "🧗",
+      "name": {
+        "en": "Ice Climbing Wall",
+        "fa": "دیواره یخ‌نوردی"
+      },
+      "roles": [
+        {
+          "id": "ice-climber",
+          "name": {
+            "en": "Ice Climber",
+            "fa": "یخ‌نورد"
+          }
+        },
+        {
+          "id": "belay-partner",
+          "name": {
+            "en": "Belay Partner",
+            "fa": "همراه حمایت"
+          }
+        },
+        {
+          "id": "ice-axe-instructor",
+          "name": {
+            "en": "Ice Axe Instructor",
+            "fa": "مربی تبر یخ"
+          }
+        },
+        {
+          "id": "avalanche-spotter",
+          "name": {
+            "en": "Avalanche Spotter",
+            "fa": "دیده‌بان بهمن"
+          }
+        },
+        {
+          "id": "crampon-technician",
+          "name": {
+            "en": "Crampon Technician",
+            "fa": "تکنسین کرامپون"
+          }
+        },
+        {
+          "id": "rescue-patroller",
+          "name": {
+            "en": "Rescue Patroller",
+            "fa": "گشتی نجات"
+          }
+        },
+        {
+          "id": "frozen-waterfall-photographer",
+          "name": {
+            "en": "Frozen Waterfall Photographer",
+            "fa": "عکاس آبشار یخ‌زده"
           }
         }
       ]

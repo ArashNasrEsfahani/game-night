@@ -11,7 +11,6 @@
       "id": "dare-mild-001",
       "kind": "dare",
       "intensity": "mild",
-      "minPlayers": 3,
       "text": {
         "en": "Do your best impression of another player until someone guesses who it is.",
         "fa": "ادای یکی از بازیکن‌ها رو دربیار تا یکی حدس بزنه داری کیو نشون می‌دی."
@@ -30,7 +29,6 @@
       "id": "dare-mild-003",
       "kind": "dare",
       "intensity": "mild",
-      "minPlayers": 3,
       "text": {
         "en": "Let the player on your right give you a new hairstyle with their hands.",
         "fa": "بذار نفر سمت راستت با دستاش موهاتو هر مدلی دلش خواست درست کنه."
@@ -67,7 +65,6 @@
       "id": "dare-mild-007",
       "kind": "dare",
       "intensity": "mild",
-      "minPlayers": 3,
       "text": {
         "en": "Give a sincere compliment to everyone in the room, one by one.",
         "fa": "به همهٔ آدمای جمع، یکی‌یکی، یه تعریف از ته دل بکن."
@@ -122,7 +119,6 @@
       "id": "dare-mild-013",
       "kind": "dare",
       "intensity": "mild",
-      "minPlayers": 3,
       "text": {
         "en": "Let the group choose a silly walk for you to do across the room.",
         "fa": "بذار جمع یه راه‌رفتن مسخره برات انتخاب کنه و باهاش از این سر اتاق تا اون سر بری."
@@ -168,7 +164,6 @@
       "id": "dare-medium-002",
       "kind": "dare",
       "intensity": "medium",
-      "minPlayers": 3,
       "text": {
         "en": "Let the group pick a single emoji to post as your status (you choose the app).",
         "fa": "بذار جمع یه ایموجی انتخاب کنه که بذاری استوریت (اپش با خودت)."
@@ -178,7 +173,6 @@
       "id": "dare-medium-003",
       "kind": "dare",
       "intensity": "medium",
-      "minPlayers": 3,
       "text": {
         "en": "Let the player across from you draw on your face with a pen cap (no ink).",
         "fa": "بذار نفر روبه‌روت با درِ خودکار (بدون جوهر) روی صورتت نقاشی بکشه."
@@ -206,7 +200,6 @@
       "id": "dare-medium-006",
       "kind": "dare",
       "intensity": "medium",
-      "minPlayers": 3,
       "text": {
         "en": "Let the group give you a new accent and tell a one-minute story with it.",
         "fa": "بذار جمع برات یه لهجه تعیین کنه و یه دقیقه باهاش برامون قصه تعریف کن."
@@ -234,7 +227,6 @@
       "id": "dare-medium-009",
       "kind": "dare",
       "intensity": "medium",
-      "minPlayers": 3,
       "text": {
         "en": "Swap one item of clothing with the player on your left for two rounds.",
         "fa": "یه تیکه از لباستو دو دور با نفر سمت چپت عوض کن."
@@ -262,7 +254,6 @@
       "id": "dare-medium-012",
       "kind": "dare",
       "intensity": "medium",
-      "minPlayers": 3,
       "text": {
         "en": "Let the group rename you for the rest of the game and respond only to that name.",
         "fa": "بذار جمع تا آخر بازی یه اسم جدید روت بذاره و فقط به همون اسم جواب بده."
@@ -299,7 +290,6 @@
       "id": "dare-spicy-002",
       "kind": "dare",
       "intensity": "spicy",
-      "minPlayers": 3,
       "text": {
         "en": "Let the group decide a new contact name for the person to your left.",
         "fa": "بذار جمع برای نفر سمت چپت یه اسم جدید توی مخاطبینت انتخاب کنه."
@@ -309,7 +299,6 @@
       "id": "dare-spicy-003",
       "kind": "dare",
       "intensity": "spicy",
-      "minPlayers": 3,
       "text": {
         "en": "Give the person to your right a dramatic, over-the-top compliment about their charm.",
         "fa": "به نفر سمت راستت یه تعریف اغراق‌آمیز و پر آب‌وتاب دربارهٔ جذابیتش بکن."
@@ -328,7 +317,6 @@
       "id": "dare-spicy-005",
       "kind": "dare",
       "intensity": "spicy",
-      "minPlayers": 3,
       "text": {
         "en": "Do your most flirtatious wink at every player, one at a time.",
         "fa": "به همهٔ بازیکن‌ها، یکی‌یکی، عشوه‌ای‌ترین چشمکتو بزن."
@@ -338,7 +326,6 @@
       "id": "dare-spicy-006",
       "kind": "dare",
       "intensity": "spicy",
-      "minPlayers": 3,
       "text": {
         "en": "Serenade the player of the group's choice with two lines of a love song.",
         "fa": "برای کسی که جمع انتخاب می‌کنه، دو خط از یه آهنگ عاشقانه بخون."
@@ -348,7 +335,6 @@
       "id": "dare-spicy-007",
       "kind": "dare",
       "intensity": "spicy",
-      "minPlayers": 3,
       "text": {
         "en": "Whisper a clean, cheeky pick-up line into the ear of the player to your left.",
         "fa": "یه تیکهٔ مخ‌زنی بامزه و بی‌منظور رو دم گوش نفر سمت چپت زمزمه کن."
@@ -358,7 +344,6 @@
       "id": "dare-spicy-008",
       "kind": "dare",
       "intensity": "spicy",
-      "minPlayers": 3,
       "text": {
         "en": "Let the group pick a player you must hold eye contact with for thirty seconds without laughing.",
         "fa": "بذار جمع یه نفرو انتخاب کنه که سی ثانیه بدون خندیدن باهاش چشم‌تو‌چشم بمونی."
@@ -578,8 +563,7 @@
       "text": {
         "en": "Let the group pick a new nickname for you for the rest of the game.",
         "fa": "بذار جمع تا آخر بازی یه لقب جدید برات انتخاب کنه."
-      },
-      "minPlayers": 3
+      }
     },
     {
       "id": "dare-x023",
@@ -588,8 +572,7 @@
       "text": {
         "en": "Let the group post a status on your behalf.",
         "fa": "بذار جمع به جای تو یه استوری بذاره."
-      },
-      "minPlayers": 3
+      }
     },
     {
       "id": "dare-x024",
@@ -607,8 +590,7 @@
       "text": {
         "en": "Let the person to your right draw on your hand with a pen.",
         "fa": "بذار نفر سمت راستت با خودکار روی دستت نقاشی بکشه."
-      },
-      "minPlayers": 3
+      }
     },
     {
       "id": "dare-x026",
@@ -617,8 +599,7 @@
       "text": {
         "en": "Do an impression of someone in the room and let others guess.",
         "fa": "ادای یکی از آدمای جمع رو دربیار تا بقیه حدس بزنن."
-      },
-      "minPlayers": 3
+      }
     },
     {
       "id": "dare-x027",
@@ -627,8 +608,7 @@
       "text": {
         "en": "Let the group choose an embarrassing photo from your phone to show.",
         "fa": "بذار جمع یه عکس خجالت‌آور از گوشیت انتخاب کنه که نشون بدی."
-      },
-      "minPlayers": 3
+      }
     },
     {
       "id": "dare-x028",
@@ -673,8 +653,7 @@
       "text": {
         "en": "Let the group give you a 30-second makeover with whatever is nearby.",
         "fa": "بذار جمع با هر چی دم دسته ۳۰ ثانیه قیافه‌تو عوض کنه."
-      },
-      "minPlayers": 3
+      }
     },
     {
       "id": "dare-x033",
@@ -683,8 +662,7 @@
       "text": {
         "en": "Eat a spoonful of a condiment chosen by the group.",
         "fa": "یه قاشق از یه سُسی که جمع انتخاب می‌کنه بخور."
-      },
-      "minPlayers": 3
+      }
     },
     {
       "id": "dare-x034",
@@ -702,8 +680,7 @@
       "text": {
         "en": "Wear a piece of clothing belonging to the person on your left.",
         "fa": "یکی از لباسای نفر سمت چپتو بپوش."
-      },
-      "minPlayers": 3
+      }
     },
     {
       "id": "dare-x036",
@@ -712,8 +689,7 @@
       "text": {
         "en": "Let the group quiz you with three questions and answer all honestly.",
         "fa": "بذار جمع سه تا سؤال ازت بپرسه و همه رو صادقانه جواب بده."
-      },
-      "minPlayers": 3
+      }
     },
     {
       "id": "dare-x037",
@@ -776,8 +752,7 @@
       "text": {
         "en": "Let the group reenact your most recent awkward moment.",
         "fa": "بذار جمع آخرین لحظهٔ خجالت‌آورتو دوباره بازی کنه."
-      },
-      "minPlayers": 3
+      }
     },
     {
       "id": "dare-x044",
@@ -795,8 +770,7 @@
       "text": {
         "en": "Let the group read your most recent search history aloud.",
         "fa": "بذار جمع آخرین چیزایی که سرچ کردی رو بلندبلند بخونه."
-      },
-      "minPlayers": 3
+      }
     },
     {
       "id": "dare-x046",
@@ -814,8 +788,7 @@
       "text": {
         "en": "Confess your most embarrassing crush story to the group.",
         "fa": "خجالت‌آورترین ماجرای دلباختگیتو برای جمع تعریف کن."
-      },
-      "minPlayers": 3
+      }
     },
     {
       "id": "dare-x048",
@@ -824,8 +797,7 @@
       "text": {
         "en": "Let the player to your left send one message from your phone to anyone.",
         "fa": "بذار نفر سمت چپت از گوشیت به هرکی خواست یه پیام بفرسته."
-      },
-      "minPlayers": 3
+      }
     },
     {
       "id": "dare-x049",
@@ -852,8 +824,7 @@
       "text": {
         "en": "Let the group decide a silly rule you must follow for 10 minutes.",
         "fa": "بذار جمع یه قانون مسخره تعیین کنه که ۱۰ دقیقه باید رعایتش کنی."
-      },
-      "minPlayers": 3
+      }
     },
     {
       "id": "dare-x052",
@@ -880,8 +851,7 @@
       "text": {
         "en": "Let the group serenade you and react as if it's the most romantic moment ever.",
         "fa": "بذار جمع برات آواز عاشقانه بخونه و جوری واکنش نشون بده که انگار رمانتیک‌ترین لحظهٔ عمرته."
-      },
-      "minPlayers": 3
+      }
     },
     {
       "id": "dare-ext-001",
@@ -908,8 +878,7 @@
       "text": {
         "en": "Let the group choose two players to swap one item of clothing.",
         "fa": "بذار جمع دو نفرو انتخاب کنه که یه تیکه لباس با هم عوض کنن."
-      },
-      "minPlayers": 3
+      }
     },
     {
       "id": "dare-ext-004",
@@ -918,8 +887,7 @@
       "text": {
         "en": "Sit on the lap of the player across from you until your next turn.",
         "fa": "تا نوبت بعدی روی پای بازیکن روبه‌روت بشین."
-      },
-      "minPlayers": 3
+      }
     },
     {
       "id": "dare-ext-005",
@@ -973,8 +941,7 @@
       "text": {
         "en": "Let the group pick someone for you to give a 10-second shoulder massage.",
         "fa": "بذار جمع یکی رو انتخاب کنه که ۱۰ ثانیه شونه‌هاشو ماساژ بدی."
-      },
-      "minPlayers": 3
+      }
     },
     {
       "id": "dare-ext-011",
@@ -1055,8 +1022,7 @@
       "text": {
         "en": "Confess which player here you would pick for seven minutes in heaven, and why.",
         "fa": "اعتراف کن کدوم بازیکن این جمع رو برای هفت دقیقه تو بهشت انتخاب می‌کنی و چرا."
-      },
-      "minPlayers": 3
+      }
     },
     {
       "id": "dare-ext-020",
@@ -1101,6 +1067,2337 @@
       "text": {
         "en": "Let the group dare you to text one bold emoji to your crush.",
         "fa": "بذار جمع جرئتت بده یه ایموجی جسورانه برای کراشت بفرستی."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-1",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Give the person to your right a slow, dramatic neck massage for 30 seconds while whispering encouragement in their ear.",
+        "fa": "به نفر سمت راستت ۳۰ ثانیه ماساژ گردن آروم و دراماتیک بده و همزمان آروم تو گوشش تشویقش کن."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-2",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Do your most seductive slow-motion walk across the room and strike a magazine-cover pose at the end.",
+        "fa": "اغواکننده‌ترین راه‌رفتن آهسته‌ت رو از این سر اتاق تا اون سر اجرا کن و آخرش مثل جلد مجله ژست بگیر."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-3",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Sit on the lap of the player across from you for the duration of the next round.",
+        "fa": "تا آخر دور بعدی روی پای کسی که روبه‌روت نشسته بشین."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-4",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Perform a 20-second sultry lap-dance-style routine in front of the group, fully clothed.",
+        "fa": "یه اجرای اغواگرانه ۲۰ ثانیه‌ای شبیه رقص روی پا جلوی جمع، با لباس کامل، انجام بده."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-5",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Whisper the most flirtatious sentence you can invent into the ear of the player on your left.",
+        "fa": "عاشقانه‌ترین و دلبرانه‌ترین جمله‌ای که می‌تونی بسازی رو آروم تو گوش نفر سمت چپت زمزمه کن."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-6",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Let another player redraw your eyebrows or draw a mustache on your face with a pen.",
+        "fa": "بذار یکی دیگه از بازیکن‌ها با خودکار ابروهات رو دوباره بکشه یا روی صورتت سبیل بکشه."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-7",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Do your most over-the-top moaning impression of someone eating the most delicious meal of their life.",
+        "fa": "اغراق‌آمیزترین صدای لذت‌بردن کسی رو که داره خوشمزه‌ترین غذای عمرش رو می‌خوره دربیار."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-8",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Slow dance cheek-to-cheek with the player of your choice for one full minute.",
+        "fa": "یه دقیقه‌ی کامل با هر بازیکنی که انتخاب می‌کنی، گونه به گونه و آروم برقص."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-9",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Take off one item of clothing of your choice and wear it on a different body part for two rounds.",
+        "fa": "یه تیکه لباس به انتخاب خودت دربیار و تا دو دور روی یه جای دیگه‌ی بدنت بپوش."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-10",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Lie on the floor and let a player draw an outline around your body like a crime scene.",
+        "fa": "روی زمین دراز بکش و بذار یه بازیکن مثل صحنه‌ی جرم دور بدنت رو خط بکشه."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-11",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Demonstrate three increasingly dramatic 'come hither' looks across the room to a chosen player.",
+        "fa": "سه تا نگاه «بیا اینجا»ی هر بار دراماتیک‌تر، از این سر اتاق به یه بازیکن انتخابی نشون بده."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-12",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Pretend the player next to you is your long-lost lover and reunite with a passionate (no-contact) movie embrace.",
+        "fa": "وانمود کن نفر کناریت معشوق گمشده‌ته و با یه آغوش پرشور سینمایی (بدون تماس واقعی) دوباره بهش برس."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-13",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Lick your lips and deliver your cheesiest pickup line directly to the player across from you.",
+        "fa": "لبت رو با زبون تر کن و آب‌زیرکاه‌ترین جمله‌ی مخ‌زنیت رو مستقیم به کسی که روبه‌روته بگو."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-14",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Do a slow, dramatic reveal pulling up your sleeve or pant leg as if it's scandalous.",
+        "fa": "آستین یا پاچه‌ی شلوارت رو آروم و دراماتیک بالا بزن انگار خیلی جنجالیه."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-15",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Sit blindfolded and let the group reposition your arms and legs into a ridiculous pose; hold it for 30 seconds.",
+        "fa": "چشم‌بسته بشین و بذار جمع دست‌ها و پاهات رو به یه ژست مسخره ببرن؛ ۳۰ ثانیه نگهش دار."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-16",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Give a dramatic, breathy reading of a grocery list as if it's the steamiest love letter ever written.",
+        "fa": "یه لیست خرید رو با نفس‌های دراماتیک طوری بخون انگار داغ‌ترین نامه‌ی عاشقانه‌ی دنیاست."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-17",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Let the player to your right feed you a bite of any available food while you keep intense eye contact.",
+        "fa": "بذار نفر سمت راستت یه لقمه از هر خوراکی که هست بهت بده، در حالی که نگاه‌های خیره و عمیق رد و بدل می‌کنید."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-18",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Do your best impression of a romance-novel hero ripping open his shirt (mime it, no actual ripping).",
+        "fa": "بهترین تقلیدت از قهرمان رمان عاشقانه که پیراهنش رو می‌دره اجرا کن (با ادا، بدون پاره‌کردن واقعی)."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-19",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Crawl seductively across the floor toward a chosen player and finish with a wink.",
+        "fa": "اغواگرانه روی زمین به سمت یه بازیکن انتخابی بخز و آخرش با یه چشمک تمومش کن."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-20",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Let another player whisper a word in your ear that you must act out as flirtatiously as possible.",
+        "fa": "بذار یه بازیکن یه کلمه تو گوشت بگه که باید تا حد امکان دلبرانه اجراش کنی."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-21",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Spend the next round speaking only in a breathy, sultry voice no matter what you say.",
+        "fa": "تا آخر دور بعدی هر چی می‌گی فقط با یه صدای نفس‌دار و اغواگر بگو."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-22",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Drape yourself dramatically across two players like a fainting damsel for 20 seconds.",
+        "fa": "۲۰ ثانیه مثل یه شاهزاده‌خانوم در حال غش‌کردن، دراماتیک روی دو تا بازیکن ولو شو."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-23",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Trace a slow heart shape in the air toward the player you find most charming, then blow them a kiss.",
+        "fa": "آروم یه قلب تو هوا به سمت جذاب‌ترین بازیکن از نظرت بکش و بعد براش بوس بفرست."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-24",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Let a player gently mess up your hair into the wildest style they can, and keep it for two rounds.",
+        "fa": "بذار یه بازیکن موهات رو آروم به وحشیانه‌ترین مدلی که می‌تونه بهم بریزه و تا دو دور همون‌جوری نگهش دار."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-25",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Perform a dramatic shoulder-and-hip body roll three times in a row while holding eye contact with the group.",
+        "fa": "سه بار پشت سر هم یه موج دراماتیک شونه و باسن اجرا کن، در حالی که با جمع چشم تو چشمی."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-26",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Pretend a chosen player is irresistibly attractive and dramatically struggle to look away from them for 30 seconds.",
+        "fa": "وانمود کن یه بازیکن انتخابی به‌شدت جذابه و ۳۰ ثانیه دراماتیک تلاش کن نگاهت رو ازش بگیری ولی نتونی."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-27",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Do a slow, teasing 'reveal' of your socks or wristwatch as if it's the most provocative thing in the room.",
+        "fa": "جوراب یا ساعت مچیت رو آروم و با ناز «رو کن» انگار اغواکننده‌ترین چیز توی اتاقه."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-28",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Recreate the famous over-the-shoulder romantic-movie pose with a willing player for a 10-second photo finish.",
+        "fa": "اون ژست معروف عاشقانه‌ی سینمایی از روی شونه رو با یه بازیکن داوطلب بازسازی کن و ۱۰ ثانیه برای عکس نگهش دار."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-29",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Bite your lip, run a hand through your hair, and deliver a dramatic 'I've been waiting for you all night' to the group.",
+        "fa": "لبت رو گاز بگیر، دستت رو لای موهات بکش و دراماتیک به جمع بگو «تموم شب منتظرت بودم»."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-30",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Let the group choose two players to give you a synchronized dramatic fan-and-swoon treatment for 20 seconds.",
+        "fa": "بذار جمع دو تا بازیکن انتخاب کنه که ۲۰ ثانیه هماهنگ برات باد بزنن و دراماتیک از حال برن."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-31",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Do your sultriest slow-motion hair flip, then freeze in a dramatic 'photographers, please' pose.",
+        "fa": "اغواگرانه‌ترین موج‌دادن آهسته‌ی موهات رو اجرا کن و بعد تو یه ژست دراماتیک «عکاس‌ها، لطفاً» خشک شو."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-32",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Climb onto a chair and deliver a wild toast as if this is the craziest party of the year.",
+        "fa": "برو روی یک صندلی و یه پیشنهاد نوشیدنی دیوانه‌وار بده، انگار این بزرگ‌ترین مهمونی ساله."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-33",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Do a slow, dramatic shoulder-roll striptease but only remove one sock at the end.",
+        "fa": "یه استریپ‌تیز آهسته و نمایشی با شونه‌هات اجرا کن، ولی آخرش فقط یه جوراب دربیار."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-34",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Grind against the nearest piece of furniture for ten seconds like it's your dance partner.",
+        "fa": "ده ثانیه به نزدیک‌ترین وسیله‌ی خونه بچسب و باهاش برقص، انگار پارتنر رقصته."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-35",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Crowd-surf in your imagination: lie back across two laps and let them pretend to pass you along.",
+        "fa": "تو خیالت روی جمعیت سرسره برو: روی پای دو نفر دراز بکش و بذار وانمود کنن دارن دستت‌به‌دست می‌کنن."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-36",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Do your sluttiest catwalk strut across the room and blow a kiss to each person.",
+        "fa": "اغواگرانه‌ترین راه‌رفتن مدلینگت رو تو اتاق اجرا کن و برای هر کس یه بوس بفرست."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-37",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Twerk for fifteen seconds while holding eye contact with whoever picked this dare.",
+        "fa": "پونزده ثانیه برقص و باسنت رو تکون بده، در همون حال تو چشم کسی که این چالش رو انتخاب کرده زل بزن."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-38",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Pretend you just took a body shot off the table and react like it burned all the way down.",
+        "fa": "وانمود کن همین الان یه شات از روی میز سر کشیدی و طوری واکنش نشون بده که انگار تا ته گلوت سوخت."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-39",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Pour an imaginary drink down your front and lick your lips like a wild party animal.",
+        "fa": "یه نوشیدنی خیالی روی سینه‌ات بریز و مثل یه آدم دیوانه‌ی مهمونی لب‌هات رو لیس بزن."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-40",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Do the dirtiest dance move you know on a loop until the next person stops you.",
+        "fa": "کثیف‌ترین حرکت رقصی که بلدی رو پشت‌سرهم تکرار کن تا نفر بعدی متوقفت کنه."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-41",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Loosen your top button, mess up your hair, and pose like the cover of a scandalous magazine.",
+        "fa": "دکمه‌ی بالای لباست رو باز کن، موهات رو به‌هم بریز و مثل جلد یه مجله‌ی جنجالی ژست بگیر."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-42",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Crawl across the floor like a cat in heat toward the person to your left.",
+        "fa": "مثل یه گربه‌ی شهوتی روی زمین به سمت نفر سمت چپت بخز."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-43",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Give a sultry lap-dance-style shimmy in front of the group without actually touching anyone.",
+        "fa": "یه رقص اغواگرانه و لرزشی جلوی جمع اجرا کن، بدون اینکه واقعاً کسی رو لمس کنی."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-44",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Whisper the wildest fake party rumor about yourself into someone's ear, loud enough for all to hear.",
+        "fa": "وحشیانه‌ترین شایعه‌ی الکی مهمونی درباره‌ی خودت رو دم گوش یکی نجوا کن، اون‌قدر بلند که همه بشنون."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-45",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Do a full-body sensual stretch and moan as if you've just woken up after the wildest night.",
+        "fa": "یه کش‌وقوس اغواگرانه‌ی تمام‌بدن انجام بده و طوری ناله کن که انگار بعد از وحشی‌ترین شب از خواب بیدار شدی."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-46",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Strut up to a wall, press against it, and dance like the club lights just dropped.",
+        "fa": "با ناز و عشوه به سمت یه دیوار برو، بهش بچسب و طوری برقص که انگار نورهای کلاب همین الان خاموش شد."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-47",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Bite your lip, wink, and slowly run your hands down your sides like a wild dancer on stage.",
+        "fa": "لبت رو گاز بگیر، چشمک بزن و آروم دست‌هات رو از کناره‌های بدنت پایین بکش، مثل یه رقصنده‌ی وحشی روی صحنه."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-48",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Do an over-the-top air-humping victory dance as if you just won the party.",
+        "fa": "یه رقص پیروزی اغراق‌آمیز و شهوانی تو هوا انجام بده، انگار همین الان قهرمان مهمونی شدی."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-49",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Pretend to be drunk and sloppily flirt with a lamp for fifteen seconds.",
+        "fa": "وانمود کن مستی و پونزده ثانیه شلخته‌وار با یه آباژور لاس بزن."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-50",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Drop into a slow split-attempt while fanning yourself and saying it's getting hot in here.",
+        "fa": "آروم سعی کن دونگ بزنی و در همون حال خودت رو باد بزن و بگو اینجا داره داغ می‌شه."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-51",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Roll your hips in a figure-eight and dedicate the move to the hottest celebrity you can name.",
+        "fa": "باسنت رو به شکل عدد هشت بچرخون و این حرکت رو به جذاب‌ترین سلبریتی‌ای که اسمش به ذهنت می‌رسه تقدیم کن."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-52",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Pretend the floor is a stripper pole and do a slow spin clinging to thin air.",
+        "fa": "وانمود کن وسط اتاق یه میله‌ی رقص هست و در حالی که به هوای خالی چنگ زدی، آروم بچرخ."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-53",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Unleash your wildest party scream and shake your whole body like the bass just hit.",
+        "fa": "وحشیانه‌ترین جیغ مهمونیت رو بکش و تمام بدنت رو طوری بلرزون که انگار صدای بیس همین الان زد."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-54",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Flirtatiously feed an imaginary grape to the person across from you in slow motion.",
+        "fa": "به‌صورت اغواگرانه و در حرکت آهسته یه انگور خیالی به نفر روبه‌روت بده که بخوره."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-55",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Do a seductive shoulder shimmy while slowly turning around for the whole group.",
+        "fa": "در حالی که آروم برای کل جمع می‌چرخی، شونه‌هات رو اغواگرانه بلرزون."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-56",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Pretend to spill a drink on yourself and peel away one layer in mock panic.",
+        "fa": "وانمود کن یه نوشیدنی روی خودت ریختی و با هول‌وولای الکی یه لایه از لباست رو دربیار."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-57",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Give your best impression of dirty dancing solo, complete with the dramatic hair flip.",
+        "fa": "بهترین اجرای تک‌نفره‌ات از رقص داغ رو نشون بده، همراه با اون پرت‌کردن نمایشی موها."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-58",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Sit on the edge of your seat and do a slow, teasing fan-yourself routine for the room.",
+        "fa": "لبه‌ی صندلی بشین و یه نمایش آروم و اغواگرانه‌ی خنک‌کردن خودت برای کل اتاق اجرا کن."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-59",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Crawl seductively to the center, flip your hair, and freeze in a fierce pose for five seconds.",
+        "fa": "اغواگرانه به وسط اتاق بخز، موهات رو پرت کن و پنج ثانیه تو یه ژست جسورانه بی‌حرکت بمون."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-60",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Do an exaggerated slow-motion belly roll like you're the main act at a wild party.",
+        "fa": "یه موج‌انداختن شکمی اغراق‌آمیز و آهسته انجام بده، انگار اجرای اصلی یه مهمونی وحشی هستی."
+      }
+    },
+    {
+      "id": "dare-extreme-gen-61",
+      "kind": "dare",
+      "intensity": "extreme",
+      "text": {
+        "en": "Press two fingers to your lips, blow a long kiss across the room, and bow like a diva.",
+        "fa": "دو تا انگشتت رو روی لب‌هات بذار، یه بوس کشدار به اون‌سر اتاق بفرست و مثل یه دیوا تعظیم کن."
+      }
+    },
+    {
+      "id": "dare-medium-gen-62",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Stand up and give a 30-second motivational speech to the group as if they're about to win a championship.",
+        "fa": "بلند شو و یه سخنرانی انگیزشی ۳۰ ثانیه‌ای برای جمع بکن، انگار قراره یه قهرمانی رو ببرن."
+      }
+    },
+    {
+      "id": "dare-medium-gen-63",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Walk around the room and confidently shake everyone's hand like a politician working a crowd.",
+        "fa": "دور اتاق راه برو و با اعتماد به نفس مثل یه سیاستمدار که داره با جمعیت دست می‌ده با همه دست بده."
+      }
+    },
+    {
+      "id": "dare-medium-gen-64",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Pick someone in the group and do a dramatic slow-clap for them while making eye contact.",
+        "fa": "یه نفر از جمع رو انتخاب کن و در حالی که تو چشماش نگاه می‌کنی، براش یه دست‌زدنِ آروم و پرهیجان اجرا کن."
+      }
+    },
+    {
+      "id": "dare-medium-gen-65",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Announce a fake breaking-news bulletin about something happening right now in the room.",
+        "fa": "یه خبر فوری ساختگی درباره‌ی یه اتفاقی که همین الان تو اتاق داره می‌افته اعلام کن."
+      }
+    },
+    {
+      "id": "dare-medium-gen-66",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Loudly compliment three different people in the room, one after another, like you really mean it.",
+        "fa": "با صدای بلند به سه نفر مختلف تو اتاق، یکی بعد از اون یکی، طوری که واقعاً از ته دل باشه تعریف کن."
+      }
+    },
+    {
+      "id": "dare-medium-gen-67",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Stand on a chair and declare yourself ruler of the room for the next two rounds.",
+        "fa": "رو یه صندلی وایسا و خودت رو برای دو دور بعدی فرمانروای اتاق اعلام کن."
+      }
+    },
+    {
+      "id": "dare-medium-gen-68",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Do an over-the-top dramatic entrance: leave the room and come back in like a celebrity arriving on a red carpet.",
+        "fa": "یه ورودِ پر سر و صدا و نمایشی اجرا کن: از اتاق برو بیرون و مثل یه سلبریتی که داره رو فرش قرمز میاد برگرد تو."
+      }
+    },
+    {
+      "id": "dare-medium-gen-69",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Pretend you're a tour guide and give the group a 20-second guided tour of the room.",
+        "fa": "وانمود کن یه راهنمای تور هستی و یه تورِ راهنماشده‌ی ۲۰ ثانیه‌ای از اتاق به جمع بده."
+      }
+    },
+    {
+      "id": "dare-medium-gen-70",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Strike three different superhero poses and let the group guess which hero you are.",
+        "fa": "سه ژست مختلف ابرقهرمانی بگیر و بذار جمع حدس بزنن کدوم قهرمانی."
+      }
+    },
+    {
+      "id": "dare-medium-gen-71",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Give a passionate toast to the group, raising an imaginary glass and all.",
+        "fa": "یه تستِ پرشور برای جمع بگو، همراه با بالا بردن یه لیوان خیالی و همه‌چی."
+      }
+    },
+    {
+      "id": "dare-medium-gen-72",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Walk a confident runway strut across the room twice, posing at each end.",
+        "fa": "دو بار با اعتماد به نفس مثل مدلینگ تو اتاق راه برو و سر هر سمت یه ژست بگیر."
+      }
+    },
+    {
+      "id": "dare-medium-gen-73",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Loudly announce your own arrival in the third person every time you move for the next minute.",
+        "fa": "تا یه دقیقه‌ی بعد، هر بار که تکون می‌خوری، با صدای بلند و سوم‌شخص ورودت رو اعلام کن."
+      }
+    },
+    {
+      "id": "dare-medium-gen-74",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Pick a person and dramatically reenact how you two first met (or imagine how you did).",
+        "fa": "یه نفر رو انتخاب کن و به شکل نمایشی بازسازی کن که شما دوتا چطوری اولین بار همدیگه رو دیدین (یا تصور کن چطوری دیدین)."
+      }
+    },
+    {
+      "id": "dare-medium-gen-75",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Stand up and lead the group in a 15-second group cheer of your own invention.",
+        "fa": "بلند شو و جمع رو تو یه شعارِ گروهیِ ۱۵ ثانیه‌ایِ ساخته‌ی خودت رهبری کن."
+      }
+    },
+    {
+      "id": "dare-medium-gen-76",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Do your best impression of someone in the room until they figure out who it is.",
+        "fa": "بهترین تقلیدت رو از یکی از افراد اتاق اجرا کن تا وقتی که بفهمن کیه."
+      }
+    },
+    {
+      "id": "dare-medium-gen-77",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Confidently introduce yourself to the group with a made-up impressive fake job title.",
+        "fa": "با اعتماد به نفس خودت رو با یه عنوان شغلیِ جعلی و خفنِ ساختگی به جمع معرفی کن."
+      }
+    },
+    {
+      "id": "dare-medium-gen-78",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Give a dramatic acceptance speech as if you just won an award, thanking three people in the room.",
+        "fa": "یه سخنرانیِ پذیرشِ پرهیجان بگو انگار همین الان یه جایزه بردی و از سه نفر تو اتاق تشکر کن."
+      }
+    },
+    {
+      "id": "dare-medium-gen-79",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Start a slow dance with an invisible partner and twirl them around the room.",
+        "fa": "یه رقصِ آروم با یه پارتنرِ نامرئی شروع کن و دور اتاق بچرخونش."
+      }
+    },
+    {
+      "id": "dare-medium-gen-80",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Loudly narrate the actions of the person to your right for 30 seconds like a sports commentator.",
+        "fa": "به مدت ۳۰ ثانیه، مثل یه گزارشگر ورزشی، کارهای نفرِ سمت راستت رو با صدای بلند گزارش کن."
+      }
+    },
+    {
+      "id": "dare-medium-gen-81",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Pick someone and serenade them with a few lines of any song, looking right at them.",
+        "fa": "یه نفر رو انتخاب کن و در حالی که مستقیم نگاهش می‌کنی، چند خط از هر آهنگی رو براش بخون."
+      }
+    },
+    {
+      "id": "dare-medium-gen-82",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Strut into the middle of the room and demand the group's applause until you get it.",
+        "fa": "با ژست بیا وسط اتاق و از جمع تشویق بخواه تا وقتی که تشویقت کنن."
+      }
+    },
+    {
+      "id": "dare-medium-gen-83",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Pretend the floor is lava and dramatically rescue one person from across the room.",
+        "fa": "وانمود کن کف اتاق گدازه‌ست و به شکل نمایشی یه نفر رو از اون سر اتاق نجات بده."
+      }
+    },
+    {
+      "id": "dare-medium-gen-84",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Stand up and confidently model an outfit you're wearing as if presenting it on a shopping channel.",
+        "fa": "بلند شو و با اعتماد به نفس لباسی که پوشیدی رو طوری معرفی کن انگار داری تو یه شبکه‌ی فروش عرضه‌ش می‌کنی."
+      }
+    },
+    {
+      "id": "dare-medium-gen-85",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Give the person across from you three sincere-sounding life tips in a wise-elder voice.",
+        "fa": "با یه صدای پیرِ خردمند، سه تا توصیه‌ی زندگیِ به‌ظاهر صادقانه به نفرِ روبه‌روت بده."
+      }
+    },
+    {
+      "id": "dare-medium-gen-86",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Do a confident victory lap around the room with both arms raised like you just scored.",
+        "fa": "یه دورِ پیروزیِ پر اعتماد به نفس دور اتاق بزن، با هر دو دست بالا، انگار همین الان گل زدی."
+      }
+    },
+    {
+      "id": "dare-medium-gen-87",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Loudly start a chant of your own name and try to get the group to join in.",
+        "fa": "با صدای بلند یه شعار با اسم خودت شروع کن و سعی کن جمع رو هم باهات همراه کنی."
+      }
+    },
+    {
+      "id": "dare-medium-gen-88",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Pretend to interview the person on your left as a famous talk-show host for 30 seconds.",
+        "fa": "به مدت ۳۰ ثانیه، مثل یه مجریِ معروفِ تاک‌شو، با نفرِ سمت چپت مصاحبه کن."
+      }
+    },
+    {
+      "id": "dare-medium-gen-89",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Bow theatrically to every person in the room one by one as if greeting royalty.",
+        "fa": "یکی‌یکی به هر کسی تو اتاق، انگار داری به یه عضو خاندان سلطنتی سلام می‌کنی، با ژستِ نمایشی تعظیم کن."
+      }
+    },
+    {
+      "id": "dare-medium-gen-90",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Strike a power pose and hold it for 20 seconds while staring confidently at the group.",
+        "fa": "یه ژستِ قدرتمند بگیر و ۲۰ ثانیه نگهش دار، در حالی که با اعتماد به نفس به جمع زل زدی."
+      }
+    },
+    {
+      "id": "dare-medium-gen-91",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Walk up to someone and confidently tell them why they'd make a great superhero sidekick.",
+        "fa": "برو سراغ یه نفر و با اعتماد به نفس بهش بگو چرا یه دستیارِ ابرقهرمانیِ عالی می‌شه."
+      }
+    },
+    {
+      "id": "dare-medium-gen-92",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Announce a dramatic countdown and then strike your most epic dance freeze on zero.",
+        "fa": "یه شمارش معکوسِ پرهیجان اعلام کن و سر صفر، حماسی‌ترین ژستِ ثابتِ رقصت رو بگیر."
+      }
+    },
+    {
+      "id": "dare-medium-gen-93",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Give a confident TED-talk-style 30-second pitch on why your favorite snack is the best.",
+        "fa": "یه پیچِ ۳۰ ثانیه‌ایِ پر اعتماد به نفس به سبک تِد بده درباره‌ی اینکه چرا میان‌وعده‌ی موردعلاقه‌ت بهترینه."
+      }
+    },
+    {
+      "id": "dare-medium-gen-94",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Pick two people and dramatically declare them the new best-dressed duo of the night.",
+        "fa": "دو نفر رو انتخاب کن و به شکل نمایشی اعلام کن که اونا دوتاییِ خوش‌پوشِ جدیدِ امشب‌ان."
+      }
+    },
+    {
+      "id": "dare-medium-gen-95",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Stand up and confidently demonstrate three different ways to wave hello to a crowd.",
+        "fa": "بلند شو و با اعتماد به نفس سه روش مختلف برای دست تکون دادن و سلام به جمعیت رو نشون بده."
+      }
+    },
+    {
+      "id": "dare-medium-gen-96",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Talk in a baby voice for the next two rounds, no matter what you say.",
+        "fa": "تا دو دور بعدی، هرچی می‌گی با لحن بچگانه بگو، فرقی نمی‌کنه چی باشه."
+      }
+    },
+    {
+      "id": "dare-medium-gen-97",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Pretend to be a chicken and cluck your way around the room once.",
+        "fa": "ادای مرغ رو دربیار و یه دور قدقد‌کنان دور اتاق راه برو."
+      }
+    },
+    {
+      "id": "dare-medium-gen-98",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Let someone draw a mustache on your face with whatever's handy.",
+        "fa": "بذار یکی با هرچی دم دستشه روی صورتت سبیل بکشه."
+      }
+    },
+    {
+      "id": "dare-medium-gen-99",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Do an over-the-top dramatic slow-motion fall onto the floor.",
+        "fa": "یه افتادن آهسته و خیلی نمایشی روی زمین اجرا کن."
+      }
+    },
+    {
+      "id": "dare-medium-gen-100",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Sing 'Happy Birthday' to a piece of furniture like you really mean it.",
+        "fa": "برای یه تیکه از وسایل خونه با تمام احساس آهنگ تولدت مبارک رو بخون."
+      }
+    },
+    {
+      "id": "dare-medium-gen-101",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Do your most embarrassing dance move and freeze in it for ten seconds.",
+        "fa": "خجالت‌آورترین حرکت رقصت رو انجام بده و ده ثانیه توش بی‌حرکت بمون."
+      }
+    },
+    {
+      "id": "dare-medium-gen-102",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Pretend to be stuck in an invisible box and panic to get out.",
+        "fa": "ادای کسی رو دربیار که توی یه جعبه نامرئی گیر افتاده و با وحشت سعی کن بیرون بیای."
+      }
+    },
+    {
+      "id": "dare-medium-gen-103",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Loudly announce everything you do for the next minute like a sports commentator.",
+        "fa": "تا یک دقیقه، هر کاری می‌کنی رو با صدای بلند مثل گزارشگر ورزشی توضیح بده."
+      }
+    },
+    {
+      "id": "dare-medium-gen-104",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Give a passionate speech to thank an imaginary award audience.",
+        "fa": "یه سخنرانی پرشور برای تشکر از یه جمعیت خیالی توی مراسم جایزه اجرا کن."
+      }
+    },
+    {
+      "id": "dare-medium-gen-105",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Hop on one foot around the room while patting your head.",
+        "fa": "در حالی که روی سرت ضربه می‌زنی، لی‌لی‌کنان دور اتاق بپر."
+      }
+    },
+    {
+      "id": "dare-medium-gen-106",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Pretend to cry dramatically over a spilled imaginary drink.",
+        "fa": "برای یه نوشیدنی خیالی که ریخته، با آب‌وتاب ادای گریه دربیار."
+      }
+    },
+    {
+      "id": "dare-medium-gen-107",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Make the silliest face you can and hold it while everyone counts to fifteen.",
+        "fa": "مسخره‌ترین قیافه‌ای که می‌تونی رو بگیر و تا وقتی همه تا پونزده می‌شمرن نگهش دار."
+      }
+    },
+    {
+      "id": "dare-medium-gen-108",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Imitate a baby learning to walk across the whole room.",
+        "fa": "ادای یه بچه که داره راه‌رفتن یاد می‌گیره رو در طول کل اتاق دربیار."
+      }
+    },
+    {
+      "id": "dare-medium-gen-109",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Pretend your hand is a phone and have a loud awkward conversation.",
+        "fa": "وانمود کن دستت تلفنه و یه مکالمه‌ی بلند و معذب‌کننده انجام بده."
+      }
+    },
+    {
+      "id": "dare-medium-gen-110",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Do a dramatic runway pose every time someone says your name for two rounds.",
+        "fa": "تا دو دور، هر بار کسی اسمت رو گفت یه ژست نمایشی مدلینگ بگیر."
+      }
+    },
+    {
+      "id": "dare-medium-gen-111",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Bark like a dog every time you want to say 'yes' for the next three turns.",
+        "fa": "تا سه نوبت بعدی، هر وقت خواستی بگی «بله» مثل سگ پارس کن."
+      }
+    },
+    {
+      "id": "dare-medium-gen-112",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Pretend to be a melting ice cream cone, slowly sliding to the floor.",
+        "fa": "ادای یه بستنی قیفی که داره آب می‌شه رو دربیار و آروم تا روی زمین سُر بخور."
+      }
+    },
+    {
+      "id": "dare-medium-gen-113",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Do an exaggerated yawn-and-stretch and accidentally 'fall asleep' standing up.",
+        "fa": "یه خمیازه و کش‌وقوس اغراق‌آمیز بکش و اتفاقی همون‌جور ایستاده «خوابت ببره»."
+      }
+    },
+    {
+      "id": "dare-medium-gen-114",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Walk like you're on the moon in zero gravity for thirty seconds.",
+        "fa": "تا سی ثانیه طوری راه برو انگار روی ماه و توی بی‌وزنی هستی."
+      }
+    },
+    {
+      "id": "dare-medium-gen-115",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Pretend to be a robot running out of battery in the middle of the room.",
+        "fa": "وسط اتاق ادای یه ربات که باتریش داره تموم می‌شه رو دربیار."
+      }
+    },
+    {
+      "id": "dare-medium-gen-116",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Loudly slurp an imaginary bowl of noodles with full sound effects.",
+        "fa": "یه کاسه نودل خیالی رو با صدای بلند و افکت صوتی کامل هورت بکش."
+      }
+    },
+    {
+      "id": "dare-medium-gen-117",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Strike a superhero landing pose and announce your made-up hero name.",
+        "fa": "ژست فرود یه ابرقهرمان رو بگیر و اسم قهرمانی ساختگی‌ات رو اعلام کن."
+      }
+    },
+    {
+      "id": "dare-medium-gen-118",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Pretend to trip over nothing and recover with the most dramatic flair.",
+        "fa": "وانمود کن سکندری خوردی بدون اینکه چیزی باشه، و با بیشترین آب‌وتاب خودت رو جمع‌وجور کن."
+      }
+    },
+    {
+      "id": "dare-medium-gen-119",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Do your best impression of a snobby fashion model who hates everyone.",
+        "fa": "بهترین ادای یه مدل خودشیفته که از همه بدش میاد رو اجرا کن."
+      }
+    },
+    {
+      "id": "dare-medium-gen-120",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Give an awkward high-five attempt and miss it on purpose three times.",
+        "fa": "عمداً سه بار توی زدن یه قدش معذب‌کننده دستت رو خطا بزن."
+      }
+    },
+    {
+      "id": "dare-medium-gen-121",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Pretend to be a balloon slowly losing air, making the squeaky sound.",
+        "fa": "ادای یه بادکنک که آروم بادش خالی می‌شه رو با همون صدای جیغ‌مانند دربیار."
+      }
+    },
+    {
+      "id": "dare-medium-gen-122",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "March around the room like a wind-up toy soldier until your next turn.",
+        "fa": "تا نوبت بعدیت مثل یه سرباز اسباب‌بازی کوکی دور اتاق رژه برو."
+      }
+    },
+    {
+      "id": "dare-medium-gen-123",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Pretend to take a selfie with everyone and narrate your captions out loud.",
+        "fa": "وانمود کن داری با همه سلفی می‌گیری و کپشن‌هات رو با صدای بلند بگو."
+      }
+    },
+    {
+      "id": "dare-medium-gen-124",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Do a cheesy game-show host introduction for the person on your left.",
+        "fa": "برای نفر سمت چپت یه معرفی مجری‌مسخره‌ی برنامه‌ی مسابقه‌ای اجرا کن."
+      }
+    },
+    {
+      "id": "dare-medium-gen-125",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Pretend a sudden strong wind is pushing you across the room.",
+        "fa": "وانمود کن یه باد شدید ناگهانی داره تو رو در طول اتاق هل می‌ده."
+      }
+    },
+    {
+      "id": "dare-medium-gen-126",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Laugh like a cartoon villain for a full fifteen seconds.",
+        "fa": "یه پونزده ثانیه‌ی کامل مثل شخصیت شرور کارتونی قهقهه بزن."
+      }
+    },
+    {
+      "id": "dare-medium-gen-127",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Pretend to be a fashion mannequin and freeze every time someone looks at you.",
+        "fa": "ادای یه مانکن لباس‌فروشی رو دربیار و هر بار کسی نگاهت کرد بی‌حرکت بمون."
+      }
+    },
+    {
+      "id": "dare-medium-gen-128",
+      "kind": "dare",
+      "intensity": "medium",
+      "text": {
+        "en": "Do an exaggerated tiptoe sneak across the room like a cartoon thief.",
+        "fa": "مثل یه دزد کارتونی، با نوک پا و خیلی اغراق‌آمیز یواشکی از این سر اتاق به اون سر برو."
+      }
+    },
+    {
+      "id": "dare-mild-gen-129",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Pretend you're a robot for the next 30 seconds and talk in a robot voice.",
+        "fa": "تا ۳۰ ثانیه‌ی بعد ادای ربات رو دربیار و با صدای ربات حرف بزن."
+      }
+    },
+    {
+      "id": "dare-mild-gen-130",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Do your best impression of a sneezing cat.",
+        "fa": "بهترین ادای یک گربه‌ی عطسه‌کننده رو دربیار."
+      }
+    },
+    {
+      "id": "dare-mild-gen-131",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Wear your socks on your hands until your next turn.",
+        "fa": "تا نوبت بعدیت جوراب‌هات رو دستت کن."
+      }
+    },
+    {
+      "id": "dare-mild-gen-132",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Talk in rhymes for the next minute, no matter what.",
+        "fa": "تا یک دقیقه‌ی بعد هرجور شده فقط با قافیه حرف بزن."
+      }
+    },
+    {
+      "id": "dare-mild-gen-133",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Pretend to swim across the room like you're doing the breaststroke.",
+        "fa": "جوری که انگار شنای قورباغه می‌کنی، کف اتاق رو شنا کن و رد شو."
+      }
+    },
+    {
+      "id": "dare-mild-gen-134",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Give a dramatic acceptance speech for an award you didn't win.",
+        "fa": "یک سخنرانی دراماتیک برای جایزه‌ای که نبردی اجرا کن."
+      }
+    },
+    {
+      "id": "dare-mild-gen-135",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Balance a small object on your head and walk in a circle.",
+        "fa": "یک شیء کوچک روی سرت نگه دار و یک دور بچرخ."
+      }
+    },
+    {
+      "id": "dare-mild-gen-136",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Do ten jumping jacks while singing the alphabet.",
+        "fa": "ده تا پروانه بزن و هم‌زمان حروف الفبا رو بخون."
+      }
+    },
+    {
+      "id": "dare-mild-gen-137",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Imitate three different animals and let everyone guess them.",
+        "fa": "ادای سه حیوون مختلف رو دربیار و بذار بقیه حدس بزنن."
+      }
+    },
+    {
+      "id": "dare-mild-gen-138",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Pretend you're a news anchor reporting the weather very seriously.",
+        "fa": "ادای مجری اخبار رو دربیار و خیلی جدی وضع هوا رو گزارش بده."
+      }
+    },
+    {
+      "id": "dare-mild-gen-139",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Walk like a penguin to the other side of the room and back.",
+        "fa": "مثل پنگوئن تا اون طرف اتاق راه برو و برگرد."
+      }
+    },
+    {
+      "id": "dare-mild-gen-140",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Pretend to be a ghost and float around the room making spooky sounds.",
+        "fa": "ادای روح رو دربیار و با صداهای ترسناک دور اتاق شناور شو."
+      }
+    },
+    {
+      "id": "dare-mild-gen-141",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Do your best slow-motion victory celebration.",
+        "fa": "بهترین جشن پیروزی‌ت رو به‌صورت اسلوموشن اجرا کن."
+      }
+    },
+    {
+      "id": "dare-mild-gen-142",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Act out brushing your teeth in the most dramatic way possible.",
+        "fa": "مسواک زدنت رو به دراماتیک‌ترین شکل ممکن بازی کن."
+      }
+    },
+    {
+      "id": "dare-mild-gen-143",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Pretend to be a tiny baby learning to walk for 20 seconds.",
+        "fa": "تا ۲۰ ثانیه ادای یک بچه‌ی کوچولو رو دربیار که داره راه‌رفتن یاد می‌گیره."
+      }
+    },
+    {
+      "id": "dare-mild-gen-144",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Do a dramatic fake faint onto the nearest soft surface.",
+        "fa": "یک غش کردن الکی و دراماتیک روی نزدیک‌ترین سطح نرم اجرا کن."
+      }
+    },
+    {
+      "id": "dare-mild-gen-145",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Make the silliest face you can and hold it for ten seconds.",
+        "fa": "مسخره‌ترین قیافه‌ای که می‌تونی بگیر و ده ثانیه نگهش دار."
+      }
+    },
+    {
+      "id": "dare-mild-gen-146",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Pretend you're stuck in an invisible box like a mime.",
+        "fa": "مثل پانتومیم‌بازها فرض کن توی یک جعبه‌ی نامرئی گیر افتادی."
+      }
+    },
+    {
+      "id": "dare-mild-gen-147",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Hop on one foot while patting your head and rubbing your belly.",
+        "fa": "روی یک پا لی‌لی کن و هم‌زمان سرت رو نوازش کن و شکمت رو بمال."
+      }
+    },
+    {
+      "id": "dare-mild-gen-148",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Give an over-the-top dramatic reading of the nearest food label.",
+        "fa": "برچسب نزدیک‌ترین خوراکی رو با لحنی خیلی دراماتیک و اغراق‌آمیز بخون."
+      }
+    },
+    {
+      "id": "dare-mild-gen-149",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Pretend to be a tour guide and describe the room to everyone.",
+        "fa": "ادای یک راهنمای تور رو دربیار و اتاق رو برای همه توصیف کن."
+      }
+    },
+    {
+      "id": "dare-mild-gen-150",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Do your best impression of a chicken trying to fly.",
+        "fa": "بهترین ادای یک مرغ که داره سعی می‌کنه پرواز کنه رو دربیار."
+      }
+    },
+    {
+      "id": "dare-mild-gen-151",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Walk across the room as if you're walking against a strong wind.",
+        "fa": "جوری از اتاق رد شو که انگار خلاف یک باد شدید راه می‌ری."
+      }
+    },
+    {
+      "id": "dare-mild-gen-152",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Pretend to be a wind-up toy that slowly runs out of battery.",
+        "fa": "ادای یک اسباب‌بازی کوکی رو دربیار که آروم آروم باطریش تموم می‌شه."
+      }
+    },
+    {
+      "id": "dare-mild-gen-153",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Do an exaggerated dramatic yawn and stretch like you just woke up.",
+        "fa": "یک خمیازه و کش‌وقوس دراماتیک و اغراق‌آمیز بکش، انگار تازه بیدار شدی."
+      }
+    },
+    {
+      "id": "dare-mild-gen-154",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Pretend to host a cooking show using whatever is in front of you.",
+        "fa": "با هر چیزی که جلوته ادای مجری یک برنامه‌ی آشپزی رو دربیار."
+      }
+    },
+    {
+      "id": "dare-mild-gen-155",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "March around the room like a serious toy soldier.",
+        "fa": "مثل یک سرباز اسباب‌بازی جدی دور اتاق رژه برو."
+      }
+    },
+    {
+      "id": "dare-mild-gen-156",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Pretend you're a fish out of water flopping on the floor.",
+        "fa": "ادای یک ماهی بیرون از آب رو دربیار که روی زمین وول می‌خوره."
+      }
+    },
+    {
+      "id": "dare-mild-gen-157",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Do your best dramatic slow clap for the person to your right.",
+        "fa": "یک تشویق آروم و دراماتیک برای نفر سمت راستت اجرا کن."
+      }
+    },
+    {
+      "id": "dare-mild-gen-158",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Pretend to be a superhero striking three different power poses.",
+        "fa": "ادای یک ابرقهرمان رو دربیار و سه ژست قدرتی مختلف بگیر."
+      }
+    },
+    {
+      "id": "dare-mild-gen-159",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Talk like a pirate until it's your turn again.",
+        "fa": "تا نوبت بعدیت مثل دزدهای دریایی حرف بزن."
+      }
+    },
+    {
+      "id": "dare-mild-gen-160",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Do an interpretive dance about waking up on a Monday morning.",
+        "fa": "یک رقص تفسیری درباره‌ی بیدار شدن صبح دوشنبه اجرا کن."
+      }
+    },
+    {
+      "id": "dare-mild-gen-161",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Pretend you're a sportscaster narrating someone eating a snack.",
+        "fa": "ادای یک گزارشگر ورزشی رو دربیار و خوردن یک خوراکی توسط یکی رو گزارش کن."
+      }
+    },
+    {
+      "id": "dare-mild-gen-162",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Pretend to brush your teeth in dramatic slow motion for 15 seconds.",
+        "fa": "به مدت ۱۵ ثانیه با حالت اسلوموشن نمایشی ادای مسواک‌زدن رو دربیار."
+      }
+    },
+    {
+      "id": "dare-mild-gen-163",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Tie your shoelaces using only one hand.",
+        "fa": "بند کفشت رو فقط با یک دست ببند."
+      }
+    },
+    {
+      "id": "dare-mild-gen-164",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Act out making your morning coffee or tea without any words, only mime.",
+        "fa": "بدون هیچ حرفی و فقط با پانتومیم، ادای درست‌کردن چای یا قهوهٔ صبحت رو دربیار."
+      }
+    },
+    {
+      "id": "dare-mild-gen-165",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Fold an imaginary load of laundry like it's the most exciting task ever.",
+        "fa": "یه دسته لباس خیالی رو طوری تا کن انگار هیجان‌انگیزترین کار دنیاست."
+      }
+    },
+    {
+      "id": "dare-mild-gen-166",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Show everyone how you look when your phone alarm goes off in the morning.",
+        "fa": "نشون بده وقتی صبح زنگ آلارم گوشیت می‌خوره چه شکلی می‌شی."
+      }
+    },
+    {
+      "id": "dare-mild-gen-167",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Walk across the room as if you're carrying a tray full of full glasses.",
+        "fa": "طوری از این سر اتاق به اون سر برو انگار یه سینی پر از لیوان‌های پر دستته."
+      }
+    },
+    {
+      "id": "dare-mild-gen-168",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Demonstrate three different ways people knock on a door.",
+        "fa": "سه مدل مختلف در زدن آدم‌ها رو اجرا کن."
+      }
+    },
+    {
+      "id": "dare-mild-gen-169",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Pretend you're stuck in traffic and getting more annoyed by the second.",
+        "fa": "وانمود کن تو ترافیک گیر کردی و هر ثانیه عصبانی‌تر می‌شی."
+      }
+    },
+    {
+      "id": "dare-mild-gen-170",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Act out searching every pocket for your keys that you can't find.",
+        "fa": "ادای گشتن همهٔ جیب‌هات دنبال کلیدی که پیداش نمی‌کنی رو دربیار."
+      }
+    },
+    {
+      "id": "dare-mild-gen-171",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Mime washing a huge pile of dishes for 15 seconds.",
+        "fa": "به مدت ۱۵ ثانیه با پانتومیم ادای شستن یه کوه ظرف رو دربیار."
+      }
+    },
+    {
+      "id": "dare-mild-gen-172",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Show how you walk when you're sneaking into the kitchen for a midnight snack.",
+        "fa": "نشون بده وقتی نصف شب یواشکی می‌ری آشپزخونه برای خوراکی چطور راه می‌ری."
+      }
+    },
+    {
+      "id": "dare-mild-gen-173",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Pretend to wait awkwardly for an elevator that never comes.",
+        "fa": "وانمود کن با حالت معذب منتظر آسانسوری هستی که هیچ‌وقت نمیاد."
+      }
+    },
+    {
+      "id": "dare-mild-gen-174",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Act out trying to open a jar with a stubborn lid.",
+        "fa": "ادای باز کردن در یه شیشه که لجبازی می‌کنه رو دربیار."
+      }
+    },
+    {
+      "id": "dare-mild-gen-175",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Show how you react when you step on something with bare feet.",
+        "fa": "نشون بده وقتی پابرهنه روی یه چیزی پا می‌ذاری چه واکنشی نشون می‌دی."
+      }
+    },
+    {
+      "id": "dare-mild-gen-176",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Pretend to text someone while walking and almost bump into things.",
+        "fa": "وانمود کن داری موقع راه‌رفتن به یکی پیام می‌دی و نزدیکه به چیزها بخوری."
+      }
+    },
+    {
+      "id": "dare-mild-gen-177",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Mime putting on a tight pair of socks that won't go on.",
+        "fa": "با پانتومیم ادای پوشیدن یه جفت جوراب تنگ که پاش نمی‌ره رو دربیار."
+      }
+    },
+    {
+      "id": "dare-mild-gen-178",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Act out yawning so big it makes everyone else want to yawn.",
+        "fa": "طوری ادای خمیازهٔ بزرگ رو دربیار که بقیه هم دلشون بخواد خمیازه بکشن."
+      }
+    },
+    {
+      "id": "dare-mild-gen-179",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Show how you carry too many grocery bags at once.",
+        "fa": "نشون بده چطور یه عالمه کیسهٔ خرید رو با هم حمل می‌کنی."
+      }
+    },
+    {
+      "id": "dare-mild-gen-180",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Pretend to fall asleep while sitting up, then jolt awake.",
+        "fa": "وانمود کن نشسته خوابت برده، بعد یهو از خواب بپر."
+      }
+    },
+    {
+      "id": "dare-mild-gen-181",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Act out trying to find the end of a roll of tape.",
+        "fa": "ادای پیدا کردن سر یه رول چسب رو دربیار."
+      }
+    },
+    {
+      "id": "dare-mild-gen-182",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Mime peeling a banana and eating it in the fanciest way possible.",
+        "fa": "با پانتومیم یه موز رو پوست بکن و به شیک‌ترین حالت ممکن بخورش."
+      }
+    },
+    {
+      "id": "dare-mild-gen-183",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Show how you look when you're trying to read something far away without glasses.",
+        "fa": "نشون بده وقتی بدون عینک می‌خوای یه چیز دور رو بخونی چه شکلی می‌شی."
+      }
+    },
+    {
+      "id": "dare-mild-gen-184",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Pretend to be a waiter taking everyone's imaginary order.",
+        "fa": "وانمود کن گارسونی و سفارش خیالی همه رو می‌گیری."
+      }
+    },
+    {
+      "id": "dare-mild-gen-185",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Act out blowing on hot food because you're too hungry to wait.",
+        "fa": "ادای فوت کردن به غذای داغ رو دربیار، چون اون‌قدر گشنته که نمی‌تونی صبر کنی."
+      }
+    },
+    {
+      "id": "dare-mild-gen-186",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Show how you dance when you think no one is watching.",
+        "fa": "نشون بده وقتی فکر می‌کنی کسی نگاهت نمی‌کنه چطور می‌رقصی."
+      }
+    },
+    {
+      "id": "dare-mild-gen-187",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Mime trying to swat an annoying fly that keeps coming back.",
+        "fa": "با پانتومیم ادای زدن یه مگس مزاحم که مدام برمی‌گرده رو دربیار."
+      }
+    },
+    {
+      "id": "dare-mild-gen-188",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Pretend to be stuck behind a slow walker on a narrow path.",
+        "fa": "وانمود کن تو یه مسیر باریک پشت یه آدم آروم‌رو گیر کردی."
+      }
+    },
+    {
+      "id": "dare-mild-gen-189",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Act out trying to wake up and look alert during a boring meeting.",
+        "fa": "ادای بیدار موندن و سرحال نشون دادن خودت تو یه جلسهٔ خسته‌کننده رو دربیار."
+      }
+    },
+    {
+      "id": "dare-mild-gen-190",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Show how you reach for the last cookie without anyone noticing.",
+        "fa": "نشون بده چطور بدون اینکه کسی بفهمه دستت رو به سمت آخرین شیرینی می‌بری."
+      }
+    },
+    {
+      "id": "dare-mild-gen-191",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Mime brushing your hair and getting the brush stuck in a knot.",
+        "fa": "با پانتومیم ادای شونه‌کردن موهات رو دربیار و بذار شونه تو یه گره گیر کنه."
+      }
+    },
+    {
+      "id": "dare-mild-gen-192",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Pretend to be a phone that's constantly buzzing with notifications.",
+        "fa": "وانمود کن یه گوشی هستی که مدام با نوتیفیکیشن می‌لرزه."
+      }
+    },
+    {
+      "id": "dare-mild-gen-193",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Act out trying to fold a fitted bed sheet and giving up.",
+        "fa": "ادای تا کردن یه ملحفهٔ کش‌دار و بعد جا زدن رو دربیار."
+      }
+    },
+    {
+      "id": "dare-mild-gen-194",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Show how you tip-toe past a sleeping person so you don't wake them.",
+        "fa": "نشون بده چطور پاورچین از کنار یه آدم خوابیده رد می‌شی تا بیدارش نکنی."
+      }
+    },
+    {
+      "id": "dare-mild-gen-195",
+      "kind": "dare",
+      "intensity": "mild",
+      "text": {
+        "en": "Mime carefully balancing a stack of books that's about to topple.",
+        "fa": "با پانتومیم ادای نگه‌داشتن یه دستهٔ کتاب رو دربیار که داره می‌افته."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-196",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Whisper the cheesiest pickup line you know into the ear of the player on your right.",
+        "fa": "بدترین و لوس‌ترین جمله‌ی مخ‌زنی که بلدی رو در گوش نفر سمت راستت زمزمه کن."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-197",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Bite your lip and give your most seductive look to someone of the group's choosing.",
+        "fa": "لبت رو گاز بگیر و اغواکننده‌ترین نگاهت رو به کسی که گروه انتخاب می‌کنه بنداز."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-198",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Slowly take off one sock like it's the most scandalous striptease ever performed.",
+        "fa": "یه لنگه جورابت رو آروم در بیار، انگار داری اغواکننده‌ترین رقص لختی تاریخ رو اجرا می‌کنی."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-199",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Do a slow, sultry hair flip and hold a smoldering gaze for five full seconds.",
+        "fa": "موهات رو آروم و دلبرانه پشت گوشت بزن و پنج ثانیه‌ی تمام با نگاه پرحرارت خیره بمون."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-200",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Crawl across the floor toward the person to your left in your most flirtatious way.",
+        "fa": "با اغواگرانه‌ترین حالت ممکن روی زمین به سمت نفر سمت چپت بخز."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-201",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Give a sensual, slow-motion shoulder roll like you're in a perfume commercial.",
+        "fa": "یه چرخش آروم و حسی شونه اجرا کن، انگار توی یه تبلیغ عطر بازی می‌کنی."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-202",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Trace a finger slowly along your own jawline while maintaining eye contact with the group.",
+        "fa": "در حالی که با گروه چشم تو چشمی، انگشتت رو آروم روی خط فکت بکش."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-203",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Do your most dramatic 'come hither' finger curl at the player across from you.",
+        "fa": "دراماتیک‌ترین اشاره‌ی «بیا اینجا» رو با انگشتت به نفر روبه‌رو بزن."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-204",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Blow a slow, exaggerated kiss to every single person in the room one by one.",
+        "fa": "یکی‌یکی به همه‌ی آدم‌های توی اتاق یه بوس آروم و اغراق‌شده بفرست."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-205",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Sit down and cross your legs as slowly and provocatively as you can.",
+        "fa": "بشین و تا جایی که می‌تونی آروم و تحریک‌آمیز پاهات رو روی هم بنداز."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-206",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Do a slow body roll from your shoulders down to your hips.",
+        "fa": "یه موج آروم با بدنت از شونه‌ها تا باسنت اجرا کن."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-207",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Run your hands through your hair and give a breathy 'oh yeah' like in a music video.",
+        "fa": "دستت رو لای موهات بکش و مثل موزیک‌ویدیوها با صدای نفس‌آلود بگو «اوه آره»."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-208",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Stand up and do your most confident, hip-swaying runway walk to the door and back.",
+        "fa": "بلند شو و با پرنخوت‌ترین راه‌رفتنت همراه با چرخش باسن تا در برو و برگرد."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-209",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Pretend to slowly unzip an invisible jacket while staring sultrily at the group.",
+        "fa": "در حالی که با نگاه اغواگر به گروه خیره شدی، وانمود کن داری زیپ یه ژاکت نامرئی رو آروم پایین می‌کشی."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-210",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Whisper 'is it hot in here, or is it just you?' to the person on your left.",
+        "fa": "در گوش نفر سمت چپت بگو «اینجا گرمه یا فقط تویی که داغی؟»."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-211",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Give the person to your right a slow wink followed by finger guns.",
+        "fa": "به نفر سمت راستت یه چشمک آروم بزن و بعدش با انگشت‌ها بهش شلیک کن."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-212",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Pose like a sultry magazine cover model and hold it until the group stops laughing.",
+        "fa": "مثل مدل‌های اغواگر روی جلد مجله ژست بگیر و تا وقتی خنده‌ی گروه تموم نشده همون‌جوری بمون."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-213",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Do a slow, teasing shoulder shimmy toward the nearest player.",
+        "fa": "یه لرزش آروم و اغواگرانه‌ی شونه به سمت نزدیک‌ترین نفر اجرا کن."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-214",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Dramatically fan yourself and pretend you're overwhelmed by how attractive everyone is.",
+        "fa": "دراماتیک خودت رو باد بزن و وانمود کن از بس همه جذابن داری از حال می‌ری."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-215",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Slide down into your seat dramatically while biting a finger and looking up at the group.",
+        "fa": "در حالی که انگشتت رو گاز می‌گیری و به گروه نگاه می‌کنی، دراماتیک روی صندلیت سر بخور پایین."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-216",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Do your best slow, smoldering over-the-shoulder glance like a movie poster.",
+        "fa": "بهترین نگاه آروم و پرحرارت از روی شونه‌ات رو مثل پوسترهای فیلم اجرا کن."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-217",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Pretend to lean against an invisible wall in your coolest, most flirtatious pose.",
+        "fa": "وانمود کن به یه دیوار نامرئی تکیه دادی و باحال‌ترین و اغواگرانه‌ترین ژستت رو بگیر."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-218",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Lick your finger and pretend to touch the player next to you while making a sizzle sound.",
+        "fa": "انگشتت رو خیس کن و وانمود کن نفر کناریت رو لمس می‌کنی و همزمان صدای جلز و ولز در بیار."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-219",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Do a slow, exaggerated stretch like a cat waking up, complete with a satisfied sigh.",
+        "fa": "یه کش‌وقوس آروم و اغراق‌شده مثل گربه‌ای که از خواب بیدار شده اجرا کن، همراه با یه آه رضایت‌مندانه."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-220",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Give your most flirtatious eyebrow raise to three different people in a row.",
+        "fa": "به سه نفر پشت سر هم اغواگرانه‌ترین بالا انداختن ابروت رو نشون بده."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-221",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Pretend to be a smooth lounge singer and croon one flirty line to the person opposite you.",
+        "fa": "وانمود کن یه خواننده‌ی شیک کافه‌ای هستی و یه جمله‌ی اغواگرانه رو برای نفر روبه‌رو زمزمه‌خوانی کن."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-222",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Do a slow spin and end with a sultry pose pointing at someone of your choice.",
+        "fa": "یه چرخ آروم بزن و در آخر با یه ژست اغواگرانه به کسی که خودت انتخاب می‌کنی اشاره کن."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-223",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Press your hand to your chest and pretend your heart is racing for the person across from you.",
+        "fa": "دستت رو روی قلبت بذار و وانمود کن قلبت برای نفر روبه‌رو داره تند می‌زنه."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-224",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Walk your fingers seductively up your own arm while raising one eyebrow at the group.",
+        "fa": "در حالی که یه ابروت رو برای گروه بالا می‌بری، انگشت‌هات رو اغواگرانه روی بازوت قدم‌رو ببر بالا."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-225",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Do your most dramatic slow-motion hair toss while saying 'you can't handle this'.",
+        "fa": "دراماتیک‌ترین پرت‌کردن آروم موهات رو اجرا کن و همزمان بگو «تو طاقتش رو نداری»."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-226",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Give the person on your right a slow, lingering high-five and refuse to let go for five seconds.",
+        "fa": "به نفر سمت راستت یه های‌فایو آروم و کش‌دار بده و پنج ثانیه دستت رو ول نکن."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-227",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Strike a sultry pose and ask the group to rate your level of irresistible charm.",
+        "fa": "یه ژست اغواگرانه بگیر و از گروه بخواه به میزان جذابیت مقاومت‌ناپذیرت امتیاز بدن."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-228",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Give someone in the room your most smoldering bedroom eyes for a full 10 seconds without laughing.",
+        "fa": "به یکی توی جمع ۱۰ ثانیه‌ی تمام نگاه خمار و وسوسه‌انگیزت رو بنداز بدون اینکه بخندی."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-229",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Do a slow, dramatic shoulder-strap slide off one shoulder like you're starting a striptease, then stop.",
+        "fa": "بند لباست رو آروم و نمایشی از روی یه شونه‌ت پایین بکش انگار داری استریپ‌تیز شروع می‌کنی، بعد همون‌جا وایسا."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-230",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Pick the person you find hottest here and whisper a flirty compliment in their ear.",
+        "fa": "جذاب‌ترین آدم اینجا رو انتخاب کن و یه تعریف عشوه‌ای آروم تو گوشش زمزمه کن."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-231",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Perform a sultry lap-dance-style hip roll while standing in front of the group for 15 seconds.",
+        "fa": "جلوی جمع وایسا و ۱۵ ثانیه یه حرکت چرخش کمر و باسن اغواگرانه مثل لپ‌دنس اجرا کن."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-232",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Bite your lip and do a slow hair flip while maintaining intense eye contact with someone.",
+        "fa": "لبت رو گاز بگیر و در حالی که با شدت توی چشم یکی زل زدی، آروم موهات رو پشتت بنداز."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-233",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Crawl seductively across the floor toward the person on your left like a cat on the prowl.",
+        "fa": "مثل گربه‌ای که شکار می‌کنه، اغواگرانه روی زمین به سمت نفر سمت چپت بخز."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-234",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Do your sexiest slow-motion walk away from the group, then look back over your shoulder with a wink.",
+        "fa": "سکسی‌ترین راه‌رفتن آهسته‌ت رو از جمع دور شو اجرا کن، بعد از روی شونه برگرد و یه چشمک بزن."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-235",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Trace a slow finger from your collarbone down your arm while holding a teasing stare at the room.",
+        "fa": "در حالی که با نگاهی وسوسه‌انگیز به جمع زل زدی، آروم انگشتت رو از استخوان ترقوه‌ت تا پایین بازوت بکش."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-236",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Give the person across from you a flirtatious slow clap and mouth the words 'so hot'.",
+        "fa": "برای نفر روبه‌روت یه دست‌زدن آروم و عشوه‌ای بزن و بی‌صدا با لب بگو «چقدر داغی»."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-237",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Roll up your sleeves slowly and dramatically like you're about to seduce the whole room.",
+        "fa": "آستین‌هات رو آروم و نمایشی بالا بزن انگار می‌خوای کل جمع رو اغوا کنی."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-238",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Do a slow, teasing button-undo of your top collar button while staring down a chosen player.",
+        "fa": "در حالی که به یه بازیکن انتخابی خیره شدی، آروم و وسوسه‌انگیز دکمه‌ی بالای لباست رو باز کن."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-239",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Whisper 'come here often?' to the player on your right in your most seductive voice.",
+        "fa": "با اغواگرانه‌ترین صدات به نفر سمت راستت زمزمه کن «زیاد اینجا میای؟»"
+      }
+    },
+    {
+      "id": "dare-spicy-gen-240",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Strike three increasingly sultry poses as if a hidden camera is filming a perfume ad.",
+        "fa": "سه ژست هر بار اغواگرانه‌تر بگیر انگار یه دوربین مخفی داره ازت تبلیغ عطر فیلم می‌گیره."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-241",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Slow-dance solo in the middle of the room to imaginary music for 20 seconds, hips leading.",
+        "fa": "وسط اتاق ۲۰ ثانیه با یه آهنگ خیالی تک‌نفره و آروم برقص، کمرت پیش‌قدم باشه."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-242",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Blow a slow, lingering kiss to the person you secretly think is the most attractive here.",
+        "fa": "به کسی که مخفیانه فکر می‌کنی جذاب‌ترینه، یه بوسه‌ی هوایی آروم و کش‌دار بفرست."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-243",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Do a confident catwalk strut to the player of your choice and pose like you own the runway.",
+        "fa": "با اعتماد به نفس مثل مدل‌ها به سمت یه بازیکن دلخواه قدم بزن و ژستی بگیر انگار صاحب رمپی."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-244",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Run your hands slowly through your own hair and let out a dramatic sigh like you're in a music video.",
+        "fa": "آروم دست‌هات رو لای موهات بکش و یه آه نمایشی بکش انگار توی یه موزیک‌ویدیویی."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-245",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Give a slow, flirty over-the-shoulder glance and bite your finger at someone of your choice.",
+        "fa": "به یه نفر دلخواه یه نگاه آروم و عشوه‌ای از روی شونه بنداز و انگشتت رو گاز بگیر."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-246",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Pretend to slowly fan yourself because the room got 'too hot', staring at one player the whole time.",
+        "fa": "وانمود کن چون اتاق «خیلی داغ» شده آروم به خودت باد می‌زنی، و تمام مدت به یه بازیکن زل بزن."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-247",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Do a teasing little shimmy of your shoulders and chest toward the group, then act shy.",
+        "fa": "یه لرزش و تکون عشوه‌ای از شونه‌ها و سینه‌ت به سمت جمع بده، بعد ادای خجالتی‌ها رو در بیار."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-248",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Walk up to the hottest person here, look them up and down slowly, and say 'wow' under your breath.",
+        "fa": "برو پیش جذاب‌ترین آدم اینجا، آروم از بالا تا پایین براندازش کن و زیرلب بگو «واو»."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-249",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Do your most dramatic slow lip-bite-and-wink combo at three different players in a row.",
+        "fa": "پشت سر هم برای سه بازیکن مختلف نمایشی‌ترین ترکیب گازِ آروم لب و چشمک رو اجرا کن."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-250",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Lie back dramatically and do a slow, magazine-cover stretch while everyone watches.",
+        "fa": "در حالی که همه نگاهت می‌کنن، نمایشی به پشت لم بده و آروم مثل عکس روی جلد مجله کش و قوس بیا."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-251",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Slowly drag a chair to the center, sit backwards on it, and give the room your most teasing look.",
+        "fa": "آروم یه صندلی رو ببر وسط، برعکس روش بشین و وسوسه‌انگیزترین نگاهت رو به جمع بنداز."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-252",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Pretend to slow-motion remove an invisible jacket like a seductive striptease, then drop it.",
+        "fa": "وانمود کن آهسته یه کت نامرئی رو مثل استریپ‌تیز اغواگرانه از تنت در میاری، بعد بندازش زمین."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-253",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Give the player of your choice a slow, smoldering 'follow me' head-tilt and finger-curl.",
+        "fa": "به یه بازیکن دلخواه یه اشاره‌ی آروم و خمار «دنبالم بیا» با کج‌کردن سر و خم‌کردن انگشت بده."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-254",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Do a slow body roll from head to hips while holding eye contact with the group.",
+        "fa": "در حالی که با جمع تماس چشمی داری، یه موج آروم بدنی از سر تا کمر اجرا کن."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-255",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Whisper your sultriest 'is it just me, or is it hot in here?' to the whole room.",
+        "fa": "با خمارترین لحنت به کل جمع زمزمه کن «فقط منم یا اینجا یه‌کم داغه؟»"
+      }
+    },
+    {
+      "id": "dare-spicy-gen-256",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Pick someone and do a slow, flirty 'come hither' crook of your finger while smirking.",
+        "fa": "یکی رو انتخاب کن و با لبخند کجی، آروم و عشوه‌ای با انگشتت اشاره‌ی «بیا اینجا» بده."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-257",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Saunter past each player one by one, brushing past playfully and tossing a wink to each.",
+        "fa": "یکی‌یکی از کنار هر بازیکن با ناز رد شو، شیطنت‌آمیز بهشون بخور و به هرکدوم یه چشمک بنداز."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-258",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Strike a dramatic 'paint me like one of your French models' reclining pose for 15 seconds.",
+        "fa": "۱۵ ثانیه یه ژست لم‌داده‌ی نمایشی به سبک «منو مثل یکی از مدل‌های فرانسویت نقاشی کن» بگیر."
+      }
+    },
+    {
+      "id": "dare-spicy-gen-259",
+      "kind": "dare",
+      "intensity": "spicy",
+      "text": {
+        "en": "Do a slow, teasing shoulder shimmy as you sit down, like you're making an entrance at a club.",
+        "fa": "موقع نشستن یه لرزش شونه‌ی آروم و عشوه‌ای بده انگار داری توی یه کلاب ورود باشکوه می‌کنی."
       }
     }
   ]

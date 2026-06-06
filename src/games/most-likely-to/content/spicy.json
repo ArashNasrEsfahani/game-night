@@ -12,723 +12,1715 @@
   "prompts": [
     {
       "id": "mlt-text-the-ex",
-      "intensity": "spicy",
-      "emoji": "📱",
       "text": {
         "en": "Most likely to text their ex at 2am",
         "fa": "به احتمال زیاد ساعت دو نصف‌شب به اکسش پیام می‌ده"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-cry-after-drink",
-      "intensity": "spicy",
-      "emoji": "😭",
       "text": {
         "en": "Most likely to cry after a few drinks",
         "fa": "به احتمال زیاد بعد از چند تا پیک می‌زنه زیر گریه"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-start-the-conga",
-      "intensity": "casual",
-      "emoji": "🪩",
       "text": {
         "en": "Most likely to start a conga line",
         "fa": "به احتمال زیاد وسط جمع آهنگ می‌ذاره همه رو می‌کشه وسط"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-last-to-leave",
-      "intensity": "casual",
-      "emoji": "🌙",
       "text": {
         "en": "Most likely to be the last one to leave the party",
         "fa": "به احتمال زیاد آخرین نفریه که از مهمونی می‌ره"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-fake-emergency",
-      "intensity": "casual",
-      "emoji": "🤥",
       "text": {
         "en": "Most likely to fake an emergency to leave early",
         "fa": "به احتمال زیاد یه بهونه‌ی الکی جور می‌کنه که زودتر بزنه به چاک"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-spill-a-secret",
-      "intensity": "spicy",
-      "emoji": "🤫",
       "text": {
         "en": "Most likely to spill someone else's secret",
         "fa": "به احتمال زیاد راز یکی دیگه رو لو می‌ده"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-slide-into-dms",
-      "intensity": "spicy",
-      "emoji": "💌",
       "text": {
         "en": "Most likely to slide into someone's DMs",
         "fa": "به احتمال زیاد یواشکی به دایرکت یکی پیام می‌ده"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-dance-no-music-2",
-      "intensity": "casual",
-      "emoji": "🕺",
       "text": {
         "en": "Most likely to dance even when there's no music",
         "fa": "به احتمال زیاد بدون آهنگم شروع می‌کنه به رقصیدن"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-pick-a-fight",
-      "intensity": "spicy",
-      "emoji": "🥊",
       "text": {
         "en": "Most likely to pick a fight over nothing",
         "fa": "به احتمال زیاد سر هیچی دعوا راه می‌ندازه"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-end-up-on-stage",
-      "intensity": "casual",
-      "emoji": "🎙️",
       "text": {
         "en": "Most likely to somehow end up on stage",
         "fa": "به احتمال زیاد یه جوری سر از روی صحنه درمیاره"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-third-wheel",
-      "intensity": "casual",
-      "emoji": "🚲",
       "text": {
         "en": "Most likely to be the third wheel",
         "fa": "به احتمال زیاد همیشه می‌شه چرخ سوم یه قرار عاشقونه"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-buy-round-broke",
-      "intensity": "casual",
-      "emoji": "💸",
       "text": {
         "en": "Most likely to buy a round when they're broke",
         "fa": "به احتمال زیاد با اینکه جیبش خالیه حساب همه رو می‌کنه"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-ghost-a-crush",
-      "intensity": "spicy",
-      "emoji": "👻",
       "text": {
         "en": "Most likely to ghost someone they like",
         "fa": "به احتمال زیاد یهو طرف موردعلاقه‌اش رو می‌پیچونه و غیب می‌شه"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-tell-everyone-loves",
-      "intensity": "spicy",
-      "emoji": "❤️‍🔥",
       "text": {
         "en": "Most likely to confess a crush in front of everyone",
         "fa": "به احتمال زیاد جلوی همه می‌گه دلش پیش کیه"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-take-it-too-far",
-      "intensity": "spicy",
-      "emoji": "🔥",
       "text": {
         "en": "Most likely to take a dare way too far",
         "fa": "به احتمال زیاد یه شرط رو خیلی بیشتر از حدش پیش می‌بره"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-wake-neighbors",
-      "intensity": "casual",
-      "emoji": "📢",
       "text": {
         "en": "Most likely to wake up the neighbors",
         "fa": "به احتمال زیاد با سر و صداش همسایه‌ها رو بیدار می‌کنه"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-lost-in-city",
-      "intensity": "casual",
-      "emoji": "🗺️",
       "text": {
         "en": "Most likely to get lost in their own city",
         "fa": "به احتمال زیاد توی شهر خودشون گم می‌شه"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-double-text",
-      "intensity": "spicy",
-      "emoji": "💬",
       "text": {
         "en": "Most likely to double-text and then triple-text",
         "fa": "به احتمال زیاد پشت سر هم پیام می‌ده تا طرف جواب بده"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-instant-bff",
-      "intensity": "casual",
-      "emoji": "🫶",
       "text": {
         "en": "Most likely to become best friends with a stranger in the bathroom",
         "fa": "به احتمال زیاد توی دستشویی مهمونی با یه غریبه رفیق جون‌جونی می‌شه"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-karaoke-wrong-words",
-      "intensity": "casual",
-      "emoji": "🎶",
       "text": {
         "en": "Most likely to belt a song with all the wrong words",
         "fa": "به احتمال زیاد آهنگ رو با کلمات اشتباه با تمام وجود می‌خونه"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-start-rumor",
-      "intensity": "spicy",
-      "emoji": "🗣️",
       "text": {
         "en": "Most likely to start a juicy rumor",
         "fa": "به احتمال زیاد یه شایعه‌ی آب‌دار راه می‌ندازه"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-fall-asleep-party-2",
-      "intensity": "casual",
-      "emoji": "😴",
       "text": {
         "en": "Most likely to fall asleep at the party",
         "fa": "به احتمال زیاد وسط مهمونی خوابش می‌بره"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-lose-bet-2",
-      "intensity": "casual",
-      "emoji": "🎲",
       "text": {
         "en": "Most likely to make a bet they instantly regret",
         "fa": "به احتمال زیاد یه شرطی می‌بنده که فوری پشیمون می‌شه"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-eat-whole-plate",
-      "intensity": "casual",
-      "emoji": "🍕",
       "text": {
         "en": "Most likely to finish everyone's leftovers",
         "fa": "به احتمال زیاد ته‌مونده‌ی غذای همه رو هم می‌خوره"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-dramatic-exit",
-      "intensity": "spicy",
-      "emoji": "🚪",
       "text": {
         "en": "Most likely to storm out dramatically",
         "fa": "به احتمال زیاد با یه قهر نمایشی در می‌ره بیرون"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-flirt-to-skip-line",
-      "intensity": "spicy",
-      "emoji": "😉",
       "text": {
         "en": "Most likely to flirt their way past the line",
         "fa": "به احتمال زیاد با چرب‌زبونی و عشوه خودش رو از صف رد می‌کنه"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-overshare-stranger",
-      "intensity": "spicy",
-      "emoji": "🙃",
       "text": {
         "en": "Most likely to tell their whole life story to a stranger",
         "fa": "به احتمال زیاد کل زندگی‌نامه‌اش رو برای یه غریبه تعریف می‌کنه"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-photo-everything",
-      "intensity": "casual",
-      "emoji": "📸",
       "text": {
         "en": "Most likely to post the whole night on their story",
         "fa": "به احتمال زیاد کل شب رو می‌ذاره توی استوریش"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-talk-way-out",
-      "intensity": "casual",
-      "emoji": "🗯️",
       "text": {
         "en": "Most likely to talk their way out of trouble",
         "fa": "به احتمال زیاد با حرف زدن خودش رو از هر دردسری خلاص می‌کنه"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-regret-tomorrow",
-      "intensity": "spicy",
-      "emoji": "🫣",
       "text": {
         "en": "Most likely to do something they'll regret tomorrow",
         "fa": "به احتمال زیاد یه کاری می‌کنه که فردا حسابی پشیمون می‌شه"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-s-x001",
-      "intensity": "spicy",
-      "emoji": "📱",
       "text": {
         "en": "Most likely to drunk-text their ex at 2am",
         "fa": "بیشترین احتمال داره نصفه‌شب مست به اکسش پیام بده"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-s-x002",
-      "intensity": "spicy",
-      "emoji": "🚓",
       "text": {
         "en": "Most likely to flirt to get out of a speeding ticket",
         "fa": "بیشترین احتمال داره با لاس زدن از جریمه‌ی سرعت در بره"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-s-x003",
-      "intensity": "spicy",
-      "emoji": "✉️",
       "text": {
         "en": "Most likely to slide into a celebrity's DMs",
         "fa": "بیشترین احتمال داره به دایرکت یه سلبریتی پیام بده"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-s-x004",
-      "intensity": "spicy",
-      "emoji": "😍",
       "text": {
         "en": "Most likely to have a secret crush on someone in this room",
         "fa": "بیشترین احتمال داره مخفیانه به یکی تو همین جمع کراش داشته باشه"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-s-x005",
-      "intensity": "spicy",
-      "emoji": "💋",
       "text": {
         "en": "Most likely to kiss a stranger on a dare",
         "fa": "بیشترین احتمال داره سر شرط یه غریبه رو ببوسه"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-s-x006",
-      "intensity": "spicy",
-      "emoji": "😳",
       "text": {
         "en": "Most likely to send a risky text to the wrong person",
         "fa": "بیشترین احتمال داره یه پیام جنجالی رو به آدم اشتباهی بفرسته"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-s-x007",
-      "intensity": "casual",
-      "emoji": "📞",
       "text": {
         "en": "Most likely to fake a phone call to escape a bad date",
         "fa": "بیشترین احتمال داره برای فرار از یه قرار بد ادای تماس تلفنی دربیاره"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-s-x008",
-      "intensity": "spicy",
-      "emoji": "🕵️",
       "text": {
         "en": "Most likely to stalk an ex on social media",
         "fa": "بیشترین احتمال داره اکسش رو تو شبکه‌های اجتماعی تعقیب کنه"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-s-x009",
-      "intensity": "spicy",
-      "emoji": "🏖️",
       "text": {
         "en": "Most likely to start a fling on vacation",
         "fa": "بیشترین احتمال داره تو سفر یه رابطه‌ی زودگذر شروع کنه"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-s-x010",
-      "intensity": "spicy",
-      "emoji": "💁",
       "text": {
         "en": "Most likely to brag about their number of exes",
         "fa": "بیشترین احتمال داره پز تعداد اکس‌هاش رو بده"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-s-x011",
-      "intensity": "spicy",
-      "emoji": "🚪",
       "text": {
         "en": "Most likely to get caught sneaking out after a sleepover",
         "fa": "بیشترین احتمال داره موقع یواشکی بیرون رفتن بعد از شب‌مونی گیر بیفته"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-s-x012",
-      "intensity": "casual",
-      "emoji": "📲",
       "text": {
         "en": "Most likely to swipe right on everyone",
         "fa": "بیشترین احتمال داره روی همه راست سوایپ کنه"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-s-x013",
-      "intensity": "spicy",
-      "emoji": "😏",
       "text": {
         "en": "Most likely to make a move on a friend's crush",
         "fa": "بیشترین احتمال داره روی کراش یه دوستش حرکت بزنه"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-s-x014",
-      "intensity": "spicy",
-      "emoji": "😜",
       "text": {
         "en": "Most likely to be a shameless tease",
         "fa": "بیشترین احتمال داره یه آدم بی‌حیا و دلبر باشه که همش لاس می‌زنه"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-s-x015",
-      "intensity": "casual",
-      "emoji": "🎂",
       "text": {
         "en": "Most likely to lie about their age on a dating app",
         "fa": "بیشترین احتمال داره تو اپ دوست‌یابی سن خودش رو دروغ بگه"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-s-x016",
-      "intensity": "spicy",
-      "emoji": "💃",
       "text": {
         "en": "Most likely to give a wild lap dance at a party",
         "fa": "بیشترین احتمال داره تو مهمونی برای یکی یه رقص داغ و دیوونه‌وار بذاره"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-s-x017",
-      "intensity": "casual",
-      "emoji": "📝",
       "text": {
         "en": "Most likely to keep a list of their crushes",
         "fa": "بیشترین احتمال داره یه لیست از کراش‌هاش نگه داره"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-s-x018",
-      "intensity": "spicy",
-      "emoji": "😉",
       "text": {
         "en": "Most likely to wink at the bartender for a free drink",
         "fa": "بیشترین احتمال داره به بارمن چشمک بزنه که نوشیدنی مجانی بگیره"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-s-x019",
-      "intensity": "spicy",
-      "emoji": "🤳",
       "text": {
         "en": "Most likely to send a flirty selfie",
         "fa": "بیشترین احتمال داره یه سلفی عشوه‌ای بفرسته"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-s-x020",
-      "intensity": "spicy",
-      "emoji": "👯",
       "text": {
         "en": "Most likely to date two people at once",
         "fa": "بیشترین احتمال داره همزمان با دو نفر دوست بشه"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-s-x021",
-      "intensity": "spicy",
-      "emoji": "🍷",
       "text": {
         "en": "Most likely to confess a secret crush after a few drinks",
         "fa": "بیشترین احتمال داره بعد از چند تا نوشیدنی به کراش پنهانش اعتراف کنه"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-s-x022",
-      "intensity": "spicy",
-      "emoji": "👀",
       "text": {
         "en": "Most likely to be caught checking someone out",
         "fa": "بیشترین احتمال داره موقع دید زدن یکی گیر بیفته"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-s-x023",
-      "intensity": "spicy",
-      "emoji": "👻",
       "text": {
         "en": "Most likely to ghost someone after a great date",
         "fa": "بیشترین احتمال داره بعد از یه قرار عالی طرف رو غیب کنه"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-s-x024",
-      "intensity": "spicy",
-      "emoji": "🗣️",
       "text": {
         "en": "Most likely to start a rumor about who's hooking up",
         "fa": "بیشترین احتمال داره شایعه بسازه که کی با کی رابطه داره"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-s-x025",
-      "intensity": "spicy",
-      "emoji": "🕺",
       "text": {
         "en": "Most likely to dance on the table by midnight",
         "fa": "بیشترین احتمال داره تا نصفه‌شب روی میز برقصه"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-s-x026",
-      "intensity": "spicy",
-      "emoji": "🌅",
       "text": {
         "en": "Most likely to text three people good morning",
         "fa": "بیشترین احتمال داره به سه نفر پیام صبح‌بخیر بفرسته"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-s-x027",
-      "intensity": "spicy",
-      "emoji": "🙊",
       "text": {
         "en": "Most likely to pretend they're single when they're not",
         "fa": "بیشترین احتمال داره وانمود کنه مجرده در حالی که نیست"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-s-x028",
-      "intensity": "casual",
-      "emoji": "🧀",
       "text": {
         "en": "Most likely to use a cheesy pickup line and mean it",
         "fa": "بیشترین احتمال داره یه جمله‌ی مخ‌زنی لوس بگه و جدی هم باشه"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-s-x029",
-      "intensity": "casual",
-      "emoji": "🪩",
       "text": {
         "en": "Most likely to be the last one to leave the dance floor",
         "fa": "بیشترین احتمال داره آخرین نفری باشه که پیست رقص رو ترک می‌کنه"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-s-x030",
-      "intensity": "spicy",
-      "emoji": "🌊",
       "text": {
         "en": "Most likely to skinny dip on a dare",
         "fa": "بیشترین احتمال داره سر شرط لخت بپره تو آب"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-s-x031",
-      "intensity": "casual",
-      "emoji": "🤝",
       "text": {
         "en": "Most likely to keep their exes as close friends",
         "fa": "بیشترین احتمال داره اکس‌هاش رو به‌عنوان دوست صمیمی نگه داره"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-s-x032",
-      "intensity": "spicy",
-      "emoji": "😬",
       "text": {
         "en": "Most likely to flirt with their best friend's sibling",
         "fa": "بیشترین احتمال داره با خواهر یا برادر بهترین دوستش لاس بزنه"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-s-x033",
-      "intensity": "spicy",
-      "emoji": "👗",
       "text": {
         "en": "Most likely to wear something scandalous to a wedding",
         "fa": "بیشترین احتمال داره یه لباس جنجالی بپوشه و بره عروسی"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-s-x034",
-      "intensity": "spicy",
-      "emoji": "🫢",
       "text": {
         "en": "Most likely to spill everyone's dating secrets",
         "fa": "بیشترین احتمال داره راز رابطه‌ی همه رو لو بده"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-s-x035",
-      "intensity": "spicy",
-      "emoji": "✍️",
       "text": {
         "en": "Most likely to get a number written on their hand",
         "fa": "بیشترین احتمال داره یکی شماره‌اش رو روی دستش بنویسه"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-s-x036",
-      "intensity": "casual",
-      "emoji": "💫",
       "text": {
         "en": "Most likely to fall for someone way out of their league",
         "fa": "بیشترین احتمال داره عاشق یکی بشه که خیلی ازش سرتره"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-s-x037",
-      "intensity": "spicy",
-      "emoji": "🔒",
       "text": {
         "en": "Most likely to have a secret dating profile",
         "fa": "بیشترین احتمال داره یه پروفایل دوست‌یابی مخفی داشته باشه"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-s-x038",
-      "intensity": "spicy",
-      "emoji": "🍸",
       "text": {
         "en": "Most likely to make eyes at someone across the bar",
         "fa": "بیشترین احتمال داره از اون سر بار با یکی چشم و ابرو بیاد"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-s-x039",
-      "intensity": "spicy",
-      "emoji": "💄",
       "text": {
         "en": "Most likely to kiss and tell",
         "fa": "بیشترین احتمال داره بعد از یه بوسه همه‌جا تعریفش کنه"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-s-x040",
-      "intensity": "spicy",
-      "emoji": "🌙",
       "text": {
         "en": "Most likely to text their crush 'u up?'",
         "fa": "بیشترین احتمال داره به کراشش پیام بده «بیداری؟»"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-s-x041",
-      "intensity": "spicy",
-      "emoji": "🎉",
       "text": {
         "en": "Most likely to crash a party to see their crush",
         "fa": "بیشترین احتمال داره برای دیدن کراشش سرزده بپره تو یه مهمونی"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-s-x042",
-      "intensity": "casual",
-      "emoji": "🗨️",
       "text": {
         "en": "Most likely to flirt in a language no one understands",
         "fa": "بیشترین احتمال داره به زبونی لاس بزنه که هیچکس نمی‌فهمه"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-s-x043",
-      "intensity": "spicy",
-      "emoji": "📸",
       "text": {
         "en": "Most likely to keep flirty texts as screenshots",
         "fa": "بیشترین احتمال داره از پیام‌های عشوه‌ای اسکرین‌شات نگه داره"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-s-x044",
-      "intensity": "casual",
-      "emoji": "🆘",
       "text": {
         "en": "Most likely to be everyone's emergency contact for a crush",
         "fa": "بیشترین احتمال داره طرف مشورت همه برای ماجراهای کراش باشه"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-s-x045",
-      "intensity": "casual",
-      "emoji": "🕶️",
       "text": {
         "en": "Most likely to wear sunglasses indoors to look mysterious",
         "fa": "بیشترین احتمال داره تو خونه عینک آفتابی بزنه که مرموز به نظر بیاد"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-s-x046",
-      "intensity": "spicy",
-      "emoji": "💭",
       "text": {
         "en": "Most likely to brag about a steamy dream",
         "fa": "بیشترین احتمال داره از یه خواب داغ و هیجان‌انگیز تعریف کنه"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-s-x047",
-      "intensity": "casual",
-      "emoji": "📷",
       "text": {
         "en": "Most likely to get caught winking in a group photo",
         "fa": "بیشترین احتمال داره تو عکس دسته‌جمعی موقع چشمک گیر بیفته"
-      }
+      },
+      "intensity": "casual"
     },
     {
       "id": "mlt-s-x048",
-      "intensity": "spicy",
-      "emoji": "🚗",
       "text": {
         "en": "Most likely to leave a party with someone new",
         "fa": "بیشترین احتمال داره مهمونی رو با یه آدم تازه ترک کنه"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-s-x049",
-      "intensity": "spicy",
-      "emoji": "🙈",
       "text": {
         "en": "Most likely to play hard to get and then cave",
         "fa": "بیشترین احتمال داره ادای ناز کردن دربیاره و آخرش کوتاه بیاد"
-      }
+      },
+      "intensity": "spicy"
     },
     {
       "id": "mlt-s-x050",
-      "intensity": "casual",
-      "emoji": "💬",
       "text": {
         "en": "Most likely to start a group chat full of gossip",
         "fa": "بیشترین احتمال داره یه گروه چت پر از شایعه و حرف راه بندازه"
-      }
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-gen-268",
+      "text": {
+        "en": "send a flirty text to the wrong person",
+        "fa": "یه پیام لاسی رو برای آدم اشتباهی بفرسته"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-269",
+      "text": {
+        "en": "steal a kiss on a first date",
+        "fa": "تو قرار اول یه بوس بدزده"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-270",
+      "text": {
+        "en": "slide into a stranger's DMs after one drink",
+        "fa": "بعد یه نوشیدنی بپره تو دایرکت یه غریبه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-271",
+      "text": {
+        "en": "dance on a table at a party",
+        "fa": "رو میز تو مهمونی برقصه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-272",
+      "text": {
+        "en": "strip down for a midnight swim",
+        "fa": "واسه شنای نصف‌شب لخت شه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-273",
+      "text": {
+        "en": "wink at someone across a crowded room",
+        "fa": "تو یه اتاق شلوغ واسه یکی چشمک بزنه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-274",
+      "text": {
+        "en": "make the first move when sparks fly",
+        "fa": "وقتی جرقه می‌خوره خودش پیش‌قدم بشه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-275",
+      "text": {
+        "en": "whisper something scandalous in your ear",
+        "fa": "یه چیز جنجالی تو گوشت پچ‌پچ کنه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-276",
+      "text": {
+        "en": "text an ex at 2 a.m.",
+        "fa": "ساعت دو نصف‌شب به اکسش پیام بده"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-277",
+      "text": {
+        "en": "sneak out for a secret rendezvous",
+        "fa": "یواشکی بزنه بیرون واسه یه قرار مخفی"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-278",
+      "text": {
+        "en": "give a lap dance as a dare",
+        "fa": "به‌خاطر یه شرط برات برقصه رو پات"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-279",
+      "text": {
+        "en": "unbutton one button too many",
+        "fa": "یه دونه دکمه بیشتر از حد باز کنه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-280",
+      "text": {
+        "en": "bite their lip to get someone's attention",
+        "fa": "واسه جلب توجه یکی لبشو گاز بگیره"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-281",
+      "text": {
+        "en": "send a daring selfie to the group chat",
+        "fa": "یه سلفی جسورانه واسه گروه بفرسته"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-282",
+      "text": {
+        "en": "start a game of truth or dare just to flirt",
+        "fa": "بازی جرات یا حقیقت راه بندازه فقط واسه لاس زدن"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-283",
+      "text": {
+        "en": "kiss someone just to win a bet",
+        "fa": "فقط واسه بردن یه شرط یکیو ببوسه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-284",
+      "text": {
+        "en": "go skinny dipping with the whole crew watching",
+        "fa": "جلوی چشم همه لخت بپره تو آب"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-285",
+      "text": {
+        "en": "leave a love bite on someone's neck",
+        "fa": "رو گردن یکی جای بوس بذاره"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-286",
+      "text": {
+        "en": "proposition the bartender for a free drink",
+        "fa": "به متصدی بار پیشنهاد بده واسه یه نوشیدنی مجانی"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-287",
+      "text": {
+        "en": "undress someone with their eyes all night",
+        "fa": "تموم شب با چشماش یکیو لخت کنه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-288",
+      "text": {
+        "en": "make a bold pass at someone way out of their league",
+        "fa": "رو یکی که خیلی بالاتر از حدشه جسورانه دست بذاره"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-289",
+      "text": {
+        "en": "crash a date and steal the spotlight",
+        "fa": "بپره وسط قرار یکی و چراغ توجه رو بدزده"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-290",
+      "text": {
+        "en": "flash a cheeky grin and break all the rules",
+        "fa": "یه لبخند شیطون بزنه و همه قانونا رو زیر پا بذاره"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-291",
+      "text": {
+        "en": "sit on someone's lap uninvited",
+        "fa": "بی‌دعوت رو پای یکی بشینه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-292",
+      "text": {
+        "en": "turn a slow dance way too steamy",
+        "fa": "یه رقص آروم رو خیلی داغ کنه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-293",
+      "text": {
+        "en": "drunk-dial their crush and confess everything",
+        "fa": "مست به کراشش زنگ بزنه و همه‌چیو اعتراف کنه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-294",
+      "text": {
+        "en": "sneak into a hot tub fully clothed then strip",
+        "fa": "با لباس بپره تو جکوزی بعد لخت شه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-295",
+      "text": {
+        "en": "play footsie under the dinner table",
+        "fa": "زیر میز شام با پاش بازی دربیاره"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-296",
+      "text": {
+        "en": "dare someone to make out in the closet",
+        "fa": "یکیو دعوت کنه تو کمد لب بگیرن"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-297",
+      "text": {
+        "en": "send a thirst trap to win a like",
+        "fa": "یه عکس وسوسه‌انگیز بذاره فقط واسه گرفتن لایک"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-298",
+      "text": {
+        "en": "pull someone in for a surprise kiss",
+        "fa": "یکیو ناگهانی بکشه طرف خودش و ببوسه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-299",
+      "text": {
+        "en": "whisper a dare too risky to say out loud",
+        "fa": "یه شرط که بلند گفتنش زیادی خطریه رو پچ‌پچ کنه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-300",
+      "text": {
+        "en": "flirt their way out of a parking ticket",
+        "fa": "با لاس زدن از زیر جریمهٔ پارک در بره"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-301",
+      "text": {
+        "en": "wear something jaw-dropping just to tease",
+        "fa": "یه چیز نفس‌گیر بپوشه فقط واسه اذیت کردن"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-302",
+      "text": {
+        "en": "start a pillow fight that gets out of hand",
+        "fa": "یه بالش‌بازی راه بندازه که از کنترل خارج شه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-303",
+      "text": {
+        "en": "corner their crush under the mistletoe",
+        "fa": "کراششو زیر شاخهٔ بوسه گیر بندازه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-304",
+      "text": {
+        "en": "send a bold voice note they instantly regret",
+        "fa": "یه ویس جسورانه بفرسته که فوری پشیمون شه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-305",
+      "text": {
+        "en": "sneak a hand onto someone's knee",
+        "fa": "یواشکی دستشو رو زانوی یکی بذاره"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-306",
+      "text": {
+        "en": "trade clothes with someone mid-party",
+        "fa": "وسط مهمونی با یکی لباس عوض کنه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-307",
+      "text": {
+        "en": "challenge the room to a striptease contest",
+        "fa": "همه رو به مسابقهٔ لباس‌درآری دعوت کنه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-308",
+      "text": {
+        "en": "blow a kiss to a total stranger",
+        "fa": "واسه یه غریبهٔ کامل بوس بفرسته"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-309",
+      "text": {
+        "en": "turn a dare into a full-on make-out session",
+        "fa": "یه شرط رو به یه جلسهٔ کامل لب‌گرفتن تبدیل کنه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-310",
+      "text": {
+        "en": "text the group chat 'no regrets' at sunrise",
+        "fa": "موقع طلوع آفتاب به گروه بنویسه پشیمون نیستم"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-311",
+      "text": {
+        "en": "steal the show with a saucy karaoke number",
+        "fa": "با یه آهنگ کارائوکهٔ شیطون نمایش رو بدزده"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-312",
+      "text": {
+        "en": "dare the crush to spend seven minutes in heaven",
+        "fa": "کراشو دعوت کنه به هفت دقیقهٔ بهشت"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-313",
+      "text": {
+        "en": "end up dancing on the bar by midnight",
+        "fa": "تا نصفه‌شب رو پیشخون بار برقصه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-314",
+      "text": {
+        "en": "text an ex after one too many shots",
+        "fa": "بعد یه پیک اضافه به اکس‌شون پیام بده"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-315",
+      "text": {
+        "en": "flirt with the bartender for free drinks",
+        "fa": "با متصدی بار لاس بزنه تا نوشیدنی مجانی بگیره"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-316",
+      "text": {
+        "en": "start a body-shot line at the party",
+        "fa": "تو مهمونی صف شات روی بدن راه بندازه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-317",
+      "text": {
+        "en": "sneak two strangers into the VIP section",
+        "fa": "دو تا غریبه رو یواشکی بکشونه تو بخش وی‌آی‌پی"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-318",
+      "text": {
+        "en": "make out with someone on the dance floor",
+        "fa": "وسط پیست رقص با یکی لب بگیره"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-319",
+      "text": {
+        "en": "pass out fully dressed after the afterparty",
+        "fa": "بعد افترپارتی با لباس کامل غش کنه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-320",
+      "text": {
+        "en": "lose their phone and their dignity at the club",
+        "fa": "تو کلاب هم گوشی‌شون رو گم کنه هم آبروشون رو"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-321",
+      "text": {
+        "en": "give a stranger their number on a napkin",
+        "fa": "شماره‌شون رو روی دستمال به یه غریبه بده"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-322",
+      "text": {
+        "en": "crash a bachelorette party uninvited",
+        "fa": "بی‌دعوت بپره وسط مهمونی مجردی"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-323",
+      "text": {
+        "en": "challenge the whole bar to a shots contest",
+        "fa": "کل بار رو به مسابقهٔ شات دعوت کنه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-324",
+      "text": {
+        "en": "slip into the DJ booth and grab the mic",
+        "fa": "یواشکی بره تو اتاقک دی‌جی و میکروفون رو بقاپه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-325",
+      "text": {
+        "en": "wake up wearing someone else's clothes",
+        "fa": "با لباس یکی دیگه از خواب بیدار بشه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-326",
+      "text": {
+        "en": "start stripping during a drinking game",
+        "fa": "وسط بازی مشروب‌خوری لباس درآوردن رو شروع کنه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-327",
+      "text": {
+        "en": "hook up with someone they just met on the dance floor",
+        "fa": "با کسی که همون شب وسط پیست دیده‌ رابطه برقرار کنه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-328",
+      "text": {
+        "en": "steal a kiss under the strobe lights",
+        "fa": "زیر نور استروب یه بوس بدزده"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-329",
+      "text": {
+        "en": "end the night skinny-dipping in the hotel pool",
+        "fa": "شبشون رو با شنای لخت تو استخر هتل تموم کنن"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-330",
+      "text": {
+        "en": "drunk-call everyone in their contacts",
+        "fa": "مست به همهٔ مخاطباشون زنگ بزنه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-331",
+      "text": {
+        "en": "win the dirty dancing competition",
+        "fa": "تو مسابقهٔ رقص داغ برنده بشه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-332",
+      "text": {
+        "en": "get kicked out of the club for being too wild",
+        "fa": "به‌خاطر زیادی وحشی بودن از کلاب بیرونشون کنن"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-333",
+      "text": {
+        "en": "convince the group to go to a strip club",
+        "fa": "جمع رو راضی کنه برن باشگاه رقص لختی"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-334",
+      "text": {
+        "en": "do a tequila shot off a stranger's collarbone",
+        "fa": "یه شات تکیلا از روی استخوان ترقوهٔ یه غریبه بخوره"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-335",
+      "text": {
+        "en": "swap outfits with a random partygoer",
+        "fa": "با یه مهمون اتفاقی لباساشون رو عوض کنه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-336",
+      "text": {
+        "en": "start a kissing booth at the house party",
+        "fa": "تو پارتی خونگی یه غرفهٔ بوس راه بندازه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-337",
+      "text": {
+        "en": "sneak a hottie back to the hotel room",
+        "fa": "یه خوشگل رو یواشکی ببره تو اتاق هتل"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-338",
+      "text": {
+        "en": "dance until their feet bleed in heels",
+        "fa": "اونقدر با پاشنه‌بلند برقصه که پاشون زخم بشه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-339",
+      "text": {
+        "en": "send a risky selfie from the bathroom line",
+        "fa": "از صف دستشویی یه سلفی جسورانه بفرسته"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-340",
+      "text": {
+        "en": "propose a game of strip poker at 3am",
+        "fa": "ساعت سه صبح پوکر لخت پیشنهاد بده"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-341",
+      "text": {
+        "en": "flirt with everyone in the smoking area",
+        "fa": "با همه تو محوطهٔ سیگار لاس بزنه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-342",
+      "text": {
+        "en": "wake up in a stranger's apartment across town",
+        "fa": "تو آپارتمان یه غریبه اون سر شهر بیدار بشه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-343",
+      "text": {
+        "en": "grind on the wrong person all night",
+        "fa": "تمام شب رو به آدم اشتباهی بچسبه و برقصه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-344",
+      "text": {
+        "en": "buy a round for the entire club",
+        "fa": "برای کل کلاب یه دور نوشیدنی بخره"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-345",
+      "text": {
+        "en": "lose a bet and twerk on the table",
+        "fa": "شرط رو ببازه و روی میز ترک بزنه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-346",
+      "text": {
+        "en": "flash the crowd from the balcony",
+        "fa": "از بالکن خودشون رو به جمعیت نشون بدن"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-347",
+      "text": {
+        "en": "hook up in the club bathroom",
+        "fa": "تو دستشویی کلاب رابطه برقرار کنه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-348",
+      "text": {
+        "en": "get matching tattoos with a one-night fling",
+        "fa": "با عشق یه‌شبه‌شون خالکوبی ست بزنن"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-349",
+      "text": {
+        "en": "start a conga line of half-naked strangers",
+        "fa": "یه صف رقص از غریبه‌های نیمه‌لخت راه بندازه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-350",
+      "text": {
+        "en": "seduce the cab driver into a free ride",
+        "fa": "رانندهٔ تاکسی رو با دلبری راضی به سواری مجانی کنه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-351",
+      "text": {
+        "en": "black out and become tomorrow's legend",
+        "fa": "از حال بره و افسانهٔ فردا بشه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-352",
+      "text": {
+        "en": "sneak into the after-hours rave",
+        "fa": "یواشکی بپره تو ریو نیمه‌شب"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-353",
+      "text": {
+        "en": "dance with two people at once all night",
+        "fa": "تمام شب همزمان با دو نفر برقصه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-354",
+      "text": {
+        "en": "strip down to their underwear in the pool party",
+        "fa": "تو پارتی استخر تا لباس زیر لخت بشه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-355",
+      "text": {
+        "en": "lick salt off someone's neck for a shot",
+        "fa": "برای یه شات نمک رو از گردن یکی بلیسه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-356",
+      "text": {
+        "en": "wake up still holding a stranger's hand",
+        "fa": "در حالی که هنوز دست یه غریبه رو گرفته بیدار بشه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-357",
+      "text": {
+        "en": "turn a quiet bar into a full-on rave",
+        "fa": "یه بار آروم رو تبدیل به یه ریو تمام‌عیار کنه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-358",
+      "text": {
+        "en": "text their ex at 2am after a few drinks",
+        "fa": "بعد چندتا پیک، ساعت دو شب به اکسش پیام بده"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-359",
+      "text": {
+        "en": "fall in love after a single steamy date",
+        "fa": "بعد فقط یه قرار داغ عاشق بشه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-360",
+      "text": {
+        "en": "slide into a stranger's DMs with a bold pickup line",
+        "fa": "با یه تیکهٔ جسورانه بپره تو دایرکت یه غریبه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-361",
+      "text": {
+        "en": "have a fling on a beach vacation",
+        "fa": "تو سفر ساحلی یه رابطهٔ کوتاه‌مدت داشته باشه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-362",
+      "text": {
+        "en": "keep three dating apps open at the same time",
+        "fa": "هم‌زمان سه‌تا اپ دوست‌یابی باز نگه داره"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-363",
+      "text": {
+        "en": "get caught making out in a parked car",
+        "fa": "موقع لب گرفتن تو ماشین پارک‌شده مچش گرفته بشه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-364",
+      "text": {
+        "en": "flirt shamelessly with the bartender",
+        "fa": "بی‌خجالت با باریستا لاس بزنه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-365",
+      "text": {
+        "en": "send a risky selfie to the wrong person",
+        "fa": "یه سلفی خطرناک رو اشتباهی برای یکی دیگه بفرسته"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-366",
+      "text": {
+        "en": "date someone way out of their league",
+        "fa": "با کسی قرار بذاره که خیلی ازش سرتره"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-367",
+      "text": {
+        "en": "propose after only a month of dating",
+        "fa": "فقط بعد یه ماه دوستی پیشنهاد ازدواج بده"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-368",
+      "text": {
+        "en": "sneak a partner past their roommates at dawn",
+        "fa": "سپیده‌دم پارتنرش رو یواشکی از جلو هم‌خونه‌هاش رد کنه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-369",
+      "text": {
+        "en": "start a whirlwind romance with a coworker",
+        "fa": "یه عشق برق‌آسا با همکارش شروع کنه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-370",
+      "text": {
+        "en": "whisper something scandalous in their date's ear",
+        "fa": "یه چیز جنجالی تو گوش قرارش پچ‌پچ کنه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-371",
+      "text": {
+        "en": "go on a date just for the free dinner",
+        "fa": "فقط به‌خاطر شام مجانی سر قرار بره"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-372",
+      "text": {
+        "en": "kiss someone on the first night out",
+        "fa": "همون شب اول کسی رو ببوسه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-373",
+      "text": {
+        "en": "keep a secret crush on a friend's partner",
+        "fa": "یه کراش مخفی روی پارتنر دوستش داشته باشه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-374",
+      "text": {
+        "en": "give out a fake number to a clingy admirer",
+        "fa": "به یه خاطرخواه چسبناک شمارهٔ الکی بده"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-375",
+      "text": {
+        "en": "plan an over-the-top romantic surprise",
+        "fa": "یه سورپرایز عاشقانهٔ اغراق‌آمیز برنامه‌ریزی کنه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-376",
+      "text": {
+        "en": "ghost someone after three perfect dates",
+        "fa": "بعد سه قرار عالی یهو ناپدید بشه و جواب نده"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-377",
+      "text": {
+        "en": "hook up with someone at a wedding",
+        "fa": "تو یه عروسی با کسی ریخت‌وپاش کنه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-378",
+      "text": {
+        "en": "reread old love letters when they're lonely",
+        "fa": "وقتی تنها میشه نامه‌های عاشقانهٔ قدیمی رو دوباره بخونه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-379",
+      "text": {
+        "en": "brag about their dating conquests at brunch",
+        "fa": "سر برانچ از فتوحات عاشقانه‌اش پز بده"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-380",
+      "text": {
+        "en": "fall for someone they met at the gym",
+        "fa": "دل به کسی ببنده که تو باشگاه دیده"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-381",
+      "text": {
+        "en": "send a flirty voice note instead of texting",
+        "fa": "به‌جای پیام، یه ویس عشوه‌گرانه بفرسته"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-382",
+      "text": {
+        "en": "date two people without either knowing",
+        "fa": "با دو نفر هم‌زمان باشه بی‌اینکه هیچ‌کدوم بدونن"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-383",
+      "text": {
+        "en": "blush hard when their crush walks in",
+        "fa": "وقتی کراشش وارد میشه حسابی سرخ بشه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-384",
+      "text": {
+        "en": "book a couples massage on a third date",
+        "fa": "سر قرار سوم یه ماساژ دونفره رزرو کنه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-385",
+      "text": {
+        "en": "steal a kiss under the fireworks",
+        "fa": "زیر آتش‌بازی یواشکی یه بوسه بدزده"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-386",
+      "text": {
+        "en": "write a steamy poem for their lover",
+        "fa": "یه شعر داغ برای معشوقش بنویسه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-387",
+      "text": {
+        "en": "get a partner's name tattooed too soon",
+        "fa": "خیلی زود اسم پارتنرش رو تتو کنه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-388",
+      "text": {
+        "en": "crash a date their ex is on",
+        "fa": "بپره وسط قراری که اکسش سرشه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-389",
+      "text": {
+        "en": "reply to a text within ten seconds when in love",
+        "fa": "وقتی عاشقه تو ده ثانیه به پیام جواب بده"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-390",
+      "text": {
+        "en": "wear something daring to catch a crush's eye",
+        "fa": "یه لباس جسورانه بپوشه تا چشم کراشش رو بگیره"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-391",
+      "text": {
+        "en": "confess feelings after one too many cocktails",
+        "fa": "بعد یه پیک اضافه احساساتش رو لو بده"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-392",
+      "text": {
+        "en": "plan a spontaneous weekend getaway for two",
+        "fa": "یه فرار آخرهفتهٔ بداهه برای دو نفر بچینه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-393",
+      "text": {
+        "en": "keep a drawer of their dates' forgotten things",
+        "fa": "یه کشو پر از وسایل جامونده‌ی قرارهاش داشته باشه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-394",
+      "text": {
+        "en": "swipe right on absolutely everyone",
+        "fa": "رو همه بدون استثنا راست بکشه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-395",
+      "text": {
+        "en": "send mixed signals just to keep someone guessing",
+        "fa": "سیگنال ضدونقیض بده فقط که طرف تو خماری بمونه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-396",
+      "text": {
+        "en": "fall back into an ex's arms after a breakup",
+        "fa": "بعد جدایی دوباره برگرده تو آغوش اکسش"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-397",
+      "text": {
+        "en": "order dessert just to stay on the date longer",
+        "fa": "دسر سفارش بده فقط که قرار بیشتر طول بکشه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-398",
+      "text": {
+        "en": "keep a partner up all night talking",
+        "fa": "تا صبح پارتنرش رو با حرف‌زدن بیدار نگه داره"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-399",
+      "text": {
+        "en": "slow dance with a stranger at a party",
+        "fa": "تو یه مهمونی با یه غریبه آروم برقصه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-400",
+      "text": {
+        "en": "send roses to themselves to make a crush jealous",
+        "fa": "برای خودش گل بفرسته تا کراشش حسودیش بشه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-gen-401",
+      "text": {
+        "en": "break a heart and feel zero guilt",
+        "fa": "یه دل بشکنه و ذره‌ای عذاب وجدان نگیره"
+      },
+      "intensity": "spicy"
     }
   ]
 }
