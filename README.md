@@ -12,15 +12,15 @@ win confetti.
 
 ## Status
 
-**Phase 1 (foundation + reference game) is complete, and all 10 games are shipped.**
+**Phase 1 (foundation + reference game) is complete, and all 11 games are shipped.**
 
 - ✅ Frozen SDK contract (`src/sdk/types.ts` + `docs/specs/CONTRACT-FREEZE.md`)
 - ✅ Engine primitives, services, stores, app shell, registry, host
-- ✅ 10 games (see below), each with `Setup → Play → Results` screens
+- ✅ 11 games (see below), each with `Setup → Play → Results` screens
 - ✅ Disco Persian theme — dual **light (Persian day)** + **dark (disco night)**; light is the default
-- ✅ ~853-item bilingual content databases (generated via a multi-agent workflow)
+- ✅ Large bilingual content databases (~8,000+ items, generated via multi-agent workflows): Heads Up ~2,800 cards (Easy/Medium/Hard), Pantomime ~920, Codenames ~910, Dowr ~800, Truth/Dare ~750, NHIE ~750, Most-Likely-To ~580, Would-You-Rather ~550, Spyfall ~160 locations
 - ✅ Synthesized Web-Audio SFX (no asset files) + confetti / winning animations
-- ✅ 505 unit tests across 25 files; typecheck clean; production build + PWA succeed
+- ✅ 524 unit tests across 27 files; typecheck clean; production build + PWA succeed
 
 ## Games
 
@@ -36,6 +36,18 @@ win confetti.
 | Spyfall | `spyfall` | deduction | 3–12 | violet |
 | Codenames (Spy Grid) | `codenames` | word | 4–16 | lime |
 | Mafia | `mafia` | deduction | 5–20 | rose |
+| Minesweeper | `minesweeper` | deduction | 1–4 | tangerine |
+
+Recent additions:
+- **Truth or Dare** — a **bottle-rolling** picker (players in a ring, an animated bottle spins to the chosen player) alongside the spinner/in-order modes.
+- **Heads Up** — **Easy / Medium / Hard** difficulty tiers per category (Hard favors compound words like *Gray Fox*, *Komodo Dragon*); Setup picks which tiers to include.
+- **Codenames** — a pre-game **orientation** step: the first team rotates the randomly-generated key (0/90/180/270°) before play.
+- **Minesweeper** — new pass-and-play game, solo (classic) or 2–4 player turn-based competitive sweep.
+- **Pantomime** — new **Persian Proverbs** (ضرب‌المثل‌ها) category for proverb charades.
+- **Overall leaderboard** — every finished match records winners; Home shows a per-player wins chart (solo + group), powered by an optional `getOutcome` on each `GameModule` + a persisted `leaderboardStore`.
+- **In-game player management** — a shared `PlayerPicker` lets you add/remove/select players right inside each game's Setup (no detour to the Players page).
+- **Step-by-step guidance** — a 💡 toggle surfaces contextual help boxes on Home and at each in-game step (Setup → Play → Results).
+- **Copy pass** — game descriptions rewritten casually with em-dashes removed.
 
 ## Tech stack
 

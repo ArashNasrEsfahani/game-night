@@ -30,3 +30,6 @@ disco-*.png
 *.njsproj
 *.sln
 *.sw?
+
+# Content-gen scratch (shards + merge scripts)
+/tmp/

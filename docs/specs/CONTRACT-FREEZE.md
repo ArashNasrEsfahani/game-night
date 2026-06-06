@@ -52,10 +52,13 @@ Follow `99-review-and-build-order.md` §3. Keystone = `src/sdk/types.ts` (get it
 
 > The contract above is **fully realized**. All 15 decisions held through implementation.
 
-- **All 10 games shipped**, each conforming to the frozen `GameModule` shape: `dowr`, `pantomime`,
+- **All 11 games shipped**, each conforming to the frozen `GameModule` shape: `dowr`, `pantomime`,
   `never-have-i-ever`, `most-likely-to`, `would-you-rather`, `truth-or-dare`, `heads-up`, `spyfall`,
-  `codenames`, `mafia`. (The per-game `docs/specs/games/*.md` sketches predate this freeze and
-  diverge — mirror **Dowr** + this file, not the sketches.)
+  `codenames`, `mafia`, `minesweeper`. (The per-game `docs/specs/games/*.md` sketches predate this
+  freeze and diverge — mirror **Dowr** + this file, not the sketches.) Later additions held the
+  contract with no SDK changes: Truth-or-Dare bottle-roll selection mode, Heads-Up per-category
+  Easy/Medium/Hard tiers, Codenames pre-game key-orientation step (`stateVersion` bumped to 2), and
+  the new Minesweeper game (1–4 players, `category: 'deduction'`).
 - **Theme:** the design system (01) is realized as the **Disco Persian** theme — dual light
   (Persian day / parchment) + dark (disco night / lapis) driven by a `.dark` class and semantic CSS
   vars; the host bridges each manifest `color: ColorToken` → `--game-accent*`. **Light is the

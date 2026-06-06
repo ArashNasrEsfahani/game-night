@@ -1,7 +1,7 @@
 # Game Spec — Minesweeper (1–4 players) (`minesweeper`)
 
-> **Status: PLANNED — not yet implemented.** This is a design plan kept on file per request; no code exists yet. When built, it conforms to the SDK contract in `docs/specs/00-architecture.md` and mirrors the structure/purity rules of the existing games (see `docs/specs/games/codenames.md` and the live `src/games/dowr/`).
-> Game id: `minesweeper` · Folder (future): `src/games/minesweeper/`
+> **Status: IMPLEMENTED.** Built per this plan under `src/games/minesweeper/` (auto-discovered by the registry). Conforms to the SDK contract in `docs/specs/00-architecture.md`. Minor deviations from the original sketch: `showMineOnHit` is retained in options but the Results board always reveals fully; single-tap on a revealed number chords (instead of double-tap); the solo stopwatch is screen-local and not persisted.
+> Game id: `minesweeper` · Folder: `src/games/minesweeper/`
 > Engine primitives used: `rng`, `turnOrder`, `scoring`, `phaseMachine`, `results`. (No `revealGate`/`deck`/`voting` — the board is fully shared, no per-player secrets.)
 
 A pass-and-play take on classic Minesweeper for **one phone, 1–4 players**. One shared grid with hidden mines. Solo plays like the classic game (clear every safe cell without detonating). With 2–4 players it becomes a turn-based **competitive sweep**: players alternate revealing cells, scoring for the safe cells they uncover and losing a life when they hit a mine. Most points when the board is cleared (or last sweeper standing) wins.
