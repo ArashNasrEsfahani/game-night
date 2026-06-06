@@ -24,11 +24,29 @@ async function requestTiltPermission(): Promise<boolean> {
   return true;
 }
 
+/** Screen-orientation-compensated pitch. Heads-Up is held on the forehead, usually in LANDSCAPE,
+ *  where the forehead "nod" rotates a different device axis than in portrait (and with a flipped
+ *  sign) — reading raw `beta` is why tilt felt reversed on iOS and dead in landscape. We pick the
+ *  axis + sign from the current screen angle so the SAME physical nod-down always decreases pitch,
+ *  on iOS and Android alike. */
+function tiltPitch(beta: number, gamma: number): number {
+  const angle =
+    screen.orientation?.angle ?? (window as unknown as { orientation?: number }).orientation ?? 0;
+  if (angle === 90) return -gamma; // landscape (rotated one way)
+  if (angle === 270 || angle === -90) return gamma; // landscape (rotated the other way)
+  if (angle === 180) return -beta; // upside-down portrait
+  return beta; // upright portrait
+}
+
 /**
  * Heads-Up tilt input. While `active`, watches device orientation: a baseline is captured the first
  * frame (phone held on the forehead), then tilting the top of the phone DOWN past a threshold fires
- * `onGot`, tilting UP fires `onPass`. The gesture must return near neutral to re-arm — so one tilt =
- * one action. Falls back to nothing if there's no sensor/permission (the on-screen buttons remain).
+ * `onGot`, tilting UP fires `onPass`. Orientation-compensated so it behaves the same in portrait or
+ * landscape and across iOS/Android. The gesture must return near neutral to re-arm (one tilt = one
+ * action). Falls back to nothing if there's no sensor/permission (the on-screen buttons remain).
+ *
+ * Note: Android only exposes the sensor on a secure context — it works in the deployed HTTPS PWA,
+ * not over a plain-http LAN dev URL.
  */
 function useTiltInput({ active, onGot, onPass }: { active: boolean; onGot: () => void; onPass: () => void }) {
   const cbRef = useRef({ onGot, onPass });
@@ -39,15 +57,17 @@ function useTiltInput({ active, onGot, onPass }: { active: boolean; onGot: () =>
     if (!active) return;
     let baseline: number | null = null;
     let armed = true;
-    const TRIGGER = 32; // degrees from neutral to fire
+    let sawRelative = false; // prefer `deviceorientation`; only fall back to the absolute event
+    const TRIGGER = 28; // degrees from neutral to fire
     const REARM = 12; // must return within this of neutral before the next fire
     const handler = (e: DeviceOrientationEvent) => {
-      if (e.beta == null) return;
+      if (e.beta == null || e.gamma == null) return;
+      const pitch = tiltPitch(e.beta, e.gamma);
       if (baseline === null) {
-        baseline = e.beta;
+        baseline = pitch;
         return;
       }
-      const d = e.beta - baseline;
+      const d = pitch - baseline;
       if (armed) {
         if (d <= -TRIGGER) {
           armed = false;
@@ -60,8 +80,21 @@ function useTiltInput({ active, onGot, onPass }: { active: boolean; onGot: () =>
         armed = true;
       }
     };
-    window.addEventListener('deviceorientation', handler);
-    return () => window.removeEventListener('deviceorientation', handler);
+    const onRelative = (e: DeviceOrientationEvent) => {
+      sawRelative = true;
+      handler(e);
+    };
+    // Some Android builds only populate beta/gamma on the "absolute" event; use it only if the
+    // standard event never fires, so the two streams can't double-trigger.
+    const onAbsolute = (e: DeviceOrientationEvent) => {
+      if (!sawRelative) handler(e);
+    };
+    window.addEventListener('deviceorientation', onRelative, true);
+    window.addEventListener('deviceorientationabsolute', onAbsolute as EventListener, true);
+    return () => {
+      window.removeEventListener('deviceorientation', onRelative, true);
+      window.removeEventListener('deviceorientationabsolute', onAbsolute as EventListener, true);
+    };
   }, [active]);
 }
 
