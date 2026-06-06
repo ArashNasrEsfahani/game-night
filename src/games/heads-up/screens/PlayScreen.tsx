@@ -220,6 +220,9 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<HeadsU
         <TurnAura color={participant?.color} />
         <div className="relative flex flex-1 flex-col items-center justify-center gap-6 py-4">
           {s.flash && <div className={`pointer-events-none absolute inset-0 -z-0 opacity-40 ${flashBg}`} />}
+          {participant?.kind === 'team' && (
+            <p className="z-10 text-sm font-semibold text-[var(--text-muted)]">{participant.name}</p>
+          )}
           <TimerRing totalSeconds={s.roundSeconds} remainingSeconds={s.secondsLeft} />
           {s.currentCardId ? (
             <motion.h1
@@ -277,8 +280,8 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<HeadsU
               key={i}
               className={`rounded-full px-2.5 py-1 text-xs ${
                 e.result === 'got'
-                  ? 'bg-[var(--color-game-lime)] text-[var(--text)]'
-                  : 'bg-[var(--surface-2)] text-[var(--text-muted)]'
+                  ? 'bg-[var(--color-game-lime)] text-[var(--on-lime)]'
+                  : 'dp-glass-2 text-[var(--text-muted)]'
               }`}
             >
               {ctx.localize(CARD_BY_KEY[e.cardKey]?.word ?? { en: '?', fa: '؟' })}

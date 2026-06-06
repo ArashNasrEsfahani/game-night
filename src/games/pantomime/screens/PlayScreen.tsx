@@ -154,6 +154,23 @@ export function PlayScreen({
       <Screen>
         <TurnAura color={team?.color} />
         <div className="flex flex-col items-center gap-6 py-4">
+          {/* Per-team standings stay visible while the timer runs, active team highlighted. */}
+          <div className="flex flex-wrap justify-center gap-1.5">
+            {rows.map((r) => (
+              <span
+                key={r.id}
+                className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-semibold ${
+                  r.id === team?.teamId
+                    ? 'bg-[var(--accent-fill-strong)] text-[var(--game-on-accent)]'
+                    : 'dp-glass-2 text-[var(--text-muted)]'
+                }`}
+              >
+                <span className="h-2 w-2 rounded-full" style={{ background: `var(--color-game-${r.color})` }} />
+                {r.label}
+                <span className="tabular-nums">{r.score}</span>
+              </span>
+            ))}
+          </div>
           <TimerRing totalSeconds={s.options.roundSeconds} remainingSeconds={remainingSec} />
           <h1 className="text-center text-5xl font-extrabold">{promptText}</h1>
           {prompt?.hint &&

@@ -214,7 +214,13 @@ export type SoundId =
   | 'win'
   | 'lose'
   | 'shuffle'
-  | 'pass';
+  | 'pass'
+  | 'explosion'
+  | 'sparkle'
+  | 'boing'
+  | 'drum'
+  | 'select'
+  | 'forgive';
 
 export interface ClockService {
   now: () => number; // Date.now wrapper

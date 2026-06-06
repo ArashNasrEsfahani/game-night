@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import type { GameScreenProps } from '../../../sdk/types';
 import { Screen, AppBar, Button, TimerRing, TurnAura } from '../../../sdk/ui';
 import { reveal as revealVariant } from '../../../sdk/motion';
@@ -61,7 +61,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<DowrSt
       if (e >= s.fuseMs) {
         segStartRef.current = n; // re-anchor first so the next tick doesn't double-fire
         setSegMs(0);
-        ctx.sound.play('lose');
+        ctx.sound.play('explosion');
         ctx.haptics.error();
         dispatchRef.current({ type: 'ADVANCE', reason: 'bomb', segmentMs: s.fuseMs, seed: ctx.random.seed() });
       }
@@ -120,10 +120,39 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<DowrSt
       <TurnAura color={team.color} />
       <AppBar onBack={() => nav.exit()} />
       <div className="relative flex flex-1 flex-col gap-3 py-1">
-        {/* Bomb flash */}
-        {s.flash === 'bomb' && (
-          <div className="pointer-events-none absolute inset-0 -z-0 bg-[var(--color-game-rose-strong)] opacity-30" />
-        )}
+        {/* Bomb explosion — expanding fireball + a kaboom that punches in, over a red wash. */}
+        <AnimatePresence>
+          {s.flash === 'bomb' && (
+            <motion.div
+              key="kaboom"
+              className="pointer-events-none absolute inset-0 z-20 grid place-items-center overflow-hidden"
+              initial={{ opacity: 1 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.25 }}
+            >
+              <motion.div
+                className="absolute inset-0"
+                style={{
+                  background:
+                    'radial-gradient(circle at 50% 45%, var(--color-game-gold) 0%, var(--color-game-tangerine) 22%, var(--color-game-rose-strong) 48%, transparent 74%)',
+                }}
+                initial={{ scale: 0.15, opacity: 0.95 }}
+                animate={{ scale: 1.6, opacity: 0 }}
+                transition={{ duration: 0.5, ease: 'easeOut' }}
+              />
+              <motion.div
+                className="relative text-[7rem] leading-none"
+                initial={{ scale: 0.2, rotate: -18, opacity: 0 }}
+                animate={{ scale: [0.2, 1.7, 1.25], rotate: [-18, 12, 0], opacity: [0, 1, 1] }}
+                transition={{ duration: 0.45, ease: 'easeOut' }}
+                aria-hidden
+              >
+                💥
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
 
         {/* Always-visible standings strip — whose turn + every team's running total. */}
         <div className="z-10 flex flex-wrap justify-center gap-1.5">
@@ -134,8 +163,8 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<DowrSt
                 key={tm.id}
                 className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-semibold ${
                   active
-                    ? 'bg-[var(--game-accent-strong)] text-[var(--game-on-accent)]'
-                    : 'bg-[var(--surface-2)] text-[var(--text-muted)]'
+                    ? 'bg-[var(--accent-fill-strong)] text-[var(--game-on-accent)]'
+                    : 'dp-glass-2 text-[var(--text-muted)]'
                 }`}
               >
                 <span
@@ -170,7 +199,11 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<DowrSt
         </p>
 
         {/* Bomb + word */}
-        <div className="z-10 flex flex-1 flex-col items-center justify-center gap-5 text-center">
+        <motion.div
+          className="z-10 flex flex-1 flex-col items-center justify-center gap-5 text-center"
+          animate={s.flash === 'bomb' ? { x: [0, -10, 9, -7, 5, 0], y: [0, 5, -4, 3, 0] } : { x: 0, y: 0 }}
+          transition={{ duration: 0.42, ease: 'easeOut' }}
+        >
           {s.options.surpriseBomb ? (
             <motion.div
               animate={{ scale: [1, 1.14, 1], rotate: [0, -7, 7, 0] }}
@@ -198,7 +231,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<DowrSt
               {t('dowr.dontSay')}: {card.hints.taboo.map((x) => ctx.localize(x)).join('، ')}
             </p>
           )}
-        </div>
+        </motion.div>
 
         {/* Controls */}
         <div className="z-10 flex w-full flex-col gap-2">

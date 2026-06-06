@@ -66,6 +66,7 @@ export function BottleStage({
   const spin = () => {
     if (s.phase !== 'idle') return;
     ctx.sound.play('shuffle');
+    ctx.sound.play('boing');
     ctx.haptics.light();
     dispatch({ type: 'SPIN', seed: ctx.random.seed() });
   };
