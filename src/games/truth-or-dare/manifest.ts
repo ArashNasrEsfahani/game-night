@@ -3,7 +3,7 @@ import type { GameManifest } from '../../sdk/types';
 export const manifest: GameManifest = {
   id: 'truth-or-dare',
   name: { en: 'Truth or Dare', fa: 'جرئت یا حقیقت' },
-  tagline: { en: 'Spin, pick, reveal — pass the phone!', fa: 'بچرخون، انتخاب کن، نشون بده — گوشی رو بچرخون!' },
+  tagline: { en: 'Spin, pick, reveal, pass the phone!', fa: 'بچرخون، انتخاب کن، نشون بده، گوشی رو بچرخون!' },
   description: {
     en: 'Spin to pick a player, choose Truth or Dare, and reveal a prompt. Play casually forever or race to a points target.',
     fa: 'بچرخون تا یک بازیکن انتخاب بشه، جرئت یا حقیقت را انتخاب کن و سرنخ را ببین. بی‌خیال تا ابد بازی کن یا به امتیاز هدف برس.',

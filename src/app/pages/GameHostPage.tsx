@@ -11,12 +11,14 @@ import { getGame } from '../../games/registry';
 import { useSessionStore } from '../../store/sessionStore';
 import type { HostScreen } from '../../store/sessionStore';
 import { useSettingsStore } from '../../store/settingsStore';
+import { useLeaderboardStore } from '../../store/leaderboardStore';
 import { GameContextProvider } from '../../sdk/context';
 import type {
   GameActionBase,
   GameConfig,
   GameContext,
   GameNav,
+  GameStateBase,
   Lang,
   LocalizedString,
 } from '../../sdk/types';
@@ -25,6 +27,7 @@ import { randomService } from '../../services/random';
 import { soundService, noopSound } from '../../services/sound';
 import { hapticsService, noopHaptics } from '../../services/haptics';
 import { useLocalize } from '../../lib/localize';
+import { GuideBanner } from '../components/Guide';
 import { NotFoundPage } from './NotFoundPage';
 
 /** A floating "?" that opens a how-to-play sheet for the current game. */
@@ -167,6 +170,14 @@ export function GameHostPage() {
 
   if (!mod || !gameId) return <NotFoundPage />;
 
+  // Record a finished match into the overall leaderboard (once per match, deduped by start time).
+  const recordOutcome = (cfg: GameConfig, finishedState: GameStateBase, startedAt: number) => {
+    const outcome = mod.getOutcome?.(finishedState, cfg);
+    if (!outcome) return;
+    const names = Object.fromEntries(cfg.players.map((p) => [p.id as string, p.name]));
+    useLeaderboardStore.getState().record(`${gameId}:${startedAt}`, outcome, names);
+  };
+
   const nav: GameNav = {
     toSetup: () => updateStore(gameId, { screen: 'setup' }),
     toPlay: () => updateStore(gameId, { screen: 'play' }),
@@ -183,6 +194,10 @@ export function GameHostPage() {
         updatedAt: clockService.now(),
       });
       setResumed(true); // we just started this match — don't gate it behind resume
+      if (state.finished) {
+        const sess = useSessionStore.getState().getSession(gameId);
+        recordOutcome(config, state, sess?.startedAt ?? clockService.now());
+      }
     },
     playAgain: () => clearStore(gameId),
   };
@@ -197,6 +212,7 @@ export function GameHostPage() {
     const next = mod.logic.reducer(current.state, action);
     const screen: HostScreen = next.finished ? 'results' : current.screen;
     updateStore(gameId, { state: next, screen, updatedAt: clockService.now() });
+    if (!current.state.finished && next.finished) recordOutcome(current.config, next, current.startedAt);
   };
 
   const accentStyle = {
@@ -226,6 +242,15 @@ export function GameHostPage() {
   // A saved, started match is waiting — offer Resume vs New before dropping into it.
   const showGate =
     !resumed && !!session && (session.screen === 'play' || session.screen === 'results');
+
+  // Step-appropriate guidance text (shown as a floating cloud when the 💡 toggle is on).
+  const guideText = showGate
+    ? ''
+    : shownScreen === 'setup'
+      ? t('guide.setup')
+      : shownScreen === 'results'
+        ? t('guide.results')
+        : t('guide.play');
 
   return (
     <GameContextProvider value={ctx}>
@@ -270,6 +295,7 @@ export function GameHostPage() {
             </motion.div>
           )}
         </AnimatePresence>
+        <GuideBanner text={guideText} />
       </div>
     </GameContextProvider>
   );

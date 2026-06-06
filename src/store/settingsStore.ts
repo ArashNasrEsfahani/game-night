@@ -14,6 +14,8 @@ export interface SettingsState {
   muted: boolean;
   haptics: boolean;
   reducedMotion: MotionPref;
+  /** Show step-by-step guidance boxes throughout the app. */
+  guidance: boolean;
   /** true once async idb rehydration has completed (host gates first paint on this). */
   hydrated: boolean;
   setTheme: (t: ThemePref) => void;
@@ -21,6 +23,7 @@ export interface SettingsState {
   setMuted: (m: boolean) => void;
   setHaptics: (h: boolean) => void;
   setReducedMotion: (r: MotionPref) => void;
+  setGuidance: (g: boolean) => void;
 }
 
 export const useSettingsStore = create<SettingsState>()(
@@ -31,12 +34,14 @@ export const useSettingsStore = create<SettingsState>()(
       muted: false,
       haptics: true,
       reducedMotion: 'system',
+      guidance: true,
       hydrated: false,
       setTheme: (theme) => set({ theme }),
       setLanguage: (language) => set({ language }),
       setMuted: (muted) => set({ muted }),
       setHaptics: (haptics) => set({ haptics }),
       setReducedMotion: (reducedMotion) => set({ reducedMotion }),
+      setGuidance: (guidance) => set({ guidance }),
     }),
     {
       name: STORE_KEYS.settings,
@@ -48,6 +53,7 @@ export const useSettingsStore = create<SettingsState>()(
         muted: s.muted,
         haptics: s.haptics,
         reducedMotion: s.reducedMotion,
+        guidance: s.guidance,
       }),
       onRehydrateStorage: () => () => {
         useSettingsStore.setState({ hydrated: true });

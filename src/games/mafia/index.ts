@@ -13,6 +13,14 @@ const mod: GameModule<MafiaState, MafiaAction> = {
   screens: { Setup: SetupScreen, Play: PlayScreen, Results: ResultsScreen },
   defaultConfig,
   validateConfig,
+  getOutcome: (s, c) => ({
+    mode: 'team',
+    winnerIds:
+      s.winner && s.winner !== 'draw'
+        ? s.players.filter((p) => p.faction === s.winner).map((p) => p.id)
+        : [],
+    participantIds: c.players.map((p) => p.id),
+  }),
 };
 
 export default mod;

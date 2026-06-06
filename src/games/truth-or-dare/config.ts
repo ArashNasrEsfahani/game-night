@@ -2,7 +2,7 @@ import type { DefaultConfigInput, GameConfig, LocalizedString } from '../../sdk/
 import type { Intensity } from './content';
 import { getPool } from './content';
 
-export type SelectionMode = 'spinner' | 'sequential';
+export type SelectionMode = 'spinner' | 'sequential' | 'bottle';
 export type ScoringMode = 'casual' | 'points';
 export type EndType = 'endless' | 'rounds' | 'target';
 export type PrivateReveal = 'never' | 'spicyOnly' | 'always';
@@ -46,7 +46,12 @@ export function normalizeOptions(o: Partial<ToDOptions> | undefined): ToDOptions
     intensities.mild = true;
   return {
     intensities,
-    selectionMode: src.selectionMode === 'sequential' ? 'sequential' : 'spinner',
+    selectionMode:
+      src.selectionMode === 'sequential'
+        ? 'sequential'
+        : src.selectionMode === 'bottle'
+          ? 'bottle'
+          : 'spinner',
     scoringMode: src.scoringMode === 'points' ? 'points' : 'casual',
     pointsForDare: Math.round(src.pointsForDare ?? 2),
     pointsForTruth: Math.round(src.pointsForTruth ?? 1),

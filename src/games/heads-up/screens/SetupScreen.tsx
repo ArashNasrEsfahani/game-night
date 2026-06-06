@@ -4,9 +4,12 @@ import { useNavigate } from 'react-router-dom';
 import type { GameConfig, GameScreenProps, PlayerSeat, TeamSetup } from '../../../sdk/types';
 import { Screen, AppBar, Button, SegmentedControl, Stepper, Toggle } from '../../../sdk/ui';
 import { useRosterStore } from '../../../store/rosterStore';
+import { PlayerPicker } from '../../../app/components/PlayerPicker';
 import { asTeamId } from '../../../engine/ids';
 import { DECK_LIST, DEFAULT_OPTIONS, ROUND_SECONDS_CHOICES, validateConfig } from '../config';
 import type { HeadsUpMode, HeadsUpOptions } from '../config';
+import { DIFFICULTIES, deckDifficultyCounts } from '../content';
+import type { Difficulty } from '../content';
 import type { HeadsUpAction, HeadsUpState } from '../logic';
 
 export function SetupScreen({ ctx, nav }: GameScreenProps<HeadsUpState, HeadsUpAction>) {
@@ -21,8 +24,12 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<HeadsUpState, HeadsUpA
   }
   const toggleDeck = (id: string) =>
     set('deckIds', opts.deckIds.includes(id) ? opts.deckIds.filter((x) => x !== id) : [...opts.deckIds, id]);
+  const toggleDifficulty = (d: Difficulty) =>
+    set('difficulties', { ...opts.difficulties, [d]: !opts.difficulties[d] });
   const togglePlayer = (id: string) =>
     setSelected((s) => (s.includes(id) ? s.filter((x) => x !== id) : [...s, id]));
+
+  const diffCounts = deckDifficultyCounts(opts.deckIds);
 
   const seats: PlayerSeat[] = players
     .filter((p) => selected.includes(p.id))
@@ -56,28 +63,11 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<HeadsUpState, HeadsUpA
           <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">
             {t('common.players')} · {seats.length}
           </h2>
-          {players.length === 0 ? (
-            <Button variant="secondary" onClick={() => navigate('/players')}>
-              {t('players.add')}
-            </Button>
-          ) : (
-            <div className="flex flex-wrap gap-2">
-              {players.map((p) => (
-                <button
-                  key={p.id}
-                  onClick={() => togglePlayer(p.id)}
-                  className={`rounded-full px-3 py-2 text-sm font-medium ${
-                    selected.includes(p.id)
-                      ? 'bg-[var(--game-accent-strong)] text-[var(--game-on-accent)]'
-                      : 'bg-[var(--surface-2)] text-[var(--text)]'
-                  }`}
-                >
-                  {p.emoji ? `${p.emoji} ` : ''}
-                  {p.name}
-                </button>
-              ))}
-            </div>
-          )}
+          <PlayerPicker
+            selected={selected}
+            onToggle={togglePlayer}
+            onManageAll={() => navigate('/players')}
+          />
         </section>
 
         <section>
@@ -94,6 +84,25 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<HeadsUpState, HeadsUpA
                 }`}
               >
                 {d.icon} {ctx.localize(d.name)}
+              </button>
+            ))}
+          </div>
+        </section>
+
+        <section>
+          <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">{t('hu.difficulty')}</h2>
+          <div className="flex flex-wrap gap-2">
+            {DIFFICULTIES.map((d) => (
+              <button
+                key={d}
+                onClick={() => toggleDifficulty(d)}
+                className={`rounded-full px-3 py-1.5 text-sm ${
+                  opts.difficulties[d]
+                    ? 'bg-[var(--game-accent-strong)] text-[var(--game-on-accent)]'
+                    : 'bg-[var(--surface-2)] text-[var(--text)]'
+                }`}
+              >
+                {t(`hu.diff.${d}`)} · {diffCounts[d]}
               </button>
             ))}
           </div>

@@ -10,6 +10,7 @@ export type TeamId = 'teamA' | 'teamB';
 export type CardRole = 'teamA' | 'teamB' | 'neutral' | 'assassin';
 
 export type CodenamesPhase =
+  | 'orientation'
   | 'spymasterHandoff'
   | 'clue'
   | 'guesserHandoff'
@@ -48,6 +49,8 @@ export interface CodenamesState extends GameStateBase {
   turnSeconds: number;
   allowBonusGuess: boolean;
   board: BoardCell[];
+  /** Quarter-turns (0–3) the first team rotated the random key before play. */
+  orientation: number;
   startingTeam: TeamId;
   currentTeam: TeamId;
   remaining: Record<TeamId, number>;
@@ -65,6 +68,7 @@ export interface CodenamesState extends GameStateBase {
 }
 
 export type CodenamesAction =
+  | { type: 'CHOOSE_ORIENTATION'; rotation: number }
   | { type: 'REVEAL_KEY_TO_SPYMASTER' }
   | { type: 'GIVE_CLUE'; count: number }
   | { type: 'HANDOFF_TO_GUESSERS' }
@@ -82,6 +86,22 @@ function keyComposition(start: TeamId): CardRole[] {
     ...Array<CardRole>(7).fill('neutral'),
     'assassin',
   ];
+}
+
+const BOARD_N = 5;
+
+/** Rotate a 25-length, row-major role grid clockwise by `k` quarter-turns. The WORDS never move
+ *  (they're fixed on the table) — only the key (roles) rotates, exactly like turning a key card. */
+export function rotateRoles(roles: CardRole[], k: number): CardRole[] {
+  const turns = ((Math.round(k) % 4) + 4) % 4;
+  let out = roles.slice();
+  for (let t = 0; t < turns; t++) {
+    const next: CardRole[] = new Array(BOARD_N * BOARD_N);
+    for (let r = 0; r < BOARD_N; r++)
+      for (let c = 0; c < BOARD_N; c++) next[r * BOARD_N + c] = out[(BOARD_N - 1 - c) * BOARD_N + r];
+    out = next;
+  }
+  return out;
 }
 
 export function generateBoard(pool: WordEntry[], start: TeamId, seed: number): BoardCell[] {
@@ -143,13 +163,14 @@ export function createInitialState(config: GameConfig, seed: number): CodenamesS
   const board = errorCode ? [] : generateBoard(pool, start, seed);
 
   return {
-    v: 1,
-    phase: errorCode ? 'error' : 'spymasterHandoff',
+    v: 2,
+    phase: errorCode ? 'error' : options.chooseOrientation ? 'orientation' : 'spymasterHandoff',
     finished: false,
     mode: options.mode,
     turnSeconds: options.turnSeconds,
     allowBonusGuess: options.allowBonusGuess,
     board,
+    orientation: 0,
     startingTeam: start,
     currentTeam: start,
     remaining: { teamA: start === 'teamA' ? 9 : 8, teamB: start === 'teamB' ? 9 : 8 },
@@ -223,6 +244,13 @@ function applyGuess(s: CodenamesState, cellIndex: number): CodenamesState {
 export function reducer(state: CodenamesState, action: CodenamesAction): CodenamesState {
   const s = state;
   switch (action.type) {
+    case 'CHOOSE_ORIENTATION': {
+      if (s.phase !== 'orientation') return s;
+      const turns = ((Math.round(action.rotation) % 4) + 4) % 4;
+      const rotated = rotateRoles(s.board.map((c) => c.role), turns);
+      const board = s.board.map((c, i) => ({ ...c, role: rotated[i] }));
+      return { ...s, board, orientation: turns, phase: 'spymasterHandoff' };
+    }
     case 'REVEAL_KEY_TO_SPYMASTER': {
       if (s.phase !== 'spymasterHandoff') return s;
       return { ...s, phase: 'clue' };

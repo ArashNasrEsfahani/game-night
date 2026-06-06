@@ -172,6 +172,16 @@ export interface GameScreens<S extends GameStateBase, A extends GameActionBase> 
   Results: ComponentType<GameScreenProps<S, A>>;
 }
 
+/** Result of a finished match, used to update the cross-game overall leaderboard. */
+export interface MatchOutcome {
+  /** 'team' when the win belongs to a team/faction; 'individual' for free-for-all. */
+  mode: 'individual' | 'team';
+  /** Player ids who won (for a team game, the members of the winning team/faction). */
+  winnerIds: string[];
+  /** All player ids who took part (drives the "games played" tally). */
+  participantIds: string[];
+}
+
 /** The default export of src/games/<id>/index.ts. */
 export interface GameModule<
   S extends GameStateBase = GameStateBase,
@@ -184,6 +194,9 @@ export interface GameModule<
   defaultConfig: (input: DefaultConfigInput) => GameConfig;
   /** Validate a config before starting; return localized errors or null. */
   validateConfig?: (config: GameConfig) => LocalizedString[] | null;
+  /** Optional: when a match finishes, report winners/participants for the overall leaderboard.
+   *  Return null to record nothing (e.g. casual modes with no winner). */
+  getOutcome?: (state: S, config: GameConfig) => MatchOutcome | null;
 }
 
 /** Type-erased module the registry stores. */

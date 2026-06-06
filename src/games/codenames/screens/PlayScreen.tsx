@@ -105,6 +105,43 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<Codena
     </div>
   );
 
+  if (s.phase === 'orientation') {
+    return (
+      <Screen>
+        <TurnAura color={teamColor} />
+        <AppBar onBack={() => nav.exit()} />
+        <div className="grid flex-1 place-items-center gap-5 text-center">
+          <div className={`rounded-2xl bg-[var(--color-game-${teamColor})] px-6 py-3`}>
+            <p className="text-sm font-bold">{currentTeamName(s)}</p>
+            <p className="text-xs text-[var(--text-muted)]">{t('cn.startsFirst')}</p>
+          </div>
+          <h1 className="text-2xl font-extrabold">{t('cn.chooseOrientation')}</h1>
+          <p className="max-w-xs text-sm text-[var(--text-muted)]">{t('cn.orientationHint')}</p>
+          <div className="grid grid-cols-5 gap-1 opacity-60">
+            {Array.from({ length: 25 }).map((_, i) => (
+              <div key={i} className="h-7 w-7 rounded bg-[var(--surface-2)]" />
+            ))}
+          </div>
+          <div className="grid w-full grid-cols-2 gap-3">
+            {[0, 1, 2, 3].map((r) => (
+              <Button
+                key={r}
+                size="lg"
+                onClick={() => {
+                  ctx.sound.play('shuffle');
+                  ctx.haptics.medium();
+                  dispatch({ type: 'CHOOSE_ORIENTATION', rotation: r });
+                }}
+              >
+                {t(`cn.orient.${r}`)}
+              </Button>
+            ))}
+          </div>
+        </div>
+      </Screen>
+    );
+  }
+
   if (s.phase === 'spymasterHandoff') {
     return (
       <Screen>

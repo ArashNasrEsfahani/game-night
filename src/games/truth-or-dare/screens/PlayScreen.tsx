@@ -5,6 +5,7 @@ import { Screen, AppBar, Button, Card, Chip, Curtain, TurnAura } from '../../../
 import { PROMPT_BY_ID } from '../content';
 import { nextSequentialId } from '../logic';
 import type { ToDAction, ToDState } from '../logic';
+import { BottleStage } from './BottleStage';
 
 export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<ToDState, ToDAction>) {
   const { t } = useTranslation();
@@ -43,6 +44,11 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<ToDSta
         </div>
       </Screen>
     );
+  }
+
+  // Bottle mode owns both the pick (idle) and the choose (choosing) screens.
+  if (s.options.selectionMode === 'bottle' && (s.phase === 'idle' || s.phase === 'choosing')) {
+    return <BottleStage state={s} dispatch={dispatch} ctx={ctx} header={header} />;
   }
 
   if (s.phase === 'idle') {

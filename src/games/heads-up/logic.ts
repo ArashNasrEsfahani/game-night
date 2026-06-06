@@ -2,7 +2,7 @@
 import type { ColorToken, GameConfig, GameStateBase } from '../../sdk/types';
 import { shuffle } from '../../engine/rng';
 import { mergedPool } from './content';
-import { readOptions } from './config';
+import { readOptions, selectedDifficulties } from './config';
 import type { HeadsUpMode } from './config';
 
 export type HeadsUpPhase = 'handoff' | 'countdown' | 'playing' | 'roundEnd' | 'finished' | 'error';
@@ -123,7 +123,7 @@ export function createInitialState(config: GameConfig, seed: number): HeadsUpSta
     }));
   }
 
-  const cardPool = mergedPool(options.deckIds);
+  const cardPool = mergedPool(options.deckIds, selectedDifficulties(options));
   const deck = shuffle(cardPool, seed);
   const roundOfParticipant: Record<string, number> = {};
   participants.forEach((p) => (roundOfParticipant[p.id] = 0));

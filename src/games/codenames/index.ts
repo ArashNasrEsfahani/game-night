@@ -13,6 +13,11 @@ const mod: GameModule<CodenamesState, CodenamesAction> = {
   screens: { Setup: SetupScreen, Play: PlayScreen, Results: ResultsScreen },
   defaultConfig,
   validateConfig,
+  getOutcome: (s, c) => ({
+    mode: 'team',
+    winnerIds: s.winner ? s.teamMeta[s.winner].memberIds : [],
+    participantIds: c.players.map((p) => p.id),
+  }),
 };
 
 export default mod;

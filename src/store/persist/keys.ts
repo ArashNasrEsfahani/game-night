@@ -4,4 +4,5 @@ export const STORE_KEYS = {
   sessions: 'sgw.sessions.v1',
   settings: 'sgw.settings.v1',
   auth: 'sgw.auth.v1',
+  leaderboard: 'sgw.leaderboard.v1',
 } as const;

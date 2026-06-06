@@ -92,6 +92,27 @@ export function SettingsPage() {
           />
         </button>
       </Card>
+
+      <Card className="my-2 flex items-center justify-between">
+        <div>
+          <span className="font-medium">💡 {t('settings.guidance')}</span>
+          <p className="text-xs text-[var(--text-muted)]">{t('settings.guidanceHint')}</p>
+        </div>
+        <button
+          role="switch"
+          aria-checked={s.guidance}
+          onClick={() => s.setGuidance(!s.guidance)}
+          className={`h-7 w-12 shrink-0 rounded-full p-0.5 transition ${
+            s.guidance ? 'bg-[var(--game-accent-strong)]' : 'bg-[var(--surface-2)]'
+          }`}
+        >
+          <span
+            className={`block h-6 w-6 rounded-full bg-white transition ${
+              s.guidance ? 'translate-x-5 rtl:-translate-x-5' : 'translate-x-0'
+            }`}
+          />
+        </button>
+      </Card>
     </Screen>
   );
 }

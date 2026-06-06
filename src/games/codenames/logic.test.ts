@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import type { GameConfig, PlayerId, PlayerSeat } from '../../sdk/types';
 import { asPlayerId, asTeamId } from '../../engine/ids';
-import { createInitialState, reducer } from './logic';
+import { createInitialState, reducer, rotateRoles } from './logic';
 import type { CardRole, CodenamesState } from './logic';
 import { DEFAULT_OPTIONS } from './config';
 import type { CodenamesOptions } from './config';
@@ -19,7 +19,9 @@ function makeConfig(options: Partial<CodenamesOptions> = {}): GameConfig {
         { id: asTeamId('teamB'), name: 'Blue', memberIds: [asPlayerId('b'), asPlayerId('d')] as PlayerId[] },
       ],
     },
-    options: { ...DEFAULT_OPTIONS, startingTeam: 'teamA', ...options },
+    // Existing flow tests assume play starts at spymasterHandoff; the orientation step is covered
+    // separately, so default it OFF here and opt in where exercised.
+    options: { ...DEFAULT_OPTIONS, startingTeam: 'teamA', chooseOrientation: false, ...options },
     lang: 'en',
   };
 }
@@ -56,6 +58,41 @@ describe('codenames createInitialState', () => {
     const cfg = makeConfig();
     cfg.teams = { mode: 'auto', teams: [] };
     expect(createInitialState(cfg, 1).phase).toBe('error');
+  });
+});
+
+describe('codenames orientation', () => {
+  it('rotateRoles is a pure 5×5 rotation: identity at 0 and 4, count-preserving', () => {
+    const roles = Array.from({ length: 25 }, (_, i) => (['teamA', 'teamB', 'neutral', 'assassin'][i % 4] as CardRole));
+    expect(rotateRoles(roles, 0)).toEqual(roles);
+    expect(rotateRoles(roles, 4)).toEqual(roles);
+    expect(rotateRoles(rotateRoles(roles, 2), 2)).toEqual(roles); // 180 twice = identity
+    const tally = (r: CardRole[]) => r.filter((x) => x === 'assassin').length;
+    expect(tally(rotateRoles(roles, 1))).toBe(tally(roles)); // permutation, count unchanged
+  });
+
+  it('starts in the orientation phase and CHOOSE_ORIENTATION rotates the key (words fixed)', () => {
+    const s = createInitialState(makeConfig({ chooseOrientation: true }), 7);
+    expect(s.phase).toBe('orientation');
+    const words = s.board.map((c) => c.wordId);
+    const r = reducer(s, { type: 'CHOOSE_ORIENTATION', rotation: 1 });
+    expect(r.phase).toBe('spymasterHandoff');
+    expect(r.orientation).toBe(1);
+    expect(r.board.map((c) => c.wordId)).toEqual(words); // words never move
+    expect(cellsByRole(r, 'teamA')).toHaveLength(9);
+    expect(cellsByRole(r, 'teamB')).toHaveLength(8);
+    expect(cellsByRole(r, 'neutral')).toHaveLength(7);
+    expect(cellsByRole(r, 'assassin')).toHaveLength(1);
+    // rotation 0 leaves the key unchanged; out-of-phase is a no-op (same ref)
+    expect(reducer(s, { type: 'CHOOSE_ORIENTATION', rotation: 0 }).board.map((c) => c.role)).toEqual(
+      s.board.map((c) => c.role),
+    );
+    expect(reducer(r, { type: 'CHOOSE_ORIENTATION', rotation: 2 })).toBe(r);
+  });
+
+  it('REVEAL_KEY_TO_SPYMASTER is a no-op until orientation is chosen', () => {
+    const s = createInitialState(makeConfig({ chooseOrientation: true }), 1);
+    expect(reducer(s, { type: 'REVEAL_KEY_TO_SPYMASTER' })).toBe(s);
   });
 });
 

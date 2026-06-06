@@ -1,6 +1,6 @@
 import type { GameModule } from '../../sdk/types';
 import { manifest } from './manifest';
-import { createInitialState, reducer } from './logic';
+import { createInitialState, reducer, selectWinners } from './logic';
 import type { DowrAction, DowrState } from './logic';
 import { defaultConfig, validateConfig } from './config';
 import { SetupScreen } from './screens/SetupScreen';
@@ -13,6 +13,14 @@ const mod: GameModule<DowrState, DowrAction> = {
   screens: { Setup: SetupScreen, Play: PlayScreen, Results: ResultsScreen },
   defaultConfig,
   validateConfig,
+  getOutcome: (s, c) => {
+    const winTeams = selectWinners(s);
+    return {
+      mode: 'team',
+      winnerIds: s.teams.filter((t) => winTeams.includes(t.id)).flatMap((t) => t.memberIds),
+      participantIds: c.players.map((p) => p.id),
+    };
+  },
 };
 
 export default mod;

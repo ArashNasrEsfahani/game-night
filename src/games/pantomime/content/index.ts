@@ -3,6 +3,7 @@ import animals from './animals.json';
 import actions from './actions.json';
 import famous from './famous.json';
 import tv from './tv.json';
+import proverbs from './proverbs.json';
 import type {
   PantomimeCategory,
   PantomimeDeckFile,
@@ -19,7 +20,7 @@ export type {
   RealCategory,
 } from './types';
 
-export const REAL_CATEGORIES: RealCategory[] = ['movies', 'tv', 'animals', 'actions', 'famous'];
+export const REAL_CATEGORIES: RealCategory[] = ['movies', 'tv', 'animals', 'actions', 'famous', 'proverbs'];
 
 /** Static content indexed by real category. */
 export const CONTENT: Record<RealCategory, PantomimePrompt[]> = {
@@ -28,6 +29,7 @@ export const CONTENT: Record<RealCategory, PantomimePrompt[]> = {
   animals: (animals as PantomimeDeckFile).prompts,
   actions: (actions as PantomimeDeckFile).prompts,
   famous: (famous as PantomimeDeckFile).prompts,
+  proverbs: (proverbs as PantomimeDeckFile).prompts,
 };
 
 export const ALL_PROMPTS: PantomimePrompt[] = REAL_CATEGORIES.flatMap((c) => CONTENT[c]);

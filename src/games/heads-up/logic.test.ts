@@ -10,9 +10,9 @@ import {
   computeWinners,
 } from './logic';
 import type { HeadsUpState } from './logic';
-import { DEFAULT_OPTIONS } from './config';
+import { DEFAULT_OPTIONS, selectedDifficulties } from './config';
 import type { HeadsUpOptions } from './config';
-import { mergedPool, validateContent } from './content';
+import { DIFFICULTIES, mergedPool, validateContent } from './content';
 
 const seat = (id: string): PlayerSeat => ({ id: asPlayerId(id), name: id.toUpperCase() });
 
@@ -40,6 +40,43 @@ function playRound(s: HeadsUpState, gots: number, passes: number, seed = 3): Hea
 describe('heads-up content', () => {
   it('ships valid bilingual content', () => {
     expect(validateContent()).toEqual([]);
+  });
+});
+
+describe('heads-up difficulty', () => {
+  it('selectedDifficulties lists enabled tiers and never empties', () => {
+    expect(selectedDifficulties({ ...DEFAULT_OPTIONS })).toEqual(['easy', 'medium', 'hard']);
+    expect(
+      selectedDifficulties({
+        ...DEFAULT_OPTIONS,
+        difficulties: { easy: false, medium: true, hard: false },
+      }),
+    ).toEqual(['medium']);
+    expect(
+      selectedDifficulties({
+        ...DEFAULT_OPTIONS,
+        difficulties: { easy: false, medium: false, hard: false },
+      }),
+    ).toEqual(['easy', 'medium', 'hard']);
+  });
+
+  it('mergedPool partitions cleanly across the three tiers', () => {
+    const all = mergedPool(['animals']);
+    const byTier = DIFFICULTIES.flatMap((d) => mergedPool(['animals'], [d]));
+    expect([...byTier].sort()).toEqual([...all].sort()); // each card lands in exactly one tier
+    expect(mergedPool(['animals'], DIFFICULTIES)).toHaveLength(all.length);
+    expect(mergedPool(['animals'], ['medium']).length).toBeLessThanOrEqual(all.length);
+  });
+
+  it('createInitialState filters the deck by selected difficulty', () => {
+    const all = createInitialState(makeConfig(), 1);
+    const oneTier = createInitialState(
+      makeConfig({ difficulties: { easy: false, medium: true, hard: false } }),
+      1,
+    );
+    expect(oneTier.deck.length).toBeLessThanOrEqual(all.deck.length);
+    const mediumSet = new Set(mergedPool(['animals'], ['medium']));
+    expect(oneTier.deck.every((k) => mediumSet.has(k))).toBe(true);
   });
 });
 

@@ -1,6 +1,6 @@
 import type { GameModule } from '../../sdk/types';
 import { manifest } from './manifest';
-import { createInitialState, reducer } from './logic';
+import { createInitialState, reducer, computeWinners } from './logic';
 import type { NhieAction, NhieState } from './logic';
 import { defaultConfig, validateConfig } from './config';
 import { SetupScreen } from './screens/SetupScreen';
@@ -13,6 +13,11 @@ const mod: GameModule<NhieState, NhieAction> = {
   screens: { Setup: SetupScreen, Play: PlayScreen, Results: ResultsScreen },
   defaultConfig,
   validateConfig,
+  getOutcome: (s, c) => ({
+    mode: 'individual',
+    winnerIds: computeWinners(s),
+    participantIds: c.players.map((p) => p.id),
+  }),
 };
 
 export default mod;

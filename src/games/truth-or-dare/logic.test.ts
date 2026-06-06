@@ -83,6 +83,16 @@ describe('tod selection', () => {
     expect(reducer(s, { type: 'SPIN', seed: 1 })).toBe(s);
   });
 
+  it('SPIN drives both spinner and bottle modes', () => {
+    for (const selectionMode of ['spinner', 'bottle'] as const) {
+      const s = createInitialState(makeConfig({ selectionMode }), 1);
+      const next = reducer(s, { type: 'SPIN', seed: 9 });
+      expect(next.phase).toBe('choosing');
+      expect(next.activePlayerId).not.toBeNull();
+      expect(next.spinSerial).toBe(s.spinSerial + 1);
+    }
+  });
+
   it('NEXT_PLAYER advances and wraps', () => {
     let s = createInitialState(makeConfig(), 1);
     s = reducer(s, { type: 'NEXT_PLAYER' });

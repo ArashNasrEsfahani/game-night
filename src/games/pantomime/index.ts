@@ -13,6 +13,11 @@ const mod: GameModule<PantomimeState, PantomimeAction> = {
   screens: { Setup: SetupScreen, Play: PlayScreen, Results: ResultsScreen },
   defaultConfig,
   validateConfig,
+  getOutcome: (s, c) => ({
+    mode: 'team',
+    winnerIds: s.teams.filter((t) => s.winnerTeamIds.includes(t.teamId)).flatMap((t) => t.playerIds),
+    participantIds: c.players.map((p) => p.id),
+  }),
 };
 
 export default mod;

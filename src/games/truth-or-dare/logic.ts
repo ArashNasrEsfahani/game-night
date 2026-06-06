@@ -184,7 +184,11 @@ export function reducer(state: ToDState, action: ToDAction): ToDState {
   const s = state;
   switch (action.type) {
     case 'SPIN': {
-      if (s.phase !== 'idle' || s.options.selectionMode !== 'spinner') return s;
+      if (
+        s.phase !== 'idle' ||
+        (s.options.selectionMode !== 'spinner' && s.options.selectionMode !== 'bottle')
+      )
+        return s;
       const target = pickSpinTarget(
         s.playerIds,
         s.lastPlayerId,

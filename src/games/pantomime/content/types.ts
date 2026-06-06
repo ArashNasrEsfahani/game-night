@@ -1,7 +1,14 @@
 import type { LocalizedString } from '../../../sdk/types';
 
 /** The real decks shipped with the game. "mixed" is a virtual deck (union of all real decks). */
-export type PantomimeCategory = 'movies' | 'animals' | 'actions' | 'famous' | 'tv' | 'mixed';
+export type PantomimeCategory =
+  | 'movies'
+  | 'animals'
+  | 'actions'
+  | 'famous'
+  | 'tv'
+  | 'proverbs'
+  | 'mixed';
 
 /** A real (non-virtual) category that maps to a content file. */
 export type RealCategory = Exclude<PantomimeCategory, 'mixed'>;

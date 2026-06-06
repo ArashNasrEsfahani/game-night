@@ -3,7 +3,7 @@ import type { GameManifest } from '../../sdk/types';
 export const manifest: GameManifest = {
   id: 'heads-up',
   name: { en: 'Heads Up!', fa: 'حدس بزن!' },
-  tagline: { en: 'Phone on your forehead — guess the word!', fa: 'گوشی روی پیشانی — کلمه را حدس بزن!' },
+  tagline: { en: 'Phone on your forehead, guess the word!', fa: 'گوشی روی پیشانی، کلمه را حدس بزن!' },
   description: {
     en: 'Hold the phone on your forehead so the group can see the word. They give clues; you guess against the clock. Got it or pass, then race to the next word.',
     fa: 'گوشی را روی پیشانی بگیر تا جمع کلمه را ببینند. آن‌ها سرنخ می‌دهند و تو با زمان مسابقه می‌دهی. درست حدس زدی یا رد کن، بعد سراغ کلمهٔ بعدی برو.',

@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import type { GameConfig, GameScreenProps, PlayerSeat, TeamSetup } from '../../../sdk/types';
 import { Screen, AppBar, Button, SegmentedControl, Stepper, Toggle, MotifDivider } from '../../../sdk/ui';
 import { useRosterStore } from '../../../store/rosterStore';
+import { PlayerPicker } from '../../../app/components/PlayerPicker';
 import { asTeamId } from '../../../engine/ids';
 import {
   DEFAULT_OPTIONS,
@@ -90,27 +91,12 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<DowrState, DowrAction>
               </span>
             )}
           </div>
-          {players.length === 0 ? (
-            <Button variant="secondary" onClick={() => navigate('/players')}>
-              {t('players.add')}
-            </Button>
-          ) : (
-            <>
-              <div className="flex flex-wrap gap-2">
-                {players.map((p) => (
-                  <button
-                    key={p.id}
-                    onClick={() => togglePlayer(p.id)}
-                    className={chip(selected.includes(p.id))}
-                  >
-                    {p.emoji ? `${p.emoji} ` : ''}
-                    {p.name}
-                  </button>
-                ))}
-              </div>
-              <p className="mt-2 text-xs text-[var(--text-muted)]">{t('dowr.evenHint')}</p>
-            </>
-          )}
+          <PlayerPicker
+            selected={selected}
+            onToggle={togglePlayer}
+            onManageAll={() => navigate('/players')}
+          />
+          <p className="mt-2 text-xs text-[var(--text-muted)]">{t('dowr.evenHint')}</p>
         </section>
 
         <MotifDivider motif="tar" />

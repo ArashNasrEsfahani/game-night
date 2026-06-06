@@ -53,7 +53,9 @@ describe('mlt createInitialState', () => {
   });
 
   it('clamps roundCount to the pool and flags too few players', () => {
-    expect(createInitialState(makeConfig({ roundCount: 99 }), 1).orderedPromptIds).toHaveLength(POOL);
+    expect(createInitialState(makeConfig({ roundCount: 99 }), 1).orderedPromptIds).toHaveLength(
+      Math.min(99, POOL),
+    );
     expect(createInitialState(makeConfig({}, ['a', 'b']), 1).phase).toBe('error');
   });
 });

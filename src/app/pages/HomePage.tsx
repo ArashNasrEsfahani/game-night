@@ -17,6 +17,8 @@ import {
 import { stagger, staggerItem, popIn } from '../../sdk/motion';
 import { useLocalize } from '../../lib/localize';
 import { buildGamePath } from '../routes';
+import { Leaderboard } from '../components/Leaderboard';
+import { Guide } from '../components/Guide';
 
 /** Drifting blurred disco orbs behind the page — "disco lights everywhere". */
 const ORBS = [
@@ -70,6 +72,8 @@ export function HomePage() {
   const setLanguage = useSettingsStore((s) => s.setLanguage);
   const muted = useSettingsStore((s) => s.muted);
   const setMuted = useSettingsStore((s) => s.setMuted);
+  const guidance = useSettingsStore((s) => s.guidance);
+  const setGuidance = useSettingsStore((s) => s.setGuidance);
   const isDark =
     theme === 'dark' ||
     (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
@@ -115,13 +119,22 @@ export function HomePage() {
                 aria: t('settings.sound'),
                 onClick: () => setMuted(!muted),
               },
+              {
+                key: 'guide',
+                label: '💡',
+                aria: t('settings.guidance'),
+                onClick: () => setGuidance(!guidance),
+                dim: !guidance,
+              },
             ].map((b) => (
               <motion.button
                 key={b.key}
                 onClick={b.onClick}
                 aria-label={b.aria}
                 whileTap={{ scale: 0.88 }}
-                className="grid h-9 min-w-9 place-items-center rounded-full bg-[var(--surface-2)] px-3 text-sm font-bold text-[var(--text)] shadow-[inset_0_0_0_1px_var(--border-glow)]"
+                className={`grid h-9 min-w-9 place-items-center rounded-full bg-[var(--surface-2)] px-3 text-sm font-bold text-[var(--text)] shadow-[inset_0_0_0_1px_var(--border-glow)] ${
+                  'dim' in b && b.dim ? 'opacity-40' : ''
+                }`}
               >
                 {b.label}
               </motion.button>
@@ -165,6 +178,12 @@ export function HomePage() {
             </motion.button>
           )}
         </motion.section>
+
+        {/* ───── GUIDANCE ───── step-by-step help, toggled by the 💡 button */}
+        <Guide className="mt-1">{t('guide.home')}</Guide>
+
+        {/* ───── OVERALL LEADERBOARD ───── (renders only once a match has been played) */}
+        <Leaderboard />
 
         {/* ───── GAME GRID ───── */}
         <div ref={gamesRef} className="scroll-mt-4 pt-7">

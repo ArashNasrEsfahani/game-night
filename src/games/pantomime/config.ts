@@ -10,6 +10,7 @@ export const PANTOMIME_CATEGORIES: PantomimeCategory[] = [
   'animals',
   'actions',
   'famous',
+  'proverbs',
   'mixed',
 ];
 export const PANTOMIME_DIFFICULTIES: PantomimeDifficulty[] = ['easy', 'medium', 'hard'];

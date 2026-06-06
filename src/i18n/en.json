@@ -28,7 +28,7 @@
     "empty": "No games found",
     "players": "{{count}} players",
     "minutes": "{{min}}–{{max}} min",
-    "heroTagline": "Pass-and-play party games — one phone, everyone plays.",
+    "heroTagline": "Pass-and-play party games. One phone, everyone plays.",
     "chooseGame": "Choose a game",
     "resume": "Resume game"
   },
@@ -57,6 +57,7 @@
     "title": "Players",
     "add": "Add player",
     "namePlaceholder": "Player name",
+    "manageAll": "Manage",
     "groups": "Saved groups",
     "saveGroup": "Save group",
     "empty": "Add some players to get started"
@@ -73,8 +74,16 @@
     "dark": "Dark",
     "on": "On",
     "off": "Off",
+    "guidance": "Guidance",
+    "guidanceHint": "Show step-by-step help boxes",
     "signIn": "Sign in",
     "signOut": "Sign out"
+  },
+  "guide": {
+    "home": "New here? 1) Add players  2) Pick a game  3) Play. Everything works offline with no sign-in, and your wins land on the leaderboard. Tap 💡 anytime to hide these tips.",
+    "setup": "Pick who's playing (tap to include, ✕ to remove, or type a name to add), set the options, then press Start.",
+    "play": "Follow the prompts on screen. Tap the ? in the corner anytime for the full rules.",
+    "results": "Here's who won. Hit Play again for a rematch or head Home. Your wins are saved to the leaderboard."
   },
   "a11y": {
     "loading": "Loading",
@@ -188,13 +197,22 @@
       "actions": "Actions",
       "famous": "Famous people",
       "mixed": "Mixed",
-      "tv": "TV Shows"
+      "tv": "TV Shows",
+      "proverbs": "Persian Proverbs"
     },
     "diff": {
       "easy": "Easy",
       "medium": "Medium",
       "hard": "Hard"
     }
+  },
+  "leaderboard": {
+    "title": "Leaderboard",
+    "matches": "{{n}} games played",
+    "winLine": "{{total}} wins ({{ind}}/{{team}})",
+    "individual": "Solo",
+    "group": "Group",
+    "reset": "Reset"
   },
   "nhie": {
     "title": "Never Have I Ever",
@@ -337,8 +355,12 @@
     "selection": "Pick player by",
     "sel": {
       "spinner": "Spinner",
+      "bottle": "Bottle",
       "sequential": "In order"
     },
+    "bottleHint": "Tap the bottle to spin",
+    "bottleSpin": "Spin the bottle",
+    "spinning": "Spinning…",
     "scoring": "Scoring",
     "score": {
       "casual": "Casual",
@@ -386,6 +408,12 @@
     "title": "Heads Up!",
     "teamName": "Team {{n}}",
     "decks": "Decks",
+    "difficulty": "Difficulty",
+    "diff": {
+      "easy": "Easy",
+      "medium": "Medium",
+      "hard": "Hard"
+    },
     "mode": "Mode",
     "solo": "Solo",
     "teams": "Teams",
@@ -462,6 +490,16 @@
     "startingTeam": "Starting team",
     "random": "Random",
     "bonusGuess": "Allow the bonus +1 guess",
+    "orientationToggle": "First team rotates the key",
+    "startsFirst": "starts first",
+    "chooseOrientation": "Choose the key orientation",
+    "orientationHint": "Pick how to turn the secret grid, then start the game.",
+    "orient": {
+      "0": "⬆ 0°",
+      "1": "➡ 90°",
+      "2": "⬇ 180°",
+      "3": "⬅ 270°"
+    },
     "errorSetup": "Need 2 teams of 2+ and 25 words",
     "playAgain": "Play again",
     "imSpymaster": "I'm the spymaster",
@@ -487,6 +525,30 @@
     "rematch": "New board",
     "turnTime": "Turn time",
     "packs": "Word packs"
+  },
+  "mine": {
+    "title": "Minesweeper",
+    "playersHint": "1 player = classic solo · 2–4 players take turns",
+    "difficulty": "Difficulty",
+    "diff": {
+      "easy": "Easy",
+      "medium": "Medium",
+      "hard": "Hard",
+      "custom": "Custom"
+    },
+    "cols": "Columns",
+    "rows": "Rows",
+    "mines": "Mines",
+    "lives": "Lives",
+    "boardHint": "≈ {{mines}} mines on a {{cols}}×{{rows}} board",
+    "turnOf": "{{name}}'s turn",
+    "flagOn": "🚩 Flag mode ON",
+    "flagOff": "👆 Tap to reveal",
+    "tapHint": "Tap to reveal · long-press or flag mode to flag · tap a number to chord",
+    "youSwept": "You swept the board!",
+    "boom": "Boom! You hit a mine",
+    "cellsValue": "{{n}} cells",
+    "playAgain": "New board"
   },
   "mf": {
     "title": "Mafia",
