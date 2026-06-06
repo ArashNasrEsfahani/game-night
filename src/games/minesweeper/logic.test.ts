@@ -44,12 +44,30 @@ describe('mine-hunt createInitialState', () => {
 });
 
 describe('mine-hunt layout', () => {
-  it('scatters exactly N mines deterministically (no first-click safety — a mine can be anywhere)', () => {
+  it('scatters mines deterministically, leaves no 0-clue safe square, and seeds a few burst tiles', () => {
     const s = firstReveal(setup({ cols: 8, rows: 8, mines: 12 }), 27);
-    expect(s.board.filter((c) => c.mine)).toHaveLength(12);
     expect(s.minesPlaced).toBe(true);
+    expect(s.board.filter((c) => c.mine).length).toBeGreaterThanOrEqual(12); // coverage fill may add a few
+    // every safe square borders at least one mine (no blank clues)
+    expect(s.board.every((c) => c.mine || c.adjacent >= 1)).toBe(true);
+    // some, but not many, burst tiles
+    const bursts = s.board.filter((c) => c.burst).length;
+    expect(bursts).toBeGreaterThanOrEqual(1);
+    expect(bursts).toBeLessThan(8);
     const again = firstReveal(setup({ cols: 8, rows: 8, mines: 12 }), 27);
-    expect(again.board.map((c) => c.mine)).toEqual(s.board.map((c) => c.mine));
+    expect(again.board.map((c) => c.mine)).toEqual(s.board.map((c) => c.mine)); // deterministic
+  });
+
+  it('tapping a burst tile opens a cluster of safe squares at once', () => {
+    let s = firstReveal(setup({ cols: 10, rows: 10, mines: 14 }), 0, 4);
+    const burst = s.board.find((c) => c.burst && !c.revealed);
+    if (!burst) return; // extremely unlikely, but burst tiles are seeded
+    const revealedBefore = s.board.filter((c) => c.revealed).length;
+    s = reducer(s, { type: 'REVEAL', index: burst.index, seed: 4 });
+    const revealedAfter = s.board.filter((c) => c.revealed).length;
+    expect(revealedAfter - revealedBefore).toBeGreaterThan(1); // opened a bunch, not just one
+    expect(s.board[burst.index].revealed).toBe(true);
+    expect(s.board[burst.index].mine).toBe(false); // a burst tile is always safe
   });
 });
 
@@ -90,7 +108,7 @@ describe('mine-hunt end states', () => {
     expect(s.winReason).toBe('soloWin');
     expect(s.winnerIds).toEqual([s.seats[0].id]);
     expect(s.board.every((c) => c.revealed)).toBe(true);
-    expect(foundCount(s.board)).toBe(5);
+    expect(foundCount(s.board)).toBe(s.board.filter((c) => c.mine).length); // found every mine on the board
   });
 
   it('finding the last mine ends a versus game; the top finder wins', () => {

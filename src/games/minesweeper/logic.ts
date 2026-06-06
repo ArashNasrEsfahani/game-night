@@ -17,9 +17,11 @@ export type WinReason = 'allFound' | 'soloWin' | null;
 export interface Cell {
   index: number;
   mine: boolean;
-  adjacent: number; // 0..8 neighbouring mines (computed once mines are placed)
+  adjacent: number; // 1..8 neighbouring mines (every safe cell borders at least one)
   revealed: boolean;
   revealedBy: string | null; // seat id, for tint + score attribution
+  /** A rare "burst" square: tapping it opens a small cluster of safe squares at once. */
+  burst: boolean;
 }
 
 export interface MineSeat {
@@ -65,16 +67,63 @@ export function neighbors(index: number, cols: number, rows: number): number[] {
 }
 
 /** Scatter `mines` mines anywhere on the board (a mine is a prize, so no first-click safety), then
- *  compute every safe cell's adjacency. Pure & deterministic for a given seed. */
+ *  GUARANTEE every safe square borders at least one mine — no 0-clue squares — by greedily adding a
+ *  few covering mines where needed. Pure & deterministic for a given seed (so the actual mine count
+ *  may end up a little above the requested one). */
 function placeMines(board: Cell[], cols: number, rows: number, mines: number, seed: number): Cell[] {
   const n = cols * rows;
-  const all = Array.from({ length: n }, (_, i) => i);
-  const mineIdx = new Set(shuffle(all, seed).slice(0, mines));
+  const order = shuffle(Array.from({ length: n }, (_, i) => i), seed);
+  const mineSet = new Set<number>(order.slice(0, Math.max(1, Math.min(mines, n - 1))));
+  const covered = (i: number) => mineSet.has(i) || neighbors(i, cols, rows).some((j) => mineSet.has(j));
+  for (const i of order) {
+    if (covered(i)) continue;
+    // Place a mine on the spot (self or a neighbour) that newly covers the most squares.
+    const candidates = [i, ...neighbors(i, cols, rows)].filter((j) => !mineSet.has(j));
+    let best = candidates[0];
+    let bestGain = -1;
+    for (const cand of candidates) {
+      const gain = [cand, ...neighbors(cand, cols, rows)].filter((k) => !covered(k)).length;
+      if (gain > bestGain) {
+        bestGain = gain;
+        best = cand;
+      }
+    }
+    mineSet.add(best);
+  }
+  // Pick a few (not many) safe squares to be "burst" tiles that open a cluster when tapped.
+  const safe = order.filter((i) => !mineSet.has(i));
+  const burstCount = Math.min(safe.length, Math.max(1, Math.round(n / 30)));
+  const burstSet = new Set(safe.slice(0, burstCount));
   return board.map((cell) => {
-    const mine = mineIdx.has(cell.index);
-    const adjacent = mine ? 0 : neighbors(cell.index, cols, rows).filter((j) => mineIdx.has(j)).length;
-    return { ...cell, mine, adjacent };
+    const mine = mineSet.has(cell.index);
+    const adjacent = mine ? 0 : neighbors(cell.index, cols, rows).filter((j) => mineSet.has(j)).length;
+    return { ...cell, mine, adjacent, burst: !mine && burstSet.has(cell.index) };
   });
+}
+
+/** Reveal a bounded cluster of safe squares around a burst tile (flood through safe cells, stopping
+ *  at mines, capped so it opens "a bunch" without clearing the whole board). */
+function revealBurst(board: Cell[], start: number, cols: number, rows: number, seatId: string): Cell[] {
+  const CAP = 10;
+  const b = board.map((c) => ({ ...c }));
+  const queue = [start];
+  const seen = new Set<number>([start]);
+  let opened = 0;
+  while (queue.length && opened < CAP) {
+    const i = queue.shift()!;
+    const cell = b[i];
+    if (cell.mine || cell.revealed) continue;
+    cell.revealed = true;
+    cell.revealedBy = seatId;
+    opened++;
+    for (const j of neighbors(i, cols, rows)) {
+      if (!seen.has(j) && !b[j].mine && !b[j].revealed) {
+        seen.add(j);
+        queue.push(j);
+      }
+    }
+  }
+  return b;
 }
 
 const activeSeatIndex = (seats: MineSeat[], turnNo: number): number => {
@@ -93,15 +142,18 @@ function revealAll(board: Cell[]): Cell[] {
 
 /* ─────────────────────────  Lifecycle  ───────────────────────── */
 
+// Distinct, vivid colours so each player's turn (background) and found mines read as their own.
+const SEAT_PALETTE: ColorToken[] = ['rose', 'sky', 'lime', 'grape'];
+
 export function createInitialState(config: GameConfig, _seed: number): MinesweeperState {
   const options = readOptions(config);
   const { cols, rows, mines } = options;
   const n = cols * rows;
 
-  const seats: MineSeat[] = config.players.map((p) => ({
+  const seats: MineSeat[] = config.players.map((p, i) => ({
     id: p.id as string,
     name: p.name,
-    color: p.color,
+    color: p.color ?? SEAT_PALETTE[i % SEAT_PALETTE.length],
     score: 0,
   }));
 
@@ -111,6 +163,7 @@ export function createInitialState(config: GameConfig, _seed: number): Minesweep
     adjacent: 0,
     revealed: false,
     revealedBy: null,
+    burst: false,
   }));
 
   // Need at least one safe cell so there are clues to read.
@@ -151,7 +204,9 @@ function winnersByScore(seats: MineSeat[]): string[] {
   return seats.filter((s) => s.score === best).map((s) => s.id);
 }
 
-const minesLeftToFind = (s: MinesweeperState): number => s.options.mines - foundCount(s.board);
+// Actual mines may exceed the requested count (coverage fill), so count from the board once placed.
+const minesLeftToFind = (s: MinesweeperState): number =>
+  (s.minesPlaced ? s.board.filter((c) => c.mine).length : s.options.mines) - foundCount(s.board);
 
 /** After a tap: end the game if every mine is found; otherwise a mine keeps the turn (reward) and a
  *  safe square passes it. Solo always keeps going (no one to pass to). */
@@ -182,14 +237,18 @@ export function reducer(state: MinesweeperState, action: MinesweeperAction): Min
       const ai = activeSeatIndex(base.seats, base.turnNo);
       const seatId = base.seats[ai].id;
 
-      const nextBoard = board.map((c) =>
-        c.index === action.index ? { ...c, revealed: true, revealedBy: seatId } : c,
-      );
-
       if (cell.mine) {
+        const nextBoard = board.map((c) =>
+          c.index === action.index ? { ...c, revealed: true, revealedBy: seatId } : c,
+        );
         const seats = base.seats.map((se, i) => (i === ai ? { ...se, score: se.score + 1 } : se));
         return afterPick({ ...base, board: nextBoard, seats, flash: { type: 'found', index: action.index } }, true);
       }
+      // Safe square: a burst tile opens a cluster, an ordinary tile opens just itself. Either way it
+      // reveals only safe squares (mines stay hidden) and passes the turn.
+      const nextBoard = cell.burst
+        ? revealBurst(board, action.index, base.cols, base.rows, seatId)
+        : board.map((c) => (c.index === action.index ? { ...c, revealed: true, revealedBy: seatId } : c));
       return afterPick({ ...base, board: nextBoard, flash: { type: 'safe', index: action.index } }, false);
     }
 

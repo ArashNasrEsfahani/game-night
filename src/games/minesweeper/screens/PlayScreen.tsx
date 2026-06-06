@@ -65,7 +65,15 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<Minesw
         {solo ? (
           <span className="tabular-nums text-[var(--text-muted)]">⏱ {fmt(elapsed)}</span>
         ) : (
-          <span className="font-bold dp-accent">{t('mine.turnOf', { name: active?.name ?? '' })}</span>
+          <motion.span
+            key={active?.id}
+            initial={{ opacity: 0, y: -6, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ type: 'spring', stiffness: 320, damping: 20 }}
+            className="font-bold dp-accent"
+          >
+            {t('mine.turnOf', { name: active?.name ?? '' })}
+          </motion.span>
         )}
       </div>
 
@@ -89,23 +97,26 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<Minesw
         </div>
       )}
 
-      <div className="relative flex flex-1 flex-col justify-center gap-3">
-        <AnimatePresence>
-          {toast && (
-            <motion.p
-              key={toast}
-              initial={{ y: -8, opacity: 0, scale: 0.9 }}
-              animate={{ y: 0, opacity: 1, scale: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ type: 'spring', stiffness: 300, damping: 18 }}
-              className={`text-center text-sm font-bold ${
-                s.flash?.type === 'found' ? 'text-[var(--color-game-gold-strong)]' : 'text-[var(--text-muted)]'
-              }`}
-            >
-              {toast}
-            </motion.p>
-          )}
-        </AnimatePresence>
+      <div className="flex flex-1 flex-col justify-center gap-3">
+        {/* Fixed-height slot so the toast never reflows (and jumps) the board. */}
+        <div className="flex h-6 items-center justify-center">
+          <AnimatePresence mode="wait">
+            {toast && (
+              <motion.p
+                key={toast}
+                initial={{ y: -8, opacity: 0, scale: 0.9 }}
+                animate={{ y: 0, opacity: 1, scale: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ type: 'spring', stiffness: 300, damping: 18 }}
+                className={`text-center text-sm font-bold ${
+                  s.flash?.type === 'found' ? 'text-[var(--color-game-gold-strong)]' : 'text-[var(--text-muted)]'
+                }`}
+              >
+                {toast}
+              </motion.p>
+            )}
+          </AnimatePresence>
+        </div>
         <MineGrid cells={s.board} cols={s.cols} seatColors={seatColors} onReveal={reveal} />
         <p className="text-center text-xs text-[var(--text-muted)]">{t('mine.tapHint')}</p>
       </div>

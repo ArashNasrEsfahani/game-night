@@ -27,7 +27,7 @@ export const manifest: GameManifest = {
     usesRevealGate: false,
     passAndPlay: true,
   },
-  stateVersion: 2,
+  stateVersion: 3,
   howToPlay: {
     en: 'The mines are what you want! Tap a square: if it hides a mine you found one (you score it and tap again), and if it is safe it shows a number for how many mines touch it and your turn passes to the next player. Nothing explodes and there are no lives. Read the numbers to deduce where mines are. The game ends when every mine is found, and whoever found the most wins. Solo, just hunt them all down.',
     fa: 'این بار مین‌ها را می‌خواهی! روی یک خانه بزن: اگر مین داشته باشد پیدایش کردی (امتیاز می‌گیری و دوباره می‌زنی)، و اگر امن باشد عددی نشان می‌دهد که چند مین کنارش است و نوبت به نفر بعد می‌رسد. هیچ‌چیز منفجر نمی‌شود و جانی در کار نیست. از روی عددها بفهم مین‌ها کجایند. وقتی همهٔ مین‌ها پیدا شد بازی تمام است و هرکس بیشترین را یافته باشد می‌برد. تنها هم می‌توانی همه را شکار کنی.',

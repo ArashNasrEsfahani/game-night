@@ -41,11 +41,15 @@ export function MineGrid({
         const base = revealed
           ? 'bg-[var(--surface-sunk)]'
           : 'bg-[var(--surface-2)] shadow-[inset_0_-2px_0_rgba(0,0,0,0.12),inset_0_1px_0_rgba(255,255,255,0.18)] active:translate-y-px';
-        // A found mine glows in the finder's colour; a revealed safe square gets a faint finder tint.
+        // A found mine fills with the finder's colour (so you can count each player's haul at a
+        // glance); a revealed safe square gets only a faint finder tint.
         const style =
           revealed && tint
             ? c.mine
-              ? { background: `color-mix(in oklab, var(--color-game-${tint}) 55%, var(--surface-sunk))` }
+              ? {
+                  background: `color-mix(in oklab, var(--color-game-${tint}) 82%, var(--surface-sunk))`,
+                  boxShadow: 'inset 0 0 0 2px rgb(255 255 255 / 0.35)',
+                }
               : { background: `color-mix(in oklab, var(--color-game-${tint}) 18%, var(--surface-sunk))` }
             : undefined;
         return (
