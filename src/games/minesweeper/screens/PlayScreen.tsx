@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { AnimatePresence, motion } from 'framer-motion';
 import type { GameScreenProps } from '../../../sdk/types';
-import { Screen, AppBar, Button, TurnAura } from '../../../sdk/ui';
+import { Screen, AppBar, TurnAura } from '../../../sdk/ui';
 import { MineGrid } from '../components/MineGrid';
 import { activeSeat, isSolo, minesLeft } from '../logic';
 import type { MinesweeperAction, MinesweeperState } from '../logic';
@@ -14,7 +15,6 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<Minesw
   const clock = ctx.clock;
   const dispatchRef = useRef(dispatch);
   dispatchRef.current = dispatch;
-  const [flagMode, setFlagMode] = useState(false);
   const solo = isSolo(s);
 
   // Solo stopwatch — screen-local, anchored to wall clock, never persisted (resume-safe).
@@ -27,17 +27,17 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<Minesw
     return stop;
   }, [solo, s.phase, clock]);
 
-  // Outcome feedback per reveal, then clear the flash.
+  // Feedback per tap, then clear the flash. A find is celebratory; a safe square is a soft pass.
   useEffect(() => {
     if (!s.flash) return;
-    if (s.flash.type === 'boom') {
-      ctx.sound.play('wrong');
-      ctx.haptics.error();
+    if (s.flash.type === 'found') {
+      ctx.sound.play('select');
+      ctx.haptics.success();
     } else if (s.flash.type === 'safe') {
-      ctx.sound.play('tap');
+      ctx.sound.play('pass');
       ctx.haptics.light();
     }
-    const stop = clock.interval(360, () => dispatchRef.current({ type: 'CLEAR_FLASH' }));
+    const stop = clock.interval(900, () => dispatchRef.current({ type: 'CLEAR_FLASH' }));
     return stop;
   }, [s.flash, clock, ctx]);
 
@@ -47,8 +47,13 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<Minesw
   );
 
   const reveal = (i: number) => { ctx.haptics.light(); dispatch({ type: 'REVEAL', index: i, seed: ctx.random.seed() }); };
-  const flag = (i: number) => { ctx.sound.play('tap'); ctx.haptics.light(); dispatch({ type: 'FLAG', index: i }); };
-  const chord = (i: number) => dispatch({ type: 'CHORD', index: i });
+
+  const toast =
+    s.flash?.type === 'found'
+      ? t('mine.goAgain')
+      : s.flash?.type === 'safe' && !solo
+        ? t('mine.missed')
+        : null;
 
   return (
     <Screen>
@@ -56,7 +61,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<Minesw
       <AppBar title={t('mine.title')} onBack={() => nav.exit()} />
 
       <div className="flex items-center justify-between px-1 pb-2 text-sm">
-        <span className="font-semibold">💣 {minesLeft(s)}</span>
+        <span className="font-semibold">💣 {t('mine.minesLeft', { n: minesLeft(s) })}</span>
         {solo ? (
           <span className="tabular-nums text-[var(--text-muted)]">⏱ {fmt(elapsed)}</span>
         ) : (
@@ -72,33 +77,36 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<Minesw
               <span
                 key={se.id}
                 className={`rounded-full px-2.5 py-1 text-xs font-semibold ${
-                  se.eliminated ? 'opacity-40' : ''
-                } ${isActive ? 'bg-[var(--game-accent-strong)] text-[var(--game-on-accent)]' : 'bg-[var(--surface-2)]'}`}
+                  isActive
+                    ? 'bg-[var(--accent-fill-strong)] text-[var(--game-on-accent)]'
+                    : 'dp-glass-2 text-[var(--text-muted)]'
+                }`}
               >
-                {se.name} · {se.score} · {se.eliminated ? '💀' : '❤'.repeat(se.lives)}
+                {se.name} · 💣 {se.score}
               </span>
             );
           })}
         </div>
       )}
 
-      <div className="flex flex-1 flex-col justify-center gap-3">
-        <MineGrid
-          cells={s.board}
-          cols={s.cols}
-          flagMode={flagMode}
-          seatColors={seatColors}
-          onReveal={reveal}
-          onFlag={flag}
-          onChord={chord}
-        />
-        <Button
-          variant={flagMode ? 'primary' : 'secondary'}
-          fullWidth
-          onClick={() => { ctx.sound.play('tap'); setFlagMode((f) => !f); }}
-        >
-          {flagMode ? t('mine.flagOn') : t('mine.flagOff')}
-        </Button>
+      <div className="relative flex flex-1 flex-col justify-center gap-3">
+        <AnimatePresence>
+          {toast && (
+            <motion.p
+              key={toast}
+              initial={{ y: -8, opacity: 0, scale: 0.9 }}
+              animate={{ y: 0, opacity: 1, scale: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ type: 'spring', stiffness: 300, damping: 18 }}
+              className={`text-center text-sm font-bold ${
+                s.flash?.type === 'found' ? 'text-[var(--color-game-gold-strong)]' : 'text-[var(--text-muted)]'
+              }`}
+            >
+              {toast}
+            </motion.p>
+          )}
+        </AnimatePresence>
+        <MineGrid cells={s.board} cols={s.cols} seatColors={seatColors} onReveal={reveal} />
         <p className="text-center text-xs text-[var(--text-muted)]">{t('mine.tapHint')}</p>
       </div>
     </Screen>

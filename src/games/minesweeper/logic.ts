@@ -1,30 +1,32 @@
 // src/games/minesweeper/logic.ts — PURE logic. No clock/RNG/IO; the mine-layout seed arrives in the
-// first REVEAL action (first-click safety), keeping the reducer deterministic and side-effect free.
+// first REVEAL action, keeping the reducer deterministic and side-effect free.
+//
+// This is "reverse Minesweeper": the mines are the PRIZES. On your turn you tap a square —
+//   • a MINE → you found one (+1) and you get to tap again (reward),
+//   • a SAFE square → it reveals a number clue (how many mines touch it) and your turn passes.
+// Nothing explodes; there are no lives. The game ends when every mine has been found, and whoever
+// found the most wins. The number clues are the deduction heart of Minesweeper, now used to *hunt*.
 import type { ColorToken, GameConfig, GameStateBase } from '../../sdk/types';
 import { shuffle } from '../../engine/rng';
 import { readOptions } from './config';
 import type { MinesweeperOptions } from './config';
 
 export type MinePhase = 'playing' | 'gameOver';
-export type WinReason = 'swept' | 'lastSurvivor' | 'soloWin' | 'soloLoss' | null;
+export type WinReason = 'allFound' | 'soloWin' | null;
 
 export interface Cell {
   index: number;
   mine: boolean;
   adjacent: number; // 0..8 neighbouring mines (computed once mines are placed)
   revealed: boolean;
-  flagged: boolean;
   revealedBy: string | null; // seat id, for tint + score attribution
-  exploded: boolean; // a detonated mine renders as a boom, not a flag
 }
 
 export interface MineSeat {
   id: string;
   name: string;
   color?: ColorToken;
-  score: number; // safe cells personally revealed
-  lives: number;
-  eliminated: boolean;
+  score: number; // mines personally found
 }
 
 export interface MinesweeperState extends GameStateBase {
@@ -35,9 +37,8 @@ export interface MinesweeperState extends GameStateBase {
   board: Cell[];
   minesPlaced: boolean; // false until the first reveal seeds the layout
   seats: MineSeat[];
-  turnNo: number; // active seat = first non-eliminated at/after turnNo
-  safeRemaining: number; // safe cells not yet revealed; 0 = swept
-  flash: { type: 'boom' | 'safe' | 'win'; index?: number } | null;
+  turnNo: number; // active seat = turnNo modulo seat count
+  flash: { type: 'found' | 'safe' | 'win'; index?: number } | null;
   winnerIds: string[];
   winReason: WinReason;
   errorCode: 'BAD_BOARD' | null;
@@ -45,8 +46,6 @@ export interface MinesweeperState extends GameStateBase {
 
 export type MinesweeperAction =
   | { type: 'REVEAL'; index: number; seed: number } // seed only consumed on the first reveal
-  | { type: 'FLAG'; index: number }
-  | { type: 'CHORD'; index: number }
   | { type: 'CLEAR_FLASH' };
 
 /* ─────────────────────────  Pure board helpers  ───────────────────────── */
@@ -65,78 +64,28 @@ export function neighbors(index: number, cols: number, rows: number): number[] {
   return out;
 }
 
-/** Place `mines` mines avoiding the first click's 3×3, then compute every cell's adjacency. Pure. */
-function placeMines(
-  board: Cell[],
-  cols: number,
-  rows: number,
-  mines: number,
-  firstIndex: number,
-  seed: number,
-): Cell[] {
+/** Scatter `mines` mines anywhere on the board (a mine is a prize, so no first-click safety), then
+ *  compute every safe cell's adjacency. Pure & deterministic for a given seed. */
+function placeMines(board: Cell[], cols: number, rows: number, mines: number, seed: number): Cell[] {
   const n = cols * rows;
-  const forbidden = new Set<number>([firstIndex, ...neighbors(firstIndex, cols, rows)]);
-  const candidates: number[] = [];
-  for (let i = 0; i < n; i++) if (!forbidden.has(i)) candidates.push(i);
-  const mineIdx = new Set(shuffle(candidates, seed).slice(0, mines));
+  const all = Array.from({ length: n }, (_, i) => i);
+  const mineIdx = new Set(shuffle(all, seed).slice(0, mines));
   return board.map((cell) => {
     const mine = mineIdx.has(cell.index);
-    const adjacent = mine
-      ? 0
-      : neighbors(cell.index, cols, rows).filter((j) => mineIdx.has(j)).length;
+    const adjacent = mine ? 0 : neighbors(cell.index, cols, rows).filter((j) => mineIdx.has(j)).length;
     return { ...cell, mine, adjacent };
   });
 }
 
-/** Flood-reveal from a safe cell: opens the connected zero-region + its numbered border. Returns a
- *  NEW board and the count of newly-revealed safe cells (for scoring + safeRemaining). */
-function floodReveal(
-  board: Cell[],
-  start: number,
-  cols: number,
-  rows: number,
-  seatId: string,
-): { board: Cell[]; count: number } {
-  const b = board.map((c) => ({ ...c }));
-  let count = 0;
-  const stack = [start];
-  while (stack.length) {
-    const i = stack.pop()!;
-    const cell = b[i];
-    if (cell.revealed || cell.flagged || cell.mine) continue;
-    cell.revealed = true;
-    cell.revealedBy = seatId;
-    count++;
-    if (cell.adjacent === 0) {
-      for (const j of neighbors(i, cols, rows)) {
-        if (!b[j].revealed && !b[j].flagged) stack.push(j);
-      }
-    }
-  }
-  return { board: b, count };
-}
-
 const activeSeatIndex = (seats: MineSeat[], turnNo: number): number => {
   const n = seats.length;
-  let idx = ((turnNo % n) + n) % n;
-  for (let k = 0; k < n; k++) {
-    if (!seats[idx].eliminated) return idx;
-    idx = (idx + 1) % n;
-  }
-  return idx;
-};
-
-const nextTurn = (seats: MineSeat[], turnNo: number): number => {
-  const n = seats.length;
-  for (let t = turnNo + 1; t <= turnNo + n; t++) {
-    const idx = ((t % n) + n) % n;
-    if (!seats[idx].eliminated) return t;
-  }
-  return turnNo;
+  return ((turnNo % n) + n) % n;
 };
 
 export const activeSeat = (s: MinesweeperState): MineSeat =>
   s.seats[activeSeatIndex(s.seats, s.turnNo)];
+
+export const foundCount = (board: Cell[]): number => board.filter((c) => c.mine && c.revealed).length;
 
 function revealAll(board: Cell[]): Cell[] {
   return board.map((c) => (c.revealed ? c : { ...c, revealed: true }));
@@ -154,8 +103,6 @@ export function createInitialState(config: GameConfig, _seed: number): Minesweep
     name: p.name,
     color: p.color,
     score: 0,
-    lives: options.lives,
-    eliminated: false,
   }));
 
   const board: Cell[] = Array.from({ length: n }, (_, index) => ({
@@ -163,16 +110,15 @@ export function createInitialState(config: GameConfig, _seed: number): Minesweep
     mine: false,
     adjacent: 0,
     revealed: false,
-    flagged: false,
     revealedBy: null,
-    exploded: false,
   }));
 
+  // Need at least one safe cell so there are clues to read.
   const errorCode: MinesweeperState['errorCode'] =
-    seats.length < 1 || seats.length > 4 || n < 16 || mines > n - 9 || mines < 1 ? 'BAD_BOARD' : null;
+    seats.length < 1 || seats.length > 4 || n < 16 || mines >= n || mines < 1 ? 'BAD_BOARD' : null;
 
   return {
-    v: 1,
+    v: 2,
     phase: errorCode ? 'gameOver' : 'playing',
     finished: false,
     options,
@@ -182,7 +128,6 @@ export function createInitialState(config: GameConfig, _seed: number): Minesweep
     minesPlaced: false,
     seats,
     turnNo: 0,
-    safeRemaining: n - mines,
     flash: null,
     winnerIds: [],
     winReason: null,
@@ -200,30 +145,23 @@ const finish = (s: MinesweeperState, reason: WinReason, winnerIds: string[]): Mi
   board: revealAll(s.board),
 });
 
-/** Decide whether the just-applied move ends the game; otherwise pass the turn. */
-function concludeTurn(s: MinesweeperState): MinesweeperState {
-  const solo = s.seats.length === 1;
-  if (solo) {
-    const seat = s.seats[0];
-    if (s.safeRemaining === 0) return finish(s, 'soloWin', [seat.id]);
-    if (seat.eliminated) return finish(s, 'soloLoss', []);
-    return { ...s, turnNo: nextTurn(s.seats, s.turnNo) };
-  }
-  if (s.safeRemaining === 0) return finish(s, 'swept', winnersByScore(s.seats));
-  const alive = s.seats.filter((se) => !se.eliminated);
-  if (alive.length <= 1) {
-    return finish(s, 'lastSurvivor', alive.length === 1 ? [alive[0].id] : winnersByScore(s.seats));
-  }
-  return { ...s, turnNo: nextTurn(s.seats, s.turnNo) };
-}
-
-/** Highest score wins; ties broken by fewest lives lost, then shared. */
+/** Highest score (most mines found) wins; ties are shared. */
 function winnersByScore(seats: MineSeat[]): string[] {
   const best = Math.max(...seats.map((s) => s.score));
-  const top = seats.filter((s) => s.score === best);
-  const fewestLost = Math.min(...top.map((s) => s.eliminated ? 1 : 0));
-  const winners = top.filter((s) => (s.eliminated ? 1 : 0) === fewestLost);
-  return (winners.length ? winners : top).map((s) => s.id);
+  return seats.filter((s) => s.score === best).map((s) => s.id);
+}
+
+const minesLeftToFind = (s: MinesweeperState): number => s.options.mines - foundCount(s.board);
+
+/** After a tap: end the game if every mine is found; otherwise a mine keeps the turn (reward) and a
+ *  safe square passes it. Solo always keeps going (no one to pass to). */
+function afterPick(s: MinesweeperState, foundMine: boolean): MinesweeperState {
+  if (minesLeftToFind(s) === 0) {
+    const solo = s.seats.length === 1;
+    return finish(s, solo ? 'soloWin' : 'allFound', solo ? [s.seats[0].id] : winnersByScore(s.seats));
+  }
+  if (s.seats.length === 1 || foundMine) return s; // solo, or a found mine → same player taps again
+  return { ...s, turnNo: s.turnNo + 1 }; // a safe square passes the turn
 }
 
 /* ─────────────────────────  Reducer  ───────────────────────── */
@@ -236,89 +174,23 @@ export function reducer(state: MinesweeperState, action: MinesweeperAction): Min
       let board = s.board;
       let base = s;
       if (!s.minesPlaced) {
-        board = placeMines(s.board, s.cols, s.rows, s.options.mines, action.index, action.seed);
+        board = placeMines(s.board, s.cols, s.rows, s.options.mines, action.seed);
         base = { ...s, board, minesPlaced: true };
       }
       const cell = board[action.index];
-      if (!cell || cell.revealed || cell.flagged) return s; // illegal → no-op (same ref)
+      if (!cell || cell.revealed) return s; // illegal → no-op (same ref)
       const ai = activeSeatIndex(base.seats, base.turnNo);
       const seatId = base.seats[ai].id;
 
+      const nextBoard = board.map((c) =>
+        c.index === action.index ? { ...c, revealed: true, revealedBy: seatId } : c,
+      );
+
       if (cell.mine) {
-        const nextBoard = board.map((c) =>
-          c.index === action.index ? { ...c, revealed: true, exploded: true, revealedBy: seatId } : c,
-        );
-        const seats = base.seats.map((se, i) =>
-          i === ai ? { ...se, lives: se.lives - 1, eliminated: se.lives - 1 <= 0 } : se,
-        );
-        return concludeTurn({
-          ...base,
-          board: nextBoard,
-          seats,
-          flash: { type: 'boom', index: action.index },
-        });
+        const seats = base.seats.map((se, i) => (i === ai ? { ...se, score: se.score + 1 } : se));
+        return afterPick({ ...base, board: nextBoard, seats, flash: { type: 'found', index: action.index } }, true);
       }
-
-      const { board: fb, count } = floodReveal(board, action.index, s.cols, s.rows, seatId);
-      const seats = base.seats.map((se, i) => (i === ai ? { ...se, score: se.score + count } : se));
-      return concludeTurn({
-        ...base,
-        board: fb,
-        seats,
-        safeRemaining: base.safeRemaining - count,
-        flash: { type: 'safe', index: action.index },
-      });
-    }
-
-    case 'FLAG': {
-      if (s.phase !== 'playing') return s;
-      const cell = s.board[action.index];
-      if (!cell || cell.revealed) return s;
-      const board = s.board.map((c) => (c.index === action.index ? { ...c, flagged: !c.flagged } : c));
-      return { ...s, board };
-    }
-
-    case 'CHORD': {
-      if (s.phase !== 'playing' || !s.minesPlaced) return s;
-      const cell = s.board[action.index];
-      if (!cell || !cell.revealed || cell.mine || cell.adjacent === 0) return s;
-      const nbs = neighbors(action.index, s.cols, s.rows);
-      const flags = nbs.filter((j) => s.board[j].flagged).length;
-      if (flags !== cell.adjacent) return s;
-      const targets = nbs.filter((j) => !s.board[j].flagged && !s.board[j].revealed);
-      if (targets.length === 0) return s;
-
-      const ai = activeSeatIndex(s.seats, s.turnNo);
-      const seatId = s.seats[ai].id;
-      let board = s.board;
-      let seats = s.seats;
-      let safeRemaining = s.safeRemaining;
-      let boom = false;
-      for (const j of targets) {
-        const c = board[j];
-        if (c.revealed || c.flagged) continue;
-        if (c.mine) {
-          board = board.map((x) =>
-            x.index === j ? { ...x, revealed: true, exploded: true, revealedBy: seatId } : x,
-          );
-          seats = seats.map((se, i) =>
-            i === ai ? { ...se, lives: se.lives - 1, eliminated: se.lives - 1 <= 0 } : se,
-          );
-          boom = true;
-        } else {
-          const { board: fb, count } = floodReveal(board, j, s.cols, s.rows, seatId);
-          board = fb;
-          safeRemaining -= count;
-          seats = seats.map((se, i) => (i === ai ? { ...se, score: se.score + count } : se));
-        }
-      }
-      return concludeTurn({
-        ...s,
-        board,
-        seats,
-        safeRemaining,
-        flash: { type: boom ? 'boom' : 'safe', index: action.index },
-      });
+      return afterPick({ ...base, board: nextBoard, flash: { type: 'safe', index: action.index } }, false);
     }
 
     case 'CLEAR_FLASH': {
@@ -353,8 +225,7 @@ export function standings(s: MinesweeperState): MineStanding[] {
   });
 }
 
-export const flagsPlaced = (s: MinesweeperState): number => s.board.filter((c) => c.flagged).length;
-export const minesLeft = (s: MinesweeperState): number => s.options.mines - flagsPlaced(s);
+export const minesLeft = (s: MinesweeperState): number => minesLeftToFind(s);
 export const isSolo = (s: MinesweeperState): boolean => s.seats.length === 1;
 export const seatName = (s: MinesweeperState, id: string): string =>
   s.seats.find((se) => se.id === id)?.name ?? id;

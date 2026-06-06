@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import type { GameConfig, GameScreenProps, PlayerSeat } from '../../../sdk/types';
-import { Screen, AppBar, Button, SegmentedControl, Stepper } from '../../../sdk/ui';
+import { Screen, AppBar, Button, SegmentedControl, Stepper, Disclosure } from '../../../sdk/ui';
 import { useRosterStore } from '../../../store/rosterStore';
 import { PlayerPicker } from '../../../app/components/PlayerPicker';
 import { DEFAULT_OPTIONS, PRESETS, validateConfig } from '../config';
@@ -51,11 +51,10 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<MinesweeperState, Mine
             onToggle={togglePlayer}
             onManageAll={() => navigate('/players')}
           />
-          <p className="mt-2 text-xs text-[var(--text-muted)]">{t('mine.playersHint')}</p>
         </section>
 
-        <section>
-          <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">{t('mine.difficulty')}</h2>
+        <div className="flex flex-col gap-1.5">
+          <span className="text-sm text-[var(--text)]">{t('mine.difficulty')}</span>
           <SegmentedControl<MineDifficulty>
             value={opts.difficulty}
             onChange={setDifficulty}
@@ -66,29 +65,27 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<MinesweeperState, Mine
               { value: 'custom', label: t('mine.diff.custom') },
             ]}
           />
-        </section>
+        </div>
 
-        {opts.difficulty === 'custom' && (
-          <section className="flex flex-col gap-3">
-            <Stepper label={t('mine.cols')} value={opts.cols} min={6} max={14} onChange={setCols} />
-            <Stepper label={t('mine.rows')} value={opts.rows} min={6} max={18} onChange={setRows} />
-            <Stepper
-              label={t('mine.mines')}
-              value={opts.mines}
-              min={1}
-              max={opts.cols * opts.rows - 9}
-              onChange={(v) => set('mines', v)}
-            />
-          </section>
-        )}
+        <Disclosure title={t('common.moreOptions')} summary={t('common.moreOptionsHint')}>
+          {opts.difficulty === 'custom' && (
+            <>
+              <Stepper label={t('mine.cols')} value={opts.cols} min={6} max={14} onChange={setCols} />
+              <Stepper label={t('mine.rows')} value={opts.rows} min={6} max={18} onChange={setRows} />
+              <Stepper
+                label={t('mine.mines')}
+                value={opts.mines}
+                min={1}
+                max={opts.cols * opts.rows - 9}
+                onChange={(v) => set('mines', v)}
+              />
+            </>
+          )}
 
-        <p className="rounded-xl bg-[var(--surface-2)] px-4 py-3 text-center text-sm">
-          {t('mine.boardHint', { mines: opts.mines, cols: opts.cols, rows: opts.rows })}
-        </p>
-
-        <section className="flex flex-col gap-3">
-          <Stepper label={t('mine.lives')} value={opts.lives} min={1} max={5} onChange={(v) => set('lives', v)} />
-        </section>
+          <span className="text-xs text-[var(--text-muted)]">
+            {t('mine.boardHint', { mines: opts.mines, cols: opts.cols, rows: opts.rows })}
+          </span>
+        </Disclosure>
 
         {errors && (
           <ul className="text-sm text-[var(--color-game-rose-strong)]">

@@ -5,28 +5,20 @@ export type MineDifficulty = 'easy' | 'medium' | 'hard' | 'custom';
 export interface MinesweeperOptions {
   cols: number;
   rows: number;
+  /** Number of mines hidden on the board — these are the prizes players hunt for. */
   mines: number;
   difficulty: MineDifficulty;
-  /** Lives per player before elimination (solo 1 = classic, versus 2 = forgiving). */
-  lives: number;
-  /** Reveal the whole board on game over (always true here for a clean Results board). */
-  showMineOnHit: boolean;
-  /** End a versus game the instant the board is swept. */
-  sweepEndsGame: boolean;
 }
 
 export const PRESETS: Record<'easy' | 'medium' | 'hard', { cols: number; rows: number; mines: number }> = {
-  easy: { cols: 8, rows: 8, mines: 10 },
-  medium: { cols: 10, rows: 12, mines: 24 },
-  hard: { cols: 12, rows: 16, mines: 40 },
+  easy: { cols: 8, rows: 8, mines: 12 },
+  medium: { cols: 10, rows: 12, mines: 28 },
+  hard: { cols: 12, rows: 16, mines: 50 },
 };
 
 export const DEFAULT_OPTIONS: MinesweeperOptions = {
   ...PRESETS.medium,
   difficulty: 'medium',
-  lives: 2,
-  showMineOnHit: true,
-  sweepEndsGame: true,
 };
 
 const clamp = (v: number, lo: number, hi: number) => Math.min(hi, Math.max(lo, Math.round(v)));
@@ -49,15 +41,7 @@ export function normalizeOptions(o: Partial<MinesweeperOptions> | undefined): Mi
     ({ cols, rows, mines } = PRESETS[difficulty]);
   }
 
-  return {
-    cols,
-    rows,
-    mines,
-    difficulty,
-    lives: clamp(src.lives ?? DEFAULT_OPTIONS.lives, 1, 5),
-    showMineOnHit: src.showMineOnHit !== false,
-    sweepEndsGame: src.sweepEndsGame !== false,
-  };
+  return { cols, rows, mines, difficulty };
 }
 
 export function readOptions(config: GameConfig): MinesweeperOptions {
