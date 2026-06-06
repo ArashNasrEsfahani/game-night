@@ -18,7 +18,9 @@ export function ResultsScreen({ state, ctx, nav }: GameScreenProps<MafiaState, M
       ? t('mf.win.town')
       : s.winner === 'mafia'
         ? t('mf.win.mafia')
-        : t('mf.win.draw');
+        : s.winner === 'jester'
+          ? t('mf.win.jester')
+          : t('mf.win.draw');
 
   return (
     <Screen>
@@ -32,7 +34,15 @@ export function ResultsScreen({ state, ctx, nav }: GameScreenProps<MafiaState, M
               <Card key={p.id} className="flex items-center gap-3 py-2.5">
                 <span className="text-xl">{role.icon}</span>
                 <span className="flex-1 font-medium">{s.playerNames[p.id] ?? p.id}</span>
-                <span className={`text-xs ${role.faction === 'mafia' ? 'text-[var(--color-game-rose-strong)]' : 'text-[var(--text-muted)]'}`}>
+                <span
+                  className={`text-xs ${
+                    role.faction === 'mafia'
+                      ? 'text-[var(--color-game-rose-strong)]'
+                      : role.faction === 'neutral'
+                        ? 'text-[var(--color-game-gold-strong)]'
+                        : 'text-[var(--text-muted)]'
+                  }`}
+                >
                   {ctx.localize(role.name)}
                 </span>
                 <span className="text-sm">{p.alive ? '🟢' : '💀'}</span>

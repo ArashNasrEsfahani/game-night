@@ -55,14 +55,18 @@ export interface NightInfoResult {
   actorId: string;
   targetId: string;
   seenFaction: Faction;
+  /** Consigliere learns the exact role, not just the side. */
+  seenRoleId?: RoleId;
 }
+
+export type MafiaWinner = Faction | 'draw' | 'jester';
 
 export type MafiaLogEntry =
   | { t: 'night-death'; round: number; playerId: string; by: 'mafia' | 'vig' }
   | { t: 'night-quiet'; round: number }
   | { t: 'vote-out'; round: number; playerId: string }
   | { t: 'no-elim'; round: number }
-  | { t: 'win'; round: number; winner: Faction | 'draw' };
+  | { t: 'win'; round: number; winner: MafiaWinner };
 
 export interface MafiaState extends GameStateBase {
   phase: MafiaPhase;
@@ -81,7 +85,7 @@ export interface MafiaState extends GameStateBase {
   ballot: string[];
   votes: Record<string, string>;
   lastVoteEliminated: string | null;
-  winner: Faction | 'draw' | null;
+  winner: MafiaWinner | null;
   log: MafiaLogEntry[];
   meta: { error?: string } | null;
   errorCode: 'BAD_CONFIG' | null;
@@ -101,7 +105,7 @@ export type MafiaAction =
   | { type: 'RETRACT_VOTE'; voterId: string }
   | { type: 'RESOLVE_VOTE'; seed: number }
   | { type: 'ACK_VOTE_RESULT' }
-  | { type: 'ABORT_GAME'; winner?: Faction | 'draw' };
+  | { type: 'ABORT_GAME'; winner?: MafiaWinner };
 
 /* ─────────────────────────  Pure helpers  ───────────────────────── */
 
@@ -260,34 +264,65 @@ function applyWinIfAny(s: MafiaState): MafiaState {
 function resolveNight(s: MafiaState): MafiaState {
   const byKey = (k: string) => s.nightActions.find((a) => a.key === k && !a.skipped) ?? null;
 
-  // protect
+  // 0. Roleblock — gather players prevented from acting tonight.
+  const blocked = new Set<string>();
+  const escort = byKey('escort.block');
+  if (escort?.targetId) blocked.add(escort.targetId);
+  const acts = (a: NightActionRecord | null): a is NightActionRecord => !!a?.targetId && !blocked.has(a.actorId);
+
+  // 1. Frame — target reads as Mafia to the Detective this night.
+  const framed = new Set<string>();
+  const framer = byKey('framer.frame');
+  if (acts(framer)) framed.add(framer.targetId!);
+
+  // 2. Protect (doctor) + guard (bodyguard).
   const protectIds = new Set<string>();
   const doctor = byKey('doctor.save');
-  if (doctor?.targetId) protectIds.add(doctor.targetId);
+  if (acts(doctor)) protectIds.add(doctor.targetId!);
+  const guard = byKey('bodyguard.guard');
+  const guardedId = acts(guard) ? guard.targetId! : null;
+  const guardActorId = acts(guard) ? guard.actorId : null;
 
-  // investigate
+  // 3. Investigations.
   const nightInfo: NightInfoResult[] = [];
   const det = byKey('detective.check');
-  if (det?.targetId) {
+  if (acts(det)) {
     const target = s.players.find((p) => p.id === det.targetId);
     if (target) {
-      nightInfo.push({
-        actorId: det.actorId,
-        targetId: det.targetId,
-        seenFaction: ROLES[target.roleId].appearsAs ?? target.faction,
-      });
+      const seen: Faction = framed.has(target.id) ? 'mafia' : ROLES[target.roleId].appearsAs ?? target.faction;
+      nightInfo.push({ actorId: det.actorId, targetId: det.targetId!, seenFaction: seen });
+    }
+  }
+  const con = byKey('consigliere.check');
+  if (acts(con)) {
+    const target = s.players.find((p) => p.id === con.targetId);
+    if (target) {
+      nightInfo.push({ actorId: con.actorId, targetId: con.targetId!, seenFaction: target.faction, seenRoleId: target.roleId });
     }
   }
 
-  // kills
-  const deaths: { id: string; by: 'mafia' | 'vig' }[] = [];
+  // 4. Attacks (mafia + sniper) → resolved against protection and the bodyguard redirect.
+  const attacks: { targetId: string; by: 'mafia' | 'vig' }[] = [];
   const mafiaKill = byKey('mafia.kill');
-  if (mafiaKill?.targetId && !protectIds.has(mafiaKill.targetId)) {
-    deaths.push({ id: mafiaKill.targetId, by: 'mafia' });
-  }
+  // The mafia kill only fails if EVERY living mafia killer was blocked tonight.
+  const mafiaKillers = s.players.filter(
+    (p) => p.alive && ROLES[p.roleId].faction === 'mafia' && ROLES[p.roleId].night?.effect === 'kill',
+  );
+  const mafiaBlocked = mafiaKillers.length > 0 && mafiaKillers.every((p) => blocked.has(p.id));
+  if (mafiaKill?.targetId && !mafiaBlocked) attacks.push({ targetId: mafiaKill.targetId, by: 'mafia' });
   const snipe = byKey('sniper.shoot');
-  if (snipe?.targetId && !protectIds.has(snipe.targetId) && !deaths.some((d) => d.id === snipe.targetId)) {
-    deaths.push({ id: snipe.targetId, by: 'vig' });
+  const sniperFires = acts(snipe);
+  if (sniperFires) attacks.push({ targetId: snipe.targetId!, by: 'vig' });
+
+  const deaths: { id: string; by: 'mafia' | 'vig' }[] = [];
+  for (const atk of attacks) {
+    if (protectIds.has(atk.targetId)) continue; // doctor shielded
+    if (guardedId && atk.targetId === guardedId && guardActorId) {
+      // Bodyguard intercepts: they die instead, and the guarded player survives the night.
+      if (!deaths.some((d) => d.id === guardActorId)) deaths.push({ id: guardActorId, by: atk.by });
+      continue;
+    }
+    if (!deaths.some((d) => d.id === atk.targetId)) deaths.push({ id: atk.targetId, by: atk.by });
   }
 
   const deadIds = deaths.map((d) => d.id);
@@ -295,9 +330,9 @@ function resolveNight(s: MafiaState): MafiaState {
     const d = deaths.find((x) => x.id === p.id);
     let uses = p.uses;
     let lastProtected = p.lastProtected;
-    // sniper consumes its one shot
-    if (snipe && snipe.actorId === p.id) uses = { ...uses, 'sniper.shoot': (uses['sniper.shoot'] ?? 0) + 1 };
-    if (doctor && doctor.actorId === p.id) lastProtected = doctor.targetId;
+    // sniper consumes its one shot only when the shot actually fires (not when blocked)
+    if (sniperFires && snipe.actorId === p.id) uses = { ...uses, 'sniper.shoot': (uses['sniper.shoot'] ?? 0) + 1 };
+    if (acts(doctor) && doctor.actorId === p.id) lastProtected = doctor.targetId;
     if (d) return { ...p, alive: false, diedRound: s.round, diedBy: d.by, uses, lastProtected };
     if (uses !== p.uses || lastProtected !== p.lastProtected) return { ...p, uses, lastProtected };
     return p;
@@ -477,6 +512,17 @@ export function reducer(state: MafiaState, action: MafiaAction): MafiaState {
         lastVoteEliminated: eliminated,
         log: [...s.log, { t: 'vote-out', round: s.round, playerId: eliminated }],
       };
+      // Jester (or any winsIfLynched role) wins immediately when the town votes them out.
+      const lynched = s.players.find((p) => p.id === eliminated);
+      if (lynched && ROLES[lynched.roleId]?.winsIfLynched) {
+        return {
+          ...withDeath,
+          phase: 'ended',
+          finished: true,
+          winner: 'jester',
+          log: [...withDeath.log, { t: 'win', round: s.round, winner: 'jester' }],
+        };
+      }
       return applyWinIfAny(withDeath);
     }
     case 'ACK_VOTE_RESULT': {

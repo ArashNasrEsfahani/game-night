@@ -194,3 +194,71 @@ describe('mafia day & voting', () => {
     expect(s).toEqual(snap);
   });
 });
+
+describe('mafia special roles', () => {
+  it('the escort blocks the doctor, so the mafia kill lands', () => {
+    let s = dealAll(
+      createInitialState(makeConfig({ composition: { mafia: 1, escort: 1, doctor: 1, citizen: 4 } }), 9),
+    );
+    const doctor = s.players.find((p) => p.roleId === 'doctor')!;
+    const victim = s.players.find((p) => p.roleId === 'citizen')!;
+    s = stepNight(s, { 'escort.block': doctor.id, 'mafia.kill': victim.id, 'doctor.save': victim.id });
+    expect(s.players.find((p) => p.id === victim.id)!.alive).toBe(false);
+  });
+
+  it('the bodyguard dies in place of a guarded target', () => {
+    let s = dealAll(
+      createInitialState(makeConfig({ composition: { mafia: 1, bodyguard: 1, citizen: 5 } }), 3),
+    );
+    const guard = s.players.find((p) => p.roleId === 'bodyguard')!;
+    const victim = s.players.find((p) => p.roleId === 'citizen')!;
+    s = stepNight(s, { 'mafia.kill': victim.id, 'bodyguard.guard': victim.id });
+    expect(s.players.find((p) => p.id === victim.id)!.alive).toBe(true);
+    expect(s.players.find((p) => p.id === guard.id)!.alive).toBe(false);
+  });
+
+  it('the framer makes a townsperson read as mafia to the detective', () => {
+    let s = dealAll(
+      createInitialState(makeConfig({ composition: { mafia: 1, framer: 1, detective: 1, citizen: 4 } }), 11),
+    );
+    const patsy = s.players.find((p) => p.roleId === 'citizen')!;
+    const other = s.players.find((p) => p.roleId === 'citizen' && p.id !== patsy.id)!;
+    s = stepNight(s, { 'framer.frame': patsy.id, 'detective.check': patsy.id, 'mafia.kill': other.id });
+    const info = s.nightInfo.find((x) => x.targetId === patsy.id)!;
+    expect(info.seenFaction).toBe('mafia');
+  });
+
+  it('the consigliere learns a target exact role', () => {
+    let s = dealAll(
+      createInitialState(makeConfig({ composition: { mafia: 1, consigliere: 1, detective: 1, citizen: 4 } }), 13),
+    );
+    const det = s.players.find((p) => p.roleId === 'detective')!;
+    const victim = s.players.find((p) => p.roleId === 'citizen')!;
+    s = stepNight(s, { 'consigliere.check': det.id, 'mafia.kill': victim.id });
+    const info = s.nightInfo.find((x) => x.targetId === det.id)!;
+    expect(info.seenRoleId).toBe('detective');
+  });
+
+  it('the jester wins when voted out', () => {
+    let s = dealAll(
+      createInitialState(
+        makeConfig({ composition: { mafia: 1, jester: 1, citizen: 5 }, votingMode: 'plurality', nominationsRequired: 2 }),
+        17,
+      ),
+    );
+    const jester = s.players.find((p) => p.roleId === 'jester')!;
+    const victim = s.players.find((p) => p.roleId === 'citizen')!;
+    s = stepNight(s, { 'mafia.kill': victim.id });
+    expect(s.phase).toBe('night-result');
+    s = reducer(s, { type: 'ACK_NIGHT_RESULT' });
+    s = reducer(s, { type: 'END_DISCUSSION' });
+    s = reducer(s, { type: 'NOMINATE', nomineeId: jester.id });
+    s = reducer(s, { type: 'NOMINATE', nomineeId: jester.id });
+    expect(s.ballot).toContain(jester.id);
+    s = reducer(s, { type: 'OPEN_VOTE' });
+    s.players.filter((p) => p.alive).forEach((p) => (s = reducer(s, { type: 'CAST_VOTE', voterId: p.id, nomineeId: jester.id })));
+    s = reducer(s, { type: 'RESOLVE_VOTE', seed: 1 });
+    expect(s.phase).toBe('ended');
+    expect(s.winner).toBe('jester');
+  });
+});

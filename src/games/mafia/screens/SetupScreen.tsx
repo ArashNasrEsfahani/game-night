@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import type { GameConfig, GameScreenProps, PlayerSeat } from '../../../sdk/types';
-import { Screen, AppBar, Button, SegmentedControl, Stepper, Toggle, MotifDivider } from '../../../sdk/ui';
+import { Screen, AppBar, Button, SegmentedControl, Stepper, Toggle, Disclosure, Sheet } from '../../../sdk/ui';
 import { useRosterStore } from '../../../store/rosterStore';
 import { PlayerPicker } from '../../../app/components/PlayerPicker';
 import { DEFAULT_OPTIONS, validateConfig } from '../config';
@@ -11,8 +11,11 @@ import { autoComposition } from '../content';
 import { ROLES } from '../roles';
 import type { RoleId } from '../roles';
 import type { MafiaAction, MafiaState } from '../logic';
+import { RoleGuideList } from './RoleGuide';
 
-const STEPPER_ROLES: RoleId[] = ['mafia', 'godfather', 'detective', 'doctor', 'sniper'];
+const CORE_ROLES: RoleId[] = ['mafia', 'godfather', 'detective', 'doctor'];
+const EXTRA_ROLES: RoleId[] = ['sniper', 'bodyguard', 'escort', 'framer', 'consigliere', 'jester'];
+const STEPPER_ROLES: RoleId[] = [...CORE_ROLES, ...EXTRA_ROLES];
 
 export function SetupScreen({ ctx, nav }: GameScreenProps<MafiaState, MafiaAction>) {
   const { t } = useTranslation();
@@ -21,6 +24,7 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<MafiaState, MafiaActio
   const [mode, setMode] = useState<MafiaMode>(DEFAULT_OPTIONS.mode);
   const [selected, setSelected] = useState<string[]>(() => players.map((p) => p.id));
   const [counts, setCounts] = useState<Record<RoleId, number>>(() => autoComposition(players.length));
+  const [guideOpen, setGuideOpen] = useState(false);
   // House-rule options (all already supported by the reducer; just surfaced here).
   const [rules, setRules] = useState({
     discussionSeconds: DEFAULT_OPTIONS.discussionSeconds,
@@ -41,6 +45,7 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<MafiaState, MafiaActio
 
   const otherTotal = STEPPER_ROLES.reduce((sum, r) => sum + (counts[r] ?? 0), 0);
   const citizen = Math.max(0, n - otherTotal);
+  const extraTotal = EXTRA_ROLES.reduce((sum, r) => sum + (counts[r] ?? 0), 0);
 
   const composition = useMemo(() => {
     const c: Record<RoleId, number> = {};
@@ -54,6 +59,16 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<MafiaState, MafiaActio
   const togglePlayer = (id: string) =>
     setSelected((s) => (s.includes(id) ? s.filter((x) => x !== id) : [...s, id]));
   const setCount = (r: RoleId, v: number) => setCounts((c) => ({ ...c, [r]: v }));
+  const roleStepper = (r: RoleId) => (
+    <Stepper
+      key={r}
+      label={`${ROLES[r].icon} ${ctx.localize(ROLES[r].name)}`}
+      value={counts[r] ?? 0}
+      min={0}
+      max={ROLES[r].maxInGame ?? n}
+      onChange={(v) => setCount(r, v)}
+    />
+  );
 
   const options: MafiaOptions = { ...DEFAULT_OPTIONS, mode, composition, presetId: null, ...rules };
   const config: GameConfig = {
@@ -68,9 +83,18 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<MafiaState, MafiaActio
       <AppBar title={t('mf.title')} onBack={() => nav.exit()} />
       <div className="flex flex-col gap-5 pb-8">
         <section>
-          <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">
-            {t('common.players')} · {n}
-          </h2>
+          <div className="mb-2 flex items-center justify-between">
+            <h2 className="text-sm font-semibold text-[var(--text-muted)]">
+              {t('common.players')} · {n}
+            </h2>
+            <button
+              type="button"
+              onClick={() => setGuideOpen(true)}
+              className="dp-glass-2 rounded-full px-3 py-1 text-xs font-semibold text-[var(--text)]"
+            >
+              {t('mf.roleGuide')}
+            </button>
+          </div>
           <PlayerPicker
             selected={selected}
             onToggle={togglePlayer}
@@ -85,18 +109,14 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<MafiaState, MafiaActio
           <span className="text-sm text-[var(--text-muted)]">{t('mf.citizens', { n: citizen })}</span>
         </section>
 
-        <section className="flex flex-col gap-3">
-          {STEPPER_ROLES.map((r) => (
-            <Stepper
-              key={r}
-              label={`${ROLES[r].icon} ${ctx.localize(ROLES[r].name)}`}
-              value={counts[r] ?? 0}
-              min={0}
-              max={n}
-              onChange={(v) => setCount(r, v)}
-            />
-          ))}
-        </section>
+        <section className="flex flex-col gap-3">{CORE_ROLES.map(roleStepper)}</section>
+
+        <Disclosure
+          title={t('mf.specialRoles')}
+          summary={extraTotal > 0 ? t('mf.specialOn', { n: extraTotal }) : t('mf.specialHint')}
+        >
+          {EXTRA_ROLES.map(roleStepper)}
+        </Disclosure>
 
         <section>
           <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">{t('mf.mode')}</h2>
@@ -110,11 +130,7 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<MafiaState, MafiaActio
           />
         </section>
 
-        <MotifDivider />
-
-        <section className="flex flex-col gap-4">
-          <h2 className="text-sm font-semibold text-[var(--text-muted)]">{t('mf.houseRules')}</h2>
-
+        <Disclosure title={t('mf.houseRules')} summary={t('mf.houseRulesHint')}>
           <div className="flex flex-col gap-1.5">
             <span className="text-sm text-[var(--text)]">{t('mf.discussion')}</span>
             <SegmentedControl<string>
@@ -188,7 +204,7 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<MafiaState, MafiaActio
             checked={rules.peacefulFirstNight}
             onChange={(v) => setRule('peacefulFirstNight', v)}
           />
-        </section>
+        </Disclosure>
 
         {errors && (
           <ul className="text-sm text-[var(--color-game-rose-strong)]">
@@ -201,6 +217,10 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<MafiaState, MafiaActio
           {t('common.start')}
         </Button>
       </div>
+
+      <Sheet open={guideOpen} onClose={() => setGuideOpen(false)} title={t('mf.roleGuide')}>
+        <RoleGuideList localize={ctx.localize} />
+      </Sheet>
     </Screen>
   );
 }

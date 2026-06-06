@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, type ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 import type { GameScreenProps } from '../../../sdk/types';
 import { Screen, AppBar, Button, Card, Curtain } from '../../../sdk/ui';
@@ -73,11 +73,35 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<MafiaS
     const role = ROLES[step.roleId];
     const recorded = recordedTarget(s, step.key);
     const legal = alive.filter((p) => step.canTargetSelf || !step.actorIds.includes(p.id));
-    const detectiveResult =
-      step.key === 'detective.check' && recorded
-        ? (ROLES[s.players.find((p) => p.id === recorded)!.roleId].appearsAs ??
-            s.players.find((p) => p.id === recorded)!.faction)
-        : null;
+    // Earlier-order roles (escort order 5, framer order 15) are already recorded by the time
+    // the investigators act, so the live result can reflect blocking and framing accurately.
+    const escortTarget = s.nightActions.find((a) => a.key === 'escort.block' && !a.skipped)?.targetId ?? null;
+    const framedTarget = s.nightActions.find((a) => a.key === 'framer.frame' && !a.skipped)?.targetId ?? null;
+    const actorBlocked = escortTarget != null && escortTarget === step.actorIds[0];
+    let resultNode: ReactNode = null;
+    if (recorded && (step.key === 'detective.check' || step.key === 'consigliere.check')) {
+      if (actorBlocked) {
+        resultNode = (
+          <p className="text-center text-sm font-bold text-[var(--text-muted)]">{t('mf.blockedResult')}</p>
+        );
+      } else {
+        const target = s.players.find((p) => p.id === recorded)!;
+        if (step.key === 'detective.check') {
+          const seen = recorded === framedTarget ? 'mafia' : ROLES[target.roleId].appearsAs ?? target.faction;
+          resultNode = (
+            <p className="text-center text-sm font-bold">
+              {t('mf.detectiveResult', { name: name(recorded), faction: t(`mf.faction.${seen}`) })}
+            </p>
+          );
+        } else {
+          resultNode = (
+            <p className="text-center text-sm font-bold">
+              {t('mf.consigliereResult', { name: name(recorded), role: ctx.localize(ROLES[target.roleId].name) })}
+            </p>
+          );
+        }
+      }
+    }
     return (
       <Screen>
         <AppBar onBack={() => nav.exit()} />
@@ -85,25 +109,22 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<MafiaS
           <Card className="px-4 py-3 text-center">
             <div className="text-4xl">{role?.icon}</div>
             <p className="mt-1 font-bold">{t('mf.wake', { role: role ? ctx.localize(role.name) : '' })}</p>
+            <p className="mt-0.5 text-xs text-[var(--text-muted)]">{role ? ctx.localize(role.guide) : ''}</p>
           </Card>
           <div className="flex flex-wrap justify-center gap-2">
             {legal.map((p) => (
               <button
                 key={p.id}
                 onClick={() => { ctx.haptics.light(); dispatch({ type: 'RECORD_NIGHT_ACTION', actorId: step.actorIds[0], targetId: p.id }); }}
-                className={`rounded-full px-4 py-3 text-base font-medium ${
-                  recorded === p.id ? 'bg-[var(--game-accent-strong)] text-[var(--game-on-accent)]' : 'bg-[var(--surface-2)] text-[var(--text)]'
+                className={`rounded-full px-4 py-3 text-base font-medium transition-colors ${
+                  recorded === p.id ? 'bg-[var(--accent-fill-strong)] text-[var(--game-on-accent)]' : 'dp-glass-2 text-[var(--text)]'
                 }`}
               >
                 {name(p.id)}
               </button>
             ))}
           </div>
-          {detectiveResult && (
-            <p className="text-center text-sm font-bold">
-              {t('mf.detectiveResult', { name: name(recorded!), faction: t(`mf.faction.${detectiveResult}`) })}
-            </p>
-          )}
+          {resultNode}
           {s.meta?.error && <p className="text-center text-sm text-[var(--color-game-rose-strong)]">{t(`mf.err.${s.meta.error}`)}</p>}
           <div className="mt-auto flex gap-2">
             {step.skippable && (
@@ -160,7 +181,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<MafiaS
           <p className="text-lg">{t('mf.dayOpen')}</p>
           <div className="flex flex-wrap justify-center gap-2">
             {s.players.map((p) => (
-              <span key={p.id} className={`rounded-full px-2.5 py-1 text-xs ${p.alive ? 'bg-[var(--surface-2)]' : 'bg-[var(--surface-2)] opacity-40'}`}>
+              <span key={p.id} className={`dp-glass-2 rounded-full px-2.5 py-1 text-xs text-[var(--text)] ${p.alive ? '' : 'opacity-40'}`}>
                 {p.alive ? name(p.id) : `💀 ${name(p.id)}`}
               </span>
             ))}
@@ -184,8 +205,8 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<MafiaS
               <button
                 key={p.id}
                 onClick={() => dispatch({ type: 'NOMINATE', nomineeId: p.id })}
-                className={`rounded-full px-4 py-3 text-base font-medium ${
-                  s.ballot.includes(p.id) ? 'bg-[var(--game-accent-strong)] text-[var(--game-on-accent)]' : 'bg-[var(--surface-2)] text-[var(--text)]'
+                className={`rounded-full px-4 py-3 text-base font-medium transition-colors ${
+                  s.ballot.includes(p.id) ? 'bg-[var(--accent-fill-strong)] text-[var(--game-on-accent)]' : 'dp-glass-2 text-[var(--text)]'
                 }`}
               >
                 {name(p.id)} {(s.nominations[p.id] ?? 0) > 0 ? `(${s.nominations[p.id]})` : ''}
@@ -233,7 +254,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<MafiaS
                 <button
                   key={id}
                   onClick={() => { dispatch({ type: 'CAST_VOTE', voterId: voter.id, nomineeId: id }); setVoteCursor((c) => c + 1); }}
-                  className="rounded-full bg-[var(--surface-2)] px-4 py-3 text-base font-medium"
+                  className="dp-glass-2 rounded-full px-4 py-3 text-base font-medium text-[var(--text)]"
                 >
                   {name(id)}
                 </button>

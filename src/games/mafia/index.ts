@@ -16,9 +16,11 @@ const mod: GameModule<MafiaState, MafiaAction> = {
   getOutcome: (s, c) => ({
     mode: 'team',
     winnerIds:
-      s.winner && s.winner !== 'draw'
-        ? s.players.filter((p) => p.faction === s.winner).map((p) => p.id)
-        : [],
+      s.winner === 'jester'
+        ? s.players.filter((p) => p.roleId === 'jester' && p.diedBy === 'vote').map((p) => p.id)
+        : s.winner && s.winner !== 'draw'
+          ? s.players.filter((p) => p.faction === s.winner).map((p) => p.id)
+          : [],
     participantIds: c.players.map((p) => p.id),
   }),
 };

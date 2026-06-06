@@ -29,6 +29,23 @@ export const PRESETS: RolePreset[] = [
     players: { min: 10, max: 10 },
     composition: { godfather: 1, mafia: 2, detective: 1, doctor: 1, sniper: 1, citizen: 4 },
   },
+  {
+    id: 'chaos-12',
+    name: { en: 'Chaos (12)', fa: 'آشوب (۱۲)' },
+    players: { min: 12, max: 12 },
+    composition: {
+      godfather: 1,
+      framer: 1,
+      mafia: 1,
+      detective: 1,
+      doctor: 1,
+      bodyguard: 1,
+      escort: 1,
+      sniper: 1,
+      jester: 1,
+      citizen: 3,
+    },
+  },
 ];
 
 /** A sensible auto composition for any player count (used as the Setup default). */
@@ -55,6 +72,7 @@ export function validateContent(): string[] {
   for (const role of ROLE_LIST) {
     if (!role.name?.en?.trim() || !role.name?.fa?.trim()) problems.push(`role ${role.id} missing name`);
     if (!role.reveal?.en?.trim() || !role.reveal?.fa?.trim()) problems.push(`role ${role.id} missing reveal`);
+    if (!role.guide?.en?.trim() || !role.guide?.fa?.trim()) problems.push(`role ${role.id} missing guide`);
   }
   for (const preset of PRESETS) {
     if (!preset.name?.en?.trim() || !preset.name?.fa?.trim()) problems.push(`preset ${preset.id} missing name`);
