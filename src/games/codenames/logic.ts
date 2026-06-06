@@ -48,6 +48,9 @@ export interface CodenamesState extends GameStateBase {
   mode: CodenamesMode;
   turnSeconds: number;
   allowBonusGuess: boolean;
+  forgiveFirstWrong: boolean;
+  /** Wrong guesses made in the current turn (reset each clue). One is forgiven if enabled. */
+  wrongGuessesThisTurn: number;
   board: BoardCell[];
   /** Quarter-turns (0–3) the first team rotated the random key before play. */
   orientation: number;
@@ -169,6 +172,8 @@ export function createInitialState(config: GameConfig, seed: number): CodenamesS
     mode: options.mode,
     turnSeconds: options.turnSeconds,
     allowBonusGuess: options.allowBonusGuess,
+    forgiveFirstWrong: options.forgiveFirstWrong,
+    wrongGuessesThisTurn: 0,
     board,
     orientation: 0,
     startingTeam: start,
@@ -238,6 +243,16 @@ function applyGuess(s: CodenamesState, cellIndex: number): CodenamesState {
   if ((owner === 'teamA' || owner === 'teamB') && remaining[owner] === 0) {
     return { ...base, phase: 'gameOver', finished: true, winner: owner, winReason: 'clearedWords' };
   }
+  // Forgive the first wrong guess of the turn: keep guessing and grant one extra guess so a single
+  // mistake doesn't eat into the clue the team is still trying to complete. A second wrong guess
+  // (or the assassin) ends the turn as usual.
+  if (s.forgiveFirstWrong && s.wrongGuessesThisTurn < 1) {
+    return {
+      ...base,
+      wrongGuessesThisTurn: s.wrongGuessesThisTurn + 1,
+      activeClue: { ...activeClue, guessesAllowed: activeClue.guessesAllowed + 1 },
+    };
+  }
   return { ...base, phase: 'turnEnd', turnEndReason: 'guessedWrong' };
 }
 
@@ -261,7 +276,7 @@ export function reducer(state: CodenamesState, action: CodenamesAction): Codenam
       const count = Math.min(Math.max(0, Math.round(action.count)), max);
       const guessesAllowed = count === 0 ? max : count + (s.allowBonusGuess ? 1 : 0);
       const clue: ClueRecord = { team: s.currentTeam, count, guessesAllowed, guessesMade: 0 };
-      return { ...s, phase: 'guesserHandoff', activeClue: clue, clueLog: [...s.clueLog, clue] };
+      return { ...s, phase: 'guesserHandoff', activeClue: clue, clueLog: [...s.clueLog, clue], wrongGuessesThisTurn: 0 };
     }
     case 'HANDOFF_TO_GUESSERS': {
       if (s.phase !== 'guesserHandoff') return s;
@@ -288,6 +303,7 @@ export function reducer(state: CodenamesState, action: CodenamesAction): Codenam
         activeClue: null,
         lastReveal: null,
         turnEndReason: null,
+        wrongGuessesThisTurn: 0,
       };
     }
     default:

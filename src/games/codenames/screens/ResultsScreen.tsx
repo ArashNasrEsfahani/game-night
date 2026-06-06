@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
 import type { GameScreenProps, Lang } from '../../../sdk/types';
 import { Screen, AppBar, Button, WinnerBanner } from '../../../sdk/ui';
 import type { BoardCell, CardRole, CodenamesAction, CodenamesState } from '../logic';
@@ -11,7 +12,7 @@ function roleClass(role: CardRole): string {
     case 'teamB':
       return 'bg-[var(--color-game-sky-strong)] text-white';
     case 'neutral':
-      return 'bg-[var(--color-game-gold)] text-[var(--text)]';
+      return 'bg-[var(--color-game-gold)] text-[var(--on-gold)]';
     case 'assassin':
       return 'bg-zinc-900 text-white';
   }
@@ -24,6 +25,7 @@ export function ResultsScreen({ state, ctx, nav }: GameScreenProps<CodenamesStat
 
   useEffect(() => {
     ctx.sound.play(s.winner ? 'win' : 'lose');
+    if (s.winner) ctx.sound.play('sparkle');
   }, [ctx, s.winner]);
 
   const winnerName = s.winner ? s.teamMeta[s.winner].name : '';
@@ -34,14 +36,17 @@ export function ResultsScreen({ state, ctx, nav }: GameScreenProps<CodenamesStat
       <AppBar title={t('results.title')} onBack={() => nav.exit()} />
       <div className="flex flex-col gap-4 pb-8">
         <WinnerBanner title={t('cn.teamWins', { team: winnerName })} names={[t(reasonKey)]} />
-        <div className="grid grid-cols-5 gap-1.5">
+        <div className="grid grid-cols-5 gap-1.5" style={{ perspective: 700 }}>
           {s.board.map((c: BoardCell) => (
-            <div
+            <motion.div
               key={c.index}
+              initial={{ opacity: 0, scale: 0.6, rotateY: 90 }}
+              animate={{ opacity: 1, scale: 1, rotateY: 0 }}
+              transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1], delay: Math.min(c.index * 0.02, 0.5) }}
               className={`flex aspect-square items-center justify-center rounded-lg p-1 text-center text-[10px] font-bold leading-tight ${roleClass(c.role)}`}
             >
               {c.word[lang]}
-            </div>
+            </motion.div>
           ))}
         </div>
         <div className="mt-2 flex flex-col gap-2">

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import type { GameConfig, GameScreenProps, PlayerSeat, TeamSetup } from '../../../sdk/types';
-import { Screen, AppBar, Button, SegmentedControl, Toggle } from '../../../sdk/ui';
+import { Screen, AppBar, Button, Disclosure, SegmentedControl, SelectChip, Toggle } from '../../../sdk/ui';
 import { useRosterStore } from '../../../store/rosterStore';
 import { PlayerPicker } from '../../../app/components/PlayerPicker';
 import { asTeamId } from '../../../engine/ids';
@@ -53,6 +53,8 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<CodenamesState, Codena
     <Screen>
       <AppBar title={t('cn.title')} onBack={() => nav.exit()} />
       <div className="flex flex-col gap-5 pb-8">
+
+        {/* ── Always visible: players ── */}
         <section>
           <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">
             {t('common.players')} · {seats.length}
@@ -64,84 +66,90 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<CodenamesState, Codena
           />
         </section>
 
+        {/* ── Always visible: team-composition preview ── */}
         {seats.length >= 4 && (
           <section className="grid grid-cols-2 gap-3">
             <div className="rounded-xl bg-[var(--color-game-rose)] p-3">
-              <p className="text-sm font-bold">{t('cn.red')}</p>
-              <p className="text-xs text-[var(--text-muted)]">
+              <p className="text-sm font-bold text-white">{t('cn.red')}</p>
+              <p className="text-xs text-white/70">
                 {t('cn.spymaster')}: {spyA ? seats.find((s) => s.id === spyA)?.name : '—'}
               </p>
-              <p className="text-xs">{teams.teams[0].memberIds.map((id) => seats.find((s) => s.id === id)?.name).join('، ')}</p>
+              <p className="text-xs text-white/90">{teams.teams[0].memberIds.map((id) => seats.find((s) => s.id === id)?.name).join('، ')}</p>
             </div>
             <div className="rounded-xl bg-[var(--color-game-sky)] p-3">
-              <p className="text-sm font-bold">{t('cn.blue')}</p>
-              <p className="text-xs text-[var(--text-muted)]">
+              <p className="text-sm font-bold text-white">{t('cn.blue')}</p>
+              <p className="text-xs text-white/70">
                 {t('cn.spymaster')}: {spyB ? seats.find((s) => s.id === spyB)?.name : '—'}
               </p>
-              <p className="text-xs">{teams.teams[1].memberIds.map((id) => seats.find((s) => s.id === id)?.name).join('، ')}</p>
+              <p className="text-xs text-white/90">{teams.teams[1].memberIds.map((id) => seats.find((s) => s.id === id)?.name).join('، ')}</p>
             </div>
           </section>
         )}
 
-        <section>
-          <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">{t('cn.mode')}</h2>
-          <SegmentedControl<CodenamesMode>
-            value={opts.mode}
-            onChange={(v) => set('mode', v)}
-            options={[
-              { value: 'untimed', label: t('cn.untimed') },
-              { value: 'timed', label: t('cn.timed') },
-            ]}
-          />
-        </section>
-
-        {opts.mode === 'timed' && (
-          <section>
-            <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">{t('cn.turnTime')}</h2>
-            <SegmentedControl<string>
-              value={String(opts.turnSeconds)}
-              onChange={(v) => set('turnSeconds', Number(v))}
-              options={[60, 120, 180, 240].map((s) => ({ value: String(s), label: `${s / 60}m` }))}
+        {/* ── More options disclosure ── */}
+        <Disclosure title={t('common.moreOptions')} summary={t('common.moreOptionsHint')}>
+          {/* Mode */}
+          <div className="flex flex-col gap-1.5">
+            <span className="text-sm text-[var(--text)]">{t('cn.mode')}</span>
+            <SegmentedControl<CodenamesMode>
+              value={opts.mode}
+              onChange={(v) => set('mode', v)}
+              options={[
+                { value: 'untimed', label: t('cn.untimed') },
+                { value: 'timed', label: t('cn.timed') },
+              ]}
             />
-          </section>
-        )}
+          </div>
 
-        {PACK_LIST.length > 1 && (
-          <section>
-            <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">{t('cn.packs')}</h2>
-            <div className="flex flex-wrap gap-2">
-              {PACK_LIST.map((p) => (
-                <button
-                  key={p.id}
-                  onClick={() => togglePack(p.id)}
-                  className={`rounded-full px-3 py-1.5 text-sm ${
-                    opts.packIds.includes(p.id)
-                      ? 'bg-[var(--game-accent-strong)] text-[var(--game-on-accent)]'
-                      : 'bg-[var(--surface-2)] text-[var(--text)]'
-                  }`}
-                >
-                  {ctx.localize(p.name)}
-                </button>
-              ))}
+          {/* Turn time (only when timed) */}
+          {opts.mode === 'timed' && (
+            <div className="flex flex-col gap-1.5">
+              <span className="text-sm text-[var(--text)]">{t('cn.turnTime')}</span>
+              <SegmentedControl<string>
+                value={String(opts.turnSeconds)}
+                onChange={(v) => set('turnSeconds', Number(v))}
+                options={[60, 120, 180, 240].map((s) => ({ value: String(s), label: `${s / 60}m` }))}
+              />
             </div>
-          </section>
-        )}
+          )}
 
-        <section>
-          <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">{t('cn.startingTeam')}</h2>
-          <SegmentedControl<StartingTeam>
-            value={opts.startingTeam}
-            onChange={(v) => set('startingTeam', v)}
-            options={[
-              { value: 'random', label: t('cn.random') },
-              { value: 'teamA', label: t('cn.red') },
-              { value: 'teamB', label: t('cn.blue') },
-            ]}
-          />
-        </section>
+          {/* Packs */}
+          {PACK_LIST.length > 1 && (
+            <div className="flex flex-col gap-1.5">
+              <span className="text-sm text-[var(--text)]">{t('cn.packs')}</span>
+              <div className="flex flex-wrap gap-2">
+                {PACK_LIST.map((p) => (
+                  <SelectChip
+                    key={p.id}
+                    selected={opts.packIds.includes(p.id)}
+                    onClick={() => togglePack(p.id)}
+                  >
+                    {ctx.localize(p.name)}
+                  </SelectChip>
+                ))}
+              </div>
+            </div>
+          )}
 
-        <Toggle label={t('cn.bonusGuess')} checked={opts.allowBonusGuess} onChange={(v) => set('allowBonusGuess', v)} />
-        <Toggle label={t('cn.orientationToggle')} checked={opts.chooseOrientation} onChange={(v) => set('chooseOrientation', v)} />
+          {/* Starting team */}
+          <div className="flex flex-col gap-1.5">
+            <span className="text-sm text-[var(--text)]">{t('cn.startingTeam')}</span>
+            <SegmentedControl<StartingTeam>
+              value={opts.startingTeam}
+              onChange={(v) => set('startingTeam', v)}
+              options={[
+                { value: 'random', label: t('cn.random') },
+                { value: 'teamA', label: t('cn.red') },
+                { value: 'teamB', label: t('cn.blue') },
+              ]}
+            />
+          </div>
+
+          {/* Toggles */}
+          <Toggle label={t('cn.bonusGuess')} checked={opts.allowBonusGuess} onChange={(v) => set('allowBonusGuess', v)} />
+          <Toggle label={t('cn.forgiveWrong')} checked={opts.forgiveFirstWrong} onChange={(v) => set('forgiveFirstWrong', v)} />
+          <Toggle label={t('cn.orientationToggle')} checked={opts.chooseOrientation} onChange={(v) => set('chooseOrientation', v)} />
+        </Disclosure>
 
         {errors && (
           <ul className="text-sm text-[var(--color-game-rose-strong)]">

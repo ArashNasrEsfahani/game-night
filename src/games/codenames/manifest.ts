@@ -2,7 +2,7 @@ import type { GameManifest } from '../../sdk/types';
 
 export const manifest: GameManifest = {
   id: 'codenames',
-  name: { en: 'Spy Grid', fa: 'شبکهٔ جاسوسی' },
+  name: { en: 'Codenames', fa: 'کدنیمز' },
   tagline: { en: 'Two spymasters, one secret key', fa: 'دو رئیس‌جاسوس، یک کلید مخفی' },
   description: {
     en: 'Two teams race to find their secret words on a 5×5 grid. Each spymaster secretly sees the key and gives a one-word clue. Find all your words to win, but steer clear of the assassin or you lose on the spot.',

@@ -12,6 +12,8 @@ export interface CodenamesOptions {
   allowBonusGuess: boolean;
   /** First team rotates the randomly-generated key (0–3 quarter-turns) before play starts. */
   chooseOrientation: boolean;
+  /** A team may make ONE wrong guess per turn without ending it (a forgiven mistake). */
+  forgiveFirstWrong: boolean;
 }
 
 export const DEFAULT_OPTIONS: CodenamesOptions = {
@@ -21,6 +23,7 @@ export const DEFAULT_OPTIONS: CodenamesOptions = {
   turnSeconds: 120,
   allowBonusGuess: true,
   chooseOrientation: true,
+  forgiveFirstWrong: true,
 };
 
 export function normalizeOptions(o: Partial<CodenamesOptions> | undefined): CodenamesOptions {
@@ -34,6 +37,7 @@ export function normalizeOptions(o: Partial<CodenamesOptions> | undefined): Code
     turnSeconds: Math.min(300, Math.max(30, Math.round(src.turnSeconds ?? 120))),
     allowBonusGuess: src.allowBonusGuess !== false,
     chooseOrientation: src.chooseOrientation !== false,
+    forgiveFirstWrong: src.forgiveFirstWrong !== false,
   };
 }
 

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import type { GameScreenProps, Lang } from '../../../sdk/types';
 import { Screen, AppBar, Button, Curtain, Stepper, TurnAura } from '../../../sdk/ui';
 import { currentSpymasterId, currentTeamName, guessesLeft } from '../logic';
@@ -13,7 +13,7 @@ function roleClass(role: CardRole): string {
     case 'teamB':
       return 'bg-[var(--color-game-sky-strong)] text-white';
     case 'neutral':
-      return 'bg-[var(--color-game-gold)] text-[var(--text)]';
+      return 'bg-[var(--color-game-gold)] text-[var(--on-gold)]';
     case 'assassin':
       return 'bg-zinc-900 text-white';
   }
@@ -39,9 +39,14 @@ function Grid({
         return (
           <motion.button
             key={`${c.index}-${c.revealed}`}
-            initial={c.revealed && !spymaster ? { rotateY: 90, opacity: 0.3 } : false}
-            animate={{ rotateY: 0, opacity: 1 }}
-            transition={{ duration: 0.38, ease: [0.22, 1, 0.36, 1] }}
+            initial={c.revealed && !spymaster ? { rotateY: 90, opacity: 0.3, scale: 0.86 } : false}
+            animate={
+              c.revealed && !spymaster
+                ? { rotateY: 0, opacity: 1, scale: [1.14, 1] }
+                : { rotateY: 0, opacity: 1 }
+            }
+            transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+            whileHover={disabled ? undefined : { scale: 1.06 }}
             whileTap={disabled ? undefined : { scale: 0.93 }}
             disabled={disabled}
             onClick={() => onTap?.(c.index)}
@@ -98,10 +103,28 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<Codena
     );
   }
 
+  const lowTime = s.mode === 'timed' && secondsLeft <= 10;
   const scoreStrip = (
-    <div className="flex justify-center gap-4 py-2 text-sm font-bold">
-      <span className="text-[var(--color-game-rose-strong)]">{s.teamMeta.teamA.name} {s.remaining.teamA}</span>
-      <span className="text-[var(--color-game-sky-strong)]">{s.teamMeta.teamB.name} {s.remaining.teamB}</span>
+    <div className="flex items-center justify-center gap-3 py-2 text-sm font-bold">
+      <span
+        className={`flex items-center gap-1 text-[var(--color-game-rose-strong)] ${s.currentTeam === 'teamA' ? '' : 'opacity-45'}`}
+      >
+        {s.currentTeam === 'teamA' && <span aria-hidden>▶</span>}
+        {s.teamMeta.teamA.name} {s.remaining.teamA}
+      </span>
+      {s.mode === 'timed' && s.phase === 'guessing' && (
+        <span
+          className={`dp-glass-2 rounded-full px-3 py-1 tabular-nums ${lowTime ? 'text-[var(--color-game-rose-strong)]' : 'text-[var(--text)]'}`}
+        >
+          ⏱ {secondsLeft}s
+        </span>
+      )}
+      <span
+        className={`flex items-center gap-1 text-[var(--color-game-sky-strong)] ${s.currentTeam === 'teamB' ? '' : 'opacity-45'}`}
+      >
+        {s.currentTeam === 'teamB' && <span aria-hidden>▶</span>}
+        {s.teamMeta.teamB.name} {s.remaining.teamB}
+      </span>
     </div>
   );
 
@@ -129,6 +152,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<Codena
                 size="lg"
                 onClick={() => {
                   ctx.sound.play('shuffle');
+                  ctx.sound.play('drum');
                   ctx.haptics.medium();
                   dispatch({ type: 'CHOOSE_ORIENTATION', rotation: r });
                 }}
@@ -205,19 +229,46 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<Codena
   }
 
   if (s.phase === 'guessing') {
+    const justForgiven =
+      !!s.lastReveal &&
+      (s.lastReveal.outcome === 'neutral' || s.lastReveal.outcome === 'wrongTeam') &&
+      s.wrongGuessesThisTurn > 0;
     return (
       <Screen>
         <TurnAura color={teamColor} />
         <AppBar onBack={() => nav.exit()} />
         {scoreStrip}
         <div className="flex flex-1 flex-col gap-3">
-          <p className="text-center text-sm font-semibold">
+          <motion.p
+            key={`${s.activeClue?.count}-${s.activeClue?.guessesMade}`}
+            initial={{ scale: 0.88, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ type: 'spring', stiffness: 340, damping: 22 }}
+            className="text-center text-sm font-semibold"
+          >
             {t('cn.clueEcho', { count: s.activeClue?.count ?? 0, left: guessesLeft(s) })}
-            {s.mode === 'timed' ? ` · ${secondsLeft}s` : ''}
-          </p>
+          </motion.p>
+          <AnimatePresence>
+            {justForgiven && (
+              <motion.p
+                key="forgiven"
+                initial={{ y: -10, opacity: 0, scale: 0.85 }}
+                animate={{ y: 0, opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{ type: 'spring', stiffness: 300, damping: 18 }}
+                className="text-center text-sm font-bold text-[var(--color-game-gold-strong)]"
+              >
+                😅 {t('cn.forgiven')}
+              </motion.p>
+            )}
+          </AnimatePresence>
           <Grid cells={s.board} spymaster={false} lang={ctx.lang} onTap={(i) => {
             const cell = s.board[i];
-            ctx.sound.play(cell.role === s.currentTeam ? 'correct' : cell.role === 'assassin' ? 'lose' : 'wrong');
+            const willForgive =
+              cell.role !== s.currentTeam && cell.role !== 'assassin' && s.forgiveFirstWrong && s.wrongGuessesThisTurn < 1;
+            ctx.sound.play(
+              cell.role === s.currentTeam ? 'select' : cell.role === 'assassin' ? 'lose' : willForgive ? 'forgive' : 'wrong',
+            );
             ctx.haptics.medium();
             dispatch({ type: 'GUESS_CELL', cellIndex: i });
           }} />
@@ -231,18 +282,40 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<Codena
 
   // turnEnd
   const reasonKey = `cn.reason.${s.turnEndReason ?? 'stopped'}`;
+  const reasonEmoji =
+    s.turnEndReason === 'guessedWrong'
+      ? '🙈'
+      : s.turnEndReason === 'usedAllGuesses'
+        ? '✋'
+        : s.turnEndReason === 'timeUp'
+          ? '⏰'
+          : '🤝';
   return (
     <Screen>
       <TurnAura color={teamColor} />
       <AppBar onBack={() => nav.exit()} />
       {scoreStrip}
-      <div className="grid flex-1 place-items-center gap-4 text-center">
+      <motion.div
+        className="grid flex-1 place-items-center gap-4 text-center"
+        initial={{ opacity: 0, y: 12 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+      >
+        <motion.div
+          className="text-6xl"
+          initial={{ scale: 0.3, rotate: -12 }}
+          animate={{ scale: 1, rotate: 0 }}
+          transition={{ type: 'spring', stiffness: 260, damping: 14 }}
+          aria-hidden
+        >
+          {reasonEmoji}
+        </motion.div>
         <h1 className="text-2xl font-extrabold">{t(reasonKey)}</h1>
         <p className="text-[var(--text-muted)]">{t('cn.nextTeam', { team: s.teamMeta[s.currentTeam === 'teamA' ? 'teamB' : 'teamA'].name })}</p>
         <Button size="lg" fullWidth onClick={() => { ctx.sound.play('tap'); dispatch({ type: 'ADVANCE_TURN' }); }}>
           {t('cn.continue')}
         </Button>
-      </div>
+      </motion.div>
     </Screen>
   );
 }

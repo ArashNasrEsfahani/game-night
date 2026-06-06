@@ -139,8 +139,24 @@ describe('codenames guessing', () => {
     expect(s.winReason).toBe('clearedWords');
   });
 
-  it('a neutral ends the turn', () => {
+  it('forgives the first wrong guess, then ends the turn on a second', () => {
     let s = toGuessing(createInitialState(makeConfig(), 1), 2);
+    const allowedBefore = s.activeClue!.guessesAllowed;
+    const neutrals = cellsByRole(s, 'neutral');
+    s = reducer(s, { type: 'GUESS_CELL', cellIndex: neutrals[0].index });
+    // first wrong is forgiven — still guessing, and a guess is added back so the clue can complete
+    expect(s.phase).toBe('guessing');
+    expect(s.wrongGuessesThisTurn).toBe(1);
+    expect(s.lastReveal?.outcome).toBe('neutral');
+    expect(s.activeClue!.guessesAllowed).toBe(allowedBefore + 1);
+    // a second wrong guess ends the turn
+    s = reducer(s, { type: 'GUESS_CELL', cellIndex: neutrals[1].index });
+    expect(s.phase).toBe('turnEnd');
+    expect(s.turnEndReason).toBe('guessedWrong');
+  });
+
+  it('with forgiveness off, a neutral ends the turn immediately', () => {
+    let s = toGuessing(createInitialState(makeConfig({ forgiveFirstWrong: false }), 1), 2);
     s = reducer(s, { type: 'GUESS_CELL', cellIndex: cellsByRole(s, 'neutral')[0].index });
     expect(s.phase).toBe('turnEnd');
     expect(s.turnEndReason).toBe('guessedWrong');
