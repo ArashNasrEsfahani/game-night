@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import type { GameConfig, GameScreenProps, PlayerSeat } from '../../../sdk/types';
-import { Screen, AppBar, Button, SegmentedControl, Toggle } from '../../../sdk/ui';
+import { Screen, AppBar, Button, SegmentedControl, Toggle, Disclosure } from '../../../sdk/ui';
 import { useRosterStore } from '../../../store/rosterStore';
 import { PlayerPicker } from '../../../app/components/PlayerPicker';
 import { DEFAULT_OPTIONS, validateConfig } from '../config';
@@ -41,6 +41,7 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<WyrState, WyrAction>) 
     <Screen>
       <AppBar title={t('wyr.title')} onBack={() => nav.exit()} />
       <div className="flex flex-col gap-5 pb-8">
+        {/* Always visible: players */}
         <section>
           <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">
             {t('common.players')} · {seats.length}
@@ -52,6 +53,7 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<WyrState, WyrAction>) 
           />
         </section>
 
+        {/* Always visible: primary choice — deck */}
         <section>
           <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">{t('wyr.deck')}</h2>
           <SegmentedControl<string>
@@ -61,47 +63,46 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<WyrState, WyrAction>) 
           />
         </section>
 
-        <section>
-          <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">
-            {t('wyr.intensityLabel')}
-          </h2>
-          <SegmentedControl<Intensity>
-            value={opts.maxIntensity}
-            onChange={(v) => set('maxIntensity', v)}
-            options={[
-              { value: 'mild', label: t('wyr.intensity.mild') },
-              { value: 'medium', label: t('wyr.intensity.medium') },
-              { value: 'spicy', label: t('wyr.intensity.spicy') },
-              { value: 'risky', label: t('wyr.intensity.risky') },
-            ]}
-          />
-        </section>
+        {/* Collapsible: everything else */}
+        <Disclosure title={t('common.moreOptions')} summary={t('common.moreOptionsHint')}>
+          <div className="flex flex-col gap-1.5">
+            <span className="text-sm text-[var(--text)]">{t('wyr.intensityLabel')}</span>
+            <SegmentedControl<Intensity>
+              value={opts.maxIntensity}
+              onChange={(v) => set('maxIntensity', v)}
+              options={[
+                { value: 'mild', label: t('wyr.intensity.mild') },
+                { value: 'medium', label: t('wyr.intensity.medium') },
+                { value: 'spicy', label: t('wyr.intensity.spicy') },
+                { value: 'risky', label: t('wyr.intensity.risky') },
+              ]}
+            />
+          </div>
 
-        <section>
-          <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">{t('wyr.modeLabel')}</h2>
-          <SegmentedControl<WyrMode>
-            value={opts.mode}
-            onChange={(v) => set('mode', v)}
-            options={[
-              { value: 'vote', label: t('wyr.mode.vote') },
-              { value: 'quick', label: t('wyr.mode.quick') },
-            ]}
-          />
-        </section>
+          <div className="flex flex-col gap-1.5">
+            <span className="text-sm text-[var(--text)]">{t('wyr.modeLabel')}</span>
+            <SegmentedControl<WyrMode>
+              value={opts.mode}
+              onChange={(v) => set('mode', v)}
+              options={[
+                { value: 'vote', label: t('wyr.mode.vote') },
+                { value: 'quick', label: t('wyr.mode.quick') },
+              ]}
+            />
+          </div>
 
-        <section>
-          <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">{t('wyr.length')}</h2>
-          <SegmentedControl<string>
-            value={String(opts.roundLength >= 999 ? 'all' : opts.roundLength)}
-            onChange={(v) => set('roundLength', v === 'all' ? 999 : Number(v))}
-            options={[
-              ...lenChoices.map((n) => ({ value: String(n), label: String(n) })),
-              { value: 'all', label: t('wyr.all') },
-            ]}
-          />
-        </section>
+          <div className="flex flex-col gap-1.5">
+            <span className="text-sm text-[var(--text)]">{t('wyr.length')}</span>
+            <SegmentedControl<string>
+              value={String(opts.roundLength >= 999 ? 'all' : opts.roundLength)}
+              onChange={(v) => set('roundLength', v === 'all' ? 999 : Number(v))}
+              options={[
+                ...lenChoices.map((n) => ({ value: String(n), label: String(n) })),
+                { value: 'all', label: t('wyr.all') },
+              ]}
+            />
+          </div>
 
-        <section className="flex flex-col gap-3">
           <Toggle
             label={t('wyr.awardPoints')}
             checked={opts.awardMajorityPoints}
@@ -114,7 +115,7 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<WyrState, WyrAction>) 
               onChange={(v) => set('tieCountsForBoth', v)}
             />
           )}
-        </section>
+        </Disclosure>
 
         <p className="text-sm text-[var(--text-muted)]">{t('wyr.poolSize', { n: poolSize })}</p>
         {errors && (
@@ -124,7 +125,15 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<WyrState, WyrAction>) 
             ))}
           </ul>
         )}
-        <Button size="lg" fullWidth disabled={!!errors} onClick={() => { ctx.sound.play('tap'); nav.startMatch(config); }}>
+        <Button
+          size="lg"
+          fullWidth
+          disabled={!!errors}
+          onClick={() => {
+            ctx.sound.play('tap');
+            nav.startMatch(config);
+          }}
+        >
           {t('common.start')}
         </Button>
       </div>

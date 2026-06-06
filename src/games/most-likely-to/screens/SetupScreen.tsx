@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import type { GameConfig, GameScreenProps, PlayerSeat } from '../../../sdk/types';
-import { Screen, AppBar, Button, SegmentedControl, Stepper, Toggle } from '../../../sdk/ui';
+import { Screen, AppBar, Button, SegmentedControl, Stepper, Toggle, Disclosure } from '../../../sdk/ui';
 import { useRosterStore } from '../../../store/rosterStore';
 import { PlayerPicker } from '../../../app/components/PlayerPicker';
 import { DEFAULT_OPTIONS, validateConfig } from '../config';
@@ -40,6 +40,7 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<MltState, MltAction>) 
     <Screen>
       <AppBar title={t('mlt.title')} onBack={() => nav.exit()} />
       <div className="flex flex-col gap-5 pb-8">
+        {/* Always visible: players */}
         <section>
           <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">
             {t('common.players')} · {seats.length}
@@ -51,45 +52,46 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<MltState, MltAction>) 
           />
         </section>
 
-        <section>
-          <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">{t('mlt.deck')}</h2>
+        {/* Always visible: deck (the primary gameplay choice) */}
+        <div className="flex flex-col gap-1.5">
+          <span className="text-sm text-[var(--text)]">{t('mlt.deck')}</span>
           <SegmentedControl<string>
             value={opts.deckId}
             onChange={(v) => set('deckId', v)}
             options={DECKS.map((d) => ({ value: d.id, label: ctx.localize(d.name) }))}
           />
-        </section>
+        </div>
 
-        <section>
-          <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">
-            {t('mlt.intensityLabel')}
-          </h2>
-          <SegmentedControl<Intensity>
-            value={opts.intensity}
-            onChange={(v) => set('intensity', v)}
-            options={[
-              { value: 'family', label: t('mlt.intensity.family') },
-              { value: 'casual', label: t('mlt.intensity.casual') },
-              { value: 'spicy', label: t('mlt.intensity.spicy') },
-            ]}
-          />
-        </section>
+        {/* More options disclosure */}
+        <Disclosure title={t('common.moreOptions')} summary={t('common.moreOptionsHint')}>
+          {/* Intensity */}
+          <div className="flex flex-col gap-1.5">
+            <span className="text-sm text-[var(--text)]">{t('mlt.intensityLabel')}</span>
+            <SegmentedControl<Intensity>
+              value={opts.intensity}
+              onChange={(v) => set('intensity', v)}
+              options={[
+                { value: 'family', label: t('mlt.intensity.family') },
+                { value: 'casual', label: t('mlt.intensity.casual') },
+                { value: 'spicy', label: t('mlt.intensity.spicy') },
+              ]}
+            />
+          </div>
 
-        <section>
-          <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">
-            {t('mlt.votingStyle')}
-          </h2>
-          <SegmentedControl<VotingStyle>
-            value={opts.votingStyle}
-            onChange={(v) => set('votingStyle', v)}
-            options={[
-              { value: 'pass-device', label: t('mlt.style.passDevice') },
-              { value: 'simultaneous', label: t('mlt.style.simultaneous') },
-            ]}
-          />
-        </section>
+          {/* Voting style */}
+          <div className="flex flex-col gap-1.5">
+            <span className="text-sm text-[var(--text)]">{t('mlt.votingStyle')}</span>
+            <SegmentedControl<VotingStyle>
+              value={opts.votingStyle}
+              onChange={(v) => set('votingStyle', v)}
+              options={[
+                { value: 'pass-device', label: t('mlt.style.passDevice') },
+                { value: 'simultaneous', label: t('mlt.style.simultaneous') },
+              ]}
+            />
+          </div>
 
-        <section className="flex flex-col gap-4">
+          {/* Rounds */}
           <Stepper
             label={t('mlt.rounds')}
             value={Math.min(opts.roundCount, Math.max(1, poolSize))}
@@ -97,6 +99,8 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<MltState, MltAction>) 
             max={Math.max(1, poolSize)}
             onChange={(v) => set('roundCount', v)}
           />
+
+          {/* Toggles */}
           <Toggle
             label={t('mlt.allowSelfVote')}
             checked={opts.allowSelfVote}
@@ -107,10 +111,10 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<MltState, MltAction>) 
             checked={opts.showRunningScores}
             onChange={(v) => set('showRunningScores', v)}
           />
-          <div>
-            <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">
-              {t('mlt.tieBreakLabel')}
-            </h2>
+
+          {/* Tie break */}
+          <div className="flex flex-col gap-1.5">
+            <span className="text-sm text-[var(--text)]">{t('mlt.tieBreakLabel')}</span>
             <SegmentedControl<TieBreak>
               value={opts.tieBreak}
               onChange={(v) => set('tieBreak', v)}
@@ -120,7 +124,7 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<MltState, MltAction>) 
               ]}
             />
           </div>
-        </section>
+        </Disclosure>
 
         <p className="text-sm text-[var(--text-muted)]">{t('mlt.poolHint', { count: poolSize })}</p>
         {errors && (

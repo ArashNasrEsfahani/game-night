@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import type { GameConfig, GameScreenProps, PlayerSeat, TeamSetup } from '../../../sdk/types';
-import { Screen, AppBar, Button, SegmentedControl, Stepper, Toggle } from '../../../sdk/ui';
+import { Screen, AppBar, Button, Disclosure, SegmentedControl, SelectChip, Stepper, Toggle } from '../../../sdk/ui';
 import { useRosterStore } from '../../../store/rosterStore';
 import { PlayerPicker } from '../../../app/components/PlayerPicker';
 import { asTeamId } from '../../../engine/ids';
@@ -59,6 +59,8 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<HeadsUpState, HeadsUpA
     <Screen>
       <AppBar title={t('hu.title')} onBack={() => nav.exit()} />
       <div className="flex flex-col gap-5 pb-8">
+
+        {/* ── Always visible: players ── */}
         <section>
           <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">
             {t('common.players')} · {seats.length}
@@ -70,44 +72,23 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<HeadsUpState, HeadsUpA
           />
         </section>
 
+        {/* ── Always visible: decks ── */}
         <section>
           <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">{t('hu.decks')}</h2>
           <div className="flex flex-wrap gap-2">
             {DECK_LIST.map((d) => (
-              <button
+              <SelectChip
                 key={d.id}
+                selected={opts.deckIds.includes(d.id)}
                 onClick={() => toggleDeck(d.id)}
-                className={`rounded-full px-3 py-1.5 text-sm ${
-                  opts.deckIds.includes(d.id)
-                    ? 'bg-[var(--game-accent-strong)] text-[var(--game-on-accent)]'
-                    : 'bg-[var(--surface-2)] text-[var(--text)]'
-                }`}
               >
                 {d.icon} {ctx.localize(d.name)}
-              </button>
+              </SelectChip>
             ))}
           </div>
         </section>
 
-        <section>
-          <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">{t('hu.difficulty')}</h2>
-          <div className="flex flex-wrap gap-2">
-            {DIFFICULTIES.map((d) => (
-              <button
-                key={d}
-                onClick={() => toggleDifficulty(d)}
-                className={`rounded-full px-3 py-1.5 text-sm ${
-                  opts.difficulties[d]
-                    ? 'bg-[var(--game-accent-strong)] text-[var(--game-on-accent)]'
-                    : 'bg-[var(--surface-2)] text-[var(--text)]'
-                }`}
-              >
-                {t(`hu.diff.${d}`)} · {diffCounts[d]}
-              </button>
-            ))}
-          </div>
-        </section>
-
+        {/* ── Always visible: mode ── */}
         <section>
           <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">{t('hu.mode')}</h2>
           <SegmentedControl<HeadsUpMode>
@@ -120,31 +101,51 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<HeadsUpState, HeadsUpA
           />
         </section>
 
-        {opts.mode === 'teams' && (
-          <section>
-            <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">{t('hu.teamCount')}</h2>
+        {/* ── More options disclosure ── */}
+        <Disclosure title={t('common.moreOptions')} summary={t('common.moreOptionsHint')}>
+          {/* Difficulty tiers */}
+          <div className="flex flex-col gap-1.5">
+            <span className="text-sm text-[var(--text)]">{t('hu.difficulty')}</span>
+            <div className="flex flex-wrap gap-2">
+              {DIFFICULTIES.map((d) => (
+                <SelectChip
+                  key={d}
+                  selected={opts.difficulties[d]}
+                  onClick={() => toggleDifficulty(d)}
+                >
+                  {t(`hu.diff.${d}`)} · {diffCounts[d]}
+                </SelectChip>
+              ))}
+            </div>
+          </div>
+
+          {/* Team count (only when teams mode) */}
+          {opts.mode === 'teams' && (
+            <div className="flex flex-col gap-1.5">
+              <span className="text-sm text-[var(--text)]">{t('hu.teamCount')}</span>
+              <SegmentedControl<string>
+                value={String(opts.teamCount)}
+                onChange={(v) => set('teamCount', Number(v))}
+                options={[
+                  { value: '2', label: '2' },
+                  { value: '3', label: '3' },
+                  { value: '4', label: '4' },
+                ]}
+              />
+            </div>
+          )}
+
+          {/* Round time */}
+          <div className="flex flex-col gap-1.5">
+            <span className="text-sm text-[var(--text)]">{t('hu.roundTime')}</span>
             <SegmentedControl<string>
-              value={String(opts.teamCount)}
-              onChange={(v) => set('teamCount', Number(v))}
-              options={[
-                { value: '2', label: '2' },
-                { value: '3', label: '3' },
-                { value: '4', label: '4' },
-              ]}
+              value={String(opts.roundSeconds)}
+              onChange={(v) => set('roundSeconds', Number(v))}
+              options={ROUND_SECONDS_CHOICES.map((s) => ({ value: String(s), label: `${s}s` }))}
             />
-          </section>
-        )}
+          </div>
 
-        <section>
-          <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">{t('hu.roundTime')}</h2>
-          <SegmentedControl<string>
-            value={String(opts.roundSeconds)}
-            onChange={(v) => set('roundSeconds', Number(v))}
-            options={ROUND_SECONDS_CHOICES.map((s) => ({ value: String(s), label: `${s}s` }))}
-          />
-        </section>
-
-        <section className="flex flex-col gap-4">
+          {/* Rounds, toggles */}
           <Stepper label={t('hu.roundsEach')} value={opts.rounds} min={1} max={5} onChange={(v) => set('rounds', v)} />
           <Toggle
             label={t('hu.passPenalty')}
@@ -153,7 +154,7 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<HeadsUpState, HeadsUpA
           />
           <Toggle label={t('hu.recycle')} checked={opts.recycleDeck} onChange={(v) => set('recycleDeck', v)} />
           <Toggle label={t('hu.motion')} checked={opts.motionEnabled} onChange={(v) => set('motionEnabled', v)} />
-        </section>
+        </Disclosure>
 
         {errors && (
           <ul className="text-sm text-[var(--color-game-rose-strong)]">

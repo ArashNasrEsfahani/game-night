@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import type { GameConfig, GameScreenProps, PlayerSeat } from '../../../sdk/types';
-import { Screen, AppBar, Button, SegmentedControl, Stepper } from '../../../sdk/ui';
+import { Screen, AppBar, Button, SegmentedControl, Stepper, Disclosure, SelectChip } from '../../../sdk/ui';
 import { useRosterStore } from '../../../store/rosterStore';
 import { PlayerPicker } from '../../../app/components/PlayerPicker';
 import { DEFAULT_OPTIONS, validateConfig } from '../config';
@@ -47,6 +47,7 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<NhieState, NhieAction>
     <Screen>
       <AppBar title={t('nhie.title')} onBack={() => nav.exit()} />
       <div className="flex flex-col gap-5 pb-8">
+        {/* Always visible: players */}
         <section>
           <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">
             {t('common.players')} · {seats.length}
@@ -58,8 +59,9 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<NhieState, NhieAction>
           />
         </section>
 
-        <section>
-          <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">{t('nhie.modeLabel')}</h2>
+        {/* Always visible: mode (the primary gameplay choice) */}
+        <div className="flex flex-col gap-1.5">
+          <span className="text-sm text-[var(--text)]">{t('nhie.modeLabel')}</span>
           <SegmentedControl<NhieMode>
             value={opts.mode}
             onChange={(v) => set('mode', v)}
@@ -68,44 +70,40 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<NhieState, NhieAction>
               { value: 'points', label: t('nhie.mode.points') },
             ]}
           />
-        </section>
+        </div>
 
-        <section>
-          <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">
-            {t('nhie.answerStyle')}
-          </h2>
-          <SegmentedControl<RevealMode>
-            value={opts.revealMode}
-            onChange={(v) => set('revealMode', v)}
-            options={[
-              { value: 'sequential', label: t('nhie.answer.sequential') },
-              { value: 'honor', label: t('nhie.answer.honor') },
-            ]}
-          />
-        </section>
-
-        <section>
-          <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">
-            {t('nhie.intensityLabel')}
-          </h2>
-          <div className="flex flex-wrap gap-2">
-            {INTENSITIES.map((i) => (
-              <button
-                key={i}
-                onClick={() => toggleIntensity(i)}
-                className={`rounded-full px-3 py-1.5 text-sm ${
-                  opts.intensities.includes(i)
-                    ? 'bg-[var(--game-accent-strong)] text-[var(--game-on-accent)]'
-                    : 'bg-[var(--surface-2)] text-[var(--text)]'
-                }`}
-              >
-                {t(`nhie.intensity.${i}`)}
-              </button>
-            ))}
+        {/* More options disclosure */}
+        <Disclosure title={t('common.moreOptions')} summary={t('common.moreOptionsHint')}>
+          {/* Answer style */}
+          <div className="flex flex-col gap-1.5">
+            <span className="text-sm text-[var(--text)]">{t('nhie.answerStyle')}</span>
+            <SegmentedControl<RevealMode>
+              value={opts.revealMode}
+              onChange={(v) => set('revealMode', v)}
+              options={[
+                { value: 'sequential', label: t('nhie.answer.sequential') },
+                { value: 'honor', label: t('nhie.answer.honor') },
+              ]}
+            />
           </div>
-        </section>
 
-        <section className="flex flex-col gap-4">
+          {/* Intensity chips */}
+          <div className="flex flex-col gap-1.5">
+            <span className="text-sm text-[var(--text)]">{t('nhie.intensityLabel')}</span>
+            <div className="flex flex-wrap gap-2">
+              {INTENSITIES.map((i) => (
+                <SelectChip
+                  key={i}
+                  selected={opts.intensities.includes(i)}
+                  onClick={() => toggleIntensity(i)}
+                >
+                  {t(`nhie.intensity.${i}`)}
+                </SelectChip>
+              ))}
+            </div>
+          </div>
+
+          {/* Lives (classic mode only) */}
           {opts.mode === 'classic' && (
             <Stepper
               label={t('nhie.lives')}
@@ -115,6 +113,8 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<NhieState, NhieAction>
               onChange={(v) => set('startingLives', v)}
             />
           )}
+
+          {/* Statements */}
           <Stepper
             label={t('nhie.statements')}
             value={opts.deckSize}
@@ -122,7 +122,7 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<NhieState, NhieAction>
             max={Math.max(1, poolSize)}
             onChange={(v) => set('deckSize', v)}
           />
-        </section>
+        </Disclosure>
 
         <p className="text-sm text-[var(--text-muted)]">{t('nhie.deckCount', { n: poolSize })}</p>
         {errors && (

@@ -9,6 +9,8 @@ export * from './GameCard';
 export * from './SegmentedControl';
 export * from './Stepper';
 export * from './Toggle';
+export * from './Disclosure';
+export * from './SelectChip';
 export * from './Curtain';
 export * from './TimerRing';
 export * from './Scoreboard';

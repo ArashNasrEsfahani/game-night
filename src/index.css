@@ -92,6 +92,18 @@
   --beam: 0.42;
   --dust: 0.4;
   --shadow-card: 0 16px 40px -24px rgb(60 40 20 / 0.4);
+
+  /* Frosted glass (day): translucent parchment over the tilework wash. */
+  --glass-bg: color-mix(in oklab, var(--surface) 58%, transparent);
+  --glass-bg-2: color-mix(in oklab, var(--surface-2) 50%, transparent);
+  --glass-border: color-mix(in oklab, #ffffff 60%, var(--border-glow));
+  --glass-highlight: rgb(255 255 255 / 0.6);
+  --glass-blur: 14px;
+  /* Resting/unselected controls are translucent glass (sit below the text); the SELECTED/active
+     state is the full vibrant accent so a chosen option pops. */
+  --control-fill: color-mix(in oklab, var(--surface-2) 60%, transparent);
+  --accent-fill: var(--game-accent);
+  --accent-fill-strong: var(--game-accent-strong);
   color-scheme: light;
 }
 
@@ -123,6 +135,16 @@
   --beam: 0.4;
   --dust: 0.5;
   --shadow-card: 0 18px 50px -18px rgb(0 0 0 / 0.7);
+
+  /* Frosted glass (night): translucent lapis over the disco beams behind it. */
+  --glass-bg: color-mix(in oklab, var(--surface-2) 46%, transparent);
+  --glass-bg-2: color-mix(in oklab, var(--surface) 44%, transparent);
+  --glass-border: rgb(255 255 255 / 0.14);
+  --glass-highlight: rgb(255 255 255 / 0.16);
+  --glass-blur: 16px;
+  --control-fill: color-mix(in oklab, var(--surface-2) 48%, transparent);
+  --accent-fill: var(--game-accent);
+  --accent-fill-strong: var(--game-accent-strong);
   color-scheme: dark;
 }
 
@@ -294,6 +316,28 @@ html[dir="rtl"] {
       radial-gradient(circle at 25% 50%, color-mix(in oklab, var(--color-game-gold) 60%, transparent) 0 22%, transparent 26%),
       radial-gradient(circle at 75% 50%, color-mix(in oklab, var(--color-game-teal) 60%, transparent) 0 22%, transparent 26%);
     background-size: 24px 24px;
+  }
+
+  /* ── Frosted glass ──
+     Translucent surface that blurs whatever scrolls behind it (page wash + disco
+     beams). Prefixed -webkit- form keeps the frost on iOS Safari. Falls back to an
+     opaque surface where backdrop-filter is unsupported. */
+  .dp-glass {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--shadow-card), inset 0 1px 0 var(--glass-highlight);
+  }
+  .dp-glass-2 { background: var(--glass-bg-2); }
+  @supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+    .dp-glass, .dp-glass-2 {
+      -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(1.5);
+      backdrop-filter: blur(var(--glass-blur)) saturate(1.5);
+    }
+  }
+  @supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+    /* No blur support → lean opaque so text stays legible. */
+    .dp-glass { background: var(--surface); }
+    .dp-glass-2 { background: var(--surface-2); }
   }
 }
 

@@ -20,7 +20,7 @@ export function Toggle({
         whileTap={{ scale: 0.92 }}
         transition={springSnappy}
         className={`h-7 w-12 shrink-0 rounded-full p-0.5 transition-colors ${
-          checked ? 'bg-[var(--game-accent-strong)]' : 'bg-[var(--surface-2)]'
+          checked ? 'bg-[var(--accent-fill-strong)]' : 'bg-[var(--control-fill)]'
         }`}
       >
         <motion.span

@@ -25,7 +25,7 @@ export function Stepper({
           whileTap={pressIcon.whileTap}
           whileHover={pressIcon.whileHover}
           transition={pressIcon.transition}
-          className="grid h-10 w-10 place-items-center rounded-full bg-[var(--surface-2)] text-xl shadow-[inset_0_0_0_1px_var(--border)] disabled:opacity-40"
+          className="grid h-10 w-10 place-items-center rounded-full bg-[var(--control-fill)] text-xl text-[var(--text)] shadow-[inset_0_0_0_1px_var(--glass-border)] disabled:opacity-40"
         >
           −
         </motion.button>
@@ -47,7 +47,7 @@ export function Stepper({
           whileTap={pressIcon.whileTap}
           whileHover={pressIcon.whileHover}
           transition={pressIcon.transition}
-          className="grid h-10 w-10 place-items-center rounded-full bg-[var(--surface-2)] text-xl shadow-[inset_0_0_0_1px_var(--border)] disabled:opacity-40"
+          className="grid h-10 w-10 place-items-center rounded-full bg-[var(--control-fill)] text-xl text-[var(--text)] shadow-[inset_0_0_0_1px_var(--glass-border)] disabled:opacity-40"
         >
           +
         </motion.button>

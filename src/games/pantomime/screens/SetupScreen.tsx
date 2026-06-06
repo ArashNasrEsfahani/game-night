@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import type { GameConfig, GameScreenProps, PlayerSeat, TeamSetup } from '../../../sdk/types';
-import { Screen, AppBar, Button, SegmentedControl, Stepper, Toggle } from '../../../sdk/ui';
+import { Screen, AppBar, Button, SegmentedControl, Stepper, Toggle, Disclosure, SelectChip } from '../../../sdk/ui';
 import { useRosterStore } from '../../../store/rosterStore';
 import { PlayerPicker } from '../../../app/components/PlayerPicker';
 import { asTeamId } from '../../../engine/ids';
@@ -78,6 +78,7 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<PantomimeState, Pantom
     <Screen>
       <AppBar title={t('pantomime.title')} onBack={() => nav.exit()} />
       <div className="flex flex-col gap-5 pb-8">
+        {/* Always visible: Players */}
         <section>
           <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">
             {t('common.players')} · {seats.length}
@@ -89,6 +90,7 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<PantomimeState, Pantom
           />
         </section>
 
+        {/* Always visible: Team count */}
         <section>
           <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">
             {t('pantomime.teams')}
@@ -104,71 +106,63 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<PantomimeState, Pantom
           />
         </section>
 
-        <section>
-          <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">
-            {t('pantomime.categories')}
-          </h2>
-          <div className="flex flex-wrap gap-2">
-            {PANTOMIME_CATEGORIES.map((c) => (
-              <button
-                key={c}
-                onClick={() => toggleCat(c)}
-                className={`rounded-full px-3 py-1.5 text-sm ${
-                  opts.categories.includes(c)
-                    ? 'bg-[var(--game-accent-strong)] text-[var(--game-on-accent)]'
-                    : 'bg-[var(--surface-2)] text-[var(--text)]'
-                }`}
-              >
-                {t(`pantomime.cat.${c}`)}
-              </button>
-            ))}
+        {/* More options: everything else */}
+        <Disclosure title={t('common.moreOptions')} summary={t('common.moreOptionsHint')}>
+          {/* Categories */}
+          <div className="flex flex-col gap-1.5">
+            <span className="text-sm text-[var(--text)]">{t('pantomime.categories')}</span>
+            <div className="flex flex-wrap gap-2">
+              {PANTOMIME_CATEGORIES.map((c) => (
+                <SelectChip
+                  key={c}
+                  selected={opts.categories.includes(c)}
+                  onClick={() => toggleCat(c)}
+                >
+                  {t(`pantomime.cat.${c}`)}
+                </SelectChip>
+              ))}
+            </div>
           </div>
-        </section>
 
-        <section>
-          <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">
-            {t('pantomime.difficulty')}
-          </h2>
-          <div className="flex flex-wrap gap-2">
-            {PANTOMIME_DIFFICULTIES.map((d) => (
-              <button
-                key={d}
-                onClick={() => toggleDiff(d)}
-                className={`rounded-full px-3 py-1.5 text-sm ${
-                  opts.difficulties.includes(d)
-                    ? 'bg-[var(--game-accent-strong)] text-[var(--game-on-accent)]'
-                    : 'bg-[var(--surface-2)] text-[var(--text)]'
-                }`}
-              >
-                {t(`pantomime.diff.${d}`)}
-              </button>
-            ))}
+          {/* Difficulty */}
+          <div className="flex flex-col gap-1.5">
+            <span className="text-sm text-[var(--text)]">{t('pantomime.difficulty')}</span>
+            <div className="flex flex-wrap gap-2">
+              {PANTOMIME_DIFFICULTIES.map((d) => (
+                <SelectChip
+                  key={d}
+                  selected={opts.difficulties.includes(d)}
+                  onClick={() => toggleDiff(d)}
+                >
+                  {t(`pantomime.diff.${d}`)}
+                </SelectChip>
+              ))}
+            </div>
           </div>
-        </section>
 
-        <section>
-          <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">
-            {t('pantomime.roundTime')}
-          </h2>
-          <SegmentedControl<string>
-            value={String(opts.roundSeconds)}
-            onChange={(v) => set('roundSeconds', Number(v))}
-            options={ROUND_SECONDS_CHOICES.map((s) => ({ value: String(s), label: `${s}s` }))}
-          />
-        </section>
+          {/* Round time */}
+          <div className="flex flex-col gap-1.5">
+            <span className="text-sm text-[var(--text)]">{t('pantomime.roundTime')}</span>
+            <SegmentedControl<string>
+              value={String(opts.roundSeconds)}
+              onChange={(v) => set('roundSeconds', Number(v))}
+              options={ROUND_SECONDS_CHOICES.map((s) => ({ value: String(s), label: `${s}s` }))}
+            />
+          </div>
 
-        <section className="flex flex-col gap-3">
-          <h2 className="text-sm font-semibold text-[var(--text-muted)]">
-            {t('pantomime.endModeLabel')}
-          </h2>
-          <SegmentedControl<PantomimeEndMode>
-            value={opts.endMode}
-            onChange={(v) => set('endMode', v)}
-            options={[
-              { value: 'targetScore', label: t('pantomime.endMode.targetScore') },
-              { value: 'rounds', label: t('pantomime.endMode.rounds') },
-            ]}
-          />
+          {/* End mode */}
+          <div className="flex flex-col gap-1.5">
+            <span className="text-sm text-[var(--text)]">{t('pantomime.endModeLabel')}</span>
+            <SegmentedControl<PantomimeEndMode>
+              value={opts.endMode}
+              onChange={(v) => set('endMode', v)}
+              options={[
+                { value: 'targetScore', label: t('pantomime.endMode.targetScore') },
+                { value: 'rounds', label: t('pantomime.endMode.rounds') },
+              ]}
+            />
+          </div>
+
           {opts.endMode === 'targetScore' ? (
             <Stepper
               label={t('pantomime.targetScore')}
@@ -186,29 +180,29 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<PantomimeState, Pantom
               onChange={(v) => set('totalRounds', v)}
             />
           )}
-        </section>
 
-        <section className="flex flex-col gap-3">
-          <h2 className="text-sm font-semibold text-[var(--text-muted)]">
-            {t('pantomime.skips')}
-          </h2>
-          <SegmentedControl<string>
-            value={String(opts.maxSkipsPerTurn)}
-            onChange={(v) => set('maxSkipsPerTurn', Number(v))}
-            options={[
-              { value: '0', label: '0' },
-              { value: '1', label: '1' },
-              { value: '2', label: '2' },
-              { value: '3', label: '3' },
-              { value: '-1', label: '∞' },
-            ]}
-          />
+          {/* Skips */}
+          <div className="flex flex-col gap-1.5">
+            <span className="text-sm text-[var(--text)]">{t('pantomime.skips')}</span>
+            <SegmentedControl<string>
+              value={String(opts.maxSkipsPerTurn)}
+              onChange={(v) => set('maxSkipsPerTurn', Number(v))}
+              options={[
+                { value: '0', label: '0' },
+                { value: '1', label: '1' },
+                { value: '2', label: '2' },
+                { value: '3', label: '3' },
+                { value: '-1', label: '∞' },
+              ]}
+            />
+          </div>
+
           <Toggle
             label={t('pantomime.skipPenalty')}
             checked={opts.skipPenalty}
             onChange={(v) => set('skipPenalty', v)}
           />
-        </section>
+        </Disclosure>
 
         <p className="text-sm text-[var(--text-muted)]">
           {t('pantomime.poolHint', { count: poolSize })}

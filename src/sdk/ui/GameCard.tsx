@@ -36,7 +36,7 @@ export function GameCard({
       transition={{ delay: index * 0.05, duration: 0.45, ease: easePop }}
       whileHover={{ y: -4, transition: springSnappy }}
       whileTap={{ scale: 0.97, transition: springSnappy }}
-      className="group relative flex flex-col overflow-hidden rounded-[var(--radius-card)] border border-[var(--border)] bg-gradient-to-b from-[var(--surface-2)] to-[var(--surface)] text-start shadow-[var(--shadow-card)] transition-shadow duration-300 hover:shadow-[0_26px_60px_-20px_var(--game-accent-glow)]"
+      className="dp-glass group relative flex flex-col overflow-hidden rounded-[var(--radius-card)] text-start transition-shadow duration-300 hover:shadow-[0_26px_60px_-20px_var(--game-accent-glow)]"
     >
       {/* Lit niche / arch (طاق) with the glowing emblem — theme-aware: a warm cream alcove by
           day, a jewel-dark alcove at night. Identical formula on every card → consistent family. */}

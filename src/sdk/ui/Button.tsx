@@ -15,7 +15,8 @@ export interface ButtonProps extends HTMLMotionProps<'button'> {
 const VARIANTS: Record<Variant, string> = {
   primary:
     'bg-[linear-gradient(135deg,var(--game-accent),var(--game-accent-strong))] text-[var(--game-on-accent)] shadow-[0_10px_26px_-8px_var(--game-accent-glow),inset_0_1px_0_rgb(255_255_255/0.4)]',
-  secondary: 'bg-[var(--surface-2)] text-[var(--text)] shadow-[inset_0_0_0_1.5px_var(--border-glow)]',
+  secondary:
+    'bg-[var(--control-fill)] text-[var(--text)] shadow-[inset_0_0_0_1.5px_var(--glass-border)] [backdrop-filter:blur(8px)] [-webkit-backdrop-filter:blur(8px)]',
   ghost: 'dp-accent bg-transparent',
   danger:
     'bg-[linear-gradient(135deg,var(--color-game-rose),var(--color-game-rose-strong))] text-[var(--on-rose)] shadow-[0_10px_26px_-8px_color-mix(in_oklab,var(--color-game-rose)_60%,transparent)]',

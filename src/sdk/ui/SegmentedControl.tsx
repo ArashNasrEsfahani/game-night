@@ -19,7 +19,7 @@ export function SegmentedControl<T extends string>({
     <div
       role="radiogroup"
       aria-label={ariaLabel}
-      className="relative flex gap-1 rounded-[var(--radius-pill)] bg-[var(--surface-sunk)] p-1 shadow-[inset_0_0_0_1px_var(--border)]"
+      className="dp-glass-2 relative flex gap-1 rounded-[var(--radius-pill)] p-1 shadow-[inset_0_0_0_1px_var(--glass-border)]"
     >
       {options.map((o) => {
         const selected = value === o.value;
@@ -37,7 +37,7 @@ export function SegmentedControl<T extends string>({
               <motion.span
                 layoutId={`seg-${groupId}`}
                 transition={springSnappy}
-                className="absolute inset-0 rounded-[var(--radius-pill)] bg-[linear-gradient(135deg,var(--game-accent),var(--game-accent-strong))] shadow-[0_4px_14px_-4px_var(--game-accent-glow)]"
+                className="absolute inset-0 rounded-[var(--radius-pill)] bg-[linear-gradient(135deg,var(--accent-fill),var(--accent-fill-strong))] shadow-[0_4px_14px_-4px_var(--game-accent-glow)]"
               />
             )}
             <span

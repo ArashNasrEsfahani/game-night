@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import '../../../i18n';
 import { SetupScreen } from './SetupScreen';
@@ -53,7 +53,12 @@ describe('Dowr SetupScreen', () => {
       </MemoryRouter>,
     );
     expect(screen.getByRole('heading', { name: 'Dowr' })).toBeInTheDocument();
-    // Difficulty segmented control labels present
+    // Advanced controls are tucked behind a "More options" disclosure (collapsed by default).
+    const more = screen.getByRole('button', { name: /More options/i });
+    expect(more).toBeInTheDocument();
+    expect(screen.queryByRole('radio', { name: 'Hard' })).not.toBeInTheDocument();
+    // Expanding it reveals the difficulty segmented control.
+    fireEvent.click(more);
     expect(screen.getByRole('radio', { name: 'Mixed' })).toBeInTheDocument();
     expect(screen.getByRole('radio', { name: 'Hard' })).toBeInTheDocument();
     // Start is present but disabled (no players in roster)
