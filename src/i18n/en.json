@@ -20,7 +20,9 @@
     "delete": "Delete",
     "edit": "Edit",
     "players": "Players",
-    "howToPlay": "How to play"
+    "howToPlay": "How to play",
+    "moreOptions": "More options",
+    "moreOptionsHint": "Tweak the rules, timing, and extras"
   },
   "home": {
     "title": "Game Night",
@@ -480,7 +482,7 @@
     "noHints": "No location list — work it out from the questions."
   },
   "cn": {
-    "title": "Spy Grid",
+    "title": "Codenames",
     "red": "Red",
     "blue": "Blue",
     "spymaster": "Spymaster",
@@ -490,6 +492,8 @@
     "startingTeam": "Starting team",
     "random": "Random",
     "bonusGuess": "Allow the bonus +1 guess",
+    "forgiveWrong": "Forgive one wrong guess",
+    "forgiven": "Phew! One mistake forgiven",
     "orientationToggle": "First team rotates the key",
     "startsFirst": "starts first",
     "chooseOrientation": "Choose the key orientation",
@@ -527,8 +531,8 @@
     "packs": "Word packs"
   },
   "mine": {
-    "title": "Minesweeper",
-    "playersHint": "1 player = classic solo · 2–4 players take turns",
+    "title": "Mine Hunt",
+    "playersHint": "Solo, or 2 to 4 players taking turns",
     "difficulty": "Difficulty",
     "diff": {
       "easy": "Easy",
@@ -539,15 +543,14 @@
     "cols": "Columns",
     "rows": "Rows",
     "mines": "Mines",
-    "lives": "Lives",
-    "boardHint": "≈ {{mines}} mines on a {{cols}}×{{rows}} board",
+    "boardHint": "≈ {{mines}} mines to find on a {{cols}}×{{rows}} board",
     "turnOf": "{{name}}'s turn",
-    "flagOn": "🚩 Flag mode ON",
-    "flagOff": "👆 Tap to reveal",
-    "tapHint": "Tap to reveal · long-press or flag mode to flag · tap a number to chord",
-    "youSwept": "You swept the board!",
-    "boom": "Boom! You hit a mine",
-    "cellsValue": "{{n}} cells",
+    "minesLeft": "{{n}} to find",
+    "goAgain": "Mine found! Tap again 🎉",
+    "missed": "Safe square, next player's turn",
+    "tapHint": "Tap a square to hunt. Find a mine and you go again; a safe square reveals a clue and passes the turn.",
+    "youFoundAll": "You found every mine!",
+    "minesValue": "{{n}} mines",
     "playAgain": "New board"
   },
   "mf": {
@@ -565,6 +568,13 @@
     "hideAndPass": "Hide & pass",
     "wake": "{{role}}, wake up — choose a target",
     "detectiveResult": "{{name}} appears: {{faction}}",
+    "consigliereResult": "{{name}} is the {{role}}",
+    "blockedResult": "You were blocked, no result tonight",
+    "roleGuide": "Roles & how they work",
+    "specialRoles": "Special roles",
+    "specialOn": "{{n}} added",
+    "specialHint": "Optional powers: Bodyguard, Escort, Framer, Consigliere, Jester",
+    "houseRulesHint": "Timers, voting, and tie rules",
     "faction": {
       "town": "Town",
       "mafia": "Mafia",
@@ -598,6 +608,7 @@
     "win": {
       "town": "Town wins! 🎉",
       "mafia": "Mafia wins! 🔪",
+      "jester": "The Jester wins! 🃏",
       "draw": "It's a draw."
     },
     "houseRules": "House rules",
