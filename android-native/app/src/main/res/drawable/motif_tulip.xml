@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Auto-generated from src/sdk/ui/emblems.ts — do not edit by hand. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="100dp"
+    android:height="100dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+  <path
+    android:pathData="M50 90 L50 56"
+    android:strokeColor="#FFFFFF"
+    android:strokeWidth="3.4"
+    android:strokeAlpha="0.85"
+    android:strokeLineCap="round"/>
+  <path
+    android:pathData="M50 74 C36 72 30 62 32 52 C42 54 49 62 50 74 Z"
+    android:fillColor="#FFFFFF"
+    android:strokeColor="#FFFFFF"
+    android:strokeWidth="1.4"
+    android:strokeAlpha="0.85"/>
+  <path
+    android:pathData="M50 58 C40 56 33 44 35 30 C42 38 47 44 50 44 Z"
+    android:fillColor="#FFFFFF"
+    android:strokeColor="#FFFFFF"
+    android:strokeWidth="1.8"
+    android:strokeAlpha="0.85"
+    android:strokeLineJoin="round"/>
+  <path
+    android:pathData="M50 58 C60 56 67 44 65 30 C58 38 53 44 50 44 Z"
+    android:fillColor="#FFFFFF"
+    android:strokeColor="#FFFFFF"
+    android:strokeWidth="1.8"
+    android:strokeAlpha="0.85"
+    android:strokeLineJoin="round"/>
+  <path
+    android:pathData="M50 58 C46 50 46 34 50 22 C54 34 54 50 50 58 Z"
+    android:fillColor="#FFFFFF"
+    android:strokeColor="#FFFFFF"
+    android:strokeWidth="1.8"
+    android:strokeAlpha="0.85"
+    android:strokeLineJoin="round"/>
+  <path
+    android:pathData="M47.6 30 a2.4 2.4 0 1 0 4.8 0 a2.4 2.4 0 1 0 -4.8 0 Z"
+    android:fillColor="#FFFFFF"/>
+</vector>

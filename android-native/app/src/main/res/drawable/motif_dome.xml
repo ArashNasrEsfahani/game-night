@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Auto-generated from src/sdk/ui/emblems.ts — do not edit by hand. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="100dp"
+    android:height="100dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+  <path
+    android:pathData="M50 6 L50 16"
+    android:strokeColor="#FFFFFF"
+    android:strokeWidth="2.4"
+    android:strokeAlpha="0.85"/>
+  <path
+    android:pathData="M46.8 6 a3.2 3.2 0 1 0 6.4 0 a3.2 3.2 0 1 0 -6.4 0 Z"
+    android:fillColor="#FFFFFF"
+    android:fillAlpha="0.85"/>
+  <path
+    android:pathData="M50 16 C44 22 32 30 32 48 C32 62 40 70 50 70 C60 70 68 62 68 48 C68 30 56 22 50 16 Z"
+    android:fillColor="#FFFFFF"
+    android:strokeColor="#FFFFFF"
+    android:strokeWidth="2"
+    android:strokeAlpha="0.85"/>
+  <path
+    android:pathData="M50 16 L50 70"
+    android:strokeColor="#FFFFFF"
+    android:strokeWidth="1.1"
+    android:strokeAlpha="0.552"/>
+  <path
+    android:pathData="M40 20 C36 34 36 54 43 69"
+    android:strokeColor="#FFFFFF"
+    android:strokeWidth="1.1"
+    android:strokeAlpha="0.552"/>
+  <path
+    android:pathData="M60 20 C64 34 64 54 57 69"
+    android:strokeColor="#FFFFFF"
+    android:strokeWidth="1.1"
+    android:strokeAlpha="0.552"/>
+  <path
+    android:pathData="M38 70 L62 70 L62 78 L38 78 Z"
+    android:fillColor="#FFFFFF"
+    android:strokeColor="#FFFFFF"
+    android:strokeWidth="1.6"
+    android:strokeAlpha="0.85"/>
+  <path
+    android:pathData="M30 92 L30 78 L70 78 L70 92 Z"
+    android:fillColor="#FFFFFF"
+    android:strokeColor="#FFFFFF"
+    android:strokeWidth="1.6"
+    android:strokeAlpha="0.85"/>
+  <path
+    android:pathData="M44 92 L44 86 C44 82 56 82 56 86 L56 92 Z"
+    android:fillColor="#FFFFFF"
+    android:fillAlpha="0.28"/>
+</vector>
