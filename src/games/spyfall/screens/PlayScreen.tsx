@@ -43,6 +43,17 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<Spyfal
 
   const name = (id: string) => s.playerNames[id] ?? id;
 
+  // Shared "End game" affordance (mirrors Truth or Dare): ends the match immediately and routes to
+  // Results with the running standings. Shown during active play in every in-match AppBar's right slot.
+  const endGameRight = (
+    <button
+      onClick={() => dispatch({ type: 'END_GAME' })}
+      className="text-sm text-[var(--text-muted)]"
+    >
+      {t('common.endGame')}
+    </button>
+  );
+
   if (s.phase === 'error') {
     return (
       <Screen>
@@ -62,7 +73,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<Spyfal
     const role = card && !card.isSpy && card.roleId ? roleName(card.locationId, card.roleId) : undefined;
     return (
       <Screen>
-        <AppBar onBack={() => nav.exit()} />
+        <AppBar onBack={() => nav.exit()} right={endGameRight} />
         <p className="py-1 text-center text-xs text-[var(--text-muted)]">
           {t('spy.revealProgress', { done: s.revealCursor + 1, total: s.playerIds.length })}
         </p>
@@ -73,21 +84,23 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<Spyfal
           revealLabel={t('spy.reveal')}
           onReveal={() => { ctx.sound.play('reveal'); setGateOpen(true); }}
         >
-          <div className="grid flex-1 place-items-center gap-5 text-center">
-            {card?.isSpy ? (
-              <>
-                <div className="text-7xl">🕵️</div>
-                <h1 className="text-3xl font-extrabold dp-accent">{t('spy.youAreSpy')}</h1>
-                <p className="text-sm text-[var(--text-muted)]">{t('spy.spyHint')}</p>
-              </>
-            ) : (
-              <>
-                <div className="text-6xl">{loc?.icon ?? '📍'}</div>
-                <h1 className="text-3xl font-extrabold">{loc ? ctx.localize(loc.name) : ''}</h1>
-                {role && <Chip>{ctx.localize(role)}</Chip>}
-              </>
-            )}
-            <Button size="lg" onClick={() => dispatch({ type: 'REVEAL_NEXT' })}>
+          <div className="flex flex-1 flex-col gap-4">
+            <Card className="flex flex-1 flex-col items-center justify-center gap-4 text-center">
+              {card?.isSpy ? (
+                <>
+                  <div className="text-7xl">🕵️</div>
+                  <h1 className="text-3xl font-extrabold dp-accent">{t('spy.youAreSpy')}</h1>
+                  <p className="text-sm text-[var(--text-muted)]">{t('spy.spyHint')}</p>
+                </>
+              ) : (
+                <>
+                  <div className="text-6xl">{loc?.icon ?? '📍'}</div>
+                  <h1 className="text-3xl font-extrabold">{loc ? ctx.localize(loc.name) : ''}</h1>
+                  {role && <Chip>{ctx.localize(role)}</Chip>}
+                </>
+              )}
+            </Card>
+            <Button size="lg" fullWidth onClick={() => dispatch({ type: 'REVEAL_NEXT' })}>
               {t('spy.hideAndPass')}
             </Button>
           </div>
@@ -99,7 +112,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<Spyfal
   if (s.phase === 'qa') {
     return (
       <Screen>
-        <AppBar onBack={() => nav.exit()} />
+        <AppBar onBack={() => nav.exit()} right={endGameRight} />
         <div className="flex flex-1 flex-col items-center gap-4 py-2 text-center">
           {s.options.useTimer && (
             <div className={`text-6xl font-black tabular-nums ${secondsLeft <= 60 ? 'text-[var(--color-game-rose-strong)]' : 'dp-accent'}`}>
@@ -121,7 +134,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<Spyfal
   if (s.phase === 'accusation') {
     return (
       <Screen>
-        <AppBar onBack={() => nav.exit()} />
+        <AppBar onBack={() => nav.exit()} right={endGameRight} />
         <div className="grid flex-1 place-items-center gap-4 text-center">
           <h1 className="text-2xl font-extrabold">{t('spy.timeToVote')}</h1>
           <Button size="lg" onClick={() => { ctx.sound.play('tap'); dispatch({ type: 'OPEN_VOTING' }); }}>
@@ -140,7 +153,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<Spyfal
     if (voteCursor >= s.playerIds.length) {
       return (
         <Screen>
-          <AppBar onBack={() => nav.exit()} />
+          <AppBar onBack={() => nav.exit()} right={endGameRight} />
           <div className="grid flex-1 place-items-center gap-4 text-center">
             <p className="text-lg text-[var(--text-muted)]">{t('spy.allVoted')}</p>
             <Button size="lg" onClick={() => { ctx.sound.play('reveal'); dispatch({ type: 'LOCK_VOTES' }); }}>
@@ -152,7 +165,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<Spyfal
     }
     return (
       <Screen>
-        <AppBar onBack={() => nav.exit()} />
+        <AppBar onBack={() => nav.exit()} right={endGameRight} />
         <Curtain
           open={gateOpen}
           holderName={name(voter)}
@@ -160,16 +173,22 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<Spyfal
           revealLabel={t('spy.reveal')}
           onReveal={() => setGateOpen(true)}
         >
-          <div className="flex flex-1 flex-col gap-3">
+          <div className="flex flex-1 flex-col justify-center gap-6">
             <p className="text-center text-base font-bold">{t('spy.voteWho')}</p>
-            <div className="flex flex-wrap justify-center gap-2">
+            <div className="grid grid-cols-2 gap-2.5">
               {s.playerIds.filter((id) => id !== voter).map((id) => (
                 <button
                   key={id}
                   onClick={() => { ctx.haptics.light(); dispatch({ type: 'CAST_VOTE', voterId: voter, targetId: id }); setVoteCursor((c) => c + 1); }}
-                  className="rounded-full bg-[var(--surface-2)] px-4 py-3 text-base font-medium"
+                  className="flex items-center justify-center gap-2 rounded-2xl border border-[var(--border)] bg-[var(--surface-2)] px-3 py-4 text-base font-semibold text-[var(--text)] shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] transition active:scale-[0.97]"
                 >
-                  {name(id)}
+                  <span
+                    aria-hidden
+                    className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-[var(--game-accent-strong)] text-xs font-bold text-[var(--game-on-accent)]"
+                  >
+                    {name(id).slice(0, 1)}
+                  </span>
+                  <span className="truncate">{name(id)}</span>
                 </button>
               ))}
             </div>
@@ -186,7 +205,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<Spyfal
     const spy = s.round.spyIds[0];
     return (
       <Screen>
-        <AppBar onBack={() => nav.exit()} />
+        <AppBar onBack={() => nav.exit()} right={endGameRight} />
         <Curtain
           open={gateOpen}
           holderName={name(spy)}
@@ -223,7 +242,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<Spyfal
   const outcomeKey = `spy.outcome.${r.outcome}`;
   return (
     <Screen>
-      <AppBar onBack={() => nav.exit()} />
+      <AppBar onBack={() => nav.exit()} right={endGameRight} />
       <div className="flex flex-1 flex-col items-center justify-center gap-4 text-center">
         <h1 className="text-2xl font-extrabold dp-accent">{t(outcomeKey)}</h1>
         <Card className="w-full px-4 py-4">

@@ -5,8 +5,8 @@ export const manifest: GameManifest = {
   name: { en: 'Would You Rather', fa: 'کدوم رو ترجیح می‌دی؟' },
   tagline: { en: 'Two options. Pick a side. Defend it.', fa: 'دو گزینه. یک طرف رو انتخاب کن. ازش دفاع کن.' },
   description: {
-    en: 'Two impossible options appear. Everyone picks A or B, the split is revealed, and the debate begins. Optionally score points for going with the crowd.',
-    fa: 'دو گزینهٔ ناممکن می‌آید. همه A یا B را انتخاب می‌کنند، نتیجه نمایش داده می‌شود و بحث شروع می‌شود. می‌توانید برای همراهی با اکثریت امتیاز بگیرید.',
+    en: "Every card forces an impossible choice between two unthinkable options, and there's no sitting on the fence. The whole group locks in A or B, the split is revealed, and suddenly everyone's defending the indefensible. It's the fastest way to start an argument you'll all end up laughing about — and you can keep score for siding with the majority.",
+    fa: 'هر کارت تو را بین دو گزینهٔ غیرممکن گیر می‌اندازد و راه فراری هم نیست. همه پنهانی A یا B را انتخاب می‌کنند، نتیجه رو می‌شود و یک‌دفعه همه دارند از انتخاب عجیبشان دفاع می‌کنند. سریع‌ترین راه برای راه انداختن بحثی که آخرش همه‌تان به آن می‌خندید — و می‌توانید برای همراهی با اکثریت امتیاز هم بگیرید.',
   },
   icon: '🤔',
   color: 'teal',

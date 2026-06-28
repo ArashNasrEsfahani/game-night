@@ -1,0 +1,158 @@
+{
+  "id": "work",
+  "name": {
+    "en": "At Work",
+    "fa": "سر کار"
+  },
+  "description": {
+    "en": "For office crews and classmates.",
+    "fa": "مناسب همکارها و هم‌کلاسی‌ها."
+  },
+  "version": 1,
+  "prompts": [
+    {
+      "id": "mlt-work-late",
+      "text": {
+        "en": "Most likely to show up late to every meeting",
+        "fa": "به احتمال زیاد به هر جلسه‌ای دیر می‌رسه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-work-reply-all",
+      "text": {
+        "en": "Most likely to reply-all by mistake",
+        "fa": "به احتمال زیاد اشتباهی به همه ریپلای می‌کنه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-work-coffee",
+      "text": {
+        "en": "Most likely to survive only on coffee",
+        "fa": "به احتمال زیاد فقط با قهوه سرپا می‌مونه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-work-mute",
+      "text": {
+        "en": "Most likely to talk for a minute while still on mute",
+        "fa": "به احتمال زیاد یک دقیقه با میکروفون قطع حرف می‌زنه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-work-deadline",
+      "text": {
+        "en": "Most likely to finish a project the night before the deadline",
+        "fa": "به احتمال زیاد پروژه رو شب آخر تموم می‌کنه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-work-boss",
+      "text": {
+        "en": "Most likely to become the boss one day",
+        "fa": "به احتمال زیاد یه روز رئیس می‌شه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-work-snacks",
+      "text": {
+        "en": "Most likely to raid the office snacks",
+        "fa": "به احتمال زیاد به تنقلات دفتر شبیخون می‌زنه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-work-gossip",
+      "text": {
+        "en": "Most likely to know all the office gossip",
+        "fa": "به احتمال زیاد همه شایعه‌های محل کار رو می‌دونه"
+      },
+      "intensity": "spicy"
+    },
+    {
+      "id": "mlt-work-nap",
+      "text": {
+        "en": "Most likely to nap at their desk",
+        "fa": "به احتمال زیاد سر میزش چرت می‌زنه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-work-emails",
+      "text": {
+        "en": "Most likely to have 9,000 unread emails",
+        "fa": "به احتمال زیاد ۹۰۰۰ ایمیل نخونده داره"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-work-quit",
+      "text": {
+        "en": "Most likely to quit to start their own business",
+        "fa": "به احتمال زیاد استعفا می‌ده تا کار خودش رو راه بندازه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-work-overtime",
+      "text": {
+        "en": "Most likely to stay overtime without being asked",
+        "fa": "به احتمال زیاد بدون اینکه بخوان اضافه‌کاری می‌مونه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-work-jargon",
+      "text": {
+        "en": "Most likely to overuse buzzwords in meetings",
+        "fa": "به احتمال زیاد توی جلسه‌ها زیادی از اصطلاحات قلمبه استفاده می‌کنه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-work-desk",
+      "text": {
+        "en": "Most likely to have the messiest desk",
+        "fa": "به احتمال زیاد شلوغ‌ترین میز رو داره"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-work-shortcut",
+      "text": {
+        "en": "Most likely to find a clever shortcut for everything",
+        "fa": "به احتمال زیاد برای هر کاری یه میان‌بر باهوشانه پیدا می‌کنه"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-work-birthday",
+      "text": {
+        "en": "Most likely to forget a coworker's birthday",
+        "fa": "به احتمال زیاد تولد یه همکار رو یادش می‌ره"
+      },
+      "intensity": "casual"
+    },
+    {
+      "id": "mlt-work-volunteer",
+      "text": {
+        "en": "Most likely to volunteer for the hardest task",
+        "fa": "به احتمال زیاد داوطلب سخت‌ترین کار می‌شه"
+      },
+      "intensity": "family"
+    },
+    {
+      "id": "mlt-work-promotion",
+      "text": {
+        "en": "Most likely to get a promotion first",
+        "fa": "به احتمال زیاد زودتر از همه ترفیع می‌گیره"
+      },
+      "intensity": "casual"
+    }
+  ]
+}

@@ -363,3 +363,19 @@ html[dir="rtl"] {
     animation: none !important;
   }
 }
+
+/* Keyboard focus ring — a consistent, visible indicator for keyboard users on every interactive
+   control (the app had none, and a couple of inputs even cleared the default outline). Unlayered so
+   it beats utilities like `outline-none`; :focus-visible keeps it off mouse clicks. Violet + an
+   offset gap reads clearly against both the cream day and dark night backgrounds. */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible,
+[role="button"]:focus-visible,
+[tabindex]:not([tabindex="-1"]):focus-visible {
+  outline: 2.5px solid var(--color-game-violet);
+  outline-offset: 2px;
+}

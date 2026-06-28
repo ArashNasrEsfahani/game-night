@@ -711,15 +711,6 @@
     "difficulty": "med"
   },
   {
-    "id": "animals-gen-19",
-    "word": {
-      "en": "Mongoose",
-      "fa": "خوک‌موش"
-    },
-    "category": "animals",
-    "difficulty": "med"
-  },
-  {
     "id": "animals-gen-20",
     "word": {
       "en": "Wombat",
@@ -1026,15 +1017,6 @@
     "difficulty": "med"
   },
   {
-    "id": "animals-gen-54",
-    "word": {
-      "en": "Walrus",
-      "fa": "شیر دریایی گراز"
-    },
-    "category": "animals",
-    "difficulty": "med"
-  },
-  {
     "id": "animals-gen-55",
     "word": {
       "en": "Manatee",
@@ -1129,15 +1111,6 @@
     "word": {
       "en": "Civet",
       "fa": "زبادگربه"
-    },
-    "category": "animals",
-    "difficulty": "hard"
-  },
-  {
-    "id": "animals-gen-66",
-    "word": {
-      "en": "Caracal",
-      "fa": "سیاه‌گوش"
     },
     "category": "animals",
     "difficulty": "hard"

@@ -39,6 +39,9 @@ win confetti.
 | Minesweeper | `minesweeper` | deduction | 1–4 | tangerine |
 
 Recent additions:
+- **Content Studio** — a **standalone editor website** (own dev server + build) for every game's datasets (words, prompts, dilemmas, locations, role text). Run `npm run studio`. **Save writes straight to the source JSON on disk** (debounced autosave), so edits land in `git diff` instantly — no download/drop. A **virtualized table** (smooth through the ~2,000-item packs) with CSV round-trip, a **`Ctrl+K` search across every dataset**, a card view for nested data (Spyfall roles), and **auto-flagging** of weird/broken/duplicate items. Loads none of the game screens, so it's light. See `docs/CONTENT-STUDIO.md`.
+- **More categories** — Heads Up (Sports, Music, Brands), Codenames (Nature pack), Spyfall (Modern Places pack), Would You Rather (Travel), Most Likely To (At Work), Pantomime (Sports, Jobs).
+- **Android (Capacitor)** — the PWA is wrapped into a native Android app (`android/` project, `npm run android:*` scripts). See `docs/ANDROID.md`.
 - **Truth or Dare** — a **bottle-rolling** picker (players in a ring, an animated bottle spins to the chosen player) alongside the spinner/in-order modes.
 - **Heads Up** — **Easy / Medium / Hard** difficulty tiers per category (Hard favors compound words like *Gray Fox*, *Komodo Dragon*); Setup picks which tiers to include.
 - **Codenames** — a pre-game **orientation** step: the first team rotates the randomly-generated key (0/90/180/270°) before play.
@@ -75,6 +78,10 @@ npm run dev        # Vite dev server on :5173
 npm test           # Vitest (run once: npx vitest run)
 npm run build      # typecheck + production build + PWA
 npm run lint       # ESLint
+
+# Android (Capacitor) — see docs/ANDROID.md
+npm run android:sync   # build + copy web assets into android/
+npm run android:open   # open android/ in Android Studio
 ```
 
 ## Docs

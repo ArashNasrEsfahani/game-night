@@ -739,14 +739,6 @@
       "intensity": "wild"
     },
     {
-      "id": "nhie-gen-368",
-      "text": {
-        "en": "Never have I ever clogged a toilet at someone else's house and never said a word.",
-        "fa": "من هیچ‌وقت تو خونه‌ی یکی دیگه توالت رو گرفته نکرده‌ام و یه کلمه هم نگفته‌ام."
-      },
-      "intensity": "wild"
-    },
-    {
       "id": "nhie-gen-369",
       "text": {
         "en": "Never have I ever rebrushed my hair instead of washing it for the third day in a row.",
@@ -1083,14 +1075,6 @@
       "intensity": "wild"
     },
     {
-      "id": "nhie-gen-411",
-      "text": {
-        "en": "Never have I ever cheated on a final exam and gotten away with it.",
-        "fa": "من هیچ‌وقت سرِ امتحان پایان‌ترم تقلب نکرده‌ام و قسر در نرفته‌ام."
-      },
-      "intensity": "wild"
-    },
-    {
       "id": "nhie-gen-412",
       "text": {
         "en": "Never have I ever sexted during a boring work meeting.",
@@ -1183,14 +1167,6 @@
       "text": {
         "en": "Never have I ever secretly dated two coworkers at the same time.",
         "fa": "من هیچ‌وقت مخفیانه هم‌زمان با دو همکار قرار نگذاشته‌ام."
-      },
-      "intensity": "wild"
-    },
-    {
-      "id": "nhie-gen-424",
-      "text": {
-        "en": "Never have I ever told off my boss while drunk and somehow kept my job.",
-        "fa": "من هیچ‌وقت در حالت مستی به رئیسم پرخاش نکرده‌ام و به‌طور معجزه‌آسا شغلم را حفظ نکرده‌ام."
       },
       "intensity": "wild"
     },
@@ -1683,14 +1659,6 @@
       "intensity": "wild"
     },
     {
-      "id": "nhie-gen-486",
-      "text": {
-        "en": "Never have I ever ripped my pants on a dance floor and kept dancing.",
-        "fa": "من هیچ‌وقت شلوارم رو وسط پیست رقص پاره نکرده‌ام و به رقصیدن ادامه نداده‌ام."
-      },
-      "intensity": "wild"
-    },
-    {
       "id": "nhie-gen-487",
       "text": {
         "en": "Never have I ever called my boss the wrong name to their face.",
@@ -1703,14 +1671,6 @@
       "text": {
         "en": "Never have I ever walked out of a bathroom with toilet paper stuck to my shoe.",
         "fa": "من هیچ‌وقت با دستمال توالت چسبیده به کفشم از دستشویی بیرون نیامده‌ام."
-      },
-      "intensity": "wild"
-    },
-    {
-      "id": "nhie-gen-489",
-      "text": {
-        "en": "Never have I ever drunk-texted my ex and regretted it the next morning.",
-        "fa": "من هیچ‌وقت مست به اکسم پیام نداده‌ام و صبح روز بعد پشیمان نشده‌ام."
       },
       "intensity": "wild"
     },
@@ -1839,14 +1799,6 @@
       "text": {
         "en": "Never have I ever realized mid-presentation that my fly was open.",
         "fa": "من هیچ‌وقت وسط یک ارائه متوجه نشده‌ام که زیپ شلوارم باز است."
-      },
-      "intensity": "wild"
-    },
-    {
-      "id": "nhie-gen-506",
-      "text": {
-        "en": "Never have I ever waved goodbye and then walked in the same direction as them.",
-        "fa": "من هیچ‌وقت خداحافظی نکرده‌ام و بعد همان مسیری که او می‌رفت را نرفته‌ام."
       },
       "intensity": "wild"
     },

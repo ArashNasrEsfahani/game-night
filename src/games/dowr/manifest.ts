@@ -5,8 +5,8 @@ export const manifest: GameManifest = {
   name: { en: 'Dowr', fa: 'دور' },
   tagline: { en: 'Describe fast, beat the bomb!', fa: 'سریع توضیح بده، بمب رو ببر!' },
   description: {
-    en: 'A quick relay in teams of two. Describe the word so your partner guesses it before the bomb goes off. The phone races around the room, and the fastest team takes it.',
-    fa: 'یک مسابقهٔ زمانی تیمی (تیم‌های دونفره): کلمه را طوری توضیح بده که هم‌تیمی‌ات قبل از انفجار بمب حدس بزند. گوشی دور جمع می‌چرخد و سریع‌ترین تیم برنده می‌شود.',
+    en: "In rapid-fire pairs, you describe the word any way you can while your partner blurts out guesses — and the clock never, ever stops. The instant they nail it, the phone flies to the next team, so every wasted second piles onto your running total. Beat the ticking bomb, dodge the change-word penalty, and keep it moving; the team with the lowest total time at the end takes it all.",
+    fa: 'در تیم‌های دونفرهٔ تندوتیز، کلمه را هرطور شده توضیح می‌دهی و هم‌تیمی‌ات پشت‌سرهم حدس می‌زند — و کرنومتر هیچ‌وقت متوقف نمی‌شود. لحظه‌ای که گرفت، گوشی به تیم بعد پرواز می‌کند، پس هر ثانیهٔ هدررفته به زمان کل تو اضافه می‌شود. بمبِ در حال شمارش را شکست بده، از جریمهٔ تعویض کلمه فرار کن و تند پیش برو؛ تیمی که آخرِ بازی کمترین زمان کل را داشته باشد همه‌چیز را می‌برد.',
   },
   icon: '🗣️',
   color: 'violet',

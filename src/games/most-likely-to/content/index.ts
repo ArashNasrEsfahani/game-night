@@ -1,18 +1,57 @@
 import classic from './classic.json';
 import spicy from './spicy.json';
+import work from './work.json';
 import type { Intensity, MltDeck, MltPrompt } from './types';
+import type { DatasetDescriptor, EnumFieldDef } from '../../../content/types';
+import { objectFileDataset } from '../../../content/datasetBuilders';
+import { registerRebuilder } from '../../../content/overrides';
 
 export type { Intensity, MltDeck, MltPrompt } from './types';
 
-export const DECKS: MltDeck[] = [classic as MltDeck, spicy as MltDeck];
+const GAME = 'most-likely-to';
 
-export const DECK_BY_ID: Record<string, MltDeck> = Object.fromEntries(
-  DECKS.map((d) => [d.id, d]),
+const INTENSITY_FIELD: EnumFieldDef = {
+  key: 'intensity',
+  label: { en: 'Intensity', fa: 'شدت' },
+  default: 'casual',
+  options: [
+    { value: 'family', label: { en: 'Family', fa: 'خانوادگی' } },
+    { value: 'casual', label: { en: 'Casual', fa: 'معمولی' } },
+    { value: 'spicy', label: { en: 'Spicy', fa: 'تند' } },
+  ],
+};
+
+const DEFAULT_DECKS: MltDeck[] = [classic as MltDeck, spicy as MltDeck, work as MltDeck];
+
+export const DATASETS: DatasetDescriptor[] = DEFAULT_DECKS.map((deck) =>
+  objectFileDataset({
+    gameId: GAME,
+    datasetId: deck.id,
+    itemsKey: 'prompts',
+    defaultFile: deck,
+    sourcePath: `src/games/most-likely-to/content/${deck.id}.json`,
+    title: deck.name,
+    itemNoun: { en: 'prompt', fa: 'سوال' },
+    idPrefix: `mlt-${deck.id}-`,
+    locFields: [{ key: 'text', label: { en: 'Most likely to…', fa: 'به احتمال زیاد…' }, multiline: true }],
+    enumFields: [INTENSITY_FIELD],
+    textFields: [{ key: 'emoji', label: { en: 'Emoji (optional)', fa: 'ایموجی (اختیاری)' } }],
+  }),
 );
 
-export const PROMPT_BY_ID: Record<string, MltPrompt> = Object.fromEntries(
-  DECKS.flatMap((d) => d.prompts).map((p) => [p.id, p]),
-);
+export const DECKS: MltDeck[] = [];
+export const DECK_BY_ID: Record<string, MltDeck> = {};
+export const PROMPT_BY_ID: Record<string, MltPrompt> = {};
+
+function rebuild(): void {
+  DECKS.length = 0;
+  DECKS.push(...DATASETS.map((d) => d.readFile() as MltDeck));
+  for (const k of Object.keys(DECK_BY_ID)) delete DECK_BY_ID[k];
+  for (const d of DECKS) DECK_BY_ID[d.id] = d;
+  for (const k of Object.keys(PROMPT_BY_ID)) delete PROMPT_BY_ID[k];
+  for (const p of DECKS.flatMap((d) => d.prompts)) PROMPT_BY_ID[p.id] = p;
+}
+registerRebuilder(rebuild);
 
 /** Intensities included at or below the chosen ceiling. */
 export function intensitiesAtOrBelow(ceiling: Intensity): Intensity[] {

@@ -5,8 +5,8 @@ export const manifest: GameManifest = {
   name: { en: 'Pantomime', fa: 'پانتومیم' },
   tagline: { en: 'Act it out silently', fa: 'بی‌کلام اجرا کن' },
   description: {
-    en: 'One actor mimes a prompt without speaking while their team races the clock to guess. Most points wins.',
-    fa: 'یک بازیگر بی‌کلام سرنخ را اجرا می‌کند تا تیمش پیش از پایان زمان حدس بزند. بیشترین امتیاز برنده است.',
+    en: "One actor gets a secret prompt and has to bring it to life with nothing but gestures — no words, no sounds, no cheating. Their team shouts guesses in a frenzy while the clock ticks down and the miming gets more desperate by the second. Score every prompt you can before time's up, then hand off to the next team; the most points takes the win.",
+    fa: 'یک بازیگر سرنخ مخفی می‌گیرد و باید فقط با حرکت آن را زنده کند — بدون کلام، بدون صدا، بدون تقلب. تیمش دیوانه‌وار حدس می‌زند، زمان می‌گذرد و اجرا هر ثانیه ناامیدانه‌تر می‌شود. تا قبل از پایان وقت هر سرنخی که می‌توانی امتیاز بگیر، بعد نوبت را به تیم بعد بده؛ بیشترین امتیاز برنده است.',
   },
   icon: '🎭',
   color: 'grape',

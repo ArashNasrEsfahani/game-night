@@ -118,6 +118,21 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<MltSta
   const prompt = promptId ? PROMPT_BY_ID[promptId] : undefined;
   const promptText = prompt ? ctx.localize(prompt.text) : '';
 
+  // Shared in-match chrome: lets the host end the match early once at least one round is in,
+  // jumping straight to the Results screen with the standings so far.
+  const header = (
+    <AppBar
+      onBack={() => nav.exit()}
+      right={
+        s.rounds.length > 0 ? (
+          <button onClick={() => dispatch({ type: 'END_GAME' })} className="text-sm text-[var(--text-muted)]">
+            {t('common.endGame')}
+          </button>
+        ) : undefined
+      }
+    />
+  );
+
   if (s.phase === 'error') {
     return (
       <Screen>
@@ -133,7 +148,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<MltSta
   if (s.phase === 'prompt') {
     return (
       <Screen>
-        <AppBar onBack={() => nav.exit()} />
+        {header}
         <ScoreStrip s={s} />
         <div className="flex flex-1 flex-col items-center justify-center gap-5 text-center">
           <PromptCard
@@ -163,7 +178,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<MltSta
     if (done) {
       return (
         <Screen>
-          <AppBar onBack={() => nav.exit()} />
+          {header}
           <div className="grid flex-1 place-items-center gap-4 text-center">
             <p className="text-lg text-[var(--text-muted)]">{t('mlt.allVotesIn')}</p>
             <Button size="lg" onClick={() => { ctx.sound.play('reveal'); dispatch({ type: 'SUBMIT_VOTES', seed: ctx.random.seed() }); }}>
@@ -178,7 +193,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<MltSta
     }
     return (
       <Screen>
-        <AppBar onBack={() => nav.exit()} />
+        {header}
         <p className="py-1 text-center text-xs text-[var(--text-muted)]">
           {t('mlt.votedProgress', { done: s.activeVoterIndex ?? 0, total: s.playerIds.length })}
         </p>
@@ -189,25 +204,36 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<MltSta
           revealLabel={t('mlt.reveal')}
           onReveal={() => setGateOpen(true)}
         >
-          <div className="flex flex-1 flex-col gap-4">
+          <div className="flex flex-1 flex-col justify-center gap-6">
             <PromptCard compact text={promptText} promptKey={promptId ?? s.currentRound} />
-            <div className="flex flex-wrap justify-center gap-2">
-              {s.playerIds.map((id) => {
-                const disabled = id === voterId && !s.options.allowSelfVote;
-                return (
-                  <button
-                    key={id}
-                    disabled={disabled}
-                    onClick={() => {
-                      ctx.haptics.light();
-                      if (voterId) dispatch({ type: 'CAST_VOTE', voterId, targetId: id });
-                    }}
-                    className="rounded-full bg-[var(--surface-2)] px-4 py-3 text-base font-medium text-[var(--text)] disabled:opacity-30"
-                  >
-                    {s.playerNames[id]}
-                  </button>
-                );
-              })}
+            <div>
+              <p className="mb-3 text-center text-sm font-medium text-[var(--text-muted)]">
+                {t('mlt.tapYourPick')}
+              </p>
+              <div className="grid grid-cols-2 gap-2.5">
+                {s.playerIds.map((id) => {
+                  const disabled = id === voterId && !s.options.allowSelfVote;
+                  return (
+                    <button
+                      key={id}
+                      disabled={disabled}
+                      onClick={() => {
+                        ctx.haptics.light();
+                        if (voterId) dispatch({ type: 'CAST_VOTE', voterId, targetId: id });
+                      }}
+                      className="flex items-center justify-center gap-2 rounded-2xl border border-[var(--border)] bg-[var(--surface-2)] px-3 py-4 text-base font-semibold text-[var(--text)] shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] transition active:scale-[0.97] disabled:opacity-30"
+                    >
+                      <span
+                        aria-hidden
+                        className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-[var(--game-accent-strong)] text-xs font-bold text-[var(--game-on-accent)]"
+                      >
+                        {s.playerNames[id].slice(0, 1)}
+                      </span>
+                      <span className="truncate">{s.playerNames[id]}</span>
+                    </button>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </Curtain>
@@ -219,7 +245,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<MltSta
     const total = Object.values(tally).reduce((a, b) => a + b, 0);
     return (
       <Screen>
-        <AppBar onBack={() => nav.exit()} />
+        {header}
         <div className="flex flex-1 flex-col gap-3">
           <PromptCard compact text={promptText} promptKey={promptId ?? s.currentRound} />
           <p className="text-center text-sm text-[var(--text-muted)]">{t('mlt.enterTally')}</p>
@@ -255,7 +281,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<MltSta
   const winnerNames = (round?.winnerIds ?? []).map((id) => s.playerNames[id]);
   return (
     <Screen>
-      <AppBar onBack={() => nav.exit()} />
+      {header}
       <ScoreStrip s={s} />
       <div className="flex flex-1 flex-col items-center justify-center gap-4 text-center">
         <PromptCard

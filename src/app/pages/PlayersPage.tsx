@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
 import { Screen, AppBar, Button, Card } from '../../sdk/ui';
+import { popIn } from '../../sdk/motion';
 import { useRosterStore } from '../../store/rosterStore';
 
 export function PlayersPage() {
@@ -37,7 +39,17 @@ export function PlayersPage() {
       </div>
 
       {players.length === 0 ? (
-        <p className="py-8 text-center text-[var(--text-muted)]">{t('players.empty')}</p>
+        <motion.div
+          variants={popIn}
+          initial="initial"
+          animate="animate"
+          className="flex flex-1 flex-col items-center justify-center gap-4 py-12 text-center"
+        >
+          <div className="grid h-20 w-20 place-items-center rounded-full bg-[var(--surface-2)] text-4xl shadow-[var(--shadow-card)]">
+            👥
+          </div>
+          <p className="max-w-xs text-[var(--text-muted)]">{t('players.empty')}</p>
+        </motion.div>
       ) : (
         <ul className="flex flex-col gap-2 py-2">
           {players.map((p) => (

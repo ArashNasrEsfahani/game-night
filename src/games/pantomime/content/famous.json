@@ -273,15 +273,6 @@
       "difficulty": "hard"
     },
     {
-      "id": "famous-x001",
-      "text": {
-        "en": "Mr. Bean (Rowan Atkinson)",
-        "fa": "مستر بین (روآن اتکینسون)"
-      },
-      "category": "famous",
-      "difficulty": "easy"
-    },
-    {
       "id": "famous-x002",
       "text": {
         "en": "Mr. Spock (Leonard Nimoy)",
@@ -430,15 +421,6 @@
       "text": {
         "en": "Serena Williams",
         "fa": "سرنا ویلیامز"
-      },
-      "category": "famous",
-      "difficulty": "medium"
-    },
-    {
-      "id": "famous-x019",
-      "text": {
-        "en": "Charlie Sheen",
-        "fa": "چارلی شین"
       },
       "category": "famous",
       "difficulty": "medium"

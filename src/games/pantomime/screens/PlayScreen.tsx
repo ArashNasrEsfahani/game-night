@@ -71,6 +71,16 @@ export function PlayScreen({
     color: s.teams.find((tm) => tm.teamId === st.subjectId)?.color,
   }));
 
+  // Ends the match immediately and shows the Results screen with the standings so far.
+  const endGameButton = (
+    <button
+      onClick={() => dispatch({ type: 'END_GAME' })}
+      className="text-sm text-[var(--text-muted)]"
+    >
+      {t('common.endGame')}
+    </button>
+  );
+
   if (s.phase === 'error') {
     return (
       <Screen>
@@ -86,8 +96,8 @@ export function PlayScreen({
   if (s.phase === 'handoff') {
     return (
       <Screen>
-        <AppBar onBack={() => nav.exit()} />
-        <div className="grid flex-1 place-items-center gap-4 text-center">
+        <AppBar onBack={() => nav.exit()} right={endGameButton} />
+        <div className="flex flex-1 flex-col items-center justify-center gap-4 text-center">
           <p className="text-sm font-semibold text-[var(--text-muted)]">
             {t('pantomime.roundOf', {
               round: currentRound(s),
@@ -115,7 +125,7 @@ export function PlayScreen({
     return (
       <Screen>
         <TurnAura color={team?.color} />
-        <AppBar onBack={() => nav.exit()} />
+        <AppBar onBack={() => nav.exit()} right={endGameButton} />
         <Curtain
           open={gateOpen}
           holderName={name}
@@ -153,6 +163,7 @@ export function PlayScreen({
     return (
       <Screen>
         <TurnAura color={team?.color} />
+        <AppBar onBack={() => nav.exit()} right={endGameButton} />
         <div className="flex flex-col items-center gap-6 py-4">
           {/* Per-team standings stay visible while the timer runs, active team highlighted. */}
           <div className="flex flex-wrap justify-center gap-1.5">
@@ -187,6 +198,7 @@ export function PlayScreen({
           <div className="grid w-full grid-cols-2 gap-3">
             <Button
               size="lg"
+              variant="success"
               onClick={() => {
                 ctx.sound.play('correct');
                 ctx.haptics.success();
@@ -230,7 +242,7 @@ export function PlayScreen({
         : 'pantomime.endedEarly';
   return (
     <Screen>
-      <AppBar onBack={() => nav.exit()} />
+      <AppBar onBack={() => nav.exit()} right={endGameButton} />
       <div className="flex flex-col gap-4 py-4">
         <div className="text-center">
           {team && <TeamBadge label={team.name} color={team.color} />}

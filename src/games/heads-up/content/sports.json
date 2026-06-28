@@ -1,0 +1,195 @@
+{
+  "id": "sports",
+  "name": {
+    "en": "Sports",
+    "fa": "ورزش"
+  },
+  "category": "sports",
+  "icon": "⚽",
+  "cards": [
+    {
+      "id": "sports-football",
+      "word": {
+        "en": "Football",
+        "fa": "فوتبال"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "sports-basketball",
+      "word": {
+        "en": "Basketball",
+        "fa": "بسکتبال"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "sports-volleyball",
+      "word": {
+        "en": "Volleyball",
+        "fa": "والیبال"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "sports-tennis",
+      "word": {
+        "en": "Tennis",
+        "fa": "تنیس"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "sports-swimming",
+      "word": {
+        "en": "Swimming",
+        "fa": "شنا"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "sports-running",
+      "word": {
+        "en": "Running",
+        "fa": "دو"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "sports-cycling",
+      "word": {
+        "en": "Cycling",
+        "fa": "دوچرخه‌سواری"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "sports-wrestling",
+      "word": {
+        "en": "Wrestling",
+        "fa": "کشتی"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "sports-boxing",
+      "word": {
+        "en": "Boxing",
+        "fa": "بوکس"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "sports-skiing",
+      "word": {
+        "en": "Skiing",
+        "fa": "اسکی"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "sports-chess",
+      "word": {
+        "en": "Chess",
+        "fa": "شطرنج"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "sports-karate",
+      "word": {
+        "en": "Karate",
+        "fa": "کاراته"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "sports-taekwondo",
+      "word": {
+        "en": "Taekwondo",
+        "fa": "تکواندو"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "sports-gymnastics",
+      "word": {
+        "en": "Gymnastics",
+        "fa": "ژیمناستیک"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "sports-golf",
+      "word": {
+        "en": "Golf",
+        "fa": "گلف"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "sports-baseball",
+      "word": {
+        "en": "Baseball",
+        "fa": "بیسبال"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "sports-table-tennis",
+      "word": {
+        "en": "Table Tennis",
+        "fa": "تنیس روی میز"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "sports-horse-riding",
+      "word": {
+        "en": "Horse Riding",
+        "fa": "اسب‌سواری"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "sports-weightlifting",
+      "word": {
+        "en": "Weightlifting",
+        "fa": "وزنه‌برداری"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "sports-badminton",
+      "word": {
+        "en": "Badminton",
+        "fa": "بدمینتون"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "sports-fencing",
+      "word": {
+        "en": "Fencing",
+        "fa": "شمشیربازی"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "sports-rowing",
+      "word": {
+        "en": "Rowing",
+        "fa": "قایقرانی"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "sports-water-polo",
+      "word": {
+        "en": "Water Polo",
+        "fa": "واترپلو"
+      },
+      "difficulty": "hard"
+    }
+  ]
+}

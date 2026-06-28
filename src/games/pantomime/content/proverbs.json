@@ -2,38 +2,302 @@
   "category": "proverbs",
   "version": 1,
   "prompts": [
-    { "id": "proverbs.divar-mush-gush", "category": "proverbs", "difficulty": "easy", "text": { "en": "The wall has mice, and the mice have ears", "fa": "دیوار موش داره، موش هم گوش داره" } },
-    { "id": "proverbs.shotor-didi-nadidi", "category": "proverbs", "difficulty": "easy", "text": { "en": "You saw a camel? You saw nothing", "fa": "شتر دیدی، ندیدی" } },
-    { "id": "proverbs.mar-gazideh", "category": "proverbs", "difficulty": "easy", "text": { "en": "Once snake-bitten, you fear a black-and-white rope", "fa": "مارگزیده از ریسمون سیاه و سفید می‌ترسه" } },
-    { "id": "proverbs.yek-gol-bahar", "category": "proverbs", "difficulty": "easy", "text": { "en": "One flower doesn't make spring", "fa": "با یه گل بهار نمی‌شه" } },
-    { "id": "proverbs.ab-dar-havan", "category": "proverbs", "difficulty": "easy", "text": { "en": "Pounding water in a mortar (a pointless effort)", "fa": "آب تو هاون کوبیدن" } },
-    { "id": "proverbs.in-gush-an-gush", "category": "proverbs", "difficulty": "easy", "text": { "en": "In one ear and out the other", "fa": "از این گوش می‌گیره، از اون گوش در می‌کنه" } },
-    { "id": "proverbs.naan-be-nerkh", "category": "proverbs", "difficulty": "easy", "text": { "en": "Eating bread at today's price (an opportunist)", "fa": "نون به نرخ روز خوردن" } },
-    { "id": "proverbs.khar-baghali", "category": "proverbs", "difficulty": "easy", "text": { "en": "Bring the donkey and load up the beans (utter chaos)", "fa": "خر بیار و باقالی بار کن" } },
-    { "id": "proverbs.gorbe-hajleh", "category": "proverbs", "difficulty": "medium", "text": { "en": "Kill the cat at the wedding night (set boundaries early)", "fa": "گربه رو دم حجله کشتن" } },
-    { "id": "proverbs.kalagh-kabk", "category": "proverbs", "difficulty": "medium", "text": { "en": "The crow tried to walk like a partridge and forgot its own walk", "fa": "کلاغ خواست راه رفتن کبک رو یاد بگیره، راه رفتن خودشم یادش رفت" } },
-    { "id": "proverbs.kuh-be-kuh", "category": "proverbs", "difficulty": "medium", "text": { "en": "Mountains never meet, but people do", "fa": "کوه به کوه نمی‌رسه، آدم به آدم می‌رسه" } },
-    { "id": "proverbs.ashpaz-do-ta", "category": "proverbs", "difficulty": "medium", "text": { "en": "Two cooks make the soup too salty or unsalted", "fa": "آشپز که دوتا شد، آش یا شور می‌شه یا بی‌نمک" } },
-    { "id": "proverbs.kase-dagh-tar", "category": "proverbs", "difficulty": "medium", "text": { "en": "A bowl hotter than the soup (more royal than the king)", "fa": "کاسهٔ داغ‌تر از آش" } },
-    { "id": "proverbs.kharbozeh-larz", "category": "proverbs", "difficulty": "medium", "text": { "en": "Whoever eats the melon must sit through its chills (face the consequences)", "fa": "هر کی خربزه می‌خوره، پای لرزشم می‌شینه" } },
-    { "id": "proverbs.jujeh-akhar-paeez", "category": "proverbs", "difficulty": "medium", "text": { "en": "Count your chicks at the end of autumn", "fa": "جوجه رو آخر پاییز می‌شمرن" } },
-    { "id": "proverbs.kar-mohkam-kari", "category": "proverbs", "difficulty": "medium", "text": { "en": "No harm ever comes from doing it thoroughly", "fa": "کار از محکم‌کاری عیب نمی‌کنه" } },
-    { "id": "proverbs.ab-az-sar", "category": "proverbs", "difficulty": "medium", "text": { "en": "Once the water is over your head, an inch or a hundred is the same", "fa": "آب که از سر گذشت، چه یک وجب چه صد وجب" } },
-    { "id": "proverbs.sar-dard-dastmal", "category": "proverbs", "difficulty": "medium", "text": { "en": "You don't bandage a head that doesn't ache", "fa": "سری که درد نمی‌کنه دستمال نمی‌بندن" } },
-    { "id": "proverbs.mahi-az-ab", "category": "proverbs", "difficulty": "medium", "text": { "en": "A fish is fresh whenever you pull it from the water (it's never too late)", "fa": "ماهی رو هر وقت از آب بگیری تازه‌ست" } },
-    { "id": "proverbs.kolah-ghazi", "category": "proverbs", "difficulty": "medium", "text": { "en": "Make your own hat the judge (judge for yourself)", "fa": "کلاهت رو قاضی کن" } },
-    { "id": "proverbs.dasti-ke-nemituni", "category": "proverbs", "difficulty": "medium", "text": { "en": "Kiss the hand you cannot bite", "fa": "دستی رو که نمی‌تونی گاز بگیری، ببوس" } },
-    { "id": "proverbs.mush-jaru-dom", "category": "proverbs", "difficulty": "medium", "text": { "en": "The mouse couldn't fit in the hole, yet tied a broom to its tail", "fa": "موش تو سوراخ نمی‌رفت، جارو به دمش می‌بست" } },
-    { "id": "proverbs.do-ghort-o-nim", "category": "proverbs", "difficulty": "hard", "text": { "en": "He still has two and a half gulps owing (shamelessly ungrateful)", "fa": "دو قورت و نیمش باقیه" } },
-    { "id": "proverbs.nushdaru-sohrab", "category": "proverbs", "difficulty": "hard", "text": { "en": "The antidote after Sohrab is already dead (too late)", "fa": "نوشدارو بعد از مرگ سهراب" } },
-    { "id": "proverbs.sotun-be-sotun", "category": "proverbs", "difficulty": "hard", "text": { "en": "From this pillar to that one is a reprieve", "fa": "از این ستون به اون ستون فرجه" } },
-    { "id": "proverbs.tanur-dagh", "category": "proverbs", "difficulty": "hard", "text": { "en": "Stick the bread on while the oven is hot (strike while it's hot)", "fa": "تا تنور داغه نون رو بچسبون" } },
-    { "id": "proverbs.dig-be-dig", "category": "proverbs", "difficulty": "hard", "text": { "en": "The pot says to the pot: your face is black (pot calling the kettle black)", "fa": "دیگ به دیگ می‌گه روت سیاه" } },
-    { "id": "proverbs.shotor-panbe-daneh", "category": "proverbs", "difficulty": "hard", "text": { "en": "The camel dreams of cottonseed (wishful thinking)", "fa": "شتر در خواب بیند پنبه‌دانه" } },
-    { "id": "proverbs.halva-halva", "category": "proverbs", "difficulty": "hard", "text": { "en": "Saying 'halva, halva' won't sweeten your mouth", "fa": "با حلوا حلوا گفتن دهن شیرین نمی‌شه" } },
-    { "id": "proverbs.bam-barf", "category": "proverbs", "difficulty": "hard", "text": { "en": "The bigger your roof, the more snow on it (greater means, greater burden)", "fa": "هر که بامش بیش، برفش بیشتر" } },
-    { "id": "proverbs.yek-dast-seda", "category": "proverbs", "difficulty": "hard", "text": { "en": "One hand makes no sound (you can't do it alone)", "fa": "یک دست صدا نداره" } },
-    { "id": "proverbs.gav-pishani-sefid", "category": "proverbs", "difficulty": "hard", "text": { "en": "The white-foreheaded cow (the one everybody knows)", "fa": "گاو پیشونی‌سفید" } },
-    { "id": "proverbs.aftabeh-lahim", "category": "proverbs", "difficulty": "hard", "text": { "en": "The repair costs more than the water-jug itself", "fa": "آفتابه خرج لحیم" } }
+    {
+      "id": "proverbs.divar-mush-gush",
+      "category": "proverbs",
+      "difficulty": "easy",
+      "text": {
+        "en": "The wall has mice, and the mice have ears",
+        "fa": "دیوار موش داره، موش هم گوش داره"
+      }
+    },
+    {
+      "id": "proverbs.shotor-didi-nadidi",
+      "category": "proverbs",
+      "difficulty": "easy",
+      "text": {
+        "en": "You saw a camel? You saw nothing",
+        "fa": "شتر دیدی، ندیدی"
+      }
+    },
+    {
+      "id": "proverbs.mar-gazideh",
+      "category": "proverbs",
+      "difficulty": "easy",
+      "text": {
+        "en": "Once snake-bitten, you fear a black-and-white rope",
+        "fa": "مارگزیده از ریسمون سیاه و سفید می‌ترسه"
+      }
+    },
+    {
+      "id": "proverbs.yek-gol-bahar",
+      "category": "proverbs",
+      "difficulty": "easy",
+      "text": {
+        "en": "One flower doesn't make spring",
+        "fa": "با یه گل بهار نمی‌شه"
+      }
+    },
+    {
+      "id": "proverbs.ab-dar-havan",
+      "category": "proverbs",
+      "difficulty": "easy",
+      "text": {
+        "en": "Pounding water in a mortar (a pointless effort)",
+        "fa": "آب تو هاون کوبیدن"
+      }
+    },
+    {
+      "id": "proverbs.in-gush-an-gush",
+      "category": "proverbs",
+      "difficulty": "easy",
+      "text": {
+        "en": "In one ear and out the other",
+        "fa": "از این گوش می‌گیره، از اون گوش در می‌کنه"
+      }
+    },
+    {
+      "id": "proverbs.naan-be-nerkh",
+      "category": "proverbs",
+      "difficulty": "easy",
+      "text": {
+        "en": "Eating bread at today's price (an opportunist)",
+        "fa": "نون به نرخ روز خوردن"
+      }
+    },
+    {
+      "id": "proverbs.khar-baghali",
+      "category": "proverbs",
+      "difficulty": "easy",
+      "text": {
+        "en": "Bring the donkey and load up the beans (utter chaos)",
+        "fa": "خر بیار و باقالی بار کن"
+      }
+    },
+    {
+      "id": "proverbs.gorbe-hajleh",
+      "category": "proverbs",
+      "difficulty": "medium",
+      "text": {
+        "en": "Kill the cat at the wedding night (set boundaries early)",
+        "fa": "گربه رو دم حجله کشتن"
+      }
+    },
+    {
+      "id": "proverbs.kalagh-kabk",
+      "category": "proverbs",
+      "difficulty": "medium",
+      "text": {
+        "en": "The crow tried to walk like a partridge and forgot its own walk",
+        "fa": "کلاغ خواست راه رفتن کبک رو یاد بگیره، راه رفتن خودشم یادش رفت"
+      }
+    },
+    {
+      "id": "proverbs.kuh-be-kuh",
+      "category": "proverbs",
+      "difficulty": "medium",
+      "text": {
+        "en": "Mountains never meet, but people do",
+        "fa": "کوه به کوه نمی‌رسه، آدم به آدم می‌رسه"
+      }
+    },
+    {
+      "id": "proverbs.ashpaz-do-ta",
+      "category": "proverbs",
+      "difficulty": "medium",
+      "text": {
+        "en": "Two cooks make the soup too salty or unsalted",
+        "fa": "آشپز که دوتا شد، آش یا شور می‌شه یا بی‌نمک"
+      }
+    },
+    {
+      "id": "proverbs.kase-dagh-tar",
+      "category": "proverbs",
+      "difficulty": "medium",
+      "text": {
+        "en": "A bowl hotter than the soup (more royal than the king)",
+        "fa": "کاسهٔ داغ‌تر از آش"
+      }
+    },
+    {
+      "id": "proverbs.kharbozeh-larz",
+      "category": "proverbs",
+      "difficulty": "medium",
+      "text": {
+        "en": "Whoever eats the melon must sit through its chills (face the consequences)",
+        "fa": "هر کی خربزه می‌خوره، پای لرزشم می‌شینه"
+      }
+    },
+    {
+      "id": "proverbs.jujeh-akhar-paeez",
+      "category": "proverbs",
+      "difficulty": "medium",
+      "text": {
+        "en": "Count your chicks at the end of autumn",
+        "fa": "جوجه رو آخر پاییز می‌شمرن"
+      }
+    },
+    {
+      "id": "proverbs.kar-mohkam-kari",
+      "category": "proverbs",
+      "difficulty": "medium",
+      "text": {
+        "en": "No harm ever comes from doing it thoroughly",
+        "fa": "کار از محکم‌کاری عیب نمی‌کنه"
+      }
+    },
+    {
+      "id": "proverbs.ab-az-sar",
+      "category": "proverbs",
+      "difficulty": "medium",
+      "text": {
+        "en": "Once the water is over your head, an inch or a hundred is the same",
+        "fa": "آب که از سر گذشت، چه یک وجب چه صد وجب"
+      }
+    },
+    {
+      "id": "proverbs.sar-dard-dastmal",
+      "category": "proverbs",
+      "difficulty": "medium",
+      "text": {
+        "en": "You don't bandage a head that doesn't ache",
+        "fa": "سری که درد نمی‌کنه دستمال نمی‌بندن"
+      }
+    },
+    {
+      "id": "proverbs.mahi-az-ab",
+      "category": "proverbs",
+      "difficulty": "medium",
+      "text": {
+        "en": "A fish is fresh whenever you pull it from the water (it's never too late)",
+        "fa": "ماهی رو هر وقت از آب بگیری تازه‌ست"
+      }
+    },
+    {
+      "id": "proverbs.kolah-ghazi",
+      "category": "proverbs",
+      "difficulty": "medium",
+      "text": {
+        "en": "Make your own hat the judge (judge for yourself)",
+        "fa": "کلاهت رو قاضی کن"
+      }
+    },
+    {
+      "id": "proverbs.dasti-ke-nemituni",
+      "category": "proverbs",
+      "difficulty": "medium",
+      "text": {
+        "en": "Kiss the hand you cannot bite",
+        "fa": "دستی رو که نمی‌تونی گاز بگیری، ببوس"
+      }
+    },
+    {
+      "id": "proverbs.mush-jaru-dom",
+      "category": "proverbs",
+      "difficulty": "medium",
+      "text": {
+        "en": "The mouse couldn't fit in the hole, yet tied a broom to its tail",
+        "fa": "موش تو سوراخ نمی‌رفت، جارو به دمش می‌بست"
+      }
+    },
+    {
+      "id": "proverbs.do-ghort-o-nim",
+      "category": "proverbs",
+      "difficulty": "hard",
+      "text": {
+        "en": "He still has two and a half gulps owing (shamelessly ungrateful)",
+        "fa": "دو قورت و نیمش باقیه"
+      }
+    },
+    {
+      "id": "proverbs.nushdaru-sohrab",
+      "category": "proverbs",
+      "difficulty": "hard",
+      "text": {
+        "en": "The antidote after Sohrab is already dead (too late)",
+        "fa": "نوشدارو بعد از مرگ سهراب"
+      }
+    },
+    {
+      "id": "proverbs.sotun-be-sotun",
+      "category": "proverbs",
+      "difficulty": "hard",
+      "text": {
+        "en": "From this pillar to that one is a reprieve",
+        "fa": "از این ستون به اون ستون فرجه"
+      }
+    },
+    {
+      "id": "proverbs.tanur-dagh",
+      "category": "proverbs",
+      "difficulty": "hard",
+      "text": {
+        "en": "Stick the bread on while the oven is hot (strike while it's hot)",
+        "fa": "تا تنور داغه نون رو بچسبون"
+      }
+    },
+    {
+      "id": "proverbs.dig-be-dig",
+      "category": "proverbs",
+      "difficulty": "hard",
+      "text": {
+        "en": "The pot says to the pot: your face is black (pot calling the kettle black)",
+        "fa": "دیگ به دیگ می‌گه روت سیاه"
+      }
+    },
+    {
+      "id": "proverbs.shotor-panbe-daneh",
+      "category": "proverbs",
+      "difficulty": "hard",
+      "text": {
+        "en": "The camel dreams of cottonseed (wishful thinking)",
+        "fa": "شتر در خواب بیند پنبه‌دانه"
+      }
+    },
+    {
+      "id": "proverbs.halva-halva",
+      "category": "proverbs",
+      "difficulty": "hard",
+      "text": {
+        "en": "Saying 'halva, halva' won't sweeten your mouth",
+        "fa": "با حلوا حلوا گفتن دهن شیرین نمی‌شه"
+      }
+    },
+    {
+      "id": "proverbs.bam-barf",
+      "category": "proverbs",
+      "difficulty": "hard",
+      "text": {
+        "en": "The bigger your roof, the more snow on it (greater means, greater burden)",
+        "fa": "هر که بامش بیش، برفش بیشتر"
+      }
+    },
+    {
+      "id": "proverbs.yek-dast-seda",
+      "category": "proverbs",
+      "difficulty": "hard",
+      "text": {
+        "en": "One hand makes no sound (you can't do it alone)",
+        "fa": "یک دست صدا نداره"
+      }
+    },
+    {
+      "id": "proverbs.gav-pishani-sefid",
+      "category": "proverbs",
+      "difficulty": "hard",
+      "text": {
+        "en": "The white-foreheaded cow (the one everybody knows)",
+        "fa": "گاو پیشونی‌سفید"
+      }
+    },
+    {
+      "id": "proverbs.aftabeh-lahim",
+      "category": "proverbs",
+      "difficulty": "hard",
+      "text": {
+        "en": "The repair costs more than the water-jug itself",
+        "fa": "آفتابه خرج لحیم"
+      }
+    }
   ]
 }

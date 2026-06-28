@@ -9,6 +9,7 @@ lerna-debug.log*
 
 node_modules
 dist
+dist-studio
 dist-ssr
 *.local
 
@@ -33,3 +34,5 @@ disco-*.png
 
 # Content-gen scratch (shards + merge scripts)
 /tmp/
+
+.vercel

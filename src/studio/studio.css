@@ -1,0 +1,102 @@
+/* src/studio/studio.css — the Content Studio's own theme.
+   Deliberately not the games' "Disco Persian" palette: this is a dense, calm data tool
+   (Linear/Airtable energy), dark-first, with a light option. Only Vazirmatn is pulled in, so
+   Persian data renders correctly without dragging the games' display fonts. */
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --s-bg: #0a0d14;
+  --s-panel: #10141d;
+  --s-panel-2: #161b27;
+  --s-sunk: #0c0f17;
+  --s-elevated: #131825;
+  --s-border: #222a39;
+  --s-border-strong: #303b52;
+
+  --s-text: #e7eaf2;
+  --s-muted: #97a0b5;
+  --s-dim: #687087;
+
+  --s-accent: #6d5efc;
+  --s-accent-2: #8b7bff;
+  --s-accent-strong: #5848e0;
+  --s-on-accent: #ffffff;
+  --s-accent-soft: color-mix(in oklab, var(--s-accent) 16%, transparent);
+
+  --s-ok: #34d399;
+  --s-ok-soft: color-mix(in oklab, var(--s-ok) 16%, transparent);
+  --s-warn: #fbbf24;
+  --s-warn-soft: color-mix(in oklab, var(--s-warn) 15%, transparent);
+  --s-danger: #fb7185;
+  --s-danger-soft: color-mix(in oklab, var(--s-danger) 14%, transparent);
+
+  --s-shadow: 0 24px 60px -28px rgb(0 0 0 / 0.7);
+  --s-ring: 0 0 0 2px color-mix(in oklab, var(--s-accent) 60%, transparent);
+}
+
+.light {
+  --s-bg: #f6f7fb;
+  --s-panel: #ffffff;
+  --s-panel-2: #eef1f7;
+  --s-sunk: #e9ecf3;
+  --s-elevated: #ffffff;
+  --s-border: #e2e6ef;
+  --s-border-strong: #cdd4e2;
+
+  --s-text: #1b2236;
+  --s-muted: #59617a;
+  --s-dim: #8a92a8;
+
+  --s-on-accent: #ffffff;
+  --s-shadow: 0 24px 60px -30px rgb(40 50 90 / 0.28);
+}
+
+html,
+body,
+#studio-root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--s-bg);
+  color: var(--s-text);
+  font-family: 'Vazirmatn', 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Thin, theme-aware scrollbars for the dense lists. */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--s-border-strong) transparent;
+}
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+*::-webkit-scrollbar-thumb {
+  background: var(--s-border-strong);
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+/* Monospace for ids / codes. */
+code,
+.mono {
+  font-family: ui-monospace, 'SF Mono', 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+/* Standard focus ring used across inputs/buttons. */
+.focusable:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
+  outline: none;
+  box-shadow: var(--s-ring);
+}

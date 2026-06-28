@@ -8,7 +8,9 @@ export function Screen({ children, className }: { children: ReactNode; className
       className={cn('mx-auto flex min-h-[100svh] w-full max-w-md flex-col px-4', className)}
       style={{
         paddingTop: 'env(safe-area-inset-top)',
-        paddingBottom: 'calc(env(safe-area-inset-bottom) + 1rem)',
+        // `--guide-pad` is set by the in-game GuideBanner while it shows, so the bottom action
+        // button clears the floating hint instead of hiding behind it.
+        paddingBottom: 'calc(env(safe-area-inset-bottom) + 1rem + var(--guide-pad, 0px))',
       }}
     >
       {children}

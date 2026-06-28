@@ -5,8 +5,8 @@ export const manifest: GameManifest = {
   name: { en: 'Heads Up!', fa: 'حدس بزن!' },
   tagline: { en: 'Phone on your forehead, guess the word!', fa: 'گوشی روی پیشانی، کلمه را حدس بزن!' },
   description: {
-    en: 'Hold the phone on your forehead so the group can see the word. They give clues; you guess against the clock. Got it or pass, then race to the next word.',
-    fa: 'گوشی را روی پیشانی بگیر تا جمع کلمه را ببینند. آن‌ها سرنخ می‌دهند و تو با زمان مسابقه می‌دهی. درست حدس زدی یا رد کن، بعد سراغ کلمهٔ بعدی برو.',
+    en: "Slap the phone on your forehead so everyone can see the word except you. The room erupts with frantic clues, wild gestures, and shouting while you guess as fast as you can before the timer dies. Nail it and tap to score, wave off the tough ones, and pile up as many words as you can in one breathless round.",
+    fa: 'گوشی را روی پیشانی‌ات بگذار تا همه کلمه را ببینند جز خودت. جمع با سرنخ‌های هول‌هولکی، اشاره‌های دیوانه‌وار و داد و فریاد منفجر می‌شود و تو تا قبل از تمام شدن زمان هرچه سریع‌تر حدس می‌زنی. درست زدی بزن تا امتیاز بگیری، سخت‌ها را رد کن و در یک دور نفس‌گیر هرچه می‌توانی کلمه جمع کن.',
   },
   icon: '🙈',
   color: 'sky',

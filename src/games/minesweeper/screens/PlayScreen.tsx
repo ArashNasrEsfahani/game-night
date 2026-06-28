@@ -58,10 +58,23 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<Minesw
   return (
     <Screen>
       <TurnAura color={active?.color} />
-      <AppBar title={t('mine.title')} onBack={() => nav.exit()} />
+      <AppBar
+        title={t('mine.title')}
+        onBack={() => nav.exit()}
+        right={
+          <button onClick={() => dispatch({ type: 'END_GAME' })} className="text-sm text-[var(--text-muted)]">
+            {t('common.endGame')}
+          </button>
+        }
+      />
 
       <div className="flex items-center justify-between px-1 pb-2 text-sm">
-        <span className="font-semibold">💣 {t('mine.minesLeft', { n: minesLeft(s) })}</span>
+        {/* The exact mine total isn't known until the first tap seeds the board (coverage may add a
+            few to kill 0-clue squares), so show a goal prompt until then rather than a number that
+            jumps. */}
+        <span className="font-semibold">
+          💣 {s.minesPlaced ? t('mine.minesLeft', { n: minesLeft(s) }) : t('mine.findThemAll')}
+        </span>
         {solo ? (
           <span className="tabular-nums text-[var(--text-muted)]">⏱ {fmt(elapsed)}</span>
         ) : (

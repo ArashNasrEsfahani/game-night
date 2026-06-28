@@ -2,6 +2,9 @@
 import type { LocalizedString } from '../../sdk/types';
 import type { RoleId } from './roles';
 import { ROLES, ROLE_LIST, countsAsMafia } from './roles';
+import type { DatasetDescriptor, DatasetItem } from '../../content/types';
+import { objectFileDataset } from '../../content/datasetBuilders';
+import { registerRebuilder } from '../../content/overrides';
 
 export interface RolePreset {
   id: string;
@@ -66,6 +69,56 @@ export const compositionTotal = (c: Record<RoleId, number>): number =>
 
 export const mafiaInComposition = (c: Record<RoleId, number>): number =>
   Object.entries(c).reduce((sum, [id, count]) => sum + (ROLES[id] && countsAsMafia(ROLES[id]) ? count : 0), 0);
+
+/* ── Editable role text (Content Studio) ──────────────────────────────────
+ * Mafia roles live in roles.ts (not a JSON file), and their structural fields
+ * (faction, night action, …) are logic — NOT safe to edit. So this dataset
+ * exposes only the three bilingual TEXT fields per role and patches them onto
+ * the live role registry in place; everything else stays exactly as shipped. */
+interface RoleTextItem extends DatasetItem {
+  name: LocalizedString;
+  reveal: LocalizedString;
+  guide: LocalizedString;
+}
+
+const defaultRoleText = (): { roles: RoleTextItem[] } => ({
+  roles: ROLE_LIST.map((r) => ({
+    id: r.id,
+    name: { ...r.name },
+    reveal: { ...r.reveal },
+    guide: { ...r.guide },
+  })),
+});
+
+export const DATASETS: DatasetDescriptor[] = [
+  objectFileDataset({
+    gameId: 'mafia',
+    datasetId: 'roles',
+    itemsKey: 'roles',
+    defaultFile: defaultRoleText(),
+    sourcePath: null, // lives in roles.ts; edits persist only as an on-device override
+    title: { en: 'Role text', fa: 'متن نقش‌ها' },
+    itemNoun: { en: 'role', fa: 'نقش' },
+    idPrefix: 'role-',
+    locFields: [
+      { key: 'name', label: { en: 'Name', fa: 'نام' } },
+      { key: 'reveal', label: { en: 'Reveal (private card)', fa: 'متن کارت خصوصی' }, multiline: true },
+      { key: 'guide', label: { en: 'Guide (one-liner)', fa: 'راهنما (یک‌خطی)' }, multiline: true },
+    ],
+  }),
+];
+
+function rebuildRoleText(): void {
+  const file = DATASETS[0].readFile() as { roles: RoleTextItem[] };
+  for (const item of file.roles) {
+    const role = ROLES[item.id];
+    if (!role) continue; // ignore added/renamed ids — roles are structural
+    if (item.name) role.name = item.name;
+    if (item.reveal) role.reveal = item.reveal;
+    if (item.guide) role.guide = item.guide;
+  }
+}
+registerRebuilder(rebuildRoleText);
 
 export function validateContent(): string[] {
   const problems: string[] = [];

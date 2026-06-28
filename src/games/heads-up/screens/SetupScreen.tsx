@@ -5,7 +5,10 @@ import type { GameConfig, GameScreenProps, PlayerSeat, TeamSetup } from '../../.
 import { Screen, AppBar, Button, Disclosure, SegmentedControl, SelectChip, Stepper, Toggle } from '../../../sdk/ui';
 import { useRosterStore } from '../../../store/rosterStore';
 import { PlayerPicker } from '../../../app/components/PlayerPicker';
+import { TeamAssigner, useTeamAssignment } from '../../../app/components/TeamAssigner';
 import { asTeamId } from '../../../engine/ids';
+
+const TEAM_PALETTE = ['rose', 'sky', 'lime', 'gold'];
 import { DECK_LIST, DEFAULT_OPTIONS, ROUND_SECONDS_CHOICES, validateConfig } from '../config';
 import type { HeadsUpMode, HeadsUpOptions } from '../config';
 import { DIFFICULTIES, deckDifficultyCounts } from '../content';
@@ -35,14 +38,20 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<HeadsUpState, HeadsUpA
     .filter((p) => selected.includes(p.id))
     .map((p) => ({ id: p.id, name: p.name, emoji: p.emoji, color: p.color }));
 
+  // Auto-balanced split the host can tweak per player (teams mode only).
+  const { byPlayer, cycle, memberIdsByTeam } = useTeamAssignment(seats.map((s) => s.id), opts.teamCount);
+  const teamColumns = Array.from({ length: opts.teamCount }, (_, i) => ({
+    name: t('hu.teamName', { n: i + 1 }),
+    color: TEAM_PALETTE[i % TEAM_PALETTE.length],
+  }));
   const teams: TeamSetup | undefined =
     opts.mode === 'teams'
       ? {
-          mode: 'auto',
-          teams: Array.from({ length: opts.teamCount }, (_, i) => ({
+          mode: 'manual',
+          teams: teamColumns.map((col, i) => ({
             id: asTeamId(`t${i}`),
-            name: t('hu.teamName', { n: i + 1 }),
-            memberIds: seats.filter((_, idx) => idx % opts.teamCount === i).map((s) => s.id),
+            name: col.name,
+            memberIds: memberIdsByTeam[i] ?? [],
           })),
         }
       : undefined;
@@ -99,6 +108,17 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<HeadsUpState, HeadsUpA
               { value: 'teams', label: t('hu.teams') },
             ]}
           />
+          {opts.mode === 'teams' && seats.length >= 2 && (
+            <div className="mt-3">
+              <TeamAssigner
+                players={seats}
+                teamColumns={teamColumns}
+                byPlayer={byPlayer}
+                onCycle={cycle}
+                hint={t('common.teamHint')}
+              />
+            </div>
+          )}
         </section>
 
         {/* ── More options disclosure ── */}

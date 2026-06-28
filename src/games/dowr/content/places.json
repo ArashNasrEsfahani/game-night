@@ -540,15 +540,6 @@
     "difficulty": "easy"
   },
   {
-    "id": "places-gen-2",
-    "word": {
-      "en": "Market",
-      "fa": "بازار"
-    },
-    "category": "places",
-    "difficulty": "easy"
-  },
-  {
     "id": "places-gen-3",
     "word": {
       "en": "Bedroom",
@@ -598,15 +589,6 @@
     "word": {
       "en": "Church",
       "fa": "کلیسا"
-    },
-    "category": "places",
-    "difficulty": "easy"
-  },
-  {
-    "id": "places-gen-9",
-    "word": {
-      "en": "Cafe",
-      "fa": "کافه"
     },
     "category": "places",
     "difficulty": "easy"
@@ -765,15 +747,6 @@
     "difficulty": "easy"
   },
   {
-    "id": "places-gen-27",
-    "word": {
-      "en": "Hairdresser",
-      "fa": "آرایشگاه"
-    },
-    "category": "places",
-    "difficulty": "easy"
-  },
-  {
     "id": "places-gen-28",
     "word": {
       "en": "Pool",
@@ -877,15 +850,6 @@
     "word": {
       "en": "Shrine",
       "fa": "زیارتگاه"
-    },
-    "category": "places",
-    "difficulty": "med"
-  },
-  {
-    "id": "places-gen-40",
-    "word": {
-      "en": "Crypt",
-      "fa": "دخمه"
     },
     "category": "places",
     "difficulty": "med"
@@ -1012,15 +976,6 @@
     "word": {
       "en": "Balcony",
       "fa": "بالکن"
-    },
-    "category": "places",
-    "difficulty": "med"
-  },
-  {
-    "id": "places-gen-55",
-    "word": {
-      "en": "Courtyard",
-      "fa": "حیاط"
     },
     "category": "places",
     "difficulty": "med"
@@ -1314,15 +1269,6 @@
     "difficulty": "hard"
   },
   {
-    "id": "places-gen-88",
-    "word": {
-      "en": "Threshold",
-      "fa": "آستانه"
-    },
-    "category": "places",
-    "difficulty": "hard"
-  },
-  {
     "id": "places-gen-89",
     "word": {
       "en": "Frontier",
@@ -1345,15 +1291,6 @@
     "word": {
       "en": "Enclave",
       "fa": "محدوده جدا"
-    },
-    "category": "places",
-    "difficulty": "hard"
-  },
-  {
-    "id": "places-gen-92",
-    "word": {
-      "en": "Diaspora",
-      "fa": "پراکندگی مهاجران"
     },
     "category": "places",
     "difficulty": "hard"
@@ -1399,15 +1336,6 @@
     "word": {
       "en": "Esplanade",
       "fa": "پیاده‌راه ساحلی"
-    },
-    "category": "places",
-    "difficulty": "hard"
-  },
-  {
-    "id": "places-gen-98",
-    "word": {
-      "en": "Cloister",
-      "fa": "صومعه"
     },
     "category": "places",
     "difficulty": "hard"

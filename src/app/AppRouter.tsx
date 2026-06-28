@@ -5,7 +5,7 @@ import { PlayersPage } from './pages/PlayersPage';
 import { SettingsPage } from './pages/SettingsPage';
 import { GameHostPage } from './pages/GameHostPage';
 import { NotFoundPage } from './pages/NotFoundPage';
-import { fade } from '../sdk/motion';
+import { routeShell } from '../sdk/motion';
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -13,7 +13,7 @@ function AnimatedRoutes() {
     <AnimatePresence mode="wait" initial={false}>
       <motion.div
         key={location.pathname}
-        variants={fade}
+        variants={routeShell}
         initial="initial"
         animate="animate"
         exit="exit"

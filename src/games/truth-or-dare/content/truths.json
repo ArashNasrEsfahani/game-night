@@ -404,30 +404,12 @@
       }
     },
     {
-      "id": "truth-x001",
-      "kind": "truth",
-      "intensity": "medium",
-      "text": {
-        "en": "What's the most embarrassing thing currently in your search history?",
-        "fa": "خجالت‌آورترین چیزی که الان توی تاریخچه‌ی جست‌وجوت هست چیه؟"
-      }
-    },
-    {
       "id": "truth-x002",
       "kind": "truth",
       "intensity": "mild",
       "text": {
         "en": "What's a small lie you tell almost every day?",
         "fa": "یه دروغ کوچولو که تقریباً هر روز می‌گی چیه؟"
-      }
-    },
-    {
-      "id": "truth-x003",
-      "kind": "truth",
-      "intensity": "mild",
-      "text": {
-        "en": "What's the childish thing you still secretly enjoy?",
-        "fa": "کدوم کار بچگانه‌ای هست که هنوز یواشکی ازش لذت می‌بری؟"
       }
     },
     {
@@ -449,30 +431,12 @@
       }
     },
     {
-      "id": "truth-x006",
-      "kind": "truth",
-      "intensity": "medium",
-      "text": {
-        "en": "What's the pettiest reason you've ever stopped talking to someone?",
-        "fa": "بی‌ارزش‌ترین دلیلی که به‌خاطرش با یکی قهر کردی یا حرف زدن باهاش رو قطع کردی چی بود؟"
-      }
-    },
-    {
       "id": "truth-x007",
       "kind": "truth",
       "intensity": "mild",
       "text": {
         "en": "What's a habit of yours that would annoy your roommates?",
         "fa": "کدوم عادتت هست که هم‌خونه‌هات رو حسابی کلافه می‌کنه؟"
-      }
-    },
-    {
-      "id": "truth-x008",
-      "kind": "truth",
-      "intensity": "mild",
-      "text": {
-        "en": "What's the most money you've ever spent on something totally useless?",
-        "fa": "بیشترین پولی که تا حالا برای یه چیز کاملاً بی‌فایده خرج کردی چقدر بوده؟"
       }
     },
     {
@@ -500,24 +464,6 @@
       "text": {
         "en": "What's the most embarrassing nickname you've ever had?",
         "fa": "خجالت‌آورترین لقبی که تا حالا روت گذاشتن چی بوده؟"
-      }
-    },
-    {
-      "id": "truth-x012",
-      "kind": "truth",
-      "intensity": "medium",
-      "text": {
-        "en": "What's something you pretend to like just to fit in?",
-        "fa": "چه چیزی هست که فقط برای اینکه با بقیه جور بشی وانمود می‌کنی دوستش داری؟"
-      }
-    },
-    {
-      "id": "truth-x013",
-      "kind": "truth",
-      "intensity": "medium",
-      "text": {
-        "en": "What's the longest you've gone without showering?",
-        "fa": "بیشترین مدتی که حموم نرفتی چقدر بوده؟"
       }
     },
     {
@@ -563,15 +509,6 @@
       "text": {
         "en": "What's the biggest lie you've told to get out of plans?",
         "fa": "بزرگ‌ترین دروغی که گفتی تا از زیر یه قرار در بری چی بود؟"
-      }
-    },
-    {
-      "id": "truth-x019",
-      "kind": "truth",
-      "intensity": "mild",
-      "text": {
-        "en": "What's the most embarrassing song on your playlist right now?",
-        "fa": "خجالت‌آورترین آهنگی که الان توی پلی‌لیستته چیه؟"
       }
     },
     {
@@ -779,15 +716,6 @@
       "text": {
         "en": "What's a piece of advice you wish you'd taken?",
         "fa": "کدوم نصیحت رو آرزو می‌کنی کاش گوش کرده بودی؟"
-      }
-    },
-    {
-      "id": "truth-x043",
-      "kind": "truth",
-      "intensity": "medium",
-      "text": {
-        "en": "What's the biggest risk you've ever taken?",
-        "fa": "بزرگ‌ترین ریسکی که تا حالا کردی چی بوده؟"
       }
     },
     {
@@ -1241,15 +1169,6 @@
       }
     },
     {
-      "id": "truth-extreme-gen-16",
-      "kind": "truth",
-      "intensity": "extreme",
-      "text": {
-        "en": "What is the boldest move you've ever made to get someone's attention?",
-        "fa": "جسورانه‌ترین حرکتی که برای جلب توجه کسی انجام دادی چی بوده؟"
-      }
-    },
-    {
       "id": "truth-extreme-gen-17",
       "kind": "truth",
       "intensity": "extreme",
@@ -1511,15 +1430,6 @@
       }
     },
     {
-      "id": "truth-extreme-gen-46",
-      "kind": "truth",
-      "intensity": "extreme",
-      "text": {
-        "en": "What is the wildest secret you're keeping about something that happened at a party?",
-        "fa": "وحشی‌ترین رازی که از یه اتفاق توی مهمونی نگه داشتی چیه؟"
-      }
-    },
-    {
       "id": "truth-extreme-gen-47",
       "kind": "truth",
       "intensity": "extreme",
@@ -1673,15 +1583,6 @@
       }
     },
     {
-      "id": "truth-medium-gen-64",
-      "kind": "truth",
-      "intensity": "medium",
-      "text": {
-        "en": "What is a rumor you once started or helped spread?",
-        "fa": "یه شایعه‌ای که خودت راه انداختی یا توی پخش‌شدنش کمک کردی چی بوده؟"
-      }
-    },
-    {
       "id": "truth-medium-gen-65",
       "kind": "truth",
       "intensity": "medium",
@@ -1724,15 +1625,6 @@
       "text": {
         "en": "Who here do you think is the most fake when meeting new people?",
         "fa": "به نظرت کدوم آدم اینجا موقع آشنایی با آدم‌های جدید از همه ساختگی‌تره؟"
-      }
-    },
-    {
-      "id": "truth-medium-gen-70",
-      "kind": "truth",
-      "intensity": "medium",
-      "text": {
-        "en": "What is something you pretend to like just to fit in with a group?",
-        "fa": "چه چیزی هست که فقط برای اینکه با یه جمع جور دربیای وانمود می‌کنی دوستش داری؟"
       }
     },
     {
@@ -2051,15 +1943,6 @@
       }
     },
     {
-      "id": "truth-medium-gen-106",
-      "kind": "truth",
-      "intensity": "medium",
-      "text": {
-        "en": "What's the most embarrassing thing you've ever worn in public on purpose?",
-        "fa": "خجالت‌آورترین چیزی که عمداً جلوی مردم پوشیدی چی بوده؟"
-      }
-    },
-    {
       "id": "truth-medium-gen-107",
       "kind": "truth",
       "intensity": "medium",
@@ -2231,24 +2114,6 @@
       }
     },
     {
-      "id": "truth-mild-gen-126",
-      "kind": "truth",
-      "intensity": "mild",
-      "text": {
-        "en": "What is the most embarrassing thing in your search history right now?",
-        "fa": "شرم‌آورترین چیزی که الان توی تاریخچه‌ی جست‌وجوته چیه؟"
-      }
-    },
-    {
-      "id": "truth-mild-gen-127",
-      "kind": "truth",
-      "intensity": "mild",
-      "text": {
-        "en": "What is the silliest thing you have ever cried about?",
-        "fa": "احمقانه‌ترین چیزی که تا حالا براش گریه کردی چی بوده؟"
-      }
-    },
-    {
       "id": "truth-mild-gen-128",
       "kind": "truth",
       "intensity": "mild",
@@ -2273,15 +2138,6 @@
       "text": {
         "en": "What is the worst haircut you have ever had?",
         "fa": "بدترین مدل مویی که تا حالا داشتی چی بوده؟"
-      }
-    },
-    {
-      "id": "truth-mild-gen-131",
-      "kind": "truth",
-      "intensity": "mild",
-      "text": {
-        "en": "What is the strangest food combination you secretly love?",
-        "fa": "عجیب‌ترین ترکیب غذایی که یواشکی عاشقشی چیه؟"
       }
     },
     {
@@ -2318,15 +2174,6 @@
       "text": {
         "en": "What is the weirdest thing you do when you are home alone?",
         "fa": "عجیب‌ترین کاری که وقتی تنها خونه‌ای انجام می‌دی چیه؟"
-      }
-    },
-    {
-      "id": "truth-mild-gen-136",
-      "kind": "truth",
-      "intensity": "mild",
-      "text": {
-        "en": "What is the most embarrassing thing you have done in front of a crush?",
-        "fa": "شرم‌آورترین کاری که جلوی کسی که ازش خوشت می‌اومد انجام دادی چی بود؟"
       }
     },
     {
@@ -2411,15 +2258,6 @@
       }
     },
     {
-      "id": "truth-mild-gen-146",
-      "kind": "truth",
-      "intensity": "mild",
-      "text": {
-        "en": "What is the most embarrassing thing your parents have caught you doing?",
-        "fa": "شرم‌آورترین کاری که پدر و مادرت موقعش مچت رو گرفتن چی بوده؟"
-      }
-    },
-    {
       "id": "truth-mild-gen-147",
       "kind": "truth",
       "intensity": "mild",
@@ -2435,15 +2273,6 @@
       "text": {
         "en": "What is the strangest dream you can actually remember?",
         "fa": "عجیب‌ترین خوابی که واقعاً یادته چی بوده؟"
-      }
-    },
-    {
-      "id": "truth-mild-gen-149",
-      "kind": "truth",
-      "intensity": "mild",
-      "text": {
-        "en": "What is the most embarrassing thing you have done while half asleep?",
-        "fa": "شرم‌آورترین کاری که توی خواب و بیداری انجام دادی چی بوده؟"
       }
     },
     {
@@ -2528,15 +2357,6 @@
       }
     },
     {
-      "id": "truth-mild-gen-159",
-      "kind": "truth",
-      "intensity": "mild",
-      "text": {
-        "en": "What is the weirdest thing you do when you're home alone?",
-        "fa": "عجیب‌ترین کاری که وقتی تنها توی خونه‌ای انجام می‌دی چیه؟"
-      }
-    },
-    {
       "id": "truth-mild-gen-160",
       "kind": "truth",
       "intensity": "mild",
@@ -2561,15 +2381,6 @@
       "text": {
         "en": "What is the longest you've gone without washing a particular piece of clothing?",
         "fa": "بیشترین مدتی که یه لباس خاص رو نشسته پوشیدی چقدر بوده؟"
-      }
-    },
-    {
-      "id": "truth-mild-gen-163",
-      "kind": "truth",
-      "intensity": "mild",
-      "text": {
-        "en": "What's the most embarrassing thing in your search history right now?",
-        "fa": "خجالت‌آورترین چیزی که الان توی تاریخچه‌ی جست‌وجوته چیه؟"
       }
     },
     {
@@ -3014,15 +2825,6 @@
       }
     },
     {
-      "id": "truth-spicy-gen-213",
-      "kind": "truth",
-      "intensity": "spicy",
-      "text": {
-        "en": "What's the boldest thing you've ever done to get someone's attention?",
-        "fa": "جسورانه‌ترین کاری که برای جلب توجه یه نفر کردی چی بوده؟"
-      }
-    },
-    {
       "id": "truth-spicy-gen-214",
       "kind": "truth",
       "intensity": "spicy",
@@ -3095,15 +2897,6 @@
       }
     },
     {
-      "id": "truth-spicy-gen-222",
-      "kind": "truth",
-      "intensity": "spicy",
-      "text": {
-        "en": "What's the riskiest place you've ever flirted with someone?",
-        "fa": "پرخطرترین جایی که تا حالا با کسی لاس زدی کجا بوده؟"
-      }
-    },
-    {
       "id": "truth-spicy-gen-223",
       "kind": "truth",
       "intensity": "spicy",
@@ -3122,15 +2915,6 @@
       }
     },
     {
-      "id": "truth-spicy-gen-225",
-      "kind": "truth",
-      "intensity": "spicy",
-      "text": {
-        "en": "What's the boldest dare you've ever accepted and actually gone through with?",
-        "fa": "جسورانه‌ترین چالشی که تا حالا قبول کردی و واقعاً انجامش دادی چی بوده؟"
-      }
-    },
-    {
       "id": "truth-spicy-gen-226",
       "kind": "truth",
       "intensity": "spicy",
@@ -3146,15 +2930,6 @@
       "text": {
         "en": "Who here do you think would be the wildest party companion, and why?",
         "fa": "فکر می‌کنی کی توی این جمع دیوونه‌بازترین همراه مهمونیه، و چرا؟"
-      }
-    },
-    {
-      "id": "truth-spicy-gen-228",
-      "kind": "truth",
-      "intensity": "spicy",
-      "text": {
-        "en": "What's the most daring outfit you've ever worn out in public?",
-        "fa": "جسورانه‌ترین لباسی که تا حالا توی جمع پوشیدی چی بوده؟"
       }
     },
     {
@@ -3299,15 +3074,6 @@
       "text": {
         "en": "Who here gives off the most mysterious vibe that you'd love to figure out?",
         "fa": "کی توی این جمع مرموزترین حس رو می‌ده که دوست داری ازش سر دربیاری؟"
-      }
-    },
-    {
-      "id": "truth-spicy-gen-245",
-      "kind": "truth",
-      "intensity": "spicy",
-      "text": {
-        "en": "What's the most daring thing you've ever whispered into someone's ear?",
-        "fa": "جسورانه‌ترین چیزی که تا حالا توی گوش یکی زمزمه کردی چی بوده؟"
       }
     },
     {

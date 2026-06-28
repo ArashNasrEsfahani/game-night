@@ -5,7 +5,10 @@ import type { GameConfig, GameScreenProps, PlayerSeat, TeamSetup } from '../../.
 import { Screen, AppBar, Button, SegmentedControl, Stepper, Toggle, Disclosure, SelectChip } from '../../../sdk/ui';
 import { useRosterStore } from '../../../store/rosterStore';
 import { PlayerPicker } from '../../../app/components/PlayerPicker';
+import { TeamAssigner, useTeamAssignment } from '../../../app/components/TeamAssigner';
 import { asTeamId } from '../../../engine/ids';
+
+const TEAM_PALETTE = ['rose', 'sky', 'lime', 'gold'];
 import {
   DEFAULT_OPTIONS,
   PANTOMIME_CATEGORIES,
@@ -50,13 +53,18 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<PantomimeState, Pantom
     .filter((p) => selected.includes(p.id))
     .map((p) => ({ id: p.id, name: p.name, emoji: p.emoji, color: p.color }));
 
-  // Round-robin distribute the chosen players into `teamCount` teams.
+  // Auto-balanced split the host can tweak per player (tap a name to move it to the next team).
+  const { byPlayer, cycle, memberIdsByTeam } = useTeamAssignment(seats.map((s) => s.id), teamCount);
+  const teamColumns = Array.from({ length: teamCount }, (_, i) => ({
+    name: t('pantomime.teamName', { n: i + 1 }),
+    color: TEAM_PALETTE[i % TEAM_PALETTE.length],
+  }));
   const teams: TeamSetup = {
-    mode: 'auto',
-    teams: Array.from({ length: teamCount }, (_, i) => ({
+    mode: 'manual',
+    teams: teamColumns.map((col, i) => ({
       id: asTeamId(`t${i}`),
-      name: t('pantomime.teamName', { n: i + 1 }),
-      memberIds: seats.filter((_, idx) => idx % teamCount === i).map((s) => s.id),
+      name: col.name,
+      memberIds: memberIdsByTeam[i] ?? [],
     })),
   };
 
@@ -104,6 +112,17 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<PantomimeState, Pantom
               { value: '4', label: '4' },
             ]}
           />
+          {seats.length >= 2 && (
+            <div className="mt-3">
+              <TeamAssigner
+                players={seats}
+                teamColumns={teamColumns}
+                byPlayer={byPlayer}
+                onCycle={cycle}
+                hint={t('common.teamHint')}
+              />
+            </div>
+          )}
         </section>
 
         {/* More options: everything else */}

@@ -143,6 +143,14 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<HeadsU
 
   const participant = currentParticipant(s);
   const guesserName = participant ? s.playerNames[guesserId(participant)] : '';
+  const endGameButton = (
+    <button
+      onClick={() => dispatch({ type: 'END_GAME' })}
+      className="text-sm text-[var(--text-muted)]"
+    >
+      {t('common.endGame')}
+    </button>
+  );
   const card = s.currentCardId ? CARD_BY_KEY[s.currentCardId] : undefined;
   const word = card ? ctx.localize(card.word) : '';
   const got = s.currentEntries.filter((e) => e.result === 'got').length;
@@ -163,7 +171,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<HeadsU
     return (
       <Screen>
         <TurnAura color={participant?.color} />
-        <AppBar onBack={() => nav.exit()} />
+        <AppBar onBack={() => nav.exit()} right={endGameButton} />
         <div className="grid flex-1 place-items-center gap-4 text-center">
           {participant?.kind === 'team' && (
             <p className="text-sm font-semibold text-[var(--text-muted)]">{participant.name}</p>
@@ -251,6 +259,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<HeadsU
             </Button>
             <Button
               size="lg"
+              variant="success"
               onClick={() => { ctx.sound.play('correct'); ctx.haptics.success(); dispatch({ type: 'MARK_GOT', seed: ctx.random.seed() }); }}
             >
               ↓ {t('hu.got')}
@@ -268,7 +277,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<HeadsU
   );
   return (
     <Screen>
-      <AppBar onBack={() => nav.exit()} />
+      <AppBar onBack={() => nav.exit()} right={endGameButton} />
       <div className="flex flex-1 flex-col items-center justify-center gap-4 text-center">
         <h2 className="text-2xl font-bold">{guesserName}</h2>
         <p className="text-4xl font-extrabold dp-accent">

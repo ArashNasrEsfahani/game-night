@@ -71,3 +71,12 @@ export const screenFade: Variants = {
   animate: { opacity: 1, y: 0, transition: { duration: 0.28, ease: easeOut } },
   exit: { opacity: 0, y: -12, transition: { duration: 0.18, ease: easeOut } },
 };
+
+/** App-shell route transition: a soft fade + micro-zoom that reads as a gentle "settle".
+ *  Uses scale (not y) on purpose, so it never compounds with a game's internal screenFade
+ *  y-lift when you navigate into a game. Transform-only — no layout shift, no scrollbar flash. */
+export const routeShell: Variants = {
+  initial: { opacity: 0, scale: 0.985 },
+  animate: { opacity: 1, scale: 1, transition: { duration: 0.26, ease: easeOut } },
+  exit: { opacity: 0, scale: 0.99, transition: { duration: 0.15, ease: easeOut } },
+};

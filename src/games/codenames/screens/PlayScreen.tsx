@@ -15,7 +15,7 @@ function roleClass(role: CardRole): string {
     case 'neutral':
       return 'bg-[var(--color-game-gold)] text-[var(--on-gold)]';
     case 'assassin':
-      return 'bg-zinc-900 text-white';
+      return 'bg-[var(--color-assassin)] text-white';
   }
 }
 
@@ -50,7 +50,7 @@ function Grid({
             whileTap={disabled ? undefined : { scale: 0.93 }}
             disabled={disabled}
             onClick={() => onTap?.(c.index)}
-            className={`flex aspect-square items-center justify-center rounded-lg p-1 text-center text-[10px] font-bold leading-tight ${cls}`}
+            className={`flex aspect-square items-center justify-center rounded-lg p-1 text-center text-[10px] font-bold leading-tight shadow-[inset_0_1px_0_rgb(255_255_255/0.25),inset_0_-3px_5px_rgb(0_0_0/0.16)] ${cls}`}
           >
             {c.word[lang]}
           </motion.button>
@@ -90,6 +90,14 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<Codena
 
   const teamColor = s.currentTeam === 'teamA' ? 'rose' : 'sky';
   const spyName = s.playerNames[currentSpymasterId(s)] ?? '';
+
+  // Always-available "End game" control: ends the match and jumps to the results with the standings
+  // so far (the team closest to clearing wins). Mirrors Truth or Dare's AppBar right slot.
+  const endGameRight = (
+    <button onClick={() => dispatch({ type: 'END_GAME' })} className="text-sm text-[var(--text-muted)]">
+      {t('common.endGame')}
+    </button>
+  );
 
   if (s.phase === 'error') {
     return (
@@ -132,7 +140,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<Codena
     return (
       <Screen>
         <TurnAura color={teamColor} />
-        <AppBar onBack={() => nav.exit()} />
+        <AppBar onBack={() => nav.exit()} right={endGameRight} />
         <div className="grid flex-1 place-items-center gap-5 text-center">
           <div className={`rounded-2xl bg-[var(--color-game-${teamColor})] px-6 py-3`}>
             <p className="text-sm font-bold">{currentTeamName(s)}</p>
@@ -170,7 +178,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<Codena
     return (
       <Screen>
         <TurnAura color={teamColor} />
-        <AppBar onBack={() => nav.exit()} />
+        <AppBar onBack={() => nav.exit()} right={endGameRight} />
         {scoreStrip}
         <div className="grid flex-1 place-items-center gap-4 text-center">
           <div className={`rounded-2xl bg-[var(--color-game-${teamColor})] px-6 py-4`}>
@@ -191,7 +199,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<Codena
     return (
       <Screen>
         <TurnAura color={teamColor} />
-        <AppBar onBack={() => nav.exit()} />
+        <AppBar onBack={() => nav.exit()} right={endGameRight} />
         <Curtain
           open={gateOpen}
           holderName={spyName}
@@ -216,7 +224,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<Codena
     return (
       <Screen>
         <TurnAura color={teamColor} />
-        <AppBar onBack={() => nav.exit()} />
+        <AppBar onBack={() => nav.exit()} right={endGameRight} />
         <div className="grid flex-1 place-items-center gap-4 text-center">
           <div className="text-6xl">🙈</div>
           <p className="text-lg text-[var(--text-muted)]">{t('cn.hideKey')}</p>
@@ -236,7 +244,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<Codena
     return (
       <Screen>
         <TurnAura color={teamColor} />
-        <AppBar onBack={() => nav.exit()} />
+        <AppBar onBack={() => nav.exit()} right={endGameRight} />
         {scoreStrip}
         <div className="flex flex-1 flex-col gap-3">
           <motion.p
@@ -293,7 +301,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<Codena
   return (
     <Screen>
       <TurnAura color={teamColor} />
-      <AppBar onBack={() => nav.exit()} />
+      <AppBar onBack={() => nav.exit()} right={endGameRight} />
       {scoreStrip}
       <motion.div
         className="grid flex-1 place-items-center gap-4 text-center"

@@ -5,8 +5,8 @@ export const manifest: GameManifest = {
   name: { en: 'Most Likely To', fa: 'به احتمال زیاد' },
   tagline: { en: 'Point at the friend most likely to…', fa: 'به دوستی اشاره کن که به احتمال زیاد…' },
   description: {
-    en: 'A "Most likely to…" prompt appears, everyone votes for a player, and the most-voted is revealed. Most wins across the deck takes the crown.',
-    fa: 'یک سوال «به احتمال زیاد…» می‌آید، همه به یک بازیکن رأی می‌دهند و پررأی‌ترین معرفی می‌شود. بیشترین برد در طول بازی برنده می‌شود.',
+    en: "A cheeky \"Most likely to…\" prompt drops, and every finger in the room swings toward one unlucky friend. Everyone votes in secret, the count is revealed, and the most-accused suddenly has some explaining to do. Rack up the most call-outs across the deck and you wear the crown — for better or for worse.",
+    fa: 'یک سوال شیطنت‌آمیز «به احتمال زیاد…» می‌آید و همهٔ انگشت‌ها به سمت یک دوستِ بدشانس نشانه می‌رود. همه پنهانی رأی می‌دهند، شمارش رو می‌شود و پررأی‌ترین یک‌دفعه کلی توضیح برای دادن دارد. هرکس در طول بازی بیشترین رأی را جمع کند تاج را می‌گیرد — حالا خوب یا بد!',
   },
   icon: '👉',
   color: 'tangerine',

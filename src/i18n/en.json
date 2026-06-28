@@ -22,7 +22,12 @@
     "players": "Players",
     "howToPlay": "How to play",
     "moreOptions": "More options",
-    "moreOptionsHint": "Tweak the rules, timing, and extras"
+    "moreOptionsHint": "Tweak the rules, timing, and extras",
+    "teamHint": "Tap a player to move them to another team",
+    "endGame": "End game",
+    "endGameConfirm": "End this game and see the results?",
+    "leave": "Leave game",
+    "leaveConfirm": "Leave this game? Your progress is saved."
   },
   "home": {
     "title": "Game Night",
@@ -200,7 +205,9 @@
       "famous": "Famous people",
       "mixed": "Mixed",
       "tv": "TV Shows",
-      "proverbs": "Persian Proverbs"
+      "proverbs": "Persian Proverbs",
+      "sports": "Sports",
+      "jobs": "Jobs"
     },
     "diff": {
       "easy": "Easy",
@@ -289,6 +296,7 @@
     "undo": "Undo last vote",
     "imName": "Only {{name}} should look",
     "votedProgress": "{{done}} / {{total}} voted",
+    "tapYourPick": "Tap who you're voting for",
     "enterTally": "Enter how many votes each player got",
     "tallyTotal": "{{total}} votes · {{players}} players",
     "noVotes": "No clear answer — everyone's safe!",
@@ -546,6 +554,7 @@
     "boardHint": "≈ {{mines}} mines to find on a {{cols}}×{{rows}} board",
     "turnOf": "{{name}}'s turn",
     "minesLeft": "{{n}} to find",
+    "findThemAll": "Find them all!",
     "goAgain": "Mine found! Tap again 🎉",
     "missed": "Safe square, next player's turn",
     "tapHint": "Tap a square to hunt. Find a mine and you go again; a safe square reveals a clue and passes the turn.",

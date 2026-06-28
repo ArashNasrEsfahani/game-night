@@ -3,7 +3,7 @@ import type { HTMLMotionProps } from 'framer-motion';
 import { cn } from '../../lib/cn';
 import { press } from '../motion';
 
-type Variant = 'primary' | 'secondary' | 'ghost' | 'danger';
+type Variant = 'primary' | 'secondary' | 'ghost' | 'danger' | 'success';
 type Size = 'sm' | 'md' | 'lg';
 
 export interface ButtonProps extends HTMLMotionProps<'button'> {
@@ -20,6 +20,8 @@ const VARIANTS: Record<Variant, string> = {
   ghost: 'dp-accent bg-transparent',
   danger:
     'bg-[linear-gradient(135deg,var(--color-game-rose),var(--color-game-rose-strong))] text-[var(--on-rose)] shadow-[0_10px_26px_-8px_color-mix(in_oklab,var(--color-game-rose)_60%,transparent)]',
+  success:
+    'bg-[linear-gradient(135deg,var(--color-game-lime),var(--color-game-lime-strong))] text-[var(--on-lime)] shadow-[0_10px_26px_-8px_color-mix(in_oklab,var(--color-game-lime)_60%,transparent)]',
 };
 
 const SIZES: Record<Size, string> = {

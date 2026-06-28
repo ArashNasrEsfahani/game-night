@@ -503,30 +503,6 @@
       "intensity": "medium"
     },
     {
-      "id": "wyr-c-x010",
-      "optionA": {
-        "en": "Have summer all year round",
-        "fa": "تمام سال تابستون باشه"
-      },
-      "optionB": {
-        "en": "Have winter all year round",
-        "fa": "تمام سال زمستون باشه"
-      },
-      "intensity": "mild"
-    },
-    {
-      "id": "wyr-c-x011",
-      "optionA": {
-        "en": "Be the funniest person in the room",
-        "fa": "بامزه‌ترین آدم جمع باشی"
-      },
-      "optionB": {
-        "en": "Be the smartest person in the room",
-        "fa": "باهوش‌ترین آدم جمع باشی"
-      },
-      "intensity": "mild"
-    },
-    {
       "id": "wyr-c-x012",
       "optionA": {
         "en": "Lose your sense of taste",
@@ -537,18 +513,6 @@
         "fa": "حس بویایی‌ت رو از دست بدی"
       },
       "intensity": "medium"
-    },
-    {
-      "id": "wyr-c-x013",
-      "optionA": {
-        "en": "Have a rewind button for your life",
-        "fa": "یه دکمه‌ی برگشت برای زندگیت داشته باشی"
-      },
-      "optionB": {
-        "en": "Have a pause button for your life",
-        "fa": "یه دکمه‌ی توقف برای زندگیت داشته باشی"
-      },
-      "intensity": "mild"
     },
     {
       "id": "wyr-c-x014",
@@ -969,18 +933,6 @@
         "fa": "بتونی هر وقت خواستی زمان رو متوقف کنی"
       },
       "intensity": "mild"
-    },
-    {
-      "id": "wyr-gen-1",
-      "optionA": {
-        "en": "Take a job you love that barely pays the bills",
-        "fa": "شغلی را قبول کنی که عاشقش هستی ولی به‌زور خرجت را درمی‌آورد"
-      },
-      "optionB": {
-        "en": "Take a job you hate that makes you rich",
-        "fa": "شغلی را قبول کنی که ازش متنفری ولی پولدارت می‌کند"
-      },
-      "intensity": "medium"
     },
     {
       "id": "wyr-gen-2",
@@ -1423,18 +1375,6 @@
       "optionB": {
         "en": "Blow it all up for a fresh, uncertain start",
         "fa": "همه‌اش را به هم بریزی برای یک شروع تازه و نامطمئن"
-      },
-      "intensity": "medium"
-    },
-    {
-      "id": "wyr-gen-39",
-      "optionA": {
-        "en": "Have a job you love that pays just enough",
-        "fa": "شغلی داشته باشی که عاشقش باشی و فقط به اندازه کافی درآمد داشته باشد"
-      },
-      "optionB": {
-        "en": "Have a job you hate that makes you rich",
-        "fa": "شغلی داشته باشی که ازش متنفری ولی ثروتمندت می‌کند"
       },
       "intensity": "medium"
     },
@@ -2795,18 +2735,6 @@
       "intensity": "mild"
     },
     {
-      "id": "wyr-gen-153",
-      "optionA": {
-        "en": "Always be 10 minutes late everywhere",
-        "fa": "همیشه همه‌جا ۱۰ دقیقه دیر برسی"
-      },
-      "optionB": {
-        "en": "Always be 20 minutes early everywhere",
-        "fa": "همیشه همه‌جا ۲۰ دقیقه زود برسی"
-      },
-      "intensity": "mild"
-    },
-    {
       "id": "wyr-gen-154",
       "optionA": {
         "en": "Never have to do laundry again",
@@ -2899,18 +2827,6 @@
       "optionB": {
         "en": "Eat out free but only fast food forever",
         "fa": "بیرون رایگان غذا بخوری ولی فقط فست‌فود تا ابد"
-      },
-      "intensity": "mild"
-    },
-    {
-      "id": "wyr-gen-162",
-      "optionA": {
-        "en": "Have a 5-minute commute to a job you dislike",
-        "fa": "۵ دقیقه تا سرِ کاری که دوستش نداری راه داشته باشی"
-      },
-      "optionB": {
-        "en": "Have a 90-minute commute to a job you love",
-        "fa": "۹۰ دقیقه تا سرِ کاری که عاشقشی راه داشته باشی"
       },
       "intensity": "mild"
     },
@@ -3319,18 +3235,6 @@
       "optionB": {
         "en": "Stay up until 2 a.m. every night",
         "fa": "هر شب تا ساعت ۲ بامداد بیدار بمانی"
-      },
-      "intensity": "mild"
-    },
-    {
-      "id": "wyr-gen-197",
-      "optionA": {
-        "en": "Live somewhere with endless summer",
-        "fa": "جایی با تابستان بی‌پایان زندگی کنی"
-      },
-      "optionB": {
-        "en": "Live somewhere with endless winter",
-        "fa": "جایی با زمستان بی‌پایان زندگی کنی"
       },
       "intensity": "mild"
     },

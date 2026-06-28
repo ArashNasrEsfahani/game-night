@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Screen, AppBar, Card } from '../../sdk/ui';
 import { useSettingsStore } from '../../store/settingsStore';
-import type { ThemePref } from '../../store/settingsStore';
+import type { ThemePref, MotionPref } from '../../store/settingsStore';
 import type { Lang } from '../../sdk/types';
 
 export function SettingsPage() {
@@ -12,6 +12,7 @@ export function SettingsPage() {
 
   const themes: ThemePref[] = ['system', 'light', 'dark'];
   const langs: Lang[] = ['en', 'fa'];
+  const motions: MotionPref[] = ['system', 'on', 'off'];
 
   return (
     <Screen>
@@ -52,6 +53,25 @@ export function SettingsPage() {
               }`}
             >
               {lng === 'en' ? 'English' : 'فارسی'}
+            </button>
+          ))}
+        </div>
+      </Card>
+
+      <Card className="my-2">
+        <label className="mb-2 block text-sm text-[var(--text-muted)]">{t('settings.motion')}</label>
+        <div className="flex gap-2">
+          {motions.map((m) => (
+            <button
+              key={m}
+              onClick={() => s.setReducedMotion(m)}
+              className={`flex-1 rounded-full py-2 text-sm font-medium ${
+                s.reducedMotion === m
+                  ? 'bg-[var(--game-accent-strong)] text-[var(--game-on-accent)]'
+                  : 'bg-[var(--surface-2)] text-[var(--text)]'
+              }`}
+            >
+              {t(`settings.${m}`)}
             </button>
           ))}
         </div>

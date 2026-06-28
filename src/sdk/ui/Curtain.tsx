@@ -60,8 +60,10 @@ export function Curtain({
       >
         {holderName ? holderName.slice(0, 1) : '🤫'}
       </motion.div>
-      <p className="relative px-4 text-lg font-semibold text-[#fdf6e6]">{hint}</p>
-      {holderName && <p className="relative text-2xl font-extrabold text-[#fdf6e6]">{holderName}</p>}
+      <p className="relative px-4 text-lg font-semibold text-balance break-words text-[#fdf6e6]">{hint}</p>
+      {holderName && (
+        <p className="relative max-w-full break-words px-4 text-2xl font-extrabold text-[#fdf6e6]">{holderName}</p>
+      )}
       <Button size="lg" onClick={onReveal} className="relative">
         {revealLabel}
       </Button>

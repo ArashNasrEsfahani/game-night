@@ -5,6 +5,7 @@ import type { GameConfig, GameScreenProps, PlayerSeat, TeamSetup } from '../../.
 import { Screen, AppBar, Button, Disclosure, SegmentedControl, SelectChip, Toggle } from '../../../sdk/ui';
 import { useRosterStore } from '../../../store/rosterStore';
 import { PlayerPicker } from '../../../app/components/PlayerPicker';
+import { TeamAssigner, useTeamAssignment } from '../../../app/components/TeamAssigner';
 import { asTeamId } from '../../../engine/ids';
 import { DEFAULT_OPTIONS, PACK_LIST, validateConfig } from '../config';
 import type { CodenamesMode, CodenamesOptions, StartingTeam } from '../config';
@@ -29,13 +30,18 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<CodenamesState, Codena
     .filter((p) => selected.includes(p.id))
     .map((p) => ({ id: p.id, name: p.name, emoji: p.emoji, color: p.color }));
 
-  // Auto-split into two teams (round-robin); spymaster = first member of each.
+  // Auto-split into two teams the host can tweak per player; spymaster = first member of each.
+  const { byPlayer, cycle, memberIdsByTeam } = useTeamAssignment(seats.map((s) => s.id), 2);
+  const teamColumns = [
+    { name: t('cn.red'), color: 'rose' },
+    { name: t('cn.blue'), color: 'sky' },
+  ];
   const teams: TeamSetup = {
-    mode: 'auto',
-    teams: [0, 1].map((i) => ({
+    mode: 'manual',
+    teams: teamColumns.map((col, i) => ({
       id: asTeamId(i === 0 ? 'teamA' : 'teamB'),
-      name: i === 0 ? t('cn.red') : t('cn.blue'),
-      memberIds: seats.filter((_, idx) => idx % 2 === i).map((s) => s.id),
+      name: col.name,
+      memberIds: memberIdsByTeam[i] ?? [],
     })),
   };
 
@@ -46,8 +52,6 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<CodenamesState, Codena
     lang: ctx.lang,
   };
   const errors = validateConfig(config);
-  const spyA = teams.teams[0].memberIds[0];
-  const spyB = teams.teams[1].memberIds[0];
 
   return (
     <Screen>
@@ -66,23 +70,17 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<CodenamesState, Codena
           />
         </section>
 
-        {/* ── Always visible: team-composition preview ── */}
-        {seats.length >= 4 && (
-          <section className="grid grid-cols-2 gap-3">
-            <div className="rounded-xl bg-[var(--color-game-rose)] p-3">
-              <p className="text-sm font-bold text-white">{t('cn.red')}</p>
-              <p className="text-xs text-white/70">
-                {t('cn.spymaster')}: {spyA ? seats.find((s) => s.id === spyA)?.name : '—'}
-              </p>
-              <p className="text-xs text-white/90">{teams.teams[0].memberIds.map((id) => seats.find((s) => s.id === id)?.name).join('، ')}</p>
-            </div>
-            <div className="rounded-xl bg-[var(--color-game-sky)] p-3">
-              <p className="text-sm font-bold text-white">{t('cn.blue')}</p>
-              <p className="text-xs text-white/70">
-                {t('cn.spymaster')}: {spyB ? seats.find((s) => s.id === spyB)?.name : '—'}
-              </p>
-              <p className="text-xs text-white/90">{teams.teams[1].memberIds.map((id) => seats.find((s) => s.id === id)?.name).join('، ')}</p>
-            </div>
+        {/* ── Always visible: tap-to-move team assignment (spymaster = first, 🔍) ── */}
+        {seats.length >= 2 && (
+          <section>
+            <TeamAssigner
+              players={seats}
+              teamColumns={teamColumns}
+              byPlayer={byPlayer}
+              onCycle={cycle}
+              spymasterFirst
+              hint={`🔍 = ${t('cn.spymaster')} · ${t('common.teamHint')}`}
+            />
           </section>
         )}
 

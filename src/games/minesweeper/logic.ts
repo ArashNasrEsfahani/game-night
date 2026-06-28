@@ -48,7 +48,8 @@ export interface MinesweeperState extends GameStateBase {
 
 export type MinesweeperAction =
   | { type: 'REVEAL'; index: number; seed: number } // seed only consumed on the first reveal
-  | { type: 'CLEAR_FLASH' };
+  | { type: 'CLEAR_FLASH' }
+  | { type: 'END_GAME' };
 
 /* ─────────────────────────  Pure board helpers  ───────────────────────── */
 
@@ -255,6 +256,14 @@ export function reducer(state: MinesweeperState, action: MinesweeperAction): Min
     case 'CLEAR_FLASH': {
       if (s.flash === null) return s;
       return { ...s, flash: null };
+    }
+
+    // End the match early: finalise standings from the mines found so far and show the results.
+    // The winner-so-far is whoever leads the score (ties shared); winReason stays null since the
+    // board wasn't cleared. Reveals the whole board like a natural finish.
+    case 'END_GAME': {
+      if (s.phase !== 'playing') return s;
+      return finish(s, null, winnersByScore(s.seats));
     }
 
     default:

@@ -1,0 +1,234 @@
+{
+  "id": "nature",
+  "name": {
+    "en": "Nature",
+    "fa": "طبیعت"
+  },
+  "version": 1,
+  "words": [
+    {
+      "id": "nat-tree",
+      "text": {
+        "en": "Tree",
+        "fa": "درخت"
+      }
+    },
+    {
+      "id": "nat-leaf",
+      "text": {
+        "en": "Leaf",
+        "fa": "برگ"
+      }
+    },
+    {
+      "id": "nat-flower",
+      "text": {
+        "en": "Flower",
+        "fa": "گل"
+      }
+    },
+    {
+      "id": "nat-grass",
+      "text": {
+        "en": "Grass",
+        "fa": "چمن"
+      }
+    },
+    {
+      "id": "nat-root",
+      "text": {
+        "en": "Root",
+        "fa": "ریشه"
+      }
+    },
+    {
+      "id": "nat-seed",
+      "text": {
+        "en": "Seed",
+        "fa": "دانه"
+      }
+    },
+    {
+      "id": "nat-branch",
+      "text": {
+        "en": "Branch",
+        "fa": "شاخه"
+      }
+    },
+    {
+      "id": "nat-lake",
+      "text": {
+        "en": "Lake",
+        "fa": "دریاچه"
+      }
+    },
+    {
+      "id": "nat-wave",
+      "text": {
+        "en": "Wave",
+        "fa": "موج"
+      }
+    },
+    {
+      "id": "nat-stone",
+      "text": {
+        "en": "Stone",
+        "fa": "سنگ"
+      }
+    },
+    {
+      "id": "nat-sand",
+      "text": {
+        "en": "Sand",
+        "fa": "شن"
+      }
+    },
+    {
+      "id": "nat-soil",
+      "text": {
+        "en": "Soil",
+        "fa": "خاک"
+      }
+    },
+    {
+      "id": "nat-valley",
+      "text": {
+        "en": "Valley",
+        "fa": "دره"
+      }
+    },
+    {
+      "id": "nat-hill",
+      "text": {
+        "en": "Hill",
+        "fa": "تپه"
+      }
+    },
+    {
+      "id": "nat-volcano",
+      "text": {
+        "en": "Volcano",
+        "fa": "آتشفشان"
+      }
+    },
+    {
+      "id": "nat-storm",
+      "text": {
+        "en": "Storm",
+        "fa": "طوفان"
+      }
+    },
+    {
+      "id": "nat-thunder",
+      "text": {
+        "en": "Thunder",
+        "fa": "رعد"
+      }
+    },
+    {
+      "id": "nat-lightning",
+      "text": {
+        "en": "Lightning",
+        "fa": "برق آسمان"
+      }
+    },
+    {
+      "id": "nat-frost",
+      "text": {
+        "en": "Frost",
+        "fa": "یخبندان"
+      }
+    },
+    {
+      "id": "nat-dew",
+      "text": {
+        "en": "Dew",
+        "fa": "شبنم"
+      }
+    },
+    {
+      "id": "nat-moss",
+      "text": {
+        "en": "Moss",
+        "fa": "خزه"
+      }
+    },
+    {
+      "id": "nat-fern",
+      "text": {
+        "en": "Fern",
+        "fa": "سرخس"
+      }
+    },
+    {
+      "id": "nat-cactus",
+      "text": {
+        "en": "Cactus",
+        "fa": "کاکتوس"
+      }
+    },
+    {
+      "id": "nat-bamboo",
+      "text": {
+        "en": "Bamboo",
+        "fa": "بامبو"
+      }
+    },
+    {
+      "id": "nat-meadow",
+      "text": {
+        "en": "Meadow",
+        "fa": "مرغزار"
+      }
+    },
+    {
+      "id": "nat-glacier",
+      "text": {
+        "en": "Glacier",
+        "fa": "یخچال طبیعی"
+      }
+    },
+    {
+      "id": "nat-swamp",
+      "text": {
+        "en": "Swamp",
+        "fa": "مرداب"
+      }
+    },
+    {
+      "id": "nat-canyon",
+      "text": {
+        "en": "Canyon",
+        "fa": "دره عمیق"
+      }
+    },
+    {
+      "id": "nat-waterfall",
+      "text": {
+        "en": "Waterfall",
+        "fa": "آبشار"
+      }
+    },
+    {
+      "id": "nat-pebble",
+      "text": {
+        "en": "Pebble",
+        "fa": "سنگریزه"
+      }
+    },
+    {
+      "id": "nat-petal",
+      "text": {
+        "en": "Petal",
+        "fa": "گلبرگ"
+      }
+    },
+    {
+      "id": "nat-acorn",
+      "text": {
+        "en": "Acorn",
+        "fa": "بلوط"
+      }
+    }
+  ]
+}

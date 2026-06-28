@@ -5,8 +5,8 @@ export const manifest: GameManifest = {
   name: { en: 'Spyfall', fa: 'جاسوس' },
   tagline: { en: 'Find the spy, hide the location', fa: 'جاسوس را پیدا کن، مکان را پنهان کن' },
   description: {
-    en: 'Everyone secretly gets the same location and a role. Everyone except the spy, who knows neither one. Ask clever questions to sniff out the spy without giving away the place, while the spy plays along and tries to figure out where you all are.',
-    fa: 'همه پنهانی یک مکان و یک نقش مشترک می‌گیرند؛ به‌جز جاسوس که هیچ‌کدام را نمی‌داند. با سؤال‌های زیرکانه جاسوس را پیدا کن بدون اینکه اسم مکان را لو بدهی، و جاسوس هم سعی می‌کند خودش را جا بزند و حدس بزند کجایید.',
+    en: "Everyone secretly shares the same location and a role to play — everyone except one spy, who's flying completely blind. Trade pointed questions to expose the impostor without ever naming the place out loud, because one careless answer hands the spy the win. Meanwhile the spy bluffs along and races to figure out where on earth everybody is. It's pure paranoia, in the best possible way.",
+    fa: 'همه پنهانی یک مکان و یک نقش مشترک می‌گیرند — همه جز یک جاسوس که در تاریکی مطلق است. با سؤال‌های هدف‌دار جاسوس را لو بده، اما مبادا اسم مکان را بلند بگویی، چون یک جواب بی‌احتیاط برد را تقدیم جاسوس می‌کند. جاسوس هم همزمان بلوف می‌زند و تلاش می‌کند بفهمد اصلاً کجایید. سوءظنِ ناب، به بهترین شکل ممکن!',
   },
   icon: '🕵️',
   color: 'violet',

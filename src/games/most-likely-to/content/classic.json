@@ -395,14 +395,6 @@
       "intensity": "family"
     },
     {
-      "id": "mlt-c-x013",
-      "text": {
-        "en": "Most likely to sing in the shower",
-        "fa": "به احتمال زیاد زیر دوش آواز بخونه"
-      },
-      "intensity": "family"
-    },
-    {
       "id": "mlt-c-x014",
       "text": {
         "en": "Most likely to win an award",
@@ -799,14 +791,6 @@
       "text": {
         "en": "organize the whole group trip",
         "fa": "کل سفر گروهی رو برنامه‌ریزی کنه"
-      },
-      "intensity": "casual"
-    },
-    {
-      "id": "mlt-gen-5",
-      "text": {
-        "en": "forget someone's name right after meeting them",
-        "fa": "بلافاصله بعد آشنایی اسم طرف رو فراموش کنه"
       },
       "intensity": "casual"
     },
@@ -1555,14 +1539,6 @@
       "intensity": "casual"
     },
     {
-      "id": "mlt-gen-99",
-      "text": {
-        "en": "forget where they parked at the mall",
-        "fa": "یادش بره تو پارکینگ پاساژ کجا پارک کرده"
-      },
-      "intensity": "casual"
-    },
-    {
       "id": "mlt-gen-100",
       "text": {
         "en": "buy the extended warranty every single time",
@@ -1841,14 +1817,6 @@
         "fa": "هر خریدش رو رُند کنه و حساب خرجش از دستش در بره"
       },
       "intensity": "casual"
-    },
-    {
-      "id": "mlt-gen-135",
-      "text": {
-        "en": "adopt a stray animal on the spot",
-        "fa": "همون‌جا یه حیوون ولگرد رو سرپرستی کنه"
-      },
-      "intensity": "family"
     },
     {
       "id": "mlt-gen-136",
@@ -2227,14 +2195,6 @@
       "intensity": "family"
     },
     {
-      "id": "mlt-gen-183",
-      "text": {
-        "en": "become a famous teacher one day",
-        "fa": "یه روز معلم معروفی بشه"
-      },
-      "intensity": "family"
-    },
-    {
       "id": "mlt-gen-184",
       "text": {
         "en": "learn to play three instruments",
@@ -2555,14 +2515,6 @@
       "intensity": "family"
     },
     {
-      "id": "mlt-gen-224",
-      "text": {
-        "en": "trip over absolutely nothing",
-        "fa": "روی هیچی سکندری بخوره"
-      },
-      "intensity": "family"
-    },
-    {
       "id": "mlt-gen-225",
       "text": {
         "en": "forget why they walked into a room",
@@ -2607,14 +2559,6 @@
       "text": {
         "en": "lose their glasses while wearing them",
         "fa": "عینکش رو گم کنه در حالی که روی چشمشه"
-      },
-      "intensity": "family"
-    },
-    {
-      "id": "mlt-gen-231",
-      "text": {
-        "en": "reply to a text three days late",
-        "fa": "سه روز بعد جواب پیام رو بده"
       },
       "intensity": "family"
     },
@@ -2739,26 +2683,10 @@
       "intensity": "family"
     },
     {
-      "id": "mlt-gen-247",
-      "text": {
-        "en": "forget where they parked the car",
-        "fa": "یادش بره ماشین رو کجا پارک کرده"
-      },
-      "intensity": "family"
-    },
-    {
       "id": "mlt-gen-248",
       "text": {
         "en": "answer a question that nobody asked",
         "fa": "به سوالی که کسی نپرسیده جواب بده"
-      },
-      "intensity": "family"
-    },
-    {
-      "id": "mlt-gen-249",
-      "text": {
-        "en": "send a message to the wrong group chat",
-        "fa": "پیام رو به گروه اشتباهی بفرسته"
       },
       "intensity": "family"
     },
