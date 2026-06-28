@@ -2,6 +2,7 @@ package com.gamenight.party
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
+import androidx.activity.compose.BackHandler
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.animation.AnimatedContent
@@ -13,9 +14,15 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.text.BasicTextField
+import androidx.compose.foundation.text.KeyboardActions
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
@@ -29,15 +36,24 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.ImeAction
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.gamenight.party.content.ContentStore
+import com.gamenight.party.engine.Player
+import com.gamenight.party.engine.PlayerDraft
 import com.gamenight.party.game.GameCatalog
 import com.gamenight.party.game.GameHost
 import com.gamenight.party.game.GameRegistry
 import com.gamenight.party.game.Sfx
 import com.gamenight.party.model.ColorToken
+import com.gamenight.party.model.GameManifest
 import com.gamenight.party.model.Lang
 import com.gamenight.party.model.PlayerSeat
 import com.gamenight.party.sound.Haptics
@@ -47,9 +63,16 @@ import com.gamenight.party.sound.SoundEngine
 import com.gamenight.party.sound.SoundId
 import com.gamenight.party.store.AppStores
 import com.gamenight.party.store.LocalAppStores
+import com.gamenight.party.store.RosterStore
 import com.gamenight.party.ui.components.AppBar
+import com.gamenight.party.ui.components.AppButton
+import com.gamenight.party.ui.components.AppCard
 import com.gamenight.party.ui.components.AppScreen
+import com.gamenight.party.ui.components.GameAppBar
+import com.gamenight.party.ui.components.GameExitConfirmDialog
 import com.gamenight.party.ui.components.IconCircleButton
+import com.gamenight.party.ui.components.PillShape
+import com.gamenight.party.ui.components.glass2Surface
 import com.gamenight.party.ui.components.routeTransform
 import com.gamenight.party.ui.screens.HomeScreen
 import com.gamenight.party.ui.screens.LeaderboardScreen
@@ -57,8 +80,11 @@ import com.gamenight.party.ui.screens.PlayersScreen
 import com.gamenight.party.ui.screens.ProvideAppDirection
 import com.gamenight.party.ui.screens.SettingsScreen
 import com.gamenight.party.ui.screens.uiText
+import com.gamenight.party.ui.theme.Body
 import com.gamenight.party.ui.theme.GameNightTheme
+import com.gamenight.party.ui.theme.LocalAccent
 import com.gamenight.party.ui.theme.LocalPalette
+import com.gamenight.party.ui.theme.accent
 
 class MainActivity : ComponentActivity() {
     // The single, process-lifetime SFX engine + vibrator wrapper, shared app-wide via composition
@@ -225,7 +251,15 @@ private fun HomeRoute(
 /**
  * Mounts a single game: resolves the [GameEntry][com.gamenight.party.game.GameEntry] from the
  * [GameRegistry], maps the persisted roster into seat order, and hands the game a [GameHost]. The game
- * itself drives the entire Setup -> Play -> Results flow and calls [GameHost.exit] to return home.
+ * itself drives the entire Setup -> Play -> Results flow.
+ *
+ * The shell owns three cross-cutting behaviours here so no game has to repeat them:
+ *  • a **not-enough-players gate** — if the roster has fewer than `manifest.minPlayers`, an inline
+ *    add-players screen is shown first and the game only mounts once enough players exist;
+ *  • a **leave confirm** — both the chrome Close button ([GameHost.requestExit]) and the Android
+ *    system back show a bilingual "are you sure?" dialog and exit only on confirm; and
+ *  • the **host wiring** — language, content, manifest, settings-gated sound/haptics, and the two
+ *    exit paths ([GameHost.exit] / [GameHost.requestExit]).
  */
 @Composable
 private fun GameRoute(gameId: String, content: ContentStore, lang: Lang, onExit: () -> Unit) {
@@ -240,22 +274,188 @@ private fun GameRoute(gameId: String, content: ContentStore, lang: Lang, onExit:
         ComingSoonScreen(gameId = gameId, lang = lang, onBack = onExit)
         return
     }
+    val manifest = entry.manifest
+
+    // GATE: not enough players yet → inline add-players screen. Nothing has started, so back / Close
+    // just return home directly (no progress to lose). The game mounts as soon as the roster reaches
+    // manifest.minPlayers (the persisted roster flow re-emits and flips this branch).
+    if (seats.size < manifest.minPlayers) {
+        BackHandler(onBack = onExit)
+        AddPlayersGate(manifest = manifest, roster = stores.roster, lang = lang, onClose = onExit)
+        return
+    }
+
+    // IN GAME: Close (host.requestExit) and Android system-back both route through one confirm.
+    var confirmingExit by rememberSaveable { mutableStateOf(false) }
+    BackHandler { confirmingExit = true }
 
     // The shared, settings-gated engine/vibrator — handed to the game so its cues honour mute/haptics.
     val sfxEngine = LocalSoundEngine.current
     val gameHaptics = LocalHaptics.current
 
-    // Fresh host each recomposition so it always reflects the current language / exit callback; the
+    // Fresh host each recomposition so it always reflects the current language / exit callbacks; the
     // game's internal `remember`ed match state is unaffected (Mount keys its state on nothing, or on
     // host.content, which is stable for the app's lifetime).
     val host = object : GameHost {
         override val lang: Lang = lang
         override val content: ContentStore = content
+        override val manifest: GameManifest = manifest
         override fun exit() = onExit()
+        override fun requestExit() { confirmingExit = true }
         override val sound: Sfx = Sfx { sfxEngine.play(it) }
         override val haptics: Haptics = gameHaptics
     }
     entry.Mount(seats, host)
+
+    if (confirmingExit) {
+        GameExitConfirmDialog(
+            manifest = manifest,
+            lang = lang,
+            onConfirm = { confirmingExit = false; onExit() },
+            onDismiss = { confirmingExit = false },
+        )
+    }
+}
+
+/**
+ * The not-enough-players gate shown before a game mounts: the game's gold-name [GameAppBar] (so
+ * How-to-play is reachable even here), a "have / need" count, a name field + Add button that append to
+ * the persisted roster, and the current player list. As soon as the roster reaches the game's
+ * `minPlayers`, [GameRoute] swaps this for the live game.
+ */
+@Composable
+private fun AddPlayersGate(
+    manifest: GameManifest,
+    roster: RosterStore,
+    lang: Lang,
+    onClose: () -> Unit,
+) {
+    val palette = LocalPalette.current
+    val accent = LocalAccent.current
+    val state by roster.state.collectAsState()
+    val players = state.players
+    val need = manifest.minPlayers
+    val have = players.size
+    val remaining = (need - have).coerceAtLeast(0)
+    var newName by remember { mutableStateOf("") }
+
+    val add = {
+        val n = newName.trim()
+        if (n.isNotEmpty()) {
+            roster.addPlayer(PlayerDraft(name = n))
+            newName = ""
+        }
+    }
+
+    AppScreen(scrollable = true, verticalArrangement = Arrangement.spacedBy(12.dp)) {
+        GameAppBar(manifest = manifest, lang = lang, onClose = onClose)
+
+        Spacer(Modifier.height(4.dp))
+        Text(
+            text = "$have / $need",
+            color = accent.base,
+            fontWeight = FontWeight.Bold,
+            fontSize = 40.sp,
+            textAlign = TextAlign.Center,
+            modifier = Modifier.fillMaxWidth(),
+        )
+        Text(
+            text = uiText(
+                lang,
+                "Add $remaining more player${if (remaining == 1) "" else "s"} to start",
+                "برای شروع $remaining بازیکن دیگر اضافه کن",
+            ),
+            color = palette.textMuted,
+            fontSize = 15.sp,
+            textAlign = TextAlign.Center,
+            modifier = Modifier.fillMaxWidth(),
+        )
+
+        // Add-player row: name field + Add button (disabled until a name is typed).
+        Row(
+            modifier = Modifier.fillMaxWidth().padding(top = 4.dp),
+            horizontalArrangement = Arrangement.spacedBy(8.dp),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            GateField(
+                value = newName,
+                onValueChange = { newName = it },
+                placeholder = uiText(lang, "Player name", "نام بازیکن"),
+                onSubmit = add,
+                modifier = Modifier.weight(1f),
+            )
+            AppButton(text = uiText(lang, "Add", "افزودن"), onClick = add, enabled = newName.isNotBlank())
+        }
+
+        if (players.isNotEmpty()) {
+            AppCard(modifier = Modifier.fillMaxWidth()) {
+                players.forEachIndexed { index, player ->
+                    if (index > 0) Spacer(Modifier.height(10.dp))
+                    GatePlayerRow(player)
+                }
+            }
+        }
+    }
+}
+
+/** A frosted pill name field for the [AddPlayersGate] (mirrors the Players-screen field identity). */
+@Composable
+private fun GateField(
+    value: String,
+    onValueChange: (String) -> Unit,
+    placeholder: String,
+    onSubmit: () -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    val palette = LocalPalette.current
+    val accent = LocalAccent.current
+    Box(
+        modifier = modifier.height(48.dp).glass2Surface(palette, PillShape).padding(horizontal = 16.dp),
+        contentAlignment = Alignment.CenterStart,
+    ) {
+        BasicTextField(
+            value = value,
+            onValueChange = onValueChange,
+            modifier = Modifier.fillMaxWidth(),
+            singleLine = true,
+            textStyle = TextStyle(color = palette.text, fontSize = 16.sp, fontFamily = Body),
+            cursorBrush = SolidColor(accent.base),
+            keyboardOptions = KeyboardOptions(imeAction = ImeAction.Done),
+            keyboardActions = KeyboardActions(onDone = { onSubmit() }),
+            decorationBox = { inner ->
+                if (value.isEmpty()) Text(placeholder, color = palette.textDim, fontSize = 16.sp)
+                inner()
+            },
+        )
+    }
+}
+
+/** One roster entry in the gate's list: a small accent avatar (emoji or initial) + the player name. */
+@Composable
+private fun GatePlayerRow(player: Player) {
+    val palette = LocalPalette.current
+    val ac = (player.color ?: ColorToken.TEAL).accent()
+    Row(
+        modifier = Modifier.fillMaxWidth(),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(10.dp),
+    ) {
+        Box(
+            modifier = Modifier
+                .size(34.dp)
+                .clip(CircleShape)
+                .background(Brush.linearGradient(listOf(ac.base, ac.strong)), CircleShape),
+            contentAlignment = Alignment.Center,
+        ) {
+            Text(
+                text = if (!player.emoji.isNullOrBlank()) player.emoji!! else player.name.take(1).uppercase().ifEmpty { "?" },
+                color = ac.onAccent,
+                fontWeight = FontWeight.Bold,
+                fontSize = 15.sp,
+            )
+        }
+        Text(text = player.name, color = palette.text, fontWeight = FontWeight.SemiBold, fontSize = 16.sp)
+    }
 }
 
 /** Tasteful detail for a catalog game whose native port hasn't landed yet. */

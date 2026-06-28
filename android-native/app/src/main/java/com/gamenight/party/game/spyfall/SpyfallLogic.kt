@@ -66,6 +66,7 @@ sealed interface SpyfallAction {
     data class SpyGuess(val spyId: String, val locationId: String) : SpyfallAction
     data object SkipSpyGuess : SpyfallAction
     data class NextRound(val seed: Int) : SpyfallAction
+    data object EndGame : SpyfallAction
 }
 
 private const val POINTS_PER_NONSPY_ON_CATCH = 1
@@ -274,6 +275,13 @@ fun reducer(state: SpyfallState, action: SpyfallAction): SpyfallState {
                 )
                 s.copy(phase = SpyfallPhase.REVEAL, revealCursor = 0, round = round)
             }
+        }
+        is SpyfallAction.EndGame -> {
+            // End the match now and jump to results. `totals` already holds every resolved round's
+            // points, so the standings shown are the running standings so far (the in-progress round,
+            // if any, simply doesn't score — mirrors ToD's EndGame, which doesn't resolve the open turn).
+            if (s.phase == SpyfallPhase.MATCH_END || s.phase == SpyfallPhase.ERROR) s
+            else s.copy(phase = SpyfallPhase.MATCH_END, finished = true)
         }
     }
 }

@@ -2,6 +2,8 @@ package com.gamenight.party.game.mafia
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -32,12 +34,12 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.gamenight.party.model.ColorToken
+import com.gamenight.party.model.GameManifest
 import com.gamenight.party.model.Lang
 import com.gamenight.party.model.LocalizedString
 import com.gamenight.party.model.PlayerSeat
 import com.gamenight.party.sound.Haptics
 import com.gamenight.party.sound.SoundId
-import com.gamenight.party.ui.components.AppBar
 import com.gamenight.party.ui.components.AppButton
 import com.gamenight.party.ui.components.AppCard
 import com.gamenight.party.ui.components.AppScreen
@@ -45,6 +47,7 @@ import com.gamenight.party.ui.components.AppToggle
 import com.gamenight.party.ui.components.ButtonSize
 import com.gamenight.party.ui.components.ButtonVariant
 import com.gamenight.party.ui.components.Curtain
+import com.gamenight.party.ui.components.GameAppBar
 import com.gamenight.party.ui.components.PillShape
 import com.gamenight.party.ui.components.SegmentOption
 import com.gamenight.party.ui.components.SegmentedControl
@@ -52,6 +55,8 @@ import com.gamenight.party.ui.components.SelectChip
 import com.gamenight.party.ui.components.Stepper
 import com.gamenight.party.ui.components.screenEntrance
 import com.gamenight.party.ui.components.WinnerBanner
+import com.gamenight.party.ui.screens.faDigits
+import com.gamenight.party.ui.screens.fmtNum
 import com.gamenight.party.ui.theme.Accents
 import com.gamenight.party.ui.theme.LocalAccent
 import com.gamenight.party.ui.theme.LocalPalette
@@ -108,6 +113,7 @@ private val STEPPER_ROLES: List<RoleId> = CORE_ROLES + EXTRA_ROLES
 fun MafiaSetupScreen(
     players: List<PlayerSeat>,
     lang: Lang,
+    manifest: GameManifest,
     onExit: () -> Unit,
     onStart: (MafiaConfig) -> Unit,
 ) = MafiaAccent {
@@ -144,9 +150,17 @@ fun MafiaSetupScreen(
         counts = counts.toMutableMap().apply { this[r] = v }
     }
 
-    AppScreen(scrollable = true, verticalArrangement = Arrangement.spacedBy(20.dp)) {
-        AppBar(title = tr(lang, "Mafia", "مافیا"), onBack = onExit)
+    AppScreen {
+        GameAppBar(manifest = manifest, lang = lang, onClose = onExit)
 
+        // Options scroll above the pinned Start button, so Start is always reachable.
+        Column(
+            modifier = Modifier
+                .weight(1f)
+                .fillMaxWidth()
+                .verticalScroll(rememberScrollState()),
+            verticalArrangement = Arrangement.spacedBy(20.dp),
+        ) {
         // Players + role-guide entry
         Row(
             modifier = Modifier.fillMaxWidth(),
@@ -154,7 +168,7 @@ fun MafiaSetupScreen(
             horizontalArrangement = Arrangement.SpaceBetween,
         ) {
             Text(
-                text = tr(lang, "Players", "بازیکنان") + " · $n",
+                text = tr(lang, "Players", "بازیکنان") + " · " + fmtNum(n, lang),
                 color = palette.textMuted,
                 fontWeight = FontWeight.SemiBold,
                 fontSize = 14.sp,
@@ -202,7 +216,11 @@ fun MafiaSetupScreen(
                 size = ButtonSize.SM,
             )
             Text(
-                text = tr(lang, "Citizens: $citizen", "شهروندان: $citizen"),
+                text = tr(
+                    lang,
+                    "Citizens: ${fmtNum(citizen, lang)}",
+                    "شهروندان: ${fmtNum(citizen, lang)}",
+                ),
                 color = palette.textMuted,
                 fontSize = 14.sp,
             )
@@ -237,7 +255,11 @@ fun MafiaSetupScreen(
             if (!showSpecial) {
                 Text(
                     text = if (extraTotal > 0) {
-                        tr(lang, "$extraTotal added", "$extraTotal اضافه شد")
+                        tr(
+                            lang,
+                            "${fmtNum(extraTotal, lang)} added",
+                            "${fmtNum(extraTotal, lang)} اضافه شد",
+                        )
                     } else {
                         tr(
                             lang,
@@ -298,10 +320,10 @@ fun MafiaSetupScreen(
                     value = opts.discussionSeconds,
                     onChange = { opts = opts.copy(discussionSeconds = it) },
                     options = listOf(
-                        SegmentOption(60, "1m"),
-                        SegmentOption(120, "2m"),
-                        SegmentOption(180, "3m"),
-                        SegmentOption(300, "5m"),
+                        SegmentOption(60, faDigits("1m", lang)),
+                        SegmentOption(120, faDigits("2m", lang)),
+                        SegmentOption(180, faDigits("3m", lang)),
+                        SegmentOption(300, faDigits("5m", lang)),
                     ),
                     modifier = Modifier.fillMaxWidth(),
                 )
@@ -364,22 +386,29 @@ fun MafiaSetupScreen(
             }
         }
 
-        if (errors != null) {
-            Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
+        } // end options scroll
+
+        // Pinned bottom: validation errors + the crown Start action, always reachable.
+        Column(
+            modifier = Modifier.fillMaxWidth().padding(top = 12.dp),
+            verticalArrangement = Arrangement.spacedBy(8.dp),
+        ) {
+            if (errors != null) {
                 errors.forEach { e ->
                     Text(text = e.resolve(lang), color = Accents.RoseStrong, fontSize = 14.sp)
                 }
             }
+            // A distinct GOLD accent makes Start stand out from the rose option controls above.
+            CompositionLocalProvider(LocalAccent provides ColorToken.GOLD.accent()) {
+                AppButton(
+                    text = tr(lang, "Start", "شروع"),
+                    onClick = { onStart(config) },
+                    size = ButtonSize.LG,
+                    fullWidth = true,
+                    enabled = errors == null,
+                )
+            }
         }
-
-        AppButton(
-            text = tr(lang, "Start", "شروع"),
-            onClick = { onStart(config) },
-            size = ButtonSize.LG,
-            fullWidth = true,
-            enabled = errors == null,
-        )
-        Spacer(Modifier.padding(bottom = 8.dp))
     }
 }
 
@@ -439,6 +468,7 @@ private fun RoleGuide(lang: Lang, roleIds: List<RoleId>) {
 fun MafiaPlayScreen(
     state: MafiaState,
     lang: Lang,
+    manifest: GameManifest,
     dispatch: (MafiaAction) -> Unit,
     onExit: () -> Unit,
     onRematch: () -> Unit,
@@ -453,9 +483,19 @@ fun MafiaPlayScreen(
     var voteCursor by remember(s.phase) { mutableStateOf(0) }
     var gateOpen by remember(s.phase, s.dealCursor, voteCursor) { mutableStateOf(false) }
 
+    // Shared "End game" control for the AppBar's trailing slot during active play (mirrors ToD).
+    val endGameRight: @Composable () -> Unit = {
+        Text(
+            text = LocalizedString("End game", "پایان بازی").resolve(lang),
+            color = palette.textMuted,
+            fontSize = 14.sp,
+            modifier = Modifier.clickable { dispatch(MafiaAction.EndGame) },
+        )
+    }
+
     when (s.phase) {
         MafiaPhase.ERROR -> AppScreen {
-            AppBar(title = tr(lang, "Mafia", "مافیا"), onBack = onExit)
+            GameAppBar(manifest = manifest, lang = lang, onClose = onExit)
             Column(
                 modifier = Modifier.weight(1f).fillMaxWidth(),
                 verticalArrangement = Arrangement.spacedBy(16.dp, Alignment.CenterVertically),
@@ -475,12 +515,12 @@ fun MafiaPlayScreen(
             val player = s.players.firstOrNull { it.id == pid }
             val role = player?.let { ROLES[it.roleId] }
             AppScreen {
-                AppBar(onBack = onExit)
+                GameAppBar(manifest = manifest, lang = lang, onClose = onExit)
                 Text(
                     text = tr(
                         lang,
-                        "Dealing ${s.dealCursor + 1} / ${s.dealOrder.size}",
-                        "پخش نقش ${s.dealCursor + 1} / ${s.dealOrder.size}",
+                        "Dealing ${fmtNum(s.dealCursor + 1, lang)} / ${fmtNum(s.dealOrder.size, lang)}",
+                        "پخش نقش ${fmtNum(s.dealCursor + 1, lang)} / ${fmtNum(s.dealOrder.size, lang)}",
                     ),
                     modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp),
                     color = palette.textMuted,
@@ -536,7 +576,7 @@ fun MafiaPlayScreen(
         MafiaPhase.NIGHT -> {
             val step = currentStep(s)
             if (step == null) {
-                AppScreen { AppBar(onBack = onExit) }
+                AppScreen { GameAppBar(manifest = manifest, lang = lang, onClose = onExit) }
             } else {
                 val role = ROLES[step.roleId]
                 val recorded = recordedTarget(s, step.key)
@@ -546,7 +586,7 @@ fun MafiaPlayScreen(
                 val actorBlocked = escortTarget != null && escortTarget == step.actorIds.firstOrNull()
 
                 AppScreen {
-                    AppBar(onBack = onExit)
+                    GameAppBar(manifest = manifest, lang = lang, onClose = onExit, trailing = endGameRight)
                     Column(modifier = Modifier.weight(1f).fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(12.dp)) {
                         AppCard(modifier = Modifier.fillMaxWidth()) {
                             Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.fillMaxWidth()) {
@@ -684,7 +724,7 @@ fun MafiaPlayScreen(
                     haptics.heavy()
                 }
             }
-            AppBar(onBack = onExit)
+            GameAppBar(manifest = manifest, lang = lang, onClose = onExit, trailing = endGameRight)
             Column(
                 modifier = Modifier.weight(1f).fillMaxWidth(),
                 verticalArrangement = Arrangement.spacedBy(16.dp, Alignment.CenterVertically),
@@ -719,7 +759,7 @@ fun MafiaPlayScreen(
         }
 
         MafiaPhase.DAY -> AppScreen(horizontalAlignment = Alignment.CenterHorizontally) {
-            AppBar(onBack = onExit)
+            GameAppBar(manifest = manifest, lang = lang, onClose = onExit, trailing = endGameRight)
             Column(
                 modifier = Modifier.weight(1f).fillMaxWidth(),
                 verticalArrangement = Arrangement.spacedBy(16.dp),
@@ -761,13 +801,13 @@ fun MafiaPlayScreen(
         }
 
         MafiaPhase.NOMINATE -> AppScreen {
-            AppBar(onBack = onExit)
+            GameAppBar(manifest = manifest, lang = lang, onClose = onExit, trailing = endGameRight)
             Column(modifier = Modifier.weight(1f).fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(12.dp)) {
                 Text(
                     text = tr(
                         lang,
-                        "Tap to nominate · ${s.options.nominationsRequired} needed for a vote",
-                        "برای نامزدی بزن · ${s.options.nominationsRequired} برای رأی لازم است",
+                        "Tap to nominate · ${fmtNum(s.options.nominationsRequired, lang)} needed for a vote",
+                        "برای نامزدی بزن · ${fmtNum(s.options.nominationsRequired, lang)} برای رأی لازم است",
                     ),
                     modifier = Modifier.fillMaxWidth(),
                     color = palette.textMuted,
@@ -784,7 +824,7 @@ fun MafiaPlayScreen(
                         SelectChip(
                             selected = s.ballot.contains(p.id),
                             onClick = { dispatch(MafiaAction.Nominate(p.id)) },
-                            text = name(p.id) + if (count > 0) " ($count)" else "",
+                            text = name(p.id) + if (count > 0) " (${fmtNum(count, lang)})" else "",
                         )
                     }
                 }
@@ -811,7 +851,7 @@ fun MafiaPlayScreen(
         MafiaPhase.VOTE -> {
             val voter = alive.getOrNull(voteCursor)
             AppScreen {
-                AppBar(onBack = onExit)
+                GameAppBar(manifest = manifest, lang = lang, onClose = onExit, trailing = endGameRight)
                 if (voteCursor >= alive.size || voter == null) {
                     Column(
                         modifier = Modifier.weight(1f).fillMaxWidth(),
@@ -871,7 +911,7 @@ fun MafiaPlayScreen(
         }
 
         MafiaPhase.VOTE_RESULT -> AppScreen {
-            AppBar(onBack = onExit)
+            GameAppBar(manifest = manifest, lang = lang, onClose = onExit, trailing = endGameRight)
             Column(
                 modifier = Modifier.weight(1f).fillMaxWidth(),
                 verticalArrangement = Arrangement.spacedBy(16.dp, Alignment.CenterVertically),
@@ -912,6 +952,7 @@ fun MafiaPlayScreen(
 fun MafiaResultsScreen(
     state: MafiaState,
     lang: Lang,
+    manifest: GameManifest,
     onExit: () -> Unit,
     onRematch: () -> Unit,
     sound: (SoundId) -> Unit = {},
@@ -934,7 +975,7 @@ fun MafiaResultsScreen(
     }
 
     AppScreen(scrollable = true, verticalArrangement = Arrangement.spacedBy(16.dp)) {
-        AppBar(title = tr(lang, "Results", "نتایج"), onBack = onExit)
+        GameAppBar(manifest = manifest, lang = lang, onClose = onExit)
         WinnerBanner(title = title, names = emptyList())
         Column(modifier = Modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(8.dp)) {
             s.players.forEach { p ->

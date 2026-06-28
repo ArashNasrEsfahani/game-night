@@ -65,6 +65,9 @@ sealed interface MinesweeperAction {
     /** [seed] is only consumed on the first reveal (it seeds the mine layout). */
     data class Reveal(val index: Int, val seed: Int) : MinesweeperAction
     object ClearFlash : MinesweeperAction
+
+    /** End the match early and show the results (winner-so-far by mines found). */
+    object EndGame : MinesweeperAction
 }
 
 // Distinct, vivid colours so each player's turn (background) and found mines read as their own.
@@ -283,6 +286,12 @@ fun reducer(state: MinesweeperState, action: MinesweeperAction): MinesweeperStat
         }
 
         MinesweeperAction.ClearFlash -> if (state.flash == null) state else state.copy(flash = null)
+
+        // End the match early: finalise standings from the mines found so far and reveal the board.
+        // Winner-so-far leads the score (ties shared); winReason stays NONE since it wasn't cleared.
+        MinesweeperAction.EndGame ->
+            if (state.phase != MinePhase.PLAYING) state
+            else finish(state, WinReason.NONE, winnersByScore(state.seats))
     }
 }
 

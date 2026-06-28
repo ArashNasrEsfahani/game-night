@@ -7,6 +7,8 @@ import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -17,18 +19,20 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.gamenight.party.model.GameManifest
 import com.gamenight.party.model.Lang
 import com.gamenight.party.model.PlayerSeat
-import com.gamenight.party.ui.components.AppBar
 import com.gamenight.party.ui.components.AppButton
 import com.gamenight.party.ui.components.AppScreen
 import com.gamenight.party.ui.components.AppToggle
 import com.gamenight.party.ui.components.ButtonSize
 import com.gamenight.party.ui.components.ButtonVariant
+import com.gamenight.party.ui.components.GameAppBar
 import com.gamenight.party.ui.components.SegmentedControl
 import com.gamenight.party.ui.components.SegmentOption
 import com.gamenight.party.ui.components.SelectChip
 import com.gamenight.party.ui.components.Stepper
+import com.gamenight.party.ui.screens.fmtNum
 import com.gamenight.party.ui.theme.LocalPalette
 
 /**
@@ -42,9 +46,10 @@ import com.gamenight.party.ui.theme.LocalPalette
 fun TruthOrDareSetupScreen(
     players: List<PlayerSeat>,
     lang: Lang,
+    manifest: GameManifest,
     content: ToDContent,
     onStart: (ToDState) -> Unit,
-    onExit: () -> Unit,
+    onClose: () -> Unit,
 ) {
     val palette = LocalPalette.current
     var opts by remember { mutableStateOf(DEFAULT_OPTIONS) }
@@ -55,12 +60,16 @@ fun TruthOrDareSetupScreen(
     val config = ToDConfig(seats, opts, lang)
     val errors = validateConfig(content, config)
 
-    AppScreen(scrollable = true) {
-        AppBar(title = ToDStr.title.resolve(lang), onBack = onExit)
+    // Non-scrolling scaffold: options scroll in a weighted middle, the Start CTA is pinned at the foot.
+    AppScreen {
+        GameAppBar(manifest = manifest, lang = lang, onClose = onClose)
 
-        Column(verticalArrangement = Arrangement.spacedBy(20.dp), modifier = Modifier.fillMaxWidth()) {
+        Column(
+            verticalArrangement = Arrangement.spacedBy(20.dp),
+            modifier = Modifier.weight(1f).fillMaxWidth().verticalScroll(rememberScrollState()),
+        ) {
             // ── Players (always visible) ──
-            SectionLabel("${ToDStr.players.resolve(lang)} · ${seats.size}")
+            SectionLabel("${ToDStr.players.resolve(lang)} · ${fmtNum(seats.size, lang)}")
             FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 players.forEach { p ->
                     SelectChip(
@@ -191,14 +200,21 @@ fun TruthOrDareSetupScreen(
                     )
                 }
             }
+        }
 
-            // ── Errors + Start ──
+        // ── Errors + Start (pinned to the foot so it's always reachable) ──
+        Column(
+            verticalArrangement = Arrangement.spacedBy(12.dp),
+            modifier = Modifier.fillMaxWidth(),
+        ) {
             errors.forEach { e ->
                 Text(text = e.resolve(lang), color = palette.text, fontSize = 14.sp)
             }
+            // Distinct PRIMARY accent gradient (+ glow) so the CTA stands out from the option controls.
             AppButton(
                 text = ToDStr.start.resolve(lang),
                 onClick = { onStart(createInitialState(content, config, freshSeed())) },
+                variant = ButtonVariant.PRIMARY,
                 size = ButtonSize.LG,
                 fullWidth = true,
                 enabled = errors.isEmpty(),

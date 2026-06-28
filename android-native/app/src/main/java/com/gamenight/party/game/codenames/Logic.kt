@@ -101,6 +101,7 @@ sealed interface CodenamesAction {
     data object StopGuessing : CodenamesAction
     data object TimerExpired : CodenamesAction
     data object AdvanceTurn : CodenamesAction
+    data object EndGame : CodenamesAction
 }
 
 // ──────────────────────────── Helpers ────────────────────────────
@@ -360,6 +361,27 @@ fun reducer(state: CodenamesState, action: CodenamesAction): CodenamesState {
                 lastReveal = null,
                 turnEndReason = null,
                 wrongGuessesThisTurn = 0,
+            )
+        }
+
+        CodenamesAction.EndGame -> {
+            // End the match now and show the results with the standings so far: the team closest to
+            // clearing its words (fewer remaining) is the winner; an exact tie has no winner.
+            // winReason stays null so the Results screen knows this was a manual early end.
+            if (s.finished || s.phase == CodenamesPhase.ERROR) return s
+            val a = s.remaining[TeamId.TEAM_A] ?: 0
+            val b = s.remaining[TeamId.TEAM_B] ?: 0
+            val winner: TeamId? = when {
+                a < b -> TeamId.TEAM_A
+                b < a -> TeamId.TEAM_B
+                else -> null
+            }
+            s.copy(
+                phase = CodenamesPhase.GAME_OVER,
+                finished = true,
+                winner = winner,
+                loser = winner?.let { other(it) },
+                winReason = null,
             )
         }
     }

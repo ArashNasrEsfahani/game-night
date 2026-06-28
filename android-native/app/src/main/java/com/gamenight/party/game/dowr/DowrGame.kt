@@ -35,16 +35,18 @@ object DowrGame : GameEntry {
                 players = players,
                 content = content,
                 lang = host.lang,
-                onExit = host::exit,
+                manifest = host.manifest,
+                onClose = host::requestExit,
                 onStart = { config -> state = createInitialState(config, Random.nextInt()) },
             )
 
             !s.finished -> DowrPlayScreen(
                 state = s,
                 lang = host.lang,
+                manifest = host.manifest,
                 nextSeed = { Random.nextInt() },
                 dispatch = { action -> state = state?.let { reducer(it, action) } },
-                onExit = host::exit,
+                onClose = host::requestExit,
                 sound = host.sound,
                 haptics = host.haptics,
             )
@@ -52,7 +54,9 @@ object DowrGame : GameEntry {
             else -> DowrResultsScreen(
                 state = s,
                 lang = host.lang,
+                manifest = host.manifest,
                 onPlayAgain = { state = null },
+                onClose = host::requestExit,
                 onExit = host::exit,
                 sound = host.sound,
                 haptics = host.haptics,

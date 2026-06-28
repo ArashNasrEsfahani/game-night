@@ -2,6 +2,7 @@ package com.gamenight.party.game.codenames
 
 import com.gamenight.party.model.Lang
 import com.gamenight.party.model.LocalizedString
+import com.gamenight.party.ui.screens.fmtNum
 
 /**
  * Bilingual UI chrome for the Codenames screens — the native mirror of the `cn.*` / `common.*` /
@@ -47,6 +48,8 @@ internal object CnStr {
     val rematch = LocalizedString("New board", "صفحهٔ جدید")
     val resultsTitle = LocalizedString("Results", "نتایج")
     val home = LocalizedString("Home", "خانه")
+    val tie = LocalizedString("It's a tie!", "مساوی شد!")
+    val endGame = LocalizedString("End game", "پایان بازی")
 
     /** Quarter-turn button labels (src `cn.orient.0..3`). */
     val orient: List<LocalizedString> = listOf(
@@ -74,7 +77,8 @@ internal object CnStr {
         if (lang == Lang.FA) "فقط $name باید ببیند" else "Only $name should look"
 
     fun clueEcho(count: Int, left: Int, lang: Lang): String =
-        if (lang == Lang.FA) "سرنخ: $count · $left حدس باقی" else "Clue: $count · $left guesses left"
+        if (lang == Lang.FA) "سرنخ: ${fmtNum(count, lang)} · ${fmtNum(left, lang)} حدس باقی"
+        else "Clue: $count · $left guesses left"
 
     fun nextTeam(team: String, lang: Lang): String =
         if (lang == Lang.FA) "بعدی: $team" else "Next: $team"

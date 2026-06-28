@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -127,9 +128,16 @@ private fun Hero(lang: Lang, palette: GamePalette) {
     }
 }
 
+/** Every game tile is exactly this tall so the 11-card grid is a perfectly even matrix; the niche is
+ *  fixed and the body fills the remainder, with text clamped + ellipsized to keep heights identical. */
+private val CardHeight = 252.dp
+private val NicheHeight = 104.dp
+
 /**
  * One game tile: an opaque glassy card with a lit accent niche holding the game's [Emblem], and a
- * body with the localized title, Persian name and tagline. Opaque so it pops over the disco bg.
+ * fixed-height body with the localized title, Persian name, tagline and a bottom-pinned meta line
+ * (players · minutes, Persian digits in FA). Opaque so it pops over the disco bg, and a uniform
+ * [CardHeight] so every card on the grid matches exactly regardless of how its text wraps.
  */
 @Composable
 private fun GameCard(game: GameManifest, lang: Lang, palette: GamePalette, onClick: () -> Unit) {
@@ -147,6 +155,7 @@ private fun GameCard(game: GameManifest, lang: Lang, palette: GamePalette, onCli
     Column(
         modifier = Modifier
             .fillMaxWidth()
+            .height(CardHeight)
             .clip(shape)
             .background(palette.surface)
             .border(1.dp, palette.border, shape)
@@ -155,7 +164,7 @@ private fun GameCard(game: GameManifest, lang: Lang, palette: GamePalette, onCli
         Box(
             modifier = Modifier
                 .fillMaxWidth()
-                .height(104.dp)
+                .height(NicheHeight)
                 .background(Brush.verticalGradient(listOf(nicheTop, lapis2)))
                 .drawBehind {
                     drawRect(
@@ -171,13 +180,19 @@ private fun GameCard(game: GameManifest, lang: Lang, palette: GamePalette, onCli
             Emblem(gameId = game.id, modifier = Modifier.size(64.dp))
         }
 
-        Column(modifier = Modifier.padding(start = 14.dp, end = 14.dp, top = 10.dp, bottom = 14.dp)) {
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .weight(1f)
+                .padding(start = 14.dp, end = 14.dp, top = 10.dp, bottom = 12.dp),
+        ) {
             Text(
                 text = title,
                 color = palette.text,
                 fontFamily = Display,
                 fontWeight = FontWeight.Bold,
                 fontSize = 18.sp,
+                lineHeight = 20.sp,
                 maxLines = 2,
                 overflow = TextOverflow.Ellipsis,
             )
@@ -195,13 +210,36 @@ private fun GameCard(game: GameManifest, lang: Lang, palette: GamePalette, onCli
                 text = game.tagline.resolve(lang),
                 color = palette.textMuted,
                 fontSize = 12.sp,
+                lineHeight = 15.sp,
                 maxLines = 2,
                 overflow = TextOverflow.Ellipsis,
                 modifier = Modifier.padding(top = 2.dp),
             )
+            // Push the meta line to the bottom edge so it lines up across every card.
+            Spacer(modifier = Modifier.weight(1f))
+            Text(
+                text = metaLine(game, lang),
+                color = if (palette.isDark) accent.base else accent.strong,
+                fontWeight = FontWeight.SemiBold,
+                fontSize = 11.sp,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+                modifier = Modifier.padding(top = 4.dp),
+            )
         }
     }
 }
+
+/** "3–8 players · 10–20 min" — uses Persian digits + units when [lang] is FA. */
+private fun metaLine(game: GameManifest, lang: Lang): String {
+    val players = numRange(game.minPlayers, game.maxPlayers, lang)
+    val mins = numRange(game.estimatedMinutes.first, game.estimatedMinutes.last, lang)
+    return uiText(lang, "$players players · $mins min", "$players بازیکن · $mins دقیقه")
+}
+
+/** A single number, or an "a–b" range, with each value localized via [fmtNum]. */
+private fun numRange(min: Int, max: Int, lang: Lang): String =
+    if (min >= max) fmtNum(min, lang) else "${fmtNum(min, lang)}–${fmtNum(max, lang)}"
 
 /** Gold-foil gradient brush — mirrors `.dp-foil` (brighter at night, deeper by day). */
 private fun foilBrush(isDark: Boolean): Brush =

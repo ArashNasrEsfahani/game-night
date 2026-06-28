@@ -113,6 +113,7 @@ sealed interface WyrAction {
     data object Reveal : WyrAction
     data object Next : WyrAction
     data object Skip : WyrAction
+    data object EndGame : WyrAction
 }
 
 // ──────────────────────────── Scoring helpers ────────────────────────────
@@ -280,6 +281,23 @@ fun reducer(state: WyrState, action: WyrAction): WyrState {
                 scores = scores,
                 phase = if (done) WyrPhase.RESULTS else WyrPhase.PROMPT,
                 finished = done,
+            )
+        }
+
+        is WyrAction.EndGame -> {
+            if (s.finished) return s
+            // End the match now and show standings so far. Finalize scores from the COMPLETED rounds
+            // only (mirrors Skip's rollback of the in-progress round) so the Results view — which reads
+            // scores for standings/winners and history for side wins — stays internally consistent.
+            val scores = recomputeScores(s.playerIds, s.options, s.history)
+            s.copy(
+                choices = emptyMap(),
+                quickCounts = null,
+                handoffIndex = 0,
+                current = null,
+                phase = WyrPhase.RESULTS,
+                scores = scores,
+                finished = true,
             )
         }
     }

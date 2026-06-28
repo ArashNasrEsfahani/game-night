@@ -39,7 +39,8 @@ object MafiaGame : GameEntry {
             MafiaSetupScreen(
                 players = players,
                 lang = host.lang,
-                onExit = host::exit,
+                manifest = host.manifest,
+                onExit = host::requestExit,
                 onStart = { config = it },
             )
             return
@@ -54,6 +55,7 @@ object MafiaGame : GameEntry {
             MafiaResultsScreen(
                 state = state,
                 lang = host.lang,
+                manifest = host.manifest,
                 onExit = host::exit,
                 onRematch = { matchNonce++ },
                 sound = { host.sound.play(it) },
@@ -63,8 +65,9 @@ object MafiaGame : GameEntry {
             MafiaPlayScreen(
                 state = state,
                 lang = host.lang,
+                manifest = host.manifest,
                 dispatch = dispatch,
-                onExit = host::exit,
+                onExit = host::requestExit,
                 onRematch = { matchNonce++ },
                 sound = { host.sound.play(it) },
                 haptics = host.haptics,

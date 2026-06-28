@@ -40,7 +40,8 @@ object NeverHaveIEverGame : GameEntry {
                 players = players,
                 content = content,
                 lang = host.lang,
-                onExit = host::exit,
+                manifest = host.manifest,
+                onClose = host::requestExit,
                 onStart = { config = it },
             )
             return
@@ -57,6 +58,9 @@ object NeverHaveIEverGame : GameEntry {
                 lang = host.lang,
                 sound = host.sound,
                 haptics = host.haptics,
+                manifest = host.manifest,
+                // Match is over — the chrome X and Home both go straight home (nothing left to confirm).
+                onClose = host::exit,
                 onExit = host::exit,
                 onRematch = { matchNonce++ },
             )
@@ -67,8 +71,9 @@ object NeverHaveIEverGame : GameEntry {
                 lang = host.lang,
                 sound = host.sound,
                 haptics = host.haptics,
+                manifest = host.manifest,
                 dispatch = dispatch,
-                onExit = host::exit,
+                onClose = host::requestExit,
                 onRematch = { matchNonce++ },
             )
         }

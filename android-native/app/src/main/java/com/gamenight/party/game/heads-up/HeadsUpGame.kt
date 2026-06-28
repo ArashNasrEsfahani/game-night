@@ -48,7 +48,8 @@ object HeadsUpGame : GameEntry {
                     players = players,
                     content = host.content,
                     lang = host.lang,
-                    onExit = host::exit,
+                    manifest = host.manifest,
+                    onClose = host::requestExit,
                     onStart = { c ->
                         config = c
                         state = HeadsUpLogic.createInitialState(c, freshSeed())
@@ -60,8 +61,10 @@ object HeadsUpGame : GameEntry {
                     content = host.content,
                     lang = host.lang,
                     state = st,
+                    manifest = host.manifest,
                     onPlayAgain = { state = HeadsUpLogic.createInitialState(cfg, freshSeed()) },
                     onExit = host::exit,
+                    onClose = host::requestExit,
                     sound = host.sound,
                     haptics = host.haptics,
                 )
@@ -71,8 +74,10 @@ object HeadsUpGame : GameEntry {
                     content = host.content,
                     lang = host.lang,
                     state = st,
+                    manifest = host.manifest,
                     dispatch = { a -> state = state?.let { HeadsUpLogic.reducer(it, a) } },
                     onExit = host::exit,
+                    onClose = host::requestExit,
                     sound = host.sound,
                     haptics = host.haptics,
                 )

@@ -3,8 +3,12 @@ package com.gamenight.party.game.minesweeper
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.getValue
@@ -18,16 +22,19 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.material3.Text
 import com.gamenight.party.model.ColorToken
+import com.gamenight.party.model.GameManifest
 import com.gamenight.party.model.Lang
 import com.gamenight.party.model.PlayerSeat
-import com.gamenight.party.ui.components.AppBar
 import com.gamenight.party.ui.components.AppButton
 import com.gamenight.party.ui.components.AppScreen
 import com.gamenight.party.ui.components.ButtonSize
+import com.gamenight.party.ui.components.ButtonVariant
+import com.gamenight.party.ui.components.GameAppBar
 import com.gamenight.party.ui.components.SegmentOption
 import com.gamenight.party.ui.components.SegmentedControl
 import com.gamenight.party.ui.components.SelectChip
 import com.gamenight.party.ui.components.Stepper
+import com.gamenight.party.ui.screens.fmtNum
 import com.gamenight.party.ui.theme.Accents
 import com.gamenight.party.ui.theme.LocalPalette
 import com.gamenight.party.ui.theme.accent
@@ -41,7 +48,8 @@ import com.gamenight.party.ui.theme.accent
 fun MinesweeperSetupScreen(
     roster: List<PlayerSeat>,
     lang: Lang,
-    onExit: () -> Unit,
+    manifest: GameManifest,
+    onClose: () -> Unit,
     onStart: (MinesweeperConfig) -> Unit,
 ) {
     CompositionLocalProvider(com.gamenight.party.ui.theme.LocalAccent provides ColorToken.TANGERINE.accent()) {
@@ -70,17 +78,21 @@ fun MinesweeperSetupScreen(
         val seats: List<PlayerSeat> = roster.filter { selected.contains(it.id) }
         val errors = validateMineConfig(seats, opts)
 
-        AppScreen(scrollable = true) {
-            AppBar(title = loc(lang, "Mine Hunt", "مین‌یاب"), onBack = onExit)
+        AppScreen {
+            GameAppBar(manifest = manifest, lang = lang, onClose = onClose)
 
+            // The options scroll; the Start CTA below stays pinned and always reachable.
             Column(
-                modifier = Modifier.fillMaxWidth().padding(bottom = 24.dp),
+                modifier = Modifier
+                    .weight(1f)
+                    .fillMaxWidth()
+                    .verticalScroll(rememberScrollState()),
                 verticalArrangement = Arrangement.spacedBy(20.dp),
             ) {
                 // ── Players ──
                 Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
                     Text(
-                        text = "${loc(lang, "Players", "بازیکنان")} · ${seats.size}",
+                        text = "${loc(lang, "Players", "بازیکنان")} · ${fmtNum(seats.size, lang)}",
                         color = palette.textMuted,
                         fontWeight = FontWeight.SemiBold,
                         fontSize = 14.sp,
@@ -144,8 +156,8 @@ fun MinesweeperSetupScreen(
                     Text(
                         text = loc(
                             lang,
-                            "≈ ${opts.mines} mines to find on a ${opts.cols}×${opts.rows} board",
-                            "حدود ${opts.mines} مین برای پیدا کردن روی صفحهٔ ${opts.cols}×${opts.rows}",
+                            "≈ ${fmtNum(opts.mines, lang)} mines to find on a ${fmtNum(opts.cols, lang)}×${fmtNum(opts.rows, lang)} board",
+                            "حدود ${fmtNum(opts.mines, lang)} مین برای پیدا کردن روی صفحهٔ ${fmtNum(opts.cols, lang)}×${fmtNum(opts.rows, lang)}",
                         ),
                         color = palette.textMuted,
                         fontSize = 12.sp,
@@ -161,6 +173,12 @@ fun MinesweeperSetupScreen(
                     }
                 }
 
+            }
+
+            // Pinned, full-width CTA. A distinct GOLD accent (overriding the tangerine game accent the
+            // option controls use) makes Start stand out from every other control on the page.
+            Spacer(Modifier.height(12.dp))
+            CompositionLocalProvider(com.gamenight.party.ui.theme.LocalAccent provides ColorToken.GOLD.accent()) {
                 AppButton(
                     text = loc(lang, "Start", "شروع"),
                     onClick = {

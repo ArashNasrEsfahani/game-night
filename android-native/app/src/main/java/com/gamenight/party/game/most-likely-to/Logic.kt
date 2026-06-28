@@ -111,6 +111,7 @@ sealed interface MltAction {
     data class SubmitVotes(val tally: Map<String, Int>? = null, val seed: Int) : MltAction
     data object NextRound : MltAction
     data object SkipPrompt : MltAction
+    data object EndGame : MltAction
 }
 
 // ──────────────────────────── Initial state ────────────────────────────
@@ -266,6 +267,17 @@ fun reducer(state: MltState, action: MltAction): MltState {
             val ordered = s.orderedPromptIds.toMutableList()
             ordered[s.currentRound] = s.pool[s.poolNextIndex]
             s.copy(orderedPromptIds = ordered, poolNextIndex = s.poolNextIndex + 1)
+        }
+
+        is MltAction.EndGame -> {
+            // End the match now and lock in the standings from the rounds played so far.
+            if (s.phase == MltPhase.FINISHED || s.phase == MltPhase.ERROR) return s
+            s.copy(
+                phase = MltPhase.FINISHED,
+                finished = true,
+                pendingVotes = emptyMap(),
+                activeVoterIndex = null,
+            )
         }
     }
 }

@@ -36,10 +36,10 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.gamenight.party.game.Sfx
+import com.gamenight.party.model.GameManifest
 import com.gamenight.party.model.Lang
 import com.gamenight.party.sound.Haptics
 import com.gamenight.party.sound.SoundId
-import com.gamenight.party.ui.components.AppBar
 import com.gamenight.party.ui.components.AppButton
 import com.gamenight.party.ui.components.AppCard
 import com.gamenight.party.ui.components.AppScreen
@@ -47,6 +47,7 @@ import com.gamenight.party.ui.components.ButtonSize
 import com.gamenight.party.ui.components.ButtonVariant
 import com.gamenight.party.ui.components.Chip
 import com.gamenight.party.ui.components.Curtain
+import com.gamenight.party.ui.components.GameAppBar
 import com.gamenight.party.ui.theme.LocalAccent
 import com.gamenight.party.ui.theme.LocalPalette
 import kotlinx.coroutines.delay
@@ -61,9 +62,11 @@ import kotlinx.coroutines.delay
 fun TruthOrDarePlayScreen(
     state: ToDState,
     lang: Lang,
+    manifest: GameManifest,
     content: ToDContent,
     dispatch: (ToDAction) -> Unit,
     onExit: () -> Unit,
+    onClose: () -> Unit,
     sound: Sfx = Sfx.None,
     haptics: Haptics = Haptics.none(),
 ) {
@@ -73,11 +76,14 @@ fun TruthOrDarePlayScreen(
     val prompt = s.currentPromptId?.let { content.byId[it] }
     val promptText = prompt?.text?.resolve(lang) ?: ""
 
+    // Shared chrome: game name in gold + built-in How-to-play; the End-game action rides the trailing slot.
     val header: @Composable () -> Unit = {
-        AppBar(
-            onBack = onExit,
-            right = {
-                if (s.history.isNotEmpty()) {
+        GameAppBar(
+            manifest = manifest,
+            lang = lang,
+            onClose = onClose,
+            trailing = if (s.history.isNotEmpty()) {
+                {
                     Text(
                         text = ToDStr.endGame.resolve(lang),
                         color = palette.textMuted,
@@ -85,12 +91,14 @@ fun TruthOrDarePlayScreen(
                         modifier = Modifier.clickable { dispatch(ToDAction.EndGame) },
                     )
                 }
+            } else {
+                null
             },
         )
     }
 
     when (s.phase) {
-        ToDPhase.ERROR -> ErrorScreen(lang, onExit)
+        ToDPhase.ERROR -> ErrorScreen(lang, header, onExit)
 
         ToDPhase.IDLE, ToDPhase.CHOOSING -> {
             when {
@@ -122,10 +130,10 @@ private fun ColumnScope.CenterStage(content: @Composable ColumnScope.() -> Unit)
 }
 
 @Composable
-private fun ErrorScreen(lang: Lang, onExit: () -> Unit) {
+private fun ErrorScreen(lang: Lang, header: @Composable () -> Unit, onExit: () -> Unit) {
     val palette = LocalPalette.current
     AppScreen {
-        AppBar(title = ToDStr.title.resolve(lang), onBack = onExit)
+        header()
         CenterStage {
             Text(text = ToDStr.errorPool.resolve(lang), color = palette.textMuted, fontSize = 16.sp)
             AppButton(text = ToDStr.playAgain.resolve(lang), onClick = onExit, size = ButtonSize.LG)

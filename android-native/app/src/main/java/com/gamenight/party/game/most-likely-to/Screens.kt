@@ -48,7 +48,6 @@ import com.gamenight.party.model.ColorToken
 import com.gamenight.party.model.Lang
 import com.gamenight.party.model.PlayerSeat
 import com.gamenight.party.sound.SoundId
-import com.gamenight.party.ui.components.AppBar
 import com.gamenight.party.ui.components.AppButton
 import com.gamenight.party.ui.components.AppScreen
 import com.gamenight.party.ui.components.AppToggle
@@ -57,6 +56,7 @@ import com.gamenight.party.ui.components.ButtonVariant
 import com.gamenight.party.ui.components.CardShape
 import com.gamenight.party.ui.components.Chip
 import com.gamenight.party.ui.components.Curtain
+import com.gamenight.party.ui.components.GameAppBar
 import com.gamenight.party.ui.components.Leaderboard
 import com.gamenight.party.ui.components.ScoreRow
 import com.gamenight.party.ui.components.SegmentOption
@@ -67,6 +67,7 @@ import com.gamenight.party.ui.components.WinnerBanner
 import com.gamenight.party.ui.components.pressScale
 import com.gamenight.party.ui.components.screenEntrance
 import com.gamenight.party.ui.identity.Motif
+import com.gamenight.party.ui.screens.fmtNum
 import com.gamenight.party.ui.theme.Accents
 import com.gamenight.party.ui.theme.Display
 import com.gamenight.party.ui.theme.LocalAccent
@@ -108,104 +109,118 @@ fun MostLikelyToSetupScreen(
         val config = MltConfig(players = selectedSeats, content = content, lang = lang, options = opts)
         val errors = validateConfig(config)
 
-        AppScreen(scrollable = true, verticalArrangement = Arrangement.spacedBy(14.dp)) {
-            AppBar(title = tx(lang, "Most Likely To", "به احتمال زیاد"), onBack = host::exit)
+        AppScreen {
+            GameAppBar(manifest = host.manifest, lang = lang, onClose = host::requestExit)
 
-            // Players
-            FieldLabel("${tx(lang, "Players", "بازیکنان")} · ${selectedSeats.size}")
-            FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                roster.forEach { p ->
-                    SelectChip(
-                        selected = p.id in selected,
-                        onClick = {
-                            selected = if (p.id in selected) selected - p.id else selected + p.id
-                        },
-                        text = p.name,
-                    )
+            // The options scroll between the fixed top bar and the pinned Start button below, so the
+            // primary CTA stays reachable no matter how long the list grows.
+            Column(
+                modifier = Modifier.fillMaxWidth().weight(1f).verticalScroll(rememberScrollState()),
+                verticalArrangement = Arrangement.spacedBy(14.dp),
+            ) {
+                // Players
+                FieldLabel("${tx(lang, "Players", "بازیکنان")} · ${fmtNum(selectedSeats.size, lang)}")
+                FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                    roster.forEach { p ->
+                        SelectChip(
+                            selected = p.id in selected,
+                            onClick = {
+                                selected = if (p.id in selected) selected - p.id else selected + p.id
+                            },
+                            text = p.name,
+                        )
+                    }
+                }
+
+                // Deck (primary choice)
+                FieldLabel(tx(lang, "Deck", "دسته"))
+                SegmentedControl(
+                    options = content.decks.map { SegmentOption(it.id, it.name.resolve(lang)) },
+                    value = opts.deckId,
+                    onChange = { opts = opts.copy(deckId = it) },
+                )
+
+                // More options
+                Text(
+                    text = tx(lang, "More options", "گزینه‌های بیشتر"),
+                    color = palette.textMuted,
+                    fontSize = 13.sp,
+                    fontWeight = FontWeight.SemiBold,
+                    modifier = Modifier.padding(top = 6.dp),
+                )
+
+                FieldLabel(tx(lang, "Intensity", "شدت"))
+                SegmentedControl(
+                    options = INTENSITIES.map { SegmentOption(it, intensityLabel(it).resolve(lang)) },
+                    value = opts.intensity,
+                    onChange = { opts = opts.copy(intensity = it) },
+                )
+
+                FieldLabel(tx(lang, "Voting style", "نحوه رأی"))
+                SegmentedControl(
+                    options = listOf(
+                        SegmentOption(VotingStyle.PASS_DEVICE, tx(lang, "Pass & hide", "چرخاندن و پنهان")),
+                        SegmentOption(VotingStyle.SIMULTANEOUS, tx(lang, "Count out loud", "شمارش بلند")),
+                    ),
+                    value = opts.votingStyle,
+                    onChange = { opts = opts.copy(votingStyle = it) },
+                )
+
+                Stepper(
+                    label = tx(lang, "Rounds", "دورها"),
+                    value = opts.roundCount.coerceIn(1, maxRounds),
+                    min = 1,
+                    max = maxRounds,
+                    onValueChange = { opts = opts.copy(roundCount = it) },
+                )
+
+                AppToggle(
+                    label = tx(lang, "Allow voting for yourself", "رأی به خود مجاز است"),
+                    checked = opts.allowSelfVote,
+                    onCheckedChange = { opts = opts.copy(allowSelfVote = it) },
+                )
+                AppToggle(
+                    label = tx(lang, "Show running scores", "نمایش امتیاز لحظه‌ای"),
+                    checked = opts.showRunningScores,
+                    onCheckedChange = { opts = opts.copy(showRunningScores = it) },
+                )
+
+                FieldLabel(tx(lang, "Ties", "تساوی"))
+                SegmentedControl(
+                    options = listOf(
+                        SegmentOption(TieBreak.CO_WINNERS, tx(lang, "Co-winners", "برندگان مشترک")),
+                        SegmentOption(TieBreak.RANDOM, tx(lang, "Pick one", "یکی انتخاب شود")),
+                    ),
+                    value = opts.tieBreak,
+                    onChange = { opts = opts.copy(tieBreak = it) },
+                )
+
+                Text(
+                    text = tx(
+                        lang,
+                        "≈ ${fmtNum(poolSize, lang)} prompts available",
+                        "حدود ${fmtNum(poolSize, lang)} سوال موجود است",
+                    ),
+                    color = palette.textMuted,
+                    fontSize = 13.sp,
+                )
+
+                errors?.forEach { e ->
+                    Text(text = e.resolve(lang), color = Accents.RoseStrong, fontSize = 13.sp)
                 }
             }
 
-            // Deck (primary choice)
-            FieldLabel(tx(lang, "Deck", "دسته"))
-            SegmentedControl(
-                options = content.decks.map { SegmentOption(it.id, it.name.resolve(lang)) },
-                value = opts.deckId,
-                onChange = { opts = opts.copy(deckId = it) },
-            )
-
-            // More options
-            Text(
-                text = tx(lang, "More options", "گزینه‌های بیشتر"),
-                color = palette.textMuted,
-                fontSize = 13.sp,
-                fontWeight = FontWeight.SemiBold,
-                modifier = Modifier.padding(top = 6.dp),
-            )
-
-            FieldLabel(tx(lang, "Intensity", "شدت"))
-            SegmentedControl(
-                options = INTENSITIES.map { SegmentOption(it, intensityLabel(it).resolve(lang)) },
-                value = opts.intensity,
-                onChange = { opts = opts.copy(intensity = it) },
-            )
-
-            FieldLabel(tx(lang, "Voting style", "نحوه رأی"))
-            SegmentedControl(
-                options = listOf(
-                    SegmentOption(VotingStyle.PASS_DEVICE, tx(lang, "Pass & hide", "چرخاندن و پنهان")),
-                    SegmentOption(VotingStyle.SIMULTANEOUS, tx(lang, "Count out loud", "شمارش بلند")),
-                ),
-                value = opts.votingStyle,
-                onChange = { opts = opts.copy(votingStyle = it) },
-            )
-
-            Stepper(
-                label = tx(lang, "Rounds", "دورها"),
-                value = opts.roundCount.coerceIn(1, maxRounds),
-                min = 1,
-                max = maxRounds,
-                onValueChange = { opts = opts.copy(roundCount = it) },
-            )
-
-            AppToggle(
-                label = tx(lang, "Allow voting for yourself", "رأی به خود مجاز است"),
-                checked = opts.allowSelfVote,
-                onCheckedChange = { opts = opts.copy(allowSelfVote = it) },
-            )
-            AppToggle(
-                label = tx(lang, "Show running scores", "نمایش امتیاز لحظه‌ای"),
-                checked = opts.showRunningScores,
-                onCheckedChange = { opts = opts.copy(showRunningScores = it) },
-            )
-
-            FieldLabel(tx(lang, "Ties", "تساوی"))
-            SegmentedControl(
-                options = listOf(
-                    SegmentOption(TieBreak.CO_WINNERS, tx(lang, "Co-winners", "برندگان مشترک")),
-                    SegmentOption(TieBreak.RANDOM, tx(lang, "Pick one", "یکی انتخاب شود")),
-                ),
-                value = opts.tieBreak,
-                onChange = { opts = opts.copy(tieBreak = it) },
-            )
-
-            Text(
-                text = tx(lang, "≈ $poolSize prompts available", "حدود $poolSize سوال موجود است"),
-                color = palette.textMuted,
-                fontSize = 13.sp,
-            )
-
-            errors?.forEach { e ->
-                Text(text = e.resolve(lang), color = Accents.RoseStrong, fontSize = 13.sp)
-            }
-
+            // Pinned primary CTA — a distinct SUCCESS (lime) gradient that stands apart from the
+            // tangerine option controls, full width and always reachable at the foot of the screen.
             AppButton(
                 text = tx(lang, "Start", "شروع"),
                 onClick = { onStart(config) },
+                variant = ButtonVariant.SUCCESS,
                 size = ButtonSize.LG,
                 fullWidth = true,
                 enabled = errors == null,
+                modifier = Modifier.padding(top = 12.dp, bottom = 8.dp),
             )
-            Spacer(Modifier.height(8.dp))
         }
     }
 }
@@ -249,15 +264,37 @@ fun MostLikelyToPlayScreen(
         val promptText = prompt?.text?.resolve(lang) ?: ""
         val kicker = tx(
             lang,
-            "Round ${state.currentRound + 1} of ${state.orderedPromptIds.size}",
-            "دور ${state.currentRound + 1} از ${state.orderedPromptIds.size}",
+            "Round ${fmtNum(state.currentRound + 1, lang)} of ${fmtNum(state.orderedPromptIds.size, lang)}",
+            "دور ${fmtNum(state.currentRound + 1, lang)} از ${fmtNum(state.orderedPromptIds.size, lang)}",
         )
         val passDevice = state.options.votingStyle == VotingStyle.PASS_DEVICE
+
+        // Shared in-match chrome: lets the host end the match early once at least one round is in,
+        // jumping straight to the Results screen with the standings so far.
+        val header: @Composable () -> Unit = {
+            GameAppBar(
+                manifest = host.manifest,
+                lang = lang,
+                onClose = host::requestExit,
+                trailing = if (state.rounds.isNotEmpty()) {
+                    {
+                        Text(
+                            text = tx(lang, "End game", "پایان بازی"),
+                            color = palette.textMuted,
+                            fontSize = 14.sp,
+                            modifier = Modifier.clickable { dispatch(MltAction.EndGame) },
+                        )
+                    }
+                } else {
+                    null
+                },
+            )
+        }
 
         when {
             // Error (unreachable through the guarded Setup, but kept faithful).
             state.phase == MltPhase.ERROR -> AppScreen {
-                AppBar(title = tx(lang, "Most Likely To", "به احتمال زیاد"), onBack = host::exit)
+                header()
                 Column(
                     modifier = Modifier.fillMaxWidth().weight(1f),
                     horizontalAlignment = Alignment.CenterHorizontally,
@@ -270,7 +307,7 @@ fun MostLikelyToPlayScreen(
 
             // Prompt
             state.phase == MltPhase.PROMPT -> AppScreen {
-                AppBar(onBack = host::exit)
+                header()
                 ScoreStrip(state, lang)
                 Column(
                     modifier = Modifier.fillMaxWidth().weight(1f),
@@ -301,7 +338,7 @@ fun MostLikelyToPlayScreen(
 
             // Pass-device voting — all votes in
             state.phase == MltPhase.VOTING && passDevice && allVoted(state) -> AppScreen {
-                AppBar(onBack = host::exit)
+                header()
                 Column(
                     modifier = Modifier.fillMaxWidth().weight(1f),
                     horizontalAlignment = Alignment.CenterHorizontally,
@@ -329,12 +366,12 @@ fun MostLikelyToPlayScreen(
             state.phase == MltPhase.VOTING && passDevice -> {
                 val voterName = voterId?.let { state.playerNames[it] } ?: ""
                 AppScreen {
-                    AppBar(onBack = host::exit)
+                    header()
                     Text(
                         text = tx(
                             lang,
-                            "${state.activeVoterIndex ?: 0} / ${state.playerIds.size} voted",
-                            "${state.activeVoterIndex ?: 0} از ${state.playerIds.size} رأی دادند",
+                            "${fmtNum(state.activeVoterIndex ?: 0, lang)} / ${fmtNum(state.playerIds.size, lang)} voted",
+                            "${fmtNum(state.activeVoterIndex ?: 0, lang)} از ${fmtNum(state.playerIds.size, lang)} رأی دادند",
                         ),
                         color = palette.textMuted,
                         fontSize = 12.sp,
@@ -381,7 +418,7 @@ fun MostLikelyToPlayScreen(
             state.phase == MltPhase.VOTING -> {
                 val total = tally.values.sum()
                 AppScreen(scrollable = true, verticalArrangement = Arrangement.spacedBy(12.dp)) {
-                    AppBar(onBack = host::exit)
+                    header()
                     PromptCard(text = promptText, emoji = null, kicker = null, compact = true)
                     Text(
                         text = tx(lang, "Enter how many votes each player got", "تعداد رأی هر بازیکن را وارد کن"),
@@ -404,8 +441,8 @@ fun MostLikelyToPlayScreen(
                     Text(
                         text = tx(
                             lang,
-                            "$total votes · ${state.playerIds.size} players",
-                            "$total رأی · ${state.playerIds.size} بازیکن",
+                            "${fmtNum(total, lang)} votes · ${fmtNum(state.playerIds.size, lang)} players",
+                            "${fmtNum(total, lang)} رأی · ${fmtNum(state.playerIds.size, lang)} بازیکن",
                         ),
                         color = palette.textMuted,
                         fontSize = 12.sp,
@@ -433,7 +470,7 @@ fun MostLikelyToPlayScreen(
                     if (winnerNames.isEmpty()) host.haptics.light() else host.haptics.success()
                 }
                 AppScreen {
-                    AppBar(onBack = host::exit)
+                    header()
                     ScoreStrip(state, lang)
                     Column(
                         modifier = Modifier.fillMaxWidth().weight(1f),
@@ -489,7 +526,7 @@ fun MostLikelyToPlayScreen(
 }
 
 @Composable
-private fun ScoreStrip(state: MltState, @Suppress("UNUSED_PARAMETER") lang: Lang) {
+private fun ScoreStrip(state: MltState, lang: Lang) {
     if (!state.options.showRunningScores) return
     val top = state.playerIds.sortedByDescending { state.scores[it] ?: 0 }.take(5)
     FlowRow(
@@ -498,7 +535,7 @@ private fun ScoreStrip(state: MltState, @Suppress("UNUSED_PARAMETER") lang: Lang
         verticalArrangement = Arrangement.spacedBy(6.dp),
     ) {
         top.forEach { id ->
-            Chip(text = "${state.playerNames[id] ?: id} 🏆${state.scores[id] ?: 0}")
+            Chip(text = "${state.playerNames[id] ?: id} 🏆${fmtNum(state.scores[id] ?: 0, lang)}")
         }
     }
 }
@@ -656,7 +693,7 @@ fun MostLikelyToResultsScreen(
             ScoreRow(
                 id = r.id,
                 label = "${state.playerNames[r.id] ?: r.id} · " +
-                    tx(lang, "${r.rawVotes} votes", "${r.rawVotes} رأی"),
+                    tx(lang, "${fmtNum(r.rawVotes, lang)} votes", "${fmtNum(r.rawVotes, lang)} رأی"),
                 score = r.score,
                 rank = r.rank,
                 color = state.playerColors[r.id],
@@ -664,7 +701,7 @@ fun MostLikelyToResultsScreen(
         }
 
         AppScreen(scrollable = true, verticalArrangement = Arrangement.spacedBy(12.dp)) {
-            AppBar(title = tx(lang, "Results", "نتایج"), onBack = host::exit)
+            GameAppBar(manifest = host.manifest, lang = lang, onClose = host::requestExit)
             WinnerBanner(title = title, names = winnerNames)
             Text(
                 text = tx(lang, "Round wins", "بردهای دور"),

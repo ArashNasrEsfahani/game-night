@@ -2,6 +2,7 @@ package com.gamenight.party.game.truthordare
 
 import com.gamenight.party.model.Lang
 import com.gamenight.party.model.LocalizedString
+import com.gamenight.party.ui.screens.fmtNum
 
 /**
  * Bilingual UI chrome for the Truth or Dare screens — a transcription of the `tod.*` / `results.*` /
@@ -81,15 +82,20 @@ object ToDStr {
     fun winner(lang: Lang, name: String): String =
         if (lang == Lang.FA) "$name برنده شد!" else "$name wins!"
 
-    /** "Turn {n}" */
+    /** "Turn {n}" — the number renders in Persian digits when [lang] is FA. */
     fun turnCount(lang: Lang, n: Int): String =
-        if (lang == Lang.FA) "نوبت $n" else "Turn $n"
+        if (lang == Lang.FA) "نوبت ${fmtNum(n, lang)}" else "Turn ${fmtNum(n, lang)}"
 
-    /** "{turns} turns · {dares} dares · {truths} truths · {skips} skips" */
-    fun statLine(lang: Lang, turns: Int, dares: Int, truths: Int, skips: Int): String =
-        if (lang == Lang.FA) {
-            "$turns نوبت · $dares جرئت · $truths حقیقت · $skips رد"
+    /** "{turns} turns · {dares} dares · {truths} truths · {skips} skips" (Persian digits when FA). */
+    fun statLine(lang: Lang, turns: Int, dares: Int, truths: Int, skips: Int): String {
+        val t = fmtNum(turns, lang)
+        val d = fmtNum(dares, lang)
+        val tr = fmtNum(truths, lang)
+        val sk = fmtNum(skips, lang)
+        return if (lang == Lang.FA) {
+            "$t نوبت · $d جرئت · $tr حقیقت · $sk رد"
         } else {
-            "$turns turns · $dares dares · $truths truths · $skips skips"
+            "$t turns · $d dares · $tr truths · $sk skips"
         }
+    }
 }

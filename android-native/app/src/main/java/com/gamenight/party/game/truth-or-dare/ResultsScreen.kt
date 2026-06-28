@@ -16,15 +16,16 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.gamenight.party.game.Sfx
+import com.gamenight.party.model.GameManifest
 import com.gamenight.party.model.Lang
 import com.gamenight.party.sound.Haptics
 import com.gamenight.party.sound.SoundId
-import com.gamenight.party.ui.components.AppBar
 import com.gamenight.party.ui.components.AppButton
 import com.gamenight.party.ui.components.AppCard
 import com.gamenight.party.ui.components.AppScreen
 import com.gamenight.party.ui.components.ButtonSize
 import com.gamenight.party.ui.components.ButtonVariant
+import com.gamenight.party.ui.components.GameAppBar
 import com.gamenight.party.ui.components.Leaderboard
 import com.gamenight.party.ui.components.ScoreRow
 import com.gamenight.party.ui.components.WinnerBanner
@@ -39,8 +40,10 @@ import com.gamenight.party.ui.theme.LocalPalette
 fun TruthOrDareResultsScreen(
     state: ToDState,
     lang: Lang,
+    manifest: GameManifest,
     onPlayAgain: () -> Unit,
     onExit: () -> Unit,
+    onClose: () -> Unit,
     sound: Sfx = Sfx.None,
     haptics: Haptics = Haptics.none(),
 ) {
@@ -70,7 +73,7 @@ fun TruthOrDareResultsScreen(
     }
 
     AppScreen(scrollable = true) {
-        AppBar(title = ToDStr.resultsTitle.resolve(lang), onBack = onExit)
+        GameAppBar(manifest = manifest, lang = lang, onClose = onClose)
         Column(verticalArrangement = Arrangement.spacedBy(16.dp), modifier = Modifier.fillMaxWidth()) {
             if (points && winners.isNotEmpty()) {
                 WinnerBanner(

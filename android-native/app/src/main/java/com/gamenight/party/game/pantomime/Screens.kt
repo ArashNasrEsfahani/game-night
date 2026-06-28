@@ -14,7 +14,9 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
@@ -35,17 +37,18 @@ import androidx.compose.ui.unit.sp
 import com.gamenight.party.engine.remainingMs
 import com.gamenight.party.game.Sfx
 import com.gamenight.party.model.ColorToken
+import com.gamenight.party.model.GameManifest
 import com.gamenight.party.model.Lang
 import com.gamenight.party.model.PlayerSeat
 import com.gamenight.party.sound.Haptics
 import com.gamenight.party.sound.SoundId
-import com.gamenight.party.ui.components.AppBar
 import com.gamenight.party.ui.components.AppButton
 import com.gamenight.party.ui.components.AppScreen
 import com.gamenight.party.ui.components.AppToggle
 import com.gamenight.party.ui.components.ButtonSize
 import com.gamenight.party.ui.components.ButtonVariant
 import com.gamenight.party.ui.components.Curtain
+import com.gamenight.party.ui.components.GameAppBar
 import com.gamenight.party.ui.components.Leaderboard
 import com.gamenight.party.ui.components.PillShape
 import com.gamenight.party.ui.components.ScoreRow
@@ -56,6 +59,8 @@ import com.gamenight.party.ui.components.Stepper
 import com.gamenight.party.ui.components.TimerRing
 import com.gamenight.party.ui.components.WinnerBanner
 import com.gamenight.party.ui.components.screenEntrance
+import com.gamenight.party.ui.screens.faDigits
+import com.gamenight.party.ui.screens.fmtNum
 import com.gamenight.party.ui.theme.Accents
 import com.gamenight.party.ui.theme.LocalAccent
 import com.gamenight.party.ui.theme.LocalPalette
@@ -74,7 +79,7 @@ private fun gameAccent() = ColorToken.GRAPE
 private fun tr(lang: Lang, en: String, fa: String): String = if (lang == Lang.FA) fa else en
 
 private fun teamName(i: Int, lang: Lang): String =
-    if (lang == Lang.FA) "تیم ${i + 1}" else "Team ${i + 1}"
+    if (lang == Lang.FA) "تیم ${fmtNum(i + 1, lang)}" else "Team ${i + 1}"
 
 private val TEAM_PALETTE: List<ColorToken> =
     listOf(ColorToken.ROSE, ColorToken.SKY, ColorToken.LIME, ColorToken.GOLD)
@@ -93,7 +98,8 @@ fun PantomimeSetupScreen(
     players: List<PlayerSeat>,
     content: PantomimeContent,
     lang: Lang,
-    onExit: () -> Unit,
+    manifest: GameManifest,
+    onClose: () -> Unit,
     onStart: (PantomimeConfig) -> Unit,
 ) = PantomimeAccent {
     val palette = LocalPalette.current
@@ -129,164 +135,180 @@ fun PantomimeSetupScreen(
         )
     }
 
-    AppScreen(scrollable = true, verticalArrangement = Arrangement.spacedBy(20.dp)) {
-        AppBar(title = tr(lang, "Pantomime", "پانتومیم"), onBack = onExit)
+    AppScreen(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+        GameAppBar(manifest = manifest, lang = lang, onClose = onClose)
 
-        // Players (the whole roster takes part; team assignment splits them below).
-        SectionLabel(tr(lang, "Players", "بازیکنان") + " · ${players.size}")
-        FlowRow(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.spacedBy(8.dp),
-            verticalArrangement = Arrangement.spacedBy(8.dp),
+        // Scrolling option stack; the Start button stays pinned below so it's always reachable.
+        Column(
+            modifier = Modifier
+                .weight(1f)
+                .fillMaxWidth()
+                .verticalScroll(rememberScrollState()),
+            verticalArrangement = Arrangement.spacedBy(20.dp),
         ) {
-            players.forEach { p ->
-                com.gamenight.party.ui.components.Chip(text = (p.emoji?.let { "$it " } ?: "") + p.name)
+            // Players (the whole roster takes part; team assignment splits them below).
+            SectionLabel(tr(lang, "Players", "بازیکنان") + " · " + fmtNum(players.size, lang))
+            FlowRow(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                verticalArrangement = Arrangement.spacedBy(8.dp),
+            ) {
+                players.forEach { p ->
+                    com.gamenight.party.ui.components.Chip(text = (p.emoji?.let { "$it " } ?: "") + p.name)
+                }
             }
-        }
 
-        // Teams: count + tap-to-move assignment.
-        SectionLabel(tr(lang, "Teams", "تیم‌ها"))
-        SegmentedControl(
-            value = teamCount,
-            onChange = { teamCount = it },
-            options = listOf(
-                SegmentOption(2, "2"),
-                SegmentOption(3, "3"),
-                SegmentOption(4, "4"),
-            ),
-            modifier = Modifier.fillMaxWidth(),
-        )
-        Text(
-            text = tr(lang, "Tap a player to move them to another team", "برای جابه‌جایی هر بازیکن به تیم دیگر، روی او بزن"),
-            color = palette.textMuted,
-            fontSize = 13.sp,
-        )
-        FlowRow(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.spacedBy(8.dp),
-            verticalArrangement = Arrangement.spacedBy(8.dp),
-        ) {
-            players.forEachIndexed { i, p ->
-                val ti = teamIndexOf(i, p.id)
-                TeamChip(
-                    name = (p.emoji?.let { "$it " } ?: "") + p.name,
-                    color = TEAM_PALETTE[ti % TEAM_PALETTE.size],
-                    onClick = { overrides[p.id] = (ti + 1) % teamCount },
-                )
-            }
-        }
-
-        // Categories
-        SectionLabel(tr(lang, "Categories", "دسته‌ها"))
-        FlowRow(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.spacedBy(8.dp),
-            verticalArrangement = Arrangement.spacedBy(8.dp),
-        ) {
-            PANTOMIME_CATEGORIES.forEach { c ->
-                SelectChip(
-                    selected = c in opts.categories,
-                    onClick = { toggleCategory(c) },
-                    text = categoryLabel(c, lang),
-                )
-            }
-        }
-
-        // Difficulty
-        SectionLabel(tr(lang, "Difficulty", "سختی"))
-        FlowRow(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.spacedBy(8.dp),
-            verticalArrangement = Arrangement.spacedBy(8.dp),
-        ) {
-            PANTOMIME_DIFFICULTIES.forEach { d ->
-                SelectChip(
-                    selected = d in opts.difficulties,
-                    onClick = { toggleDifficulty(d) },
-                    text = difficultyLabel(d, lang),
-                )
-            }
-        }
-
-        // Round time
-        SectionLabel(tr(lang, "Round time", "زمان هر نوبت"))
-        SegmentedControl(
-            value = opts.roundSeconds,
-            onChange = { opts = opts.copy(roundSeconds = it) },
-            options = ROUND_SECONDS_CHOICES.map { SegmentOption(it, "${it}s") },
-            modifier = Modifier.fillMaxWidth(),
-        )
-
-        // Game length (end mode)
-        SectionLabel(tr(lang, "Game length", "طول بازی"))
-        SegmentedControl(
-            value = opts.endMode,
-            onChange = { opts = opts.copy(endMode = it) },
-            options = listOf(
-                SegmentOption(PantomimeEndMode.TARGET_SCORE, tr(lang, "Target score", "امتیاز هدف")),
-                SegmentOption(PantomimeEndMode.ROUNDS, tr(lang, "Fixed rounds", "دور ثابت")),
-            ),
-            modifier = Modifier.fillMaxWidth(),
-        )
-        if (opts.endMode == PantomimeEndMode.TARGET_SCORE) {
-            Stepper(
-                label = tr(lang, "Target score", "امتیاز هدف"),
-                value = opts.targetScore,
-                min = 1,
-                max = 50,
-                onValueChange = { opts = opts.copy(targetScore = it) },
+            // Teams: count + tap-to-move assignment.
+            SectionLabel(tr(lang, "Teams", "تیم‌ها"))
+            SegmentedControl(
+                value = teamCount,
+                onChange = { teamCount = it },
+                options = listOf(
+                    SegmentOption(2, fmtNum(2, lang)),
+                    SegmentOption(3, fmtNum(3, lang)),
+                    SegmentOption(4, fmtNum(4, lang)),
+                ),
                 modifier = Modifier.fillMaxWidth(),
             )
-        } else {
-            Stepper(
-                label = tr(lang, "Rounds", "دورها"),
-                value = opts.totalRounds,
-                min = 1,
-                max = 20,
-                onValueChange = { opts = opts.copy(totalRounds = it) },
+            Text(
+                text = tr(lang, "Tap a player to move them to another team", "برای جابه‌جایی هر بازیکن به تیم دیگر، روی او بزن"),
+                color = palette.textMuted,
+                fontSize = 13.sp,
+            )
+            FlowRow(
                 modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                verticalArrangement = Arrangement.spacedBy(8.dp),
+            ) {
+                players.forEachIndexed { i, p ->
+                    val ti = teamIndexOf(i, p.id)
+                    TeamChip(
+                        name = (p.emoji?.let { "$it " } ?: "") + p.name,
+                        color = TEAM_PALETTE[ti % TEAM_PALETTE.size],
+                        onClick = { overrides[p.id] = (ti + 1) % teamCount },
+                    )
+                }
+            }
+
+            // Categories
+            SectionLabel(tr(lang, "Categories", "دسته‌ها"))
+            FlowRow(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                verticalArrangement = Arrangement.spacedBy(8.dp),
+            ) {
+                PANTOMIME_CATEGORIES.forEach { c ->
+                    SelectChip(
+                        selected = c in opts.categories,
+                        onClick = { toggleCategory(c) },
+                        text = categoryLabel(c, lang),
+                    )
+                }
+            }
+
+            // Difficulty
+            SectionLabel(tr(lang, "Difficulty", "سختی"))
+            FlowRow(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                verticalArrangement = Arrangement.spacedBy(8.dp),
+            ) {
+                PANTOMIME_DIFFICULTIES.forEach { d ->
+                    SelectChip(
+                        selected = d in opts.difficulties,
+                        onClick = { toggleDifficulty(d) },
+                        text = difficultyLabel(d, lang),
+                    )
+                }
+            }
+
+            // Round time
+            SectionLabel(tr(lang, "Round time", "زمان هر نوبت"))
+            SegmentedControl(
+                value = opts.roundSeconds,
+                onChange = { opts = opts.copy(roundSeconds = it) },
+                options = ROUND_SECONDS_CHOICES.map { SegmentOption(it, faDigits("${it}s", lang)) },
+                modifier = Modifier.fillMaxWidth(),
+            )
+
+            // Game length (end mode)
+            SectionLabel(tr(lang, "Game length", "طول بازی"))
+            SegmentedControl(
+                value = opts.endMode,
+                onChange = { opts = opts.copy(endMode = it) },
+                options = listOf(
+                    SegmentOption(PantomimeEndMode.TARGET_SCORE, tr(lang, "Target score", "امتیاز هدف")),
+                    SegmentOption(PantomimeEndMode.ROUNDS, tr(lang, "Fixed rounds", "دور ثابت")),
+                ),
+                modifier = Modifier.fillMaxWidth(),
+            )
+            if (opts.endMode == PantomimeEndMode.TARGET_SCORE) {
+                Stepper(
+                    label = tr(lang, "Target score", "امتیاز هدف"),
+                    value = opts.targetScore,
+                    min = 1,
+                    max = 50,
+                    onValueChange = { opts = opts.copy(targetScore = it) },
+                    modifier = Modifier.fillMaxWidth(),
+                )
+            } else {
+                Stepper(
+                    label = tr(lang, "Rounds", "دورها"),
+                    value = opts.totalRounds,
+                    min = 1,
+                    max = 20,
+                    onValueChange = { opts = opts.copy(totalRounds = it) },
+                    modifier = Modifier.fillMaxWidth(),
+                )
+            }
+
+            // Skips per turn
+            SectionLabel(tr(lang, "Skips per turn", "رد کردن در هر نوبت"))
+            SegmentedControl(
+                value = opts.maxSkipsPerTurn,
+                onChange = { opts = opts.copy(maxSkipsPerTurn = it) },
+                options = listOf(
+                    SegmentOption(0, fmtNum(0, lang)),
+                    SegmentOption(1, fmtNum(1, lang)),
+                    SegmentOption(2, fmtNum(2, lang)),
+                    SegmentOption(3, fmtNum(3, lang)),
+                    SegmentOption(-1, "∞"),
+                ),
+                modifier = Modifier.fillMaxWidth(),
+            )
+            AppToggle(
+                label = tr(lang, "Skip costs −1 point", "رد کردن یک امتیاز کم می‌کند"),
+                checked = opts.skipPenalty,
+                onCheckedChange = { opts = opts.copy(skipPenalty = it) },
+                modifier = Modifier.fillMaxWidth(),
+            )
+
+            Text(
+                text = tr(lang, "≈ ${fmtNum(poolSize, lang)} prompts available", "حدود ${fmtNum(poolSize, lang)} سرنخ موجود است"),
+                color = palette.textMuted,
+                fontSize = 14.sp,
             )
         }
 
-        // Skips per turn
-        SectionLabel(tr(lang, "Skips per turn", "رد کردن در هر نوبت"))
-        SegmentedControl(
-            value = opts.maxSkipsPerTurn,
-            onChange = { opts = opts.copy(maxSkipsPerTurn = it) },
-            options = listOf(
-                SegmentOption(0, "0"),
-                SegmentOption(1, "1"),
-                SegmentOption(2, "2"),
-                SegmentOption(3, "3"),
-                SegmentOption(-1, "∞"),
-            ),
-            modifier = Modifier.fillMaxWidth(),
-        )
-        AppToggle(
-            label = tr(lang, "Skip costs −1 point", "رد کردن یک امتیاز کم می‌کند"),
-            checked = opts.skipPenalty,
-            onCheckedChange = { opts = opts.copy(skipPenalty = it) },
-            modifier = Modifier.fillMaxWidth(),
-        )
-
-        Text(
-            text = tr(lang, "≈ $poolSize prompts available", "حدود $poolSize سرنخ موجود است"),
-            color = palette.textMuted,
-            fontSize = 14.sp,
-        )
+        // Validation sits with the pinned Start button so the reason it's disabled stays visible.
         if (errors != null) {
             Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
                 errors.forEach { e -> Text(text = e.resolve(lang), color = Accents.RoseStrong, fontSize = 14.sp) }
             }
         }
 
-        AppButton(
-            text = tr(lang, "Start", "شروع"),
-            onClick = { onStart(config) },
-            size = ButtonSize.LG,
-            fullWidth = true,
-            enabled = errors == null,
-        )
+        // Pinned, full-width Start — painted with the gold accent so it stands apart from the grape
+        // option controls above, and always reachable below the scrolling options.
+        CompositionLocalProvider(LocalAccent provides ColorToken.GOLD.accent()) {
+            AppButton(
+                text = tr(lang, "Start", "شروع"),
+                onClick = { onStart(config) },
+                variant = ButtonVariant.PRIMARY,
+                size = ButtonSize.LG,
+                fullWidth = true,
+                enabled = errors == null,
+            )
+        }
         Spacer(Modifier.padding(bottom = 8.dp))
     }
 }
@@ -298,10 +320,11 @@ fun PantomimePlayScreen(
     state: PantomimeState,
     content: PantomimeContent,
     lang: Lang,
+    manifest: GameManifest,
     sound: Sfx,
     haptics: Haptics,
     dispatch: (PantomimeAction) -> Unit,
-    onExit: () -> Unit,
+    onClose: () -> Unit,
     onPlayAgain: () -> Unit,
 ) = PantomimeAccent {
     val s = state
@@ -309,20 +332,20 @@ fun PantomimePlayScreen(
     val promptText = prompt?.text?.resolve(lang) ?: ""
     val hintText = prompt?.hint?.resolve(lang)
     when (s.phase) {
-        PantomimePhase.ERROR -> ErrorView(lang, onExit, onPlayAgain)
-        PantomimePhase.HANDOFF -> HandoffView(s, lang, dispatch, onExit)
-        PantomimePhase.REVEAL -> RevealView(s, lang, promptText, hintText, sound, haptics, dispatch, onExit)
-        PantomimePhase.ACTING -> ActingView(s, lang, promptText, hintText, sound, haptics, dispatch, onExit)
-        PantomimePhase.TURN_END -> TurnEndView(s, lang, sound, haptics, dispatch, onExit)
+        PantomimePhase.ERROR -> ErrorView(manifest, lang, onClose, onPlayAgain)
+        PantomimePhase.HANDOFF -> HandoffView(s, manifest, lang, dispatch, onClose)
+        PantomimePhase.REVEAL -> RevealView(s, manifest, lang, promptText, hintText, sound, haptics, dispatch, onClose)
+        PantomimePhase.ACTING -> ActingView(s, manifest, lang, promptText, hintText, sound, haptics, dispatch, onClose)
+        PantomimePhase.TURN_END -> TurnEndView(s, manifest, lang, sound, haptics, dispatch, onClose)
         PantomimePhase.RESULTS -> Unit // routed to the Results screen by the host
     }
 }
 
 @Composable
-private fun ErrorView(lang: Lang, onExit: () -> Unit, onPlayAgain: () -> Unit) {
+private fun ErrorView(manifest: GameManifest, lang: Lang, onClose: () -> Unit, onPlayAgain: () -> Unit) {
     val palette = LocalPalette.current
     AppScreen {
-        AppBar(title = tr(lang, "Pantomime", "پانتومیم"), onBack = onExit)
+        GameAppBar(manifest = manifest, lang = lang, onClose = onClose)
         Column(
             modifier = Modifier.weight(1f).fillMaxWidth(),
             verticalArrangement = Arrangement.spacedBy(16.dp, Alignment.CenterVertically),
@@ -341,24 +364,25 @@ private fun ErrorView(lang: Lang, onExit: () -> Unit, onPlayAgain: () -> Unit) {
 @Composable
 private fun HandoffView(
     s: PantomimeState,
+    manifest: GameManifest,
     lang: Lang,
     dispatch: (PantomimeAction) -> Unit,
-    onExit: () -> Unit,
+    onClose: () -> Unit,
 ) {
     val palette = LocalPalette.current
     val accent = LocalAccent.current
     val team = activeTeam(s)
     val name = actorName(s)
-    val total = if (s.options.endMode == PantomimeEndMode.ROUNDS) s.options.totalRounds.toString() else "∞"
+    val total = if (s.options.endMode == PantomimeEndMode.ROUNDS) fmtNum(s.options.totalRounds, lang) else "∞"
     AppScreen {
-        AppBar(onBack = onExit)
+        GameAppBar(manifest = manifest, lang = lang, onClose = onClose, trailing = { EndGameAction(lang, dispatch) })
         Column(
             modifier = Modifier.weight(1f).fillMaxWidth(),
             verticalArrangement = Arrangement.spacedBy(16.dp, Alignment.CenterVertically),
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
             Text(
-                text = tr(lang, "Round ${currentRound(s)} of $total", "دور ${currentRound(s)} از $total"),
+                text = tr(lang, "Round ${fmtNum(currentRound(s), lang)} of $total", "دور ${fmtNum(currentRound(s), lang)} از $total"),
                 color = palette.textMuted,
                 fontWeight = FontWeight.SemiBold,
                 fontSize = 14.sp,
@@ -378,20 +402,21 @@ private fun HandoffView(
 @Composable
 private fun RevealView(
     s: PantomimeState,
+    manifest: GameManifest,
     lang: Lang,
     promptText: String,
     hintText: String?,
     sound: Sfx,
     haptics: Haptics,
     dispatch: (PantomimeAction) -> Unit,
-    onExit: () -> Unit,
+    onClose: () -> Unit,
 ) {
     val palette = LocalPalette.current
     val name = actorName(s)
     var gateOpen by remember(s.turn.index, s.turn.round) { mutableStateOf(false) }
     var showHint by remember(s.turn.index, s.turn.round) { mutableStateOf(false) }
     AppScreen {
-        AppBar(onBack = onExit)
+        GameAppBar(manifest = manifest, lang = lang, onClose = onClose, trailing = { EndGameAction(lang, dispatch) })
         Curtain(
             open = gateOpen,
             holderName = name,
@@ -448,13 +473,14 @@ private fun RevealView(
 @Composable
 private fun ActingView(
     s: PantomimeState,
+    manifest: GameManifest,
     lang: Lang,
     promptText: String,
     hintText: String?,
     sound: Sfx,
     haptics: Haptics,
     dispatch: (PantomimeAction) -> Unit,
-    onExit: () -> Unit,
+    onClose: () -> Unit,
 ) {
     val palette = LocalPalette.current
     var now by remember { mutableStateOf(System.currentTimeMillis()) }
@@ -486,7 +512,8 @@ private fun ActingView(
     val left = skipsLeft(s)
 
     AppScreen(scrollable = true, horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(20.dp)) {
-        StandingsPills(s)
+        GameAppBar(manifest = manifest, lang = lang, onClose = onClose, trailing = { EndGameAction(lang, dispatch) })
+        StandingsPills(s, lang)
         TimerRing(totalSeconds = s.options.roundSeconds, remainingSeconds = remainingSec)
         // Re-key on the prompt so each newly-drawn card pops in (after a Correct/Skip advances the deck).
         key(promptText) {
@@ -513,7 +540,11 @@ private fun ActingView(
             }
         }
         Text(
-            text = tr(lang, "Correct ${s.turnCorrect} · Skipped ${s.turnSkipped}", "درست ${s.turnCorrect} · رد ${s.turnSkipped}"),
+            text = tr(
+                lang,
+                "Correct ${fmtNum(s.turnCorrect, lang)} · Skipped ${fmtNum(s.turnSkipped, lang)}",
+                "درست ${fmtNum(s.turnCorrect, lang)} · رد ${fmtNum(s.turnSkipped, lang)}",
+            ),
             color = palette.textMuted,
             fontSize = 14.sp,
         )
@@ -530,7 +561,7 @@ private fun ActingView(
                 modifier = Modifier.weight(1f),
             )
             AppButton(
-                text = "↷ " + tr(lang, "Skip", "رد کن") + (if (!unlimited) " (${maxOf(0, left)})" else ""),
+                text = "↷ " + tr(lang, "Skip", "رد کن") + (if (!unlimited) " (${fmtNum(maxOf(0, left), lang)})" else ""),
                 onClick = {
                     sound.play(SoundId.PASS)
                     haptics.warning()
@@ -554,11 +585,12 @@ private fun ActingView(
 @Composable
 private fun TurnEndView(
     s: PantomimeState,
+    manifest: GameManifest,
     lang: Lang,
     sound: Sfx,
     haptics: Haptics,
     dispatch: (PantomimeAction) -> Unit,
-    onExit: () -> Unit,
+    onClose: () -> Unit,
 ) {
     val palette = LocalPalette.current
     val accent = LocalAccent.current
@@ -578,7 +610,7 @@ private fun TurnEndView(
         }
     }
     AppScreen(scrollable = true, verticalArrangement = Arrangement.spacedBy(16.dp)) {
-        AppBar(onBack = onExit)
+        GameAppBar(manifest = manifest, lang = lang, onClose = onClose, trailing = { EndGameAction(lang, dispatch) })
         Column(
             modifier = Modifier.fillMaxWidth(),
             horizontalAlignment = Alignment.CenterHorizontally,
@@ -588,7 +620,7 @@ private fun TurnEndView(
             Text(text = name, color = palette.text, fontWeight = FontWeight.Bold, fontSize = 24.sp)
             Text(text = reason, color = palette.textMuted)
             Text(
-                text = "+${last?.correct ?: 0}",
+                text = "+${fmtNum(last?.correct ?: 0, lang)}",
                 modifier = Modifier.screenEntrance(translateY = 0.dp, fromScale = 0.5f),
                 color = accent.base,
                 fontWeight = FontWeight.ExtraBold,
@@ -597,14 +629,14 @@ private fun TurnEndView(
             Text(
                 text = tr(
                     lang,
-                    "Correct ${last?.correct ?: 0} · Skipped ${last?.skipped ?: 0}",
-                    "درست ${last?.correct ?: 0} · رد ${last?.skipped ?: 0}",
+                    "Correct ${fmtNum(last?.correct ?: 0, lang)} · Skipped ${fmtNum(last?.skipped ?: 0, lang)}",
+                    "درست ${fmtNum(last?.correct ?: 0, lang)} · رد ${fmtNum(last?.skipped ?: 0, lang)}",
                 ),
                 color = palette.textMuted,
                 fontSize = 14.sp,
             )
         }
-        Leaderboard(rows = standingsRows(s))
+        Leaderboard(rows = standingsRows(s, lang))
         AppButton(
             text = tr(lang, "Next turn", "نوبت بعدی"),
             onClick = { dispatch(PantomimeAction.NextTurn(pantomimeSeed())) },
@@ -621,9 +653,11 @@ private fun TurnEndView(
 fun PantomimeResultsScreen(
     state: PantomimeState,
     lang: Lang,
+    manifest: GameManifest,
     sound: Sfx,
     haptics: Haptics,
-    onExit: () -> Unit,
+    onClose: () -> Unit,
+    onHome: () -> Unit,
     onPlayAgain: () -> Unit,
 ) = PantomimeAccent {
     val s = state
@@ -639,12 +673,12 @@ fun PantomimeResultsScreen(
         else tr(lang, "${winnerNames.firstOrNull() ?: ""} wins!", "${winnerNames.firstOrNull() ?: ""} برنده شد!")
 
     AppScreen(scrollable = true, verticalArrangement = Arrangement.spacedBy(16.dp)) {
-        AppBar(title = tr(lang, "Results", "نتایج"), onBack = onExit)
+        GameAppBar(manifest = manifest, lang = lang, onClose = onClose)
         WinnerBanner(title = title, names = winnerNames)
-        Leaderboard(rows = standingsRows(s))
+        Leaderboard(rows = standingsRows(s, lang))
         Column(modifier = Modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(8.dp)) {
             AppButton(text = tr(lang, "Play again", "بازی دوباره"), onClick = onPlayAgain, size = ButtonSize.LG, fullWidth = true)
-            AppButton(text = tr(lang, "Home", "خانه"), onClick = onExit, variant = ButtonVariant.SECONDARY, fullWidth = true)
+            AppButton(text = tr(lang, "Home", "خانه"), onClick = onHome, variant = ButtonVariant.SECONDARY, fullWidth = true)
         }
         Spacer(Modifier.padding(bottom = 8.dp))
     }
@@ -652,13 +686,25 @@ fun PantomimeResultsScreen(
 
 // ──────────────────────────── Shared bits ────────────────────────────
 
-private fun standingsRows(s: PantomimeState): List<ScoreRow> = selectStandings(s).map { st ->
+private fun standingsRows(s: PantomimeState, lang: Lang): List<ScoreRow> = selectStandings(s).map { st ->
     ScoreRow(
         id = st.subjectId,
         label = teamLabel(s, st.subjectId),
         score = st.total,
         rank = st.rank,
         color = teamColor(s, st.subjectId),
+        display = fmtNum(st.total, lang),
+    )
+}
+
+/** Ends the match immediately and shows Results with the standings so far (web: common.endGame). */
+@Composable
+private fun EndGameAction(lang: Lang, dispatch: (PantomimeAction) -> Unit) {
+    Text(
+        text = tr(lang, "End game", "پایان بازی"),
+        color = LocalPalette.current.textMuted,
+        fontSize = 14.sp,
+        modifier = Modifier.clickable { dispatch(PantomimeAction.EndGame) },
     )
 }
 
@@ -712,7 +758,7 @@ private fun TeamChip(name: String, color: ColorToken, onClick: () -> Unit) {
 /** Per-team score pills shown while acting; the active team is highlighted in the accent fill. */
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
-private fun StandingsPills(s: PantomimeState) {
+private fun StandingsPills(s: PantomimeState, lang: Lang) {
     val palette = LocalPalette.current
     val accent = LocalAccent.current
     val activeId = activeTeam(s)?.teamId
@@ -745,7 +791,7 @@ private fun StandingsPills(s: PantomimeState) {
                     fontSize = 12.sp,
                 )
                 Text(
-                    text = st.total.toString(),
+                    text = fmtNum(st.total, lang),
                     color = if (isActive) accent.onAccent else palette.text,
                     fontWeight = FontWeight.Bold,
                     fontSize = 12.sp,

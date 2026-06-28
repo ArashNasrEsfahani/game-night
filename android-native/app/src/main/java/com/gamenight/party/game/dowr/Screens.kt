@@ -9,6 +9,9 @@ import androidx.compose.animation.core.infiniteRepeatable
 import androidx.compose.animation.core.rememberInfiniteTransition
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxScope
@@ -41,11 +44,11 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.gamenight.party.game.Sfx
 import com.gamenight.party.model.ColorToken
+import com.gamenight.party.model.GameManifest
 import com.gamenight.party.model.Lang
 import com.gamenight.party.model.PlayerSeat
 import com.gamenight.party.sound.Haptics
 import com.gamenight.party.sound.SoundId
-import com.gamenight.party.ui.components.AppBar
 import com.gamenight.party.ui.components.AppButton
 import com.gamenight.party.ui.components.AppScreen
 import com.gamenight.party.ui.components.AppToggle
@@ -53,6 +56,7 @@ import com.gamenight.party.ui.components.ButtonSize
 import com.gamenight.party.ui.components.ButtonVariant
 import com.gamenight.party.ui.components.EaseOut
 import com.gamenight.party.ui.components.EasePop
+import com.gamenight.party.ui.components.GameAppBar
 import com.gamenight.party.ui.components.Leaderboard
 import com.gamenight.party.ui.components.PillShape
 import com.gamenight.party.ui.components.ScoreRow
@@ -63,6 +67,8 @@ import com.gamenight.party.ui.components.Stepper
 import com.gamenight.party.ui.components.TimerRing
 import com.gamenight.party.ui.components.WinnerBanner
 import com.gamenight.party.ui.components.glassBg2
+import com.gamenight.party.ui.screens.faDigits
+import com.gamenight.party.ui.screens.fmtNum
 import com.gamenight.party.ui.theme.LocalAccent
 import com.gamenight.party.ui.theme.LocalPalette
 import com.gamenight.party.ui.theme.accent
@@ -85,12 +91,13 @@ private fun DowrThemed(content: @Composable () -> Unit) {
 
 private fun tr(lang: Lang, en: String, fa: String): String = if (lang == Lang.FA) fa else en
 
-/** Tidy mm:ss / Ns total (mirrors the screens' `fmtTotal`). */
-private fun fmtTotal(ms: Long): String {
+/** Tidy mm:ss / Ns total (mirrors the screens' `fmtTotal`), localizing digits for Persian. */
+private fun fmtTotal(ms: Long, lang: Lang): String {
     val s = (ms.coerceAtLeast(0L) / 1000.0).roundToInt()
     val m = s / 60
     val r = s % 60
-    return if (m > 0) "$m:${r.toString().padStart(2, '0')}" else "${r}s"
+    val raw = if (m > 0) "$m:${r.toString().padStart(2, '0')}" else "${r}s"
+    return faDigits(raw, lang)
 }
 
 // ──────────────────────────── Setup ────────────────────────────
@@ -100,7 +107,8 @@ fun DowrSetupScreen(
     players: List<PlayerSeat>,
     content: DowrContent,
     lang: Lang,
-    onExit: () -> Unit,
+    manifest: GameManifest,
+    onClose: () -> Unit,
     onStart: (DowrConfig) -> Unit,
 ) = DowrThemed {
     val palette = LocalPalette.current
@@ -119,152 +127,170 @@ fun DowrSetupScreen(
         )
     }
 
-    AppScreen(scrollable = true, verticalArrangement = Arrangement.spacedBy(14.dp)) {
-        AppBar(title = tr(lang, "Dowr", "دور"), onBack = onExit)
+    AppScreen(verticalArrangement = Arrangement.spacedBy(14.dp)) {
+        GameAppBar(manifest = manifest, lang = lang, onClose = onClose)
 
-        // Players
-        Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-            SectionLabel("${tr(lang, "Players", "بازیکنان")} · ${seats.size}")
-            if (teamCount > 0) {
-                Text(
-                    text = tr(lang, "$teamCount teams of 2", "$teamCount تیم دونفره"),
-                    color = LocalAccent.current.base,
-                    fontWeight = FontWeight.SemiBold,
-                    fontSize = 12.sp,
+        // Options scroll between the fixed top bar and the pinned Start button, so Start is always
+        // reachable at the bottom no matter how long the option list grows.
+        Column(
+            modifier = Modifier
+                .weight(1f)
+                .fillMaxWidth()
+                .verticalScroll(rememberScrollState()),
+            verticalArrangement = Arrangement.spacedBy(14.dp),
+        ) {
+            // Players
+            Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
+                SectionLabel("${tr(lang, "Players", "بازیکنان")} · ${fmtNum(seats.size, lang)}")
+                if (teamCount > 0) {
+                    Text(
+                        text = tr(
+                            lang,
+                            "${fmtNum(teamCount, lang)} teams of ${fmtNum(2, lang)}",
+                            "${fmtNum(teamCount, lang)} تیم دونفره",
+                        ),
+                        color = LocalAccent.current.base,
+                        fontWeight = FontWeight.SemiBold,
+                        fontSize = 12.sp,
+                    )
+                }
+            }
+            FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                players.forEach { p ->
+                    SelectChip(
+                        selected = p.id in selected,
+                        onClick = { selected = if (p.id in selected) selected - p.id else selected + p.id },
+                        text = (p.emoji?.let { "$it " } ?: "") + p.name,
+                    )
+                }
+            }
+            Text(
+                text = tr(lang, "Pairs up automatically — keep it even", "خودکار جفت می‌شوند — تعداد را زوج نگه دار"),
+                color = palette.textMuted,
+                fontSize = 12.sp,
+            )
+
+            // Word packs
+            SectionLabel(tr(lang, "Word packs", "بسته‌های کلمه"))
+            FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                CATEGORIES.forEach { c ->
+                    SelectChip(
+                        selected = c in opts.categories,
+                        onClick = { toggleCat(c) },
+                        text = categoryLabel(c).resolve(lang),
+                    )
+                }
+            }
+
+            // More options
+            SectionLabel(tr(lang, "More options", "گزینه‌های بیشتر"))
+
+            FieldLabel(tr(lang, "Difficulty", "سختی"))
+            val diffSel = when (opts.difficulty) {
+                DowrDifficulty.EASY -> "easy"
+                DowrDifficulty.MED -> "med"
+                DowrDifficulty.HARD -> "hard"
+                null -> "random"
+            }
+            SegmentedControl(
+                value = diffSel,
+                onChange = { v ->
+                    opts = opts.copy(
+                        difficulty = when (v) {
+                            "easy" -> DowrDifficulty.EASY
+                            "med" -> DowrDifficulty.MED
+                            "hard" -> DowrDifficulty.HARD
+                            else -> null
+                        },
+                    )
+                },
+                options = listOf(
+                    SegmentOption("random", tr(lang, "Mixed", "ترکیبی")),
+                    SegmentOption("easy", tr(lang, "Easy", "آسان")),
+                    SegmentOption("med", tr(lang, "Medium", "متوسط")),
+                    SegmentOption("hard", tr(lang, "Hard", "سخت")),
+                ),
+            )
+
+            FieldLabel(tr(lang, "End mode", "پایان بازی"))
+            SegmentedControl(
+                value = opts.endMode,
+                onChange = { opts = opts.copy(endMode = it) },
+                options = listOf(
+                    SegmentOption(DowrEndMode.TURNS, tr(lang, "Turns each", "نوبت ثابت")),
+                    SegmentOption(DowrEndMode.TIME, tr(lang, "Time limit", "محدودیت زمان")),
+                ),
+            )
+
+            if (opts.endMode == DowrEndMode.TURNS) {
+                Stepper(
+                    label = tr(lang, "Turns per team", "نوبت هر تیم"),
+                    value = opts.rounds,
+                    min = 1,
+                    max = 8,
+                    onValueChange = { opts = opts.copy(rounds = it) },
+                )
+            } else {
+                FieldLabel(tr(lang, "Total time", "زمان کل"))
+                SegmentedControl(
+                    value = opts.timeLimitSeconds,
+                    onChange = { opts = opts.copy(timeLimitSeconds = it) },
+                    options = TIME_LIMIT_CHOICES.map { SegmentOption(it, "${fmtNum(it / 60, lang)}m") },
                 )
             }
-        }
-        FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-            players.forEach { p ->
-                SelectChip(
-                    selected = p.id in selected,
-                    onClick = { selected = if (p.id in selected) selected - p.id else selected + p.id },
-                    text = (p.emoji?.let { "$it " } ?: "") + p.name,
+
+            FieldLabel(tr(lang, "Bomb timer", "زمان بمب"))
+            SegmentedControl(
+                value = opts.fuseSeconds,
+                onChange = { opts = opts.copy(fuseSeconds = it) },
+                options = FUSE_CHOICES.map { SegmentOption(it, "${fmtNum(it, lang)}s") },
+            )
+
+            if (opts.endMode == DowrEndMode.TURNS) {
+                FieldLabel(tr(lang, "Bomb penalty", "جریمهٔ بمب"))
+                SegmentedControl(
+                    value = opts.bombPenaltySeconds,
+                    onChange = { opts = opts.copy(bombPenaltySeconds = it) },
+                    options = BOMB_PENALTY_CHOICES.map { SegmentOption(it, "+${fmtNum(it, lang)}s") },
                 )
-            }
-        }
-        Text(
-            text = tr(lang, "Pairs up automatically — keep it even", "خودکار جفت می‌شوند — تعداد را زوج نگه دار"),
-            color = palette.textMuted,
-            fontSize = 12.sp,
-        )
 
-        // Word packs
-        SectionLabel(tr(lang, "Word packs", "بسته‌های کلمه"))
-        FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-            CATEGORIES.forEach { c ->
-                SelectChip(
-                    selected = c in opts.categories,
-                    onClick = { toggleCat(c) },
-                    text = categoryLabel(c).resolve(lang),
-                )
-            }
-        }
-
-        // More options
-        SectionLabel(tr(lang, "More options", "گزینه‌های بیشتر"))
-
-        FieldLabel(tr(lang, "Difficulty", "سختی"))
-        val diffSel = when (opts.difficulty) {
-            DowrDifficulty.EASY -> "easy"
-            DowrDifficulty.MED -> "med"
-            DowrDifficulty.HARD -> "hard"
-            null -> "random"
-        }
-        SegmentedControl(
-            value = diffSel,
-            onChange = { v ->
-                opts = opts.copy(
-                    difficulty = when (v) {
-                        "easy" -> DowrDifficulty.EASY
-                        "med" -> DowrDifficulty.MED
-                        "hard" -> DowrDifficulty.HARD
-                        else -> null
+                FieldLabel(tr(lang, "Change-word penalty", "جریمهٔ تعویض کلمه"))
+                SegmentedControl(
+                    value = opts.changePenaltySeconds,
+                    onChange = { opts = opts.copy(changePenaltySeconds = it) },
+                    options = CHANGE_PENALTY_CHOICES.map {
+                        SegmentOption(it, if (it == 0) tr(lang, "Off", "خاموش") else "+${fmtNum(it, lang)}s")
                     },
                 )
-            },
-            options = listOf(
-                SegmentOption("random", tr(lang, "Mixed", "ترکیبی")),
-                SegmentOption("easy", tr(lang, "Easy", "آسان")),
-                SegmentOption("med", tr(lang, "Medium", "متوسط")),
-                SegmentOption("hard", tr(lang, "Hard", "سخت")),
-            ),
-        )
+            }
 
-        FieldLabel(tr(lang, "End mode", "پایان بازی"))
-        SegmentedControl(
-            value = opts.endMode,
-            onChange = { opts = opts.copy(endMode = it) },
-            options = listOf(
-                SegmentOption(DowrEndMode.TURNS, tr(lang, "Turns each", "نوبت ثابت")),
-                SegmentOption(DowrEndMode.TIME, tr(lang, "Time limit", "محدودیت زمان")),
-            ),
-        )
-
-        if (opts.endMode == DowrEndMode.TURNS) {
-            Stepper(
-                label = tr(lang, "Turns per team", "نوبت هر تیم"),
-                value = opts.rounds,
-                min = 1,
-                max = 8,
-                onValueChange = { opts = opts.copy(rounds = it) },
+            AppToggle(
+                label = tr(lang, "Surprise bomb", "بمب غافلگیر"),
+                checked = opts.surpriseBomb,
+                onCheckedChange = { opts = opts.copy(surpriseBomb = it) },
             )
-        } else {
-            FieldLabel(tr(lang, "Total time", "زمان کل"))
-            SegmentedControl(
-                value = opts.timeLimitSeconds,
-                onChange = { opts = opts.copy(timeLimitSeconds = it) },
-                options = TIME_LIMIT_CHOICES.map { SegmentOption(it, "${it / 60}m") },
+
+            Text(
+                text = tr(lang, "≈ ${fmtNum(poolSize, lang)} words ready", "حدود ${fmtNum(poolSize, lang)} کلمه آماده است"),
+                color = palette.textMuted,
+                fontSize = 14.sp,
             )
         }
 
-        FieldLabel(tr(lang, "Bomb timer", "زمان بمب"))
-        SegmentedControl(
-            value = opts.fuseSeconds,
-            onChange = { opts = opts.copy(fuseSeconds = it) },
-            options = FUSE_CHOICES.map { SegmentOption(it, "${it}s") },
-        )
-
-        if (opts.endMode == DowrEndMode.TURNS) {
-            FieldLabel(tr(lang, "Bomb penalty", "جریمهٔ بمب"))
-            SegmentedControl(
-                value = opts.bombPenaltySeconds,
-                onChange = { opts = opts.copy(bombPenaltySeconds = it) },
-                options = BOMB_PENALTY_CHOICES.map { SegmentOption(it, "+${it}s") },
-            )
-
-            FieldLabel(tr(lang, "Change-word penalty", "جریمهٔ تعویض کلمه"))
-            SegmentedControl(
-                value = opts.changePenaltySeconds,
-                onChange = { opts = opts.copy(changePenaltySeconds = it) },
-                options = CHANGE_PENALTY_CHOICES.map {
-                    SegmentOption(it, if (it == 0) tr(lang, "Off", "خاموش") else "+${it}s")
-                },
-            )
-        }
-
-        AppToggle(
-            label = tr(lang, "Surprise bomb", "بمب غافلگیر"),
-            checked = opts.surpriseBomb,
-            onCheckedChange = { opts = opts.copy(surpriseBomb = it) },
-        )
-
-        Text(
-            text = tr(lang, "≈ $poolSize words ready", "حدود $poolSize کلمه آماده است"),
-            color = palette.textMuted,
-            fontSize = 14.sp,
-        )
+        // Pinned to the bottom: validation message (if any) + the primary Start CTA. The CTA forces a
+        // GOLD accent so it stands apart from the violet option controls above.
         errors?.forEach { e ->
             Text(text = e.resolve(lang), color = ColorToken.ROSE.accent().strong, fontSize = 14.sp)
         }
-
-        AppButton(
-            text = tr(lang, "Start", "شروع"),
-            onClick = { onStart(config) },
-            size = ButtonSize.LG,
-            fullWidth = true,
-            enabled = errors == null,
-        )
+        CompositionLocalProvider(LocalAccent provides ColorToken.GOLD.accent()) {
+            AppButton(
+                text = tr(lang, "Start", "شروع"),
+                onClick = { onStart(config) },
+                size = ButtonSize.LG,
+                fullWidth = true,
+                enabled = errors == null,
+            )
+        }
     }
 }
 
@@ -274,9 +300,10 @@ fun DowrSetupScreen(
 fun DowrPlayScreen(
     state: DowrState,
     lang: Lang,
+    manifest: GameManifest,
     nextSeed: () -> Int,
     dispatch: (DowrAction) -> Unit,
-    onExit: () -> Unit,
+    onClose: () -> Unit,
     sound: Sfx = Sfx.None,
     haptics: Haptics = Haptics.none(),
     now: () -> Long = { System.currentTimeMillis() },
@@ -287,7 +314,7 @@ fun DowrPlayScreen(
 
     if (s.phase == DowrPhase.ERROR) {
         AppScreen(horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(16.dp)) {
-            AppBar(title = tr(lang, "Dowr", "دور"), onBack = onExit)
+            GameAppBar(manifest = manifest, lang = lang, onClose = onClose)
             Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                 Text(
                     text = tr(lang, "No words match these filters", "هیچ کلمه‌ای با این فیلترها نیست"),
@@ -371,7 +398,7 @@ fun DowrPlayScreen(
         if (id == team.id) (s.totals[id] ?: 0L) + s.changePenaltyMs + segMs else s.totals[id] ?: 0L
 
     fun teamScore(id: String): String =
-        if (timeMode) "${teamWords(s, id)}✓" else fmtTotal(liveTotal(id))
+        if (timeMode) "${fmtNum(teamWords(s, id), lang)}✓" else fmtTotal(liveTotal(id), lang)
 
     val gotIt = {
         val n = now()
@@ -390,7 +417,19 @@ fun DowrPlayScreen(
     }
 
     AppScreen(horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(10.dp)) {
-        AppBar(onBack = onExit)
+        GameAppBar(
+            manifest = manifest,
+            lang = lang,
+            onClose = onClose,
+            trailing = {
+                Text(
+                    text = tr(lang, "End game", "پایان بازی"),
+                    color = palette.textMuted,
+                    fontSize = 14.sp,
+                    modifier = Modifier.clickable { dispatch(DowrAction.EndGame) },
+                )
+            },
+        )
 
         // Standings strip — whose turn + every team's running total / words.
         FlowRow(
@@ -406,7 +445,7 @@ fun DowrPlayScreen(
         // Shared countdown — the headline pressure in time mode.
         if (timeMode) {
             Text(
-                text = "⏱ ${fmtTotal(sharedLeftMs)}",
+                text = "⏱ ${fmtTotal(sharedLeftMs, lang)}",
                 color = if (sharedLeftMs <= 15000L) ColorToken.ROSE.accent().strong else accent.base,
                 fontSize = 30.sp,
                 fontWeight = FontWeight.ExtraBold,
@@ -426,7 +465,13 @@ fun DowrPlayScreen(
             append(tr(lang, "${guesserName(s)} guesses", "${guesserName(s)} حدس می‌زند"))
             if (!timeMode) {
                 append(" · ")
-                append(tr(lang, "Round ${currentRound(s)} of ${s.options.rounds}", "دور ${currentRound(s)} از ${s.options.rounds}"))
+                append(
+                    tr(
+                        lang,
+                        "Round ${fmtNum(currentRound(s), lang)} of ${fmtNum(s.options.rounds, lang)}",
+                        "دور ${fmtNum(currentRound(s), lang)} از ${fmtNum(s.options.rounds, lang)}",
+                    ),
+                )
             }
         }
         Text(text = turnSub, color = palette.textMuted, fontSize = 12.sp, textAlign = TextAlign.Center)
@@ -489,7 +534,7 @@ fun DowrPlayScreen(
         )
         AppButton(
             text = "↻ " + if (changeCost > 0) {
-                tr(lang, "Change (+${changeCost}s)", "تعویض (+$changeCost ثانیه)")
+                tr(lang, "Change (+${fmtNum(changeCost, lang)}s)", "تعویض (+${fmtNum(changeCost, lang)} ثانیه)")
             } else {
                 tr(lang, "Change word", "تعویض کلمه")
             },
@@ -506,7 +551,9 @@ fun DowrPlayScreen(
 fun DowrResultsScreen(
     state: DowrState,
     lang: Lang,
+    manifest: GameManifest,
     onPlayAgain: () -> Unit,
+    onClose: () -> Unit,
     onExit: () -> Unit,
     sound: Sfx = Sfx.None,
     haptics: Haptics = Haptics.none(),
@@ -537,14 +584,14 @@ fun DowrResultsScreen(
             id = st.subjectId,
             label = st.label,
             score = if (timeMode) st.words else (st.totalMs / 1000L).toInt(),
-            display = if (timeMode) tr(lang, "${st.words} words", "${st.words} کلمه") else fmtTotal(st.totalMs),
+            display = if (timeMode) tr(lang, "${fmtNum(st.words, lang)} words", "${fmtNum(st.words, lang)} کلمه") else fmtTotal(st.totalMs, lang),
             rank = st.rank,
             color = st.color,
         )
     }
 
     AppScreen(horizontalAlignment = Alignment.CenterHorizontally, scrollable = true, verticalArrangement = Arrangement.spacedBy(14.dp)) {
-        AppBar(title = tr(lang, "Results", "نتایج"), onBack = onExit)
+        GameAppBar(manifest = manifest, lang = lang, onClose = onClose)
         WinnerBanner(title = title, names = winnerNames)
         Text(
             text = if (timeMode) {

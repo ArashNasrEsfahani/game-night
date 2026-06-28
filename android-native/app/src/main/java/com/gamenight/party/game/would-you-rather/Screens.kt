@@ -5,6 +5,9 @@ import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.spring
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -38,10 +41,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.gamenight.party.game.GameHost
 import com.gamenight.party.model.ColorToken
-import com.gamenight.party.model.Lang
 import com.gamenight.party.model.PlayerSeat
 import com.gamenight.party.sound.SoundId
-import com.gamenight.party.ui.components.AppBar
 import com.gamenight.party.ui.components.AppButton
 import com.gamenight.party.ui.components.AppCard
 import com.gamenight.party.ui.components.AppScreen
@@ -49,6 +50,7 @@ import com.gamenight.party.ui.components.AppToggle
 import com.gamenight.party.ui.components.ButtonSize
 import com.gamenight.party.ui.components.ButtonVariant
 import com.gamenight.party.ui.components.Curtain
+import com.gamenight.party.ui.components.GameAppBar
 import com.gamenight.party.ui.components.Leaderboard
 import com.gamenight.party.ui.components.ScoreRow
 import com.gamenight.party.ui.components.SegmentOption
@@ -60,6 +62,8 @@ import com.gamenight.party.ui.theme.Accents
 import com.gamenight.party.ui.theme.LocalAccent
 import com.gamenight.party.ui.theme.LocalPalette
 import com.gamenight.party.ui.theme.accent
+import com.gamenight.party.ui.screens.faDigits
+import com.gamenight.party.ui.screens.fmtNum
 import kotlin.random.Random
 import kotlinx.coroutines.delay
 
@@ -83,10 +87,10 @@ private fun WyrScope(content: @Composable () -> Unit) {
 fun WouldYouRatherSetupScreen(
     content: WyrContent,
     players: List<PlayerSeat>,
-    lang: Lang,
-    onExit: () -> Unit,
+    host: GameHost,
     onStart: (WyrState) -> Unit,
 ) = WyrScope {
+    val lang = host.lang
     val palette = LocalPalette.current
     var opts by remember { mutableStateOf(DEFAULT_OPTIONS) }
     var selected by remember(players) { mutableStateOf(players.map { it.id }.toSet()) }
@@ -96,107 +100,120 @@ fun WouldYouRatherSetupScreen(
     val errors = validateConfig(config)
     val poolSize = content.poolFor(opts.deckId, opts.maxIntensity).size
 
-    AppScreen(scrollable = true, verticalArrangement = Arrangement.spacedBy(14.dp)) {
-        AppBar(title = WyrStrings.title.resolve(lang), onBack = onExit)
+    AppScreen {
+        GameAppBar(manifest = host.manifest, lang = lang, onClose = host::requestExit)
 
-        // Players
-        OptionGroup("${WyrStrings.players.resolve(lang)} · ${seats.size}") {
-            players.chunked(3).forEach { rowPlayers ->
-                Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    rowPlayers.forEach { p ->
-                        SelectChip(
-                            selected = p.id in selected,
-                            onClick = { selected = if (p.id in selected) selected - p.id else selected + p.id },
-                            text = displayName(p),
-                            modifier = Modifier.weight(1f),
-                        )
+        // The options scroll; the Start CTA below stays pinned and always reachable.
+        Column(
+            modifier = Modifier
+                .weight(1f)
+                .fillMaxWidth()
+                .verticalScroll(rememberScrollState()),
+            verticalArrangement = Arrangement.spacedBy(14.dp),
+        ) {
+            // Players
+            OptionGroup("${WyrStrings.players.resolve(lang)} · ${fmtNum(seats.size, lang)}") {
+                players.chunked(3).forEach { rowPlayers ->
+                    Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                        rowPlayers.forEach { p ->
+                            SelectChip(
+                                selected = p.id in selected,
+                                onClick = { selected = if (p.id in selected) selected - p.id else selected + p.id },
+                                text = displayName(p),
+                                modifier = Modifier.weight(1f),
+                            )
+                        }
+                        repeat(3 - rowPlayers.size) { Spacer(Modifier.weight(1f)) }
                     }
-                    repeat(3 - rowPlayers.size) { Spacer(Modifier.weight(1f)) }
                 }
+            }
+
+            // Deck (primary choice)
+            OptionGroup(WyrStrings.deck.resolve(lang)) {
+                SegmentedControl(
+                    options = content.decks.map { SegmentOption(it.id, it.name.resolve(lang)) },
+                    value = opts.deckId,
+                    onChange = { opts = opts.copy(deckId = it) },
+                    modifier = Modifier.fillMaxWidth(),
+                )
+            }
+
+            // More options
+            Text(
+                text = WyrStrings.moreOptions.resolve(lang),
+                color = palette.textMuted,
+                fontWeight = FontWeight.SemiBold,
+                fontSize = 13.sp,
+            )
+
+            OptionGroup(WyrStrings.intensityLabel.resolve(lang)) {
+                SegmentedControl(
+                    options = INTENSITY_ORDER.map { SegmentOption(it, intensityLabel(it).resolve(lang)) },
+                    value = opts.maxIntensity,
+                    onChange = { opts = opts.copy(maxIntensity = it) },
+                    modifier = Modifier.fillMaxWidth(),
+                )
+            }
+
+            OptionGroup(WyrStrings.modeLabel.resolve(lang)) {
+                SegmentedControl(
+                    options = listOf(
+                        SegmentOption(WyrMode.VOTE, WyrStrings.modeVote.resolve(lang)),
+                        SegmentOption(WyrMode.QUICK, WyrStrings.modeQuick.resolve(lang)),
+                    ),
+                    value = opts.mode,
+                    onChange = { opts = opts.copy(mode = it) },
+                    modifier = Modifier.fillMaxWidth(),
+                )
+            }
+
+            OptionGroup(WyrStrings.length.resolve(lang)) {
+                val lenValue = if (opts.roundLength >= 999) "all" else opts.roundLength.toString()
+                SegmentedControl(
+                    options = listOf("5", "10", "15", "20").map { SegmentOption(it, faDigits(it, lang)) } +
+                        SegmentOption("all", WyrStrings.all.resolve(lang)),
+                    value = lenValue,
+                    onChange = { v -> opts = opts.copy(roundLength = if (v == "all") 999 else v.toInt()) },
+                    modifier = Modifier.fillMaxWidth(),
+                )
+            }
+
+            AppToggle(
+                checked = opts.awardMajorityPoints,
+                onCheckedChange = { opts = opts.copy(awardMajorityPoints = it) },
+                label = WyrStrings.awardPoints.resolve(lang),
+            )
+            if (opts.awardMajorityPoints && opts.mode == WyrMode.VOTE) {
+                AppToggle(
+                    checked = opts.tieCountsForBoth,
+                    onCheckedChange = { opts = opts.copy(tieCountsForBoth = it) },
+                    label = WyrStrings.tieCountsForBoth.resolve(lang),
+                )
+            }
+
+            Text(
+                text = WyrStrings.poolSize(lang, poolSize),
+                color = palette.textMuted,
+                fontSize = 14.sp,
+            )
+
+            errors?.forEach { e ->
+                Text(text = e.resolve(lang), color = Accents.RoseStrong, fontSize = 14.sp)
             }
         }
 
-        // Deck (primary choice)
-        OptionGroup(WyrStrings.deck.resolve(lang)) {
-            SegmentedControl(
-                options = content.decks.map { SegmentOption(it.id, it.name.resolve(lang)) },
-                value = opts.deckId,
-                onChange = { opts = opts.copy(deckId = it) },
-                modifier = Modifier.fillMaxWidth(),
+        // Pinned, full-width primary CTA. A distinct GOLD accent (overriding the teal game accent the
+        // option controls use) makes Start stand out from every other control on the page.
+        Spacer(Modifier.height(12.dp))
+        CompositionLocalProvider(LocalAccent provides ColorToken.GOLD.accent()) {
+            AppButton(
+                text = WyrStrings.start.resolve(lang),
+                onClick = { onStart(createInitialState(config, Random.nextInt())) },
+                enabled = errors == null,
+                fullWidth = true,
+                size = ButtonSize.LG,
             )
         }
-
-        // More options
-        Text(
-            text = WyrStrings.moreOptions.resolve(lang),
-            color = palette.textMuted,
-            fontWeight = FontWeight.SemiBold,
-            fontSize = 13.sp,
-        )
-
-        OptionGroup(WyrStrings.intensityLabel.resolve(lang)) {
-            SegmentedControl(
-                options = INTENSITY_ORDER.map { SegmentOption(it, intensityLabel(it).resolve(lang)) },
-                value = opts.maxIntensity,
-                onChange = { opts = opts.copy(maxIntensity = it) },
-                modifier = Modifier.fillMaxWidth(),
-            )
-        }
-
-        OptionGroup(WyrStrings.modeLabel.resolve(lang)) {
-            SegmentedControl(
-                options = listOf(
-                    SegmentOption(WyrMode.VOTE, WyrStrings.modeVote.resolve(lang)),
-                    SegmentOption(WyrMode.QUICK, WyrStrings.modeQuick.resolve(lang)),
-                ),
-                value = opts.mode,
-                onChange = { opts = opts.copy(mode = it) },
-                modifier = Modifier.fillMaxWidth(),
-            )
-        }
-
-        OptionGroup(WyrStrings.length.resolve(lang)) {
-            val lenValue = if (opts.roundLength >= 999) "all" else opts.roundLength.toString()
-            SegmentedControl(
-                options = listOf("5", "10", "15", "20").map { SegmentOption(it, it) } +
-                    SegmentOption("all", WyrStrings.all.resolve(lang)),
-                value = lenValue,
-                onChange = { v -> opts = opts.copy(roundLength = if (v == "all") 999 else v.toInt()) },
-                modifier = Modifier.fillMaxWidth(),
-            )
-        }
-
-        AppToggle(
-            checked = opts.awardMajorityPoints,
-            onCheckedChange = { opts = opts.copy(awardMajorityPoints = it) },
-            label = WyrStrings.awardPoints.resolve(lang),
-        )
-        if (opts.awardMajorityPoints && opts.mode == WyrMode.VOTE) {
-            AppToggle(
-                checked = opts.tieCountsForBoth,
-                onCheckedChange = { opts = opts.copy(tieCountsForBoth = it) },
-                label = WyrStrings.tieCountsForBoth.resolve(lang),
-            )
-        }
-
-        Text(
-            text = WyrStrings.poolSize(lang, poolSize),
-            color = palette.textMuted,
-            fontSize = 14.sp,
-        )
-
-        errors?.forEach { e ->
-            Text(text = e.resolve(lang), color = Accents.RoseStrong, fontSize = 14.sp)
-        }
-
-        AppButton(
-            text = WyrStrings.start.resolve(lang),
-            onClick = { onStart(createInitialState(config, Random.nextInt())) },
-            enabled = errors == null,
-            fullWidth = true,
-            size = ButtonSize.LG,
-        )
-        Spacer(Modifier.height(8.dp))
     }
 }
 
@@ -208,7 +225,6 @@ fun WouldYouRatherPlayScreen(
     content: WyrContent,
     host: GameHost,
     dispatch: (WyrAction) -> Unit,
-    onExit: () -> Unit,
     onPlayAgain: () -> Unit,
 ) = WyrScope {
     val s = state
@@ -233,10 +249,32 @@ fun WouldYouRatherPlayScreen(
     val a = item?.optionA?.resolve(lang) ?: ""
     val b = item?.optionB?.resolve(lang) ?: ""
 
+    // Active-play header: the shared game chrome (gold game name, built-in how-to-play, host-confirmed
+    // close) plus an "End game" trailing action that ends the match and jumps to Results-so-far.
+    val header: @Composable () -> Unit = {
+        GameAppBar(
+            manifest = host.manifest,
+            lang = lang,
+            onClose = host::requestExit,
+            trailing = if (s.history.isNotEmpty()) {
+                {
+                    Text(
+                        text = WyrStrings.endGame.resolve(lang),
+                        color = palette.textMuted,
+                        fontSize = 14.sp,
+                        modifier = Modifier.clickable { dispatch(WyrAction.EndGame) },
+                    )
+                }
+            } else {
+                null
+            },
+        )
+    }
+
     when {
         // ── Error ──
         s.phase == WyrPhase.ERROR -> AppScreen(horizontalAlignment = Alignment.CenterHorizontally) {
-            AppBar(title = WyrStrings.title.resolve(lang), onBack = onExit)
+            header()
             Column(
                 modifier = Modifier.weight(1f).fillMaxWidth(),
                 verticalArrangement = Arrangement.spacedBy(16.dp, Alignment.CenterVertically),
@@ -254,9 +292,9 @@ fun WouldYouRatherPlayScreen(
 
         // ── Prompt ──
         s.phase == WyrPhase.PROMPT -> AppScreen(horizontalAlignment = Alignment.CenterHorizontally) {
-            AppBar(onBack = onExit)
+            header()
             Text(
-                text = WyrStrings.progress(s.index + 1, s.total),
+                text = WyrStrings.progress(lang, s.index + 1, s.total),
                 modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp),
                 color = palette.textMuted,
                 fontWeight = FontWeight.SemiBold,
@@ -308,7 +346,7 @@ fun WouldYouRatherPlayScreen(
         s.phase == WyrPhase.COLLECTING && s.options.mode == WyrMode.VOTE -> {
             if (everyoneVoted(s)) {
                 AppScreen(horizontalAlignment = Alignment.CenterHorizontally) {
-                    AppBar(onBack = onExit)
+                    header()
                     Column(
                         modifier = Modifier.weight(1f).fillMaxWidth(),
                         verticalArrangement = Arrangement.spacedBy(16.dp, Alignment.CenterVertically),
@@ -334,7 +372,7 @@ fun WouldYouRatherPlayScreen(
             } else {
                 val voterName = voterId?.let { s.playerNames[it] } ?: ""
                 AppScreen(horizontalAlignment = Alignment.CenterHorizontally) {
-                    AppBar(onBack = onExit)
+                    header()
                     Text(
                         text = WyrStrings.votedProgress(lang, s.handoffIndex, s.playerIds.size),
                         modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp),
@@ -380,7 +418,7 @@ fun WouldYouRatherPlayScreen(
 
         // ── Collecting (count hands) ──
         s.phase == WyrPhase.COLLECTING && s.options.mode == WyrMode.QUICK -> AppScreen {
-            AppBar(onBack = onExit)
+            header()
             Column(
                 modifier = Modifier.weight(1f).fillMaxWidth(),
                 verticalArrangement = Arrangement.spacedBy(16.dp, Alignment.CenterVertically),
@@ -462,7 +500,7 @@ fun WouldYouRatherPlayScreen(
                 verdictPop.animateTo(1f, spring(dampingRatio = 0.6f, stiffness = 320f))
             }
             AppScreen {
-                AppBar(onBack = onExit)
+                header()
                 Column(
                     modifier = Modifier.weight(1f).fillMaxWidth(),
                     verticalArrangement = Arrangement.spacedBy(16.dp, Alignment.CenterVertically),
@@ -491,7 +529,7 @@ fun WouldYouRatherPlayScreen(
                                 overflow = TextOverflow.Ellipsis,
                             )
                             Text(
-                                text = cur.countA.toString(),
+                                text = fmtNum(cur.countA, lang),
                                 modifier = Modifier.padding(start = 8.dp),
                                 color = accent.onAccent,
                                 fontWeight = FontWeight.Black,
@@ -513,7 +551,7 @@ fun WouldYouRatherPlayScreen(
                                 overflow = TextOverflow.Ellipsis,
                             )
                             Text(
-                                text = cur.countB.toString(),
+                                text = fmtNum(cur.countB, lang),
                                 modifier = Modifier.padding(start = 8.dp),
                                 color = palette.text,
                                 fontWeight = FontWeight.Black,
@@ -587,11 +625,12 @@ fun WouldYouRatherResultsScreen(
             score = r.score,
             rank = r.rank,
             color = s.playerColors[r.id],
+            display = fmtNum(r.score, lang),
         )
     }
 
     AppScreen(scrollable = true, verticalArrangement = Arrangement.spacedBy(16.dp)) {
-        AppBar(title = WyrStrings.resultsTitle.resolve(lang), onBack = onExit)
+        GameAppBar(manifest = host.manifest, lang = lang, onClose = host::requestExit)
 
         if (scored && winners.isNotEmpty()) {
             WinnerBanner(

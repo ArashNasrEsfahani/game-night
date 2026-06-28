@@ -13,7 +13,10 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
@@ -33,11 +36,11 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.gamenight.party.game.Sfx
 import com.gamenight.party.model.ColorToken
+import com.gamenight.party.model.GameManifest
 import com.gamenight.party.model.Lang
 import com.gamenight.party.model.PlayerSeat
 import com.gamenight.party.sound.Haptics
 import com.gamenight.party.sound.SoundId
-import com.gamenight.party.ui.components.AppBar
 import com.gamenight.party.ui.components.AppButton
 import com.gamenight.party.ui.components.AppCard
 import com.gamenight.party.ui.components.AppScreen
@@ -45,6 +48,7 @@ import com.gamenight.party.ui.components.ButtonVariant
 import com.gamenight.party.ui.components.ButtonSize
 import com.gamenight.party.ui.components.Chip
 import com.gamenight.party.ui.components.Curtain
+import com.gamenight.party.ui.components.GameAppBar
 import com.gamenight.party.ui.components.Leaderboard
 import com.gamenight.party.ui.components.PillShape
 import com.gamenight.party.ui.components.ScoreRow
@@ -57,6 +61,7 @@ import com.gamenight.party.ui.theme.Accents
 import com.gamenight.party.ui.theme.LocalAccent
 import com.gamenight.party.ui.theme.LocalPalette
 import com.gamenight.party.ui.theme.accent
+import com.gamenight.party.ui.screens.fmtNum
 
 /**
  * The three "Never Have I Ever" screens — a Compose port of screens/{Setup,Play,Results}Screen.tsx
@@ -73,6 +78,18 @@ private fun tr(lang: Lang, en: String, fa: String): String = if (lang == Lang.FA
 @Composable
 private fun NhieAccent(content: @Composable () -> Unit) {
     CompositionLocalProvider(LocalAccent provides gameAccent().accent(), content = content)
+}
+
+/** AppBar trailing control that ends the match now and jumps to Results (mirrors ToD's "End game"). */
+@Composable
+private fun EndGameAction(lang: Lang, dispatch: (NhieAction) -> Unit) {
+    val palette = LocalPalette.current
+    Text(
+        text = tr(lang, "End game", "پایان بازی"),
+        color = palette.textMuted,
+        fontSize = 14.sp,
+        modifier = Modifier.clickable { dispatch(NhieAction.EndGame) },
+    )
 }
 
 /** An emoji that springs in (the heart-break / skull punch from the web's reveal animations). */
@@ -95,7 +112,8 @@ fun NeverHaveIEverSetupScreen(
     players: List<PlayerSeat>,
     content: NhieContent,
     lang: Lang,
-    onExit: () -> Unit,
+    manifest: GameManifest,
+    onClose: () -> Unit,
     onStart: (NhieConfig) -> Unit,
 ) = NhieAccent {
     val palette = LocalPalette.current
@@ -107,134 +125,148 @@ fun NeverHaveIEverSetupScreen(
     val config = NhieConfig(players = seats, content = content, lang = lang, options = opts)
     val errors = validateConfig(config)
     val poolSize = content.getDeck(opts.intensities).size
+    val poolText = fmtNum(poolSize, lang)
 
-    AppScreen(scrollable = true, verticalArrangement = Arrangement.spacedBy(20.dp)) {
-        AppBar(title = tr(lang, "Never Have I Ever", "من هیچ‌وقت"), onBack = onExit)
+    // Fixed top bar + a scrolling options area + a pinned Start button, so Start is always reachable.
+    AppScreen(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+        GameAppBar(manifest = manifest, lang = lang, onClose = onClose)
 
-        // Players
-        Text(
-            text = tr(lang, "Players", "بازیکنان") + " · ${seats.size}",
-            color = palette.textMuted,
-            fontWeight = FontWeight.SemiBold,
-            fontSize = 14.sp,
-        )
-        FlowRow(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.spacedBy(8.dp),
-            verticalArrangement = Arrangement.spacedBy(8.dp),
-        ) {
-            players.forEach { p ->
-                SelectChip(
-                    selected = p.id in selected,
-                    onClick = { selected = if (p.id in selected) selected - p.id else selected + p.id },
-                    text = (p.emoji?.let { "$it " } ?: "") + p.name,
-                )
-            }
-        }
-
-        // Mode (the primary gameplay choice)
-        Text(text = tr(lang, "Mode", "حالت"), color = palette.text, fontSize = 14.sp)
-        SegmentedControl(
-            value = opts.mode,
-            onChange = { opts = opts.copy(mode = it) },
-            options = listOf(
-                SegmentOption(NhieMode.CLASSIC, tr(lang, "Classic (lives)", "کلاسیک (جان)")),
-                SegmentOption(NhieMode.POINTS, tr(lang, "Points", "امتیازی")),
-            ),
-            modifier = Modifier.fillMaxWidth(),
-        )
-
-        // More options
-        Text(
-            text = (if (showMore) "▾ " else "▸ ") + tr(lang, "More options", "گزینه‌های بیشتر"),
-            color = palette.textMuted,
-            fontWeight = FontWeight.SemiBold,
-            fontSize = 14.sp,
+        Column(
             modifier = Modifier
+                .weight(1f)
                 .fillMaxWidth()
-                .clip(PillShape)
-                .clickable { showMore = !showMore }
-                .padding(vertical = 4.dp),
-        )
-
-        if (showMore) {
-            // Answer style
-            Text(text = tr(lang, "Answer style", "نحوه پاسخ"), color = palette.text, fontSize = 14.sp)
-            SegmentedControl(
-                value = opts.revealMode,
-                onChange = { opts = opts.copy(revealMode = it) },
-                options = listOf(
-                    SegmentOption(RevealMode.SEQUENTIAL, tr(lang, "Pass & hide", "چرخاندن و پنهان")),
-                    SegmentOption(RevealMode.HONOR, tr(lang, "Honor count", "شمارش افتخاری")),
-                ),
-                modifier = Modifier.fillMaxWidth(),
+                .verticalScroll(rememberScrollState()),
+            verticalArrangement = Arrangement.spacedBy(20.dp),
+        ) {
+            // Players
+            Text(
+                text = tr(lang, "Players", "بازیکنان") + " · " + fmtNum(seats.size, lang),
+                color = palette.textMuted,
+                fontWeight = FontWeight.SemiBold,
+                fontSize = 14.sp,
             )
-
-            // Intensity chips
-            Text(text = tr(lang, "Intensity", "شدت"), color = palette.text, fontSize = 14.sp)
             FlowRow(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
                 verticalArrangement = Arrangement.spacedBy(8.dp),
             ) {
-                INTENSITIES.forEach { i ->
+                players.forEach { p ->
                     SelectChip(
-                        selected = i in opts.intensities,
-                        onClick = {
-                            opts = opts.copy(
-                                intensities = if (i in opts.intensities) opts.intensities - i else opts.intensities + i,
-                            )
-                        },
-                        text = intensityLabel(i).resolve(lang),
+                        selected = p.id in selected,
+                        onClick = { selected = if (p.id in selected) selected - p.id else selected + p.id },
+                        text = (p.emoji?.let { "$it " } ?: "") + p.name,
                     )
                 }
             }
 
-            // Lives (classic only)
-            if (opts.mode == NhieMode.CLASSIC) {
+            // Mode (the primary gameplay choice)
+            Text(text = tr(lang, "Mode", "حالت"), color = palette.text, fontSize = 14.sp)
+            SegmentedControl(
+                value = opts.mode,
+                onChange = { opts = opts.copy(mode = it) },
+                options = listOf(
+                    SegmentOption(NhieMode.CLASSIC, tr(lang, "Classic (lives)", "کلاسیک (جان)")),
+                    SegmentOption(NhieMode.POINTS, tr(lang, "Points", "امتیازی")),
+                ),
+                modifier = Modifier.fillMaxWidth(),
+            )
+
+            // More options
+            Text(
+                text = (if (showMore) "▾ " else "▸ ") + tr(lang, "More options", "گزینه‌های بیشتر"),
+                color = palette.textMuted,
+                fontWeight = FontWeight.SemiBold,
+                fontSize = 14.sp,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clip(PillShape)
+                    .clickable { showMore = !showMore }
+                    .padding(vertical = 4.dp),
+            )
+
+            if (showMore) {
+                // Answer style
+                Text(text = tr(lang, "Answer style", "نحوه پاسخ"), color = palette.text, fontSize = 14.sp)
+                SegmentedControl(
+                    value = opts.revealMode,
+                    onChange = { opts = opts.copy(revealMode = it) },
+                    options = listOf(
+                        SegmentOption(RevealMode.SEQUENTIAL, tr(lang, "Pass & hide", "چرخاندن و پنهان")),
+                        SegmentOption(RevealMode.HONOR, tr(lang, "Honor count", "شمارش افتخاری")),
+                    ),
+                    modifier = Modifier.fillMaxWidth(),
+                )
+
+                // Intensity chips
+                Text(text = tr(lang, "Intensity", "شدت"), color = palette.text, fontSize = 14.sp)
+                FlowRow(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                    verticalArrangement = Arrangement.spacedBy(8.dp),
+                ) {
+                    INTENSITIES.forEach { i ->
+                        SelectChip(
+                            selected = i in opts.intensities,
+                            onClick = {
+                                opts = opts.copy(
+                                    intensities = if (i in opts.intensities) opts.intensities - i else opts.intensities + i,
+                                )
+                            },
+                            text = intensityLabel(i).resolve(lang),
+                        )
+                    }
+                }
+
+                // Lives (classic only)
+                if (opts.mode == NhieMode.CLASSIC) {
+                    Stepper(
+                        label = tr(lang, "Starting lives", "جان اولیه"),
+                        value = opts.startingLives,
+                        min = 1,
+                        max = 20,
+                        onValueChange = { opts = opts.copy(startingLives = it) },
+                        modifier = Modifier.fillMaxWidth(),
+                    )
+                }
+
+                // Statements
                 Stepper(
-                    label = tr(lang, "Starting lives", "جان اولیه"),
-                    value = opts.startingLives,
+                    label = tr(lang, "Statements", "جمله‌ها"),
+                    value = opts.deckSize.coerceAtMost(maxOf(1, poolSize)),
                     min = 1,
-                    max = 20,
-                    onValueChange = { opts = opts.copy(startingLives = it) },
+                    max = maxOf(1, poolSize),
+                    onValueChange = { opts = opts.copy(deckSize = it) },
                     modifier = Modifier.fillMaxWidth(),
                 )
             }
 
-            // Statements
-            Stepper(
-                label = tr(lang, "Statements", "جمله‌ها"),
-                value = opts.deckSize.coerceAtMost(maxOf(1, poolSize)),
-                min = 1,
-                max = maxOf(1, poolSize),
-                onValueChange = { opts = opts.copy(deckSize = it) },
-                modifier = Modifier.fillMaxWidth(),
+            Text(
+                text = tr(lang, "$poolText statements available", "$poolText جمله موجود است"),
+                color = palette.textMuted,
+                fontSize = 14.sp,
             )
-        }
 
-        Text(
-            text = tr(lang, "$poolSize statements available", "$poolSize جمله موجود است"),
-            color = palette.textMuted,
-            fontSize = 14.sp,
-        )
-
-        if (errors != null) {
-            Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
-                errors.forEach { e ->
-                    Text(text = e.resolve(lang), color = Accents.RoseStrong, fontSize = 14.sp)
+            if (errors != null) {
+                Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
+                    errors.forEach { e ->
+                        Text(text = e.resolve(lang), color = Accents.RoseStrong, fontSize = 14.sp)
+                    }
                 }
             }
         }
 
-        AppButton(
-            text = tr(lang, "Start", "شروع"),
-            onClick = { onStart(config) },
-            size = ButtonSize.LG,
-            fullWidth = true,
-            enabled = errors == null,
-        )
-        Spacer(Modifier.padding(bottom = 8.dp))
+        // Pinned Start button — a distinct GOLD accent (the crown colour) so it stands apart from the
+        // rose option controls, full width, always reachable at the bottom.
+        CompositionLocalProvider(LocalAccent provides ColorToken.GOLD.accent()) {
+            AppButton(
+                text = tr(lang, "Start", "شروع"),
+                onClick = { onStart(config) },
+                size = ButtonSize.LG,
+                fullWidth = true,
+                enabled = errors == null,
+            )
+        }
+        Spacer(Modifier.height(4.dp))
     }
 }
 
@@ -247,27 +279,28 @@ fun NeverHaveIEverPlayScreen(
     lang: Lang,
     sound: Sfx,
     haptics: Haptics,
+    manifest: GameManifest,
     dispatch: (NhieAction) -> Unit,
-    onExit: () -> Unit,
+    onClose: () -> Unit,
     onRematch: () -> Unit,
 ) = NhieAccent {
     when (state.phase) {
-        NhiePhase.ERROR -> ErrorView(lang, onExit, onRematch)
-        NhiePhase.STATEMENT -> StatementView(state, content, lang, dispatch, onExit)
+        NhiePhase.ERROR -> ErrorView(lang, manifest, onClose, onRematch)
+        NhiePhase.STATEMENT -> StatementView(state, content, lang, manifest, dispatch, onClose)
         NhiePhase.ANSWERING ->
             if (state.options.revealMode == RevealMode.SEQUENTIAL)
-                SequentialView(state, content, lang, sound, haptics, dispatch, onExit)
-            else HonorView(state, content, lang, dispatch, onExit)
-        NhiePhase.REVEAL -> RevealView(state, content, lang, sound, haptics, dispatch, onExit)
+                SequentialView(state, content, lang, sound, haptics, manifest, dispatch, onClose)
+            else HonorView(state, content, lang, manifest, dispatch, onClose)
+        NhiePhase.REVEAL -> RevealView(state, content, lang, sound, haptics, manifest, dispatch, onClose)
         NhiePhase.RESULTS -> Unit // routed to the Results screen by the host
     }
 }
 
 @Composable
-private fun ErrorView(lang: Lang, onExit: () -> Unit, onRematch: () -> Unit) {
+private fun ErrorView(lang: Lang, manifest: GameManifest, onClose: () -> Unit, onRematch: () -> Unit) {
     val palette = LocalPalette.current
     AppScreen {
-        AppBar(title = tr(lang, "Never Have I Ever", "من هیچ‌وقت"), onBack = onExit)
+        GameAppBar(manifest = manifest, lang = lang, onClose = onClose)
         Column(
             modifier = Modifier.weight(1f).fillMaxWidth(),
             verticalArrangement = Arrangement.spacedBy(16.dp, Alignment.CenterVertically),
@@ -284,15 +317,17 @@ private fun StatementView(
     s: NhieState,
     content: NhieContent,
     lang: Lang,
+    manifest: GameManifest,
     dispatch: (NhieAction) -> Unit,
-    onExit: () -> Unit,
+    onClose: () -> Unit,
 ) {
     val palette = LocalPalette.current
     val stmt = s.currentStatementId?.let { content.byId[it] }
     val stmtText = stmt?.text?.resolve(lang) ?: ""
+    val roundText = fmtNum(s.roundIndex + 1, lang)
     AppScreen(horizontalAlignment = Alignment.CenterHorizontally) {
-        AppBar(onBack = onExit)
-        ScoreStrip(s)
+        GameAppBar(manifest = manifest, lang = lang, onClose = onClose, trailing = { EndGameAction(lang, dispatch) })
+        ScoreStrip(s, lang)
         Column(
             modifier = Modifier.weight(1f).fillMaxWidth(),
             verticalArrangement = Arrangement.spacedBy(16.dp, Alignment.CenterVertically),
@@ -300,7 +335,7 @@ private fun StatementView(
         ) {
             Chip(text = intensityLabel(stmt?.intensity ?: NhieIntensity.CLASSIC).resolve(lang))
             Text(
-                text = tr(lang, "Round ${s.roundIndex + 1}", "دور ${s.roundIndex + 1}"),
+                text = tr(lang, "Round $roundText", "دور $roundText"),
                 color = palette.textMuted,
                 fontWeight = FontWeight.SemiBold,
                 fontSize = 14.sp,
@@ -344,14 +379,15 @@ private fun SequentialView(
     lang: Lang,
     sound: Sfx,
     haptics: Haptics,
+    manifest: GameManifest,
     dispatch: (NhieAction) -> Unit,
-    onExit: () -> Unit,
+    onClose: () -> Unit,
 ) {
     val palette = LocalPalette.current
     val done = allAnswered(s)
     val stmtText = s.currentStatementId?.let { content.byId[it]?.text?.resolve(lang) } ?: ""
     AppScreen {
-        AppBar(onBack = onExit)
+        GameAppBar(manifest = manifest, lang = lang, onClose = onClose, trailing = { EndGameAction(lang, dispatch) })
         if (done) {
             Column(
                 modifier = Modifier.weight(1f).fillMaxWidth(),
@@ -434,15 +470,16 @@ private fun HonorView(
     s: NhieState,
     content: NhieContent,
     lang: Lang,
+    manifest: GameManifest,
     dispatch: (NhieAction) -> Unit,
-    onExit: () -> Unit,
+    onClose: () -> Unit,
 ) {
     val palette = LocalPalette.current
     val alive = s.players.filter { !it.eliminated }
     var honorSel by remember(s.roundIndex) { mutableStateOf(emptySet<String>()) }
     val stmtText = s.currentStatementId?.let { content.byId[it]?.text?.resolve(lang) } ?: ""
     AppScreen {
-        AppBar(onBack = onExit)
+        GameAppBar(manifest = manifest, lang = lang, onClose = onClose, trailing = { EndGameAction(lang, dispatch) })
         Column(
             modifier = Modifier.weight(1f).fillMaxWidth(),
             verticalArrangement = Arrangement.spacedBy(16.dp),
@@ -458,7 +495,7 @@ private fun HonorView(
             )
             Text(
                 text = tr(lang, "Tap everyone who has", "روی هر کسی که انجام داده بزن") + " · " +
-                    tr(lang, "${honorSel.size} confessed", "${honorSel.size} اعتراف"),
+                    tr(lang, "${fmtNum(honorSel.size, lang)} confessed", "${fmtNum(honorSel.size, lang)} اعتراف"),
                 modifier = Modifier.fillMaxWidth(),
                 color = palette.textMuted,
                 fontSize = 14.sp,
@@ -509,8 +546,9 @@ private fun RevealView(
     lang: Lang,
     sound: Sfx,
     haptics: Haptics,
+    manifest: GameManifest,
     dispatch: (NhieAction) -> Unit,
-    onExit: () -> Unit,
+    onClose: () -> Unit,
 ) {
     val palette = LocalPalette.current
     val lr = s.lastResult
@@ -534,8 +572,8 @@ private fun RevealView(
         pop.animateTo(1f, spring(dampingRatio = 0.5f, stiffness = 320f))
     }
     AppScreen(horizontalAlignment = Alignment.CenterHorizontally) {
-        AppBar(onBack = onExit)
-        ScoreStrip(s, justLost = justLost, justEliminated = justEliminated)
+        GameAppBar(manifest = manifest, lang = lang, onClose = onClose, trailing = { EndGameAction(lang, dispatch) })
+        ScoreStrip(s, lang, justLost = justLost, justEliminated = justEliminated)
         Column(
             modifier = Modifier.weight(1f).fillMaxWidth(),
             verticalArrangement = Arrangement.spacedBy(16.dp, Alignment.CenterVertically),
@@ -592,6 +630,7 @@ private fun RevealView(
 @Composable
 private fun ScoreStrip(
     s: NhieState,
+    lang: Lang,
     justLost: Set<String> = emptySet(),
     justEliminated: Set<String> = emptySet(),
 ) {
@@ -619,12 +658,12 @@ private fun ScoreStrip(
                         if (p.id in justEliminated) PopEmoji("💀", 14.sp) else Text("💀", fontSize = 14.sp)
                     classic -> {
                         Text(
-                            text = if (p.lives <= 5) "❤️".repeat(p.lives.coerceAtLeast(0)) else "❤️ ${p.lives}",
+                            text = if (p.lives <= 5) "❤️".repeat(p.lives.coerceAtLeast(0)) else "❤️ " + fmtNum(p.lives, lang),
                             fontSize = 12.sp,
                         )
                         if (p.id in justLost) PopEmoji("💔", 14.sp)
                     }
-                    else -> Text(text = "· ${p.haveCount}", color = palette.textMuted, fontSize = 12.sp)
+                    else -> Text(text = "· " + fmtNum(p.haveCount, lang), color = palette.textMuted, fontSize = 12.sp)
                 }
             }
         }
@@ -639,6 +678,8 @@ fun NeverHaveIEverResultsScreen(
     lang: Lang,
     sound: Sfx,
     haptics: Haptics,
+    manifest: GameManifest,
+    onClose: () -> Unit,
     onExit: () -> Unit,
     onRematch: () -> Unit,
 ) = NhieAccent {
@@ -658,16 +699,18 @@ fun NeverHaveIEverResultsScreen(
 
     val ranked = rankPlayers(s)
     val rows = ranked.mapIndexed { i, p ->
+        val score = if (classic) p.lives else p.haveCount
         ScoreRow(
             id = p.id,
             label = s.playerNames[p.id] ?: p.id,
-            score = if (classic) p.lives else p.haveCount,
+            score = score,
             rank = i + 1,
+            display = fmtNum(score, lang),
         )
     }
 
     AppScreen(scrollable = true, verticalArrangement = Arrangement.spacedBy(16.dp)) {
-        AppBar(title = tr(lang, "Results", "نتایج"), onBack = onExit)
+        GameAppBar(manifest = manifest, lang = lang, onClose = onClose)
         WinnerBanner(title = title, names = winnerNames)
         Text(
             text = if (classic) tr(lang, "Lives remaining", "جان باقی‌مانده")

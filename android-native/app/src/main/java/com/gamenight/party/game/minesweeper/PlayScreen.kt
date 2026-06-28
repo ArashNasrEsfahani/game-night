@@ -3,6 +3,7 @@ package com.gamenight.party.game.minesweeper
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.spring
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -29,14 +30,17 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.gamenight.party.game.Sfx
 import com.gamenight.party.model.ColorToken
+import com.gamenight.party.model.GameManifest
 import com.gamenight.party.model.Lang
 import com.gamenight.party.sound.Haptics
 import com.gamenight.party.sound.SoundId
-import com.gamenight.party.ui.components.AppBar
 import com.gamenight.party.ui.components.AppScreen
+import com.gamenight.party.ui.components.GameAppBar
 import com.gamenight.party.ui.components.PillShape
 import com.gamenight.party.ui.components.glass2Surface
 import com.gamenight.party.ui.components.screenEntrance
+import com.gamenight.party.ui.screens.faDigits
+import com.gamenight.party.ui.screens.fmtNum
 import com.gamenight.party.ui.theme.Accents
 import com.gamenight.party.ui.theme.LocalAccent
 import com.gamenight.party.ui.theme.LocalPalette
@@ -55,8 +59,9 @@ private fun fmtClock(sec: Int): String = "${sec / 60}:${(sec % 60).toString().pa
 fun MinesweeperPlayScreen(
     state: MinesweeperState,
     lang: Lang,
+    manifest: GameManifest,
     dispatch: (MinesweeperAction) -> Unit,
-    onExit: () -> Unit,
+    onClose: () -> Unit,
     sound: Sfx = Sfx.None,
     haptics: Haptics = Haptics.none(),
 ) {
@@ -103,7 +108,19 @@ fun MinesweeperPlayScreen(
         }
 
         AppScreen {
-            AppBar(title = loc(lang, "Mine Hunt", "مین‌یاب"), onBack = onExit)
+            GameAppBar(
+                manifest = manifest,
+                lang = lang,
+                onClose = onClose,
+                trailing = {
+                    Text(
+                        text = loc(lang, "End game", "پایان بازی"),
+                        color = palette.textMuted,
+                        fontSize = 14.sp,
+                        modifier = Modifier.clickable { dispatch(MinesweeperAction.EndGame) },
+                    )
+                },
+            )
 
             // Goal + turn line. Until the first tap seeds the board the exact mine total isn't known,
             // so show a goal prompt rather than a number that would jump.
@@ -114,7 +131,7 @@ fun MinesweeperPlayScreen(
             ) {
                 Text(
                     text = "💣 " + if (s.minesPlaced) {
-                        loc(lang, "${minesLeft(s)} to find", "${minesLeft(s)} مانده")
+                        loc(lang, "${fmtNum(minesLeft(s), lang)} to find", "${fmtNum(minesLeft(s), lang)} مانده")
                     } else {
                         loc(lang, "Find them all!", "همه را پیدا کن!")
                     },
@@ -123,7 +140,7 @@ fun MinesweeperPlayScreen(
                     fontSize = 14.sp,
                 )
                 if (solo) {
-                    Text(text = "⏱ ${fmtClock(elapsed)}", color = palette.textMuted, fontSize = 14.sp)
+                    Text(text = "⏱ ${faDigits(fmtClock(elapsed), lang)}", color = palette.textMuted, fontSize = 14.sp)
                 } else {
                     // Re-key on the active seat so the name pops in on every turn hand-off
                     // (mirrors the web spring-in keyed on active.id).
@@ -164,7 +181,7 @@ fun MinesweeperPlayScreen(
                                 .padding(horizontal = 10.dp, vertical = 5.dp),
                         ) {
                             Text(
-                                text = "${se.name} · 💣 ${se.score}",
+                                text = "${se.name} · 💣 ${fmtNum(se.score, lang)}",
                                 color = if (isActive) accent.onAccent else palette.textMuted,
                                 fontWeight = FontWeight.SemiBold,
                                 fontSize = 12.sp,

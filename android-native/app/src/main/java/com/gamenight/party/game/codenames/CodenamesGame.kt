@@ -30,16 +30,19 @@ object CodenamesGame : GameEntry {
                 content = content,
                 players = players,
                 lang = host.lang,
+                manifest = host.manifest,
                 onStart = { state = it },
-                onExit = host::exit,
+                onClose = host::requestExit,
             )
 
             current.finished -> CodenamesResultsScreen(
                 state = current,
                 lang = host.lang,
+                manifest = host.manifest,
                 sound = host.sound,
                 haptics = host.haptics,
                 onPlayAgain = { state = null }, // back to setup for a fresh board
+                onClose = host::requestExit,
                 onExit = host::exit,
             )
 
@@ -47,8 +50,10 @@ object CodenamesGame : GameEntry {
                 state = current,
                 dispatch = { action -> state?.let { state = reducer(it, action) } },
                 lang = host.lang,
+                manifest = host.manifest,
                 sound = host.sound,
                 haptics = host.haptics,
+                onClose = host::requestExit,
                 onExit = host::exit,
             )
         }

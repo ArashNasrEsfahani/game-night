@@ -15,17 +15,19 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.gamenight.party.game.Sfx
 import com.gamenight.party.model.ColorToken
+import com.gamenight.party.model.GameManifest
 import com.gamenight.party.model.Lang
 import com.gamenight.party.sound.Haptics
 import com.gamenight.party.sound.SoundId
-import com.gamenight.party.ui.components.AppBar
 import com.gamenight.party.ui.components.AppButton
 import com.gamenight.party.ui.components.AppScreen
 import com.gamenight.party.ui.components.ButtonSize
 import com.gamenight.party.ui.components.ButtonVariant
+import com.gamenight.party.ui.components.GameAppBar
 import com.gamenight.party.ui.components.Leaderboard
 import com.gamenight.party.ui.components.ScoreRow
 import com.gamenight.party.ui.components.WinnerBanner
+import com.gamenight.party.ui.screens.fmtNum
 import com.gamenight.party.ui.theme.LocalAccent
 import com.gamenight.party.ui.theme.accent
 
@@ -38,6 +40,8 @@ import com.gamenight.party.ui.theme.accent
 fun MinesweeperResultsScreen(
     state: MinesweeperState,
     lang: Lang,
+    manifest: GameManifest,
+    onClose: () -> Unit,
     onExit: () -> Unit,
     onPlayAgain: () -> Unit,
     sound: Sfx = Sfx.None,
@@ -71,12 +75,12 @@ fun MinesweeperResultsScreen(
                 score = r.score,
                 rank = r.rank,
                 color = r.color,
-                display = loc(lang, "${r.score} mines", "${r.score} مین"),
+                display = loc(lang, "${fmtNum(r.score, lang)} mines", "${fmtNum(r.score, lang)} مین"),
             )
         }
 
         AppScreen(scrollable = true) {
-            AppBar(title = loc(lang, "Results", "نتایج"), onBack = onExit)
+            GameAppBar(manifest = manifest, lang = lang, onClose = onClose)
 
             Column(
                 modifier = Modifier.fillMaxWidth().padding(bottom = 24.dp),

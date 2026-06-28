@@ -54,7 +54,8 @@ object MinesweeperGame : GameEntry {
                 MountPhase.SETUP -> MinesweeperSetupScreen(
                     roster = players,
                     lang = host.lang,
-                    onExit = host::exit,
+                    manifest = host.manifest,
+                    onClose = host::requestExit,
                     onStart = { cfg ->
                         config = cfg
                         val st = createInitialState(cfg, Random.nextInt())
@@ -66,6 +67,7 @@ object MinesweeperGame : GameEntry {
                 MountPhase.PLAY -> MinesweeperPlayScreen(
                     state = state!!,
                     lang = host.lang,
+                    manifest = host.manifest,
                     dispatch = { action ->
                         val cur = state
                         if (cur != null) {
@@ -74,7 +76,7 @@ object MinesweeperGame : GameEntry {
                             if (next.phase == MinePhase.GAME_OVER) phase = MountPhase.RESULTS
                         }
                     },
-                    onExit = host::exit,
+                    onClose = host::requestExit,
                     sound = host.sound,
                     haptics = host.haptics,
                 )
@@ -82,6 +84,8 @@ object MinesweeperGame : GameEntry {
                 MountPhase.RESULTS -> MinesweeperResultsScreen(
                     state = state!!,
                     lang = host.lang,
+                    manifest = host.manifest,
+                    onClose = host::requestExit,
                     onExit = host::exit,
                     sound = host.sound,
                     haptics = host.haptics,

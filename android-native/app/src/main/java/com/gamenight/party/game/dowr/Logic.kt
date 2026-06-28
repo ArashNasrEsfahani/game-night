@@ -188,6 +188,8 @@ sealed interface DowrAction {
     data class ChangeWord(val seed: Int) : DowrAction
     /** TIME mode only: the shared clock ran out mid-word; bank the real seconds and end the match. */
     data class EndTime(val segmentMs: Long) : DowrAction
+    /** Manual end: lock the match where it stands and show the results-so-far. */
+    data object EndGame : DowrAction
     data object ClearFlash : DowrAction
     data object Reset : DowrAction
 }
@@ -399,6 +401,21 @@ fun reducer(state: DowrState, action: DowrAction): DowrState {
             val totals = s.totals + (team.id to ((s.totals[team.id] ?: 0L) + segmentMs))
             s.copy(
                 totals = totals,
+                phase = DowrPhase.GAME_OVER,
+                finished = true,
+                currentCard = null,
+                flashBomb = false,
+                turnChanges = 0,
+                changePenaltyMs = 0L,
+            )
+        }
+
+        is DowrAction.EndGame -> {
+            // Manual end: lock the match where it stands and show the results-so-far. The in-progress
+            // word's live segment is intentionally NOT banked (mirrors ToD's EndGame). Standings/winners
+            // derive purely from the banked totals + history, so the Results screen renders fine.
+            if (s.phase != DowrPhase.PLAYING) s
+            else s.copy(
                 phase = DowrPhase.GAME_OVER,
                 finished = true,
                 currentCard = null,

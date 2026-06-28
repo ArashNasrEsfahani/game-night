@@ -124,6 +124,7 @@ sealed interface MafiaAction {
     data class ResolveVote(val seed: Int) : MafiaAction
     object AckVoteResult : MafiaAction
     data class AbortGame(val winner: MafiaWinner? = null) : MafiaAction
+    object EndGame : MafiaAction
 }
 
 /* ─────────────────────────  Pure helpers  ───────────────────────── */
@@ -614,6 +615,18 @@ fun reducer(state: MafiaState, action: MafiaAction): MafiaState {
         is MafiaAction.AbortGame -> {
             if (s.phase == MafiaPhase.ENDED) return s
             s.copy(phase = MafiaPhase.ENDED, finished = true, winner = action.winner)
+        }
+
+        is MafiaAction.EndGame -> {
+            // Manually end the match and show Results with the standings/winner so far.
+            if (s.phase == MafiaPhase.ENDED) return s
+            val w = checkWin(s.players)
+            s.copy(
+                phase = MafiaPhase.ENDED,
+                finished = true,
+                winner = w,
+                log = if (w != null) s.log + MafiaLogEntry.Win(round = s.round, winner = w) else s.log,
+            )
         }
     }
 }

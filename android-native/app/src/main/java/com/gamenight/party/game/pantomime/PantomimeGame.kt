@@ -50,7 +50,8 @@ object PantomimeGame : GameEntry {
                     players = players,
                     content = content,
                     lang = host.lang,
-                    onExit = host::exit,
+                    manifest = host.manifest,
+                    onClose = host::requestExit,
                     onStart = { newConfig ->
                         config = newConfig
                         state = createInitialState(newConfig, content, pantomimeSeed())
@@ -62,9 +63,11 @@ object PantomimeGame : GameEntry {
                 PantomimeResultsScreen(
                     state = s,
                     lang = host.lang,
+                    manifest = host.manifest,
                     sound = host.sound,
                     haptics = host.haptics,
-                    onExit = host::exit,
+                    onClose = host::requestExit,
+                    onHome = host::exit,
                     onPlayAgain = { state = createInitialState(cfg, content, pantomimeSeed()) },
                 )
             }
@@ -74,10 +77,11 @@ object PantomimeGame : GameEntry {
                     state = s,
                     content = content,
                     lang = host.lang,
+                    manifest = host.manifest,
                     sound = host.sound,
                     haptics = host.haptics,
                     dispatch = { action -> state = state?.let { reducer(it, action) } },
-                    onExit = host::exit,
+                    onClose = host::requestExit,
                     // Error phase offers "play again"; re-create the match from the same config.
                     onPlayAgain = { state = createInitialState(cfg, content, pantomimeSeed()) },
                 )

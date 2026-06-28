@@ -34,16 +34,20 @@ object TruthOrDareGame : GameEntry {
                 s == null -> TruthOrDareSetupScreen(
                     players = players,
                     lang = host.lang,
+                    manifest = host.manifest,
                     content = content,
                     onStart = { state = it },
-                    onExit = { host.exit() },
+                    // Shared chrome Close → host confirm (system back funnels through the same dialog).
+                    onClose = host::requestExit,
                 )
 
                 s.finished -> TruthOrDareResultsScreen(
                     state = s,
                     lang = host.lang,
+                    manifest = host.manifest,
                     onPlayAgain = { state = null },
                     onExit = { host.exit() },
+                    onClose = host::requestExit,
                     // UI-layer feedback cues (sound/haptics are effects, never fired in the reducer).
                     sound = host.sound,
                     haptics = host.haptics,
@@ -52,10 +56,12 @@ object TruthOrDareGame : GameEntry {
                 else -> TruthOrDarePlayScreen(
                     state = s,
                     lang = host.lang,
+                    manifest = host.manifest,
                     content = content,
                     // Reading `state` (not the captured `s`) keeps the reducer fed the latest value.
                     dispatch = { action -> state = state?.let { reducer(it, action) } },
                     onExit = { host.exit() },
+                    onClose = host::requestExit,
                     // UI-layer feedback cues (sound/haptics are effects, never fired in the reducer).
                     sound = host.sound,
                     haptics = host.haptics,

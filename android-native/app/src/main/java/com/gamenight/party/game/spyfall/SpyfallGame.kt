@@ -43,13 +43,16 @@ object SpyfallGame : GameEntry {
                 current == null -> SpyfallSetupScreen(
                     players = players,
                     lang = host.lang,
-                    onBack = host::exit,
+                    manifest = host.manifest,
+                    onClose = host::requestExit,
                     onStart = { config -> state = createInitialState(config, Random.nextInt()) },
                 )
                 current.finished -> SpyfallResultsScreen(
                     state = current,
                     lang = host.lang,
+                    manifest = host.manifest,
                     onPlayAgain = { state = null },
+                    onClose = host::requestExit,
                     onExit = host::exit,
                     sound = host.sound,
                     haptics = host.haptics,
@@ -57,6 +60,8 @@ object SpyfallGame : GameEntry {
                 else -> SpyfallPlayScreen(
                     state = current,
                     lang = host.lang,
+                    manifest = host.manifest,
+                    onClose = host::requestExit,
                     onExit = host::exit,
                     dispatch = dispatch,
                     sound = host.sound,

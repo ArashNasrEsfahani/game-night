@@ -33,8 +33,7 @@ object WouldYouRatherGame : GameEntry {
             current == null -> WouldYouRatherSetupScreen(
                 content = content,
                 players = players,
-                lang = host.lang,
-                onExit = host::exit,
+                host = host,
                 onStart = { state = it },
             )
 
@@ -52,7 +51,6 @@ object WouldYouRatherGame : GameEntry {
                 // Read the LATEST state at dispatch time so multi-dispatch handlers (CHOOSE then
                 // ADVANCE_HANDOFF in one tap) compose correctly instead of racing a stale snapshot.
                 dispatch = { action -> state = state?.let { reducer(it, action) } },
-                onExit = host::exit,
                 onPlayAgain = { state = null },
             )
         }

@@ -1,10 +1,24 @@
 import com.android.build.gradle.tasks.MergeSourceSetFolders
+import java.util.Properties
 
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.kotlin.serialization)
+}
+
+// Name build artifacts properly: GameNight-1.0-debug.apk / GameNight-1.0-release.apk
+// (instead of the default app-debug.apk).
+base {
+    archivesName.set("GameNight-1.0")
+}
+
+// Release signing — credentials come from a gitignored keystore.properties (never committed).
+// If that file is absent (fresh clone / CI without secrets), release builds just stay unsigned.
+val keystorePropsFile = rootProject.file("keystore.properties")
+val keystoreProps = Properties().apply {
+    if (keystorePropsFile.exists()) keystorePropsFile.inputStream().use { load(it) }
 }
 
 android {
@@ -20,11 +34,26 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    signingConfigs {
+        create("release") {
+            if (keystorePropsFile.exists()) {
+                storeFile = file(keystoreProps.getProperty("storeFile"))
+                storePassword = keystoreProps.getProperty("storePassword")
+                keyAlias = keystoreProps.getProperty("keyAlias")
+                keyPassword = keystoreProps.getProperty("keyPassword")
+            }
+        }
+    }
+
     buildTypes {
         release {
-            isMinifyEnabled = true
-            isShrinkResources = true
+            // Signed for trusted sideloading. Minification stays OFF for now so the release build
+            // behaves exactly like the verified debug build; R8 (with the Compose/serialization
+            // keep-rules in proguard-rules.pro) can be enabled later once test-verified on a device.
+            isMinifyEnabled = false
+            isShrinkResources = false
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            if (keystorePropsFile.exists()) signingConfig = signingConfigs.getByName("release")
         }
     }
     compileOptions {
@@ -92,8 +121,8 @@ val syncSharedContent by tasks.registering {
                 val dest = contentRoot.resolve(game).apply { mkdirs() }
                 val strip = strippedIntensities[game]
                 val kept = mutableListOf<String>()
-                jsons.forEach { src ->
-                    if ("$game/${src.name}" in excludedFiles) return@forEach // drop whole 18+ file
+                jsons.forEach inner@{ src ->
+                    if ("$game/${src.name}" in excludedFiles) return@inner // drop whole 18+ file
                     val target = dest.resolve(src.name)
                     val parsed = if (strip != null) slurper.parse(src, "UTF-8") else null
                     val keep = { item: Any? ->

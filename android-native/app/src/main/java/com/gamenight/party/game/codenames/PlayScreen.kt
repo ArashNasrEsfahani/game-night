@@ -1,6 +1,7 @@
 package com.gamenight.party.game.codenames
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -29,15 +30,16 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.gamenight.party.game.Sfx
 import com.gamenight.party.model.ColorToken
+import com.gamenight.party.model.GameManifest
 import com.gamenight.party.model.Lang
 import com.gamenight.party.sound.Haptics
 import com.gamenight.party.sound.SoundId
-import com.gamenight.party.ui.components.AppBar
 import com.gamenight.party.ui.components.AppButton
 import com.gamenight.party.ui.components.AppScreen
 import com.gamenight.party.ui.components.ButtonSize
 import com.gamenight.party.ui.components.ButtonVariant
 import com.gamenight.party.ui.components.Curtain
+import com.gamenight.party.ui.components.GameAppBar
 import com.gamenight.party.ui.components.PillShape
 import com.gamenight.party.ui.components.Stepper
 import com.gamenight.party.ui.components.glass2Surface
@@ -47,6 +49,7 @@ import com.gamenight.party.ui.theme.LocalPalette
 import com.gamenight.party.ui.theme.TeamA
 import com.gamenight.party.ui.theme.TeamB
 import com.gamenight.party.ui.theme.accent
+import com.gamenight.party.ui.screens.fmtNum
 import kotlinx.coroutines.delay
 import kotlin.math.ceil
 
@@ -61,8 +64,10 @@ fun CodenamesPlayScreen(
     state: CodenamesState,
     dispatch: (CodenamesAction) -> Unit,
     lang: Lang,
+    manifest: GameManifest,
     sound: Sfx,
     haptics: Haptics,
+    onClose: () -> Unit,
     onExit: () -> Unit,
 ) {
     val s = state
@@ -100,9 +105,21 @@ fun CodenamesPlayScreen(
     CompositionLocalProvider(LocalAccent provides ColorToken.LIME.accent()) {
         val palette = LocalPalette.current
 
+        // Always-available "End game" control: ends the match and jumps to the results with the
+        // standings so far (the team closest to clearing wins). Lives in the shared GameAppBar's
+        // trailing slot, after the built-in How-to-play button.
+        val endGameRight: @Composable () -> Unit = {
+            Text(
+                text = CnStr.endGame.resolve(lang),
+                color = palette.textMuted,
+                fontSize = 14.sp,
+                modifier = Modifier.clickable { dispatch(CodenamesAction.EndGame) },
+            )
+        }
+
         when (s.phase) {
             CodenamesPhase.ERROR -> AppScreen {
-                AppBar(title = CnStr.title.resolve(lang), onBack = onExit)
+                GameAppBar(manifest = manifest, lang = lang, onClose = onClose)
                 Box(modifier = Modifier.weight(1f).fillMaxWidth(), contentAlignment = Alignment.Center) {
                     Column(horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(16.dp)) {
                         Text(CnStr.errorSetup.resolve(lang), color = palette.textMuted, textAlign = TextAlign.Center)
@@ -112,7 +129,7 @@ fun CodenamesPlayScreen(
             }
 
             CodenamesPhase.ORIENTATION -> AppScreen {
-                AppBar(onBack = onExit)
+                GameAppBar(manifest = manifest, lang = lang, onClose = onClose, trailing = endGameRight)
                 Box(modifier = Modifier.weight(1f).fillMaxWidth(), contentAlignment = Alignment.Center) {
                     Column(horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(16.dp)) {
                         TeamBadge(currentTeamName(s), CnStr.startsFirst.resolve(lang), teamColor)
@@ -142,7 +159,7 @@ fun CodenamesPlayScreen(
             }
 
             CodenamesPhase.SPYMASTER_HANDOFF -> AppScreen {
-                AppBar(onBack = onExit)
+                GameAppBar(manifest = manifest, lang = lang, onClose = onClose, trailing = endGameRight)
                 ScoreStrip(s, lang, secondsLeft)
                 Box(modifier = Modifier.weight(1f).fillMaxWidth(), contentAlignment = Alignment.Center) {
                     Column(horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(16.dp)) {
@@ -157,7 +174,7 @@ fun CodenamesPlayScreen(
                 val max = s.remaining[s.currentTeam] ?: 0
                 val spyName = s.playerNames[currentSpymasterId(s)] ?: ""
                 AppScreen {
-                    AppBar(onBack = onExit)
+                    GameAppBar(manifest = manifest, lang = lang, onClose = onClose, trailing = endGameRight)
                     Curtain(
                         open = gateOpen,
                         holderName = spyName,
@@ -181,7 +198,7 @@ fun CodenamesPlayScreen(
             }
 
             CodenamesPhase.GUESSER_HANDOFF -> AppScreen {
-                AppBar(onBack = onExit)
+                GameAppBar(manifest = manifest, lang = lang, onClose = onClose, trailing = endGameRight)
                 Box(modifier = Modifier.weight(1f).fillMaxWidth(), contentAlignment = Alignment.Center) {
                     Column(horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(16.dp)) {
                         Text("🙈", fontSize = 56.sp)
@@ -196,7 +213,7 @@ fun CodenamesPlayScreen(
                     (it.outcome == GuessOutcome.NEUTRAL || it.outcome == GuessOutcome.WRONG_TEAM) && s.wrongGuessesThisTurn > 0
                 } ?: false
                 AppScreen {
-                    AppBar(onBack = onExit)
+                    GameAppBar(manifest = manifest, lang = lang, onClose = onClose, trailing = endGameRight)
                     ScoreStrip(s, lang, secondsLeft)
                     Text(
                         text = CnStr.clueEcho(s.activeClue?.count ?: 0, guessesLeft(s), lang),
@@ -258,7 +275,7 @@ fun CodenamesPlayScreen(
             }
 
             CodenamesPhase.TURN_END -> AppScreen {
-                AppBar(onBack = onExit)
+                GameAppBar(manifest = manifest, lang = lang, onClose = onClose, trailing = endGameRight)
                 ScoreStrip(s, lang, secondsLeft)
                 val nextName = s.teamMeta.getValue(other(s.currentTeam)).name
                 Box(modifier = Modifier.weight(1f).fillMaxWidth(), contentAlignment = Alignment.Center) {
@@ -312,25 +329,25 @@ private fun ScoreStrip(s: CodenamesState, lang: Lang, secondsLeft: Int) {
         horizontalArrangement = Arrangement.spacedBy(12.dp, Alignment.CenterHorizontally),
         verticalAlignment = Alignment.CenterVertically,
     ) {
-        TeamTag(s.teamMeta.getValue(TeamId.TEAM_A).name, s.remaining[TeamId.TEAM_A] ?: 0, TeamA, s.currentTeam == TeamId.TEAM_A)
+        TeamTag(s.teamMeta.getValue(TeamId.TEAM_A).name, s.remaining[TeamId.TEAM_A] ?: 0, TeamA, s.currentTeam == TeamId.TEAM_A, lang)
         if (s.mode == CodenamesMode.TIMED && s.phase == CodenamesPhase.GUESSING) {
             val low = secondsLeft <= 10
             Box(modifier = Modifier.glass2Surface(palette, PillShape).padding(horizontal = 12.dp, vertical = 4.dp)) {
-                Text("⏱ ${secondsLeft}s", color = if (low) TeamA else palette.text, fontWeight = FontWeight.Bold, fontSize = 13.sp)
+                Text("⏱ ${fmtNum(secondsLeft, lang)}s", color = if (low) TeamA else palette.text, fontWeight = FontWeight.Bold, fontSize = 13.sp)
             }
         }
-        TeamTag(s.teamMeta.getValue(TeamId.TEAM_B).name, s.remaining[TeamId.TEAM_B] ?: 0, TeamB, s.currentTeam == TeamId.TEAM_B)
+        TeamTag(s.teamMeta.getValue(TeamId.TEAM_B).name, s.remaining[TeamId.TEAM_B] ?: 0, TeamB, s.currentTeam == TeamId.TEAM_B, lang)
     }
 }
 
 @Composable
-private fun TeamTag(name: String, count: Int, color: Color, active: Boolean) {
+private fun TeamTag(name: String, count: Int, color: Color, active: Boolean, lang: Lang) {
     Row(
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(4.dp),
         modifier = Modifier.graphicsLayer { alpha = if (active) 1f else 0.45f },
     ) {
         if (active) Text("▶", color = color, fontSize = 12.sp)
-        Text("$name $count", color = color, fontWeight = FontWeight.Bold, fontSize = 14.sp)
+        Text("$name ${fmtNum(count, lang)}", color = color, fontWeight = FontWeight.Bold, fontSize = 14.sp)
     }
 }

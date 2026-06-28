@@ -39,7 +39,24 @@ fun interface Sfx {
 interface GameHost {
     val lang: Lang
     val content: ContentStore
+
+    /**
+     * The mounted game's catalog metadata (name, howToPlay, accent, minPlayers...). Game chrome reads
+     * this to render the shared [com.gamenight.party.ui.components.GameAppBar] title + How-to-play
+     * sheet without each screen importing the catalog. Equals the matching [GameEntry.manifest].
+     */
+    val manifest: GameManifest
+
+    /** Leave the game immediately and return to the home grid. Prefer [requestExit] from UI chrome. */
     fun exit()
+
+    /**
+     * Ask to leave the game. Unlike [exit] (which returns home at once), this first shows a bilingual
+     * "are you sure?" confirm and only calls [exit] when the player confirms. Game top bars wire their
+     * Close button to this (`onClose = host::requestExit`); the shell wires Android system-back to the
+     * same confirm, so a match is never abandoned by a stray tap.
+     */
+    fun requestExit()
 
     /** Fire a sound cue, e.g. `sound.play(SoundId.WIN)`. No-op when the user has muted sound. */
     val sound: Sfx get() = Sfx.None

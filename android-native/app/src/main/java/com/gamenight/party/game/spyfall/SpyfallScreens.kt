@@ -16,9 +16,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.gamenight.party.model.ColorToken
+import com.gamenight.party.model.GameManifest
 import com.gamenight.party.model.Lang
 import com.gamenight.party.model.PlayerSeat
-import com.gamenight.party.ui.components.AppBar
 import com.gamenight.party.ui.components.AppButton
 import com.gamenight.party.ui.components.AppCard
 import com.gamenight.party.ui.components.AppScreen
@@ -27,6 +28,7 @@ import com.gamenight.party.ui.components.ButtonSize
 import com.gamenight.party.ui.components.ButtonVariant
 import com.gamenight.party.ui.components.Chip
 import com.gamenight.party.ui.components.Curtain
+import com.gamenight.party.ui.components.GameAppBar
 import com.gamenight.party.ui.components.Leaderboard
 import com.gamenight.party.ui.components.ScoreRow
 import com.gamenight.party.ui.components.SegmentOption
@@ -35,9 +37,12 @@ import com.gamenight.party.ui.components.SelectChip
 import com.gamenight.party.ui.components.Stepper
 import com.gamenight.party.ui.components.WinnerBanner
 import com.gamenight.party.ui.components.glass2Surface
+import com.gamenight.party.ui.screens.faDigits
+import com.gamenight.party.ui.screens.fmtNum
 import com.gamenight.party.ui.theme.Accents
 import com.gamenight.party.ui.theme.LocalAccent
 import com.gamenight.party.ui.theme.LocalPalette
+import com.gamenight.party.ui.theme.accent
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.ui.composed
@@ -104,7 +109,8 @@ private fun Modifier.popIn(durationMillis: Int = 320, fromScale: Float = 0.9f): 
 fun SpyfallSetupScreen(
     players: List<PlayerSeat>,
     lang: Lang,
-    onBack: () -> Unit,
+    manifest: GameManifest,
+    onClose: () -> Unit,
     onStart: (SpyfallConfig) -> Unit,
 ) {
     val palette = LocalPalette.current
@@ -118,121 +124,135 @@ fun SpyfallSetupScreen(
     val config = SpyfallConfig(players = seats, lang = lang, options = opts.copy(spyCount = effectiveSpyCount))
     val errors = validateConfig(config)
 
-    AppScreen(scrollable = true) {
-        AppBar(title = txt(lang, "Spyfall", "جاسوس"), onBack = onBack)
+    AppScreen {
+        GameAppBar(manifest = manifest, lang = lang, onClose = onClose)
 
-        Text(
-            text = "${txt(lang, "Players", "بازیکنان")} · ${seats.size}",
-            color = palette.textMuted,
-            fontWeight = FontWeight.SemiBold,
-            fontSize = 14.sp,
-            modifier = Modifier.padding(top = 4.dp, bottom = 8.dp),
-        )
-        FlowRow(
-            horizontalArrangement = Arrangement.spacedBy(8.dp),
-            verticalArrangement = Arrangement.spacedBy(8.dp),
+        // Options scroll in the middle; the Start button stays pinned to the bottom (below), so it is
+        // always reachable no matter how many players / packs push the list past the fold.
+        Column(
+            modifier = Modifier
+                .weight(1f)
+                .fillMaxWidth()
+                .verticalScroll(rememberScrollState()),
         ) {
-            players.forEach { p ->
-                SelectChip(
-                    selected = p.id in selected,
-                    onClick = { selected = if (p.id in selected) selected - p.id else selected + p.id },
-                    text = (p.emoji?.let { "$it " } ?: "") + p.name,
-                )
-            }
-        }
-
-        Spacer(Modifier.height(20.dp))
-        Stepper(
-            value = effectiveSpyCount,
-            onValueChange = { opts = opts.copy(spyCount = it) },
-            min = 1,
-            max = cap,
-            label = txt(lang, "Spies", "جاسوس‌ها"),
-        )
-        Spacer(Modifier.height(8.dp))
-        Stepper(
-            value = opts.totalRounds,
-            onValueChange = { opts = opts.copy(totalRounds = it) },
-            min = 1,
-            max = 10,
-            label = txt(lang, "Rounds", "دورها"),
-        )
-
-        Spacer(Modifier.height(14.dp))
-        Text(
-            text = txt(lang, "Round time", "زمان دور"),
-            color = palette.text,
-            fontSize = 14.sp,
-            modifier = Modifier.padding(bottom = 6.dp),
-        )
-        SegmentedControl(
-            options = ROUND_SECONDS_CHOICES.map { SegmentOption(it, "${it / 60}m") },
-            value = opts.roundSeconds,
-            onChange = { opts = opts.copy(roundSeconds = it) },
-            modifier = Modifier.fillMaxWidth(),
-        )
-
-        if (packs.size > 1) {
-            Spacer(Modifier.height(14.dp))
             Text(
-                text = txt(lang, "Location packs", "بسته‌های مکان"),
-                color = palette.text,
+                text = "${txt(lang, "Players", "بازیکنان")} · ${fmtNum(seats.size, lang)}",
+                color = palette.textMuted,
+                fontWeight = FontWeight.SemiBold,
                 fontSize = 14.sp,
-                modifier = Modifier.padding(bottom = 6.dp),
+                modifier = Modifier.padding(top = 4.dp, bottom = 8.dp),
             )
             FlowRow(
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
                 verticalArrangement = Arrangement.spacedBy(8.dp),
             ) {
-                packs.forEach { pack ->
+                players.forEach { p ->
                     SelectChip(
-                        selected = pack.id in opts.enabledPackIds,
-                        onClick = {
-                            opts = opts.copy(
-                                enabledPackIds = if (pack.id in opts.enabledPackIds) {
-                                    opts.enabledPackIds - pack.id
-                                } else {
-                                    opts.enabledPackIds + pack.id
-                                },
-                            )
-                        },
-                        text = pack.name.resolve(lang),
+                        selected = p.id in selected,
+                        onClick = { selected = if (p.id in selected) selected - p.id else selected + p.id },
+                        text = (p.emoji?.let { "$it " } ?: "") + p.name,
                     )
                 }
             }
+
+            Spacer(Modifier.height(20.dp))
+            Stepper(
+                value = effectiveSpyCount,
+                onValueChange = { opts = opts.copy(spyCount = it) },
+                min = 1,
+                max = cap,
+                label = txt(lang, "Spies", "جاسوس‌ها"),
+            )
+            Spacer(Modifier.height(8.dp))
+            Stepper(
+                value = opts.totalRounds,
+                onValueChange = { opts = opts.copy(totalRounds = it) },
+                min = 1,
+                max = 10,
+                label = txt(lang, "Rounds", "دورها"),
+            )
+
+            Spacer(Modifier.height(14.dp))
+            Text(
+                text = txt(lang, "Round time", "زمان دور"),
+                color = palette.text,
+                fontSize = 14.sp,
+                modifier = Modifier.padding(bottom = 6.dp),
+            )
+            SegmentedControl(
+                options = ROUND_SECONDS_CHOICES.map { SegmentOption(it, "${fmtNum(it / 60, lang)}m") },
+                value = opts.roundSeconds,
+                onChange = { opts = opts.copy(roundSeconds = it) },
+                modifier = Modifier.fillMaxWidth(),
+            )
+
+            if (packs.size > 1) {
+                Spacer(Modifier.height(14.dp))
+                Text(
+                    text = txt(lang, "Location packs", "بسته‌های مکان"),
+                    color = palette.text,
+                    fontSize = 14.sp,
+                    modifier = Modifier.padding(bottom = 6.dp),
+                )
+                FlowRow(
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                    verticalArrangement = Arrangement.spacedBy(8.dp),
+                ) {
+                    packs.forEach { pack ->
+                        SelectChip(
+                            selected = pack.id in opts.enabledPackIds,
+                            onClick = {
+                                opts = opts.copy(
+                                    enabledPackIds = if (pack.id in opts.enabledPackIds) {
+                                        opts.enabledPackIds - pack.id
+                                    } else {
+                                        opts.enabledPackIds + pack.id
+                                    },
+                                )
+                            },
+                            text = pack.name.resolve(lang),
+                        )
+                    }
+                }
+            }
+
+            Spacer(Modifier.height(14.dp))
+            AppToggle(
+                checked = opts.useTimer,
+                onCheckedChange = { opts = opts.copy(useTimer = it) },
+                label = txt(lang, "Use a timer", "استفاده از تایمر"),
+            )
+            Spacer(Modifier.height(8.dp))
+            AppToggle(
+                checked = opts.allowSpyGuess,
+                onCheckedChange = { opts = opts.copy(allowSpyGuess = it) },
+                label = txt(lang, "Let the spy guess the location", "جاسوس بتواند مکان را حدس بزند"),
+            )
+            Spacer(Modifier.height(8.dp))
         }
 
-        Spacer(Modifier.height(14.dp))
-        AppToggle(
-            checked = opts.useTimer,
-            onCheckedChange = { opts = opts.copy(useTimer = it) },
-            label = txt(lang, "Use a timer", "استفاده از تایمر"),
-        )
-        Spacer(Modifier.height(8.dp))
-        AppToggle(
-            checked = opts.allowSpyGuess,
-            onCheckedChange = { opts = opts.copy(allowSpyGuess = it) },
-            label = txt(lang, "Let the spy guess the location", "جاسوس بتواند مکان را حدس بزند"),
-        )
-
+        // Pinned bottom action. Painted in GOLD (overriding the game's violet accent) so the primary
+        // Start button stands out from every violet option control above it.
         if (errors != null) {
-            Spacer(Modifier.height(14.dp))
-            Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
+            Column(
+                modifier = Modifier.padding(bottom = 10.dp),
+                verticalArrangement = Arrangement.spacedBy(4.dp),
+            ) {
                 errors.forEach { e ->
                     Text(text = e.resolve(lang), color = Accents.RoseStrong, fontSize = 14.sp)
                 }
             }
         }
-
-        Spacer(Modifier.height(16.dp))
-        AppButton(
-            text = txt(lang, "Start", "شروع"),
-            onClick = { onStart(config) },
-            size = ButtonSize.LG,
-            fullWidth = true,
-            enabled = errors == null,
-        )
-        Spacer(Modifier.height(24.dp))
+        CompositionLocalProvider(LocalAccent provides ColorToken.GOLD.accent()) {
+            AppButton(
+                text = txt(lang, "Start", "شروع"),
+                onClick = { onStart(config) },
+                size = ButtonSize.LG,
+                fullWidth = true,
+                enabled = errors == null,
+            )
+        }
+        Spacer(Modifier.height(8.dp))
     }
 }
 
@@ -243,6 +263,8 @@ fun SpyfallSetupScreen(
 fun SpyfallPlayScreen(
     state: SpyfallState,
     lang: Lang,
+    manifest: GameManifest,
+    onClose: () -> Unit,
     onExit: () -> Unit,
     dispatch: (SpyfallAction) -> Unit,
     sound: Sfx = Sfx.None,
@@ -286,9 +308,20 @@ fun SpyfallPlayScreen(
 
     val name: (String) -> String = { id -> s.playerNames[id] ?: id }
 
+    // Shared "End game" affordance (mirrors Truth or Dare): ends the match immediately and the shell
+    // swaps to Results with the running standings. Shown during active play in each in-match AppBar.
+    val endGameRight: @Composable () -> Unit = {
+        Text(
+            text = txt(lang, "End game", "پایان بازی"),
+            color = palette.textMuted,
+            fontSize = 14.sp,
+            modifier = Modifier.clickable { dispatch(SpyfallAction.EndGame) },
+        )
+    }
+
     when (s.phase) {
         SpyfallPhase.ERROR -> AppScreen {
-            AppBar(title = txt(lang, "Spyfall", "جاسوس"), onBack = onExit)
+            GameAppBar(manifest = manifest, lang = lang, onClose = onClose)
             CenterColumn {
                 Text(
                     text = txt(lang, "Not enough players or locations", "بازیکن یا مکان کافی نیست"),
@@ -312,9 +345,9 @@ fun SpyfallPlayScreen(
             }
             val holder = pid?.let(name) ?: ""
             AppScreen {
-                AppBar(onBack = onExit)
+                GameAppBar(manifest = manifest, lang = lang, onClose = onClose, trailing = endGameRight)
                 Text(
-                    text = "${s.revealCursor + 1} / ${s.playerIds.size}",
+                    text = faDigits("${s.revealCursor + 1} / ${s.playerIds.size}", lang),
                     color = palette.textMuted,
                     fontSize = 12.sp,
                     textAlign = TextAlign.Center,
@@ -378,11 +411,11 @@ fun SpyfallPlayScreen(
         }
 
         SpyfallPhase.QA -> AppScreen {
-            AppBar(onBack = onExit)
+            GameAppBar(manifest = manifest, lang = lang, onClose = onClose, trailing = endGameRight)
             CenterColumn {
                 if (s.options.useTimer) {
                     Text(
-                        text = fmt(secondsLeft),
+                        text = faDigits(fmt(secondsLeft), lang),
                         color = if (secondsLeft <= 60) Accents.RoseStrong else accent.base,
                         fontWeight = FontWeight.Black,
                         fontSize = 64.sp,
@@ -422,7 +455,7 @@ fun SpyfallPlayScreen(
         }
 
         SpyfallPhase.ACCUSATION -> AppScreen {
-            AppBar(onBack = onExit)
+            GameAppBar(manifest = manifest, lang = lang, onClose = onClose, trailing = endGameRight)
             CenterColumn {
                 Text(
                     text = txt(lang, "Time to vote!", "وقت رأی‌گیری!"),
@@ -449,7 +482,7 @@ fun SpyfallPlayScreen(
         SpyfallPhase.VOTING -> {
             if (voteCursor >= s.playerIds.size) {
                 AppScreen {
-                    AppBar(onBack = onExit)
+                    GameAppBar(manifest = manifest, lang = lang, onClose = onClose, trailing = endGameRight)
                     CenterColumn {
                         Text(
                             text = txt(lang, "Everyone has voted", "همه رأی دادند"),
@@ -472,7 +505,7 @@ fun SpyfallPlayScreen(
             } else {
                 val voter = s.playerIds[voteCursor]
                 AppScreen {
-                    AppBar(onBack = onExit)
+                    GameAppBar(manifest = manifest, lang = lang, onClose = onClose, trailing = endGameRight)
                     Curtain(
                         open = gateOpen,
                         holderName = name(voter),
@@ -533,7 +566,7 @@ fun SpyfallPlayScreen(
         SpyfallPhase.SPY_GUESS -> {
             val spy = s.round.spyIds.firstOrNull() ?: ""
             AppScreen {
-                AppBar(onBack = onExit)
+                GameAppBar(manifest = manifest, lang = lang, onClose = onClose, trailing = endGameRight)
                 Curtain(
                     open = gateOpen,
                     holderName = name(spy),
@@ -587,7 +620,7 @@ fun SpyfallPlayScreen(
         // ROUND_END (and the transient MATCH_END, before the shell swaps to Results).
         else -> {
             if (s.phase == SpyfallPhase.MATCH_END) {
-                AppScreen { AppBar(onBack = onExit) }
+                AppScreen { GameAppBar(manifest = manifest, lang = lang, onClose = onClose, trailing = endGameRight) }
             } else {
                 val r = s.round
                 val loc = SpyfallContent.locationById(r.locationId)
@@ -615,7 +648,7 @@ fun SpyfallPlayScreen(
                     }
                 }
                 AppScreen {
-                    AppBar(onBack = onExit)
+                    GameAppBar(manifest = manifest, lang = lang, onClose = onClose, trailing = endGameRight)
                     CenterColumn {
                         Text(
                             text = outcomeText,
@@ -658,7 +691,7 @@ fun SpyfallPlayScreen(
                         ) {
                             s.playerIds.forEach { id ->
                                 val sc = r.roundScores[id] ?: 0
-                                Chip(text = "${name(id)} ${if (sc > 0) "+$sc" else "·"}")
+                                Chip(text = "${name(id)} ${if (sc > 0) "+${fmtNum(sc, lang)}" else "·"}")
                             }
                         }
                         Spacer(Modifier.height(20.dp))
@@ -738,7 +771,9 @@ private fun LocationGuess(label: String, onClick: () -> Unit, modifier: Modifier
 fun SpyfallResultsScreen(
     state: SpyfallState,
     lang: Lang,
+    manifest: GameManifest,
     onPlayAgain: () -> Unit,
+    onClose: () -> Unit,
     onExit: () -> Unit,
     sound: Sfx = Sfx.None,
     haptics: Haptics = Haptics.none(),
@@ -770,7 +805,7 @@ fun SpyfallResultsScreen(
     }
 
     AppScreen(scrollable = true) {
-        AppBar(title = txt(lang, "Results", "نتایج"), onBack = onExit)
+        GameAppBar(manifest = manifest, lang = lang, onClose = onClose)
         WinnerBanner(title = title, names = winnerNames)
         Spacer(Modifier.height(8.dp))
         Leaderboard(rows = rows)

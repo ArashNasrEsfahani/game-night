@@ -111,6 +111,7 @@ sealed interface PantomimeAction {
     data class Resume(val now: Long) : PantomimeAction
     data class EndTurnEarly(val now: Long) : PantomimeAction
     data class NextTurn(val seed: Int) : PantomimeAction
+    data object EndGame : PantomimeAction
     data object Reset : PantomimeAction
 }
 
@@ -410,6 +411,22 @@ fun reducer(state: PantomimeState, action: PantomimeAction): PantomimeState {
                     lastTurnEndReason = null,
                     gate = init(emptyList<String>()),
                     clock = create(TimerMode.COUNTDOWN, s.options.roundSeconds * 1000L),
+                )
+            }
+        }
+
+        is PantomimeAction.EndGame -> {
+            // End the match now and jump straight to results, locking in the standings so far.
+            // Scores already reflect every resolved prompt (Correct/Skip mutate score live), so the
+            // Results view reads correctly even when ending mid-turn.
+            if (s.phase == PantomimePhase.RESULTS || s.phase == PantomimePhase.ERROR) {
+                s
+            } else {
+                val res = fromScores(s.score)
+                s.copy(
+                    phase = PantomimePhase.RESULTS,
+                    finished = true,
+                    winnerTeamIds = res.winners,
                 )
             }
         }

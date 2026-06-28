@@ -75,6 +75,7 @@ sealed interface HeadsUpAction {
     data object TimeUp : HeadsUpAction
     data class NextParticipant(val seed: Int) : HeadsUpAction
     data class SetInputMode(val mode: InputMode) : HeadsUpAction
+    data object EndGame : HeadsUpAction
 }
 
 /** A fresh seed at the impure boundary (the composables call this; the reducer never does). */
@@ -293,6 +294,38 @@ object HeadsUpLogic {
             }
 
             is HeadsUpAction.SetInputMode -> s.copy(inputMode = action.mode)
+
+            is HeadsUpAction.EndGame -> {
+                if (s.phase == HeadsUpPhase.FINISHED) {
+                    s
+                } else {
+                    // Lock in an in-progress round so the final standings include what was just played.
+                    val rounds = if (s.phase == HeadsUpPhase.PLAYING) {
+                        val p = s.participants[s.turnIndex]
+                        val got = s.currentEntries.count { it.result == EntryResult.GOT }
+                        val passed = s.currentEntries.count { it.result == EntryResult.PASSED }
+                        s.rounds + RoundResult(
+                            participantId = p.id,
+                            guesserId = guesserId(p),
+                            roundIndex = s.roundOfParticipant[p.id] ?: 0,
+                            entries = s.currentEntries,
+                            got = got,
+                            passed = passed,
+                        )
+                    } else {
+                        s.rounds
+                    }
+                    s.copy(
+                        phase = HeadsUpPhase.FINISHED,
+                        flash = null,
+                        currentCardId = null,
+                        currentEntries = emptyList(),
+                        rounds = rounds,
+                        matchOver = true,
+                        finished = true,
+                    )
+                }
+            }
         }
     }
 

@@ -3,6 +3,9 @@ package com.gamenight.party.game.headsup
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.spring
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -35,18 +38,19 @@ import com.gamenight.party.game.Sfx
 import com.gamenight.party.engine.Rng
 import com.gamenight.party.engine.teamIdAt
 import com.gamenight.party.model.ColorToken
+import com.gamenight.party.model.GameManifest
 import com.gamenight.party.model.Lang
 import com.gamenight.party.model.LocalizedString
 import com.gamenight.party.model.PlayerSeat
 import com.gamenight.party.sound.Haptics
 import com.gamenight.party.sound.SoundId
-import com.gamenight.party.ui.components.AppBar
 import com.gamenight.party.ui.components.AppButton
 import com.gamenight.party.ui.components.AppScreen
 import com.gamenight.party.ui.components.AppToggle
 import com.gamenight.party.ui.components.ButtonSize
 import com.gamenight.party.ui.components.ButtonVariant
 import com.gamenight.party.ui.components.Chip
+import com.gamenight.party.ui.components.GameAppBar
 import com.gamenight.party.ui.components.Leaderboard
 import com.gamenight.party.ui.components.PillShape
 import com.gamenight.party.ui.components.ScoreRow
@@ -60,6 +64,7 @@ import com.gamenight.party.ui.theme.Accents
 import com.gamenight.party.ui.theme.LocalAccent
 import com.gamenight.party.ui.theme.LocalPalette
 import com.gamenight.party.ui.theme.accent
+import com.gamenight.party.ui.screens.fmtNum
 import kotlinx.coroutines.delay
 import kotlin.math.ceil
 
@@ -110,7 +115,8 @@ fun HeadsUpSetupScreen(
     players: List<PlayerSeat>,
     content: ContentStore,
     lang: Lang,
-    onExit: () -> Unit,
+    manifest: GameManifest,
+    onClose: () -> Unit,
     onStart: (HeadsUpConfig) -> Unit,
 ) {
     val t: (String, String) -> String = { en, fa -> if (lang == Lang.FA) fa else en }
@@ -155,14 +161,17 @@ fun HeadsUpSetupScreen(
         val errors = validateConfig(config)
         val diffCounts = huContent.deckDifficultyCounts(options.deckIds)
 
-        AppScreen(
-            horizontalAlignment = Alignment.Start,
-            verticalArrangement = Arrangement.spacedBy(16.dp),
-            scrollable = true,
-        ) {
-            AppBar(title = t("Heads Up!", "حدس بزن!"), onBack = onExit)
+        AppScreen(horizontalAlignment = Alignment.Start) {
+            GameAppBar(manifest = manifest, lang = lang, onClose = onClose)
 
-            SectionLabel("${t("Players", "بازیکن‌ها")} · ${seats.size}", palette.textMuted)
+            Column(
+                modifier = Modifier
+                    .weight(1f)
+                    .fillMaxWidth()
+                    .verticalScroll(rememberScrollState()),
+                verticalArrangement = Arrangement.spacedBy(16.dp),
+            ) {
+            SectionLabel("${t("Players", "بازیکن‌ها")} · ${fmtNum(seats.size, lang)}", palette.textMuted)
             FlowRow(
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
                 verticalArrangement = Arrangement.spacedBy(8.dp),
@@ -205,7 +214,11 @@ fun HeadsUpSetupScreen(
             if (mode == HeadsUpMode.TEAMS) {
                 SectionLabel(t("Number of teams", "تعداد تیم‌ها"), palette.textMuted)
                 SegmentedControl(
-                    options = listOf(SegmentOption(2, "2"), SegmentOption(3, "3"), SegmentOption(4, "4")),
+                    options = listOf(
+                        SegmentOption(2, fmtNum(2, lang)),
+                        SegmentOption(3, fmtNum(3, lang)),
+                        SegmentOption(4, fmtNum(4, lang)),
+                    ),
                     value = teamCount,
                     onChange = { teamCount = it },
                 )
@@ -216,14 +229,14 @@ fun HeadsUpSetupScreen(
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
                 verticalArrangement = Arrangement.spacedBy(8.dp),
             ) {
-                SelectChip(selected = diffEasy, onClick = { diffEasy = !diffEasy }, text = "${t("Easy", "آسان")} · ${diffCounts[Difficulty.EASY] ?: 0}")
-                SelectChip(selected = diffMedium, onClick = { diffMedium = !diffMedium }, text = "${t("Medium", "متوسط")} · ${diffCounts[Difficulty.MEDIUM] ?: 0}")
-                SelectChip(selected = diffHard, onClick = { diffHard = !diffHard }, text = "${t("Hard", "سخت")} · ${diffCounts[Difficulty.HARD] ?: 0}")
+                SelectChip(selected = diffEasy, onClick = { diffEasy = !diffEasy }, text = "${t("Easy", "آسان")} · ${fmtNum(diffCounts[Difficulty.EASY] ?: 0, lang)}")
+                SelectChip(selected = diffMedium, onClick = { diffMedium = !diffMedium }, text = "${t("Medium", "متوسط")} · ${fmtNum(diffCounts[Difficulty.MEDIUM] ?: 0, lang)}")
+                SelectChip(selected = diffHard, onClick = { diffHard = !diffHard }, text = "${t("Hard", "سخت")} · ${fmtNum(diffCounts[Difficulty.HARD] ?: 0, lang)}")
             }
 
             SectionLabel(t("Round time", "زمان دور"), palette.textMuted)
             SegmentedControl(
-                options = ROUND_SECONDS_CHOICES.map { SegmentOption(it, "${it}s") },
+                options = ROUND_SECONDS_CHOICES.map { SegmentOption(it, "${fmtNum(it, lang)}s") },
                 value = roundSeconds,
                 onChange = { roundSeconds = it },
             )
@@ -236,15 +249,21 @@ fun HeadsUpSetupScreen(
             errors.forEach { e ->
                 Text(text = e.resolve(lang), color = Accents.RoseStrong, fontSize = 14.sp)
             }
+            }
 
-            AppButton(
-                text = t("Start", "شروع"),
-                onClick = { if (errors.isEmpty()) onStart(config) },
-                variant = ButtonVariant.PRIMARY,
-                size = ButtonSize.LG,
-                fullWidth = true,
-                enabled = errors.isEmpty(),
-            )
+            // Primary action pinned to the bottom, always reachable, in a distinct GOLD accent so it
+            // stands out from the sky-accented option chips/segments above.
+            Spacer(Modifier.height(12.dp))
+            CompositionLocalProvider(LocalAccent provides ColorToken.GOLD.accent()) {
+                AppButton(
+                    text = t("Start", "شروع"),
+                    onClick = { if (errors.isEmpty()) onStart(config) },
+                    variant = ButtonVariant.PRIMARY,
+                    size = ButtonSize.LG,
+                    fullWidth = true,
+                    enabled = errors.isEmpty(),
+                )
+            }
             Spacer(Modifier.height(8.dp))
         }
     }
@@ -263,8 +282,10 @@ fun HeadsUpPlayScreen(
     content: ContentStore,
     lang: Lang,
     state: HeadsUpState,
+    manifest: GameManifest,
     dispatch: (HeadsUpAction) -> Unit,
     onExit: () -> Unit,
+    onClose: () -> Unit,
     sound: Sfx = Sfx.None,
     haptics: Haptics = Haptics.none(),
 ) {
@@ -324,10 +345,19 @@ fun HeadsUpPlayScreen(
 
     CompositionLocalProvider(LocalAccent provides accent) {
         val palette = LocalPalette.current
+        // Bail out of the match early -> jump straight to Results with the standings so far.
+        val endGameRight: @Composable () -> Unit = {
+            Text(
+                text = t("End game", "پایان بازی"),
+                color = palette.textMuted,
+                fontSize = 14.sp,
+                modifier = Modifier.clickable { dispatch(HeadsUpAction.EndGame) },
+            )
+        }
         AppScreen(horizontalAlignment = Alignment.CenterHorizontally) {
             when (s.phase) {
                 HeadsUpPhase.ERROR -> {
-                    AppBar(title = t("Heads Up!", "حدس بزن!"), onBack = onExit)
+                    GameAppBar(manifest = manifest, lang = lang, onClose = onClose)
                     Box(Modifier.weight(1f).fillMaxWidth(), contentAlignment = Alignment.Center) {
                         Column(
                             horizontalAlignment = Alignment.CenterHorizontally,
@@ -344,7 +374,7 @@ fun HeadsUpPlayScreen(
                 }
 
                 HeadsUpPhase.HANDOFF -> {
-                    AppBar(onBack = onExit)
+                    GameAppBar(manifest = manifest, lang = lang, onClose = onClose, trailing = endGameRight)
                     Box(Modifier.weight(1f).fillMaxWidth(), contentAlignment = Alignment.Center) {
                         Column(
                             horizontalAlignment = Alignment.CenterHorizontally,
@@ -392,7 +422,7 @@ fun HeadsUpPlayScreen(
                     }
                     Box(Modifier.weight(1f).fillMaxWidth(), contentAlignment = Alignment.Center) {
                         Text(
-                            text = if (s.countdownLeft > 0) s.countdownLeft.toString() else t("GO", "برو"),
+                            text = if (s.countdownLeft > 0) fmtNum(s.countdownLeft, lang) else t("GO", "برو"),
                             modifier = Modifier.graphicsLayer { scaleX = countPop.value; scaleY = countPop.value },
                             color = accent.base,
                             fontWeight = FontWeight.Black,
@@ -448,7 +478,7 @@ fun HeadsUpPlayScreen(
                                 )
                             }
                             Text(
-                                text = "${t("Got", "درست")}: $gotCount",
+                                text = "${t("Got", "درست")}: ${fmtNum(gotCount, lang)}",
                                 color = palette.textMuted,
                                 fontSize = 14.sp,
                             )
@@ -493,7 +523,7 @@ fun HeadsUpPlayScreen(
                         scorePop.snapTo(0.6f)
                         scorePop.animateTo(1f, spring(dampingRatio = 0.5f, stiffness = 300f))
                     }
-                    AppBar(onBack = onExit)
+                    GameAppBar(manifest = manifest, lang = lang, onClose = onClose, trailing = endGameRight)
                     Box(Modifier.weight(1f).fillMaxWidth(), contentAlignment = Alignment.Center) {
                         Column(
                             modifier = Modifier.fillMaxWidth(),
@@ -502,7 +532,7 @@ fun HeadsUpPlayScreen(
                         ) {
                             Text(guesserName, color = palette.text, fontWeight = FontWeight.Bold, fontSize = 22.sp)
                             Text(
-                                text = "${t("Got", "درست")} ${last?.got ?: 0} · ${t("Passed", "رد")} ${last?.passed ?: 0}",
+                                text = "${t("Got", "درست")} ${fmtNum(last?.got ?: 0, lang)} · ${t("Passed", "رد")} ${fmtNum(last?.passed ?: 0, lang)}",
                                 modifier = Modifier.graphicsLayer { scaleX = scorePop.value; scaleY = scorePop.value },
                                 color = accent.base,
                                 fontWeight = FontWeight.ExtraBold,
@@ -555,8 +585,10 @@ fun HeadsUpResultsScreen(
     content: ContentStore,
     lang: Lang,
     state: HeadsUpState,
+    manifest: GameManifest,
     onPlayAgain: () -> Unit,
     onExit: () -> Unit,
+    onClose: () -> Unit,
     sound: Sfx = Sfx.None,
     haptics: Haptics = Haptics.none(),
 ) {
@@ -582,7 +614,10 @@ fun HeadsUpResultsScreen(
             ScoreRow(
                 id = r.participantId,
                 label = "${HeadsUpLogic.participantName(s, r.participantId)} · " +
-                    t("got ${r.got} · pass ${r.passed}", "درست ${r.got} · رد ${r.passed}"),
+                    t(
+                        "got ${fmtNum(r.got, lang)} · pass ${fmtNum(r.passed, lang)}",
+                        "درست ${fmtNum(r.got, lang)} · رد ${fmtNum(r.passed, lang)}",
+                    ),
                 score = r.score,
                 rank = r.rank,
                 color = s.participants.firstOrNull { it.id == r.participantId }?.color,
@@ -594,7 +629,7 @@ fun HeadsUpResultsScreen(
             verticalArrangement = Arrangement.spacedBy(12.dp),
             scrollable = true,
         ) {
-            AppBar(title = t("Results", "نتایج"), onBack = onExit)
+            GameAppBar(manifest = manifest, lang = lang, onClose = onClose)
             WinnerBanner(title = title, names = winnerNames)
             Leaderboard(rows = rows)
             Spacer(Modifier.height(4.dp))
