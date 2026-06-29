@@ -77,6 +77,6 @@ export const screenFade: Variants = {
  *  y-lift when you navigate into a game. Transform-only — no layout shift, no scrollbar flash. */
 export const routeShell: Variants = {
   initial: { opacity: 0, scale: 0.985 },
-  animate: { opacity: 1, scale: 1, transition: { duration: 0.26, ease: easeOut } },
-  exit: { opacity: 0, scale: 0.99, transition: { duration: 0.15, ease: easeOut } },
+  animate: { opacity: 1, scale: 1, transition: { duration: 0.44, ease: easeOut } },
+  exit: { opacity: 0, scale: 0.99, transition: { duration: 0.26, ease: easeOut } },
 };

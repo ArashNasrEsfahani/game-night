@@ -18,7 +18,7 @@ export function WinnerBanner({
       <motion.div
         initial={{ scale: 0, rotate: -25 }}
         animate={{ scale: 1, rotate: 0 }}
-        transition={{ type: 'spring', stiffness: 260, damping: 13, delay: 0.05 }}
+        transition={{ type: 'spring', stiffness: 195, damping: 24, delay: 0.05 }}
       >
         <Medallion size={118}>
           <span className="text-5xl drop-shadow-[0_0_18px_var(--game-accent-glow)]">

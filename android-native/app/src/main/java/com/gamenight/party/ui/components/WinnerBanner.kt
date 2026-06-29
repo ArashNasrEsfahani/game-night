@@ -46,8 +46,8 @@ fun WinnerBanner(title: String, names: List<String>, modifier: Modifier = Modifi
     val medRotate = remember { Animatable(-25f) }
     val appear = remember { Animatable(0f) }
     LaunchedEffect(Unit) {
-        launch { medScale.animateTo(1f, spring(dampingRatio = 0.5f, stiffness = 260f)) }
-        launch { medRotate.animateTo(0f, spring(dampingRatio = 0.5f, stiffness = 260f)) }
+        launch { medScale.animateTo(1f, spring(dampingRatio = 0.8f, stiffness = 195f)) }
+        launch { medRotate.animateTo(0f, spring(dampingRatio = 0.8f, stiffness = 195f)) }
         launch { appear.animateTo(1f, spring(dampingRatio = 0.85f, stiffness = 220f)) }
     }
 

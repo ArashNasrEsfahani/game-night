@@ -41,8 +41,12 @@ val PillShape: Shape = RoundedCornerShape(percent = 50)
 /** `--radius-card` (1.5rem ≈ 24dp) — the standard glass-card corner. */
 val CardShape: Shape = RoundedCornerShape(24.dp)
 
-/** The framer `springSnappy` preset ({ stiffness: 420, damping: 30, mass: 0.7 }) in Compose terms. */
-fun <T> springSnappy(): SpringSpec<T> = spring(dampingRatio = 0.72f, stiffness = 900f)
+/**
+ * The shared "settle" spring for presses, toggles, cards, steppers and pops. Tuned for a slower,
+ * smoother feel than a snappy UI: a low stiffness so motion eases in/out over a relaxed ~0.4s, and a
+ * high damping ratio so it glides to rest with almost no bounce. (Was stiffness 900 / damping 0.72.)
+ */
+fun <T> springSnappy(): SpringSpec<T> = spring(dampingRatio = 0.9f, stiffness = 300f)
 
 // ── Glass / control fills (mirror :root and .dark in src/index.css). ──
 // There is no live backdrop behind native surfaces, so we lean toward the opaque fallback the CSS

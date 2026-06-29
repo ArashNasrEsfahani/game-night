@@ -152,7 +152,7 @@ private fun MineCell(
             revealed && cell.mine -> {
                 val pop = remember(cell.index) { Animatable(0.3f) }
                 LaunchedEffect(cell.index) {
-                    pop.animateTo(1f, spring(dampingRatio = 0.5f, stiffness = 500f))
+                    pop.animateTo(1f, spring(dampingRatio = 0.8f, stiffness = 375f))
                 }
                 Text(
                     text = "💣",

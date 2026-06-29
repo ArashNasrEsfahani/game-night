@@ -47,7 +47,7 @@ val EasePop: Easing = CubicBezierEasing(0.34f, 1.56f, 0.64f, 1f)
 fun Modifier.screenEntrance(
     translateY: Dp = 12.dp,
     fromScale: Float = 0.98f,
-    durationMillis: Int = 360,
+    durationMillis: Int = 520,
 ): Modifier = composed {
     var shown by remember { mutableStateOf(false) }
     val progress by animateFloatAsState(
@@ -75,21 +75,21 @@ fun Modifier.screenEntrance(
  */
 fun routeTransform(forward: Boolean): ContentTransform = if (forward) {
     (
-        fadeIn(tween(300, easing = EaseOut)) +
-            slideInVertically(tween(300, easing = EaseOut)) { full -> full / 8 } +
-            scaleIn(tween(300, easing = EaseOut), initialScale = 0.96f)
+        fadeIn(tween(460, easing = EaseOut)) +
+            slideInVertically(tween(460, easing = EaseOut)) { full -> full / 8 } +
+            scaleIn(tween(460, easing = EaseOut), initialScale = 0.96f)
     ) togetherWith (
-        fadeOut(tween(180, easing = EaseOut)) +
-            scaleOut(tween(180, easing = EaseOut), targetScale = 0.99f)
+        fadeOut(tween(280, easing = EaseOut)) +
+            scaleOut(tween(280, easing = EaseOut), targetScale = 0.99f)
     )
 } else {
     (
-        fadeIn(tween(300, easing = EaseOut)) +
-            scaleIn(tween(300, easing = EaseOut), initialScale = 1.02f)
+        fadeIn(tween(460, easing = EaseOut)) +
+            scaleIn(tween(460, easing = EaseOut), initialScale = 1.02f)
     ) togetherWith (
-        fadeOut(tween(220, easing = EaseOut)) +
-            slideOutVertically(tween(220, easing = EaseOut)) { full -> full / 8 } +
-            scaleOut(tween(220, easing = EaseOut), targetScale = 0.98f)
+        fadeOut(tween(320, easing = EaseOut)) +
+            slideOutVertically(tween(320, easing = EaseOut)) { full -> full / 8 } +
+            scaleOut(tween(320, easing = EaseOut), targetScale = 0.98f)
     )
 }
 

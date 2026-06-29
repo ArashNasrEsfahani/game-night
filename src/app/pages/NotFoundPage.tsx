@@ -12,7 +12,7 @@ export function NotFoundPage() {
         <motion.div
           initial={{ opacity: 0, y: 12, scale: 0.9 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ type: 'spring', stiffness: 220, damping: 20 }}
+          transition={{ type: 'spring', stiffness: 165, damping: 22 }}
         >
           <Motif name="dome" size={96} color="var(--color-game-gold)" />
         </motion.div>
