@@ -44,7 +44,8 @@ val DEFAULT_OPTIONS: ToDOptions = ToDOptions(
         Intensity.MEDIUM to true,
         Intensity.SPICY to false,
     ),
-    selectionMode = SelectionMode.SPINNER,
+    // Default to the real spin-the-bottle animation (BottleStage); Spinner/Sequential stay as options.
+    selectionMode = SelectionMode.BOTTLE,
     scoringMode = ScoringMode.CASUAL,
     pointsForDare = 2,
     pointsForTruth = 1,

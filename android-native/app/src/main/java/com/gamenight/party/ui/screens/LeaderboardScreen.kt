@@ -14,11 +14,14 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -72,6 +75,8 @@ fun LeaderboardScreen(
     }
 
     val max = maxOf(1, rows.maxOf { it.total })
+    // Reset wipes every game's win history, so gate it behind an are-you-sure (like delete/leave).
+    var pendingReset by remember { mutableStateOf(false) }
 
     AppScreen(modifier = modifier, scrollable = true, verticalArrangement = Arrangement.spacedBy(10.dp)) {
         AppBar(
@@ -80,7 +85,7 @@ fun LeaderboardScreen(
             right = {
                 AppButton(
                     text = uiText(lang, "Reset", "بازنشانی"),
-                    onClick = leaderboard::reset,
+                    onClick = { pendingReset = true },
                     variant = ButtonVariant.GHOST,
                     size = ButtonSize.SM,
                 )
@@ -100,6 +105,47 @@ fun LeaderboardScreen(
         Spacer(Modifier.height(2.dp))
         Legend(lang)
         Spacer(Modifier.height(12.dp))
+    }
+
+    if (pendingReset) {
+        val palette = LocalPalette.current
+        AlertDialog(
+            onDismissRequest = { pendingReset = false },
+            containerColor = palette.surface,
+            title = {
+                Text(
+                    text = uiText(lang, "Reset leaderboard?", "جدول امتیازها بازنشانی شود؟"),
+                    color = palette.text,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 18.sp,
+                )
+            },
+            text = {
+                Text(
+                    text = uiText(
+                        lang,
+                        "This clears every game's win history for good. This can't be undone.",
+                        "این کار سابقهٔ بردهای همهٔ بازی‌ها را برای همیشه پاک می‌کند و قابل بازگشت نیست.",
+                    ),
+                    color = palette.textMuted,
+                    fontSize = 15.sp,
+                )
+            },
+            confirmButton = {
+                AppButton(
+                    text = uiText(lang, "Reset", "بازنشانی"),
+                    onClick = { leaderboard.reset(); pendingReset = false },
+                    variant = ButtonVariant.DANGER,
+                )
+            },
+            dismissButton = {
+                AppButton(
+                    text = uiText(lang, "Cancel", "بی‌خیال"),
+                    onClick = { pendingReset = false },
+                    variant = ButtonVariant.SECONDARY,
+                )
+            },
+        )
     }
 }
 

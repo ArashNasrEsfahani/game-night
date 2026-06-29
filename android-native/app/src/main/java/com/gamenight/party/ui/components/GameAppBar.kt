@@ -2,12 +2,14 @@ package com.gamenight.party.ui.components
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
@@ -124,7 +126,6 @@ fun GameAppBar(
 @Composable
 private fun HowToPlayDialog(manifest: GameManifest, lang: Lang, onDismiss: () -> Unit) {
     val palette = LocalPalette.current
-    val body = (manifest.howToPlay ?: manifest.description).resolve(lang)
 
     Dialog(onDismissRequest = onDismiss) {
         AppCard(modifier = Modifier.fillMaxWidth()) {
@@ -144,17 +145,34 @@ private fun HowToPlayDialog(manifest: GameManifest, lang: Lang, onDismiss: () ->
                 )
             }
 
-            Spacer(Modifier.height(10.dp))
-            Text(
-                text = t(lang, "How to play", "نحوهٔ بازی"),
-                color = palette.textMuted,
-                fontWeight = FontWeight.SemiBold,
-                fontSize = 13.sp,
-            )
-
-            Spacer(Modifier.height(8.dp))
+            Spacer(Modifier.height(12.dp))
             Box(modifier = Modifier.heightIn(max = 360.dp).verticalScroll(rememberScrollState())) {
-                Text(text = body, color = palette.text, fontSize = 15.sp, lineHeight = 22.sp)
+                Column {
+                    // Lead with the rich flavor description, then the rules — surfaces the evocative
+                    // blurb that was otherwise only a hidden fallback (mirrors the web info sheet).
+                    Text(
+                        text = manifest.description.resolve(lang),
+                        color = palette.text,
+                        fontSize = 15.sp,
+                        lineHeight = 22.sp,
+                    )
+                    manifest.howToPlay?.let { hp ->
+                        Spacer(Modifier.height(14.dp))
+                        Text(
+                            text = t(lang, "How to play", "نحوهٔ بازی"),
+                            color = Accents.GoldStrong,
+                            fontWeight = FontWeight.SemiBold,
+                            fontSize = 13.sp,
+                        )
+                        Spacer(Modifier.height(6.dp))
+                        Text(
+                            text = hp.resolve(lang),
+                            color = palette.textMuted,
+                            fontSize = 15.sp,
+                            lineHeight = 22.sp,
+                        )
+                    }
+                }
             }
 
             Spacer(Modifier.height(18.dp))
@@ -219,6 +237,64 @@ fun GameExitConfirmDialog(
             )
         },
     )
+}
+
+/**
+ * The shared "End game" control for the [GameAppBar] trailing slot. Renders the muted label and —
+ * because ending a match writes a result to the overall leaderboard — gates [onEndGame] behind an
+ * are-you-sure (mirrors the web's nav.endGame confirm). Each game passes its own
+ * `dispatch(XxxAction.EndGame)`.
+ */
+@Composable
+fun EndGameButton(lang: Lang, onEndGame: () -> Unit) {
+    val palette = LocalPalette.current
+    var pending by remember { mutableStateOf(false) }
+    Text(
+        text = t(lang, "End game", "پایان بازی"),
+        color = palette.textMuted,
+        fontSize = 14.sp,
+        modifier = Modifier.clickable { pending = true },
+    )
+    if (pending) {
+        AlertDialog(
+            onDismissRequest = { pending = false },
+            containerColor = palette.surface,
+            title = {
+                Text(
+                    text = t(lang, "End game?", "بازی تمام شود؟"),
+                    color = palette.text,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 18.sp,
+                )
+            },
+            text = {
+                Text(
+                    text = t(lang, "End this game and see the results?", "بازی تمام شود و نتایج را ببینید؟"),
+                    color = palette.textMuted,
+                    fontSize = 15.sp,
+                )
+            },
+            confirmButton = {
+                AppButton(
+                    text = t(lang, "End game", "پایان بازی"),
+                    onClick = {
+                        pending = false
+                        onEndGame()
+                    },
+                    variant = ButtonVariant.DANGER,
+                    size = ButtonSize.SM,
+                )
+            },
+            dismissButton = {
+                AppButton(
+                    text = t(lang, "Stay", "ادامه"),
+                    onClick = { pending = false },
+                    variant = ButtonVariant.SECONDARY,
+                    size = ButtonSize.SM,
+                )
+            },
+        )
+    }
 }
 
 /** Tiny bilingual helper for this file's chrome strings (kept local to avoid a screens→components dep). */

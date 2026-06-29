@@ -38,11 +38,13 @@ import { NotFoundPage } from './NotFoundPage';
  * the AppBar back arrow on the left.
  */
 function HostTopBar({
+  description,
   howToPlay,
   title,
   onExit,
   showClose,
 }: {
+  description?: LocalizedString;
   howToPlay?: LocalizedString;
   title: string;
   onExit: () => void;
@@ -64,7 +66,7 @@ function HostTopBar({
             ✕
           </motion.button>
         )}
-        {howToPlay && (
+        {(howToPlay || description) && (
           <motion.button
             whileTap={{ scale: 0.9 }}
             onClick={() => setOpen(true)}
@@ -75,11 +77,25 @@ function HostTopBar({
           </motion.button>
         )}
       </div>
-      {howToPlay && (
+      {(howToPlay || description) && (
         <Sheet open={open} onClose={() => setOpen(false)} title={title}>
-          <p className="whitespace-pre-line text-sm leading-relaxed text-[var(--text-muted)]">
-            {localize(howToPlay)}
-          </p>
+          {description && (
+            <p className="whitespace-pre-line text-sm leading-relaxed text-[var(--text)]">
+              {localize(description)}
+            </p>
+          )}
+          {howToPlay && (
+            <>
+              {description && (
+                <p className="mb-1 mt-4 text-xs font-semibold uppercase tracking-wide text-[var(--game-accent-strong)]">
+                  {t('common.howToPlay')}
+                </p>
+              )}
+              <p className="whitespace-pre-line text-sm leading-relaxed text-[var(--text-muted)]">
+                {localize(howToPlay)}
+              </p>
+            </>
+          )}
           <Button fullWidth className="mt-5" onClick={() => setOpen(false)}>
             {t('common.close')}
           </Button>
@@ -169,6 +185,8 @@ export function GameHostPage() {
 
   // Are-you-sure gate before leaving the game (driven by nav.exit + the floating Close button).
   const [confirmExit, setConfirmExit] = useState(false);
+  // Are-you-sure gate before ending the match (driven by nav.endGame from each game's "End game").
+  const [confirmEndGame, setConfirmEndGame] = useState(false);
 
   const muted = useSettingsStore((s) => s.muted);
   const hapticsOn = useSettingsStore((s) => s.haptics);
@@ -217,6 +235,8 @@ export function GameHostPage() {
     // Don't leave straight away — open the are-you-sure gate first (back arrows, the Results
     // "Home" button and the floating Close all route through here).
     exit: () => setConfirmExit(true),
+    // Ending the match records a leaderboard result, so gate it behind an are-you-sure too.
+    endGame: () => setConfirmEndGame(true),
     startMatch: (config: GameConfig) => {
       const seed = randomService.seed();
       const state = mod.logic.createInitialState(config, seed);
@@ -291,6 +311,7 @@ export function GameHostPage() {
       <GameChromeContext.Provider value={{ name: localize(mod.manifest.name) }}>
       <div style={accentStyle} className="contents">
         <HostTopBar
+          description={mod.manifest.description}
           howToPlay={mod.manifest.howToPlay}
           title={localize(mod.manifest.name)}
           onExit={() => setConfirmExit(true)}
@@ -355,6 +376,29 @@ export function GameHostPage() {
               {t('common.leave')}
             </Button>
             <Button variant="secondary" fullWidth onClick={() => setConfirmExit(false)}>
+              {t('common.cancel')}
+            </Button>
+          </div>
+        </Sheet>
+        <Sheet
+          open={confirmEndGame}
+          onClose={() => setConfirmEndGame(false)}
+          title={t('common.endGame')}
+        >
+          <p className="text-sm leading-relaxed text-[var(--text-muted)]">
+            {t('common.endGameConfirm')}
+          </p>
+          <div className="mt-5 flex flex-col gap-2">
+            <Button
+              fullWidth
+              onClick={() => {
+                setConfirmEndGame(false);
+                dispatch({ type: 'END_GAME' } as GameActionBase);
+              }}
+            >
+              {t('common.endGame')}
+            </Button>
+            <Button variant="secondary" fullWidth onClick={() => setConfirmEndGame(false)}>
               {t('common.cancel')}
             </Button>
           </div>

@@ -20,8 +20,11 @@ export function AppBar({
   const { name } = useContext(GameChromeContext);
   const inGame = name != null;
   const shown = title ?? name;
+  // In-game, the host overlays a fixed top-right chrome cluster (leave ✕ + how-to-play ?). When this
+  // bar also has a trailing slot (e.g. "End game"), reserve space at the inline-end so it clears that
+  // overlay instead of rendering underneath it. `pe-*` is logical, so it flips correctly in RTL.
   return (
-    <header className="flex h-14 items-center gap-2">
+    <header className={`flex h-14 items-center gap-2${inGame && right ? ' pe-24' : ''}`}>
       {onBack && (
         <motion.button
           onClick={onBack}

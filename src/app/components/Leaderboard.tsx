@@ -1,6 +1,7 @@
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { Card } from '../../sdk/ui';
+import { Card, Sheet, Button } from '../../sdk/ui';
 import { useNum } from '../../lib/digits';
 import { useLeaderboardStore, leaderboardRows } from '../../store/leaderboardStore';
 
@@ -13,6 +14,8 @@ export function Leaderboard() {
   const tallies = useLeaderboardStore((s) => s.tallies);
   const totalMatches = useLeaderboardStore((s) => s.totalMatches);
   const reset = useLeaderboardStore((s) => s.reset);
+  // Reset wipes every game's win history, so gate it behind an are-you-sure (like delete/leave).
+  const [confirmReset, setConfirmReset] = useState(false);
 
   const rows = leaderboardRows(tallies);
   if (totalMatches === 0 || rows.length === 0) return null;
@@ -24,7 +27,7 @@ export function Leaderboard() {
         <p className="text-xs font-bold uppercase tracking-[0.3em] text-[var(--game-accent-strong)]">
           🏆 {t('leaderboard.title')}
         </p>
-        <button onClick={reset} className="text-xs text-[var(--text-muted)] underline-offset-2 hover:underline">
+        <button onClick={() => setConfirmReset(true)} className="text-xs text-[var(--text-muted)] underline-offset-2 hover:underline">
           {t('leaderboard.reset')}
         </button>
       </div>
@@ -73,6 +76,27 @@ export function Leaderboard() {
           </span>
         </div>
       </Card>
+
+      <Sheet open={confirmReset} onClose={() => setConfirmReset(false)} title={t('leaderboard.resetTitle')}>
+        <p className="text-sm leading-relaxed text-[var(--text-muted)]">
+          {t('leaderboard.resetConfirm')}
+        </p>
+        <div className="mt-5 flex flex-col gap-2">
+          <Button
+            variant="danger"
+            fullWidth
+            onClick={() => {
+              reset();
+              setConfirmReset(false);
+            }}
+          >
+            {t('leaderboard.reset')}
+          </Button>
+          <Button variant="secondary" fullWidth onClick={() => setConfirmReset(false)}>
+            {t('common.cancel')}
+          </Button>
+        </div>
+      </Sheet>
     </section>
   );
 }

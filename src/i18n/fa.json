@@ -182,6 +182,7 @@
     "skipPenalty": "رد کردن یک امتیاز کم می‌کند",
     "poolHint": "حدود {{count, faDigits}} سرنخ موجود است",
     "roundOf": "دور {{round, faDigits}} از {{total, faDigits}}",
+    "roundToTarget": "دور {{round, faDigits}} · تا {{target, faDigits}} امتیاز",
     "passTo": "گوشی را بده به",
     "ready": "من {{name, faDigits}} هستم، آماده‌ام",
     "revealHint": "فقط {{name, faDigits}} باید ببیند",
@@ -224,7 +225,9 @@
     "winLine": "{{total, faDigits}} برد ({{ind, faDigits}}/{{team, faDigits}})",
     "individual": "انفرادی",
     "group": "گروهی",
-    "reset": "بازنشانی"
+    "reset": "بازنشانی",
+    "resetTitle": "جدول امتیازها بازنشانی شود؟",
+    "resetConfirm": "این کار سابقهٔ بردهای همهٔ بازی‌ها را برای همیشه پاک می‌کند و قابل بازگشت نیست."
   },
   "nhie": {
     "title": "من هیچ‌وقت",
