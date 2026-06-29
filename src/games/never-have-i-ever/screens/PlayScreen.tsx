@@ -96,7 +96,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<NhieSt
 
   // "End game" ends the match now and jumps to Results with the standings so far.
   const endGame = (
-    <button onClick={() => dispatch({ type: 'END_GAME' })} className="text-sm text-[var(--text-muted)]">
+    <button onClick={() => nav.endGame()} className="text-sm text-[var(--text-muted)]">
       {t('common.endGame')}
     </button>
   );

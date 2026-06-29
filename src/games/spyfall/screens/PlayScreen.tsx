@@ -47,7 +47,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<Spyfal
   // Results with the running standings. Shown during active play in every in-match AppBar's right slot.
   const endGameRight = (
     <button
-      onClick={() => dispatch({ type: 'END_GAME' })}
+      onClick={() => nav.endGame()}
       className="text-sm text-[var(--text-muted)]"
     >
       {t('common.endGame')}
@@ -203,6 +203,9 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<Spyfal
 
   if (s.phase === 'spyGuess') {
     const spy = s.round.spyIds[0];
+    // Guess from the round's actual candidate locations (the enabled packs), not every location in
+    // the game — otherwise the spy is offered locations that were never in play.
+    const guessLocations = ALL_LOCATIONS.filter((l) => s.catalogIds.includes(l.id));
     return (
       <Screen>
         <AppBar onBack={() => nav.exit()} right={endGameRight} />
@@ -216,7 +219,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<Spyfal
           <div className="flex flex-1 flex-col gap-3">
             <p className="text-center text-base font-bold">{t('spy.guessTitle')}</p>
             <div className="grid grid-cols-2 gap-2">
-              {ALL_LOCATIONS.map((l) => (
+              {guessLocations.map((l) => (
                 <button
                   key={l.id}
                   onClick={() => { ctx.sound.play('reveal'); dispatch({ type: 'SPY_GUESS', spyId: spy, locationId: l.id }); }}

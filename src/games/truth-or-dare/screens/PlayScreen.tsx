@@ -78,7 +78,7 @@ function ChoosingScreen({
           animate={settled ? { rotate: 0, scale: 1.06 } : { rotate: 360 }}
           transition={
             settled
-              ? { type: 'spring', stiffness: 200, damping: 11 }
+              ? { type: 'spring', stiffness: 150, damping: 21 }
               : { duration: 0.6, repeat: Infinity, ease: 'linear' }
           }
         >
@@ -141,7 +141,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<ToDSta
       onBack={() => nav.exit()}
       right={
         s.history.length > 0 ? (
-          <button onClick={() => dispatch({ type: 'END_GAME' })} className="text-sm text-[var(--text-muted)]">
+          <button onClick={() => nav.endGame()} className="text-sm text-[var(--text-muted)]">
             {t('tod.endGame')}
           </button>
         ) : undefined

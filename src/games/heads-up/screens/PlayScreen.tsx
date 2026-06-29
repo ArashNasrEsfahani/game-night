@@ -145,7 +145,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<HeadsU
   const guesserName = participant ? s.playerNames[guesserId(participant)] : '';
   const endGameButton = (
     <button
-      onClick={() => dispatch({ type: 'END_GAME' })}
+      onClick={() => nav.endGame()}
       className="text-sm text-[var(--text-muted)]"
     >
       {t('common.endGame')}
@@ -206,7 +206,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<HeadsU
             key={s.countdownLeft}
             initial={{ scale: 0.4, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            transition={{ type: 'spring', stiffness: 300, damping: 16 }}
+            transition={{ type: 'spring', stiffness: 225, damping: 26 }}
             className="text-9xl font-black dp-accent"
           >
             {s.countdownLeft > 0 ? s.countdownLeft : t('hu.go')}
@@ -237,7 +237,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<HeadsU
               key={s.currentCardId}
               initial={{ scale: 0.7, opacity: 0, y: 10 }}
               animate={{ scale: 1, opacity: 1, y: 0 }}
-              transition={{ type: 'spring', stiffness: 320, damping: 20 }}
+              transition={{ type: 'spring', stiffness: 240, damping: 26 }}
               className="z-10 text-center text-6xl font-black leading-tight"
             >
               {word}

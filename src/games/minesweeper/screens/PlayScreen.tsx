@@ -62,7 +62,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<Minesw
         title={t('mine.title')}
         onBack={() => nav.exit()}
         right={
-          <button onClick={() => dispatch({ type: 'END_GAME' })} className="text-sm text-[var(--text-muted)]">
+          <button onClick={() => nav.endGame()} className="text-sm text-[var(--text-muted)]">
             {t('common.endGame')}
           </button>
         }
@@ -82,7 +82,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<Minesw
             key={active?.id}
             initial={{ opacity: 0, y: -6, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ type: 'spring', stiffness: 320, damping: 20 }}
+            transition={{ type: 'spring', stiffness: 240, damping: 26 }}
             className="font-bold dp-accent"
           >
             {t('mine.turnOf', { name: active?.name ?? '' })}
@@ -120,7 +120,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<Minesw
                 initial={{ y: -8, opacity: 0, scale: 0.9 }}
                 animate={{ y: 0, opacity: 1, scale: 1 }}
                 exit={{ opacity: 0 }}
-                transition={{ type: 'spring', stiffness: 300, damping: 18 }}
+                transition={{ type: 'spring', stiffness: 225, damping: 26 }}
                 className={`text-center text-sm font-bold ${
                   s.flash?.type === 'found' ? 'text-[var(--color-game-gold-strong)]' : 'text-[var(--text-muted)]'
                 }`}

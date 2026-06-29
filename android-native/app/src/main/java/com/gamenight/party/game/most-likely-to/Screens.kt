@@ -58,6 +58,7 @@ import com.gamenight.party.ui.components.CardShape
 import com.gamenight.party.ui.components.Chip
 import com.gamenight.party.ui.components.Curtain
 import com.gamenight.party.ui.components.GameAppBar
+import com.gamenight.party.ui.components.EndGameButton
 import com.gamenight.party.ui.components.Leaderboard
 import com.gamenight.party.ui.components.ScoreRow
 import com.gamenight.party.ui.components.SegmentOption
@@ -277,12 +278,7 @@ fun MostLikelyToPlayScreen(
                 onClose = host::requestExit,
                 trailing = if (state.rounds.isNotEmpty()) {
                     {
-                        Text(
-                            text = tx(lang, "End game", "پایان بازی"),
-                            color = palette.textMuted,
-                            fontSize = 14.sp,
-                            modifier = Modifier.clickable { dispatch(MltAction.EndGame) },
-                        )
+                        EndGameButton(lang = lang, onEndGame = { dispatch(MltAction.EndGame) })
                     }
                 } else {
                     null

@@ -36,6 +36,7 @@ import com.gamenight.party.sound.Haptics
 import com.gamenight.party.sound.SoundId
 import com.gamenight.party.ui.components.AppScreen
 import com.gamenight.party.ui.components.GameAppBar
+import com.gamenight.party.ui.components.EndGameButton
 import com.gamenight.party.ui.components.PillShape
 import com.gamenight.party.ui.components.glass2Surface
 import com.gamenight.party.ui.components.screenEntrance
@@ -113,12 +114,7 @@ fun MinesweeperPlayScreen(
                 lang = lang,
                 onClose = onClose,
                 trailing = {
-                    Text(
-                        text = loc(lang, "End game", "پایان بازی"),
-                        color = palette.textMuted,
-                        fontSize = 14.sp,
-                        modifier = Modifier.clickable { dispatch(MinesweeperAction.EndGame) },
-                    )
+                    EndGameButton(lang = lang, onEndGame = { dispatch(MinesweeperAction.EndGame) })
                 },
             )
 
@@ -168,7 +164,7 @@ fun MinesweeperPlayScreen(
                         // The whose-turn pill gently springs up to emphasise the active player.
                         val pillScale by animateFloatAsState(
                             targetValue = if (isActive) 1.05f else 1f,
-                            animationSpec = spring(dampingRatio = 0.55f, stiffness = 380f),
+                            animationSpec = spring(dampingRatio = 0.8f, stiffness = 285f),
                             label = "minePillScale",
                         )
                         Box(

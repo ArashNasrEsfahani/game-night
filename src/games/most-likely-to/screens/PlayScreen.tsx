@@ -125,7 +125,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<MltSta
       onBack={() => nav.exit()}
       right={
         s.rounds.length > 0 ? (
-          <button onClick={() => dispatch({ type: 'END_GAME' })} className="text-sm text-[var(--text-muted)]">
+          <button onClick={() => nav.endGame()} className="text-sm text-[var(--text-muted)]">
             {t('common.endGame')}
           </button>
         ) : undefined

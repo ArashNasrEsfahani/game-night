@@ -52,6 +52,7 @@ import com.gamenight.party.ui.components.ButtonSize
 import com.gamenight.party.ui.components.ButtonVariant
 import com.gamenight.party.ui.components.Chip
 import com.gamenight.party.ui.components.GameAppBar
+import com.gamenight.party.ui.components.EndGameButton
 import com.gamenight.party.ui.components.Leaderboard
 import com.gamenight.party.ui.components.PillShape
 import com.gamenight.party.ui.components.ScoreRow
@@ -346,12 +347,7 @@ fun HeadsUpPlayScreen(
         val palette = LocalPalette.current
         // Bail out of the match early -> jump straight to Results with the standings so far.
         val endGameRight: @Composable () -> Unit = {
-            Text(
-                text = t("End game", "پایان بازی"),
-                color = palette.textMuted,
-                fontSize = 14.sp,
-                modifier = Modifier.clickable { dispatch(HeadsUpAction.EndGame) },
-            )
+            EndGameButton(lang = lang, onEndGame = { dispatch(HeadsUpAction.EndGame) })
         }
         AppScreen(horizontalAlignment = Alignment.CenterHorizontally) {
             when (s.phase) {
@@ -418,7 +414,7 @@ fun HeadsUpPlayScreen(
                         sound.play(SoundId.TICK)
                         haptics.light()
                         countPop.snapTo(0.5f)
-                        countPop.animateTo(1f, spring(dampingRatio = 0.45f, stiffness = 320f))
+                        countPop.animateTo(1f, spring(dampingRatio = 0.8f, stiffness = 240f))
                     }
                     Box(Modifier.weight(1f).fillMaxWidth(), contentAlignment = Alignment.Center) {
                         Text(
@@ -440,14 +436,14 @@ fun HeadsUpPlayScreen(
                     val gotPop = remember { Animatable(1f) }
                     LaunchedEffect(gotCount) {
                         gotPop.snapTo(1.25f)
-                        gotPop.animateTo(1f, spring(dampingRatio = 0.45f, stiffness = 320f))
+                        gotPop.animateTo(1f, spring(dampingRatio = 0.8f, stiffness = 240f))
                     }
                     // Each fresh card springs in (mirrors the web card pop).
                     val cardPop = remember { Animatable(1f) }
                     LaunchedEffect(s.currentCardId) {
                         if (s.currentCardId != null) {
                             cardPop.snapTo(0.7f)
-                            cardPop.animateTo(1f, spring(dampingRatio = 0.55f, stiffness = 320f))
+                            cardPop.animateTo(1f, spring(dampingRatio = 0.8f, stiffness = 240f))
                         }
                     }
                     val flashTint = when (s.flash) {
@@ -539,7 +535,7 @@ fun HeadsUpPlayScreen(
                     val scorePop = remember { Animatable(1f) }
                     LaunchedEffect(last) {
                         scorePop.snapTo(0.6f)
-                        scorePop.animateTo(1f, spring(dampingRatio = 0.5f, stiffness = 300f))
+                        scorePop.animateTo(1f, spring(dampingRatio = 0.8f, stiffness = 225f))
                     }
                     GameAppBar(manifest = manifest, lang = lang, onClose = onClose, trailing = endGameRight)
                     Box(Modifier.weight(1f).fillMaxWidth(), contentAlignment = Alignment.Center) {

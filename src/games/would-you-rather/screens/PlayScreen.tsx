@@ -72,7 +72,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<WyrSta
       onBack={() => nav.exit()}
       right={
         s.history.length > 0 ? (
-          <button onClick={() => dispatch({ type: 'END_GAME' })} className="text-sm text-[var(--text-muted)]">
+          <button onClick={() => nav.endGame()} className="text-sm text-[var(--text-muted)]">
             {t('common.endGame')}
           </button>
         ) : undefined
@@ -224,7 +224,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<WyrSta
           className="text-center text-lg font-extrabold"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.5, type: 'spring', stiffness: 300, damping: 18 }}
+          transition={{ delay: 0.5, type: 'spring', stiffness: 225, damping: 26 }}
         >
           {cur.majority === 'tie' ? t('wyr.tie') : cur.majority === 'A' ? `${a} ✓` : `${b} ✓`}
         </motion.p>

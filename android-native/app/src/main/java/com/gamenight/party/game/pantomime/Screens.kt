@@ -50,6 +50,7 @@ import com.gamenight.party.ui.components.ButtonSize
 import com.gamenight.party.ui.components.ButtonVariant
 import com.gamenight.party.ui.components.Curtain
 import com.gamenight.party.ui.components.GameAppBar
+import com.gamenight.party.ui.components.EndGameButton
 import com.gamenight.party.ui.components.Leaderboard
 import com.gamenight.party.ui.components.PillShape
 import com.gamenight.party.ui.components.ScoreRow
@@ -370,7 +371,13 @@ private fun HandoffView(
     val accent = LocalAccent.current
     val team = activeTeam(s)
     val name = actorName(s)
-    val total = if (s.options.endMode == PantomimeEndMode.ROUNDS) fmtNum(s.options.totalRounds, lang) else "∞"
+    val round = fmtNum(currentRound(s), lang)
+    // In target-score mode show the win condition ("first to N") rather than an opaque "of ∞".
+    val roundLine = if (s.options.endMode == PantomimeEndMode.ROUNDS) {
+        tr(lang, "Round $round of ${fmtNum(s.options.totalRounds, lang)}", "دور $round از ${fmtNum(s.options.totalRounds, lang)}")
+    } else {
+        tr(lang, "Round $round · first to ${fmtNum(s.options.targetScore, lang)}", "دور $round · تا ${fmtNum(s.options.targetScore, lang)} امتیاز")
+    }
     AppScreen {
         GameAppBar(manifest = manifest, lang = lang, onClose = onClose, trailing = { EndGameAction(lang, dispatch) })
         Column(
@@ -379,7 +386,7 @@ private fun HandoffView(
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
             Text(
-                text = tr(lang, "Round ${fmtNum(currentRound(s), lang)} of $total", "دور ${fmtNum(currentRound(s), lang)} از $total"),
+                text = roundLine,
                 color = palette.textMuted,
                 fontWeight = FontWeight.SemiBold,
                 fontSize = 14.sp,
@@ -697,12 +704,7 @@ private fun standingsRows(s: PantomimeState, lang: Lang): List<ScoreRow> = selec
 /** Ends the match immediately and shows Results with the standings so far (web: common.endGame). */
 @Composable
 private fun EndGameAction(lang: Lang, dispatch: (PantomimeAction) -> Unit) {
-    Text(
-        text = tr(lang, "End game", "پایان بازی"),
-        color = LocalPalette.current.textMuted,
-        fontSize = 14.sp,
-        modifier = Modifier.clickable { dispatch(PantomimeAction.EndGame) },
-    )
+    EndGameButton(lang = lang, onEndGame = { dispatch(PantomimeAction.EndGame) })
 }
 
 @Composable

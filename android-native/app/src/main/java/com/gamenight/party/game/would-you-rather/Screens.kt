@@ -52,6 +52,7 @@ import com.gamenight.party.ui.components.ButtonSize
 import com.gamenight.party.ui.components.ButtonVariant
 import com.gamenight.party.ui.components.Curtain
 import com.gamenight.party.ui.components.GameAppBar
+import com.gamenight.party.ui.components.EndGameButton
 import com.gamenight.party.ui.components.Leaderboard
 import com.gamenight.party.ui.components.ScoreRow
 import com.gamenight.party.ui.components.SegmentOption
@@ -257,12 +258,7 @@ fun WouldYouRatherPlayScreen(
             onClose = host::requestExit,
             trailing = if (s.history.isNotEmpty()) {
                 {
-                    Text(
-                        text = WyrStrings.endGame.resolve(lang),
-                        color = palette.textMuted,
-                        fontSize = 14.sp,
-                        modifier = Modifier.clickable { dispatch(WyrAction.EndGame) },
-                    )
+                    EndGameButton(lang = lang, onEndGame = { dispatch(WyrAction.EndGame) })
                 }
             } else {
                 null
@@ -496,7 +492,7 @@ fun WouldYouRatherPlayScreen(
             LaunchedEffect(s.index) {
                 host.sound.play(SoundId.REVEAL)
                 delay(450)
-                verdictPop.animateTo(1f, spring(dampingRatio = 0.6f, stiffness = 320f))
+                verdictPop.animateTo(1f, spring(dampingRatio = 0.8f, stiffness = 240f))
             }
             AppScreen {
                 header()

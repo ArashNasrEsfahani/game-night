@@ -49,6 +49,7 @@ import com.gamenight.party.ui.components.ButtonSize
 import com.gamenight.party.ui.components.ButtonVariant
 import com.gamenight.party.ui.components.Curtain
 import com.gamenight.party.ui.components.GameAppBar
+import com.gamenight.party.ui.components.EndGameButton
 import com.gamenight.party.ui.components.PillShape
 import com.gamenight.party.ui.components.SegmentOption
 import com.gamenight.party.ui.components.SegmentedControl
@@ -482,12 +483,7 @@ fun MafiaPlayScreen(
 
     // Shared "End game" control for the AppBar's trailing slot during active play (mirrors ToD).
     val endGameRight: @Composable () -> Unit = {
-        Text(
-            text = LocalizedString("End game", "پایان بازی").resolve(lang),
-            color = palette.textMuted,
-            fontSize = 14.sp,
-            modifier = Modifier.clickable { dispatch(MafiaAction.EndGame) },
-        )
+        EndGameButton(lang = lang, onEndGame = { dispatch(MafiaAction.EndGame) })
     }
 
     when (s.phase) {

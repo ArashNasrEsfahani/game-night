@@ -40,6 +40,7 @@ import com.gamenight.party.ui.components.ButtonSize
 import com.gamenight.party.ui.components.ButtonVariant
 import com.gamenight.party.ui.components.Curtain
 import com.gamenight.party.ui.components.GameAppBar
+import com.gamenight.party.ui.components.EndGameButton
 import com.gamenight.party.ui.components.PillShape
 import com.gamenight.party.ui.components.Stepper
 import com.gamenight.party.ui.components.glass2Surface
@@ -109,12 +110,7 @@ fun CodenamesPlayScreen(
         // standings so far (the team closest to clearing wins). Lives in the shared GameAppBar's
         // trailing slot, after the built-in How-to-play button.
         val endGameRight: @Composable () -> Unit = {
-            Text(
-                text = CnStr.endGame.resolve(lang),
-                color = palette.textMuted,
-                fontSize = 14.sp,
-                modifier = Modifier.clickable { dispatch(CodenamesAction.EndGame) },
-            )
+            EndGameButton(lang = lang, onEndGame = { dispatch(CodenamesAction.EndGame) })
         }
 
         when (s.phase) {

@@ -58,6 +58,7 @@ import com.gamenight.party.ui.components.ButtonVariant
 import com.gamenight.party.ui.components.EaseOut
 import com.gamenight.party.ui.components.EasePop
 import com.gamenight.party.ui.components.GameAppBar
+import com.gamenight.party.ui.components.EndGameButton
 import com.gamenight.party.ui.components.Leaderboard
 import com.gamenight.party.ui.components.PillShape
 import com.gamenight.party.ui.components.ScoreRow
@@ -421,12 +422,7 @@ fun DowrPlayScreen(
             lang = lang,
             onClose = onClose,
             trailing = {
-                Text(
-                    text = tr(lang, "End game", "پایان بازی"),
-                    color = palette.textMuted,
-                    fontSize = 14.sp,
-                    modifier = Modifier.clickable { dispatch(DowrAction.EndGame) },
-                )
+                EndGameButton(lang = lang, onEndGame = { dispatch(DowrAction.EndGame) })
             },
         )
 

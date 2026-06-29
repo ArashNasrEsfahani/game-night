@@ -26,7 +26,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<MafiaS
   const alive = alivePlayers(s);
 
   const endGameRight = (
-    <button onClick={() => dispatch({ type: 'END_GAME' })} className="text-sm text-[var(--text-muted)]">
+    <button onClick={() => nav.endGame()} className="text-sm text-[var(--text-muted)]">
       {t('common.endGame')}
     </button>
   );

@@ -48,6 +48,7 @@ import com.gamenight.party.ui.components.ButtonVariant
 import com.gamenight.party.ui.components.Chip
 import com.gamenight.party.ui.components.Curtain
 import com.gamenight.party.ui.components.GameAppBar
+import com.gamenight.party.ui.components.EndGameButton
 import com.gamenight.party.ui.theme.LocalAccent
 import com.gamenight.party.ui.theme.LocalPalette
 import kotlinx.coroutines.delay
@@ -84,12 +85,7 @@ fun TruthOrDarePlayScreen(
             onClose = onClose,
             trailing = if (s.history.isNotEmpty()) {
                 {
-                    Text(
-                        text = ToDStr.endGame.resolve(lang),
-                        color = palette.textMuted,
-                        fontSize = 14.sp,
-                        modifier = Modifier.clickable { dispatch(ToDAction.EndGame) },
-                    )
+                    EndGameButton(lang = lang, onEndGame = { dispatch(ToDAction.EndGame) })
                 }
             } else {
                 null
@@ -239,7 +235,7 @@ private fun ChoosingScreen(
     // The bullseye pops when the name settles (web: spring to scale 1.06).
     val targetScale by animateFloatAsState(
         targetValue = if (settled) 1.06f else 1f,
-        animationSpec = spring(dampingRatio = 0.45f, stiffness = 220f),
+        animationSpec = spring(dampingRatio = 0.8f, stiffness = 165f),
         label = "todChosenPop",
     )
 
@@ -336,7 +332,7 @@ private fun ResolvingScreen(
     val cardPop = remember(s.currentPromptId) { Animatable(0f) }
     LaunchedEffect(s.currentPromptId) {
         cardPop.snapTo(0f)
-        cardPop.animateTo(1f, spring(dampingRatio = 0.6f, stiffness = 240f))
+        cardPop.animateTo(1f, spring(dampingRatio = 0.8f, stiffness = 180f))
     }
 
     AppScreen {

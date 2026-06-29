@@ -126,7 +126,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<DowrSt
         onBack={() => nav.exit()}
         right={
           <button
-            onClick={() => dispatch({ type: 'END_GAME' })}
+            onClick={() => nav.endGame()}
             className="text-sm text-[var(--text-muted)]"
           >
             {t('common.endGame')}

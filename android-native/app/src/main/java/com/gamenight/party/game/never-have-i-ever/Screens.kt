@@ -50,6 +50,7 @@ import com.gamenight.party.ui.components.ButtonSize
 import com.gamenight.party.ui.components.Chip
 import com.gamenight.party.ui.components.Curtain
 import com.gamenight.party.ui.components.GameAppBar
+import com.gamenight.party.ui.components.EndGameButton
 import com.gamenight.party.ui.components.Leaderboard
 import com.gamenight.party.ui.components.PillShape
 import com.gamenight.party.ui.components.ScoreRow
@@ -85,19 +86,14 @@ private fun NhieAccent(content: @Composable () -> Unit) {
 @Composable
 private fun EndGameAction(lang: Lang, dispatch: (NhieAction) -> Unit) {
     val palette = LocalPalette.current
-    Text(
-        text = tr(lang, "End game", "پایان بازی"),
-        color = palette.textMuted,
-        fontSize = 14.sp,
-        modifier = Modifier.clickable { dispatch(NhieAction.EndGame) },
-    )
+    EndGameButton(lang = lang, onEndGame = { dispatch(NhieAction.EndGame) })
 }
 
 /** An emoji that springs in (the heart-break / skull punch from the web's reveal animations). */
 @Composable
 private fun PopEmoji(emoji: String, fontSize: TextUnit, modifier: Modifier = Modifier) {
     val scale = remember { Animatable(0.3f) }
-    LaunchedEffect(Unit) { scale.animateTo(1f, spring(dampingRatio = 0.45f, stiffness = 320f)) }
+    LaunchedEffect(Unit) { scale.animateTo(1f, spring(dampingRatio = 0.8f, stiffness = 240f)) }
     Text(
         text = emoji,
         fontSize = fontSize,
@@ -564,7 +560,7 @@ private fun RevealView(
             haveNames.isNotEmpty() -> { sound.play(SoundId.WRONG); haptics.warning() }
             else -> { sound.play(SoundId.CORRECT); haptics.success() }
         }
-        pop.animateTo(1f, spring(dampingRatio = 0.5f, stiffness = 320f))
+        pop.animateTo(1f, spring(dampingRatio = 0.8f, stiffness = 240f))
     }
     AppScreen(horizontalAlignment = Alignment.CenterHorizontally) {
         GameAppBar(manifest = manifest, lang = lang, onClose = onClose, trailing = { EndGameAction(lang, dispatch) })

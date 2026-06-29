@@ -30,6 +30,7 @@ import com.gamenight.party.ui.components.ButtonVariant
 import com.gamenight.party.ui.components.Chip
 import com.gamenight.party.ui.components.Curtain
 import com.gamenight.party.ui.components.GameAppBar
+import com.gamenight.party.ui.components.EndGameButton
 import com.gamenight.party.ui.components.Leaderboard
 import com.gamenight.party.ui.components.ScoreRow
 import com.gamenight.party.ui.components.SegmentOption
@@ -303,12 +304,7 @@ fun SpyfallPlayScreen(
     // Shared "End game" affordance (mirrors Truth or Dare): ends the match immediately and the shell
     // swaps to Results with the running standings. Shown during active play in each in-match AppBar.
     val endGameRight: @Composable () -> Unit = {
-        Text(
-            text = txt(lang, "End game", "پایان بازی"),
-            color = palette.textMuted,
-            fontSize = 14.sp,
-            modifier = Modifier.clickable { dispatch(SpyfallAction.EndGame) },
-        )
+        EndGameButton(lang = lang, onEndGame = { dispatch(SpyfallAction.EndGame) })
     }
 
     when (s.phase) {
@@ -557,6 +553,9 @@ fun SpyfallPlayScreen(
 
         SpyfallPhase.SPY_GUESS -> {
             val spy = s.round.spyIds.firstOrNull() ?: ""
+            // Guess from the round's actual candidate locations (the enabled packs), not every
+            // location in the game — otherwise the spy is offered locations that were never in play.
+            val guessLocations = SpyfallContent.allLocations().filter { it.id in s.catalogIds }
             AppScreen {
                 GameAppBar(manifest = manifest, lang = lang, onClose = onClose, trailing = endGameRight)
                 Curtain(
@@ -578,7 +577,7 @@ fun SpyfallPlayScreen(
                     Column(
                         modifier = Modifier.weight(1f).fillMaxWidth().verticalScroll(rememberScrollState()),
                     ) {
-                        SpyfallContent.allLocations().chunked(2).forEach { rowItems ->
+                        guessLocations.chunked(2).forEach { rowItems ->
                             Row(
                                 modifier = Modifier.fillMaxWidth().padding(bottom = 8.dp),
                                 horizontalArrangement = Arrangement.spacedBy(8.dp),

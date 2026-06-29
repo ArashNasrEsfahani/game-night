@@ -74,7 +74,7 @@ export function PlayScreen({
   // Ends the match immediately and shows the Results screen with the standings so far.
   const endGameButton = (
     <button
-      onClick={() => dispatch({ type: 'END_GAME' })}
+      onClick={() => nav.endGame()}
       className="text-sm text-[var(--text-muted)]"
     >
       {t('common.endGame')}
@@ -99,10 +99,9 @@ export function PlayScreen({
         <AppBar onBack={() => nav.exit()} right={endGameButton} />
         <div className="flex flex-1 flex-col items-center justify-center gap-4 text-center">
           <p className="text-sm font-semibold text-[var(--text-muted)]">
-            {t('pantomime.roundOf', {
-              round: currentRound(s),
-              total: s.options.endMode === 'rounds' ? s.options.totalRounds : '∞',
-            })}
+            {s.options.endMode === 'rounds'
+              ? t('pantomime.roundOf', { round: currentRound(s), total: s.options.totalRounds })
+              : t('pantomime.roundToTarget', { round: currentRound(s), target: s.options.targetScore })}
           </p>
           {team && <TeamBadge label={team.name} color={team.color} />}
           <p className="text-lg text-[var(--text-muted)]">{t('pantomime.passTo')}</p>
