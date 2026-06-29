@@ -1,4 +1,7 @@
+import { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
+import { useNum } from '../../lib/digits';
+import { useUiSound } from '../../lib/uiSound';
 
 export function TimerRing({
   totalSeconds,
@@ -7,9 +10,25 @@ export function TimerRing({
   totalSeconds: number;
   remainingSeconds: number;
 }) {
+  const num = useNum();
+  const ui = useUiSound();
+  const uiRef = useRef(ui);
+  uiRef.current = ui;
   const r = 52;
   const circ = 2 * Math.PI * r;
   const pct = totalSeconds > 0 ? Math.max(0, Math.min(1, remainingSeconds / totalSeconds)) : 0;
+
+  // Audible (+ haptic) countdown for the final seconds: a soft tick each whole second from 5→1 as
+  // the ring goes red, so the time pressure lands even when eyes are on the word/board, not the
+  // clock. Fires once per second and only while counting *down* (a new round resetting up is silent);
+  // gated by the mute/haptics settings via useUiSound.
+  const shown = Math.max(0, Math.ceil(remainingSeconds));
+  const lastShown = useRef<number | null>(null);
+  useEffect(() => {
+    const prev = lastShown.current;
+    if (prev !== null && shown < prev && shown >= 1 && shown <= 5) uiRef.current('tick');
+    lastShown.current = shown;
+  }, [shown]);
   // The last five seconds are the tense ones — turn the ring red, glow it, and pulse it so the
   // pressure reads at a glance (matters in Heads Up / Dowr / Pantomime where eyes are on the word,
   // not the clock). Pulse is a framer transform, so the app's reduce-motion setting stills it while
@@ -47,7 +66,7 @@ export function TimerRing({
         className="absolute text-3xl font-bold tabular-nums"
         style={critical ? { color: 'var(--color-game-rose-strong)' } : undefined}
       >
-        {Math.max(0, Math.ceil(remainingSeconds))}
+        {num(shown)}
       </span>
     </motion.div>
   );

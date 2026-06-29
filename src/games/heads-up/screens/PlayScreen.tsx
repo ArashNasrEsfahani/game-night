@@ -243,9 +243,24 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<HeadsU
               {word}
             </motion.h1>
           ) : (
-            <p className="z-10 text-2xl text-[var(--text-muted)]">{t('hu.outOfWords')}</p>
+            <motion.p
+              initial={{ opacity: 0, y: -8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.25 }}
+              className="z-10 text-2xl text-[var(--text-muted)]"
+            >
+              {t('hu.outOfWords')}
+            </motion.p>
           )}
-          <p className="z-10 text-sm text-[var(--text-muted)]">{t('hu.gotCount', { n: got })}</p>
+          <motion.p
+            key={got}
+            initial={{ scale: 1.25 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 0.3, ease: [0.34, 1.56, 0.64, 1] }}
+            className="z-10 text-sm text-[var(--text-muted)]"
+          >
+            {t('hu.gotCount', { n: got })}
+          </motion.p>
           {tiltMode && (
             <p className="z-10 text-xs font-semibold text-[var(--game-accent-strong)]">{t('hu.tiltHint')}</p>
           )}
@@ -253,6 +268,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<HeadsU
             <Button
               size="lg"
               variant="secondary"
+              disabled={!s.currentCardId}
               onClick={() => { ctx.sound.play('pass'); ctx.haptics.light(); dispatch({ type: 'MARK_PASS', seed: ctx.random.seed() }); }}
             >
               ↑ {t('hu.pass')}
@@ -260,6 +276,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<HeadsU
             <Button
               size="lg"
               variant="success"
+              disabled={!s.currentCardId}
               onClick={() => { ctx.sound.play('correct'); ctx.haptics.success(); dispatch({ type: 'MARK_GOT', seed: ctx.random.seed() }); }}
             >
               ↓ {t('hu.got')}

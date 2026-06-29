@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Card } from './Card';
 import { cn } from '../../lib/cn';
 import { stagger, staggerItem } from '../motion';
+import { useNum } from '../../lib/digits';
 
 export interface ScoreRow {
   id: string;
@@ -14,6 +15,7 @@ export interface ScoreRow {
 }
 
 export function Scoreboard({ rows }: { rows: ScoreRow[] }) {
+  const num = useNum();
   return (
     <motion.ul variants={stagger} initial="initial" animate="animate" className="flex flex-col gap-2">
       {rows.map((r) => {
@@ -34,7 +36,7 @@ export function Scoreboard({ rows }: { rows: ScoreRow[] }) {
                   first ? 'text-[var(--color-game-gold-strong)]' : 'text-[var(--text-muted)]',
                 )}
               >
-                {r.rank}
+                {num(r.rank)}
               </span>
               {r.color && (
                 <span
@@ -50,7 +52,7 @@ export function Scoreboard({ rows }: { rows: ScoreRow[] }) {
                 transition={{ duration: 0.4, ease: [0.34, 1.56, 0.64, 1] }}
                 className="font-display text-xl tabular-nums"
               >
-                {r.display ?? r.score}
+                {num(r.display ?? r.score)}
               </motion.span>
             </Card>
           </motion.li>

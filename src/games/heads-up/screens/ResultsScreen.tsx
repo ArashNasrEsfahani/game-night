@@ -32,7 +32,7 @@ export function ResultsScreen({ state, ctx, nav }: GameScreenProps<HeadsUpState,
     <Screen>
       <AppBar title={t('results.title')} onBack={() => nav.exit()} />
       <div className="flex flex-col gap-4 pb-8">
-        <WinnerBanner title={title} names={winnerNames} />
+        <WinnerBanner title={title} names={winnerNames} tie={winners.length > 1} />
         <Scoreboard rows={rows} />
         <div className="mt-2 flex flex-col gap-2">
           <Button size="lg" fullWidth onClick={() => { ctx.sound.play('tap'); nav.playAgain(); }}>

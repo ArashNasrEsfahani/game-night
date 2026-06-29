@@ -44,7 +44,7 @@ export function ResultsScreen({ state, ctx, nav }: GameScreenProps<MinesweeperSt
     <Screen>
       <AppBar title={t('results.title')} onBack={() => nav.exit()} />
       <div className="flex flex-col gap-4 pb-8">
-        <WinnerBanner title={title} names={solo ? [] : winnerNames} />
+        <WinnerBanner title={title} names={solo ? [] : winnerNames} tie={!solo && winnerNames.length > 1} />
 
         {!solo && <Scoreboard rows={rows} />}
 

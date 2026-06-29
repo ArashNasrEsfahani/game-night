@@ -1,6 +1,12 @@
+import { createContext, useContext } from 'react';
 import type { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 import { pressIcon } from '../motion';
+
+/** The host advertises the active game's name here so every in-game AppBar shows it as a gold
+ *  header (matching the native GameAppBar) without each screen having to pass a title. Empty
+ *  outside a game, where titles render in the normal style. */
+export const GameChromeContext = createContext<{ name?: string }>({});
 
 export function AppBar({
   title,
@@ -11,6 +17,9 @@ export function AppBar({
   onBack?: () => void;
   right?: ReactNode;
 }) {
+  const { name } = useContext(GameChromeContext);
+  const inGame = name != null;
+  const shown = title ?? name;
   return (
     <header className="flex h-14 items-center gap-2">
       {onBack && (
@@ -25,7 +34,15 @@ export function AppBar({
           <span className="rtl:rotate-180">‹</span>
         </motion.button>
       )}
-      <h1 className="flex-1 truncate text-xl font-bold">{title}</h1>
+      <h1
+        className={
+          inGame
+            ? 'dp-foil flex-1 truncate font-display text-xl font-extrabold'
+            : 'flex-1 truncate text-xl font-bold'
+        }
+      >
+        {shown}
+      </h1>
       {right}
     </header>
   );

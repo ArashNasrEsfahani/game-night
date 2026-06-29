@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import type { GameConfig, GameScreenProps, PlayerSeat, TeamSetup } from '../../../sdk/types';
-import { Screen, AppBar, Button, SegmentedControl, Stepper, Toggle, MotifDivider, Disclosure, SelectChip } from '../../../sdk/ui';
+import { Screen, AppBar, Button, SetupErrors, SegmentedControl, Stepper, Toggle, MotifDivider, Disclosure, SelectChip } from '../../../sdk/ui';
 import { useRosterStore } from '../../../store/rosterStore';
 import { PlayerPicker } from '../../../app/components/PlayerPicker';
 import { asTeamId } from '../../../engine/ids';
@@ -76,7 +76,7 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<DowrState, DowrAction>
         <section>
           <div className="mb-2 flex items-baseline justify-between">
             <h2 className="text-sm font-semibold text-[var(--text-muted)]">
-              {t('common.players')} · {seats.length}
+              {t('common.playersCount', { count: seats.length })}
             </h2>
             {teamCount > 0 && (
               <span className="dp-accent text-xs font-semibold">
@@ -205,13 +205,7 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<DowrState, DowrAction>
         </Disclosure>
 
         <p className="text-sm text-[var(--text-muted)]">{t('dowr.poolHint', { count: poolSize })}</p>
-        {errors && (
-          <ul className="text-sm text-[var(--color-game-rose-strong)]">
-            {errors.map((e, i) => (
-              <li key={i}>{ctx.localize(e)}</li>
-            ))}
-          </ul>
-        )}
+        <SetupErrors errors={errors} />
         <Button size="lg" fullWidth disabled={!!errors} onClick={start}>
           {t('common.start')}
         </Button>

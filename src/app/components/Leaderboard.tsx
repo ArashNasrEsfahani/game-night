@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Card } from '../../sdk/ui';
+import { useNum } from '../../lib/digits';
 import { useLeaderboardStore, leaderboardRows } from '../../store/leaderboardStore';
 
 const MEDALS = ['🥇', '🥈', '🥉'];
@@ -8,6 +9,7 @@ const MEDALS = ['🥇', '🥈', '🥉'];
 /** Overall cross-game standings shown on Home: per-player wins (solo + group) as stacked bars. */
 export function Leaderboard() {
   const { t } = useTranslation();
+  const num = useNum();
   const tallies = useLeaderboardStore((s) => s.tallies);
   const totalMatches = useLeaderboardStore((s) => s.totalMatches);
   const reset = useLeaderboardStore((s) => s.reset);
@@ -32,7 +34,7 @@ export function Leaderboard() {
         </p>
         {rows.map((r, i) => (
           <div key={r.id} className="flex items-center gap-2.5">
-            <span className="w-6 shrink-0 text-center text-sm font-bold">{MEDALS[i] ?? i + 1}</span>
+            <span className="w-6 shrink-0 text-center text-sm font-bold">{MEDALS[i] ?? num(i + 1)}</span>
             <div className="min-w-0 flex-1">
               <div className="mb-1 flex items-baseline justify-between gap-2">
                 <span className="truncate text-sm font-semibold">{r.name}</span>

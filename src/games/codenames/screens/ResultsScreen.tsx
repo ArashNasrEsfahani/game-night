@@ -43,7 +43,7 @@ export function ResultsScreen({ state, ctx, nav }: GameScreenProps<CodenamesStat
     <Screen>
       <AppBar title={t('results.title')} onBack={() => nav.exit()} />
       <div className="flex flex-col gap-4 pb-8">
-        <WinnerBanner title={title} names={reasonKey ? [t(reasonKey)] : []} />
+        <WinnerBanner title={title} names={reasonKey ? [t(reasonKey)] : []} tie={!s.winner} />
         <div className="grid grid-cols-5 gap-1.5" style={{ perspective: 700 }}>
           {s.board.map((c: BoardCell) => (
             <motion.div

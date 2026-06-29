@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import type { GameConfig, GameScreenProps, PlayerSeat, TeamSetup } from '../../../sdk/types';
-import { Screen, AppBar, Button, SegmentedControl, Stepper, Toggle, Disclosure, SelectChip } from '../../../sdk/ui';
+import { Screen, AppBar, Button, SetupErrors, SegmentedControl, Stepper, Toggle, Disclosure, SelectChip } from '../../../sdk/ui';
 import { useRosterStore } from '../../../store/rosterStore';
 import { PlayerPicker } from '../../../app/components/PlayerPicker';
 import { TeamAssigner, useTeamAssignment } from '../../../app/components/TeamAssigner';
@@ -89,7 +89,7 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<PantomimeState, Pantom
         {/* Always visible: Players */}
         <section>
           <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">
-            {t('common.players')} · {seats.length}
+            {t('common.playersCount', { count: seats.length })}
           </h2>
           <PlayerPicker
             selected={selected}
@@ -226,13 +226,7 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<PantomimeState, Pantom
         <p className="text-sm text-[var(--text-muted)]">
           {t('pantomime.poolHint', { count: poolSize })}
         </p>
-        {errors && (
-          <ul className="text-sm text-[var(--color-game-rose-strong)]">
-            {errors.map((e, i) => (
-              <li key={i}>{ctx.localize(e)}</li>
-            ))}
-          </ul>
-        )}
+        <SetupErrors errors={errors} />
         <Button size="lg" fullWidth disabled={!!errors} onClick={start}>
           {t('common.start')}
         </Button>

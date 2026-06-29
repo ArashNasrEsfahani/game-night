@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { pressIcon, springSnappy } from '../motion';
 import { useUiSound } from '../../lib/uiSound';
+import { useNum } from '../../lib/digits';
 
 export function Stepper({
   value,
@@ -16,6 +17,7 @@ export function Stepper({
   label?: string;
 }) {
   const ui = useUiSound();
+  const num = useNum();
   return (
     <div className="flex items-center justify-between">
       {label && <span className="text-[var(--text)]">{label}</span>}
@@ -39,7 +41,7 @@ export function Stepper({
             transition={springSnappy}
             className="inline-block"
           >
-            {value}
+            {num(value)}
           </motion.span>
         </span>
         <motion.button

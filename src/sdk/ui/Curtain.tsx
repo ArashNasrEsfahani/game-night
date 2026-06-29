@@ -64,7 +64,9 @@ export function Curtain({
       {holderName && (
         <p className="relative max-w-full break-words px-4 text-2xl font-extrabold text-[#fdf6e6]">{holderName}</p>
       )}
-      <Button size="lg" onClick={onReveal} className="relative">
+      {/* Auto-focused so keyboard / screen-reader users land on the action (native Enter/Space then
+          reveal); for touch it's a harmless focus. */}
+      <Button size="lg" autoFocus onClick={onReveal} className="relative">
         {revealLabel}
       </Button>
     </motion.div>

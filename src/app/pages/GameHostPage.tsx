@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { AnimatePresence, motion } from 'framer-motion';
 import { screenFade } from '../../sdk/motion';
 import { Sheet, Button, Screen, AppBar, Medallion } from '../../sdk/ui';
+import { GameChromeContext } from '../../sdk/ui/AppBar';
 import { gameEmblem } from '../../sdk/ui/emblems';
 import type { GameManifest } from '../../sdk/types';
 import { getGame } from '../../games/registry';
@@ -287,6 +288,7 @@ export function GameHostPage() {
 
   return (
     <GameContextProvider value={ctx}>
+      <GameChromeContext.Provider value={{ name: localize(mod.manifest.name) }}>
       <div style={accentStyle} className="contents">
         <HostTopBar
           howToPlay={mod.manifest.howToPlay}
@@ -358,6 +360,7 @@ export function GameHostPage() {
           </div>
         </Sheet>
       </div>
+      </GameChromeContext.Provider>
     </GameContextProvider>
   );
 }

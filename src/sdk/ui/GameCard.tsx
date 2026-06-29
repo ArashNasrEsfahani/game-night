@@ -47,11 +47,11 @@ export function GameCard({
             'radial-gradient(80% 120% at 50% 122%, var(--game-accent) 0%, var(--game-accent-strong) 55%, transparent 100%), linear-gradient(180deg, color-mix(in oklab, var(--game-accent) 28%, var(--lapis)), var(--lapis-2))',
         }}
       >
-        <motion.div
-          className="dp-accent h-[68px] w-[68px] [&_svg]:h-full [&_svg]:w-full"
+        {/* CSS-driven float (dp-bob) — no per-frame JS, so a full grid of cards stays smooth and the
+            bob is stilled by both the OS and the in-app reduce-motion setting. */}
+        <div
+          className="dp-accent dp-bob h-[68px] w-[68px] [&_svg]:h-full [&_svg]:w-full"
           style={{ filter: 'drop-shadow(0 0 10px var(--game-accent-glow))' }}
-          animate={{ y: [0, -3, 0] }}
-          transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut' }}
           {...(emblem
             ? { dangerouslySetInnerHTML: { __html: emblem } }
             : { children: <span className="grid h-full w-full place-items-center text-5xl">{manifest.icon}</span> })}

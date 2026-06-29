@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import type { GameConfig, GameScreenProps, PlayerSeat } from '../../../sdk/types';
-import { Screen, AppBar, Button, SegmentedControl, Stepper, Disclosure } from '../../../sdk/ui';
+import { Screen, AppBar, Button, SetupErrors, SegmentedControl, Stepper, Disclosure } from '../../../sdk/ui';
 import { useRosterStore } from '../../../store/rosterStore';
 import { PlayerPicker } from '../../../app/components/PlayerPicker';
 import { DEFAULT_OPTIONS, PRESETS, validateConfig } from '../config';
@@ -44,7 +44,7 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<MinesweeperState, Mine
       <div className="flex flex-col gap-5 pb-8">
         <section>
           <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">
-            {t('common.players')} · {seats.length}
+            {t('common.playersCount', { count: seats.length })}
           </h2>
           <PlayerPicker
             selected={selected}
@@ -87,13 +87,7 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<MinesweeperState, Mine
           </span>
         </Disclosure>
 
-        {errors && (
-          <ul className="text-sm text-[var(--color-game-rose-strong)]">
-            {errors.map((e, i) => (
-              <li key={i}>{ctx.localize(e)}</li>
-            ))}
-          </ul>
-        )}
+        <SetupErrors errors={errors} />
         <Button size="lg" fullWidth disabled={!!errors} onClick={() => { ctx.sound.play('tap'); nav.startMatch(config); }}>
           {t('common.start')}
         </Button>

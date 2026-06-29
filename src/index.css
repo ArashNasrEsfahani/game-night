@@ -350,18 +350,36 @@ html[dir="rtl"] {
 /* Entrance animations (used across screens). */
 @keyframes dp-rise { from { opacity: 0; transform: translateY(14px) scale(0.97); } to { opacity: 1; transform: none; } }
 @keyframes dp-pop { from { opacity: 0; transform: scale(0.8); } to { opacity: 1; transform: none; } }
+/* Gentle continuous float for the home-grid emblems — a compositor-driven CSS loop so a screen of a
+   dozen cards costs nothing per frame (it replaced a dozen JS-driven framer-motion loops). */
+@keyframes dp-bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
 @layer utilities {
   .dp-rise { animation: dp-rise 0.5s var(--ease-pop) both; }
   .dp-pop { animation: dp-pop 0.4s var(--ease-pop) both; }
+  .dp-bob { animation: dp-bob 4.5s ease-in-out infinite; will-change: transform; }
   /* Slow continuous rotation (medallion glint, loaders). */
   .dp-spin-slow { animation: dp-beam 14s linear infinite; }
   .dp-spin-med { animation: dp-beam 6s linear infinite; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  body::before, body::after, .dp-foil, .dp-ball, .dp-rise, .dp-pop, .dp-spin-slow, .dp-spin-med {
+  body::before, body::after, .dp-foil, .dp-ball, .dp-rise, .dp-pop, .dp-bob, .dp-spin-slow, .dp-spin-med {
     animation: none !important;
   }
+}
+/* The in-app "Reduce Motion" setting (independent of the OS preference) must also still these CSS
+   loops — framer-motion's MotionConfig only governs framer animations, not these. AppProviders sets
+   the attribute when the setting is "on". */
+html[data-reduced-motion='true'] body::before,
+html[data-reduced-motion='true'] body::after,
+html[data-reduced-motion='true'] .dp-foil,
+html[data-reduced-motion='true'] .dp-ball,
+html[data-reduced-motion='true'] .dp-rise,
+html[data-reduced-motion='true'] .dp-pop,
+html[data-reduced-motion='true'] .dp-bob,
+html[data-reduced-motion='true'] .dp-spin-slow,
+html[data-reduced-motion='true'] .dp-spin-med {
+  animation: none !important;
 }
 
 /* Keyboard focus ring — a consistent, visible indicator for keyboard users on every interactive

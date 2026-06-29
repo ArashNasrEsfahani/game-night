@@ -3,6 +3,7 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import en from './en.json';
 import fa from './fa.json';
+import { formatNum } from '../lib/digits';
 
 void i18n.use(initReactI18next).init({
   resources: {
@@ -16,5 +17,11 @@ void i18n.use(initReactI18next).init({
   supportedLngs: ['en', 'fa'],
   interpolation: { escapeValue: false },
 });
+
+// Interpolation formatter so any string can render Persian numerals via `{{value, faDigits}}`
+// (e.g. "Players · {{count, faDigits}}"). Latin in English, ۰–۹ in Persian — one source of truth.
+i18n.services.formatter?.add('faDigits', (value, lng) =>
+  formatNum(value as number | string, lng?.startsWith('fa') ? 'fa' : 'en'),
+);
 
 export default i18n;
