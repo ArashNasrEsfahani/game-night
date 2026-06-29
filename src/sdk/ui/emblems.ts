@@ -104,6 +104,32 @@ EMBLEMS['mafia'] = `<svg viewBox="0 0 100 100">
   <g fill="${GOLD_LT}"><circle cx="60" cy="34" r="1.8"/><circle cx="74" cy="56" r="1.6"/><circle cx="58" cy="66" r="1.4"/></g>
 </svg>`;
 
+EMBLEMS['minesweeper'] = `<svg viewBox="0 0 100 100">
+  <g fill="currentColor" opacity=".45">
+    <path d="M15.5 12 L23.5 12 a3.5 3.5 0 0 1 3.5 3.5 L27 23.5 a3.5 3.5 0 0 1 -3.5 3.5 L15.5 27 a3.5 3.5 0 0 1 -3.5 -3.5 L12 15.5 a3.5 3.5 0 0 1 3.5 -3.5 Z"/>
+    <path d="M76.5 12 L84.5 12 a3.5 3.5 0 0 1 3.5 3.5 L88 23.5 a3.5 3.5 0 0 1 -3.5 3.5 L76.5 27 a3.5 3.5 0 0 1 -3.5 -3.5 L73 15.5 a3.5 3.5 0 0 1 3.5 -3.5 Z"/>
+    <path d="M15.5 73 L23.5 73 a3.5 3.5 0 0 1 3.5 3.5 L27 84.5 a3.5 3.5 0 0 1 -3.5 3.5 L15.5 88 a3.5 3.5 0 0 1 -3.5 -3.5 L12 76.5 a3.5 3.5 0 0 1 3.5 -3.5 Z"/>
+    <path d="M76.5 73 L84.5 73 a3.5 3.5 0 0 1 3.5 3.5 L88 84.5 a3.5 3.5 0 0 1 -3.5 3.5 L76.5 88 a3.5 3.5 0 0 1 -3.5 -3.5 L73 76.5 a3.5 3.5 0 0 1 3.5 -3.5 Z"/>
+  </g>
+  <g fill="currentColor">
+    <path d="M46.9 30.2 L50 16 L53.1 30.2 Z"/><path d="M69.1 39.4 L82.9 35 L72.2 44.8 Z"/>
+    <path d="M72.2 63.2 L82.9 73 L69.1 68.6 Z"/><path d="M53.1 77.8 L50 92 L46.9 77.8 Z"/>
+    <path d="M30.9 68.6 L17.1 73 L27.8 63.2 Z"/><path d="M27.8 44.8 L17.1 35 L30.9 39.4 Z"/>
+  </g>
+  <g fill="currentColor" opacity=".85">
+    <path d="M60.7 32.5 L66.8 25 L63.2 34 Z"/><path d="M74 52.6 L83.5 54 L74 55.4 Z"/>
+    <path d="M63.2 74 L66.8 83 L60.7 75.5 Z"/><path d="M39.3 75.5 L33.2 83 L36.8 74 Z"/>
+    <path d="M26 55.4 L16.5 54 L26 52.6 Z"/><path d="M36.8 34 L33.2 25 L39.3 32.5 Z"/>
+  </g>
+  <circle cx="50" cy="54" r="21" fill="${DARK}"/>
+  <circle cx="50" cy="54" r="21" fill="none" stroke="currentColor" stroke-width="3"/>
+  <circle cx="42" cy="47" r="5.5" fill="${GOLD_LT}" opacity=".9"/>
+  <path d="M59 36 Q67 29 65 20" stroke="${GOLD}" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M65 15 l1.8 5 5 1.8 -5 1.8 -1.8 5 -1.8 -5 -5 -1.8 5 -1.8 Z" fill="${GOLD}"/>
+  <circle cx="72" cy="11" r="1.8" fill="${GOLD_LT}"/>
+  <circle cx="57" cy="14" r="1.4" fill="${GOLD_LT}"/>
+</svg>`;
+
 EMBLEMS['most-likely-to'] = `<svg viewBox="0 0 100 100">
   <g fill="currentColor">
     <rect x="40" y="14" width="15" height="42" rx="7.5"/>
