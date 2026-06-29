@@ -42,6 +42,7 @@ import com.gamenight.party.model.Lang
 import com.gamenight.party.model.PlayerSeat
 import com.gamenight.party.sound.Haptics
 import com.gamenight.party.sound.SoundId
+import com.gamenight.party.ui.components.SetupErrors
 import com.gamenight.party.ui.components.AppButton
 import com.gamenight.party.ui.components.AppScreen
 import com.gamenight.party.ui.components.AppToggle
@@ -291,11 +292,7 @@ fun PantomimeSetupScreen(
         }
 
         // Validation sits with the pinned Start button so the reason it's disabled stays visible.
-        if (errors != null) {
-            Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
-                errors.forEach { e -> Text(text = e.resolve(lang), color = Accents.RoseStrong, fontSize = 14.sp) }
-            }
-        }
+        SetupErrors(errors = errors, lang = lang)
 
         // Pinned, full-width Start — painted with the gold accent so it stands apart from the grape
         // option controls above, and always reachable below the scrolling options.
@@ -674,7 +671,7 @@ fun PantomimeResultsScreen(
 
     AppScreen(scrollable = true, verticalArrangement = Arrangement.spacedBy(16.dp)) {
         GameAppBar(manifest = manifest, lang = lang, onClose = onClose)
-        WinnerBanner(title = title, names = winnerNames)
+        WinnerBanner(title = title, names = winnerNames, tie = winners.size > 1)
         Leaderboard(rows = standingsRows(s, lang))
         Column(modifier = Modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(8.dp)) {
             AppButton(text = tr(lang, "Play again", "بازی دوباره"), onClick = onPlayAgain, size = ButtonSize.LG, fullWidth = true)

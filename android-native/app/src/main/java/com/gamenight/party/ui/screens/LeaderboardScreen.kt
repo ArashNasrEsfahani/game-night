@@ -88,7 +88,7 @@ fun LeaderboardScreen(
         )
 
         Text(
-            text = "🏆 " + uiText(lang, "${data.totalMatches} games played", "${data.totalMatches} بازی انجام‌شده"),
+            text = "🏆 " + uiText(lang, "${fmtNum(data.totalMatches, lang)} games played", "${fmtNum(data.totalMatches, lang)} بازی انجام‌شده"),
             modifier = Modifier.fillMaxWidth().padding(bottom = 4.dp),
             color = LocalPalette.current.textMuted,
             fontSize = 13.sp,
@@ -106,7 +106,7 @@ fun LeaderboardScreen(
 @Composable
 private fun LeaderboardItem(row: LeaderboardRow, max: Int, lang: Lang) {
     val palette = LocalPalette.current
-    val medal = MEDALS.getOrNull(row.rank - 1) ?: row.rank.toString()
+    val medal = MEDALS.getOrNull(row.rank - 1) ?: fmtNum(row.rank, lang)
 
     AppCard(contentPadding = androidx.compose.foundation.layout.PaddingValues(horizontal = 14.dp, vertical = 12.dp)) {
         Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(10.dp)) {
@@ -135,8 +135,8 @@ private fun LeaderboardItem(row: LeaderboardRow, max: Int, lang: Lang) {
                     Text(
                         text = uiText(
                             lang,
-                            "${row.total} wins (${row.individual}/${row.team})",
-                            "${row.total} برد (${row.individual}/${row.team})",
+                            "${fmtNum(row.total, lang)} wins (${fmtNum(row.individual, lang)}/${fmtNum(row.team, lang)})",
+                            "${fmtNum(row.total, lang)} برد (${fmtNum(row.individual, lang)}/${fmtNum(row.team, lang)})",
                         ),
                         color = palette.textMuted,
                         fontSize = 12.sp,

@@ -2,9 +2,17 @@ package com.gamenight.party.ui.screens
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.unit.LayoutDirection
 import com.gamenight.party.model.Lang
+
+/**
+ * The active app language, available to any composable via [LocalLanguage.current]. Provided by
+ * [ProvideAppDirection] at the root so leaf controls (e.g. the shared Stepper) can localize digits
+ * to Persian without every call site threading `lang` through.
+ */
+val LocalLanguage = staticCompositionLocalOf { Lang.EN }
 
 /**
  * Tiny bilingual helper for app-shell *chrome* (titles, button labels). Game CONTENT is bilingual
@@ -36,5 +44,9 @@ fun fmtNum(value: Int, lang: Lang): String = faDigits(value.toString(), lang)
 @Composable
 fun ProvideAppDirection(lang: Lang, content: @Composable () -> Unit) {
     val direction = if (lang == Lang.FA) LayoutDirection.Rtl else LayoutDirection.Ltr
-    CompositionLocalProvider(LocalLayoutDirection provides direction, content = content)
+    CompositionLocalProvider(
+        LocalLayoutDirection provides direction,
+        LocalLanguage provides lang,
+        content = content,
+    )
 }

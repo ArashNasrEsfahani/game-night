@@ -12,7 +12,9 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
@@ -22,6 +24,9 @@ import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.gamenight.party.sound.SoundId
+import com.gamenight.party.ui.screens.LocalLanguage
+import com.gamenight.party.ui.screens.fmtNum
 import com.gamenight.party.ui.theme.Accents
 import com.gamenight.party.ui.theme.LocalAccent
 import com.gamenight.party.ui.theme.LocalPalette
@@ -39,9 +44,22 @@ fun TimerRing(
 ) {
     val palette = LocalPalette.current
     val accent = LocalAccent.current
+    val lang = LocalLanguage.current
 
     val pct = if (totalSeconds > 0) (remainingSeconds / totalSeconds).coerceIn(0f, 1f) else 0f
     val critical = remainingSeconds > 0f && remainingSeconds <= 5f
+
+    // Audible (+ haptic) countdown for the final seconds: a soft tick each whole second from 5→1, so
+    // the time pressure lands even when eyes are on the word/board. Fires once per second and only
+    // while counting down (a round resetting up is silent); gated by the mute/haptics settings.
+    val shown = ceil(remainingSeconds.coerceAtLeast(0f)).toInt()
+    val tick = tactile(SoundId.TICK)
+    val lastShown = remember { intArrayOf(-1) }
+    LaunchedEffect(shown) {
+        val prev = lastShown[0]
+        if (prev >= 0 && shown < prev && shown in 1..5) tick()
+        lastShown[0] = shown
+    }
 
     val targetColor = when {
         remainingSeconds <= 5f -> Accents.RoseStrong
@@ -98,7 +116,7 @@ fun TimerRing(
             )
         }
         Text(
-            text = ceil(remainingSeconds.coerceAtLeast(0f)).toInt().toString(),
+            text = fmtNum(shown, lang),
             color = if (critical) Accents.RoseStrong else palette.text,
             fontSize = 30.sp,
             fontWeight = FontWeight.Bold,

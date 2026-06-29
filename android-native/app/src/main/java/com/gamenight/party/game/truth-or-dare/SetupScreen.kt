@@ -22,6 +22,7 @@ import androidx.compose.ui.unit.sp
 import com.gamenight.party.model.GameManifest
 import com.gamenight.party.model.Lang
 import com.gamenight.party.model.PlayerSeat
+import com.gamenight.party.ui.components.SetupErrors
 import com.gamenight.party.ui.components.AppButton
 import com.gamenight.party.ui.components.AppScreen
 import com.gamenight.party.ui.components.AppToggle
@@ -207,9 +208,7 @@ fun TruthOrDareSetupScreen(
             verticalArrangement = Arrangement.spacedBy(12.dp),
             modifier = Modifier.fillMaxWidth(),
         ) {
-            errors.forEach { e ->
-                Text(text = e.resolve(lang), color = palette.text, fontSize = 14.sp)
-            }
+            SetupErrors(errors = errors, lang = lang)
             // Distinct PRIMARY accent gradient (+ glow) so the CTA stands out from the option controls.
             AppButton(
                 text = ToDStr.start.resolve(lang),

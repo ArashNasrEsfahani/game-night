@@ -49,6 +49,7 @@ import com.gamenight.party.model.Lang
 import com.gamenight.party.model.PlayerSeat
 import com.gamenight.party.sound.Haptics
 import com.gamenight.party.sound.SoundId
+import com.gamenight.party.ui.components.SetupErrors
 import com.gamenight.party.ui.components.AppButton
 import com.gamenight.party.ui.components.AppScreen
 import com.gamenight.party.ui.components.AppToggle
@@ -279,9 +280,7 @@ fun DowrSetupScreen(
 
         // Pinned to the bottom: validation message (if any) + the primary Start CTA. The CTA forces a
         // GOLD accent so it stands apart from the violet option controls above.
-        errors?.forEach { e ->
-            Text(text = e.resolve(lang), color = ColorToken.ROSE.accent().strong, fontSize = 14.sp)
-        }
+        SetupErrors(errors = errors, lang = lang)
         CompositionLocalProvider(LocalAccent provides ColorToken.GOLD.accent()) {
             AppButton(
                 text = tr(lang, "Start", "شروع"),
@@ -592,7 +591,7 @@ fun DowrResultsScreen(
 
     AppScreen(horizontalAlignment = Alignment.CenterHorizontally, scrollable = true, verticalArrangement = Arrangement.spacedBy(14.dp)) {
         GameAppBar(manifest = manifest, lang = lang, onClose = onClose)
-        WinnerBanner(title = title, names = winnerNames)
+        WinnerBanner(title = title, names = winnerNames, tie = winnerNames.size > 1)
         Text(
             text = if (timeMode) {
                 tr(lang, "Most words wins!", "بیشترین کلمه برنده‌ست!")

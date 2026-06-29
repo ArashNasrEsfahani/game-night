@@ -20,6 +20,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.gamenight.party.sound.SoundId
+import com.gamenight.party.ui.screens.LocalLanguage
+import com.gamenight.party.ui.screens.fmtNum
 import com.gamenight.party.ui.theme.LocalPalette
 
 /**
@@ -37,6 +39,7 @@ fun Stepper(
     label: String? = null,
 ) {
     val palette = LocalPalette.current
+    val lang = LocalLanguage.current
     val tap = tactile(SoundId.TAP)
 
     val controls = @Composable {
@@ -64,7 +67,7 @@ fun Stepper(
                     label = "stepperValue",
                 ) { shown ->
                     Text(
-                        text = shown.toString(),
+                        text = fmtNum(shown, lang),
                         color = palette.text,
                         fontSize = 18.sp,
                         fontWeight = FontWeight.Bold,

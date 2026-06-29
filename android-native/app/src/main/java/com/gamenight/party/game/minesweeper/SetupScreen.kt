@@ -25,6 +25,7 @@ import com.gamenight.party.model.ColorToken
 import com.gamenight.party.model.GameManifest
 import com.gamenight.party.model.Lang
 import com.gamenight.party.model.PlayerSeat
+import com.gamenight.party.ui.components.SetupErrors
 import com.gamenight.party.ui.components.AppButton
 import com.gamenight.party.ui.components.AppScreen
 import com.gamenight.party.ui.components.ButtonSize
@@ -165,13 +166,7 @@ fun MinesweeperSetupScreen(
                 }
 
                 // ── Errors ──
-                if (errors != null) {
-                    Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
-                        errors.forEach { e ->
-                            Text(text = e.resolve(lang), color = Accents.RoseStrong, fontSize = 14.sp)
-                        }
-                    }
-                }
+                SetupErrors(errors = errors, lang = lang)
 
             }
 

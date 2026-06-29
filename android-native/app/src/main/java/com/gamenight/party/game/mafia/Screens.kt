@@ -40,6 +40,7 @@ import com.gamenight.party.model.LocalizedString
 import com.gamenight.party.model.PlayerSeat
 import com.gamenight.party.sound.Haptics
 import com.gamenight.party.sound.SoundId
+import com.gamenight.party.ui.components.SetupErrors
 import com.gamenight.party.ui.components.AppButton
 import com.gamenight.party.ui.components.AppCard
 import com.gamenight.party.ui.components.AppScreen
@@ -393,11 +394,7 @@ fun MafiaSetupScreen(
             modifier = Modifier.fillMaxWidth().padding(top = 12.dp),
             verticalArrangement = Arrangement.spacedBy(8.dp),
         ) {
-            if (errors != null) {
-                errors.forEach { e ->
-                    Text(text = e.resolve(lang), color = Accents.RoseStrong, fontSize = 14.sp)
-                }
-            }
+            SetupErrors(errors = errors, lang = lang)
             // A distinct GOLD accent makes Start stand out from the rose option controls above.
             CompositionLocalProvider(LocalAccent provides ColorToken.GOLD.accent()) {
                 AppButton(

@@ -44,6 +44,7 @@ import com.gamenight.party.model.LocalizedString
 import com.gamenight.party.model.PlayerSeat
 import com.gamenight.party.sound.Haptics
 import com.gamenight.party.sound.SoundId
+import com.gamenight.party.ui.components.SetupErrors
 import com.gamenight.party.ui.components.AppButton
 import com.gamenight.party.ui.components.AppScreen
 import com.gamenight.party.ui.components.AppToggle
@@ -246,9 +247,7 @@ fun HeadsUpSetupScreen(
             AppToggle(checked = recycleDeck, onCheckedChange = { recycleDeck = it }, label = t("Recycle deck", "چرخش دوبارهٔ کارت‌ها"))
             AppToggle(checked = motionEnabled, onCheckedChange = { motionEnabled = it }, label = t("Tilt controls", "کنترل با تکان دادن"))
 
-            errors.forEach { e ->
-                Text(text = e.resolve(lang), color = Accents.RoseStrong, fontSize = 14.sp)
-            }
+            SetupErrors(errors = errors, lang = lang)
             }
 
             // Primary action pinned to the bottom, always reachable, in a distinct GOLD accent so it
@@ -435,6 +434,12 @@ fun HeadsUpPlayScreen(
                     val card = s.currentCardId?.let { huContent.cardByKey[it] }
                     val word = card?.word?.resolve(lang) ?: ""
                     val gotCount = s.currentEntries.count { it.result == EntryResult.GOT }
+                    // The running "Got" count pops on each increment (mirrors the web score pop).
+                    val gotPop = remember { Animatable(1f) }
+                    LaunchedEffect(gotCount) {
+                        gotPop.snapTo(1.25f)
+                        gotPop.animateTo(1f, spring(dampingRatio = 0.45f, stiffness = 320f))
+                    }
                     // Each fresh card springs in (mirrors the web card pop).
                     val cardPop = remember { Animatable(1f) }
                     LaunchedEffect(s.currentCardId) {
@@ -471,14 +476,23 @@ fun HeadsUpPlayScreen(
                                     textAlign = TextAlign.Center,
                                 )
                             } else {
+                                // Fade + slide the "out of words" message in (mirrors the web entrance)
+                                // rather than letting it pop in instantly.
+                                val outEnter = remember { Animatable(0f) }
+                                LaunchedEffect(Unit) { outEnter.animateTo(1f, spring(dampingRatio = 0.9f, stiffness = 220f)) }
                                 Text(
                                     text = t("Out of words", "کلمه‌ای نمانده"),
+                                    modifier = Modifier.graphicsLayer {
+                                        alpha = outEnter.value
+                                        translationY = (1f - outEnter.value) * -8.dp.toPx()
+                                    },
                                     color = palette.textMuted,
                                     fontSize = 22.sp,
                                 )
                             }
                             Text(
                                 text = "${t("Got", "درست")}: ${fmtNum(gotCount, lang)}",
+                                modifier = Modifier.graphicsLayer { scaleX = gotPop.value; scaleY = gotPop.value },
                                 color = palette.textMuted,
                                 fontSize = 14.sp,
                             )
@@ -495,6 +509,7 @@ fun HeadsUpPlayScreen(
                                     modifier = Modifier.weight(1f),
                                     variant = ButtonVariant.SECONDARY,
                                     size = ButtonSize.LG,
+                                    enabled = s.currentCardId != null,
                                 )
                                 AppButton(
                                     text = "↓ ${t("Got it", "درست")}",
@@ -506,6 +521,7 @@ fun HeadsUpPlayScreen(
                                     modifier = Modifier.weight(1f),
                                     variant = ButtonVariant.SUCCESS,
                                     size = ButtonSize.LG,
+                                    enabled = s.currentCardId != null,
                                 )
                             }
                         }
@@ -630,7 +646,7 @@ fun HeadsUpResultsScreen(
             scrollable = true,
         ) {
             GameAppBar(manifest = manifest, lang = lang, onClose = onClose)
-            WinnerBanner(title = title, names = winnerNames)
+            WinnerBanner(title = title, names = winnerNames, tie = winners.size > 1)
             Leaderboard(rows = rows)
             Spacer(Modifier.height(4.dp))
             AppButton(

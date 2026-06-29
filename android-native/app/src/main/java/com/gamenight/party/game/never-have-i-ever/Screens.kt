@@ -41,6 +41,7 @@ import com.gamenight.party.model.Lang
 import com.gamenight.party.model.PlayerSeat
 import com.gamenight.party.sound.Haptics
 import com.gamenight.party.sound.SoundId
+import com.gamenight.party.ui.components.SetupErrors
 import com.gamenight.party.ui.components.AppButton
 import com.gamenight.party.ui.components.AppCard
 import com.gamenight.party.ui.components.AppScreen
@@ -246,13 +247,7 @@ fun NeverHaveIEverSetupScreen(
                 fontSize = 14.sp,
             )
 
-            if (errors != null) {
-                Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
-                    errors.forEach { e ->
-                        Text(text = e.resolve(lang), color = Accents.RoseStrong, fontSize = 14.sp)
-                    }
-                }
-            }
+            SetupErrors(errors = errors, lang = lang)
         }
 
         // Pinned Start button — a distinct GOLD accent (the crown colour) so it stands apart from the
@@ -711,7 +706,7 @@ fun NeverHaveIEverResultsScreen(
 
     AppScreen(scrollable = true, verticalArrangement = Arrangement.spacedBy(16.dp)) {
         GameAppBar(manifest = manifest, lang = lang, onClose = onClose)
-        WinnerBanner(title = title, names = winnerNames)
+        WinnerBanner(title = title, names = winnerNames, tie = s.winnerIds.size > 1)
         Text(
             text = if (classic) tr(lang, "Lives remaining", "جان باقی‌مانده")
             else tr(lang, "Confessions (fewer is better)", "اعتراف‌ها (کمتر بهتر است)"),

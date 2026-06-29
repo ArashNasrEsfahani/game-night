@@ -83,6 +83,7 @@ fun TruthOrDareResultsScreen(
                         ToDStr.winner(lang, winnerNames.firstOrNull() ?: "")
                     },
                     names = winnerNames,
+                    tie = winners.size > 1,
                 )
                 Leaderboard(rows = rows)
             } else {

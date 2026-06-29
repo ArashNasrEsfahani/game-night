@@ -43,6 +43,7 @@ import com.gamenight.party.game.GameHost
 import com.gamenight.party.model.ColorToken
 import com.gamenight.party.model.PlayerSeat
 import com.gamenight.party.sound.SoundId
+import com.gamenight.party.ui.components.SetupErrors
 import com.gamenight.party.ui.components.AppButton
 import com.gamenight.party.ui.components.AppCard
 import com.gamenight.party.ui.components.AppScreen
@@ -197,9 +198,7 @@ fun WouldYouRatherSetupScreen(
                 fontSize = 14.sp,
             )
 
-            errors?.forEach { e ->
-                Text(text = e.resolve(lang), color = Accents.RoseStrong, fontSize = 14.sp)
-            }
+            SetupErrors(errors = errors, lang = lang)
         }
 
         // Pinned, full-width primary CTA. A distinct GOLD accent (overriding the teal game accent the
@@ -637,6 +636,7 @@ fun WouldYouRatherResultsScreen(
                 title = if (winners.size > 1) WyrStrings.resultsTie.resolve(lang)
                 else WyrStrings.resultsWinner(lang, winnerNames.firstOrNull() ?: ""),
                 names = winnerNames,
+                tie = winners.size > 1,
             )
             Text(
                 text = WyrStrings.mostInStep.resolve(lang),

@@ -86,7 +86,7 @@ fun MinesweeperResultsScreen(
                 modifier = Modifier.fillMaxWidth().padding(bottom = 24.dp),
                 verticalArrangement = Arrangement.spacedBy(16.dp),
             ) {
-                WinnerBanner(title = title, names = if (solo) emptyList() else winnerNames)
+                WinnerBanner(title = title, names = if (solo) emptyList() else winnerNames, tie = !solo && winnerNames.size > 1)
 
                 if (!solo) Leaderboard(rows = rows)
 

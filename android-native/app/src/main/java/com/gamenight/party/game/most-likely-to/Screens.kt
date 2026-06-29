@@ -48,6 +48,7 @@ import com.gamenight.party.model.ColorToken
 import com.gamenight.party.model.Lang
 import com.gamenight.party.model.PlayerSeat
 import com.gamenight.party.sound.SoundId
+import com.gamenight.party.ui.components.SetupErrors
 import com.gamenight.party.ui.components.AppButton
 import com.gamenight.party.ui.components.AppScreen
 import com.gamenight.party.ui.components.AppToggle
@@ -205,9 +206,7 @@ fun MostLikelyToSetupScreen(
                     fontSize = 13.sp,
                 )
 
-                errors?.forEach { e ->
-                    Text(text = e.resolve(lang), color = Accents.RoseStrong, fontSize = 13.sp)
-                }
+                SetupErrors(errors = errors, lang = lang)
             }
 
             // Pinned primary CTA — a distinct SUCCESS (lime) gradient that stands apart from the
@@ -702,7 +701,7 @@ fun MostLikelyToResultsScreen(
 
         AppScreen(scrollable = true, verticalArrangement = Arrangement.spacedBy(12.dp)) {
             GameAppBar(manifest = host.manifest, lang = lang, onClose = host::requestExit)
-            WinnerBanner(title = title, names = winnerNames)
+            WinnerBanner(title = title, names = winnerNames, tie = winnerNames.size > 1)
             Text(
                 text = tx(lang, "Round wins", "بردهای دور"),
                 color = palette.textMuted,

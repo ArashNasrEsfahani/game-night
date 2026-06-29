@@ -39,7 +39,7 @@ private val FoilBrush = Brush.linearGradient(
  * gilded [Medallion] that springs in, a gold-foil title and the winners' names.
  */
 @Composable
-fun WinnerBanner(title: String, names: List<String>, modifier: Modifier = Modifier) {
+fun WinnerBanner(title: String, names: List<String>, modifier: Modifier = Modifier, tie: Boolean = false) {
     val palette = LocalPalette.current
 
     val medScale = remember { Animatable(0f) }
@@ -65,7 +65,7 @@ fun WinnerBanner(title: String, names: List<String>, modifier: Modifier = Modifi
                 },
             ) {
                 Medallion(size = 118.dp) {
-                    Text(text = "🏆", fontSize = 48.sp)
+                    Text(text = if (tie) "🤝" else "🏆", fontSize = 48.sp)
                 }
             }
 

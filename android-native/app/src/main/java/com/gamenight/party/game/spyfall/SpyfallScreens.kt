@@ -20,6 +20,7 @@ import com.gamenight.party.model.ColorToken
 import com.gamenight.party.model.GameManifest
 import com.gamenight.party.model.Lang
 import com.gamenight.party.model.PlayerSeat
+import com.gamenight.party.ui.components.SetupErrors
 import com.gamenight.party.ui.components.AppButton
 import com.gamenight.party.ui.components.AppCard
 import com.gamenight.party.ui.components.AppScreen
@@ -233,16 +234,7 @@ fun SpyfallSetupScreen(
 
         // Pinned bottom action. Painted in GOLD (overriding the game's violet accent) so the primary
         // Start button stands out from every violet option control above it.
-        if (errors != null) {
-            Column(
-                modifier = Modifier.padding(bottom = 10.dp),
-                verticalArrangement = Arrangement.spacedBy(4.dp),
-            ) {
-                errors.forEach { e ->
-                    Text(text = e.resolve(lang), color = Accents.RoseStrong, fontSize = 14.sp)
-                }
-            }
-        }
+        SetupErrors(errors = errors, lang = lang, modifier = Modifier.padding(bottom = 10.dp))
         CompositionLocalProvider(LocalAccent provides ColorToken.GOLD.accent()) {
             AppButton(
                 text = txt(lang, "Start", "شروع"),
@@ -806,7 +798,7 @@ fun SpyfallResultsScreen(
 
     AppScreen(scrollable = true) {
         GameAppBar(manifest = manifest, lang = lang, onClose = onClose)
-        WinnerBanner(title = title, names = winnerNames)
+        WinnerBanner(title = title, names = winnerNames, tie = winners.size > 1)
         Spacer(Modifier.height(8.dp))
         Leaderboard(rows = rows)
         Spacer(Modifier.height(16.dp))

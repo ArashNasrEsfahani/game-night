@@ -34,6 +34,7 @@ import com.gamenight.party.model.ColorToken
 import com.gamenight.party.model.GameManifest
 import com.gamenight.party.model.Lang
 import com.gamenight.party.model.PlayerSeat
+import com.gamenight.party.ui.components.SetupErrors
 import com.gamenight.party.ui.components.AppButton
 import com.gamenight.party.ui.components.AppCard
 import com.gamenight.party.ui.components.AppScreen
@@ -246,11 +247,7 @@ fun CodenamesSetupScreen(
                 modifier = Modifier.fillMaxWidth().padding(top = 12.dp, bottom = 4.dp),
                 verticalArrangement = Arrangement.spacedBy(8.dp),
             ) {
-                if (errors.isNotEmpty()) {
-                    Column(verticalArrangement = Arrangement.spacedBy(2.dp), modifier = Modifier.fillMaxWidth()) {
-                        errors.forEach { Text(it.resolve(lang), color = Accents.RoseStrong, fontSize = 14.sp) }
-                    }
-                }
+                SetupErrors(errors = errors, lang = lang)
                 CompositionLocalProvider(LocalAccent provides ColorToken.GOLD.accent()) {
                     AppButton(
                         text = CnStr.start.resolve(lang),

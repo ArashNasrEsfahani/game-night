@@ -26,6 +26,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material.icons.filled.KeyboardArrowUp
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -52,6 +53,7 @@ import com.gamenight.party.engine.PlayerDraft
 import com.gamenight.party.engine.PlayerPatch
 import com.gamenight.party.model.ColorToken
 import com.gamenight.party.model.Lang
+import com.gamenight.party.sound.SoundId
 import com.gamenight.party.store.RosterStore
 import com.gamenight.party.ui.components.AppBar
 import com.gamenight.party.ui.components.AppButton
@@ -61,6 +63,7 @@ import com.gamenight.party.ui.components.ButtonVariant
 import com.gamenight.party.ui.components.IconCircleButton
 import com.gamenight.party.ui.components.PillShape
 import com.gamenight.party.ui.components.controlFill
+import com.gamenight.party.ui.components.tactile
 import com.gamenight.party.ui.components.glass2Surface
 import com.gamenight.party.ui.components.glassBorder
 import com.gamenight.party.ui.theme.Body
@@ -91,6 +94,9 @@ fun PlayersScreen(
     val players = state.players
     var newName by remember { mutableStateOf("") }
     var editing by remember { mutableStateOf<Player?>(null) }
+    // A player removal is never instant — it stages here and waits for the confirm dialog, so a
+    // stray tap on ✕ (or Delete in the editor) can't silently drop a configured player.
+    var pendingDelete by remember { mutableStateOf<Player?>(null) }
 
     val add = {
         val n = newName.trim()
@@ -146,7 +152,7 @@ fun PlayersScreen(
                         isLast = index == players.lastIndex,
                         lang = lang,
                         onEdit = { editing = player },
-                        onRemove = { roster.removePlayer(player.id) },
+                        onRemove = { pendingDelete = player },
                         onMoveUp = { move(index, index - 1) },
                         onMoveDown = { move(index, index + 1) },
                     )
@@ -168,11 +174,70 @@ fun PlayersScreen(
                 editing = null
             },
             onDelete = {
-                roster.removePlayer(target.id)
                 editing = null
+                pendingDelete = target
             },
         )
     }
+
+    pendingDelete?.let { target ->
+        ConfirmDeleteDialog(
+            name = target.name,
+            lang = lang,
+            onConfirm = {
+                roster.removePlayer(target.id)
+                pendingDelete = null
+            },
+            onDismiss = { pendingDelete = null },
+        )
+    }
+}
+
+/**
+ * Bilingual "remove this player?" confirm. Mirrors [com.gamenight.party.ui.components.GameExitConfirmDialog]
+ * so destructive roster edits get the same are-you-sure guard as leaving a game.
+ */
+@Composable
+private fun ConfirmDeleteDialog(
+    name: String,
+    lang: Lang,
+    onConfirm: () -> Unit,
+    onDismiss: () -> Unit,
+) {
+    val palette = LocalPalette.current
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        containerColor = palette.surface,
+        title = {
+            Text(
+                text = uiText(lang, "Remove player?", "حذف بازیکن؟"),
+                color = palette.text,
+                fontWeight = FontWeight.Bold,
+                fontSize = 18.sp,
+            )
+        },
+        text = {
+            Text(
+                text = uiText(lang, "Remove $name from the roster? You can always add them again.", "$name از فهرست حذف شود؟ هر وقت خواستی می‌تونی دوباره اضافه‌اش کنی."),
+                color = palette.textMuted,
+                fontSize = 15.sp,
+            )
+        },
+        confirmButton = {
+            AppButton(
+                text = uiText(lang, "Remove", "حذف"),
+                onClick = onConfirm,
+                variant = ButtonVariant.DANGER,
+            )
+        },
+        dismissButton = {
+            AppButton(
+                text = uiText(lang, "Cancel", "بی‌خیال"),
+                onClick = onDismiss,
+                variant = ButtonVariant.SECONDARY,
+            )
+        },
+    )
 }
 
 @Composable
@@ -203,14 +268,14 @@ private fun PlayerRow(
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
             )
-            IconCircleButton(onClick = onMoveUp, enabled = !isFirst, size = 32.dp) {
-                Icon(Icons.Filled.KeyboardArrowUp, contentDescription = uiText(lang, "Move up", "بالا"), modifier = Modifier.size(20.dp))
+            IconCircleButton(onClick = onMoveUp, enabled = !isFirst, size = 44.dp) {
+                Icon(Icons.Filled.KeyboardArrowUp, contentDescription = uiText(lang, "Move up", "بالا"), modifier = Modifier.size(22.dp))
             }
-            IconCircleButton(onClick = onMoveDown, enabled = !isLast, size = 32.dp) {
-                Icon(Icons.Filled.KeyboardArrowDown, contentDescription = uiText(lang, "Move down", "پایین"), modifier = Modifier.size(20.dp))
+            IconCircleButton(onClick = onMoveDown, enabled = !isLast, size = 44.dp) {
+                Icon(Icons.Filled.KeyboardArrowDown, contentDescription = uiText(lang, "Move down", "پایین"), modifier = Modifier.size(22.dp))
             }
-            IconCircleButton(onClick = onRemove, size = 34.dp) {
-                Icon(Icons.Filled.Close, contentDescription = uiText(lang, "Remove", "حذف"), modifier = Modifier.size(18.dp))
+            IconCircleButton(onClick = onRemove, size = 44.dp) {
+                Icon(Icons.Filled.Close, contentDescription = uiText(lang, "Remove", "حذف"), modifier = Modifier.size(20.dp))
             }
         }
     }
@@ -271,7 +336,7 @@ private fun PlayerEditorDialog(
 
             Spacer(Modifier.height(14.dp))
             FieldLabel(uiText(lang, "Emoji", "ایموجی"))
-            EmojiPicker(selected = emoji, onSelect = { emoji = it })
+            EmojiPicker(selected = emoji, lang = lang, onSelect = { emoji = it })
 
             Spacer(Modifier.height(14.dp))
             FieldLabel(uiText(lang, "Colour", "رنگ"))
@@ -303,9 +368,10 @@ private fun FieldLabel(text: String) {
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
-private fun EmojiPicker(selected: String?, onSelect: (String?) -> Unit) {
+private fun EmojiPicker(selected: String?, lang: Lang, onSelect: (String?) -> Unit) {
     val palette = LocalPalette.current
     val accent = LocalAccent.current
+    val select = tactile(SoundId.SELECT)
     FlowRow(
         modifier = Modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.spacedBy(8.dp),
@@ -319,10 +385,14 @@ private fun EmojiPicker(selected: String?, onSelect: (String?) -> Unit) {
                 .clip(CircleShape)
                 .background(if (noneSelected) accent.soft else controlFill(palette), CircleShape)
                 .border(if (noneSelected) 2.dp else 1.dp, if (noneSelected) accent.base else glassBorder(palette), CircleShape)
-                .clickable { onSelect("") },
+                .clickable { select(); onSelect("") },
             contentAlignment = Alignment.Center,
         ) {
-            Icon(Icons.Filled.Close, contentDescription = null, modifier = Modifier.size(18.dp))
+            Icon(
+                Icons.Filled.Close,
+                contentDescription = uiText(lang, "Clear emoji", "حذف ایموجی"),
+                modifier = Modifier.size(18.dp),
+            )
         }
         EMOJI_CHOICES.forEach { choice ->
             val isSelected = selected == choice
@@ -332,7 +402,7 @@ private fun EmojiPicker(selected: String?, onSelect: (String?) -> Unit) {
                     .clip(CircleShape)
                     .background(if (isSelected) accent.soft else controlFill(palette), CircleShape)
                     .border(if (isSelected) 2.dp else 1.dp, if (isSelected) accent.base else glassBorder(palette), CircleShape)
-                    .clickable { onSelect(choice) },
+                    .clickable { select(); onSelect(choice) },
                 contentAlignment = Alignment.Center,
             ) {
                 Text(choice, fontSize = 20.sp)
@@ -345,6 +415,7 @@ private fun EmojiPicker(selected: String?, onSelect: (String?) -> Unit) {
 @Composable
 private fun ColorPicker(selected: ColorToken?, onSelect: (ColorToken) -> Unit) {
     val palette = LocalPalette.current
+    val select = tactile(SoundId.SELECT)
     FlowRow(
         modifier = Modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.spacedBy(10.dp),
@@ -359,7 +430,7 @@ private fun ColorPicker(selected: ColorToken?, onSelect: (ColorToken) -> Unit) {
                     .clip(CircleShape)
                     .background(Brush.linearGradient(listOf(ac.base, ac.strong)), CircleShape)
                     .border(if (isSelected) 3.dp else 1.dp, if (isSelected) palette.text else glassBorder(palette), CircleShape)
-                    .clickable { onSelect(token) },
+                    .clickable { select(); onSelect(token) },
             )
         }
     }

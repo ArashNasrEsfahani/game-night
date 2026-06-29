@@ -68,6 +68,7 @@ fun CodenamesResultsScreen(
             WinnerBanner(
                 title = title,
                 names = reasonNames,
+                tie = s.winner == null,
             )
 
             // The fully-revealed key.

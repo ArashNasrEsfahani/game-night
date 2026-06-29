@@ -28,6 +28,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.gamenight.party.model.ColorToken
 import com.gamenight.party.model.Lang
+import com.gamenight.party.ui.screens.LocalLanguage
+import com.gamenight.party.ui.screens.fmtNum
 import com.gamenight.party.ui.theme.LocalPalette
 import com.gamenight.party.ui.theme.accent
 
@@ -123,6 +125,7 @@ private fun MineCell(
     modifier: Modifier,
 ) {
     val palette = LocalPalette.current
+    val lang = LocalLanguage.current
     val revealed = cell.revealed
 
     // A found mine fills with the finder's colour (so each player's haul reads at a glance); a
@@ -159,7 +162,7 @@ private fun MineCell(
             }
             revealed && cell.adjacent > 0 -> {
                 Text(
-                    text = cell.adjacent.toString(),
+                    text = fmtNum(cell.adjacent, lang),
                     color = clueColor(palette.isDark, cell.adjacent),
                     fontSize = fontSize,
                     fontWeight = FontWeight.Bold,

@@ -30,6 +30,9 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.gamenight.party.model.ColorToken
+import com.gamenight.party.ui.screens.LocalLanguage
+import com.gamenight.party.ui.screens.faDigits
+import com.gamenight.party.ui.screens.fmtNum
 import com.gamenight.party.ui.theme.Accents
 import com.gamenight.party.ui.theme.LocalPalette
 import com.gamenight.party.ui.theme.accent
@@ -61,6 +64,7 @@ fun Leaderboard(rows: List<ScoreRow>, modifier: Modifier = Modifier) {
 @Composable
 private fun ScoreRowItem(row: ScoreRow) {
     val palette = LocalPalette.current
+    val lang = LocalLanguage.current
     val first = row.rank == 1
 
     // Score pop: snap up then spring back whenever the value changes.
@@ -90,7 +94,7 @@ private fun ScoreRowItem(row: ScoreRow) {
         horizontalArrangement = Arrangement.spacedBy(12.dp),
     ) {
         Text(
-            text = row.rank.toString(),
+            text = fmtNum(row.rank, lang),
             modifier = Modifier.width(24.dp),
             color = if (first) Accents.GoldStrong else palette.textMuted,
             fontWeight = FontWeight.Bold,
@@ -115,7 +119,7 @@ private fun ScoreRowItem(row: ScoreRow) {
             overflow = TextOverflow.Ellipsis,
         )
         Text(
-            text = row.display ?: row.score.toString(),
+            text = row.display?.let { faDigits(it, lang) } ?: fmtNum(row.score, lang),
             modifier = Modifier.graphicsLayer { scaleX = pop.value; scaleY = pop.value },
             color = palette.text,
             fontWeight = FontWeight.Bold,
