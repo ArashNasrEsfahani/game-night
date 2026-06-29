@@ -411,6 +411,7 @@ fun HeadsUpPlayScreen(
                 }
 
                 HeadsUpPhase.COUNTDOWN -> {
+                    GameAppBar(manifest = manifest, lang = lang, onClose = onClose, trailing = endGameRight)
                     // Each new number springs in from small with a tick — the web's per-count pop.
                     val countPop = remember { Animatable(1f) }
                     LaunchedEffect(s.countdownLeft) {
@@ -431,6 +432,7 @@ fun HeadsUpPlayScreen(
                 }
 
                 HeadsUpPhase.PLAYING -> {
+                    GameAppBar(manifest = manifest, lang = lang, onClose = onClose, trailing = endGameRight)
                     val card = s.currentCardId?.let { huContent.cardByKey[it] }
                     val word = card?.word?.resolve(lang) ?: ""
                     val gotCount = s.currentEntries.count { it.result == EntryResult.GOT }
