@@ -112,7 +112,7 @@ fun MostLikelyToSetupScreen(
         val errors = validateConfig(config)
 
         AppScreen {
-            GameAppBar(manifest = host.manifest, lang = lang, onClose = host::requestExit)
+            GameAppBar(manifest = host.manifest, lang = lang, onClose = host::requestExit, back = true)
 
             // The options scroll between the fixed top bar and the pinned Start button below, so the
             // primary CTA stays reachable no matter how long the list grows.

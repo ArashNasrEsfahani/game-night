@@ -126,7 +126,7 @@ fun NeverHaveIEverSetupScreen(
 
     // Fixed top bar + a scrolling options area + a pinned Start button, so Start is always reachable.
     AppScreen(verticalArrangement = Arrangement.spacedBy(12.dp)) {
-        GameAppBar(manifest = manifest, lang = lang, onClose = onClose)
+        GameAppBar(manifest = manifest, lang = lang, onClose = onClose, back = true)
 
         Column(
             modifier = Modifier

@@ -103,7 +103,7 @@ fun WouldYouRatherSetupScreen(
     val poolSize = content.poolFor(opts.deckId, opts.maxIntensity).size
 
     AppScreen {
-        GameAppBar(manifest = host.manifest, lang = lang, onClose = host::requestExit)
+        GameAppBar(manifest = host.manifest, lang = lang, onClose = host::requestExit, back = true)
 
         // The options scroll; the Start CTA below stays pinned and always reachable.
         Column(

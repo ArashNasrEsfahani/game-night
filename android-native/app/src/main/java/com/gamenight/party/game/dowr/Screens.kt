@@ -130,7 +130,7 @@ fun DowrSetupScreen(
     }
 
     AppScreen(verticalArrangement = Arrangement.spacedBy(14.dp)) {
-        GameAppBar(manifest = manifest, lang = lang, onClose = onClose)
+        GameAppBar(manifest = manifest, lang = lang, onClose = onClose, back = true)
 
         // Options scroll between the fixed top bar and the pinned Start button, so Start is always
         // reachable at the bottom no matter how long the option list grows.

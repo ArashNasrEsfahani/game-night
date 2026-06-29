@@ -127,7 +127,7 @@ fun SpyfallSetupScreen(
     val errors = validateConfig(config)
 
     AppScreen {
-        GameAppBar(manifest = manifest, lang = lang, onClose = onClose)
+        GameAppBar(manifest = manifest, lang = lang, onClose = onClose, back = true)
 
         // Options scroll in the middle; the Start button stays pinned to the bottom (below), so it is
         // always reachable no matter how many players / packs push the list past the fold.

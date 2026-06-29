@@ -63,7 +63,7 @@ fun TruthOrDareSetupScreen(
 
     // Non-scrolling scaffold: options scroll in a weighted middle, the Start CTA is pinned at the foot.
     AppScreen {
-        GameAppBar(manifest = manifest, lang = lang, onClose = onClose)
+        GameAppBar(manifest = manifest, lang = lang, onClose = onClose, back = true)
 
         Column(
             verticalArrangement = Arrangement.spacedBy(20.dp),

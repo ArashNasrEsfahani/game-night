@@ -138,7 +138,7 @@ fun PantomimeSetupScreen(
     }
 
     AppScreen(verticalArrangement = Arrangement.spacedBy(12.dp)) {
-        GameAppBar(manifest = manifest, lang = lang, onClose = onClose)
+        GameAppBar(manifest = manifest, lang = lang, onClose = onClose, back = true)
 
         // Scrolling option stack; the Start button stays pinned below so it's always reachable.
         Column(

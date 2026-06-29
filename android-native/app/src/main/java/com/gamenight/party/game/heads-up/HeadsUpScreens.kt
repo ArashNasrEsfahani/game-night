@@ -164,7 +164,7 @@ fun HeadsUpSetupScreen(
         val diffCounts = huContent.deckDifficultyCounts(options.deckIds)
 
         AppScreen(horizontalAlignment = Alignment.Start) {
-            GameAppBar(manifest = manifest, lang = lang, onClose = onClose)
+            GameAppBar(manifest = manifest, lang = lang, onClose = onClose, back = true)
 
             Column(
                 modifier = Modifier

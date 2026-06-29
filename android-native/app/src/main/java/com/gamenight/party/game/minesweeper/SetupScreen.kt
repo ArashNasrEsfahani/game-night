@@ -80,7 +80,7 @@ fun MinesweeperSetupScreen(
         val errors = validateMineConfig(seats, opts)
 
         AppScreen {
-            GameAppBar(manifest = manifest, lang = lang, onClose = onClose)
+            GameAppBar(manifest = manifest, lang = lang, onClose = onClose, back = true)
 
             // The options scroll; the Start CTA below stays pinned and always reachable.
             Column(

@@ -153,7 +153,7 @@ fun MafiaSetupScreen(
     }
 
     AppScreen {
-        GameAppBar(manifest = manifest, lang = lang, onClose = onExit)
+        GameAppBar(manifest = manifest, lang = lang, onClose = onExit, back = true)
 
         // Options scroll above the pinned Start button, so Start is always reachable.
         Column(

@@ -315,7 +315,9 @@ export function GameHostPage() {
           howToPlay={mod.manifest.howToPlay}
           title={localize(mod.manifest.name)}
           onExit={() => setConfirmExit(true)}
-          showClose={!showGate}
+          // The floating ✕ is for leaving a game in progress — not the setup "menu", which already
+          // has its own back arrow. Show it only once a match is underway (play/results).
+          showClose={!showGate && shownScreen !== 'setup'}
         />
         <AnimatePresence mode="wait" initial={false}>
           {showGate ? (

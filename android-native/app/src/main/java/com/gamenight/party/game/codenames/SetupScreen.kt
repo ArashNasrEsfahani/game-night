@@ -111,7 +111,7 @@ fun CodenamesSetupScreen(
         val errors = validateConfig(seats, teams, opts, content)
 
         AppScreen {
-            GameAppBar(manifest = manifest, lang = lang, onClose = onClose)
+            GameAppBar(manifest = manifest, lang = lang, onClose = onClose, back = true)
 
             // Scrollable settings; the Start button stays pinned below so it's always reachable.
             Column(

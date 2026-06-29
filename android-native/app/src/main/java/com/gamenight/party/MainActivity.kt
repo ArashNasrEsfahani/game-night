@@ -348,7 +348,7 @@ private fun AddPlayersGate(
     }
 
     AppScreen(scrollable = true, verticalArrangement = Arrangement.spacedBy(12.dp)) {
-        GameAppBar(manifest = manifest, lang = lang, onClose = onClose)
+        GameAppBar(manifest = manifest, lang = lang, onClose = onClose, back = true)
 
         Spacer(Modifier.height(4.dp))
         Text(

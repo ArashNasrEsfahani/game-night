@@ -13,6 +13,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Icon
@@ -69,6 +70,8 @@ fun GameAppBar(
     lang: Lang,
     onClose: () -> Unit,
     modifier: Modifier = Modifier,
+    // Setup ("menu") screens show a back arrow; a game in progress shows the ✕ close. Both call onClose.
+    back: Boolean = false,
     trailing: (@Composable () -> Unit)? = null,
 ) {
     val palette = LocalPalette.current
@@ -81,8 +84,8 @@ fun GameAppBar(
     ) {
         IconCircleButton(onClick = onClose, size = 40.dp) {
             Icon(
-                imageVector = Icons.Filled.Close,
-                contentDescription = t(lang, "Close", "بستن"),
+                imageVector = if (back) Icons.AutoMirrored.Filled.ArrowBack else Icons.Filled.Close,
+                contentDescription = if (back) t(lang, "Back", "بازگشت") else t(lang, "Close", "بستن"),
                 tint = palette.text,
                 modifier = Modifier.size(22.dp),
             )
