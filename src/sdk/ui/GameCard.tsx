@@ -1,7 +1,6 @@
 import type { CSSProperties } from 'react';
 import { motion } from 'framer-motion';
 import type { GameManifest } from '../types';
-import { gameEmblem } from './emblems';
 import { easePop, springSnappy } from '../motion';
 
 export function GameCard({
@@ -24,7 +23,6 @@ export function GameCard({
     '--game-accent-glow': `color-mix(in oklab, var(--color-game-${accent}) 60%, transparent)`,
     '--game-on-accent': `var(--on-${accent})`,
   } as CSSProperties;
-  const emblem = gameEmblem(manifest.id);
   const faName = manifest.name.fa;
 
   return (
@@ -50,12 +48,16 @@ export function GameCard({
         {/* CSS-driven float (dp-bob) — no per-frame JS, so a full grid of cards stays smooth and the
             bob is stilled by both the OS and the in-app reduce-motion setting. */}
         <div
-          className="dp-accent dp-bob h-[68px] w-[68px] [&_svg]:h-full [&_svg]:w-full"
+          className="dp-bob h-[82px] w-[82px]"
           style={{ filter: 'drop-shadow(0 0 10px var(--game-accent-glow))' }}
-          {...(emblem
-            ? { dangerouslySetInnerHTML: { __html: emblem } }
-            : { children: <span className="grid h-full w-full place-items-center text-5xl">{manifest.icon}</span> })}
-        />
+        >
+          <img
+            src={`/game-icons/${manifest.id}.png`}
+            alt=""
+            className="h-full w-full object-contain"
+            draggable={false}
+          />
+        </div>
       </div>
 
       {/* Body */}
