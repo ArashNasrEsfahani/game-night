@@ -2,9 +2,10 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import type { GameConfig, GameScreenProps, PlayerSeat, TeamSetup } from '../../../sdk/types';
-import { Screen, AppBar, Button, SegmentedControl, Stepper, Toggle, MotifDivider, Disclosure, SelectChip } from '../../../sdk/ui';
+import { Screen, AppBar, Button, SetupErrors, SegmentedControl, Stepper, Toggle, MotifDivider, Disclosure, SelectChip } from '../../../sdk/ui';
 import { useRosterStore } from '../../../store/rosterStore';
 import { PlayerPicker } from '../../../app/components/PlayerPicker';
+import { PairAssigner, usePairAssignment } from '../../../app/components/TeamAssigner';
 import { asTeamId } from '../../../engine/ids';
 import {
   DEFAULT_OPTIONS,
@@ -44,13 +45,15 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<DowrState, DowrAction>
     .filter((p) => selected.includes(p.id))
     .map((p) => ({ id: p.id, name: p.name, emoji: p.emoji, color: p.color }));
 
-  const teamCount = Math.floor(seats.length / 2);
+  // Pairs are consecutive slots in `order`; the host swaps two players to re-pair them.
+  const { order, picked, tap } = usePairAssignment(seats.map((s) => s.id));
+  const teamCount = Math.floor(order.length / 2);
   const teams: TeamSetup = {
-    mode: 'auto',
+    mode: 'manual',
     teams: Array.from({ length: teamCount }, (_, i) => ({
       id: asTeamId(`t${i}`),
-      name: `Team ${i + 1}`,
-      memberIds: [seats[2 * i].id, seats[2 * i + 1].id],
+      name: t('dowr.teamName', { n: i + 1 }),
+      memberIds: [order[2 * i], order[2 * i + 1]],
     })),
   };
 
@@ -76,7 +79,7 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<DowrState, DowrAction>
         <section>
           <div className="mb-2 flex items-baseline justify-between">
             <h2 className="text-sm font-semibold text-[var(--text-muted)]">
-              {t('common.players')} · {seats.length}
+              {t('common.playersCount', { count: seats.length })}
             </h2>
             {teamCount > 0 && (
               <span className="dp-accent text-xs font-semibold">
@@ -91,6 +94,23 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<DowrState, DowrAction>
           />
           <p className="mt-2 text-xs text-[var(--text-muted)]">{t('dowr.evenHint')}</p>
         </section>
+
+        {/* Always visible: who's paired with whom (tap two players to swap) */}
+        {seats.length >= 2 && (
+          <section>
+            <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">
+              {t('dowr.pairs')}
+            </h2>
+            <PairAssigner
+              players={seats}
+              order={order}
+              picked={picked}
+              onTap={tap}
+              teamName={(n) => t('dowr.teamName', { n })}
+              hint={t('common.pairHint')}
+            />
+          </section>
+        )}
 
         <MotifDivider motif="tar" />
 
@@ -205,13 +225,7 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<DowrState, DowrAction>
         </Disclosure>
 
         <p className="text-sm text-[var(--text-muted)]">{t('dowr.poolHint', { count: poolSize })}</p>
-        {errors && (
-          <ul className="text-sm text-[var(--color-game-rose-strong)]">
-            {errors.map((e, i) => (
-              <li key={i}>{ctx.localize(e)}</li>
-            ))}
-          </ul>
-        )}
+        <SetupErrors errors={errors} />
         <Button size="lg" fullWidth disabled={!!errors} onClick={start}>
           {t('common.start')}
         </Button>

@@ -1,0 +1,203 @@
+{
+  "id": "brands",
+  "name": {
+    "en": "Brands",
+    "fa": "برندها"
+  },
+  "category": "brands",
+  "icon": "🏷️",
+  "cards": [
+    {
+      "id": "brands-apple",
+      "word": {
+        "en": "Apple",
+        "fa": "اپل"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "brands-google",
+      "word": {
+        "en": "Google",
+        "fa": "گوگل"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "brands-samsung",
+      "word": {
+        "en": "Samsung",
+        "fa": "سامسونگ"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "brands-nike",
+      "word": {
+        "en": "Nike",
+        "fa": "نایکی"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "brands-adidas",
+      "word": {
+        "en": "Adidas",
+        "fa": "آدیداس"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "brands-coca-cola",
+      "word": {
+        "en": "Coca-Cola",
+        "fa": "کوکاکولا"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "brands-pepsi",
+      "word": {
+        "en": "Pepsi",
+        "fa": "پپسی"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "brands-mcdonalds",
+      "word": {
+        "en": "McDonald's",
+        "fa": "مک‌دونالد"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "brands-instagram",
+      "word": {
+        "en": "Instagram",
+        "fa": "اینستاگرام"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "brands-youtube",
+      "word": {
+        "en": "YouTube",
+        "fa": "یوتیوب"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "brands-telegram",
+      "word": {
+        "en": "Telegram",
+        "fa": "تلگرام"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "brands-whatsapp",
+      "word": {
+        "en": "WhatsApp",
+        "fa": "واتساپ"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "brands-netflix",
+      "word": {
+        "en": "Netflix",
+        "fa": "نتفلیکس"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "brands-toyota",
+      "word": {
+        "en": "Toyota",
+        "fa": "تویوتا"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "brands-bmw",
+      "word": {
+        "en": "BMW",
+        "fa": "بی‌ام‌و"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "brands-mercedes",
+      "word": {
+        "en": "Mercedes-Benz",
+        "fa": "مرسدس بنز"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "brands-starbucks",
+      "word": {
+        "en": "Starbucks",
+        "fa": "استارباکس"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "brands-amazon",
+      "word": {
+        "en": "Amazon",
+        "fa": "آمازون"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "brands-microsoft",
+      "word": {
+        "en": "Microsoft",
+        "fa": "مایکروسافت"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "brands-spotify",
+      "word": {
+        "en": "Spotify",
+        "fa": "اسپاتیفای"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "brands-ikea",
+      "word": {
+        "en": "IKEA",
+        "fa": "ایکیا"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "brands-lego",
+      "word": {
+        "en": "Lego",
+        "fa": "لگو"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "brands-ferrari",
+      "word": {
+        "en": "Ferrari",
+        "fa": "فراری"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "brands-snapp",
+      "word": {
+        "en": "Snapp",
+        "fa": "اسنپ"
+      },
+      "difficulty": "hard"
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "category": "sports",
+  "version": 1,
+  "prompts": [
+    {
+      "id": "sports.football",
+      "category": "sports",
+      "difficulty": "easy",
+      "text": {
+        "en": "Playing football",
+        "fa": "فوتبال بازی کردن"
+      }
+    },
+    {
+      "id": "sports.swimming",
+      "category": "sports",
+      "difficulty": "easy",
+      "text": {
+        "en": "Swimming",
+        "fa": "شنا کردن"
+      }
+    },
+    {
+      "id": "sports.basketball",
+      "category": "sports",
+      "difficulty": "easy",
+      "text": {
+        "en": "Shooting a basketball",
+        "fa": "پرتاب توپ بسکتبال"
+      }
+    },
+    {
+      "id": "sports.boxing",
+      "category": "sports",
+      "difficulty": "easy",
+      "text": {
+        "en": "Boxing",
+        "fa": "بوکس"
+      }
+    },
+    {
+      "id": "sports.cycling",
+      "category": "sports",
+      "difficulty": "easy",
+      "text": {
+        "en": "Riding a bicycle",
+        "fa": "دوچرخه‌سواری"
+      }
+    },
+    {
+      "id": "sports.jump-rope",
+      "category": "sports",
+      "difficulty": "easy",
+      "text": {
+        "en": "Jumping rope",
+        "fa": "طناب زدن"
+      }
+    },
+    {
+      "id": "sports.tennis",
+      "category": "sports",
+      "difficulty": "medium",
+      "text": {
+        "en": "Serving in tennis",
+        "fa": "سرویس تنیس"
+      }
+    },
+    {
+      "id": "sports.skiing",
+      "category": "sports",
+      "difficulty": "medium",
+      "text": {
+        "en": "Skiing downhill",
+        "fa": "اسکی در سراشیبی"
+      }
+    },
+    {
+      "id": "sports.wrestling",
+      "category": "sports",
+      "difficulty": "medium",
+      "text": {
+        "en": "Wrestling",
+        "fa": "کشتی گرفتن"
+      }
+    },
+    {
+      "id": "sports.bowling",
+      "category": "sports",
+      "difficulty": "medium",
+      "text": {
+        "en": "Bowling",
+        "fa": "بولینگ"
+      }
+    },
+    {
+      "id": "sports.golf",
+      "category": "sports",
+      "difficulty": "medium",
+      "text": {
+        "en": "Swinging a golf club",
+        "fa": "ضربه گلف زدن"
+      }
+    },
+    {
+      "id": "sports.volleyball",
+      "category": "sports",
+      "difficulty": "medium",
+      "text": {
+        "en": "Spiking a volleyball",
+        "fa": "آبشار والیبال"
+      }
+    },
+    {
+      "id": "sports.weightlifting",
+      "category": "sports",
+      "difficulty": "medium",
+      "text": {
+        "en": "Lifting weights",
+        "fa": "وزنه زدن"
+      }
+    },
+    {
+      "id": "sports.archery",
+      "category": "sports",
+      "difficulty": "hard",
+      "text": {
+        "en": "Shooting a bow and arrow",
+        "fa": "تیر و کمان زدن"
+      }
+    },
+    {
+      "id": "sports.ice-skating",
+      "category": "sports",
+      "difficulty": "hard",
+      "text": {
+        "en": "Ice skating",
+        "fa": "اسکیت روی یخ"
+      }
+    },
+    {
+      "id": "sports.karate",
+      "category": "sports",
+      "difficulty": "hard",
+      "text": {
+        "en": "A karate kick",
+        "fa": "ضربه کاراته"
+      }
+    },
+    {
+      "id": "sports.horse-riding",
+      "category": "sports",
+      "difficulty": "hard",
+      "text": {
+        "en": "Riding a horse",
+        "fa": "اسب‌سواری"
+      }
+    },
+    {
+      "id": "sports.gymnastics",
+      "category": "sports",
+      "difficulty": "hard",
+      "text": {
+        "en": "Doing a gymnastics flip",
+        "fa": "پشتک ژیمناستیک"
+      }
+    }
+  ]
+}

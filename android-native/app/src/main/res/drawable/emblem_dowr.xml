@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Auto-generated from src/sdk/ui/emblems.ts — do not edit by hand. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="100dp"
+    android:height="100dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+  <path
+    android:pathData="M30.7 73.0 A30 30 0 1 1 65.0 76.0"
+    android:strokeColor="#8B7BFF"
+    android:strokeWidth="7"
+    android:strokeLineCap="round"/>
+  <path
+    android:pathData="M57.2 80.5 L61.5 69.9 L68.5 82.0 Z"
+    android:fillColor="#8B7BFF"/>
+  <path
+    android:pathData="M27.3 73 a3.4 3.4 0 1 0 6.8 0 a3.4 3.4 0 1 0 -6.8 0 Z"
+    android:fillColor="#F4C64D"/>
+  <path
+    android:pathData="M16.9 45.8 a3.4 3.4 0 1 0 6.8 0 a3.4 3.4 0 1 0 -6.8 0 Z"
+    android:fillColor="#F4C64D"/>
+  <path
+    android:pathData="M34.4 22.6 a3.4 3.4 0 1 0 6.8 0 a3.4 3.4 0 1 0 -6.8 0 Z"
+    android:fillColor="#F4C64D"/>
+  <path
+    android:pathData="M63.4 25.1 a3.4 3.4 0 1 0 6.8 0 a3.4 3.4 0 1 0 -6.8 0 Z"
+    android:fillColor="#F4C64D"/>
+  <path
+    android:pathData="M76.6 51 a3.4 3.4 0 1 0 6.8 0 a3.4 3.4 0 1 0 -6.8 0 Z"
+    android:fillColor="#F4C64D"/>
+  <path
+    android:pathData="M61.6 76 a3.4 3.4 0 1 0 6.8 0 a3.4 3.4 0 1 0 -6.8 0 Z"
+    android:fillColor="#F4C64D"/>
+  <group android:translateX="50" android:translateY="50">
+    <path
+      android:pathData="M-7.5 0 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0 Z"
+      android:fillColor="#F4C64D"/>
+    <path
+      android:pathData="M0 -4.5 L1.4 -1.4 4.5 0 1.4 1.4 0 4.5 -1.4 1.4 -4.5 0 -1.4 -1.4 Z"
+      android:fillColor="#0B0922"/>
+  </group>
+</vector>

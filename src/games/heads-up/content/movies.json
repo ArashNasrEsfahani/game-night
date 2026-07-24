@@ -8,90 +8,10 @@
   "icon": "🎬",
   "cards": [
     {
-      "id": "movies-titanic",
+      "id": "movies-the-shawshank-redemption",
       "word": {
-        "en": "Titanic",
-        "fa": "تایتانیک"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-the-lion-king",
-      "word": {
-        "en": "The Lion King",
-        "fa": "شیرشاه"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-frozen",
-      "word": {
-        "en": "Frozen",
-        "fa": "فروزن"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-harry-potter",
-      "word": {
-        "en": "Harry Potter",
-        "fa": "هری پاتر"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-the-matrix",
-      "word": {
-        "en": "The Matrix",
-        "fa": "ماتریکس"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-jurassic-park",
-      "word": {
-        "en": "Jurassic Park",
-        "fa": "پارک ژوراسیک"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-spider-man",
-      "word": {
-        "en": "Spider-Man",
-        "fa": "مرد عنکبوتی"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-toy-story",
-      "word": {
-        "en": "Toy Story",
-        "fa": "داستان اسباب‌بازی"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-avatar",
-      "word": {
-        "en": "Avatar",
-        "fa": "آواتار"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-star-wars",
-      "word": {
-        "en": "Star Wars",
-        "fa": "جنگ ستارگان"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-batman",
-      "word": {
-        "en": "Batman",
-        "fa": "بتمن"
+        "en": "The Shawshank Redemption",
+        "fa": "رستگاری در شاوشنک"
       },
       "difficulty": "easy"
     },
@@ -104,174 +24,6 @@
       "difficulty": "easy"
     },
     {
-      "id": "movies-shrek",
-      "word": {
-        "en": "Shrek",
-        "fa": "شرک"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-finding-nemo",
-      "word": {
-        "en": "Finding Nemo",
-        "fa": "در جستجوی نمو"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-the-avengers",
-      "word": {
-        "en": "The Avengers",
-        "fa": "انتقام‌جویان"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-iron-man",
-      "word": {
-        "en": "Iron Man",
-        "fa": "مرد آهنی"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-jaws",
-      "word": {
-        "en": "Jaws",
-        "fa": "آرواره‌ها"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-aladdin",
-      "word": {
-        "en": "Aladdin",
-        "fa": "علاءالدین"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-the-mummy",
-      "word": {
-        "en": "The Mummy",
-        "fa": "مومیایی"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-cinderella",
-      "word": {
-        "en": "Cinderella",
-        "fa": "سیندرلا"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-king-kong",
-      "word": {
-        "en": "King Kong",
-        "fa": "کینگ کونگ"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-the-incredibles",
-      "word": {
-        "en": "The Incredibles",
-        "fa": "شگفت‌انگیزان"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-pirates-of-the-caribbean",
-      "word": {
-        "en": "Pirates of the Caribbean",
-        "fa": "دزدان دریایی کارائیب"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-the-terminator",
-      "word": {
-        "en": "The Terminator",
-        "fa": "ترمیناتور"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-home-alone",
-      "word": {
-        "en": "Home Alone",
-        "fa": "تنها در خانه"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-ratatouille",
-      "word": {
-        "en": "Ratatouille",
-        "fa": "موش سرآشپز"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-up",
-      "word": {
-        "en": "Up",
-        "fa": "بالا (آپ)"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-the-wizard-of-oz",
-      "word": {
-        "en": "The Wizard of Oz",
-        "fa": "جادوگر شهر اوز"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-snow-white",
-      "word": {
-        "en": "Snow White",
-        "fa": "سفیدبرفی"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-kung-fu-panda",
-      "word": {
-        "en": "Kung Fu Panda",
-        "fa": "پاندای کونگ‌فوکار"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-pulp-fiction",
-      "word": {
-        "en": "Pulp Fiction",
-        "fa": "داستان عامه‌پسند"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-forrest-gump",
-      "word": {
-        "en": "Forrest Gump",
-        "fa": "فارست گامپ"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-the-shawshank-redemption",
-      "word": {
-        "en": "The Shawshank Redemption",
-        "fa": "رستگاری در شاوشنک"
-      },
-      "difficulty": "easy"
-    },
-    {
       "id": "movies-the-dark-knight",
       "word": {
         "en": "The Dark Knight",
@@ -280,18 +32,66 @@
       "difficulty": "easy"
     },
     {
-      "id": "movies-inception",
+      "id": "movies-the-godfather-part-ii",
       "word": {
-        "en": "Inception",
-        "fa": "تلقین"
+        "en": "The Godfather Part II",
+        "fa": "پدرخوانده ۲"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "movies-12-angry-men",
+      "word": {
+        "en": "12 Angry Men",
+        "fa": "دوازده مرد خشمگین"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "movies-schindlers-list",
+      "word": {
+        "en": "Schindler's List",
+        "fa": "فهرست شیندلر"
       },
       "difficulty": "easy"
     },
     {
-      "id": "movies-gladiator",
+      "id": "movies-the-lord-of-the-rings-the-return-of-the-king",
       "word": {
-        "en": "Gladiator",
-        "fa": "گلادیاتور"
+        "en": "The Lord of the Rings: The Return of the King",
+        "fa": "ارباب حلقه‌ها: بازگشت پادشاه"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "movies-pulp-fiction",
+      "word": {
+        "en": "Pulp Fiction",
+        "fa": "پالپ فیکشن"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "movies-the-lord-of-the-rings-the-fellowship-of-the-ring",
+      "word": {
+        "en": "The Lord of the Rings: The Fellowship of the Ring",
+        "fa": "ارباب حلقه‌ها: یاران حلقه"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "movies-the-good-the-bad-and-the-ugly",
+      "word": {
+        "en": "The Good, the Bad and the Ugly",
+        "fa": "خوب، بد، زشت"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "movies-forrest-gump",
+      "word": {
+        "en": "Forrest Gump",
+        "fa": "فارست گامپ"
       },
       "difficulty": "easy"
     },
@@ -304,10 +104,34 @@
       "difficulty": "easy"
     },
     {
-      "id": "movies-schindler-s-list",
+      "id": "movies-the-lord-of-the-rings-the-two-towers",
       "word": {
-        "en": "Schindler's List",
-        "fa": "فهرست شیندلر"
+        "en": "The Lord of the Rings: The Two Towers",
+        "fa": "ارباب حلقه‌ها: دو برج"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "movies-inception",
+      "word": {
+        "en": "Inception",
+        "fa": "تلقین"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "movies-star-wars-the-empire-strikes-back",
+      "word": {
+        "en": "Star Wars: The Empire Strikes Back",
+        "fa": "جنگ ستارگان: امپراتوری ضربه می‌زند"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "movies-the-matrix",
+      "word": {
+        "en": "The Matrix",
+        "fa": "ماتریکس"
       },
       "difficulty": "easy"
     },
@@ -317,7 +141,31 @@
         "en": "Goodfellas",
         "fa": "رفقای خوب"
       },
-      "difficulty": "easy"
+      "difficulty": "medium"
+    },
+    {
+      "id": "movies-one-flew-over-the-cuckoos-nest",
+      "word": {
+        "en": "One Flew Over the Cuckoo's Nest",
+        "fa": "پرواز بر فراز آشیانه فاخته"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "movies-se7en",
+      "word": {
+        "en": "Se7en",
+        "fa": "هفت"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "movies-seven-samurai",
+      "word": {
+        "en": "Seven Samurai",
+        "fa": "هفت سامورایی"
+      },
+      "difficulty": "hard"
     },
     {
       "id": "movies-interstellar",
@@ -328,36 +176,20 @@
       "difficulty": "easy"
     },
     {
-      "id": "movies-the-lord-of-the-rings",
-      "word": {
-        "en": "The Lord of the Rings",
-        "fa": "ارباب حلقه‌ها"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-back-to-the-future",
-      "word": {
-        "en": "Back to the Future",
-        "fa": "بازگشت به آینده"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-e-t-the-extra-terrestrial",
-      "word": {
-        "en": "E.T. the Extra-Terrestrial",
-        "fa": "ای‌تی موجود فرازمینی"
-      },
-      "difficulty": "easy"
-    },
-    {
       "id": "movies-the-silence-of-the-lambs",
       "word": {
         "en": "The Silence of the Lambs",
         "fa": "سکوت بره‌ها"
       },
-      "difficulty": "easy"
+      "difficulty": "medium"
+    },
+    {
+      "id": "movies-its-a-wonderful-life",
+      "word": {
+        "en": "It's a Wonderful Life",
+        "fa": "زندگی شگفت‌انگیز است"
+      },
+      "difficulty": "hard"
     },
     {
       "id": "movies-saving-private-ryan",
@@ -368,26 +200,50 @@
       "difficulty": "easy"
     },
     {
-      "id": "movies-alien",
+      "id": "movies-city-of-god",
       "word": {
-        "en": "Alien",
-        "fa": "بیگانه"
+        "en": "City of God",
+        "fa": "شهر خدا"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "movies-life-is-beautiful",
+      "word": {
+        "en": "Life Is Beautiful",
+        "fa": "زندگی زیباست"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "movies-the-green-mile",
+      "word": {
+        "en": "The Green Mile",
+        "fa": "مسیر سبز"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "movies-star-wars",
+      "word": {
+        "en": "Star Wars",
+        "fa": "جنگ ستارگان"
       },
       "difficulty": "easy"
     },
     {
-      "id": "movies-casablanca",
+      "id": "movies-terminator-2-judgment-day",
       "word": {
-        "en": "Casablanca",
-        "fa": "کازابلانکا"
+        "en": "Terminator 2: Judgment Day",
+        "fa": "نابودگر ۲: روز داوری"
       },
-      "difficulty": "easy"
+      "difficulty": "medium"
     },
     {
-      "id": "movies-psycho",
+      "id": "movies-back-to-the-future",
       "word": {
-        "en": "Psycho",
-        "fa": "روانی"
+        "en": "Back to the Future",
+        "fa": "بازگشت به آینده"
       },
       "difficulty": "easy"
     },
@@ -397,31 +253,271 @@
         "en": "Spirited Away",
         "fa": "شهر اشباح"
       },
-      "difficulty": "easy"
+      "difficulty": "medium"
     },
     {
-      "id": "movies-beauty-and-the-beast",
+      "id": "movies-the-pianist",
       "word": {
-        "en": "Beauty and the Beast",
-        "fa": "دیو و دلبر"
+        "en": "The Pianist",
+        "fa": "پیانیست"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "movies-psycho",
+      "word": {
+        "en": "Psycho",
+        "fa": "روانی"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "movies-parasite",
+      "word": {
+        "en": "Parasite",
+        "fa": "انگل"
       },
       "difficulty": "easy"
     },
     {
-      "id": "movies-despicable-me",
+      "id": "movies-l-on-the-professional",
       "word": {
-        "en": "Despicable Me",
-        "fa": "من نفرت‌انگیز"
+        "en": "Léon: The Professional",
+        "fa": "لئون حرفه‌ای"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "movies-the-lion-king",
+      "word": {
+        "en": "The Lion King",
+        "fa": "شیرشاه"
       },
       "difficulty": "easy"
     },
     {
-      "id": "movies-the-lego-movie",
+      "id": "movies-gladiator",
       "word": {
-        "en": "The Lego Movie",
-        "fa": "فیلم لگو"
+        "en": "Gladiator",
+        "fa": "گلادیاتور"
       },
       "difficulty": "easy"
+    },
+    {
+      "id": "movies-american-history-x",
+      "word": {
+        "en": "American History X",
+        "fa": "تاریخ آمریکایی ایکس"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "movies-the-departed",
+      "word": {
+        "en": "The Departed",
+        "fa": "رفتگان"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "movies-whiplash",
+      "word": {
+        "en": "Whiplash",
+        "fa": "شلاق"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "movies-the-prestige",
+      "word": {
+        "en": "The Prestige",
+        "fa": "پرستیژ"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "movies-the-usual-suspects",
+      "word": {
+        "en": "The Usual Suspects",
+        "fa": "مظنونین همیشگی"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "movies-casablanca",
+      "word": {
+        "en": "Casablanca",
+        "fa": "کازابلانکا"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "movies-grave-of-the-fireflies",
+      "word": {
+        "en": "Grave of the Fireflies",
+        "fa": "مدفن کرم‌های شب‌تاب"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "movies-the-intouchables",
+      "word": {
+        "en": "The Intouchables",
+        "fa": "دست‌نیافتنی‌ها"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "movies-modern-times",
+      "word": {
+        "en": "Modern Times",
+        "fa": "عصر جدید"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "movies-once-upon-a-time-in-the-west",
+      "word": {
+        "en": "Once Upon a Time in the West",
+        "fa": "روزی روزگاری در غرب"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "movies-rear-window",
+      "word": {
+        "en": "Rear Window",
+        "fa": "پنجره عقبی"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "movies-alien",
+      "word": {
+        "en": "Alien",
+        "fa": "بیگانه"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "movies-city-lights",
+      "word": {
+        "en": "City Lights",
+        "fa": "روشنایی‌های شهر"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "movies-cinema-paradiso",
+      "word": {
+        "en": "Cinema Paradiso",
+        "fa": "سینما پارادیزو"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "movies-apocalypse-now",
+      "word": {
+        "en": "Apocalypse Now",
+        "fa": "اینک آخرالزمان"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "movies-memento",
+      "word": {
+        "en": "Memento",
+        "fa": "یادگاری"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "movies-django-unchained",
+      "word": {
+        "en": "Django Unchained",
+        "fa": "جانگوی زنجیرگسسته"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "movies-raiders-of-the-lost-ark",
+      "word": {
+        "en": "Raiders of the Lost Ark",
+        "fa": "مهاجمان صندوق گمشده"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "movies-walle",
+      "word": {
+        "en": "WALL·E",
+        "fa": "وال‌ای"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "movies-the-lives-of-others",
+      "word": {
+        "en": "The Lives of Others",
+        "fa": "زندگی دیگران"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "movies-sunset-boulevard",
+      "word": {
+        "en": "Sunset Boulevard",
+        "fa": "بلوار غروب"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "movies-paths-of-glory",
+      "word": {
+        "en": "Paths of Glory",
+        "fa": "راه‌های افتخار"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "movies-the-shining",
+      "word": {
+        "en": "The Shining",
+        "fa": "درخشش"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "movies-the-great-dictator",
+      "word": {
+        "en": "The Great Dictator",
+        "fa": "دیکتاتور بزرگ"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "movies-avengers-infinity-war",
+      "word": {
+        "en": "Avengers: Infinity War",
+        "fa": "انتقام‌جویان: جنگ ابدیت"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "movies-witness-for-the-prosecution",
+      "word": {
+        "en": "Witness for the Prosecution",
+        "fa": "شاهد مدعی"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "movies-aliens",
+      "word": {
+        "en": "Aliens",
+        "fa": "بیگانگان"
+      },
+      "difficulty": "medium"
     },
     {
       "id": "movies-coco",
@@ -440,1554 +536,122 @@
       "difficulty": "easy"
     },
     {
-      "id": "movies-parasite",
+      "id": "movies-avengers-endgame",
       "word": {
-        "en": "Parasite",
-        "fa": "انگل"
+        "en": "Avengers: Endgame",
+        "fa": "انتقام‌جویان: پایان بازی"
       },
       "difficulty": "easy"
     },
     {
-      "id": "movies-black-panther",
+      "id": "movies-toy-story",
       "word": {
-        "en": "Black Panther",
-        "fa": "پلنگ سیاه"
+        "en": "Toy Story",
+        "fa": "داستان اسباب‌بازی"
       },
       "difficulty": "easy"
     },
     {
-      "id": "movies-the-wolf-of-wall-street",
+      "id": "movies-princess-mononoke",
       "word": {
-        "en": "The Wolf of Wall Street",
-        "fa": "گرگ وال‌استریت"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-la-la-land",
-      "word": {
-        "en": "La La Land",
-        "fa": "لا لا لند"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-mad-max-fury-road",
-      "word": {
-        "en": "Mad Max: Fury Road",
-        "fa": "مکس دیوانه: جاده خشم"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-cars",
-      "word": {
-        "en": "Cars",
-        "fa": "ماشین‌ها"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-brave",
-      "word": {
-        "en": "Brave",
-        "fa": "شجاع"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-moana",
-      "word": {
-        "en": "Moana",
-        "fa": "موانا"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-tangled",
-      "word": {
-        "en": "Tangled",
-        "fa": "گیسوکمند"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-bambi",
-      "word": {
-        "en": "Bambi",
-        "fa": "بامبی"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-dumbo",
-      "word": {
-        "en": "Dumbo",
-        "fa": "دامبو"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-pinocchio",
-      "word": {
-        "en": "Pinocchio",
-        "fa": "پینوکیو"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-mulan",
-      "word": {
-        "en": "Mulan",
-        "fa": "مولان"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-hercules",
-      "word": {
-        "en": "Hercules",
-        "fa": "هرکول"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-tarzan",
-      "word": {
-        "en": "Tarzan",
-        "fa": "تارزان"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-pocahontas",
-      "word": {
-        "en": "Pocahontas",
-        "fa": "پوکاهانتس"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-encanto",
-      "word": {
-        "en": "Encanto",
-        "fa": "انکانتو"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-zootopia",
-      "word": {
-        "en": "Zootopia",
-        "fa": "زوتوپیا"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-bolt",
-      "word": {
-        "en": "Bolt",
-        "fa": "بولت"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-madagascar",
-      "word": {
-        "en": "Madagascar",
-        "fa": "ماداگاسکار"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-tinker-bell",
-      "word": {
-        "en": "Tinker Bell",
-        "fa": "تینکر بل"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-rio",
-      "word": {
-        "en": "Rio",
-        "fa": "ریو"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-sing",
-      "word": {
-        "en": "Sing",
-        "fa": "آواز"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-ferdinand",
-      "word": {
-        "en": "Ferdinand",
-        "fa": "فردیناند"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-anastasia",
-      "word": {
-        "en": "Anastasia",
-        "fa": "آناستازیا"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-antz",
-      "word": {
-        "en": "Antz",
-        "fa": "مورچه‌ها"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-epic",
-      "word": {
-        "en": "Epic",
-        "fa": "حماسه"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-trolls",
-      "word": {
-        "en": "Trolls",
-        "fa": "ترول‌ها"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-brother-bear",
-      "word": {
-        "en": "Brother Bear",
-        "fa": "خرس برادر"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-robots",
-      "word": {
-        "en": "Robots",
-        "fa": "روبات‌ها"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-turbo",
-      "word": {
-        "en": "Turbo",
-        "fa": "توربو"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-onward",
-      "word": {
-        "en": "Onward",
-        "fa": "به پیش"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-luca",
-      "word": {
-        "en": "Luca",
-        "fa": "لوکا"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-soul",
-      "word": {
-        "en": "Soul",
-        "fa": "روح"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-wall-e",
-      "word": {
-        "en": "Wall-E",
-        "fa": "وال-ای"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-spirit",
-      "word": {
-        "en": "Spirit",
-        "fa": "اسپیریت"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-balto",
-      "word": {
-        "en": "Balto",
-        "fa": "بالتو"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-klaus",
-      "word": {
-        "en": "Klaus",
-        "fa": "کلاوس"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-vivo",
-      "word": {
-        "en": "Vivo",
-        "fa": "ویوو"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-wish",
-      "word": {
-        "en": "Wish",
-        "fa": "آرزو"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-elemental",
-      "word": {
-        "en": "Elemental",
-        "fa": "عناصر"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-megamind",
-      "word": {
-        "en": "Megamind",
-        "fa": "مگاماند"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-igor",
-      "word": {
-        "en": "Igor",
-        "fa": "ایگور"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-coraline",
-      "word": {
-        "en": "Coraline",
-        "fa": "کورالاین"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-rango",
-      "word": {
-        "en": "Rango",
-        "fa": "رنگو"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-home",
-      "word": {
-        "en": "Home",
-        "fa": "خانه"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-storks",
-      "word": {
-        "en": "Storks",
-        "fa": "لک‌لک‌ها"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-smallfoot",
-      "word": {
-        "en": "Smallfoot",
-        "fa": "پاکوچک"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-abominable",
-      "word": {
-        "en": "Abominable",
-        "fa": "آدم برفی"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-frankenweenie",
-      "word": {
-        "en": "Frankenweenie",
-        "fa": "فرانکن‌وینی"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-sinbad",
-      "word": {
-        "en": "Sinbad",
-        "fa": "سندباد"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-frozen-two",
-      "word": {
-        "en": "Frozen Two",
-        "fa": "فروزن دو"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-superman",
-      "word": {
-        "en": "Superman",
-        "fa": "سوپرمن"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-hulk",
-      "word": {
-        "en": "Hulk",
-        "fa": "هالک"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-thor",
-      "word": {
-        "en": "Thor",
-        "fa": "ثور"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-captain-america",
-      "word": {
-        "en": "Captain America",
-        "fa": "کاپیتان آمریکا"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-wonder-woman",
-      "word": {
-        "en": "Wonder Woman",
-        "fa": "زن شگفت‌انگیز"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-aquaman",
-      "word": {
-        "en": "Aquaman",
-        "fa": "آکوامن"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-flash",
-      "word": {
-        "en": "Flash",
-        "fa": "فلش"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-wolverine",
-      "word": {
-        "en": "Wolverine",
-        "fa": "ولورین"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-deadpool",
-      "word": {
-        "en": "Deadpool",
-        "fa": "ددپول"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-venom",
-      "word": {
-        "en": "Venom",
-        "fa": "ونوم"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-catwoman",
-      "word": {
-        "en": "Catwoman",
-        "fa": "زن گربه‌ای"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-ant-man",
-      "word": {
-        "en": "Ant-Man",
-        "fa": "مرد مورچه‌ای"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-doctor-strange",
-      "word": {
-        "en": "Doctor Strange",
-        "fa": "دکتر استرنج"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-green-lantern",
-      "word": {
-        "en": "Green Lantern",
-        "fa": "فانوس سبز"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-x-men",
-      "word": {
-        "en": "X-Men",
-        "fa": "مردان ایکس"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-robin",
-      "word": {
-        "en": "Robin",
-        "fa": "رابین"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-loki",
-      "word": {
-        "en": "Loki",
-        "fa": "لوکی"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-thanos",
-      "word": {
-        "en": "Thanos",
-        "fa": "تانوس"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-groot",
-      "word": {
-        "en": "Groot",
-        "fa": "گروت"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-hawkeye",
-      "word": {
-        "en": "Hawkeye",
-        "fa": "شاهین‌چشم"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-black-widow",
-      "word": {
-        "en": "Black Widow",
-        "fa": "بیوه سیاه"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-storm",
-      "word": {
-        "en": "Storm",
-        "fa": "استورم"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-cyclops",
-      "word": {
-        "en": "Cyclops",
-        "fa": "سایکلاپس"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-magneto",
-      "word": {
-        "en": "Magneto",
-        "fa": "مگنتو"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-penguin",
-      "word": {
-        "en": "Penguin",
-        "fa": "پنگوئن"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-riddler",
-      "word": {
-        "en": "Riddler",
-        "fa": "معماگو"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-bane",
-      "word": {
-        "en": "Bane",
-        "fa": "بین"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-cape",
-      "word": {
-        "en": "Cape",
-        "fa": "شنل"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-mask",
-      "word": {
-        "en": "Mask",
-        "fa": "ماسک"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-shield",
-      "word": {
-        "en": "Shield",
-        "fa": "سپر"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-superpower",
-      "word": {
-        "en": "Superpower",
-        "fa": "ابرقدرت"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-hero",
-      "word": {
-        "en": "Hero",
-        "fa": "قهرمان"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-villain",
-      "word": {
-        "en": "Villain",
-        "fa": "شرور"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-sidekick",
-      "word": {
-        "en": "Sidekick",
-        "fa": "دستیار"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-batmobile",
-      "word": {
-        "en": "Batmobile",
-        "fa": "بتموبیل"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-web",
-      "word": {
-        "en": "Web",
-        "fa": "تار"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-hammer",
-      "word": {
-        "en": "Hammer",
-        "fa": "چکش"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-suit",
-      "word": {
-        "en": "Suit",
-        "fa": "لباس"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-flying",
-      "word": {
-        "en": "Flying",
-        "fa": "پرواز"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-spider",
-      "word": {
-        "en": "Spider",
-        "fa": "عنکبوت"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-bat",
-      "word": {
-        "en": "Bat",
-        "fa": "خفاش"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-lightning",
-      "word": {
-        "en": "Lightning",
-        "fa": "رعد و برق"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-strength",
-      "word": {
-        "en": "Strength",
-        "fa": "قدرت"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-invisible",
-      "word": {
-        "en": "Invisible",
-        "fa": "نامرئی"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-laser",
-      "word": {
-        "en": "Laser",
-        "fa": "لیزر"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-city",
-      "word": {
-        "en": "City",
-        "fa": "شهر"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-rescue",
-      "word": {
-        "en": "Rescue",
-        "fa": "نجات"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-fight",
-      "word": {
-        "en": "Fight",
-        "fa": "مبارزه"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-save-the-world",
-      "word": {
-        "en": "Save the World",
-        "fa": "نجات دنیا"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-peter-pan",
-      "word": {
-        "en": "Peter Pan",
-        "fa": "پیتر پن"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-wreck-it-ralph",
-      "word": {
-        "en": "Wreck-It Ralph",
-        "fa": "رالف خرابکار"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-pixar",
-      "word": {
-        "en": "Pixar",
-        "fa": "پیکسار"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-disney",
-      "word": {
-        "en": "Disney",
-        "fa": "دیزنی"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-fantasia",
-      "word": {
-        "en": "Fantasia",
-        "fa": "فانتزیا"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-robin-hood",
-      "word": {
-        "en": "Robin Hood",
-        "fa": "رابین هود"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-aristocats",
-      "word": {
-        "en": "Aristocats",
-        "fa": "گربه‌های اشرافی"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-mowgli",
-      "word": {
-        "en": "Mowgli",
-        "fa": "موگلی"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-simba",
-      "word": {
-        "en": "Simba",
-        "fa": "سیمبا"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-nemo",
-      "word": {
-        "en": "Nemo",
-        "fa": "نمو"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-dory",
-      "word": {
-        "en": "Dory",
-        "fa": "دوری"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-woody",
-      "word": {
-        "en": "Woody",
-        "fa": "وودی"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-buzz",
-      "word": {
-        "en": "Buzz",
-        "fa": "باز"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-mike",
-      "word": {
-        "en": "Mike",
-        "fa": "مایک"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-sulley",
-      "word": {
-        "en": "Sulley",
-        "fa": "سالی"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-elsa",
-      "word": {
-        "en": "Elsa",
-        "fa": "السا"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-anna",
-      "word": {
-        "en": "Anna",
-        "fa": "آنا"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-olaf",
-      "word": {
-        "en": "Olaf",
-        "fa": "اولاف"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-ariel",
-      "word": {
-        "en": "Ariel",
-        "fa": "آریل"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-belle",
-      "word": {
-        "en": "Belle",
-        "fa": "بل"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-jasmine",
-      "word": {
-        "en": "Jasmine",
-        "fa": "یاسمین"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-genie",
-      "word": {
-        "en": "Genie",
-        "fa": "غول چراغ"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-mermaid",
-      "word": {
-        "en": "Mermaid",
-        "fa": "پری دریایی"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-monsters-inc",
-      "word": {
-        "en": "Monsters Inc",
-        "fa": "شرکت هیولاها"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-inside-out",
-      "word": {
-        "en": "Inside Out",
-        "fa": "درون و بیرون"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-stitch",
-      "word": {
-        "en": "Stitch",
-        "fa": "استیچ"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-mickey-mouse",
-      "word": {
-        "en": "Mickey Mouse",
-        "fa": "میکی موس"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-transformers",
-      "word": {
-        "en": "Transformers",
-        "fa": "تبدیل‌شوندگان"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-godzilla",
-      "word": {
-        "en": "Godzilla",
-        "fa": "گودزیلا"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-rambo",
-      "word": {
-        "en": "Rambo",
-        "fa": "رمبو"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-terminator",
-      "word": {
-        "en": "Terminator",
-        "fa": "نابودگر"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-robocop",
-      "word": {
-        "en": "RoboCop",
-        "fa": "پلیس آهنی"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-rocky",
-      "word": {
-        "en": "Rocky",
-        "fa": "راکی"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-james-bond",
-      "word": {
-        "en": "James Bond",
-        "fa": "جیمز باند"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-mission-impossible",
-      "word": {
-        "en": "Mission Impossible",
-        "fa": "مأموریت غیرممکن"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-indiana-jones",
-      "word": {
-        "en": "Indiana Jones",
-        "fa": "ایندیانا جونز"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-fast-and-furious",
-      "word": {
-        "en": "Fast And Furious",
-        "fa": "سریع و خشمگین"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-die-hard",
-      "word": {
-        "en": "Die Hard",
-        "fa": "جان سخت"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-top-gun",
-      "word": {
-        "en": "Top Gun",
-        "fa": "تاپ گان"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-karate-kid",
-      "word": {
-        "en": "Karate Kid",
-        "fa": "بچه کاراته‌باز"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-big-hero",
-      "word": {
-        "en": "Big Hero",
-        "fa": "قهرمان بزرگ"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-zorro",
-      "word": {
-        "en": "Zorro",
-        "fa": "زورو"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-power-rangers",
-      "word": {
-        "en": "Power Rangers",
-        "fa": "رنجرهای قدرتمند"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-ninja-turtles",
-      "word": {
-        "en": "Ninja Turtles",
-        "fa": "لاک‌پشت‌های نینجا"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-men-in-black",
-      "word": {
-        "en": "Men In Black",
-        "fa": "مردان سیاه‌پوش"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-predator",
-      "word": {
-        "en": "Predator",
-        "fa": "غارتگر"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-tomb-raider",
-      "word": {
-        "en": "Tomb Raider",
-        "fa": "مهاجم مقبره"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-speed",
-      "word": {
-        "en": "Speed",
-        "fa": "سرعت"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-jumanji",
-      "word": {
-        "en": "Jumanji",
-        "fa": "جومانجی"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "movies-a-beautiful-mind",
-      "word": {
-        "en": "A Beautiful Mind",
-        "fa": "یک ذهن زیبا"
+        "en": "Princess Mononoke",
+        "fa": "پرنسس مونونوکه"
       },
       "difficulty": "hard"
     },
     {
-      "id": "movies-the-green-mile",
+      "id": "movies-braveheart",
       "word": {
-        "en": "The Green Mile",
-        "fa": "مسیر سبز"
+        "en": "Braveheart",
+        "fa": "دل‌شیر"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "movies-once-upon-a-time-in-america",
+      "word": {
+        "en": "Once Upon a Time in America",
+        "fa": "روزی روزگاری در آمریکا"
       },
       "difficulty": "hard"
     },
     {
-      "id": "movies-american-beauty",
+      "id": "movies-your-name",
       "word": {
-        "en": "American Beauty",
-        "fa": "زیبایی آمریکایی"
+        "en": "Your Name",
+        "fa": "نام تو"
       },
-      "difficulty": "hard"
+      "difficulty": "medium"
     },
     {
-      "id": "movies-gone-with-the-wind",
+      "id": "movies-3-idiots",
       "word": {
-        "en": "Gone With the Wind",
-        "fa": "بر باد رفته"
+        "en": "3 Idiots",
+        "fa": "سه احمق"
       },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-on-the-waterfront",
-      "word": {
-        "en": "On the Waterfront",
-        "fa": "در بارانداز"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-the-pianist",
-      "word": {
-        "en": "The Pianist",
-        "fa": "پیانیست"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-million-dollar-baby",
-      "word": {
-        "en": "Million Dollar Baby",
-        "fa": "دختر میلیون دلاری"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-no-country-for-old-men",
-      "word": {
-        "en": "No Country for Old Men",
-        "fa": "جایی برای پیرمردها نیست"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-there-will-be-blood",
-      "word": {
-        "en": "There Will Be Blood",
-        "fa": "خون به پا خواهد شد"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-the-deer-hunter",
-      "word": {
-        "en": "The Deer Hunter",
-        "fa": "شکارچی گوزن"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-ordinary-people",
-      "word": {
-        "en": "Ordinary People",
-        "fa": "مردم معمولی"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-dances-with-wolves",
-      "word": {
-        "en": "Dances With Wolves",
-        "fa": "رقصنده با گرگ‌ها"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-driving-miss-daisy",
-      "word": {
-        "en": "Driving Miss Daisy",
-        "fa": "رانندگی برای خانم دیزی"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-terms-of-endearment",
-      "word": {
-        "en": "Terms of Endearment",
-        "fa": "واژه‌های محبت‌آمیز"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-kramer-vs-kramer",
-      "word": {
-        "en": "Kramer vs Kramer",
-        "fa": "کریمر علیه کریمر"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-one-flew-over-the-cuckoo-s-nest",
-      "word": {
-        "en": "One Flew Over the Cuckoo's Nest",
-        "fa": "دیوانه از قفس پرید"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-the-english-patient",
-      "word": {
-        "en": "The English Patient",
-        "fa": "بیمار انگلیسی"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-the-king-s-speech",
-      "word": {
-        "en": "The King's Speech",
-        "fa": "سخنرانی پادشاه"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-12-years-a-slave",
-      "word": {
-        "en": "12 Years a Slave",
-        "fa": "دوازده سال بردگی"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-the-departed",
-      "word": {
-        "en": "The Departed",
-        "fa": "رفتگان"
-      },
-      "difficulty": "hard"
+      "difficulty": "medium"
     },
     {
       "id": "movies-good-will-hunting",
       "word": {
         "en": "Good Will Hunting",
-        "fa": "ویل هانتینگ خوب"
+        "fa": "ویل هانتینگِ نابغه"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "movies-singin-in-the-rain",
+      "word": {
+        "en": "Singin' in the Rain",
+        "fa": "آواز در باران"
       },
       "difficulty": "hard"
     },
     {
-      "id": "movies-dead-poets-society",
+      "id": "movies-requiem-for-a-dream",
       "word": {
-        "en": "Dead Poets Society",
-        "fa": "انجمن شاعران مرده"
+        "en": "Requiem for a Dream",
+        "fa": "مرثیه‌ای برای یک رؤیا"
       },
       "difficulty": "hard"
     },
     {
-      "id": "movies-the-color-purple",
+      "id": "movies-toy-story-3",
       "word": {
-        "en": "The Color Purple",
-        "fa": "رنگ ارغوانی"
+        "en": "Toy Story 3",
+        "fa": "داستان اسباب‌بازی ۳"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "movies-2001-a-space-odyssey",
+      "word": {
+        "en": "2001: A Space Odyssey",
+        "fa": "۲۰۰۱: ادیسه فضایی"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "movies-eternal-sunshine-of-the-spotless-mind",
+      "word": {
+        "en": "Eternal Sunshine of the Spotless Mind",
+        "fa": "درخشش ابدی یک ذهن پاک"
       },
       "difficulty": "hard"
     },
     {
-      "id": "movies-rain-man",
+      "id": "movies-reservoir-dogs",
       "word": {
-        "en": "Rain Man",
-        "fa": "مرد بارانی"
+        "en": "Reservoir Dogs",
+        "fa": "سگ‌های انباری"
       },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-out-of-africa",
-      "word": {
-        "en": "Out of Africa",
-        "fa": "خارج از آفریقا"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-the-last-emperor",
-      "word": {
-        "en": "The Last Emperor",
-        "fa": "آخرین امپراتور"
-      },
-      "difficulty": "hard"
+      "difficulty": "medium"
     },
     {
       "id": "movies-lawrence-of-arabia",
       "word": {
         "en": "Lawrence of Arabia",
         "fa": "لورنس عربستان"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-the-bridge-on-the-river-kwai",
-      "word": {
-        "en": "The Bridge on the River Kwai",
-        "fa": "پل رودخانه کوای"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-to-kill-a-mockingbird",
-      "word": {
-        "en": "To Kill a Mockingbird",
-        "fa": "کشتن مرغ مقلد"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-in-the-heat-of-the-night",
-      "word": {
-        "en": "In the Heat of the Night",
-        "fa": "در گرمای شب"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-midnight-cowboy",
-      "word": {
-        "en": "Midnight Cowboy",
-        "fa": "کابوی نیمه‌شب"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-the-french-connection",
-      "word": {
-        "en": "The French Connection",
-        "fa": "ارتباط فرانسوی"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-mystic-river",
-      "word": {
-        "en": "Mystic River",
-        "fa": "رودخانه مرموز"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-the-hours",
-      "word": {
-        "en": "The Hours",
-        "fa": "ساعت‌ها"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-cinema-paradiso",
-      "word": {
-        "en": "Cinema Paradiso",
-        "fa": "سینما پارادیزو"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-life-is-beautiful",
-      "word": {
-        "en": "Life Is Beautiful",
-        "fa": "زندگی زیباست"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-a-separation",
-      "word": {
-        "en": "A Separation",
-        "fa": "جدایی نادر از سیمین"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-manchester-by-the-sea",
-      "word": {
-        "en": "Manchester by the Sea",
-        "fa": "منچستر کنار دریا"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-slumdog-millionaire",
-      "word": {
-        "en": "Slumdog Millionaire",
-        "fa": "میلیونر زاغه‌نشین"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-the-pursuit-of-happyness",
-      "word": {
-        "en": "The Pursuit of Happyness",
-        "fa": "در جستجوی خوشبختی"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-raiders-of-the-lost-ark",
-      "word": {
-        "en": "Raiders of the Lost Ark",
-        "fa": "مهاجمان صندوق گمشده"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-the-empire-strikes-back",
-      "word": {
-        "en": "The Empire Strikes Back",
-        "fa": "امپراتوری ضربه می‌زند"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-apocalypse-now",
-      "word": {
-        "en": "Apocalypse Now",
-        "fa": "اینک آخرالزمان"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-taxi-driver",
-      "word": {
-        "en": "Taxi Driver",
-        "fa": "راننده تاکسی"
       },
       "difficulty": "hard"
     },
@@ -2000,34 +664,26 @@
       "difficulty": "hard"
     },
     {
-      "id": "movies-singin-in-the-rain",
+      "id": "movies-north-by-northwest",
       "word": {
-        "en": "Singin' in the Rain",
-        "fa": "آواز در باران"
+        "en": "North by Northwest",
+        "fa": "شمال از شمال غربی"
       },
       "difficulty": "hard"
     },
     {
-      "id": "movies-rear-window",
+      "id": "movies-vertigo",
       "word": {
-        "en": "Rear Window",
-        "fa": "پنجره عقبی"
+        "en": "Vertigo",
+        "fa": "سرگیجه"
       },
       "difficulty": "hard"
     },
     {
-      "id": "movies-some-like-it-hot",
+      "id": "movies-amadeus",
       "word": {
-        "en": "Some Like It Hot",
-        "fa": "بعضی‌ها داغش را دوست دارند"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-the-sound-of-music",
-      "word": {
-        "en": "The Sound of Music",
-        "fa": "اشک‌ها و لبخندها"
+        "en": "Amadeus",
+        "fa": "آمادئوس"
       },
       "difficulty": "hard"
     },
@@ -2037,687 +693,31 @@
         "en": "A Clockwork Orange",
         "fa": "پرتقال کوکی"
       },
-      "difficulty": "hard"
+      "difficulty": "medium"
     },
     {
-      "id": "movies-it-s-a-wonderful-life",
+      "id": "movies-full-metal-jacket",
       "word": {
-        "en": "It's a Wonderful Life",
-        "fa": "زندگی شگفت‌انگیز است"
+        "en": "Full Metal Jacket",
+        "fa": "غلاف تمام‌فلزی"
       },
-      "difficulty": "hard"
+      "difficulty": "medium"
     },
     {
-      "id": "movies-the-maltese-falcon",
+      "id": "movies-spider-man-into-the-spider-verse",
       "word": {
-        "en": "The Maltese Falcon",
-        "fa": "شاهین مالت"
+        "en": "Spider-Man: Into the Spider-Verse",
+        "fa": "مرد عنکبوتی: به درون دنیای عنکبوتی"
       },
-      "difficulty": "hard"
+      "difficulty": "medium"
     },
     {
-      "id": "movies-west-side-story",
+      "id": "movies-the-wolf-of-wall-street",
       "word": {
-        "en": "West Side Story",
-        "fa": "داستان وست ساید"
+        "en": "The Wolf of Wall Street",
+        "fa": "گرگ وال‌استریت"
       },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-rosemary-s-baby",
-      "word": {
-        "en": "Rosemary's Baby",
-        "fa": "بچه رزمری"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-dr-strangelove",
-      "word": {
-        "en": "Dr. Strangelove",
-        "fa": "دکتر استرنج‌لاو"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-raging-bull",
-      "word": {
-        "en": "Raging Bull",
-        "fa": "گاو خشمگین"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-the-breakfast-club",
-      "word": {
-        "en": "The Breakfast Club",
-        "fa": "باشگاه صبحانه"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-cool-hand-luke",
-      "word": {
-        "en": "Cool Hand Luke",
-        "fa": "لوک خوش‌دست"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-the-great-escape",
-      "word": {
-        "en": "The Great Escape",
-        "fa": "فرار بزرگ"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-twelve-angry-men",
-      "word": {
-        "en": "Twelve Angry Men",
-        "fa": "دوازده مرد خشمگین"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-butch-cassidy-and-the-sundance-kid",
-      "word": {
-        "en": "Butch Cassidy and the Sundance Kid",
-        "fa": "بوچ کسیدی و ساندنس کید"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-the-good-the-bad-and-the-ugly",
-      "word": {
-        "en": "The Good, the Bad and the Ugly",
-        "fa": "خوب، بد، زشت"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-bonnie-and-clyde",
-      "word": {
-        "en": "Bonnie and Clyde",
-        "fa": "بانی و کلاید"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-the-pink-panther",
-      "word": {
-        "en": "The Pink Panther",
-        "fa": "پلنگ صورتی"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-texas-chainsaw-massacre",
-      "word": {
-        "en": "Texas Chainsaw Massacre",
-        "fa": "کشتار با اره برقی تگزاس"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-nightmare-on-elm-street",
-      "word": {
-        "en": "Nightmare on Elm Street",
-        "fa": "کابوس در خیابان الم"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-cabin-in-the-woods",
-      "word": {
-        "en": "Cabin in the Woods",
-        "fa": "کلبه‌ای در جنگل"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-don-t-look-now",
-      "word": {
-        "en": "Don't Look Now",
-        "fa": "حالا نگاه نکن"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-get-out",
-      "word": {
-        "en": "Get Out",
-        "fa": "برو بیرون"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-blair-witch-project",
-      "word": {
-        "en": "Blair Witch Project",
-        "fa": "پروژه جادوگر بلر"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-invasion-of-the-body-snatchers",
-      "word": {
-        "en": "Invasion of the Body Snatchers",
-        "fa": "هجوم بدن‌دزدها"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-bird-box",
-      "word": {
-        "en": "Bird Box",
-        "fa": "جعبه پرنده"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-quiet-place",
-      "word": {
-        "en": "Quiet Place",
-        "fa": "مکانی آرام"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-friday-the-thirteenth",
-      "word": {
-        "en": "Friday the Thirteenth",
-        "fa": "جمعه سیزدهم"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-cape-fear",
-      "word": {
-        "en": "Cape Fear",
-        "fa": "دماغه ترس"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-shutter-island",
-      "word": {
-        "en": "Shutter Island",
-        "fa": "جزیره شاتر"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-gone-girl",
-      "word": {
-        "en": "Gone Girl",
-        "fa": "دختر گمشده"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-american-psycho",
-      "word": {
-        "en": "American Psycho",
-        "fa": "روانی آمریکایی"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-black-swan",
-      "word": {
-        "en": "Black Swan",
-        "fa": "قوی سیاه"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-sixth-sense",
-      "word": {
-        "en": "Sixth Sense",
-        "fa": "حس ششم"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-babadook",
-      "word": {
-        "en": "Babadook",
-        "fa": "بابادوک"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-hereditary",
-      "word": {
-        "en": "Hereditary",
-        "fa": "موروثی"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-it-follows",
-      "word": {
-        "en": "It Follows",
-        "fa": "دنبالت می‌کند"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-conjuring",
-      "word": {
-        "en": "Conjuring",
-        "fa": "احضار"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-dawn-of-the-dead",
-      "word": {
-        "en": "Dawn of the Dead",
-        "fa": "سپیده‌دم مردگان"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-night-of-the-living-dead",
-      "word": {
-        "en": "Night of the Living Dead",
-        "fa": "شب مردگان زنده"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-devil-s-backbone",
-      "word": {
-        "en": "Devil's Backbone",
-        "fa": "ستون فقرات شیطان"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-pan-s-labyrinth",
-      "word": {
-        "en": "Pan's Labyrinth",
-        "fa": "هزارتوی پن"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-funny-games",
-      "word": {
-        "en": "Funny Games",
-        "fa": "بازی‌های خنده‌دار"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-zodiac-killer",
-      "word": {
-        "en": "Zodiac Killer",
-        "fa": "قاتل زودیاک"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-talented-mr-ripley",
-      "word": {
-        "en": "Talented Mr Ripley",
-        "fa": "آقای ریپلی با استعداد"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-texas-killing-fields",
-      "word": {
-        "en": "Texas Killing Fields",
-        "fa": "مزارع کشتار تگزاس"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-wicker-man",
-      "word": {
-        "en": "Wicker Man",
-        "fa": "مرد حصیری"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-don-t-breathe",
-      "word": {
-        "en": "Don't Breathe",
-        "fa": "نفس نکش"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-jigsaw-trap",
-      "word": {
-        "en": "Jigsaw Trap",
-        "fa": "تله اره"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-hush",
-      "word": {
-        "en": "Hush",
-        "fa": "هیس"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-midsommar",
-      "word": {
-        "en": "Midsommar",
-        "fa": "میدسومار"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-witch",
-      "word": {
-        "en": "Witch",
-        "fa": "جادوگر"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-lighthouse",
-      "word": {
-        "en": "Lighthouse",
-        "fa": "فانوس دریایی"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-mulholland-drive",
-      "word": {
-        "en": "Mulholland Drive",
-        "fa": "جاده مالهالند"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-prisoners",
-      "word": {
-        "en": "Prisoners",
-        "fa": "زندانیان"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-sinister",
-      "word": {
-        "en": "Sinister",
-        "fa": "شوم"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-insidious",
-      "word": {
-        "en": "Insidious",
-        "fa": "موذی"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-orphanage",
-      "word": {
-        "en": "Orphanage",
-        "fa": "یتیم‌خانه"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-green-room",
-      "word": {
-        "en": "Green Room",
-        "fa": "اتاق سبز"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-hateful-eight",
-      "word": {
-        "en": "Hateful Eight",
-        "fa": "هشت نفرت‌انگیز"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-crouching-tiger-hidden-dragon",
-      "word": {
-        "en": "Crouching Tiger Hidden Dragon",
-        "fa": "ببر خیزان اژدهای پنهان"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-the-seventh-seal",
-      "word": {
-        "en": "The Seventh Seal",
-        "fa": "مهر هفتم"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-bicycle-thieves",
-      "word": {
-        "en": "Bicycle Thieves",
-        "fa": "دزد دوچرخه"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-seven-samurai",
-      "word": {
-        "en": "Seven Samurai",
-        "fa": "هفت سامورایی"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-city-of-god",
-      "word": {
-        "en": "City of God",
-        "fa": "شهر خدا"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-the-lives-of-others",
-      "word": {
-        "en": "The Lives of Others",
-        "fa": "زندگی دیگران"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-amelie",
-      "word": {
-        "en": "Amelie",
-        "fa": "املی"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-wild-strawberries",
-      "word": {
-        "en": "Wild Strawberries",
-        "fa": "توت‌فرنگی‌های وحشی"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-the-400-blows",
-      "word": {
-        "en": "The 400 Blows",
-        "fa": "چهارصد ضربه"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-run-lola-run",
-      "word": {
-        "en": "Run Lola Run",
-        "fa": "بدو لولا بدو"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-in-the-mood-for-love",
-      "word": {
-        "en": "In the Mood for Love",
-        "fa": "در حال و هوای عشق"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-children-of-heaven",
-      "word": {
-        "en": "Children of Heaven",
-        "fa": "بچه‌های آسمان"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-the-color-of-paradise",
-      "word": {
-        "en": "The Color of Paradise",
-        "fa": "رنگ خدا"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-taste-of-cherry",
-      "word": {
-        "en": "Taste of Cherry",
-        "fa": "طعم گیلاس"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-close-up",
-      "word": {
-        "en": "Close Up",
-        "fa": "کلوزآپ"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-where-is-the-friend-s-house",
-      "word": {
-        "en": "Where Is the Friend's House",
-        "fa": "خانه دوست کجاست"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-the-white-ribbon",
-      "word": {
-        "en": "The White Ribbon",
-        "fa": "روبان سفید"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-the-great-beauty",
-      "word": {
-        "en": "The Great Beauty",
-        "fa": "زیبایی بزرگ"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-talk-to-her",
-      "word": {
-        "en": "Talk to Her",
-        "fa": "با او حرف بزن"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-all-about-my-mother",
-      "word": {
-        "en": "All About My Mother",
-        "fa": "همه چیز درباره مادرم"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-three-colors-blue",
-      "word": {
-        "en": "Three Colors Blue",
-        "fa": "سه رنگ آبی"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-tokyo-story",
-      "word": {
-        "en": "Tokyo Story",
-        "fa": "داستان توکیو"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-rashomon",
-      "word": {
-        "en": "Rashomon",
-        "fa": "راشومون"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-the-mirror",
-      "word": {
-        "en": "The Mirror",
-        "fa": "آینه"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-andrei-rublev",
-      "word": {
-        "en": "Andrei Rublev",
-        "fa": "آندری روبلف"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-battleship-potemkin",
-      "word": {
-        "en": "Battleship Potemkin",
-        "fa": "رزمناو پوتمکین"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-breathless",
-      "word": {
-        "en": "Breathless",
-        "fa": "از نفس افتاده"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-la-dolce-vita",
-      "word": {
-        "en": "La Dolce Vita",
-        "fa": "زندگی شیرین"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-the-bicycle-continues",
-      "word": {
-        "en": "The Bicycle Continues",
-        "fa": "دونده"
-      },
-      "difficulty": "hard"
+      "difficulty": "easy"
     },
     {
       "id": "movies-oldboy",
@@ -2728,84 +728,60 @@
       "difficulty": "hard"
     },
     {
-      "id": "movies-burning",
+      "id": "movies-up",
       "word": {
-        "en": "Burning",
-        "fa": "سوختن"
+        "en": "Up",
+        "fa": "بالا"
       },
-      "difficulty": "hard"
+      "difficulty": "easy"
     },
     {
-      "id": "movies-y-tu-mama-tambien",
+      "id": "movies-heat",
       "word": {
-        "en": "Y Tu Mama Tambien",
-        "fa": "و مادرت را هم"
+        "en": "Heat",
+        "fa": "مخمصه"
       },
-      "difficulty": "hard"
+      "difficulty": "medium"
     },
     {
-      "id": "movies-roma",
+      "id": "movies-die-hard",
       "word": {
-        "en": "Roma",
-        "fa": "رما"
+        "en": "Die Hard",
+        "fa": "جان سخت"
       },
-      "difficulty": "hard"
+      "difficulty": "medium"
     },
     {
-      "id": "movies-the-hunt",
+      "id": "movies-the-truman-show",
       "word": {
-        "en": "The Hunt",
-        "fa": "شکار"
+        "en": "The Truman Show",
+        "fa": "نمایش ترومن"
       },
-      "difficulty": "hard"
+      "difficulty": "medium"
     },
     {
-      "id": "movies-force-majeure",
+      "id": "movies-the-sixth-sense",
       "word": {
-        "en": "Force Majeure",
-        "fa": "فورس ماژور"
+        "en": "The Sixth Sense",
+        "fa": "حس ششم"
       },
-      "difficulty": "hard"
+      "difficulty": "medium"
     },
     {
-      "id": "movies-the-square",
+      "id": "movies-no-country-for-old-men",
       "word": {
-        "en": "The Square",
-        "fa": "میدان"
+        "en": "No Country for Old Men",
+        "fa": "جایی برای پیرمردها نیست"
       },
-      "difficulty": "hard"
+      "difficulty": "medium"
     },
     {
-      "id": "movies-a-prophet",
+      "id": "movies-jurassic-park",
       "word": {
-        "en": "A Prophet",
-        "fa": "پیامبر"
+        "en": "Jurassic Park",
+        "fa": "پارک ژوراسیک"
       },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-the-battle-of-algiers",
-      "word": {
-        "en": "The Battle of Algiers",
-        "fa": "نبرد الجزیره"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-persepolis",
-      "word": {
-        "en": "Persepolis",
-        "fa": "پرسپولیس"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "movies-wings-of-desire",
-      "word": {
-        "en": "Wings of Desire",
-        "fa": "بال‌های آرزو"
-      },
-      "difficulty": "hard"
+      "difficulty": "easy"
     },
     {
       "id": "movies-blade-runner",
@@ -2816,1316 +792,20 @@
       "difficulty": "medium"
     },
     {
-      "id": "movies-the-fifth-element",
+      "id": "movies-indiana-jones-and-the-last-crusade",
       "word": {
-        "en": "The Fifth Element",
-        "fa": "عنصر پنجم"
+        "en": "Indiana Jones and the Last Crusade",
+        "fa": "ایندیانا جونز و آخرین جنگ صلیبی"
       },
       "difficulty": "medium"
     },
     {
-      "id": "movies-district-9",
+      "id": "movies-the-great-escape",
       "word": {
-        "en": "District 9",
-        "fa": "منطقه ۹"
+        "en": "The Great Escape",
+        "fa": "فرار بزرگ"
       },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-edge-of-tomorrow",
-      "word": {
-        "en": "Edge of Tomorrow",
-        "fa": "لبه فردا"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-pacific-rim",
-      "word": {
-        "en": "Pacific Rim",
-        "fa": "حاشیه اقیانوس آرام"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-ready-player-one",
-      "word": {
-        "en": "Ready Player One",
-        "fa": "بازیکن شماره یک آماده"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-ex-machina",
-      "word": {
-        "en": "Ex Machina",
-        "fa": "اکس ماکینا"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-arrival",
-      "word": {
-        "en": "Arrival",
-        "fa": "ورود"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-looper",
-      "word": {
-        "en": "Looper",
-        "fa": "لوپر"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-total-recall",
-      "word": {
-        "en": "Total Recall",
-        "fa": "یادآوری کامل"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-minority-report",
-      "word": {
-        "en": "Minority Report",
-        "fa": "گزارش اقلیت"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-i-robot",
-      "word": {
-        "en": "I Robot",
-        "fa": "من ربات"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-the-martian",
-      "word": {
-        "en": "The Martian",
-        "fa": "مریخی"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-elysium",
-      "word": {
-        "en": "Elysium",
-        "fa": "الیزیوم"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-oblivion",
-      "word": {
-        "en": "Oblivion",
-        "fa": "فراموشی"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-snowpiercer",
-      "word": {
-        "en": "Snowpiercer",
-        "fa": "برف‌شکن"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-children-of-men",
-      "word": {
-        "en": "Children of Men",
-        "fa": "فرزندان آدمی"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-dune",
-      "word": {
-        "en": "Dune",
-        "fa": "تل ماسه"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-tron",
-      "word": {
-        "en": "Tron",
-        "fa": "ترون"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-stardust",
-      "word": {
-        "en": "Stardust",
-        "fa": "غبار ستاره‌ای"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-the-dark-crystal",
-      "word": {
-        "en": "The Dark Crystal",
-        "fa": "کریستال تاریک"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-willow",
-      "word": {
-        "en": "Willow",
-        "fa": "ویلو"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-the-golden-compass",
-      "word": {
-        "en": "The Golden Compass",
-        "fa": "قطب‌نمای طلایی"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-eragon",
-      "word": {
-        "en": "Eragon",
-        "fa": "اراگون"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-the-neverending-story",
-      "word": {
-        "en": "The NeverEnding Story",
-        "fa": "داستان بی‌پایان"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-beetlejuice",
-      "word": {
-        "en": "Beetlejuice",
-        "fa": "بیتل‌جوس"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-edward-scissorhands",
-      "word": {
-        "en": "Edward Scissorhands",
-        "fa": "ادوارد دست‌قیچی"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-big-fish",
-      "word": {
-        "en": "Big Fish",
-        "fa": "ماهی بزرگ"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-the-shape-of-water",
-      "word": {
-        "en": "The Shape of Water",
-        "fa": "شکل آب"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-time-bandits",
-      "word": {
-        "en": "Time Bandits",
-        "fa": "راهزنان زمان"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-highlander",
-      "word": {
-        "en": "Highlander",
-        "fa": "هایلندر"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-conan-barbarian",
-      "word": {
-        "en": "Conan Barbarian",
-        "fa": "کونان بربر"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-clash-of-the-titans",
-      "word": {
-        "en": "Clash of the Titans",
-        "fa": "نبرد تایتان‌ها"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-john-carter",
-      "word": {
-        "en": "John Carter",
-        "fa": "جان کارتر"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-the-sorcerer-apprentice",
-      "word": {
-        "en": "The Sorcerer Apprentice",
-        "fa": "شاگرد جادوگر"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-bedknobs-and-broomsticks",
-      "word": {
-        "en": "Bedknobs and Broomsticks",
-        "fa": "دستگیره تخت و دسته جارو"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-the-last-starfighter",
-      "word": {
-        "en": "The Last Starfighter",
-        "fa": "آخرین ستاره‌جنگجو"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-cocoon",
-      "word": {
-        "en": "Cocoon",
-        "fa": "پیله"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-flight-of-the-navigator",
-      "word": {
-        "en": "Flight of the Navigator",
-        "fa": "پرواز ناوبر"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-galaxy-quest",
-      "word": {
-        "en": "Galaxy Quest",
-        "fa": "جستجوی کهکشانی"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-bicentennial-man",
-      "word": {
-        "en": "Bicentennial Man",
-        "fa": "مرد دویست‌ساله"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-gattaca",
-      "word": {
-        "en": "Gattaca",
-        "fa": "گاتاکا"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-the-island",
-      "word": {
-        "en": "The Island",
-        "fa": "جزیره"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-cloud-atlas",
-      "word": {
-        "en": "Cloud Atlas",
-        "fa": "اطلس ابرها"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-annihilation",
-      "word": {
-        "en": "Annihilation",
-        "fa": "نابودی"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-sunshine",
-      "word": {
-        "en": "Sunshine",
-        "fa": "نور خورشید"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-moon",
-      "word": {
-        "en": "Moon",
-        "fa": "ماه"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-coherence",
-      "word": {
-        "en": "Coherence",
-        "fa": "همبستگی"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-predestination",
-      "word": {
-        "en": "Predestination",
-        "fa": "تقدیر"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-tomorrowland",
-      "word": {
-        "en": "Tomorrowland",
-        "fa": "سرزمین فردا"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-jupiter-ascending",
-      "word": {
-        "en": "Jupiter Ascending",
-        "fa": "عروج ژوپیتر"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-valerian",
-      "word": {
-        "en": "Valerian",
-        "fa": "والرین"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-mortal-engines",
-      "word": {
-        "en": "Mortal Engines",
-        "fa": "موتورهای فانی"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-the-time-machine",
-      "word": {
-        "en": "The Time Machine",
-        "fa": "ماشین زمان"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-the-hangover",
-      "word": {
-        "en": "The Hangover",
-        "fa": "خماری"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-superbad",
-      "word": {
-        "en": "Superbad",
-        "fa": "سوپربد"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-step-brothers",
-      "word": {
-        "en": "Step Brothers",
-        "fa": "برادران ناتنی"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-anchorman",
-      "word": {
-        "en": "Anchorman",
-        "fa": "گوینده خبر"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-dumb-and-dumber",
-      "word": {
-        "en": "Dumb and Dumber",
-        "fa": "احمق و احمق‌تر"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-bridesmaids",
-      "word": {
-        "en": "Bridesmaids",
-        "fa": "ساقدوش‌ها"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-mean-girls",
-      "word": {
-        "en": "Mean Girls",
-        "fa": "دختران بدجنس"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-21-jump-street",
-      "word": {
-        "en": "21 Jump Street",
-        "fa": "خیابان جامپ ۲۱"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-liar-liar",
-      "word": {
-        "en": "Liar Liar",
-        "fa": "دروغگو دروغگو"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-ace-ventura",
-      "word": {
-        "en": "Ace Ventura",
-        "fa": "ایس ونتورا"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-mrs-doubtfire",
-      "word": {
-        "en": "Mrs Doubtfire",
-        "fa": "خانم داوت‌فایر"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-tropic-thunder",
-      "word": {
-        "en": "Tropic Thunder",
-        "fa": "رعد گرمسیری"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-zoolander",
-      "word": {
-        "en": "Zoolander",
-        "fa": "زولندر"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-borat",
-      "word": {
-        "en": "Borat",
-        "fa": "بورات"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-grown-ups",
-      "word": {
-        "en": "Grown Ups",
-        "fa": "بزرگسالان"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-pitch-perfect",
-      "word": {
-        "en": "Pitch Perfect",
-        "fa": "کوک کامل"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-school-of-rock",
-      "word": {
-        "en": "School of Rock",
-        "fa": "مدرسه راک"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-napoleon-dynamite",
-      "word": {
-        "en": "Napoleon Dynamite",
-        "fa": "ناپلئون دینامیت"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-the-other-guys",
-      "word": {
-        "en": "The Other Guys",
-        "fa": "آن یکی‌ها"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-talladega-nights",
-      "word": {
-        "en": "Talladega Nights",
-        "fa": "شب‌های تالادگا"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-wedding-crashers",
-      "word": {
-        "en": "Wedding Crashers",
-        "fa": "مزاحمان عروسی"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-old-school",
-      "word": {
-        "en": "Old School",
-        "fa": "مدرسه قدیمی"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-knocked-up",
-      "word": {
-        "en": "Knocked Up",
-        "fa": "آبستن"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-this-is-the-end",
-      "word": {
-        "en": "This Is the End",
-        "fa": "این آخرشه"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-pineapple-express",
-      "word": {
-        "en": "Pineapple Express",
-        "fa": "اکسپرس آناناس"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-hot-fuzz",
-      "word": {
-        "en": "Hot Fuzz",
-        "fa": "پلیس داغ"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-shaun-of-the-dead",
-      "word": {
-        "en": "Shaun of the Dead",
-        "fa": "شان مرده"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-office-space",
-      "word": {
-        "en": "Office Space",
-        "fa": "فضای اداری"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-coming-to-america",
-      "word": {
-        "en": "Coming to America",
-        "fa": "سفر به آمریکا"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-the-nutty-professor",
-      "word": {
-        "en": "The Nutty Professor",
-        "fa": "پروفسور خل"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-big-daddy",
-      "word": {
-        "en": "Big Daddy",
-        "fa": "بابابزرگ"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-happy-gilmore",
-      "word": {
-        "en": "Happy Gilmore",
-        "fa": "هپی گیلمور"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-billy-madison",
-      "word": {
-        "en": "Billy Madison",
-        "fa": "بیلی مدیسون"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-meet-the-parents",
-      "word": {
-        "en": "Meet the Parents",
-        "fa": "دیدار با والدین"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-austin-powers",
-      "word": {
-        "en": "Austin Powers",
-        "fa": "آستین پاورز"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-spy",
-      "word": {
-        "en": "Spy",
-        "fa": "جاسوس"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-the-heat",
-      "word": {
-        "en": "The Heat",
-        "fa": "گرما"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-crazy-stupid-love",
-      "word": {
-        "en": "Crazy Stupid Love",
-        "fa": "عشق دیوانه‌وار احمقانه"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-forgetting-sarah-marshall",
-      "word": {
-        "en": "Forgetting Sarah Marshall",
-        "fa": "فراموش کردن سارا مارشال"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-the-40-year-old-virgin",
-      "word": {
-        "en": "The 40-Year-Old Virgin",
-        "fa": "باکره چهل ساله"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-role-models",
-      "word": {
-        "en": "Role Models",
-        "fa": "الگوها"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-we-re-the-millers",
-      "word": {
-        "en": "We're the Millers",
-        "fa": "ما خانواده میلر هستیم"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-game-night",
-      "word": {
-        "en": "Game Night",
-        "fa": "شب بازی"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-blockers",
-      "word": {
-        "en": "Blockers",
-        "fa": "سدکنندگان"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-booksmart",
-      "word": {
-        "en": "Booksmart",
-        "fa": "بوک‌اسمارت"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-ghostbusters",
-      "word": {
-        "en": "Ghostbusters",
-        "fa": "شکارچیان روح"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-groundhog-day",
-      "word": {
-        "en": "Groundhog Day",
-        "fa": "روز موش‌کور"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-caddyshack",
-      "word": {
-        "en": "Caddyshack",
-        "fa": "کدی‌شک"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-airplane",
-      "word": {
-        "en": "Airplane",
-        "fa": "هواپیما"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-the-naked-gun",
-      "word": {
-        "en": "The Naked Gun",
-        "fa": "تفنگ لخت"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-johnny-english",
-      "word": {
-        "en": "Johnny English",
-        "fa": "جانی انگلیش"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-get-hard",
-      "word": {
-        "en": "Get Hard",
-        "fa": "سفت شو"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-daddy-s-home",
-      "word": {
-        "en": "Daddy's Home",
-        "fa": "بابا اومده خونه"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-central-intelligence",
-      "word": {
-        "en": "Central Intelligence",
-        "fa": "اطلاعات مرکزی"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-fast-five",
-      "word": {
-        "en": "Fast Five",
-        "fa": "فست فایو"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-hunger-games",
-      "word": {
-        "en": "Hunger Games",
-        "fa": "بازی‌های گرسنگی"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-mad-max",
-      "word": {
-        "en": "Mad Max",
-        "fa": "مکس دیوانه"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-jason-bourne",
-      "word": {
-        "en": "Jason Bourne",
-        "fa": "جیسون بورن"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-ice-age",
-      "word": {
-        "en": "Ice Age",
-        "fa": "عصر یخبندان"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-how-to-train-your-dragon",
-      "word": {
-        "en": "How To Train Your Dragon",
-        "fa": "چگونه اژدهای خود را تربیت کنیم"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-shrek-two",
-      "word": {
-        "en": "Shrek Two",
-        "fa": "شرک دو"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-spider-man-homecoming",
-      "word": {
-        "en": "Spider-Man Homecoming",
-        "fa": "مرد عنکبوتی بازگشت به خانه"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-batman-begins",
-      "word": {
-        "en": "Batman Begins",
-        "fa": "بتمن آغاز می‌کند"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-man-of-steel",
-      "word": {
-        "en": "Man Of Steel",
-        "fa": "مرد پولادین"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-guardians-of-the-galaxy",
-      "word": {
-        "en": "Guardians Of The Galaxy",
-        "fa": "نگهبانان کهکشان"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-thor-ragnarok",
-      "word": {
-        "en": "Thor Ragnarok",
-        "fa": "ثور رگناروک"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-captain-marvel",
-      "word": {
-        "en": "Captain Marvel",
-        "fa": "کاپیتان مارول"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-the-bourne-identity",
-      "word": {
-        "en": "The Bourne Identity",
-        "fa": "هویت بورن"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-casino-royale",
-      "word": {
-        "en": "Casino Royale",
-        "fa": "کازینو رویال"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-skyfall",
-      "word": {
-        "en": "Skyfall",
-        "fa": "اسکای‌فال"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-rocky-two",
-      "word": {
-        "en": "Rocky Two",
-        "fa": "راکی دو"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-lethal-weapon",
-      "word": {
-        "en": "Lethal Weapon",
-        "fa": "اسلحه مرگبار"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-bad-boys",
-      "word": {
-        "en": "Bad Boys",
-        "fa": "پسران بد"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-planet-of-the-apes",
-      "word": {
-        "en": "Planet Of The Apes",
-        "fa": "سیاره میمون‌ها"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-terminator-two",
-      "word": {
-        "en": "Terminator Two",
-        "fa": "نابودگر دو"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-saw",
-      "word": {
-        "en": "Saw",
-        "fa": "اره"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-paranormal-activity",
-      "word": {
-        "en": "Paranormal Activity",
-        "fa": "فعالیت‌های فراطبیعی"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-minions",
-      "word": {
-        "en": "Minions",
-        "fa": "مینیون‌ها"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-the-croods",
-      "word": {
-        "en": "The Croods",
-        "fa": "غارنشین‌ها"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-boss-baby",
-      "word": {
-        "en": "Boss Baby",
-        "fa": "بچه‌رئیس"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-my-neighbor-totoro",
-      "word": {
-        "en": "My Neighbor Totoro",
-        "fa": "همسایه من توتورو"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-howl-s-moving-castle",
-      "word": {
-        "en": "Howl's Moving Castle",
-        "fa": "قلعه متحرک هاول"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-princess-mononoke",
-      "word": {
-        "en": "Princess Mononoke",
-        "fa": "شاهزاده مونونوکه"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-ponyo",
-      "word": {
-        "en": "Ponyo",
-        "fa": "پونیو"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-kiki-s-delivery-service",
-      "word": {
-        "en": "Kiki's Delivery Service",
-        "fa": "سرویس تحویل کیکی"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-happy-feet",
-      "word": {
-        "en": "Happy Feet",
-        "fa": "پاهای خوشحال"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-hotel-transylvania",
-      "word": {
-        "en": "Hotel Transylvania",
-        "fa": "هتل ترانسیلوانیا"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-cloudy-with-a-chance-of-meatballs",
-      "word": {
-        "en": "Cloudy with a Chance of Meatballs",
-        "fa": "ابری با احتمال بارش کوفته قلقلی"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-spider-man-into-the-spider-verse",
-      "word": {
-        "en": "Spider-Man Into the Spider-Verse",
-        "fa": "مرد عنکبوتی به درون دنیای عنکبوتی"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-the-prince-of-egypt",
-      "word": {
-        "en": "The Prince of Egypt",
-        "fa": "شاهزاده مصر"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-paranorman",
-      "word": {
-        "en": "ParaNorman",
-        "fa": "پارانورمن"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-the-nightmare-before-christmas",
-      "word": {
-        "en": "The Nightmare Before Christmas",
-        "fa": "کابوس پیش از کریسمس"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-chicken-run",
-      "word": {
-        "en": "Chicken Run",
-        "fa": "فرار مرغی"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-wallace-and-gromit",
-      "word": {
-        "en": "Wallace and Gromit",
-        "fa": "والاس و گرومیت"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-shaun-the-sheep",
-      "word": {
-        "en": "Shaun the Sheep",
-        "fa": "بره ناقلا"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-kubo-and-the-two-strings",
-      "word": {
-        "en": "Kubo and the Two Strings",
-        "fa": "کوبو و دو تار"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-the-book-of-life",
-      "word": {
-        "en": "The Book of Life",
-        "fa": "کتاب زندگی"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-the-secret-of-kells",
-      "word": {
-        "en": "The Secret of Kells",
-        "fa": "راز کلز"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-wolfwalkers",
-      "word": {
-        "en": "Wolfwalkers",
-        "fa": "گرگ‌گردان‌ها"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-song-of-the-sea",
-      "word": {
-        "en": "Song of the Sea",
-        "fa": "آواز دریا"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-the-iron-giant",
-      "word": {
-        "en": "The Iron Giant",
-        "fa": "غول آهنی"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-shark-tale",
-      "word": {
-        "en": "Shark Tale",
-        "fa": "داستان کوسه"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-bee-movie",
-      "word": {
-        "en": "Bee Movie",
-        "fa": "فیلم زنبور"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-over-the-hedge",
-      "word": {
-        "en": "Over the Hedge",
-        "fa": "آن سوی پرچین"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-surf-s-up",
-      "word": {
-        "en": "Surf's Up",
-        "fa": "موج‌سواری"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-monster-house",
-      "word": {
-        "en": "Monster House",
-        "fa": "خانه هیولا"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-the-bad-guys",
-      "word": {
-        "en": "The Bad Guys",
-        "fa": "آدم‌بدها"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-puss-in-boots",
-      "word": {
-        "en": "Puss in Boots",
-        "fa": "گربه چکمه‌پوش"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-the-wild-robot",
-      "word": {
-        "en": "The Wild Robot",
-        "fa": "ربات وحشی"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-arcane",
-      "word": {
-        "en": "Arcane",
-        "fa": "آرکین"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "movies-captain-underpants",
-      "word": {
-        "en": "Captain Underpants",
-        "fa": "کاپیتان زیرشلواری"
-      },
-      "difficulty": "medium"
+      "difficulty": "hard"
     }
   ]
 }

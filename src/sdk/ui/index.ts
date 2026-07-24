@@ -14,6 +14,7 @@ export * from './SelectChip';
 export * from './Curtain';
 export * from './TimerRing';
 export * from './Scoreboard';
+export * from './SetupErrors';
 export * from './WinnerBanner';
 export * from './TeamBadge';
 export * from './Confetti';

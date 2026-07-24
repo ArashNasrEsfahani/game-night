@@ -8,6 +8,8 @@ export type PantomimeCategory =
   | 'famous'
   | 'tv'
   | 'proverbs'
+  | 'sports'
+  | 'jobs'
   | 'mixed';
 
 /** A real (non-virtual) category that maps to a content file. */

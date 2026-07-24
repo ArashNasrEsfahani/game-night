@@ -21,6 +21,15 @@ export function AppProviders({ children }: { children: ReactNode }) {
     if (i18n.language !== language) void i18n.changeLanguage(language);
   }, [language]);
 
+  // Mark the document when the in-app Reduce Motion setting is "on" so CSS continuous animations
+  // (the gold-foil shimmer, spinners, the home-grid bob) stop too — MotionConfig below only governs
+  // framer-motion. "off"/"system" leave it unset, so the OS preference still applies via @media.
+  useEffect(() => {
+    const root = document.documentElement;
+    if (reducedMotion === 'on') root.setAttribute('data-reduced-motion', 'true');
+    else root.removeAttribute('data-reduced-motion');
+  }, [reducedMotion]);
+
   const ready = settingsHydrated && rosterHydrated && sessionHydrated;
   if (!ready) {
     return (

@@ -78,7 +78,8 @@ export type CodenamesAction =
   | { type: 'GUESS_CELL'; cellIndex: number }
   | { type: 'STOP_GUESSING' }
   | { type: 'TIMER_EXPIRED' }
-  | { type: 'ADVANCE_TURN' };
+  | { type: 'ADVANCE_TURN' }
+  | { type: 'END_GAME' };
 
 const other = (t: TeamId): TeamId => (t === 'teamA' ? 'teamB' : 'teamA');
 
@@ -304,6 +305,23 @@ export function reducer(state: CodenamesState, action: CodenamesAction): Codenam
         lastReveal: null,
         turnEndReason: null,
         wrongGuessesThisTurn: 0,
+      };
+    }
+    case 'END_GAME': {
+      // End the match now and show the results with the standings so far: the team closest to
+      // clearing its words (fewer remaining) is the winner; an exact tie has no winner. winReason
+      // stays null so the Results screen knows this was a manual early end, not a natural win.
+      if (s.finished || s.phase === 'error') return s;
+      const a = s.remaining.teamA;
+      const b = s.remaining.teamB;
+      const winner: TeamId | null = a < b ? 'teamA' : b < a ? 'teamB' : null;
+      return {
+        ...s,
+        phase: 'gameOver',
+        finished: true,
+        winner,
+        loser: winner ? other(winner) : null,
+        winReason: null,
       };
     }
     default:

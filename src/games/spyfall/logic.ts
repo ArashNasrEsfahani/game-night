@@ -65,7 +65,8 @@ export type SpyfallAction =
   | { type: 'LOCK_VOTES' }
   | { type: 'SPY_GUESS'; spyId: string; locationId: string }
   | { type: 'SKIP_SPY_GUESS' }
-  | { type: 'NEXT_ROUND'; seed: number };
+  | { type: 'NEXT_ROUND'; seed: number }
+  | { type: 'END_GAME' };
 
 const POINTS = { perNonSpyOnCatch: 1, accuserBonus: 1, perSpyOnSurvive: 2, perSpyOnGuess: 2 };
 
@@ -293,6 +294,13 @@ export function reducer(state: SpyfallState, action: SpyfallAction): SpyfallStat
         s.round.locationId,
       );
       return { ...s, phase: 'reveal', revealCursor: 0, round };
+    }
+    case 'END_GAME': {
+      // End the match now and jump to results. `totals` already holds every resolved round's
+      // points, so the standings shown are the running standings so far (the in-progress round,
+      // if any, simply doesn't score — mirrors ToD's END_GAME, which doesn't resolve the open turn).
+      if (s.phase === 'matchEnd' || s.phase === 'error') return s;
+      return { ...s, phase: 'matchEnd', finished: true };
     }
     default:
       return s;

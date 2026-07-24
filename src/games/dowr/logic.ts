@@ -73,6 +73,7 @@ export type DowrAction =
   | { type: 'ADVANCE'; reason: 'guessed' | 'bomb'; segmentMs: number; seed: number }
   | { type: 'CHANGE_WORD'; seed: number }
   | { type: 'END_TIME'; segmentMs: number }
+  | { type: 'END_GAME' }
   | { type: 'CLEAR_FLASH' }
   | { type: 'RESET' };
 
@@ -269,6 +270,22 @@ export function reducer(state: DowrState, action: DowrAction): DowrState {
       return {
         ...s,
         totals,
+        phase: 'gameOver',
+        finished: true,
+        currentCardId: null,
+        flash: null,
+        turnChanges: 0,
+        changePenaltyMs: 0,
+      };
+    }
+    case 'END_GAME': {
+      // Manual end: lock the match where it stands and show the results-so-far. The in-progress
+      // word's live segment is intentionally NOT banked (mirrors ToD's END_GAME, which doesn't
+      // resolve the current turn). Standings/winners derive purely from the banked totals + history,
+      // so the Results screen renders fine from this mid-game end.
+      if (s.phase !== 'playing') return s;
+      return {
+        ...s,
         phase: 'gameOver',
         finished: true,
         currentCardId: null,

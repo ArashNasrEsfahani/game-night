@@ -8,10 +8,10 @@
   "icon": "📺",
   "cards": [
     {
-      "id": "tv-friends",
+      "id": "tv-breaking-bad",
       "word": {
-        "en": "Friends",
-        "fa": "فرندز"
+        "en": "Breaking Bad",
+        "fa": "برکینگ بد"
       },
       "difficulty": "easy"
     },
@@ -24,10 +24,58 @@
       "difficulty": "easy"
     },
     {
-      "id": "tv-breaking-bad",
+      "id": "tv-band-of-brothers",
       "word": {
-        "en": "Breaking Bad",
-        "fa": "بریکینگ بد"
+        "en": "Band of Brothers",
+        "fa": "جوخه برادران"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "tv-chernobyl",
+      "word": {
+        "en": "Chernobyl",
+        "fa": "چرنوبیل"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "tv-the-wire",
+      "word": {
+        "en": "The Wire",
+        "fa": "د وایر"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "tv-the-sopranos",
+      "word": {
+        "en": "The Sopranos",
+        "fa": "سوپرانوها"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "tv-planet-earth",
+      "word": {
+        "en": "Planet Earth",
+        "fa": "سیاره زمین"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "tv-avatar-the-last-airbender",
+      "word": {
+        "en": "Avatar: The Last Airbender",
+        "fa": "آواتار: آخرین بادافزار"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "tv-sherlock",
+      "word": {
+        "en": "Sherlock",
+        "fa": "شرلوک"
       },
       "difficulty": "easy"
     },
@@ -40,34 +88,210 @@
       "difficulty": "easy"
     },
     {
+      "id": "tv-friends",
+      "word": {
+        "en": "Friends",
+        "fa": "فرندز"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "tv-rick-and-morty",
+      "word": {
+        "en": "Rick and Morty",
+        "fa": "ریک و مورتی"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "tv-fullmetal-alchemist-brotherhood",
+      "word": {
+        "en": "Fullmetal Alchemist: Brotherhood",
+        "fa": "کیمیاگر تمام‌فلزی: برادری"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "tv-the-twilight-zone",
+      "word": {
+        "en": "The Twilight Zone",
+        "fa": "منطقه گرگ‌ومیش"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "tv-attack-on-titan",
+      "word": {
+        "en": "Attack on Titan",
+        "fa": "حمله به تایتان"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "tv-death-note",
+      "word": {
+        "en": "Death Note",
+        "fa": "دفترچه مرگ"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "tv-better-call-saul",
+      "word": {
+        "en": "Better Call Saul",
+        "fa": "بهتره با ساول تماس بگیری"
+      },
+      "difficulty": "medium"
+    },
+    {
       "id": "tv-stranger-things",
       "word": {
         "en": "Stranger Things",
-        "fa": "چیزهای عجیب و غریب"
+        "fa": "چیزهای عجیب"
       },
       "difficulty": "easy"
     },
     {
-      "id": "tv-the-simpsons",
+      "id": "tv-peaky-blinders",
       "word": {
-        "en": "The Simpsons",
-        "fa": "سیمپسون‌ها"
+        "en": "Peaky Blinders",
+        "fa": "پیکی بلایندرز"
       },
-      "difficulty": "easy"
+      "difficulty": "medium"
     },
     {
-      "id": "tv-sherlock",
+      "id": "tv-true-detective",
       "word": {
-        "en": "Sherlock",
-        "fa": "شرلوک"
+        "en": "True Detective",
+        "fa": "کارآگاه حقیقی"
       },
-      "difficulty": "easy"
+      "difficulty": "medium"
+    },
+    {
+      "id": "tv-cosmos",
+      "word": {
+        "en": "Cosmos",
+        "fa": "کاسموس"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "tv-the-mandalorian",
+      "word": {
+        "en": "The Mandalorian",
+        "fa": "ماندالورین"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "tv-black-mirror",
+      "word": {
+        "en": "Black Mirror",
+        "fa": "آینه سیاه"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "tv-seinfeld",
+      "word": {
+        "en": "Seinfeld",
+        "fa": "ساینفلد"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "tv-twin-peaks",
+      "word": {
+        "en": "Twin Peaks",
+        "fa": "قله‌های دوقلو"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "tv-fargo",
+      "word": {
+        "en": "Fargo",
+        "fa": "فارگو"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "tv-mr-robot",
+      "word": {
+        "en": "Mr. Robot",
+        "fa": "مستر روبات"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "tv-dark",
+      "word": {
+        "en": "Dark",
+        "fa": "دارک"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "tv-arcane",
+      "word": {
+        "en": "Arcane",
+        "fa": "آرکین"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "tv-cowboy-bebop",
+      "word": {
+        "en": "Cowboy Bebop",
+        "fa": "کابوی بیباپ"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "tv-westworld",
+      "word": {
+        "en": "Westworld",
+        "fa": "وست‌ورلد"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "tv-vikings",
+      "word": {
+        "en": "Vikings",
+        "fa": "وایکینگ‌ها"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "tv-narcos",
+      "word": {
+        "en": "Narcos",
+        "fa": "نارکوس"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "tv-house-of-cards",
+      "word": {
+        "en": "House of Cards",
+        "fa": "خانه پوشالی"
+      },
+      "difficulty": "medium"
     },
     {
       "id": "tv-the-crown",
       "word": {
         "en": "The Crown",
         "fa": "تاج"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "tv-the-boys",
+      "word": {
+        "en": "The Boys",
+        "fa": "پسرها"
       },
       "difficulty": "easy"
     },
@@ -80,28 +304,12 @@
       "difficulty": "easy"
     },
     {
-      "id": "tv-squid-game",
-      "word": {
-        "en": "Squid Game",
-        "fa": "بازی مرکب"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-the-walking-dead",
-      "word": {
-        "en": "The Walking Dead",
-        "fa": "مردگان متحرک"
-      },
-      "difficulty": "easy"
-    },
-    {
       "id": "tv-lost",
       "word": {
         "en": "Lost",
         "fa": "گمشده"
       },
-      "difficulty": "easy"
+      "difficulty": "medium"
     },
     {
       "id": "tv-prison-break",
@@ -117,47 +325,23 @@
         "en": "Dexter",
         "fa": "دکستر"
       },
-      "difficulty": "easy"
+      "difficulty": "medium"
     },
     {
-      "id": "tv-house-of-cards",
+      "id": "tv-the-walking-dead",
       "word": {
-        "en": "House of Cards",
-        "fa": "خانه پوشالی"
+        "en": "The Walking Dead",
+        "fa": "مردگان متحرک"
       },
       "difficulty": "easy"
     },
     {
-      "id": "tv-westworld",
+      "id": "tv-house",
       "word": {
-        "en": "Westworld",
-        "fa": "وست‌ورلد"
+        "en": "House",
+        "fa": "دکتر هاوس"
       },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-black-mirror",
-      "word": {
-        "en": "Black Mirror",
-        "fa": "آینه سیاه"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-peaky-blinders",
-      "word": {
-        "en": "Peaky Blinders",
-        "fa": "پیکی بلایندرز"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-the-mandalorian",
-      "word": {
-        "en": "The Mandalorian",
-        "fa": "ماندلورین"
-      },
-      "difficulty": "easy"
+      "difficulty": "medium"
     },
     {
       "id": "tv-how-i-met-your-mother",
@@ -165,205 +349,13 @@
         "en": "How I Met Your Mother",
         "fa": "چطور با مادرت آشنا شدم"
       },
-      "difficulty": "easy"
+      "difficulty": "medium"
     },
     {
       "id": "tv-the-big-bang-theory",
       "word": {
         "en": "The Big Bang Theory",
-        "fa": "تئوری بیگ بنگ"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-better-call-saul",
-      "word": {
-        "en": "Better Call Saul",
-        "fa": "بهتره با ساول تماس بگیری"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-narcos",
-      "word": {
-        "en": "Narcos",
-        "fa": "نارکوس"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-vikings",
-      "word": {
-        "en": "Vikings",
-        "fa": "وایکینگ‌ها"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-the-witcher",
-      "word": {
-        "en": "The Witcher",
-        "fa": "ویچر"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-chernobyl",
-      "word": {
-        "en": "Chernobyl",
-        "fa": "چرنوبیل"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-mr-robot",
-      "word": {
-        "en": "Mr. Robot",
-        "fa": "آقای ربات"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-fargo",
-      "word": {
-        "en": "Fargo",
-        "fa": "فارگو"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-true-detective",
-      "word": {
-        "en": "True Detective",
-        "fa": "کارآگاه حقیقی"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-the-boys",
-      "word": {
-        "en": "The Boys",
-        "fa": "پسرها"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-wednesday",
-      "word": {
-        "en": "Wednesday",
-        "fa": "ونزدی"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-the-last-of-us",
-      "word": {
-        "en": "The Last of Us",
-        "fa": "آخرین بازمانده از ما"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-euphoria",
-      "word": {
-        "en": "Euphoria",
-        "fa": "یوفوریا"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-ted-lasso",
-      "word": {
-        "en": "Ted Lasso",
-        "fa": "تد لسو"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-the-queen-s-gambit",
-      "word": {
-        "en": "The Queen's Gambit",
-        "fa": "گامبی وزیر"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-grey-s-anatomy",
-      "word": {
-        "en": "Grey's Anatomy",
-        "fa": "آناتومی گری"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-house-m-d",
-      "word": {
-        "en": "House M.D.",
-        "fa": "دکتر هاوس"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-suits",
-      "word": {
-        "en": "Suits",
-        "fa": "سویتس"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-seinfeld",
-      "word": {
-        "en": "Seinfeld",
-        "fa": "ساینفلد"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-the-sopranos",
-      "word": {
-        "en": "The Sopranos",
-        "fa": "سوپرانوها"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-twin-peaks",
-      "word": {
-        "en": "Twin Peaks",
-        "fa": "توئین پیکس"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-star-trek",
-      "word": {
-        "en": "Star Trek",
-        "fa": "پیشتازان فضا"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-doctor-who",
-      "word": {
-        "en": "Doctor Who",
-        "fa": "دکتر هو"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-the-mentalist",
-      "word": {
-        "en": "The Mentalist",
-        "fa": "ذهن‌خوان"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-modern-family",
-      "word": {
-        "en": "Modern Family",
-        "fa": "خانواده امروزی"
+        "fa": "نظریه بیگ‌بنگ"
       },
       "difficulty": "easy"
     },
@@ -373,1775 +365,23 @@
         "en": "Brooklyn Nine-Nine",
         "fa": "بروکلین ۹۹"
       },
-      "difficulty": "easy"
+      "difficulty": "medium"
     },
     {
-      "id": "tv-rick-and-morty",
+      "id": "tv-rome",
       "word": {
-        "en": "Rick and Morty",
-        "fa": "ریک و مورتی"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-spongebob-squarepants",
-      "word": {
-        "en": "SpongeBob SquarePants",
-        "fa": "باب اسفنجی"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-tom-and-jerry",
-      "word": {
-        "en": "Tom and Jerry",
-        "fa": "تام و جری"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-pok-mon",
-      "word": {
-        "en": "Pokémon",
-        "fa": "پوکمون"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-avatar-the-last-airbender",
-      "word": {
-        "en": "Avatar: The Last Airbender",
-        "fa": "آواتار: آخرین بادافزار"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-the-flash",
-      "word": {
-        "en": "The Flash",
-        "fa": "فلش"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-csi",
-      "word": {
-        "en": "CSI",
-        "fa": "صحنه جرم"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-24",
-      "word": {
-        "en": "24",
-        "fa": "بیست و چهار"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-the-umbrella-academy",
-      "word": {
-        "en": "The Umbrella Academy",
-        "fa": "آکادمی آمبرلا"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-the-good-doctor",
-      "word": {
-        "en": "The Good Doctor",
-        "fa": "دکتر خوب"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-parks-and-recreation",
-      "word": {
-        "en": "Parks and Recreation",
-        "fa": "پارکس اند رکریشن"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-two-and-a-half-men",
-      "word": {
-        "en": "Two and a Half Men",
-        "fa": "دو مرد و نصفی"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-cheers",
-      "word": {
-        "en": "Cheers",
-        "fa": "چیرز"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-frasier",
-      "word": {
-        "en": "Frasier",
-        "fa": "فریژر"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-will-and-grace",
-      "word": {
-        "en": "Will and Grace",
-        "fa": "ویل و گریس"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-everybody-loves-raymond",
-      "word": {
-        "en": "Everybody Loves Raymond",
-        "fa": "همه ریموند را دوست دارند"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-full-house",
-      "word": {
-        "en": "Full House",
-        "fa": "خانه شلوغ"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-the-fresh-prince-of-bel-air",
-      "word": {
-        "en": "The Fresh Prince of Bel-Air",
-        "fa": "شاهزاده تازه‌کار بل‌ایر"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-that-70s-show",
-      "word": {
-        "en": "That '70s Show",
-        "fa": "شوی دهه هفتاد"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-scrubs",
-      "word": {
-        "en": "Scrubs",
-        "fa": "اسکرابز"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-community",
-      "word": {
-        "en": "Community",
-        "fa": "کامیونیتی"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-30-rock",
-      "word": {
-        "en": "30 Rock",
-        "fa": "سی راک"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-arrested-development",
-      "word": {
-        "en": "Arrested Development",
-        "fa": "ارستد دولوپمنت"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-family-guy",
-      "word": {
-        "en": "Family Guy",
-        "fa": "فمیلی گای"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-south-park",
-      "word": {
-        "en": "South Park",
-        "fa": "ساوت پارک"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-futurama",
-      "word": {
-        "en": "Futurama",
-        "fa": "فیوچراما"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-king-of-the-hill",
-      "word": {
-        "en": "King of the Hill",
-        "fa": "پادشاه تپه"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-malcolm-in-the-middle",
-      "word": {
-        "en": "Malcolm in the Middle",
-        "fa": "مالکوم در میانه"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-the-nanny",
-      "word": {
-        "en": "The Nanny",
-        "fa": "پرستار بچه"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-married-with-children",
-      "word": {
-        "en": "Married with Children",
-        "fa": "ازدواج با بچه‌ها"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-roseanne",
-      "word": {
-        "en": "Roseanne",
-        "fa": "روزان"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-home-improvement",
-      "word": {
-        "en": "Home Improvement",
-        "fa": "خانه‌بهسازی"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-the-cosby-show",
-      "word": {
-        "en": "The Cosby Show",
-        "fa": "شوی کازبی"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-bewitched",
-      "word": {
-        "en": "Bewitched",
-        "fa": "جادو شده"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-i-love-lucy",
-      "word": {
-        "en": "I Love Lucy",
-        "fa": "من لوسی را دوست دارم"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-the-brady-bunch",
-      "word": {
-        "en": "The Brady Bunch",
-        "fa": "خانواده بریدی"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-m-a-s-h",
-      "word": {
-        "en": "M*A*S*H",
-        "fa": "مش"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-happy-days",
-      "word": {
-        "en": "Happy Days",
-        "fa": "روزهای خوش"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-sex-and-the-city",
-      "word": {
-        "en": "Sex and the City",
-        "fa": "سکس اند د سیتی"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-new-girl",
-      "word": {
-        "en": "New Girl",
-        "fa": "دختر تازه"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-the-goldbergs",
-      "word": {
-        "en": "The Goldbergs",
-        "fa": "گلدبرگ‌ها"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-black-ish",
-      "word": {
-        "en": "Black-ish",
-        "fa": "بلک‌ایش"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-veep",
-      "word": {
-        "en": "Veep",
-        "fa": "معاون رئیس‌جمهور"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-the-it-crowd",
-      "word": {
-        "en": "The IT Crowd",
-        "fa": "آی‌تی کراود"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-mr-bean",
-      "word": {
-        "en": "Mr. Bean",
-        "fa": "مستر بین"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-blackadder",
-      "word": {
-        "en": "Blackadder",
-        "fa": "بلک‌ادر"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-fawlty-towers",
-      "word": {
-        "en": "Fawlty Towers",
-        "fa": "برج فالتی"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-curb-your-enthusiasm",
-      "word": {
-        "en": "Curb Your Enthusiasm",
-        "fa": "کرب یور انتوزیاسم"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-schitt-s-creek",
-      "word": {
-        "en": "Schitt's Creek",
-        "fa": "شیتس کریک"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-the-good-place",
-      "word": {
-        "en": "The Good Place",
-        "fa": "جای خوب"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-abbott-elementary",
-      "word": {
-        "en": "Abbott Elementary",
-        "fa": "دبستان ابوت"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-workaholics",
-      "word": {
-        "en": "Workaholics",
-        "fa": "ورک‌اهالیکس"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-bob-s-burgers",
-      "word": {
-        "en": "Bob's Burgers",
-        "fa": "برگرهای باب"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-gilligan-s-island",
-      "word": {
-        "en": "Gilligan's Island",
-        "fa": "جزیره گیلیگان"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-sabrina-the-teenage-witch",
-      "word": {
-        "en": "Sabrina the Teenage Witch",
-        "fa": "سابرینا جادوگر نوجوان"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-mickey-mouse",
-      "word": {
-        "en": "Mickey Mouse",
-        "fa": "میکی موس"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-scooby-doo",
-      "word": {
-        "en": "Scooby-Doo",
-        "fa": "اسکوبی دو"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-tweety",
-      "word": {
-        "en": "Tweety",
-        "fa": "توییتی"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-bugs-bunny",
-      "word": {
-        "en": "Bugs Bunny",
-        "fa": "باگز بانی"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-popeye",
-      "word": {
-        "en": "Popeye",
-        "fa": "ملوان زبل"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-pink-panther",
-      "word": {
-        "en": "Pink Panther",
-        "fa": "پلنگ صورتی"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-donald-duck",
-      "word": {
-        "en": "Donald Duck",
-        "fa": "دونالد داک"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-winnie-the-pooh",
-      "word": {
-        "en": "Winnie the Pooh",
-        "fa": "وینی پو"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-peppa-pig",
-      "word": {
-        "en": "Peppa Pig",
-        "fa": "پپا پیگ"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-doraemon",
-      "word": {
-        "en": "Doraemon",
-        "fa": "دورایمون"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-pingu",
-      "word": {
-        "en": "Pingu",
-        "fa": "پینگو"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-garfield",
-      "word": {
-        "en": "Garfield",
-        "fa": "گارفیلد"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-snoopy",
-      "word": {
-        "en": "Snoopy",
-        "fa": "اسنوپی"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-shaun-the-sheep",
-      "word": {
-        "en": "Shaun the Sheep",
-        "fa": "بره ناقلا"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-powerpuff-girls",
-      "word": {
-        "en": "Powerpuff Girls",
-        "fa": "دختران نیرومند"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-ben-ten",
-      "word": {
-        "en": "Ben Ten",
-        "fa": "بن تن"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-dragon-ball",
-      "word": {
-        "en": "Dragon Ball",
-        "fa": "دراگون بال"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-naruto",
-      "word": {
-        "en": "Naruto",
-        "fa": "ناروتو"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-spider-man",
-      "word": {
-        "en": "Spider-Man",
-        "fa": "مرد عنکبوتی"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-batman",
-      "word": {
-        "en": "Batman",
-        "fa": "بتمن"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-superman",
-      "word": {
-        "en": "Superman",
-        "fa": "سوپرمن"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-tin-tin",
-      "word": {
-        "en": "Tin Tin",
-        "fa": "تن تن"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-smurfs",
-      "word": {
-        "en": "Smurfs",
-        "fa": "اسمورف‌ها"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-flintstones",
-      "word": {
-        "en": "Flintstones",
-        "fa": "عصر حجر"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-looney-tunes",
-      "word": {
-        "en": "Looney Tunes",
-        "fa": "لونی تونز"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-teen-titans",
-      "word": {
-        "en": "Teen Titans",
-        "fa": "تایتان‌های نوجوان"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-avatar",
-      "word": {
-        "en": "Avatar",
-        "fa": "آواتار"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-my-little-pony",
-      "word": {
-        "en": "My Little Pony",
-        "fa": "پونی کوچولوی من"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-paw-patrol",
-      "word": {
-        "en": "Paw Patrol",
-        "fa": "سگ‌های نگهبان"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-masha-and-the-bear",
-      "word": {
-        "en": "Masha and the Bear",
-        "fa": "ماشا و آقا خرسه"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-teletubbies",
-      "word": {
-        "en": "Teletubbies",
-        "fa": "تله‌تابیز"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-phineas-and-ferb",
-      "word": {
-        "en": "Phineas and Ferb",
-        "fa": "فینیاس و فرب"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-adventure-time",
-      "word": {
-        "en": "Adventure Time",
-        "fa": "وقت ماجراجویی"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-gumball",
-      "word": {
-        "en": "Gumball",
-        "fa": "گامبال"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-ninja-turtles",
-      "word": {
-        "en": "Ninja Turtles",
-        "fa": "لاک‌پشت‌های نینجا"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-road-runner",
-      "word": {
-        "en": "Road Runner",
-        "fa": "رودرانر"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-heidi",
-      "word": {
-        "en": "Heidi",
-        "fa": "هایدی"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-pinocchio",
-      "word": {
-        "en": "Pinocchio",
-        "fa": "پینوکیو"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-bob-the-builder",
-      "word": {
-        "en": "Bob the Builder",
-        "fa": "باب معمار"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-thomas-the-train",
-      "word": {
-        "en": "Thomas the Train",
-        "fa": "توماس قطار کوچک"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-dora",
-      "word": {
-        "en": "Dora",
-        "fa": "دورا"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-caillou",
-      "word": {
-        "en": "Caillou",
-        "fa": "کایو"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-inspector-gadget",
-      "word": {
-        "en": "Inspector Gadget",
-        "fa": "کارآگاه گجت"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-woody-woodpecker",
-      "word": {
-        "en": "Woody Woodpecker",
-        "fa": "وودی دارکوب"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-spirited-away",
-      "word": {
-        "en": "Spirited Away",
-        "fa": "شهر اشباح"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-captain-tsubasa",
-      "word": {
-        "en": "Captain Tsubasa",
-        "fa": "فوتبالیست‌ها"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-beyblade",
-      "word": {
-        "en": "Beyblade",
-        "fa": "بیبلید"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-mr-bean-cartoon",
-      "word": {
-        "en": "Mr Bean Cartoon",
-        "fa": "کارتون مستر بین"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-oggy",
-      "word": {
-        "en": "Oggy",
-        "fa": "اوگی و سوسک‌ها"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-tobot",
-      "word": {
-        "en": "Tobot",
-        "fa": "توبوت"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-bluey",
-      "word": {
-        "en": "Bluey",
-        "fa": "بلویی"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-pj-masks",
-      "word": {
-        "en": "PJ Masks",
-        "fa": "پی جی ماسک"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-cocomelon",
-      "word": {
-        "en": "Cocomelon",
-        "fa": "کوکوملون"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-power-rangers",
-      "word": {
-        "en": "Power Rangers",
-        "fa": "پاور رنجرز"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-curious-george",
-      "word": {
-        "en": "Curious George",
-        "fa": "جورج کنجکاو"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-arthur",
-      "word": {
-        "en": "Arthur",
-        "fa": "آرتور"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-sesame-street",
-      "word": {
-        "en": "Sesame Street",
-        "fa": "خیابان سسامی"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-barbie",
-      "word": {
-        "en": "Barbie",
-        "fa": "باربی"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-snow-white",
-      "word": {
-        "en": "Snow White",
-        "fa": "سفیدبرفی"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-cinderella",
-      "word": {
-        "en": "Cinderella",
-        "fa": "سیندرلا"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-frozen",
-      "word": {
-        "en": "Frozen",
-        "fa": "فروزن"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-elsa",
-      "word": {
-        "en": "Elsa",
-        "fa": "السا"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-minions",
-      "word": {
-        "en": "Minions",
-        "fa": "مینیون‌ها"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-kung-fu-panda",
-      "word": {
-        "en": "Kung Fu Panda",
-        "fa": "پاندای کونگ‌فوکار"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-madagascar",
-      "word": {
-        "en": "Madagascar",
-        "fa": "ماداگاسکار"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-tinker-bell",
-      "word": {
-        "en": "Tinker Bell",
-        "fa": "تینکر بل"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-goofy",
-      "word": {
-        "en": "Goofy",
-        "fa": "گوفی"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-hello-kitty",
-      "word": {
-        "en": "Hello Kitty",
-        "fa": "هلو کیتی"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-gummy-bear",
-      "word": {
-        "en": "Gummy Bear",
-        "fa": "خرس ژله‌ای"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-big-brother",
-      "word": {
-        "en": "Big Brother",
-        "fa": "برادر بزرگ"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-survivor",
-      "word": {
-        "en": "Survivor",
-        "fa": "سروایور"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-the-voice",
-      "word": {
-        "en": "The Voice",
-        "fa": "صدا"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-american-idol",
-      "word": {
-        "en": "American Idol",
-        "fa": "امریکن آیدل"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-masterchef",
-      "word": {
-        "en": "MasterChef",
-        "fa": "مسترشف"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-the-bachelor",
-      "word": {
-        "en": "The Bachelor",
-        "fa": "مجرد"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-shark-tank",
-      "word": {
-        "en": "Shark Tank",
-        "fa": "تانک کوسه"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-top-chef",
-      "word": {
-        "en": "Top Chef",
-        "fa": "سرآشپز برتر"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-the-apprentice",
-      "word": {
-        "en": "The Apprentice",
-        "fa": "کارآموز"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-dancing-with-the-stars",
-      "word": {
-        "en": "Dancing With The Stars",
-        "fa": "رقص با ستاره‌ها"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-got-talent",
-      "word": {
-        "en": "Got Talent",
-        "fa": "استعداد دارد"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-x-factor",
-      "word": {
-        "en": "X Factor",
-        "fa": "اکس فکتور"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-love-island",
-      "word": {
-        "en": "Love Island",
-        "fa": "جزیره عشق"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-the-bachelorette",
-      "word": {
-        "en": "The Bachelorette",
-        "fa": "دختر مجرد"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-project-runway",
-      "word": {
-        "en": "Project Runway",
-        "fa": "پروژه باند"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-hell-s-kitchen",
-      "word": {
-        "en": "Hell's Kitchen",
-        "fa": "آشپزخانه جهنمی"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-the-kardashians",
-      "word": {
-        "en": "The Kardashians",
-        "fa": "کارداشیان‌ها"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-wife-swap",
-      "word": {
-        "en": "Wife Swap",
-        "fa": "تعویض همسر"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-fear-factor",
-      "word": {
-        "en": "Fear Factor",
-        "fa": "عامل ترس"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-big-chef",
-      "word": {
-        "en": "Big Chef",
-        "fa": "آشپز بزرگ"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-cake-boss",
-      "word": {
-        "en": "Cake Boss",
-        "fa": "رئیس کیک"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-amazing-race",
-      "word": {
-        "en": "Amazing Race",
-        "fa": "مسابقه شگفت‌انگیز"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-bake-off",
-      "word": {
-        "en": "Bake Off",
-        "fa": "مسابقه شیرینی‌پزی"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-queer-eye",
-      "word": {
-        "en": "Queer Eye",
-        "fa": "کوییر آی"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-iron-chef",
-      "word": {
-        "en": "Iron Chef",
-        "fa": "سرآشپز آهنین"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-ninja-warrior",
-      "word": {
-        "en": "Ninja Warrior",
-        "fa": "جنگجوی نینجا"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-biggest-loser",
-      "word": {
-        "en": "Biggest Loser",
-        "fa": "بازنده بزرگ"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-pawn-stars",
-      "word": {
-        "en": "Pawn Stars",
-        "fa": "پاون استارز"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-storage-wars",
-      "word": {
-        "en": "Storage Wars",
-        "fa": "جنگ انبار"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-naked-and-afraid",
-      "word": {
-        "en": "Naked And Afraid",
-        "fa": "برهنه و ترسان"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-drag-race",
-      "word": {
-        "en": "Drag Race",
-        "fa": "درگ ریس"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-american-ninja",
-      "word": {
-        "en": "American Ninja",
-        "fa": "نینجای امریکایی"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-family-feud",
-      "word": {
-        "en": "Family Feud",
-        "fa": "دعوای خانوادگی"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-the-mole",
-      "word": {
-        "en": "The Mole",
-        "fa": "خال"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-beat-bobby",
-      "word": {
-        "en": "Beat Bobby",
-        "fa": "شکست باب"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-chopped",
-      "word": {
-        "en": "Chopped",
-        "fa": "خرد شده"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-cupcake-wars",
-      "word": {
-        "en": "Cupcake Wars",
-        "fa": "جنگ کاپ‌کیک"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-face-off",
-      "word": {
-        "en": "Face Off",
-        "fa": "رویارویی"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-tiny-house",
-      "word": {
-        "en": "Tiny House",
-        "fa": "خانه کوچک"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-house-hunters",
-      "word": {
-        "en": "House Hunters",
-        "fa": "شکارچیان خانه"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-property-brothers",
-      "word": {
-        "en": "Property Brothers",
-        "fa": "برادران املاک"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-fixer-upper",
-      "word": {
-        "en": "Fixer Upper",
-        "fa": "بازسازی خانه"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-deadliest-catch",
-      "word": {
-        "en": "Deadliest Catch",
-        "fa": "مرگبارترین صید"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-ice-road",
-      "word": {
-        "en": "Ice Road",
-        "fa": "جاده یخی"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-american-pickers",
-      "word": {
-        "en": "American Pickers",
-        "fa": "کلکسیونرهای امریکایی"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-wipeout",
-      "word": {
-        "en": "Wipeout",
-        "fa": "وایپ‌اوت"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-the-circle",
-      "word": {
-        "en": "The Circle",
-        "fa": "دایره"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-too-hot",
-      "word": {
-        "en": "Too Hot",
-        "fa": "خیلی داغ"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-love-is-blind",
-      "word": {
-        "en": "Love Is Blind",
-        "fa": "عشق کور است"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-married-at-first-sight",
-      "word": {
-        "en": "Married At First Sight",
-        "fa": "ازدواج در نگاه اول"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-catfish",
-      "word": {
-        "en": "Catfish",
-        "fa": "کت‌فیش"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-jersey-shore",
-      "word": {
-        "en": "Jersey Shore",
-        "fa": "جرسی شور"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-real-housewives",
-      "word": {
-        "en": "Real Housewives",
-        "fa": "خانم‌های خانه‌دار واقعی"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-undercover-boss",
-      "word": {
-        "en": "Undercover Boss",
-        "fa": "رئیس مخفی"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-cash-cab",
-      "word": {
-        "en": "Cash Cab",
-        "fa": "تاکسی پول"
-      },
-      "difficulty": "easy"
-    },
-    {
-      "id": "tv-the-twilight-zone",
-      "word": {
-        "en": "The Twilight Zone",
-        "fa": "منطقه گرگ و میش"
+        "en": "Rome",
+        "fa": "روم"
       },
       "difficulty": "hard"
     },
     {
-      "id": "tv-the-addams-family",
+      "id": "tv-spartacus",
       "word": {
-        "en": "The Addams Family",
-        "fa": "خانواده آدامز"
+        "en": "Spartacus",
+        "fa": "اسپارتاکوس"
       },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-the-andy-griffith-show",
-      "word": {
-        "en": "The Andy Griffith Show",
-        "fa": "نمایش اندی گریفیث"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-leave-it-to-beaver",
-      "word": {
-        "en": "Leave It to Beaver",
-        "fa": "بسپارش به بیور"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-the-honeymooners",
-      "word": {
-        "en": "The Honeymooners",
-        "fa": "ماه عسلی‌ها"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-get-smart",
-      "word": {
-        "en": "Get Smart",
-        "fa": "باهوش شو"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-hogan-s-heroes",
-      "word": {
-        "en": "Hogan's Heroes",
-        "fa": "قهرمانان هوگان"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-the-munsters",
-      "word": {
-        "en": "The Munsters",
-        "fa": "خانواده مانسترها"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-i-dream-of-jeannie",
-      "word": {
-        "en": "I Dream of Jeannie",
-        "fa": "رویای جینی"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-the-dick-van-dyke-show",
-      "word": {
-        "en": "The Dick Van Dyke Show",
-        "fa": "نمایش دیک ون دایک"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-petticoat-junction",
-      "word": {
-        "en": "Petticoat Junction",
-        "fa": "تقاطع پتیکوت"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-green-acres",
-      "word": {
-        "en": "Green Acres",
-        "fa": "مزارع سبز"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-the-beverly-hillbillies",
-      "word": {
-        "en": "The Beverly Hillbillies",
-        "fa": "دهاتی‌های بورلی هیلز"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-my-three-sons",
-      "word": {
-        "en": "My Three Sons",
-        "fa": "سه پسر من"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-father-knows-best",
-      "word": {
-        "en": "Father Knows Best",
-        "fa": "پدر بهتر می‌داند"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-the-lone-ranger",
-      "word": {
-        "en": "The Lone Ranger",
-        "fa": "رنجر تنها"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-mister-ed",
-      "word": {
-        "en": "Mister Ed",
-        "fa": "آقای اد"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-lassie",
-      "word": {
-        "en": "Lassie",
-        "fa": "لسی"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-the-lucy-show",
-      "word": {
-        "en": "The Lucy Show",
-        "fa": "نمایش لوسی"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-hawaii-five-o",
-      "word": {
-        "en": "Hawaii Five-O",
-        "fa": "هاوایی فایو-او"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-the-fugitive",
-      "word": {
-        "en": "The Fugitive",
-        "fa": "فراری"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-perry-mason",
-      "word": {
-        "en": "Perry Mason",
-        "fa": "پری میسون"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-gunsmoke",
-      "word": {
-        "en": "Gunsmoke",
-        "fa": "گان‌اسموک"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-bonanza",
-      "word": {
-        "en": "Bonanza",
-        "fa": "بونانزا"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-the-wild-wild-west",
-      "word": {
-        "en": "The Wild Wild West",
-        "fa": "غرب وحشی وحشی"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-mission-impossible",
-      "word": {
-        "en": "Mission Impossible",
-        "fa": "ماموریت غیرممکن"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-the-man-from-u-n-c-l-e",
-      "word": {
-        "en": "The Man from U.N.C.L.E.",
-        "fa": "مردی از آنکل"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-lost-in-space",
-      "word": {
-        "en": "Lost in Space",
-        "fa": "گمشده در فضا"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-the-outer-limits",
-      "word": {
-        "en": "The Outer Limits",
-        "fa": "مرزهای بیرونی"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-combat",
-      "word": {
-        "en": "Combat",
-        "fa": "کمبت"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-mchale-s-navy",
-      "word": {
-        "en": "McHale's Navy",
-        "fa": "نیروی دریایی مک‌هیل"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-the-mary-tyler-moore-show",
-      "word": {
-        "en": "The Mary Tyler Moore Show",
-        "fa": "نمایش مری تایلر مور"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-all-in-the-family",
-      "word": {
-        "en": "All in the Family",
-        "fa": "همه در خانواده"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-the-odd-couple",
-      "word": {
-        "en": "The Odd Couple",
-        "fa": "زوج عجیب"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-laverne-and-shirley",
-      "word": {
-        "en": "Laverne and Shirley",
-        "fa": "لاورن و شرلی"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-three-s-company",
-      "word": {
-        "en": "Three's Company",
-        "fa": "جمع سه نفره"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-the-partridge-family",
-      "word": {
-        "en": "The Partridge Family",
-        "fa": "خانواده پارتریج"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-the-flying-nun",
-      "word": {
-        "en": "The Flying Nun",
-        "fa": "راهبه پرنده"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-family-affair",
-      "word": {
-        "en": "Family Affair",
-        "fa": "ماجرای خانوادگی"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-mad-men",
-      "word": {
-        "en": "Mad Men",
-        "fa": "مردان دیوانه"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-the-wire",
-      "word": {
-        "en": "The Wire",
-        "fa": "سیم‌خاردار"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-the-west-wing",
-      "word": {
-        "en": "The West Wing",
-        "fa": "جناح غربی"
-      },
-      "difficulty": "hard"
+      "difficulty": "medium"
     },
     {
       "id": "tv-boardwalk-empire",
@@ -2152,876 +392,60 @@
       "difficulty": "hard"
     },
     {
-      "id": "tv-six-feet-under",
+      "id": "tv-fleabag",
       "word": {
-        "en": "Six Feet Under",
-        "fa": "شش فوت زیر خاک"
+        "en": "Fleabag",
+        "fa": "فلیبگ"
       },
       "difficulty": "hard"
     },
     {
-      "id": "tv-band-of-brothers",
+      "id": "tv-the-last-of-us",
       "word": {
-        "en": "Band of Brothers",
-        "fa": "جوخه برادران"
+        "en": "The Last of Us",
+        "fa": "آخرین بازمانده از ما"
       },
-      "difficulty": "hard"
+      "difficulty": "medium"
     },
     {
-      "id": "tv-big-little-lies",
+      "id": "tv-succession",
       "word": {
-        "en": "Big Little Lies",
-        "fa": "دروغ‌های کوچک بزرگ"
+        "en": "Succession",
+        "fa": "وراثت"
       },
-      "difficulty": "hard"
+      "difficulty": "medium"
     },
     {
-      "id": "tv-the-americans",
+      "id": "tv-mindhunter",
       "word": {
-        "en": "The Americans",
-        "fa": "آمریکایی‌ها"
+        "en": "Mindhunter",
+        "fa": "ذهن‌شکار"
       },
-      "difficulty": "hard"
+      "difficulty": "medium"
     },
     {
-      "id": "tv-the-handmaid-s-tale",
+      "id": "tv-ozark",
       "word": {
-        "en": "The Handmaid's Tale",
-        "fa": "سرگذشت ندیمه"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-the-leftovers",
-      "word": {
-        "en": "The Leftovers",
-        "fa": "بازماندگان"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-friday-night-lights",
-      "word": {
-        "en": "Friday Night Lights",
-        "fa": "چراغ‌های شب جمعه"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-downton-abbey",
-      "word": {
-        "en": "Downton Abbey",
-        "fa": "دانتون ابی"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-the-newsroom",
-      "word": {
-        "en": "The Newsroom",
-        "fa": "اتاق خبر"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-halt-and-catch-fire",
-      "word": {
-        "en": "Halt and Catch Fire",
-        "fa": "توقف و آتش بگیر"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-mr-robot-2",
-      "word": {
-        "en": "Mr Robot",
-        "fa": "آقای روبات"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-this-is-us",
-      "word": {
-        "en": "This Is Us",
-        "fa": "این ما هستیم"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-the-good-wife",
-      "word": {
-        "en": "The Good Wife",
-        "fa": "همسر خوب"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-deadwood",
-      "word": {
-        "en": "Deadwood",
-        "fa": "ددوود"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-the-knick",
-      "word": {
-        "en": "The Knick",
-        "fa": "بیمارستان نیک"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-rectify",
-      "word": {
-        "en": "Rectify",
-        "fa": "اصلاح"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-the-marvelous-mrs-maisel",
-      "word": {
-        "en": "The Marvelous Mrs Maisel",
-        "fa": "خانم میزل شگفت‌انگیز"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-succession-roy",
-      "word": {
-        "en": "Succession Roy",
-        "fa": "وراثت خاندان روی"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-ozark-byrde",
-      "word": {
-        "en": "Ozark Byrde",
+        "en": "Ozark",
         "fa": "اوزارک"
       },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-the-night-of",
-      "word": {
-        "en": "The Night Of",
-        "fa": "آن شب"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-sharp-objects",
-      "word": {
-        "en": "Sharp Objects",
-        "fa": "اشیای تیز"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-the-pacific",
-      "word": {
-        "en": "The Pacific",
-        "fa": "اقیانوس آرام"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-generation-kill",
-      "word": {
-        "en": "Generation Kill",
-        "fa": "نسل کشتار"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-treme-new-orleans",
-      "word": {
-        "en": "Treme New Orleans",
-        "fa": "ترمه"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-in-treatment",
-      "word": {
-        "en": "In Treatment",
-        "fa": "تحت درمان"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-the-affair",
-      "word": {
-        "en": "The Affair",
-        "fa": "رابطه پنهان"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-olive-kitteridge",
-      "word": {
-        "en": "Olive Kitteridge",
-        "fa": "اولیو کیتریج"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-mare-of-easttown",
-      "word": {
-        "en": "Mare of Easttown",
-        "fa": "میر ایست‌تاون"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-a-french-village",
-      "word": {
-        "en": "A French Village",
-        "fa": "یک دهکده فرانسوی"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-borgen-denmark",
-      "word": {
-        "en": "Borgen Denmark",
-        "fa": "بورگن"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-the-bureau",
-      "word": {
-        "en": "The Bureau",
-        "fa": "اداره"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-top-of-the-lake",
-      "word": {
-        "en": "Top of the Lake",
-        "fa": "بالای دریاچه"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-bojack-horseman",
-      "word": {
-        "en": "BoJack Horseman",
-        "fa": "بوجک هورسمن"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-black-books",
-      "word": {
-        "en": "Black Books",
-        "fa": "بلک بوکس"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-the-mighty-boosh",
-      "word": {
-        "en": "The Mighty Boosh",
-        "fa": "مایتی بوش"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-garth-marenghi-s-darkplace",
-      "word": {
-        "en": "Garth Marenghi's Darkplace",
-        "fa": "دارک‌پلیس"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-peep-show",
-      "word": {
-        "en": "Peep Show",
-        "fa": "پیپ شو"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-flight-of-the-conchords",
-      "word": {
-        "en": "Flight Of The Conchords",
-        "fa": "فلایت آو د کنکوردز"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-mr-show",
-      "word": {
-        "en": "Mr Show",
-        "fa": "میستر شو"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-freaks-and-geeks",
-      "word": {
-        "en": "Freaks And Geeks",
-        "fa": "فریکس اند گیکس"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-party-down",
-      "word": {
-        "en": "Party Down",
-        "fa": "پارتی داون"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-pushing-daisies",
-      "word": {
-        "en": "Pushing Daisies",
-        "fa": "پوشینگ دیزیز"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-wonderfalls",
-      "word": {
-        "en": "Wonderfalls",
-        "fa": "واندرفالز"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-veronica-mars",
-      "word": {
-        "en": "Veronica Mars",
-        "fa": "ورونیکا مارس"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-dead-like-me",
-      "word": {
-        "en": "Dead Like Me",
-        "fa": "دد لایک می"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-carnivale",
-      "word": {
-        "en": "Carnivale",
-        "fa": "کارنیوال"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-oz",
-      "word": {
-        "en": "Oz",
-        "fa": "اوز"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-enlightened",
-      "word": {
-        "en": "Enlightened",
-        "fa": "اینلایتند"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-terriers",
-      "word": {
-        "en": "Terriers",
-        "fa": "تریِرز"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-firefly",
-      "word": {
-        "en": "Firefly",
-        "fa": "فایرفلای"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-farscape",
-      "word": {
-        "en": "Farscape",
-        "fa": "فارسکیپ"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-babylon-five",
-      "word": {
-        "en": "Babylon Five",
-        "fa": "بابیلون فایو"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-the-expanse",
-      "word": {
-        "en": "The Expanse",
-        "fa": "د اکسپنس"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-dark",
-      "word": {
-        "en": "Dark",
-        "fa": "دارک"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-utopia",
-      "word": {
-        "en": "Utopia",
-        "fa": "یوتوپیا"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-the-prisoner",
-      "word": {
-        "en": "The Prisoner",
-        "fa": "د پریزنر"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-sense-eight",
-      "word": {
-        "en": "Sense Eight",
-        "fa": "سنس ایت"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-hannibal",
-      "word": {
-        "en": "Hannibal",
-        "fa": "هانیبال"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-bored-to-death",
-      "word": {
-        "en": "Bored To Death",
-        "fa": "بورد تو دث"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-review",
-      "word": {
-        "en": "Review",
-        "fa": "ریویو"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-nathan-for-you",
-      "word": {
-        "en": "Nathan For You",
-        "fa": "نیتن فور یو"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-the-comeback",
-      "word": {
-        "en": "The Comeback",
-        "fa": "د کام‌بک"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-search-party",
-      "word": {
-        "en": "Search Party",
-        "fa": "سرچ پارتی"
-      },
-      "difficulty": "hard"
+      "difficulty": "medium"
     },
     {
-      "id": "tv-lodge-forty-nine",
+      "id": "tv-the-haunting-of-hill-house",
       "word": {
-        "en": "Lodge Forty Nine",
-        "fa": "لاج فورتی ناین"
+        "en": "The Haunting of Hill House",
+        "fa": "تسخیر عمارت هیل"
       },
       "difficulty": "hard"
     },
     {
-      "id": "tv-maniac",
+      "id": "tv-daredevil",
       "word": {
-        "en": "Maniac",
-        "fa": "مانیاک"
+        "en": "Daredevil",
+        "fa": "بی‌باک"
       },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-patrick-melrose",
-      "word": {
-        "en": "Patrick Melrose",
-        "fa": "پاتریک ملروز"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-the-detectorists",
-      "word": {
-        "en": "The Detectorists",
-        "fa": "دتکتوریستس"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-toast-of-london",
-      "word": {
-        "en": "Toast Of London",
-        "fa": "توست آو لندن"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-snowfall",
-      "word": {
-        "en": "Snowfall",
-        "fa": "اسنوفال"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-call-my-agent",
-      "word": {
-        "en": "Call My Agent",
-        "fa": "با نماینده‌ام تماس بگیر"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-lupin",
-      "word": {
-        "en": "Lupin",
-        "fa": "لوپن"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-sacred-games",
-      "word": {
-        "en": "Sacred Games",
-        "fa": "بازی‌های مقدس"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-babylon-berlin",
-      "word": {
-        "en": "Babylon Berlin",
-        "fa": "بابیلون برلین"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-my-brilliant-friend",
-      "word": {
-        "en": "My Brilliant Friend",
-        "fa": "دوست نابغه من"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-the-bridge",
-      "word": {
-        "en": "The Bridge",
-        "fa": "پل"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-gomorrah",
-      "word": {
-        "en": "Gomorrah",
-        "fa": "گومورا"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-elite",
-      "word": {
-        "en": "Elite",
-        "fa": "الیت"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-kingdom",
-      "word": {
-        "en": "Kingdom",
-        "fa": "پادشاهی"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-crash-landing-on-you",
-      "word": {
-        "en": "Crash Landing On You",
-        "fa": "فرود اضطراری روی تو"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-alice-in-borderland",
-      "word": {
-        "en": "Alice In Borderland",
-        "fa": "آلیس در سرزمین مرزی"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-narcos-mexico",
-      "word": {
-        "en": "Narcos Mexico",
-        "fa": "نارکوس مکزیک"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-the-rain",
-      "word": {
-        "en": "The Rain",
-        "fa": "باران"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-fauda",
-      "word": {
-        "en": "Fauda",
-        "fa": "فاودا"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-the-valhalla-murders",
-      "word": {
-        "en": "The Valhalla Murders",
-        "fa": "قتل‌های والهالا"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-deutschland-83",
-      "word": {
-        "en": "Deutschland 83",
-        "fa": "آلمان ۸۳"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-suburra-blood-on-rome",
-      "word": {
-        "en": "Suburra Blood On Rome",
-        "fa": "سابورا خون بر رم"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-las-chicas-del-cable",
-      "word": {
-        "en": "Las Chicas Del Cable",
-        "fa": "دختران سیم تلفن"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-marseille",
-      "word": {
-        "en": "Marseille",
-        "fa": "مارسی"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-the-break",
-      "word": {
-        "en": "The Break",
-        "fa": "وقفه"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-hierro",
-      "word": {
-        "en": "Hierro",
-        "fa": "یرو"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-vikings-valhalla",
-      "word": {
-        "en": "Vikings Valhalla",
-        "fa": "وایکینگ‌ها والهالا"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-itaewon-class",
-      "word": {
-        "en": "Itaewon Class",
-        "fa": "کلاس ایته‌وون"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-signal",
-      "word": {
-        "en": "Signal",
-        "fa": "سیگنال"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-mr-sunshine",
-      "word": {
-        "en": "Mr Sunshine",
-        "fa": "آقای آفتاب"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-hospital-playlist",
-      "word": {
-        "en": "Hospital Playlist",
-        "fa": "پلی‌لیست بیمارستان"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-reply-1988",
-      "word": {
-        "en": "Reply 1988",
-        "fa": "پاسخ ۱۹۸۸"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-sky-castle",
-      "word": {
-        "en": "Sky Castle",
-        "fa": "قلعه آسمان"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-train-to-busan",
-      "word": {
-        "en": "Train To Busan",
-        "fa": "قطار به بوسان"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-the-untamed",
-      "word": {
-        "en": "The Untamed",
-        "fa": "رام‌نشده"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-nirvana-in-fire",
-      "word": {
-        "en": "Nirvana In Fire",
-        "fa": "نیروانا در آتش"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-sex-education",
-      "word": {
-        "en": "Sex Education",
-        "fa": "آموزش جنسی"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-top-boy",
-      "word": {
-        "en": "Top Boy",
-        "fa": "تاپ بوی"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-line-of-duty",
-      "word": {
-        "en": "Line Of Duty",
-        "fa": "خط وظیفه"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-the-mallorca-files",
-      "word": {
-        "en": "The Mallorca Files",
-        "fa": "پرونده‌های مایورکا"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-tehran",
-      "word": {
-        "en": "Tehran",
-        "fa": "تهران"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-shtisel",
-      "word": {
-        "en": "Shtisel",
-        "fa": "شتیسل"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-wild-district",
-      "word": {
-        "en": "Wild District",
-        "fa": "منطقه وحشی"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-the-empress",
-      "word": {
-        "en": "The Empress",
-        "fa": "ملکه"
-      },
-      "difficulty": "hard"
-    },
-    {
-      "id": "tv-young-royals",
-      "word": {
-        "en": "Young Royals",
-        "fa": "خاندان سلطنتی جوان"
-      },
-      "difficulty": "hard"
+      "difficulty": "medium"
     },
     {
       "id": "tv-sons-of-anarchy",
@@ -3032,178 +456,74 @@
       "difficulty": "medium"
     },
     {
-      "id": "tv-homeland",
+      "id": "tv-hannibal",
       "word": {
-        "en": "Homeland",
-        "fa": "سرزمین مادری"
+        "en": "Hannibal",
+        "fa": "هانیبال"
       },
       "difficulty": "medium"
     },
     {
-      "id": "tv-succession",
+      "id": "tv-the-expanse",
       "word": {
-        "en": "Succession",
-        "fa": "جانشینی"
+        "en": "The Expanse",
+        "fa": "گستره"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "tv-community",
+      "word": {
+        "en": "Community",
+        "fa": "کامیونیتی"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "tv-parks-and-recreation",
+      "word": {
+        "en": "Parks and Recreation",
+        "fa": "پارک‌ها و تفریحات"
       },
       "difficulty": "medium"
     },
     {
-      "id": "tv-billions",
+      "id": "tv-suits",
       "word": {
-        "en": "Billions",
-        "fa": "بیلیونز"
+        "en": "Suits",
+        "fa": "سوتس"
       },
       "difficulty": "medium"
     },
     {
-      "id": "tv-the-last-kingdom",
+      "id": "tv-gomorrah",
       "word": {
-        "en": "The Last Kingdom",
-        "fa": "آخرین پادشاهی"
+        "en": "Gomorrah",
+        "fa": "گومورا"
       },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-outlander",
-      "word": {
-        "en": "Outlander",
-        "fa": "غریبه"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-bridgerton",
-      "word": {
-        "en": "Bridgerton",
-        "fa": "بریجرتون"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-er",
-      "word": {
-        "en": "ER",
-        "fa": "اورژانس"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-empire",
-      "word": {
-        "en": "Empire",
-        "fa": "امپراتوری"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-scandal",
-      "word": {
-        "en": "Scandal",
-        "fa": "رسوایی"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-how-to-get-away-with-murder",
-      "word": {
-        "en": "How to Get Away with Murder",
-        "fa": "چطور از قتل قسر در برویم"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-ray-donovan",
-      "word": {
-        "en": "Ray Donovan",
-        "fa": "ری داناوان"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-shameless",
-      "word": {
-        "en": "Shameless",
-        "fa": "بی‌شرم"
-      },
-      "difficulty": "medium"
+      "difficulty": "hard"
     },
     {
       "id": "tv-sense8",
       "word": {
         "en": "Sense8",
-        "fa": "سنس‌ایت"
+        "fa": "سنس ۸"
       },
-      "difficulty": "medium"
+      "difficulty": "hard"
     },
     {
-      "id": "tv-designated-survivor",
+      "id": "tv-black-sails",
       "word": {
-        "en": "Designated Survivor",
-        "fa": "بازمانده برگزیده"
+        "en": "Black Sails",
+        "fa": "بادبان‌های سیاه"
       },
-      "difficulty": "medium"
+      "difficulty": "hard"
     },
     {
-      "id": "tv-the-blacklist",
+      "id": "tv-the-witcher",
       "word": {
-        "en": "The Blacklist",
-        "fa": "فهرست سیاه"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-better-things",
-      "word": {
-        "en": "Better Things",
-        "fa": "چیزهای بهتر"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-yellowstone",
-      "word": {
-        "en": "Yellowstone",
-        "fa": "یلواستون"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-the-morning-show",
-      "word": {
-        "en": "The Morning Show",
-        "fa": "برنامه صبحگاهی"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-you",
-      "word": {
-        "en": "You",
-        "fa": "تو"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-cobra-kai",
-      "word": {
-        "en": "Cobra Kai",
-        "fa": "کبرا کای"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-emily-in-paris",
-      "word": {
-        "en": "Emily in Paris",
-        "fa": "امیلی در پاریس"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-wandavision",
-      "word": {
-        "en": "WandaVision",
-        "fa": "واندا ویژن"
+        "en": "The Witcher",
+        "fa": "ویچر"
       },
       "difficulty": "medium"
     },
@@ -3216,10 +536,10 @@
       "difficulty": "medium"
     },
     {
-      "id": "tv-house-of-the-dragon",
+      "id": "tv-wandavision",
       "word": {
-        "en": "House of the Dragon",
-        "fa": "خاندان اژدها"
+        "en": "WandaVision",
+        "fa": "واندا‌ویژن"
       },
       "difficulty": "medium"
     },
@@ -3232,644 +552,260 @@
       "difficulty": "medium"
     },
     {
-      "id": "tv-the-boys-in-the-boat",
+      "id": "tv-squid-game",
       "word": {
-        "en": "The Boys in the Boat",
-        "fa": "پسرهای قایق"
+        "en": "Squid Game",
+        "fa": "بازی مرکب"
       },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-the-bear",
-      "word": {
-        "en": "The Bear",
-        "fa": "خرس"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-only-murders-in-the-building",
-      "word": {
-        "en": "Only Murders in the Building",
-        "fa": "فقط قتل‌های ساختمان"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-jack-ryan",
-      "word": {
-        "en": "Jack Ryan",
-        "fa": "جک رایان"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-reacher",
-      "word": {
-        "en": "Reacher",
-        "fa": "ریچر"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-fleabag",
-      "word": {
-        "en": "Fleabag",
-        "fa": "فلی‌بگ"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-the-white-lotus",
-      "word": {
-        "en": "The White Lotus",
-        "fa": "نیلوفر سفید"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-the-sandman",
-      "word": {
-        "en": "The Sandman",
-        "fa": "مرد شنی"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-shadow-and-bone",
-      "word": {
-        "en": "Shadow and Bone",
-        "fa": "سایه و استخوان"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-outer-banks",
-      "word": {
-        "en": "Outer Banks",
-        "fa": "اوتر بنکس"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-heartstopper",
-      "word": {
-        "en": "Heartstopper",
-        "fa": "هارت‌استاپر"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-never-have-i-ever",
-      "word": {
-        "en": "Never Have I Ever",
-        "fa": "هیچ‌وقت تا حالا"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-beef",
-      "word": {
-        "en": "Beef",
-        "fa": "کینه"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-wandering-earth",
-      "word": {
-        "en": "Wandering Earth",
-        "fa": "زمین سرگردان"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-arcane",
-      "word": {
-        "en": "Arcane",
-        "fa": "آرکین"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-invincible",
-      "word": {
-        "en": "Invincible",
-        "fa": "شکست‌ناپذیر"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-mindhunter",
-      "word": {
-        "en": "Mindhunter",
-        "fa": "شکارچی ذهن"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-the-diplomat",
-      "word": {
-        "en": "The Diplomat",
-        "fa": "دیپلمات"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-foundation",
-      "word": {
-        "en": "Foundation",
-        "fa": "بنیاد"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-silo",
-      "word": {
-        "en": "Silo",
-        "fa": "سیلو"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-slow-horses",
-      "word": {
-        "en": "Slow Horses",
-        "fa": "اسب‌های کند"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-andor",
-      "word": {
-        "en": "Andor",
-        "fa": "اندور"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-broadchurch",
-      "word": {
-        "en": "Broadchurch",
-        "fa": "برادچرچ"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-cold-case",
-      "word": {
-        "en": "Cold Case",
-        "fa": "پرونده سرد"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-criminal-minds",
-      "word": {
-        "en": "Criminal Minds",
-        "fa": "ذهن‌های جنایتکار"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-luther",
-      "word": {
-        "en": "Luther",
-        "fa": "لوتر"
-      },
-      "difficulty": "medium"
+      "difficulty": "easy"
     },
     {
-      "id": "tv-bosch",
+      "id": "tv-the-umbrella-academy",
       "word": {
-        "en": "Bosch",
-        "fa": "بوش"
+        "en": "The Umbrella Academy",
+        "fa": "آکادمی آمبرلا"
       },
       "difficulty": "medium"
     },
     {
-      "id": "tv-castle",
+      "id": "tv-wednesday",
       "word": {
-        "en": "Castle",
-        "fa": "کسل"
+        "en": "Wednesday",
+        "fa": "چهارشنبه"
       },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-the-killing",
-      "word": {
-        "en": "The Killing",
-        "fa": "قتل"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-happy-valley",
-      "word": {
-        "en": "Happy Valley",
-        "fa": "دره شاد"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-bodyguard",
-      "word": {
-        "en": "Bodyguard",
-        "fa": "محافظ شخصی"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-marcella",
-      "word": {
-        "en": "Marcella",
-        "fa": "مارسلا"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-shetland",
-      "word": {
-        "en": "Shetland",
-        "fa": "شتلند"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-vera",
-      "word": {
-        "en": "Vera",
-        "fa": "ورا"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-endeavour",
-      "word": {
-        "en": "Endeavour",
-        "fa": "تلاش"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-inspector-morse",
-      "word": {
-        "en": "Inspector Morse",
-        "fa": "بازرس مورس"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-midsomer-murders",
-      "word": {
-        "en": "Midsomer Murders",
-        "fa": "قتل‌های میدسامر"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-death-in-paradise",
-      "word": {
-        "en": "Death in Paradise",
-        "fa": "مرگ در بهشت"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-person-of-interest",
-      "word": {
-        "en": "Person of Interest",
-        "fa": "فرد مظنون"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-white-collar",
-      "word": {
-        "en": "White Collar",
-        "fa": "یقه‌سفید"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-ncis",
-      "word": {
-        "en": "NCIS",
-        "fa": "ان‌سی‌آی‌اس"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-bones",
-      "word": {
-        "en": "Bones",
-        "fa": "استخوان‌ها"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-lie-to-me",
-      "word": {
-        "en": "Lie to Me",
-        "fa": "به من دروغ بگو"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-elementary",
-      "word": {
-        "en": "Elementary",
-        "fa": "ابتدایی"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-monk",
-      "word": {
-        "en": "Monk",
-        "fa": "مانک"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-columbo",
-      "word": {
-        "en": "Columbo",
-        "fa": "کلمبو"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-murder-she-wrote",
-      "word": {
-        "en": "Murder She Wrote",
-        "fa": "قتلی که او نوشت"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-magnum-pi",
-      "word": {
-        "en": "Magnum PI",
-        "fa": "مگنوم پی‌آی"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-wallander",
-      "word": {
-        "en": "Wallander",
-        "fa": "والاندر"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-the-fall",
-      "word": {
-        "en": "The Fall",
-        "fa": "سقوط"
-      },
-      "difficulty": "medium"
-    },
-    {
-      "id": "tv-unbelievable",
-      "word": {
-        "en": "Unbelievable",
-        "fa": "باورنکردنی"
-      },
-      "difficulty": "medium"
+      "difficulty": "easy"
     },
     {
-      "id": "tv-wheel-of-fortune",
+      "id": "tv-bojack-horseman",
       "word": {
-        "en": "Wheel of Fortune",
-        "fa": "چرخ شانس"
+        "en": "BoJack Horseman",
+        "fa": "بوجک هورسمن"
       },
       "difficulty": "medium"
     },
     {
-      "id": "tv-jeopardy",
+      "id": "tv-the-marvelous-mrs-maisel",
       "word": {
-        "en": "Jeopardy",
-        "fa": "جئوپاردی"
+        "en": "The Marvelous Mrs. Maisel",
+        "fa": "خانم میزل شگفت‌انگیز"
       },
       "difficulty": "medium"
     },
     {
-      "id": "tv-the-price-is-right",
+      "id": "tv-downton-abbey",
       "word": {
-        "en": "The Price Is Right",
-        "fa": "قیمت درست همینه"
+        "en": "Downton Abbey",
+        "fa": "دانتون ابی"
       },
       "difficulty": "medium"
     },
     {
-      "id": "tv-deal-or-no-deal",
+      "id": "tv-greys-anatomy",
       "word": {
-        "en": "Deal or No Deal",
-        "fa": "معامله یا بی‌معامله"
+        "en": "Grey's Anatomy",
+        "fa": "آناتومی گری"
       },
       "difficulty": "medium"
     },
     {
-      "id": "tv-who-wants-to-be-a-millionaire",
+      "id": "tv-er",
       "word": {
-        "en": "Who Wants to Be a Millionaire",
-        "fa": "چه کسی می‌خواهد میلیونر شود"
+        "en": "ER",
+        "fa": "اورژانس"
       },
-      "difficulty": "medium"
+      "difficulty": "hard"
     },
     {
-      "id": "tv-britain-s-got-talent",
+      "id": "tv-frasier",
       "word": {
-        "en": "Britain's Got Talent",
-        "fa": "بریتانیا استعداد دارد"
+        "en": "Frasier",
+        "fa": "فریزر"
       },
-      "difficulty": "medium"
+      "difficulty": "hard"
     },
     {
-      "id": "tv-america-s-got-talent",
+      "id": "tv-curb-your-enthusiasm",
       "word": {
-        "en": "America's Got Talent",
-        "fa": "آمریکا استعداد دارد"
+        "en": "Curb Your Enthusiasm",
+        "fa": "جلوی اشتیاقت را بگیر"
       },
-      "difficulty": "medium"
+      "difficulty": "hard"
     },
     {
-      "id": "tv-the-great-british-bake-off",
+      "id": "tv-the-x-files",
       "word": {
-        "en": "The Great British Bake Off",
-        "fa": "مسابقه شیرینی‌پزی بریتانیا"
+        "en": "The X-Files",
+        "fa": "پرونده‌های ایکس"
       },
       "difficulty": "medium"
     },
     {
-      "id": "tv-rupaul-s-drag-race",
+      "id": "tv-its-always-sunny-in-philadelphia",
       "word": {
-        "en": "RuPaul's Drag Race",
-        "fa": "مسابقه دراگ روپل"
+        "en": "It's Always Sunny in Philadelphia",
+        "fa": "همیشه آفتابی در فیلادلفیا"
       },
-      "difficulty": "medium"
+      "difficulty": "hard"
     },
     {
-      "id": "tv-keeping-up-with-the-kardashians",
+      "id": "tv-gravity-falls",
       "word": {
-        "en": "Keeping Up With the Kardashians",
-        "fa": "همگام با کارداشیان‌ها"
+        "en": "Gravity Falls",
+        "fa": "آبشار جاذبه"
       },
       "difficulty": "medium"
     },
     {
-      "id": "tv-the-tonight-show",
+      "id": "tv-the-simpsons",
       "word": {
-        "en": "The Tonight Show",
-        "fa": "شو امشب"
+        "en": "The Simpsons",
+        "fa": "سیمپسون‌ها"
       },
-      "difficulty": "medium"
+      "difficulty": "easy"
     },
     {
-      "id": "tv-the-late-show",
+      "id": "tv-south-park",
       "word": {
-        "en": "The Late Show",
-        "fa": "شو دیروقت"
+        "en": "South Park",
+        "fa": "ساوت پارک"
       },
       "difficulty": "medium"
     },
     {
-      "id": "tv-saturday-night-live",
+      "id": "tv-family-guy",
       "word": {
-        "en": "Saturday Night Live",
-        "fa": "شب زنده‌داری شنبه"
+        "en": "Family Guy",
+        "fa": "مرد خانواده"
       },
       "difficulty": "medium"
     },
     {
-      "id": "tv-the-daily-show",
+      "id": "tv-futurama",
       "word": {
-        "en": "The Daily Show",
-        "fa": "شو روزانه"
+        "en": "Futurama",
+        "fa": "فیوچراما"
       },
       "difficulty": "medium"
     },
     {
-      "id": "tv-the-oprah-winfrey-show",
+      "id": "tv-one-piece",
       "word": {
-        "en": "The Oprah Winfrey Show",
-        "fa": "شو اپرا وینفری"
+        "en": "One Piece",
+        "fa": "وان پیس"
       },
       "difficulty": "medium"
     },
     {
-      "id": "tv-the-ellen-show",
+      "id": "tv-naruto",
       "word": {
-        "en": "The Ellen Show",
-        "fa": "شو الن"
+        "en": "Naruto",
+        "fa": "ناروتو"
       },
       "difficulty": "medium"
     },
     {
-      "id": "tv-last-week-tonight",
+      "id": "tv-dragon-ball-z",
       "word": {
-        "en": "Last Week Tonight",
-        "fa": "هفته گذشته امشب"
+        "en": "Dragon Ball Z",
+        "fa": "دراگون بال زد"
       },
       "difficulty": "medium"
     },
     {
-      "id": "tv-the-graham-norton-show",
+      "id": "tv-demon-slayer",
       "word": {
-        "en": "The Graham Norton Show",
-        "fa": "شو گراهام نورتون"
+        "en": "Demon Slayer",
+        "fa": "شیطان‌کش"
       },
       "difficulty": "medium"
     },
     {
-      "id": "tv-jimmy-kimmel-live",
+      "id": "tv-jujutsu-kaisen",
       "word": {
-        "en": "Jimmy Kimmel Live",
-        "fa": "جیمی کیمل لایو"
+        "en": "Jujutsu Kaisen",
+        "fa": "جوجوتسو کایسن"
       },
-      "difficulty": "medium"
+      "difficulty": "hard"
     },
     {
-      "id": "tv-the-view",
+      "id": "tv-hunter-x-hunter",
       "word": {
-        "en": "The View",
-        "fa": "دیدگاه"
+        "en": "Hunter x Hunter",
+        "fa": "هانتر × هانتر"
       },
-      "difficulty": "medium"
+      "difficulty": "hard"
     },
     {
-      "id": "tv-minute-to-win-it",
+      "id": "tv-steinsgate",
       "word": {
-        "en": "Minute to Win It",
-        "fa": "یک دقیقه تا برد"
+        "en": "Steins;Gate",
+        "fa": "اشتاینز گیت"
       },
-      "difficulty": "medium"
+      "difficulty": "hard"
     },
     {
-      "id": "tv-antiques-roadshow",
+      "id": "tv-code-geass",
       "word": {
-        "en": "Antiques Roadshow",
-        "fa": "نمایش عتیقه‌جات"
+        "en": "Code Geass",
+        "fa": "کد گیاس"
       },
-      "difficulty": "medium"
+      "difficulty": "hard"
     },
     {
-      "id": "tv-the-weakest-link",
+      "id": "tv-the-good-place",
       "word": {
-        "en": "The Weakest Link",
-        "fa": "ضعیف‌ترین حلقه"
+        "en": "The Good Place",
+        "fa": "جای خوب"
       },
       "difficulty": "medium"
     },
     {
-      "id": "tv-drop-the-mic",
+      "id": "tv-modern-family",
       "word": {
-        "en": "Drop the Mic",
-        "fa": "میکروفون را بنداز"
+        "en": "Modern Family",
+        "fa": "خانواده امروزی"
       },
       "difficulty": "medium"
     },
     {
-      "id": "tv-lip-sync-battle",
+      "id": "tv-homeland",
       "word": {
-        "en": "Lip Sync Battle",
-        "fa": "نبرد لب‌خوانی"
+        "en": "Homeland",
+        "fa": "سرزمین مادری"
       },
       "difficulty": "medium"
     },
     {
-      "id": "tv-the-masked-singer",
+      "id": "tv-24",
       "word": {
-        "en": "The Masked Singer",
-        "fa": "خواننده نقاب‌دار"
+        "en": "24",
+        "fa": "بیست‌وچهار"
       },
       "difficulty": "medium"
     },
     {
-      "id": "tv-the-real-world",
+      "id": "tv-euphoria",
       "word": {
-        "en": "The Real World",
-        "fa": "دنیای واقعی"
+        "en": "Euphoria",
+        "fa": "نشئگی"
       },
       "difficulty": "medium"
     },
     {
-      "id": "tv-hot-ones",
+      "id": "tv-planet-earth-ii",
       "word": {
-        "en": "Hot Ones",
-        "fa": "تندها"
+        "en": "Planet Earth II",
+        "fa": "سیاره زمین ۲"
       },
       "difficulty": "medium"
     },
     {
-      "id": "tv-carpool-karaoke",
+      "id": "tv-the-last-dance",
       "word": {
-        "en": "Carpool Karaoke",
-        "fa": "کارائوکه ماشین‌سواری"
+        "en": "The Last Dance",
+        "fa": "آخرین رقص"
       },
-      "difficulty": "medium"
+      "difficulty": "hard"
     }
   ]
 }

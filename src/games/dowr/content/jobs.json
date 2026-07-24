@@ -315,15 +315,6 @@
     "difficulty": "easy"
   },
   {
-    "id": "jobs-x002",
-    "word": {
-      "en": "Painter",
-      "fa": "نقاش"
-    },
-    "category": "jobs",
-    "difficulty": "easy"
-  },
-  {
     "id": "jobs-x003",
     "word": {
       "en": "Soldier",
@@ -477,24 +468,6 @@
     "difficulty": "hard"
   },
   {
-    "id": "jobs-gen-1",
-    "word": {
-      "en": "Cook",
-      "fa": "آشپز"
-    },
-    "category": "jobs",
-    "difficulty": "easy"
-  },
-  {
-    "id": "jobs-gen-2",
-    "word": {
-      "en": "Barber",
-      "fa": "آرایشگر"
-    },
-    "category": "jobs",
-    "difficulty": "easy"
-  },
-  {
     "id": "jobs-gen-3",
     "word": {
       "en": "Cashier",
@@ -612,15 +585,6 @@
     "difficulty": "med"
   },
   {
-    "id": "jobs-gen-16",
-    "word": {
-      "en": "Surveyor",
-      "fa": "نقشه‌بردار"
-    },
-    "category": "jobs",
-    "difficulty": "med"
-  },
-  {
     "id": "jobs-gen-17",
     "word": {
       "en": "Midwife",
@@ -729,15 +693,6 @@
     "difficulty": "med"
   },
   {
-    "id": "jobs-gen-29",
-    "word": {
-      "en": "Cobbler",
-      "fa": "کفاش"
-    },
-    "category": "jobs",
-    "difficulty": "med"
-  },
-  {
     "id": "jobs-gen-30",
     "word": {
       "en": "Stonemason",
@@ -810,37 +765,10 @@
     "difficulty": "med"
   },
   {
-    "id": "jobs-gen-38",
-    "word": {
-      "en": "Tattoo Artist",
-      "fa": "خال‌کوب"
-    },
-    "category": "jobs",
-    "difficulty": "med"
-  },
-  {
-    "id": "jobs-gen-39",
-    "word": {
-      "en": "Actuary",
-      "fa": "کارشناس آمار بیمه"
-    },
-    "category": "jobs",
-    "difficulty": "hard"
-  },
-  {
     "id": "jobs-gen-40",
     "word": {
       "en": "Cryptographer",
       "fa": "رمزنگار"
-    },
-    "category": "jobs",
-    "difficulty": "hard"
-  },
-  {
-    "id": "jobs-gen-41",
-    "word": {
-      "en": "Epidemiologist",
-      "fa": "اپیدمیولوژیست"
     },
     "category": "jobs",
     "difficulty": "hard"
@@ -990,15 +918,6 @@
     "difficulty": "hard"
   },
   {
-    "id": "jobs-gen-58",
-    "word": {
-      "en": "Underwriter",
-      "fa": "پذیره‌نویس بیمه"
-    },
-    "category": "jobs",
-    "difficulty": "hard"
-  },
-  {
     "id": "jobs-gen-59",
     "word": {
       "en": "Lobbyist",
@@ -1017,28 +936,10 @@
     "difficulty": "hard"
   },
   {
-    "id": "jobs-gen-61",
-    "word": {
-      "en": "Apiarist",
-      "fa": "زنبوردار"
-    },
-    "category": "jobs",
-    "difficulty": "hard"
-  },
-  {
     "id": "jobs-gen-62",
     "word": {
       "en": "Vintner",
       "fa": "شراب‌ساز"
-    },
-    "category": "jobs",
-    "difficulty": "hard"
-  },
-  {
-    "id": "jobs-gen-63",
-    "word": {
-      "en": "Horologist",
-      "fa": "ساعت‌ساز"
     },
     "category": "jobs",
     "difficulty": "hard"
@@ -1062,15 +963,6 @@
     "difficulty": "hard"
   },
   {
-    "id": "jobs-gen-66",
-    "word": {
-      "en": "Mortician",
-      "fa": "متصدی کفن‌ودفن"
-    },
-    "category": "jobs",
-    "difficulty": "hard"
-  },
-  {
     "id": "jobs-gen-67",
     "word": {
       "en": "Perfumer",
@@ -1083,7 +975,7 @@
     "id": "jobs-gen-68",
     "word": {
       "en": "Restorer",
-      "fa": "مرمت‌گر آثار"
+      "fa": "مرمت‌گر"
     },
     "category": "jobs",
     "difficulty": "hard"
@@ -1120,15 +1012,6 @@
     "word": {
       "en": "Ethnographer",
       "fa": "مردم‌نگار"
-    },
-    "category": "jobs",
-    "difficulty": "hard"
-  },
-  {
-    "id": "jobs-gen-73",
-    "word": {
-      "en": "Conservator",
-      "fa": "حافظ آثار هنری"
     },
     "category": "jobs",
     "difficulty": "hard"

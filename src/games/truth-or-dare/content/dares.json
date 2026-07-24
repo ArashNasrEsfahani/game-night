@@ -404,15 +404,6 @@
       }
     },
     {
-      "id": "dare-x005",
-      "kind": "dare",
-      "intensity": "mild",
-      "text": {
-        "en": "Balance a spoon on your nose for 10 seconds.",
-        "fa": "۱۰ ثانیه یه قاشق رو روی دماغت نگه دار."
-      }
-    },
-    {
       "id": "dare-x006",
       "kind": "dare",
       "intensity": "mild",
@@ -833,15 +824,6 @@
       "text": {
         "en": "Strike and hold a superhero pose for one full minute.",
         "fa": "یه ژست ابرقهرمانی بگیر و یه دقیقهٔ تمام نگهش دار."
-      }
-    },
-    {
-      "id": "dare-x053",
-      "kind": "dare",
-      "intensity": "mild",
-      "text": {
-        "en": "Pretend to be a tour guide and describe the room to the group.",
-        "fa": "ادای راهنمای تور رو دربیار و اتاق رو برای جمع توصیف کن."
       }
     },
     {
@@ -2285,15 +2267,6 @@
       }
     },
     {
-      "id": "dare-mild-gen-136",
-      "kind": "dare",
-      "intensity": "mild",
-      "text": {
-        "en": "Do ten jumping jacks while singing the alphabet.",
-        "fa": "ده تا پروانه بزن و هم‌زمان حروف الفبا رو بخون."
-      }
-    },
-    {
       "id": "dare-mild-gen-137",
       "kind": "dare",
       "intensity": "mild",
@@ -2399,15 +2372,6 @@
       "text": {
         "en": "Give an over-the-top dramatic reading of the nearest food label.",
         "fa": "برچسب نزدیک‌ترین خوراکی رو با لحنی خیلی دراماتیک و اغراق‌آمیز بخون."
-      }
-    },
-    {
-      "id": "dare-mild-gen-149",
-      "kind": "dare",
-      "intensity": "mild",
-      "text": {
-        "en": "Pretend to be a tour guide and describe the room to everyone.",
-        "fa": "ادای یک راهنمای تور رو دربیار و اتاق رو برای همه توصیف کن."
       }
     },
     {

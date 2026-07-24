@@ -299,14 +299,6 @@
       "intensity": "spicy"
     },
     {
-      "id": "nhie-s-x012",
-      "text": {
-        "en": "Never have I ever practiced kissing on my own hand.",
-        "fa": "من هیچ‌وقت رو دست خودم بوسیدن رو تمرین نکردم."
-      },
-      "intensity": "spicy"
-    },
-    {
       "id": "nhie-s-x013",
       "text": {
         "en": "Never have I ever lied about my number of exes.",
@@ -1339,14 +1331,6 @@
       "intensity": "spicy"
     },
     {
-      "id": "nhie-gen-267",
-      "text": {
-        "en": "Never have I ever lied about loving spicy food and then suffered through the whole meal.",
-        "fa": "من هیچ‌وقت دروغ نگفته‌ام که غذای تند دوست دارم و بعد تمام وعده را به سختی تحمل نکرده‌ام."
-      },
-      "intensity": "spicy"
-    },
-    {
       "id": "nhie-gen-268",
       "text": {
         "en": "Never have I ever spat out food at the table when no one expected it.",
@@ -1903,14 +1887,6 @@
       "text": {
         "en": "Never have I ever laughed at a funeral or a serious moment.",
         "fa": "من هیچ‌وقت توی یک مراسم عزا یا لحظهٔ جدی نخندیده‌ام."
-      },
-      "intensity": "spicy"
-    },
-    {
-      "id": "nhie-gen-338",
-      "text": {
-        "en": "Never have I ever tried to look cool and then immediately embarrassed myself.",
-        "fa": "من هیچ‌وقت سعی نکرده‌ام باحال به نظر برسم و بلافاصله خودم را ضایع نکرده‌ام."
       },
       "intensity": "spicy"
     },

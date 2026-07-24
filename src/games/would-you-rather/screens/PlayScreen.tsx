@@ -7,6 +7,18 @@ import { ITEM_BY_ID } from '../content';
 import { currentItemId, currentVoterId, everyoneVoted } from '../logic';
 import type { Side, WyrAction, WyrState } from '../logic';
 
+/** A labelled option card for the "would you rather" prompt — the A/B badge gives each side identity. */
+function OptionCard({ letter, text }: { letter: string; text: string }) {
+  return (
+    <Card className="relative w-full px-5 py-6 text-center text-xl font-extrabold">
+      <span className="absolute start-2 top-2 grid h-6 w-6 place-items-center rounded-full bg-[var(--surface-2)] text-xs font-black text-[var(--game-accent-strong)]">
+        {letter}
+      </span>
+      {text}
+    </Card>
+  );
+}
+
 function OptionButtons({
   a,
   b,
@@ -54,6 +66,20 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<WyrSta
   const a = item ? ctx.localize(item.optionA) : '';
   const b = item ? ctx.localize(item.optionB) : '';
 
+  // Active-play header with an "End game" action that ends the match and jumps to Results-so-far.
+  const header = (
+    <AppBar
+      onBack={() => nav.exit()}
+      right={
+        s.history.length > 0 ? (
+          <button onClick={() => nav.endGame()} className="text-sm text-[var(--text-muted)]">
+            {t('common.endGame')}
+          </button>
+        ) : undefined
+      }
+    />
+  );
+
   if (s.phase === 'error') {
     return (
       <Screen>
@@ -69,15 +95,19 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<WyrSta
   if (s.phase === 'prompt') {
     return (
       <Screen>
-        <AppBar onBack={() => nav.exit()} />
+        {header}
         <p className="py-1 text-center text-sm font-semibold text-[var(--text-muted)]">
           {t('wyr.progress', { done: s.index + 1, total: s.total })}
         </p>
         <div className="flex flex-1 flex-col items-center justify-center gap-4 text-center">
           <p className="text-lg font-bold">{t('wyr.wouldYouRather')}</p>
-          <Card className="px-5 py-6 text-xl font-extrabold">{a}</Card>
-          <div className="text-2xl font-black dp-accent">{t('wyr.or')}</div>
-          <Card className="px-5 py-6 text-xl font-extrabold">{b}</Card>
+          <div className="flex w-full flex-col items-center">
+            <OptionCard letter="A" text={a} />
+            <div className="z-10 -my-3.5 grid h-10 w-10 place-items-center rounded-full bg-[var(--game-accent-strong)] text-sm font-black text-[var(--game-on-accent)] shadow-[var(--shadow-pop)] ring-4 ring-[var(--bg)]">
+              {t('wyr.or')}
+            </div>
+            <OptionCard letter="B" text={b} />
+          </div>
           <div className="mt-2 flex w-full flex-col gap-2">
             <Button size="lg" fullWidth onClick={() => { ctx.sound.play('tap'); dispatch({ type: 'BEGIN_COLLECTION' }); }}>
               {s.options.mode === 'vote' ? t('wyr.startVoting') : t('wyr.countHands')}
@@ -97,7 +127,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<WyrSta
     if (done) {
       return (
         <Screen>
-          <AppBar onBack={() => nav.exit()} />
+          {header}
           <div className="grid flex-1 place-items-center gap-4 text-center">
             <p className="text-lg text-[var(--text-muted)]">{t('wyr.passBack')}</p>
             <Button size="lg" onClick={() => { ctx.sound.play('reveal'); dispatch({ type: 'REVEAL' }); }}>
@@ -109,7 +139,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<WyrSta
     }
     return (
       <Screen>
-        <AppBar onBack={() => nav.exit()} />
+        {header}
         <p className="py-1 text-center text-xs text-[var(--text-muted)]">
           {t('wyr.votedProgress', { done: s.handoffIndex, total: s.playerIds.length })}
         </p>
@@ -140,7 +170,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<WyrSta
   if (s.phase === 'collecting' && s.options.mode === 'quick') {
     return (
       <Screen>
-        <AppBar onBack={() => nav.exit()} />
+        {header}
         <div className="flex flex-1 flex-col justify-center gap-4">
           <p className="text-center text-base font-bold">{t('wyr.wouldYouRather')}</p>
           <Card className="px-4 py-4 text-center text-lg font-extrabold">{a}</Card>
@@ -171,7 +201,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<WyrSta
   const last = s.index + 1 >= s.total;
   return (
     <Screen>
-      <AppBar onBack={() => nav.exit()} />
+      {header}
       <div className="flex flex-1 flex-col justify-center gap-4">
         <p className="text-center text-sm text-[var(--text-muted)]">{t('wyr.wouldYouRather')}</p>
         <div className="overflow-hidden rounded-2xl">
@@ -194,7 +224,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<WyrSta
           className="text-center text-lg font-extrabold"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.5, type: 'spring', stiffness: 300, damping: 18 }}
+          transition={{ delay: 0.5, type: 'spring', stiffness: 225, damping: 26 }}
         >
           {cur.majority === 'tie' ? t('wyr.tie') : cur.majority === 'A' ? `${a} ✓` : `${b} ✓`}
         </motion.p>

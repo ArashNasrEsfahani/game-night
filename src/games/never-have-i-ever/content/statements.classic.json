@@ -211,14 +211,6 @@
       "intensity": "classic"
     },
     {
-      "id": "nhie-c-x001",
-      "text": {
-        "en": "Never have I ever fallen asleep during a meeting.",
-        "fa": "من هیچ‌وقت وسط جلسه خوابم نبرده."
-      },
-      "intensity": "classic"
-    },
-    {
       "id": "nhie-c-x002",
       "text": {
         "en": "Never have I ever forgotten someone's name right after they introduced themselves.",
@@ -263,14 +255,6 @@
       "text": {
         "en": "Never have I ever forgotten where I parked my car.",
         "fa": "من هیچ‌وقت یادم نرفته ماشینمو کجا پارک کردم."
-      },
-      "intensity": "classic"
-    },
-    {
-      "id": "nhie-c-x008",
-      "text": {
-        "en": "Never have I ever pushed a door that clearly said pull.",
-        "fa": "من هیچ‌وقت دری رو که واضح روش نوشته بود بکش، هل ندادم."
       },
       "intensity": "classic"
     },
@@ -675,26 +659,10 @@
       "intensity": "classic"
     },
     {
-      "id": "nhie-gen-15",
-      "text": {
-        "en": "Never have I ever made a to-do list and then lost it.",
-        "fa": "من هیچ‌وقت یک فهرست کارها ننوشته‌ام و بعد گمش نکرده‌ام."
-      },
-      "intensity": "classic"
-    },
-    {
       "id": "nhie-gen-16",
       "text": {
         "en": "Never have I ever eaten cereal for dinner because I was too lazy to cook.",
         "fa": "من هیچ‌وقت به خاطر تنبلی برای شام غلات نخورده‌ام."
-      },
-      "intensity": "classic"
-    },
-    {
-      "id": "nhie-gen-17",
-      "text": {
-        "en": "Never have I ever hit snooze and then panicked about being late.",
-        "fa": "من هیچ‌وقت دکمه‌ی چرت رو نزده‌ام و بعد از دیر شدن نگران نشده‌ام."
       },
       "intensity": "classic"
     },
@@ -1623,14 +1591,6 @@
       "text": {
         "en": "Never have I ever waved back at someone who was waving at the person behind me.",
         "fa": "من هیچ‌وقت برای کسی که داشت برای آدم پشت سرم دست تکان می‌داد، دست تکان نداده‌ام."
-      },
-      "intensity": "classic"
-    },
-    {
-      "id": "nhie-gen-134",
-      "text": {
-        "en": "Never have I ever called my teacher 'mom' by accident.",
-        "fa": "من هیچ‌وقت اشتباهی معلمم را «مامان» صدا نکرده‌ام."
       },
       "intensity": "classic"
     },

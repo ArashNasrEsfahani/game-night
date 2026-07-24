@@ -33,10 +33,12 @@ export function BottleStage({
 
   const [landed, setLanded] = useState(false);
   const rotRef = useRef(0);
-  const [rot, setRot] = useState(0);
+  const [frames, setFrames] = useState<number[]>([0]);
+  const [dur, setDur] = useState(0);
 
-  // On each new spin (spinSerial bumps when a target is set), wind the bottle several turns and
-  // align its neck to the chosen seat. Rotation only ever increases so it always spins forward.
+  // On each new spin (spinSerial bumps when a target is set), wind the bottle several whole turns,
+  // glide to a friction stop, then rock back and forth into the chosen seat like a real spun bottle.
+  // The reducer owns the target; this only animates the reveal. Rotation only ever increases.
   useEffect(() => {
     if (s.phase !== 'choosing' || targetIndex < 0) return;
     setLanded(false);
@@ -44,9 +46,18 @@ export function BottleStage({
     const currentMod = ((base % 360) + 360) % 360;
     const want = (targetIndex / n) * 360;
     const delta = (((want - currentMod) % 360) + 360) % 360;
-    const next = base + (reduce ? 0 : 5) * 360 + delta;
-    rotRef.current = next;
-    setRot(next);
+    // Vary the spin every time (4–7 whole turns) so it never feels canned.
+    const turns = 4 + (s.spinSerial % 4);
+    const final = base + (reduce ? 0 : turns * 360) + delta;
+    rotRef.current = final;
+    if (reduce) {
+      setFrames([final]);
+      setDur(0.25);
+    } else {
+      // Overshoot the seat at the end of the glide, rebound past it, then settle — a damped wobble.
+      setFrames([base, final + 9, final - 3, final]);
+      setDur(2 + turns * 0.28);
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [s.spinSerial, targetIndex, n, reduce]);
 
@@ -105,8 +116,21 @@ export function BottleStage({
             className="absolute left-1/2 top-1/2 grid place-items-center"
             style={{ transformOrigin: 'center' }}
             initial={false}
-            animate={{ rotate: rot, x: '-50%', y: '-50%' }}
-            transition={{ rotate: { duration: reduce ? 0.25 : 2.4, ease: [0.16, 0.84, 0.25, 1] } }}
+            animate={{ rotate: frames, x: '-50%', y: '-50%' }}
+            transition={{
+              rotate: reduce
+                ? { duration: dur, ease: 'easeOut' }
+                : {
+                    duration: dur,
+                    // long friction glide → overshoot, quick rebound, then settle onto the seat
+                    times: [0, 0.82, 0.93, 1],
+                    ease: [
+                      [0.1, 0.72, 0.2, 1],
+                      [0.4, 0, 0.6, 1],
+                      [0.33, 0, 0.3, 1],
+                    ],
+                  },
+            }}
             onAnimationComplete={() => {
               if (s.phase === 'choosing' && !landed) {
                 setLanded(true);

@@ -147,6 +147,8 @@ export interface GameNav {
   toPlay: () => void;
   toResults: () => void;
   exit: () => void; // back to Home, after confirm
+  /** End the current match and jump to Results, after an are-you-sure gate (host dispatches END_GAME). */
+  endGame: () => void;
   /** Begin a brand-new match from a Setup-built config (host seeds + persists + routes to Play). */
   startMatch: (config: GameConfig) => void;
   /** Start over the same game (clears session, returns to Setup). */

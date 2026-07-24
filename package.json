@@ -6,17 +6,25 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "studio": "vite --config vite.studio.config.ts",
+    "studio:build": "tsc -b && vite build --config vite.studio.config.ts",
+    "studio:preview": "vite preview --config vite.studio.config.ts",
     "typecheck": "tsc -b",
     "test": "vitest run",
     "test:watch": "vitest",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "android:sync": "npm run build && cap sync android",
+    "android:open": "cap open android",
+    "android:run": "npm run build && cap run android"
   },
   "dependencies": {
+    "@capacitor/android": "^8.4.1",
+    "@capacitor/core": "^8.4.1",
     "@supabase/supabase-js": "^2.107.0",
+    "@tanstack/react-virtual": "^3.14.3",
     "clsx": "^2.1.1",
     "framer-motion": "^12.40.0",
-    "howler": "^2.2.4",
     "i18next": "^26.3.1",
     "idb-keyval": "^6.2.5",
     "react": "^19.2.6",
@@ -26,12 +34,11 @@
     "zustand": "^5.0.14"
   },
   "devDependencies": {
+    "@capacitor/cli": "^8.4.1",
     "@eslint/js": "^10.0.1",
     "@tailwindcss/vite": "^4.3.0",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
-    "@testing-library/user-event": "^14.6.1",
-    "@types/howler": "^2.2.13",
     "@types/node": "^24.12.3",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",

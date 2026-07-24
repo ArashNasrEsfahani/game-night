@@ -14,7 +14,7 @@ function roleClass(role: CardRole): string {
     case 'neutral':
       return 'bg-[var(--color-game-gold)] text-[var(--on-gold)]';
     case 'assassin':
-      return 'bg-zinc-900 text-white';
+      return 'bg-[var(--color-assassin)] text-white';
   }
 }
 
@@ -29,13 +29,21 @@ export function ResultsScreen({ state, ctx, nav }: GameScreenProps<CodenamesStat
   }, [ctx, s.winner]);
 
   const winnerName = s.winner ? s.teamMeta[s.winner].name : '';
-  const reasonKey = s.winReason === 'opponentHitAssassin' ? 'cn.winAssassin' : 'cn.winCleared';
+  // winReason is null only for a manual early end (every natural game over sets it), so we show a
+  // tie title when nobody led and skip the reason line rather than printing a misleading "cleared".
+  const title = s.winner ? t('cn.teamWins', { team: winnerName }) : t('results.tie');
+  const reasonKey =
+    s.winReason === 'opponentHitAssassin'
+      ? 'cn.winAssassin'
+      : s.winReason === 'clearedWords'
+        ? 'cn.winCleared'
+        : null;
 
   return (
     <Screen>
       <AppBar title={t('results.title')} onBack={() => nav.exit()} />
       <div className="flex flex-col gap-4 pb-8">
-        <WinnerBanner title={t('cn.teamWins', { team: winnerName })} names={[t(reasonKey)]} />
+        <WinnerBanner title={title} names={reasonKey ? [t(reasonKey)] : []} tie={!s.winner} />
         <div className="grid grid-cols-5 gap-1.5" style={{ perspective: 700 }}>
           {s.board.map((c: BoardCell) => (
             <motion.div
@@ -43,7 +51,7 @@ export function ResultsScreen({ state, ctx, nav }: GameScreenProps<CodenamesStat
               initial={{ opacity: 0, scale: 0.6, rotateY: 90 }}
               animate={{ opacity: 1, scale: 1, rotateY: 0 }}
               transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1], delay: Math.min(c.index * 0.02, 0.5) }}
-              className={`flex aspect-square items-center justify-center rounded-lg p-1 text-center text-[10px] font-bold leading-tight ${roleClass(c.role)}`}
+              className={`flex aspect-square items-center justify-center rounded-lg p-1 text-center text-[10px] font-bold leading-tight shadow-[inset_0_1px_0_rgb(255_255_255/0.25),inset_0_-3px_5px_rgb(0_0_0/0.16)] ${roleClass(c.role)}`}
             >
               {c.word[lang]}
             </motion.div>

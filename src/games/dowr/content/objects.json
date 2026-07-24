@@ -927,15 +927,6 @@
     "difficulty": "med"
   },
   {
-    "id": "objects-gen-43",
-    "word": {
-      "en": "Crutch",
-      "fa": "عصای زیر بغل"
-    },
-    "category": "objects",
-    "difficulty": "med"
-  },
-  {
     "id": "objects-gen-44",
     "word": {
       "en": "Syringe",
@@ -985,15 +976,6 @@
     "word": {
       "en": "Harmonica",
       "fa": "سازدهنی"
-    },
-    "category": "objects",
-    "difficulty": "med"
-  },
-  {
-    "id": "objects-gen-50",
-    "word": {
-      "en": "Kaleidoscope",
-      "fa": "کالیدوسکوپ"
     },
     "category": "objects",
     "difficulty": "med"
@@ -1206,24 +1188,6 @@
     "difficulty": "hard"
   },
   {
-    "id": "objects-gen-74",
-    "word": {
-      "en": "Sextant",
-      "fa": "سکستانت"
-    },
-    "category": "objects",
-    "difficulty": "hard"
-  },
-  {
-    "id": "objects-gen-75",
-    "word": {
-      "en": "Thermostat",
-      "fa": "ترموستات"
-    },
-    "category": "objects",
-    "difficulty": "hard"
-  },
-  {
     "id": "objects-gen-76",
     "word": {
       "en": "Gyroscope",
@@ -1318,24 +1282,6 @@
     "word": {
       "en": "Compass Rose",
       "fa": "گل قطب‌نما"
-    },
-    "category": "objects",
-    "difficulty": "hard"
-  },
-  {
-    "id": "objects-gen-87",
-    "word": {
-      "en": "Vise",
-      "fa": "گیره رومیزی"
-    },
-    "category": "objects",
-    "difficulty": "hard"
-  },
-  {
-    "id": "objects-gen-88",
-    "word": {
-      "en": "Spindle",
-      "fa": "دوک نخ‌ریسی"
     },
     "category": "objects",
     "difficulty": "hard"

@@ -2,10 +2,13 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import type { GameConfig, GameScreenProps, PlayerSeat, TeamSetup } from '../../../sdk/types';
-import { Screen, AppBar, Button, SegmentedControl, Stepper, Toggle, Disclosure, SelectChip } from '../../../sdk/ui';
+import { Screen, AppBar, Button, SetupErrors, SegmentedControl, Stepper, Toggle, Disclosure, SelectChip } from '../../../sdk/ui';
 import { useRosterStore } from '../../../store/rosterStore';
 import { PlayerPicker } from '../../../app/components/PlayerPicker';
+import { TeamAssigner, useTeamAssignment } from '../../../app/components/TeamAssigner';
 import { asTeamId } from '../../../engine/ids';
+
+const TEAM_PALETTE = ['rose', 'sky', 'lime', 'gold'];
 import {
   DEFAULT_OPTIONS,
   PANTOMIME_CATEGORIES,
@@ -50,13 +53,18 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<PantomimeState, Pantom
     .filter((p) => selected.includes(p.id))
     .map((p) => ({ id: p.id, name: p.name, emoji: p.emoji, color: p.color }));
 
-  // Round-robin distribute the chosen players into `teamCount` teams.
+  // Auto-balanced split the host can tweak per player (tap a name to move it to the next team).
+  const { byPlayer, cycle, memberIdsByTeam } = useTeamAssignment(seats.map((s) => s.id), teamCount);
+  const teamColumns = Array.from({ length: teamCount }, (_, i) => ({
+    name: t('pantomime.teamName', { n: i + 1 }),
+    color: TEAM_PALETTE[i % TEAM_PALETTE.length],
+  }));
   const teams: TeamSetup = {
-    mode: 'auto',
-    teams: Array.from({ length: teamCount }, (_, i) => ({
+    mode: 'manual',
+    teams: teamColumns.map((col, i) => ({
       id: asTeamId(`t${i}`),
-      name: t('pantomime.teamName', { n: i + 1 }),
-      memberIds: seats.filter((_, idx) => idx % teamCount === i).map((s) => s.id),
+      name: col.name,
+      memberIds: memberIdsByTeam[i] ?? [],
     })),
   };
 
@@ -81,7 +89,7 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<PantomimeState, Pantom
         {/* Always visible: Players */}
         <section>
           <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">
-            {t('common.players')} · {seats.length}
+            {t('common.playersCount', { count: seats.length })}
           </h2>
           <PlayerPicker
             selected={selected}
@@ -104,6 +112,17 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<PantomimeState, Pantom
               { value: '4', label: '4' },
             ]}
           />
+          {seats.length >= 2 && (
+            <div className="mt-3">
+              <TeamAssigner
+                players={seats}
+                teamColumns={teamColumns}
+                byPlayer={byPlayer}
+                onCycle={cycle}
+                hint={t('common.teamHint')}
+              />
+            </div>
+          )}
         </section>
 
         {/* More options: everything else */}
@@ -207,13 +226,7 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<PantomimeState, Pantom
         <p className="text-sm text-[var(--text-muted)]">
           {t('pantomime.poolHint', { count: poolSize })}
         </p>
-        {errors && (
-          <ul className="text-sm text-[var(--color-game-rose-strong)]">
-            {errors.map((e, i) => (
-              <li key={i}>{ctx.localize(e)}</li>
-            ))}
-          </ul>
-        )}
+        <SetupErrors errors={errors} />
         <Button size="lg" fullWidth disabled={!!errors} onClick={start}>
           {t('common.start')}
         </Button>

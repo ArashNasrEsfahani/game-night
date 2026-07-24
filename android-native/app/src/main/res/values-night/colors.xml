@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Night (disco): lapis-black sky. Mirrors the bg token in .dark (src/index.css). -->
+    <color name="window_bg">#07061A</color>
+</resources>

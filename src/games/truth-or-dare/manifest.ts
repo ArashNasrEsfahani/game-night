@@ -5,8 +5,8 @@ export const manifest: GameManifest = {
   name: { en: 'Truth or Dare', fa: 'جرئت یا حقیقت' },
   tagline: { en: 'Spin, pick, reveal, pass the phone!', fa: 'بچرخون، انتخاب کن، نشون بده، گوشی رو بچرخون!' },
   description: {
-    en: 'Spin to pick a player, choose Truth or Dare, and reveal a prompt. Play casually forever or race to a points target.',
-    fa: 'بچرخون تا یک بازیکن انتخاب بشه، جرئت یا حقیقت را انتخاب کن و سرنخ را ببین. بی‌خیال تا ابد بازی کن یا به امتیاز هدف برس.',
+    en: "Give the bottle a spin, hold your breath, and watch it land on someone. They pick Truth for a question they might regret or Dare for a challenge they definitely will, and a fresh prompt is revealed. Pass the phone and keep the secrets and stunts coming — play loose and endless, or race to a points target.",
+    fa: 'بطری را بچرخان، نفست را حبس کن و ببین روی چه کسی می‌ایستد. او «حقیقت» را انتخاب می‌کند برای سوالی که شاید پشیمانش کند، یا «جرئت» را برای کاری که حتماً پشیمانش می‌کند، و یک سرنخ تازه رو می‌شود. گوشی را بچرخان و رازها و کارهای جسورانه را ادامه بده — بی‌خیال و بی‌پایان بازی کن یا به امتیاز هدف برس.',
   },
   icon: '🌶️',
   color: 'gold',

@@ -2,16 +2,18 @@ import { motion } from 'framer-motion';
 import { cn } from '../../../lib/cn';
 import type { Cell } from '../logic';
 
+// Theme-aware clue colours: deep classic-minesweeper shades on the light (cream) tiles, bright
+// shades on the dark sunk tiles — each stays high-contrast against its own background.
 const NUM_COLOR = [
   '',
-  'text-blue-600',
-  'text-green-600',
-  'text-red-600',
-  'text-indigo-800',
-  'text-rose-800',
-  'text-teal-600',
-  'text-zinc-800',
-  'text-zinc-500',
+  'text-blue-700 dark:text-blue-400',
+  'text-emerald-700 dark:text-emerald-400',
+  'text-red-700 dark:text-red-400',
+  'text-violet-700 dark:text-violet-400',
+  'text-rose-700 dark:text-rose-400',
+  'text-teal-700 dark:text-teal-400',
+  'text-amber-700 dark:text-amber-400',
+  'text-slate-600 dark:text-slate-400',
 ];
 
 /** Responsive mine-hunt board. Tap a square to reveal it: a mine is a find (💣, tinted by whoever

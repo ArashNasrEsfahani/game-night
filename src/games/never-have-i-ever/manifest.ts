@@ -5,8 +5,8 @@ export const manifest: GameManifest = {
   name: { en: 'Never Have I Ever', fa: 'من هیچ‌وقت' },
   tagline: { en: 'Confess or lose a life', fa: 'اعتراف کن یا یک جان از دست بده' },
   description: {
-    en: 'A statement pops up. Everyone who HAS done it loses a life. The last clean player standing wins, or whoever ends up with the fewest confessions.',
-    fa: 'یک جمله ظاهر می‌شود. هر کس آن را انجام داده باشد یک جان از دست می‌دهد. آخرین بازیکن پاک برنده است، یا هر کس که کمترین اعتراف را داشته باشد.',
+    en: "A bold confession pops up on screen, and anyone who's actually done it has to own up — and lose a life. Secrets spill, eyebrows shoot up, and the whole table erupts every single round. The last player left with a clean record (or simply the fewest confessions) walks away the most innocent of all.",
+    fa: 'یک اعتراف جسورانه روی صفحه ظاهر می‌شود و هرکس واقعاً آن را انجام داده باید قبول کند — و یک جان از دست بدهد. رازها لو می‌رود، ابروها بالا می‌پرد و هر دور کل جمع منفجر می‌شود. آخرین بازیکنی که پروندهٔ پاک (یا فقط کمترین اعتراف) را داشته باشد، بی‌گناه‌ترینِ جمع از آب درمی‌آید.',
   },
   icon: '🙈',
   color: 'rose',

@@ -65,7 +65,8 @@ export type HeadsUpAction =
   | { type: 'CLEAR_FLASH' }
   | { type: 'TIME_UP' }
   | { type: 'NEXT_PARTICIPANT'; seed: number }
-  | { type: 'SET_INPUT_MODE'; mode: InputMode };
+  | { type: 'SET_INPUT_MODE'; mode: InputMode }
+  | { type: 'END_GAME' };
 
 const TEAM_COLORS: ColorToken[] = ['rose', 'sky', 'lime', 'gold'];
 
@@ -254,6 +255,37 @@ export function reducer(state: HeadsUpState, action: HeadsUpAction): HeadsUpStat
     }
     case 'SET_INPUT_MODE':
       return { ...s, inputMode: action.mode };
+    case 'END_GAME': {
+      if (s.phase === 'finished') return s;
+      // Lock in an in-progress round so the final standings include what was just played.
+      let rounds = s.rounds;
+      if (s.phase === 'playing') {
+        const p = s.participants[s.turnIndex];
+        const got = s.currentEntries.filter((e) => e.result === 'got').length;
+        const passed = s.currentEntries.filter((e) => e.result === 'passed').length;
+        rounds = [
+          ...s.rounds,
+          {
+            participantId: p.id,
+            guesserId: guesserId(p),
+            roundIndex: s.roundOfParticipant[p.id] ?? 0,
+            entries: s.currentEntries,
+            got,
+            passed,
+          },
+        ];
+      }
+      return {
+        ...s,
+        phase: 'finished',
+        flash: null,
+        currentCardId: null,
+        currentEntries: [],
+        rounds,
+        matchOver: true,
+        finished: true,
+      };
+    }
     default:
       return s;
   }

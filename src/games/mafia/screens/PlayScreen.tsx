@@ -25,6 +25,12 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<MafiaS
   const name = (id: string) => s.playerNames[id] ?? id;
   const alive = alivePlayers(s);
 
+  const endGameRight = (
+    <button onClick={() => nav.endGame()} className="text-sm text-[var(--text-muted)]">
+      {t('common.endGame')}
+    </button>
+  );
+
   if (s.phase === 'error') {
     return (
       <Screen>
@@ -54,11 +60,13 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<MafiaS
           revealLabel={t('mf.reveal')}
           onReveal={() => { ctx.sound.play('reveal'); setGateOpen(true); }}
         >
-          <div className="grid flex-1 place-items-center gap-5 text-center">
-            <div className="text-7xl">{role?.icon}</div>
-            <h1 className="text-3xl font-extrabold dp-accent">{role ? ctx.localize(role.name) : ''}</h1>
-            <p className="px-6 text-sm text-[var(--text-muted)]">{role ? ctx.localize(role.reveal) : ''}</p>
-            <Button size="lg" onClick={() => dispatch({ type: 'DEAL_NEXT' })}>
+          <div className="flex flex-1 flex-col gap-4">
+            <Card className="flex flex-1 flex-col items-center justify-center gap-4 text-center">
+              <div className="text-7xl">{role?.icon}</div>
+              <h1 className="text-3xl font-extrabold dp-accent">{role ? ctx.localize(role.name) : ''}</h1>
+              <p className="text-sm text-[var(--text-muted)]">{role ? ctx.localize(role.reveal) : ''}</p>
+            </Card>
+            <Button size="lg" fullWidth onClick={() => dispatch({ type: 'DEAL_NEXT' })}>
               {t('mf.hideAndPass')}
             </Button>
           </div>
@@ -104,7 +112,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<MafiaS
     }
     return (
       <Screen>
-        <AppBar onBack={() => nav.exit()} />
+        <AppBar onBack={() => nav.exit()} right={endGameRight} />
         <div className="flex flex-1 flex-col gap-3">
           <Card className="px-4 py-3 text-center">
             <div className="text-4xl">{role?.icon}</div>
@@ -149,7 +157,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<MafiaS
   if (s.phase === 'night-result') {
     return (
       <Screen>
-        <AppBar onBack={() => nav.exit()} />
+        <AppBar onBack={() => nav.exit()} right={endGameRight} />
         <div className="grid flex-1 place-items-center gap-4 text-center">
           <div className="text-6xl">🌅</div>
           {s.lastNightDeaths.length === 0 ? (
@@ -175,7 +183,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<MafiaS
   if (s.phase === 'day') {
     return (
       <Screen>
-        <AppBar onBack={() => nav.exit()} />
+        <AppBar onBack={() => nav.exit()} right={endGameRight} />
         <div className="flex flex-1 flex-col items-center gap-4 py-4 text-center">
           <div className="text-6xl">☀️</div>
           <p className="text-lg">{t('mf.dayOpen')}</p>
@@ -197,7 +205,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<MafiaS
   if (s.phase === 'nominate') {
     return (
       <Screen>
-        <AppBar onBack={() => nav.exit()} />
+        <AppBar onBack={() => nav.exit()} right={endGameRight} />
         <div className="flex flex-1 flex-col gap-3">
           <p className="text-center text-sm text-[var(--text-muted)]">{t('mf.nominateHint', { n: s.options.nominationsRequired })}</p>
           <div className="flex flex-wrap justify-center gap-2">
@@ -227,7 +235,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<MafiaS
     if (voteCursor >= alive.length || !voter) {
       return (
         <Screen>
-          <AppBar onBack={() => nav.exit()} />
+          <AppBar onBack={() => nav.exit()} right={endGameRight} />
           <div className="grid flex-1 place-items-center gap-4 text-center">
             <p className="text-lg text-[var(--text-muted)]">{t('mf.allVoted')}</p>
             <Button size="lg" onClick={() => { ctx.sound.play('reveal'); dispatch({ type: 'RESOLVE_VOTE', seed: ctx.random.seed() }); }}>
@@ -239,7 +247,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<MafiaS
     }
     return (
       <Screen>
-        <AppBar onBack={() => nav.exit()} />
+        <AppBar onBack={() => nav.exit()} right={endGameRight} />
         <Curtain
           open={gateOpen}
           holderName={name(voter.id)}
@@ -272,7 +280,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<MafiaS
   // vote-result
   return (
     <Screen>
-      <AppBar onBack={() => nav.exit()} />
+      <AppBar onBack={() => nav.exit()} right={endGameRight} />
       <div className="grid flex-1 place-items-center gap-4 text-center">
         {s.lastVoteEliminated ? (
           <>

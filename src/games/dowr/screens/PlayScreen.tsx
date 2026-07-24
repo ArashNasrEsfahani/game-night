@@ -38,6 +38,9 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<DowrSt
   // in handlers/callbacks. `segMs` (state) mirrors it for rendering so render never reads the ref.
   const segStartRef = useRef(clock.now());
   const [segMs, setSegMs] = useState(0);
+  // Purely-cosmetic success burst: bumped on each guessed word so a green check pops over the
+  // word swap. Lives in view state (not the reducer) so it stays resume-safe and test-neutral.
+  const [gotBurst, setGotBurst] = useState(0);
 
   const timeMode = s.options.endMode === 'time';
   const bankedMs = elapsedMs(s); // banked across all turns; changes only on a turn boundary
@@ -105,6 +108,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<DowrSt
     const segmentMs = Math.min(Math.max(0, n - segStartRef.current), s.fuseMs);
     segStartRef.current = n; // anchor the next team's segment to this instant
     setSegMs(0);
+    setGotBurst((b) => b + 1);
     ctx.sound.play('correct');
     ctx.haptics.success();
     dispatch({ type: 'ADVANCE', reason: 'guessed', segmentMs, seed: ctx.random.seed() });
@@ -118,7 +122,17 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<DowrSt
   return (
     <Screen>
       <TurnAura color={team.color} />
-      <AppBar onBack={() => nav.exit()} />
+      <AppBar
+        onBack={() => nav.exit()}
+        right={
+          <button
+            onClick={() => nav.endGame()}
+            className="text-sm text-[var(--text-muted)]"
+          >
+            {t('common.endGame')}
+          </button>
+        }
+      />
       <div className="relative flex flex-1 flex-col gap-3 py-1">
         {/* Bomb explosion — expanding fireball + a kaboom that punches in, over a red wash. */}
         <AnimatePresence>
@@ -153,6 +167,36 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<DowrSt
             </motion.div>
           )}
         </AnimatePresence>
+
+        {/* Guessed! — a quick lime wash + a check that pops and fades over the word swap, so a
+            correct guess feels as rewarding as a bomb is punishing (symmetry the screen was missing). */}
+        {gotBurst > 0 && (
+          <div key={gotBurst} className="pointer-events-none absolute inset-0 z-20 grid place-items-center overflow-hidden">
+            <motion.div
+              className="absolute inset-0"
+              style={{
+                background:
+                  'radial-gradient(circle at 50% 48%, color-mix(in oklab, var(--color-game-lime-strong) 55%, transparent), transparent 70%)',
+              }}
+              initial={{ opacity: 0.55, scale: 0.6 }}
+              animate={{ opacity: 0, scale: 1.35 }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
+            />
+            <motion.div
+              className="relative grid h-24 w-24 place-items-center rounded-full text-5xl font-black text-[var(--on-lime)]"
+              style={{
+                background: 'linear-gradient(150deg, var(--color-game-lime), var(--color-game-lime-strong))',
+                boxShadow: '0 14px 40px -8px var(--color-game-lime-strong)',
+              }}
+              initial={{ scale: 0.3, opacity: 0 }}
+              animate={{ scale: [0.3, 1.25, 1], opacity: [0, 1, 0] }}
+              transition={{ duration: 0.6, ease: 'easeOut' }}
+              aria-hidden
+            >
+              ✓
+            </motion.div>
+          </div>
+        )}
 
         {/* Always-visible standings strip — whose turn + every team's running total. */}
         <div className="z-10 flex flex-wrap justify-center gap-1.5">
@@ -235,7 +279,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<DowrSt
 
         {/* Controls */}
         <div className="z-10 flex w-full flex-col gap-2">
-          <Button size="lg" fullWidth onClick={gotIt}>
+          <Button size="lg" variant="success" fullWidth onClick={gotIt}>
             ✓ {t('dowr.gotIt')}
           </Button>
           <Button variant="secondary" fullWidth onClick={changeWord}>

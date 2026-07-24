@@ -2,17 +2,28 @@ import { motion } from 'framer-motion';
 import { Confetti } from './Confetti';
 import { Medallion } from './Medallion';
 
-export function WinnerBanner({ title, names }: { title: string; names: string[] }) {
+export function WinnerBanner({
+  title,
+  names,
+  tie = false,
+}: {
+  title: string;
+  names: string[];
+  /** A draw rather than a single winner — shows a 🤝 instead of the 🏆 so the result reads honestly. */
+  tie?: boolean;
+}) {
   return (
     <div className="relative flex flex-col items-center gap-3 py-6 text-center">
       <Confetti />
       <motion.div
         initial={{ scale: 0, rotate: -25 }}
         animate={{ scale: 1, rotate: 0 }}
-        transition={{ type: 'spring', stiffness: 260, damping: 13, delay: 0.05 }}
+        transition={{ type: 'spring', stiffness: 195, damping: 24, delay: 0.05 }}
       >
         <Medallion size={118}>
-          <span className="text-5xl drop-shadow-[0_0_18px_var(--game-accent-glow)]">🏆</span>
+          <span className="text-5xl drop-shadow-[0_0_18px_var(--game-accent-glow)]">
+            {tie ? '🤝' : '🏆'}
+          </span>
         </Medallion>
       </motion.div>
       <motion.h2

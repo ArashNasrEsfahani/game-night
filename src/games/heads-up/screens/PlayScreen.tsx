@@ -143,6 +143,14 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<HeadsU
 
   const participant = currentParticipant(s);
   const guesserName = participant ? s.playerNames[guesserId(participant)] : '';
+  const endGameButton = (
+    <button
+      onClick={() => nav.endGame()}
+      className="text-sm text-[var(--text-muted)]"
+    >
+      {t('common.endGame')}
+    </button>
+  );
   const card = s.currentCardId ? CARD_BY_KEY[s.currentCardId] : undefined;
   const word = card ? ctx.localize(card.word) : '';
   const got = s.currentEntries.filter((e) => e.result === 'got').length;
@@ -163,7 +171,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<HeadsU
     return (
       <Screen>
         <TurnAura color={participant?.color} />
-        <AppBar onBack={() => nav.exit()} />
+        <AppBar onBack={() => nav.exit()} right={endGameButton} />
         <div className="grid flex-1 place-items-center gap-4 text-center">
           {participant?.kind === 'team' && (
             <p className="text-sm font-semibold text-[var(--text-muted)]">{participant.name}</p>
@@ -198,7 +206,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<HeadsU
             key={s.countdownLeft}
             initial={{ scale: 0.4, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            transition={{ type: 'spring', stiffness: 300, damping: 16 }}
+            transition={{ type: 'spring', stiffness: 225, damping: 26 }}
             className="text-9xl font-black dp-accent"
           >
             {s.countdownLeft > 0 ? s.countdownLeft : t('hu.go')}
@@ -229,15 +237,30 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<HeadsU
               key={s.currentCardId}
               initial={{ scale: 0.7, opacity: 0, y: 10 }}
               animate={{ scale: 1, opacity: 1, y: 0 }}
-              transition={{ type: 'spring', stiffness: 320, damping: 20 }}
+              transition={{ type: 'spring', stiffness: 240, damping: 26 }}
               className="z-10 text-center text-6xl font-black leading-tight"
             >
               {word}
             </motion.h1>
           ) : (
-            <p className="z-10 text-2xl text-[var(--text-muted)]">{t('hu.outOfWords')}</p>
+            <motion.p
+              initial={{ opacity: 0, y: -8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.25 }}
+              className="z-10 text-2xl text-[var(--text-muted)]"
+            >
+              {t('hu.outOfWords')}
+            </motion.p>
           )}
-          <p className="z-10 text-sm text-[var(--text-muted)]">{t('hu.gotCount', { n: got })}</p>
+          <motion.p
+            key={got}
+            initial={{ scale: 1.25 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 0.3, ease: [0.34, 1.56, 0.64, 1] }}
+            className="z-10 text-sm text-[var(--text-muted)]"
+          >
+            {t('hu.gotCount', { n: got })}
+          </motion.p>
           {tiltMode && (
             <p className="z-10 text-xs font-semibold text-[var(--game-accent-strong)]">{t('hu.tiltHint')}</p>
           )}
@@ -245,12 +268,15 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<HeadsU
             <Button
               size="lg"
               variant="secondary"
+              disabled={!s.currentCardId}
               onClick={() => { ctx.sound.play('pass'); ctx.haptics.light(); dispatch({ type: 'MARK_PASS', seed: ctx.random.seed() }); }}
             >
               ↑ {t('hu.pass')}
             </Button>
             <Button
               size="lg"
+              variant="success"
+              disabled={!s.currentCardId}
               onClick={() => { ctx.sound.play('correct'); ctx.haptics.success(); dispatch({ type: 'MARK_GOT', seed: ctx.random.seed() }); }}
             >
               ↓ {t('hu.got')}
@@ -268,7 +294,7 @@ export function PlayScreen({ state, dispatch, ctx, nav }: GameScreenProps<HeadsU
   );
   return (
     <Screen>
-      <AppBar onBack={() => nav.exit()} />
+      <AppBar onBack={() => nav.exit()} right={endGameButton} />
       <div className="flex flex-1 flex-col items-center justify-center gap-4 text-center">
         <h2 className="text-2xl font-bold">{guesserName}</h2>
         <p className="text-4xl font-extrabold dp-accent">

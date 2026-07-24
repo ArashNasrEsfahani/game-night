@@ -37,7 +37,15 @@ export function GuideBanner({ text }: { text: string }) {
   const on = useSettingsStore((s) => s.guidance);
   const [hidden, setHidden] = useState(false);
   useEffect(() => setHidden(false), [text]);
-  if (!on || hidden || !text) return null;
+  const visible = on && !hidden && !!text;
+  // Reserve bottom space (consumed by <Screen>'s padding) so this floating banner never sits on top
+  // of a screen's bottom action button and intercepts taps.
+  useEffect(() => {
+    const root = document.documentElement;
+    root.style.setProperty('--guide-pad', visible ? '7rem' : '0px');
+    return () => root.style.setProperty('--guide-pad', '0px');
+  }, [visible]);
+  if (!visible) return null;
   return (
     <div className="pointer-events-none fixed inset-x-0 bottom-0 z-30 flex justify-center px-4 pb-4">
       <motion.div

@@ -1,0 +1,323 @@
+{
+  "id": "modern",
+  "name": { "en": "Modern Places", "fa": "مکان‌های امروزی" },
+  "version": 1,
+  "locations": [
+    {
+      "id": "m-gym",
+      "icon": "🏋️",
+      "name": { "en": "Gym", "fa": "باشگاه" },
+      "roles": [
+        { "id": "trainer", "name": { "en": "Personal Trainer", "fa": "مربی شخصی" } },
+        { "id": "member", "name": { "en": "Member", "fa": "عضو باشگاه" } },
+        { "id": "receptionist", "name": { "en": "Receptionist", "fa": "منشی پذیرش" } },
+        { "id": "bodybuilder", "name": { "en": "Bodybuilder", "fa": "بدنساز" } },
+        { "id": "yoga-instructor", "name": { "en": "Yoga Instructor", "fa": "مربی یوگا" } },
+        { "id": "cleaner", "name": { "en": "Cleaner", "fa": "نظافتچی" } },
+        { "id": "manager", "name": { "en": "Manager", "fa": "مدیر" } }
+      ]
+    },
+    {
+      "id": "m-mall",
+      "icon": "🛍️",
+      "name": { "en": "Shopping Mall", "fa": "مرکز خرید" },
+      "roles": [
+        { "id": "shopper", "name": { "en": "Shopper", "fa": "خریدار" } },
+        { "id": "cashier", "name": { "en": "Cashier", "fa": "صندوق‌دار" } },
+        { "id": "security-guard", "name": { "en": "Security Guard", "fa": "نگهبان" } },
+        { "id": "store-manager", "name": { "en": "Store Manager", "fa": "مدیر فروشگاه" } },
+        { "id": "janitor", "name": { "en": "Janitor", "fa": "خدمتکار" } },
+        { "id": "kiosk-seller", "name": { "en": "Kiosk Seller", "fa": "فروشنده دکه" } }
+      ]
+    },
+    {
+      "id": "m-coffee-shop",
+      "icon": "☕",
+      "name": { "en": "Coffee Shop", "fa": "کافی‌شاپ" },
+      "roles": [
+        { "id": "barista", "name": { "en": "Barista", "fa": "باریستا" } },
+        { "id": "customer", "name": { "en": "Customer", "fa": "مشتری" } },
+        { "id": "cashier", "name": { "en": "Cashier", "fa": "صندوق‌دار" } },
+        { "id": "waiter", "name": { "en": "Waiter", "fa": "گارسون" } },
+        { "id": "manager", "name": { "en": "Manager", "fa": "مدیر" } },
+        { "id": "musician", "name": { "en": "Live Musician", "fa": "نوازنده زنده" } }
+      ]
+    },
+    {
+      "id": "m-hospital",
+      "icon": "🏥",
+      "name": { "en": "Hospital", "fa": "بیمارستان" },
+      "roles": [
+        { "id": "doctor", "name": { "en": "Doctor", "fa": "پزشک" } },
+        { "id": "nurse", "name": { "en": "Nurse", "fa": "پرستار" } },
+        { "id": "patient", "name": { "en": "Patient", "fa": "بیمار" } },
+        { "id": "surgeon", "name": { "en": "Surgeon", "fa": "جراح" } },
+        { "id": "receptionist", "name": { "en": "Receptionist", "fa": "منشی پذیرش" } },
+        { "id": "paramedic", "name": { "en": "Paramedic", "fa": "تکنسین اورژانس" } },
+        { "id": "visitor", "name": { "en": "Visitor", "fa": "ملاقات‌کننده" } }
+      ]
+    },
+    {
+      "id": "m-cinema",
+      "icon": "🎦",
+      "name": { "en": "Cinema", "fa": "سینما" },
+      "roles": [
+        { "id": "ticket-seller", "name": { "en": "Ticket Seller", "fa": "فروشنده بلیت" } },
+        { "id": "projectionist", "name": { "en": "Projectionist", "fa": "اپراتور آپارات" } },
+        { "id": "moviegoer", "name": { "en": "Moviegoer", "fa": "تماشاگر" } },
+        { "id": "usher", "name": { "en": "Usher", "fa": "راهنمای سالن" } },
+        { "id": "snack-vendor", "name": { "en": "Snack Vendor", "fa": "فروشنده تنقلات" } },
+        { "id": "manager", "name": { "en": "Manager", "fa": "مدیر" } }
+      ]
+    },
+    {
+      "id": "m-gas-station",
+      "icon": "⛽",
+      "name": { "en": "Gas Station", "fa": "پمپ بنزین" },
+      "roles": [
+        { "id": "attendant", "name": { "en": "Pump Attendant", "fa": "متصدی پمپ" } },
+        { "id": "driver", "name": { "en": "Driver", "fa": "راننده" } },
+        { "id": "cashier", "name": { "en": "Cashier", "fa": "صندوق‌دار" } },
+        { "id": "mechanic", "name": { "en": "Mechanic", "fa": "مکانیک" } },
+        { "id": "manager", "name": { "en": "Manager", "fa": "مدیر" } },
+        { "id": "customer", "name": { "en": "Customer", "fa": "مشتری" } }
+      ]
+    },
+    {
+      "id": "m-airport",
+      "icon": "✈️",
+      "name": { "en": "Airport", "fa": "فرودگاه" },
+      "roles": [
+        { "id": "pilot", "name": { "en": "Pilot", "fa": "خلبان" } },
+        { "id": "flight-attendant", "name": { "en": "Flight Attendant", "fa": "مهماندار" } },
+        { "id": "passenger", "name": { "en": "Passenger", "fa": "مسافر" } },
+        { "id": "security-officer", "name": { "en": "Security Officer", "fa": "مأمور حراست" } },
+        { "id": "check-in-agent", "name": { "en": "Check-in Agent", "fa": "متصدی پذیرش" } },
+        { "id": "baggage-handler", "name": { "en": "Baggage Handler", "fa": "متصدی بار" } },
+        { "id": "customs-officer", "name": { "en": "Customs Officer", "fa": "مأمور گمرک" } }
+      ]
+    },
+    {
+      "id": "m-startup",
+      "icon": "💻",
+      "name": { "en": "Tech Startup Office", "fa": "دفتر استارتاپ" },
+      "roles": [
+        { "id": "ceo", "name": { "en": "CEO", "fa": "مدیرعامل" } },
+        { "id": "programmer", "name": { "en": "Programmer", "fa": "برنامه‌نویس" } },
+        { "id": "designer", "name": { "en": "Designer", "fa": "طراح" } },
+        { "id": "intern", "name": { "en": "Intern", "fa": "کارآموز" } },
+        { "id": "investor", "name": { "en": "Investor", "fa": "سرمایه‌گذار" } },
+        { "id": "product-manager", "name": { "en": "Product Manager", "fa": "مدیر محصول" } },
+        { "id": "receptionist", "name": { "en": "Receptionist", "fa": "منشی" } }
+      ]
+    },
+    {
+      "id": "m-fast-food",
+      "icon": "🍔",
+      "name": { "en": "Fast Food Restaurant", "fa": "رستوران فست‌فود" },
+      "roles": [
+        { "id": "cashier", "name": { "en": "Cashier", "fa": "صندوق‌دار" } },
+        { "id": "cook", "name": { "en": "Cook", "fa": "آشپز" } },
+        { "id": "customer", "name": { "en": "Customer", "fa": "مشتری" } },
+        { "id": "delivery-rider", "name": { "en": "Delivery Rider", "fa": "پیک" } },
+        { "id": "manager", "name": { "en": "Manager", "fa": "مدیر" } },
+        { "id": "cleaner", "name": { "en": "Cleaner", "fa": "نظافتچی" } }
+      ]
+    },
+    {
+      "id": "m-metro",
+      "icon": "🚇",
+      "name": { "en": "Metro Station", "fa": "ایستگاه مترو" },
+      "roles": [
+        { "id": "train-driver", "name": { "en": "Train Driver", "fa": "راننده قطار" } },
+        { "id": "passenger", "name": { "en": "Passenger", "fa": "مسافر" } },
+        { "id": "ticket-inspector", "name": { "en": "Ticket Inspector", "fa": "بازرس بلیت" } },
+        { "id": "busker", "name": { "en": "Busker", "fa": "نوازنده دوره‌گرد" } },
+        { "id": "security-guard", "name": { "en": "Security Guard", "fa": "نگهبان" } },
+        { "id": "station-master", "name": { "en": "Station Master", "fa": "رئیس ایستگاه" } }
+      ]
+    },
+    {
+      "id": "m-amusement-park",
+      "icon": "🎢",
+      "name": { "en": "Amusement Park", "fa": "شهربازی" },
+      "roles": [
+        { "id": "ride-operator", "name": { "en": "Ride Operator", "fa": "متصدی دستگاه" } },
+        { "id": "visitor", "name": { "en": "Visitor", "fa": "بازدیدکننده" } },
+        { "id": "mascot", "name": { "en": "Mascot", "fa": "عروسک تبلیغاتی" } },
+        { "id": "ticket-seller", "name": { "en": "Ticket Seller", "fa": "فروشنده بلیت" } },
+        { "id": "food-vendor", "name": { "en": "Food Vendor", "fa": "دست‌فروش" } },
+        { "id": "photographer", "name": { "en": "Photographer", "fa": "عکاس" } }
+      ]
+    },
+    {
+      "id": "m-hair-salon",
+      "icon": "💈",
+      "name": { "en": "Hair Salon", "fa": "آرایشگاه" },
+      "roles": [
+        { "id": "hairstylist", "name": { "en": "Hairstylist", "fa": "آرایشگر" } },
+        { "id": "client", "name": { "en": "Client", "fa": "مشتری" } },
+        { "id": "manicurist", "name": { "en": "Manicurist", "fa": "مانیکوریست" } },
+        { "id": "receptionist", "name": { "en": "Receptionist", "fa": "منشی" } },
+        { "id": "apprentice", "name": { "en": "Apprentice", "fa": "شاگرد" } },
+        { "id": "owner", "name": { "en": "Owner", "fa": "صاحب آرایشگاه" } }
+      ]
+    },
+    {
+      "id": "m-car-dealership",
+      "icon": "🚗",
+      "name": { "en": "Car Dealership", "fa": "نمایشگاه خودرو" },
+      "roles": [
+        { "id": "salesperson", "name": { "en": "Salesperson", "fa": "فروشنده" } },
+        { "id": "customer", "name": { "en": "Customer", "fa": "مشتری" } },
+        { "id": "mechanic", "name": { "en": "Mechanic", "fa": "مکانیک" } },
+        { "id": "manager", "name": { "en": "Manager", "fa": "مدیر" } },
+        { "id": "finance-officer", "name": { "en": "Finance Officer", "fa": "کارشناس مالی" } },
+        { "id": "detailer", "name": { "en": "Detailer", "fa": "شوینده خودرو" } }
+      ]
+    },
+    {
+      "id": "m-nightclub",
+      "icon": "🪩",
+      "name": { "en": "Nightclub", "fa": "کلاب شبانه" },
+      "roles": [
+        { "id": "dj", "name": { "en": "DJ", "fa": "دی‌جی" } },
+        { "id": "bartender", "name": { "en": "Bartender", "fa": "بارمن" } },
+        { "id": "bouncer", "name": { "en": "Bouncer", "fa": "نگهبان در" } },
+        { "id": "dancer", "name": { "en": "Dancer", "fa": "رقصنده" } },
+        { "id": "partygoer", "name": { "en": "Partygoer", "fa": "مهمان" } },
+        { "id": "waiter", "name": { "en": "Waiter", "fa": "گارسون" } }
+      ]
+    },
+    {
+      "id": "m-esports-arena",
+      "icon": "🎮",
+      "name": { "en": "eSports Arena", "fa": "سالن گیمینگ" },
+      "roles": [
+        { "id": "pro-gamer", "name": { "en": "Pro Gamer", "fa": "گیمر حرفه‌ای" } },
+        { "id": "caster", "name": { "en": "Caster", "fa": "گزارشگر" } },
+        { "id": "coach", "name": { "en": "Coach", "fa": "مربی" } },
+        { "id": "spectator", "name": { "en": "Spectator", "fa": "تماشاگر" } },
+        { "id": "referee", "name": { "en": "Referee", "fa": "داور" } },
+        { "id": "streamer", "name": { "en": "Streamer", "fa": "استریمر" } }
+      ]
+    },
+    {
+      "id": "m-library",
+      "icon": "📚",
+      "name": { "en": "Library", "fa": "کتابخانه" },
+      "roles": [
+        { "id": "librarian", "name": { "en": "Librarian", "fa": "کتابدار" } },
+        { "id": "student", "name": { "en": "Student", "fa": "دانشجو" } },
+        { "id": "researcher", "name": { "en": "Researcher", "fa": "پژوهشگر" } },
+        { "id": "reader", "name": { "en": "Reader", "fa": "کتاب‌خوان" } },
+        { "id": "security-guard", "name": { "en": "Security Guard", "fa": "نگهبان" } },
+        { "id": "archivist", "name": { "en": "Archivist", "fa": "بایگان" } }
+      ]
+    },
+    {
+      "id": "m-bank",
+      "icon": "🏦",
+      "name": { "en": "Bank", "fa": "بانک" },
+      "roles": [
+        { "id": "teller", "name": { "en": "Teller", "fa": "باجه‌دار" } },
+        { "id": "customer", "name": { "en": "Customer", "fa": "مشتری" } },
+        { "id": "manager", "name": { "en": "Manager", "fa": "مدیر" } },
+        { "id": "security-guard", "name": { "en": "Security Guard", "fa": "نگهبان" } },
+        { "id": "loan-officer", "name": { "en": "Loan Officer", "fa": "کارشناس وام" } },
+        { "id": "accountant", "name": { "en": "Accountant", "fa": "حسابدار" } }
+      ]
+    },
+    {
+      "id": "m-hotel",
+      "icon": "🏨",
+      "name": { "en": "Hotel", "fa": "هتل" },
+      "roles": [
+        { "id": "receptionist", "name": { "en": "Receptionist", "fa": "پذیرشگر" } },
+        { "id": "guest", "name": { "en": "Guest", "fa": "مهمان" } },
+        { "id": "bellhop", "name": { "en": "Bellhop", "fa": "خدمتکار چمدان" } },
+        { "id": "housekeeper", "name": { "en": "Housekeeper", "fa": "خدمتکار اتاق" } },
+        { "id": "concierge", "name": { "en": "Concierge", "fa": "مسئول پذیرایی" } },
+        { "id": "manager", "name": { "en": "Manager", "fa": "مدیر" } }
+      ]
+    },
+    {
+      "id": "m-police-station",
+      "icon": "🚓",
+      "name": { "en": "Police Station", "fa": "کلانتری" },
+      "roles": [
+        { "id": "police-officer", "name": { "en": "Police Officer", "fa": "افسر پلیس" } },
+        { "id": "detective", "name": { "en": "Detective", "fa": "کارآگاه" } },
+        { "id": "suspect", "name": { "en": "Suspect", "fa": "مظنون" } },
+        { "id": "lawyer", "name": { "en": "Lawyer", "fa": "وکیل" } },
+        { "id": "receptionist", "name": { "en": "Receptionist", "fa": "منشی" } },
+        { "id": "dispatcher", "name": { "en": "Dispatcher", "fa": "مأمور مرکز تماس" } }
+      ]
+    },
+    {
+      "id": "m-supermarket",
+      "icon": "🛒",
+      "name": { "en": "Supermarket", "fa": "سوپرمارکت" },
+      "roles": [
+        { "id": "cashier", "name": { "en": "Cashier", "fa": "صندوق‌دار" } },
+        { "id": "shopper", "name": { "en": "Shopper", "fa": "خریدار" } },
+        { "id": "stock-clerk", "name": { "en": "Stock Clerk", "fa": "قفسه‌چین" } },
+        { "id": "butcher", "name": { "en": "Butcher", "fa": "قصاب" } },
+        { "id": "manager", "name": { "en": "Manager", "fa": "مدیر" } },
+        { "id": "security-guard", "name": { "en": "Security Guard", "fa": "نگهبان" } }
+      ]
+    },
+    {
+      "id": "m-stadium",
+      "icon": "🏟️",
+      "name": { "en": "Stadium", "fa": "استادیوم" },
+      "roles": [
+        { "id": "footballer", "name": { "en": "Footballer", "fa": "فوتبالیست" } },
+        { "id": "referee", "name": { "en": "Referee", "fa": "داور" } },
+        { "id": "fan", "name": { "en": "Fan", "fa": "هوادار" } },
+        { "id": "coach", "name": { "en": "Coach", "fa": "مربی" } },
+        { "id": "commentator", "name": { "en": "Commentator", "fa": "گزارشگر" } },
+        { "id": "vendor", "name": { "en": "Vendor", "fa": "دست‌فروش" } }
+      ]
+    },
+    {
+      "id": "m-pharmacy",
+      "icon": "💊",
+      "name": { "en": "Pharmacy", "fa": "داروخانه" },
+      "roles": [
+        { "id": "pharmacist", "name": { "en": "Pharmacist", "fa": "داروساز" } },
+        { "id": "customer", "name": { "en": "Customer", "fa": "مشتری" } },
+        { "id": "pharmacy-tech", "name": { "en": "Pharmacy Tech", "fa": "تکنسین داروخانه" } },
+        { "id": "cashier", "name": { "en": "Cashier", "fa": "صندوق‌دار" } },
+        { "id": "delivery-person", "name": { "en": "Delivery Person", "fa": "پیک" } },
+        { "id": "manager", "name": { "en": "Manager", "fa": "مدیر" } }
+      ]
+    },
+    {
+      "id": "m-aquarium",
+      "icon": "🐠",
+      "name": { "en": "Aquarium", "fa": "آکواریوم" },
+      "roles": [
+        { "id": "marine-biologist", "name": { "en": "Marine Biologist", "fa": "زیست‌شناس دریایی" } },
+        { "id": "visitor", "name": { "en": "Visitor", "fa": "بازدیدکننده" } },
+        { "id": "diver", "name": { "en": "Diver", "fa": "غواص" } },
+        { "id": "tour-guide", "name": { "en": "Tour Guide", "fa": "راهنمای تور" } },
+        { "id": "ticket-seller", "name": { "en": "Ticket Seller", "fa": "فروشنده بلیت" } },
+        { "id": "cleaner", "name": { "en": "Cleaner", "fa": "نظافتچی" } }
+      ]
+    },
+    {
+      "id": "m-bowling-alley",
+      "icon": "🎳",
+      "name": { "en": "Bowling Alley", "fa": "سالن بولینگ" },
+      "roles": [
+        { "id": "player", "name": { "en": "Player", "fa": "بازیکن" } },
+        { "id": "shoe-attendant", "name": { "en": "Shoe Attendant", "fa": "متصدی کفش" } },
+        { "id": "bartender", "name": { "en": "Bartender", "fa": "بارمن" } },
+        { "id": "mechanic", "name": { "en": "Mechanic", "fa": "مکانیک" } },
+        { "id": "cashier", "name": { "en": "Cashier", "fa": "صندوق‌دار" } },
+        { "id": "birthday-kid", "name": { "en": "Birthday Kid", "fa": "بچهٔ تولدی" } }
+      ]
+    }
+  ]
+}

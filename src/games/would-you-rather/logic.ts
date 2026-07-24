@@ -43,7 +43,8 @@ export type WyrAction =
   | { type: 'SET_QUICK_COUNTS'; A: number; B: number }
   | { type: 'REVEAL' }
   | { type: 'NEXT' }
-  | { type: 'SKIP' };
+  | { type: 'SKIP' }
+  | { type: 'END_GAME' };
 
 function zeroScores(playerIds: string[]): Record<string, number> {
   const scores: Record<string, number> = {};
@@ -203,6 +204,14 @@ export function reducer(state: WyrState, action: WyrAction): WyrState {
         phase: done ? 'results' : 'prompt',
         finished: done,
       };
+    }
+    case 'END_GAME': {
+      if (s.finished) return s;
+      // End the match now and show standings so far. Finalize scores from the COMPLETED rounds only
+      // (mirrors SKIP's rollback of the in-progress round) so the Results screen — which reads scores
+      // for standings/winners and history for side wins — stays internally consistent.
+      const scores = recomputeScores(s.playerIds, s.options, s.history);
+      return { ...s, ...clearRound(), phase: 'results', scores, finished: true };
     }
     default:
       return s;

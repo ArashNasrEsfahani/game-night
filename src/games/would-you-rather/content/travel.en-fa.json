@@ -1,0 +1,230 @@
+{
+  "id": "travel",
+  "name": {
+    "en": "Travel",
+    "fa": "سفر"
+  },
+  "description": {
+    "en": "Dilemmas for the road.",
+    "fa": "دوراهی‌های سفر."
+  },
+  "intensityDefault": "mild",
+  "items": [
+    {
+      "id": "travel-001",
+      "optionA": {
+        "en": "Always travel by plane",
+        "fa": "همیشه با هواپیما سفر کنی"
+      },
+      "optionB": {
+        "en": "Always travel by train",
+        "fa": "همیشه با قطار سفر کنی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "travel-002",
+      "optionA": {
+        "en": "Explore mountains",
+        "fa": "کوه‌ها را بگردی"
+      },
+      "optionB": {
+        "en": "Relax on a beach",
+        "fa": "روی ساحل استراحت کنی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "travel-003",
+      "optionA": {
+        "en": "Travel alone",
+        "fa": "تنها سفر کنی"
+      },
+      "optionB": {
+        "en": "Travel with a big group",
+        "fa": "با یک گروه بزرگ سفر کنی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "travel-004",
+      "optionA": {
+        "en": "Stay in a fancy hotel",
+        "fa": "در یک هتل لوکس بمانی"
+      },
+      "optionB": {
+        "en": "Camp under the stars",
+        "fa": "زیر ستاره‌ها چادر بزنی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "travel-005",
+      "optionA": {
+        "en": "Visit a new country every year",
+        "fa": "هر سال یک کشور جدید بروی"
+      },
+      "optionB": {
+        "en": "Know one country deeply",
+        "fa": "یک کشور را عمیق بشناسی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "travel-006",
+      "optionA": {
+        "en": "Eat only street food on a trip",
+        "fa": "در سفر فقط غذای خیابانی بخوری"
+      },
+      "optionB": {
+        "en": "Eat only at restaurants",
+        "fa": "فقط در رستوران غذا بخوری"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "travel-007",
+      "optionA": {
+        "en": "Lose your luggage",
+        "fa": "چمدونت گم بشه"
+      },
+      "optionB": {
+        "en": "Lose your phone",
+        "fa": "گوشیت گم بشه"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "travel-008",
+      "optionA": {
+        "en": "A road trip across the desert",
+        "fa": "سفر جاده‌ای از دل کویر"
+      },
+      "optionB": {
+        "en": "A cruise across the ocean",
+        "fa": "سفر دریایی روی اقیانوس"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "travel-009",
+      "optionA": {
+        "en": "Speak every language",
+        "fa": "همه زبان‌ها را بلد باشی"
+      },
+      "optionB": {
+        "en": "Never get jet-lagged",
+        "fa": "هیچ‌وقت جت‌لگ نگیری"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "travel-010",
+      "optionA": {
+        "en": "Window seat",
+        "fa": "صندلی کنار پنجره"
+      },
+      "optionB": {
+        "en": "Aisle seat",
+        "fa": "صندلی کنار راهرو"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "travel-011",
+      "optionA": {
+        "en": "Travel to the past",
+        "fa": "به گذشته سفر کنی"
+      },
+      "optionB": {
+        "en": "Travel to space",
+        "fa": "به فضا سفر کنی"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "travel-012",
+      "optionA": {
+        "en": "Backpack on a tight budget",
+        "fa": "با بودجه کم کوله‌گردی کنی"
+      },
+      "optionB": {
+        "en": "Luxury trip but rushed",
+        "fa": "سفر لوکس ولی عجله‌ای"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "travel-013",
+      "optionA": {
+        "en": "Always have perfect weather",
+        "fa": "همیشه هوای عالی داشته باشی"
+      },
+      "optionB": {
+        "en": "Always skip the lines",
+        "fa": "همیشه از صف رد بشی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "travel-014",
+      "optionA": {
+        "en": "Get lost in a new city",
+        "fa": "در یک شهر جدید گم بشی"
+      },
+      "optionB": {
+        "en": "Follow a strict itinerary",
+        "fa": "یک برنامه دقیق را دنبال کنی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "travel-015",
+      "optionA": {
+        "en": "Live out of a suitcase forever",
+        "fa": "تا ابد با یک چمدان زندگی کنی"
+      },
+      "optionB": {
+        "en": "Never leave your hometown",
+        "fa": "هیچ‌وقت از شهرت بیرون نری"
+      },
+      "intensity": "medium"
+    },
+    {
+      "id": "travel-016",
+      "optionA": {
+        "en": "Free flights for life",
+        "fa": "پرواز رایگان برای همیشه"
+      },
+      "optionB": {
+        "en": "Free hotels for life",
+        "fa": "هتل رایگان برای همیشه"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "travel-017",
+      "optionA": {
+        "en": "Visit every wonder of the world",
+        "fa": "همه عجایب دنیا را ببینی"
+      },
+      "optionB": {
+        "en": "Meet people in every country",
+        "fa": "در هر کشور با آدم‌ها آشنا بشی"
+      },
+      "intensity": "mild"
+    },
+    {
+      "id": "travel-018",
+      "optionA": {
+        "en": "A trip with no photos allowed",
+        "fa": "سفری که عکس گرفتن ممنوع باشه"
+      },
+      "optionB": {
+        "en": "A trip you can never talk about",
+        "fa": "سفری که نتونی هیچ‌وقت درباره‌اش حرف بزنی"
+      },
+      "intensity": "medium"
+    }
+  ]
+}

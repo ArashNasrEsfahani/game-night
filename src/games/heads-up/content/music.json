@@ -1,0 +1,203 @@
+{
+  "id": "music",
+  "name": {
+    "en": "Music",
+    "fa": "موسیقی"
+  },
+  "category": "music",
+  "icon": "🎵",
+  "cards": [
+    {
+      "id": "music-guitar",
+      "word": {
+        "en": "Guitar",
+        "fa": "گیتار"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "music-piano",
+      "word": {
+        "en": "Piano",
+        "fa": "پیانو"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "music-drums",
+      "word": {
+        "en": "Drums",
+        "fa": "درامز"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "music-violin",
+      "word": {
+        "en": "Violin",
+        "fa": "ویولن"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "music-singer",
+      "word": {
+        "en": "Singer",
+        "fa": "خواننده"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "music-concert",
+      "word": {
+        "en": "Concert",
+        "fa": "کنسرت"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "music-microphone",
+      "word": {
+        "en": "Microphone",
+        "fa": "میکروفون"
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "music-flute",
+      "word": {
+        "en": "Flute",
+        "fa": "فلوت"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "music-saxophone",
+      "word": {
+        "en": "Saxophone",
+        "fa": "ساکسیفون"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "music-trumpet",
+      "word": {
+        "en": "Trumpet",
+        "fa": "ترومپت"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "music-dj",
+      "word": {
+        "en": "DJ",
+        "fa": "دی‌جی"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "music-rap",
+      "word": {
+        "en": "Rap",
+        "fa": "رپ"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "music-pop",
+      "word": {
+        "en": "Pop",
+        "fa": "پاپ"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "music-rock",
+      "word": {
+        "en": "Rock",
+        "fa": "راک"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "music-orchestra",
+      "word": {
+        "en": "Orchestra",
+        "fa": "ارکستر"
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "music-jazz",
+      "word": {
+        "en": "Jazz",
+        "fa": "جاز"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "music-choir",
+      "word": {
+        "en": "Choir",
+        "fa": "گروه کر"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "music-tar",
+      "word": {
+        "en": "Tar (instrument)",
+        "fa": "تار"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "music-setar",
+      "word": {
+        "en": "Setar",
+        "fa": "سه‌تار"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "music-santur",
+      "word": {
+        "en": "Santur",
+        "fa": "سنتور"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "music-daf",
+      "word": {
+        "en": "Daf",
+        "fa": "دف"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "music-tombak",
+      "word": {
+        "en": "Tombak",
+        "fa": "تنبک"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "music-harmonica",
+      "word": {
+        "en": "Harmonica",
+        "fa": "سازدهنی"
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "music-conductor",
+      "word": {
+        "en": "Conductor",
+        "fa": "رهبر ارکستر"
+      },
+      "difficulty": "hard"
+    }
+  ]
+}

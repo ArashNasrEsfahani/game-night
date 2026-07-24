@@ -23,7 +23,9 @@ export interface ToDOptions {
 
 export const DEFAULT_OPTIONS: ToDOptions = {
   intensities: { mild: true, medium: true, spicy: false, extreme: false },
-  selectionMode: 'spinner',
+  // Default to the real spin-the-bottle animation (BottleStage) rather than the name-roulette, so the
+  // headline mechanic is what players see out of the box. Spinner/Sequential remain options in setup.
+  selectionMode: 'bottle',
   scoringMode: 'casual',
   pointsForDare: 2,
   pointsForTruth: 1,

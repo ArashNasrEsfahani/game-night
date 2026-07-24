@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { AnimatePresence, motion } from 'framer-motion';
 import { screenFade } from '../../sdk/motion';
 import { Sheet, Button, Screen, AppBar, Medallion } from '../../sdk/ui';
+import { GameChromeContext } from '../../sdk/ui/AppBar';
 import { gameEmblem } from '../../sdk/ui/emblems';
 import type { GameManifest } from '../../sdk/types';
 import { getGame } from '../../games/registry';
@@ -30,32 +31,76 @@ import { useLocalize } from '../../lib/localize';
 import { GuideBanner } from '../components/Guide';
 import { NotFoundPage } from './NotFoundPage';
 
-/** A floating "?" that opens a how-to-play sheet for the current game. */
-function HostHelp({ howToPlay, title }: { howToPlay?: LocalizedString; title: string }) {
+/**
+ * Floating top-right chrome shared by every in-game screen: a Close (✕) that leaves the game
+ * (routed through the host's exit-confirm) and a "?" that opens the how-to-play sheet. The two
+ * buttons sit side by side in a single justify-end cluster so they never overlap each other or
+ * the AppBar back arrow on the left.
+ */
+function HostTopBar({
+  description,
+  howToPlay,
+  title,
+  onExit,
+  showClose,
+}: {
+  description?: LocalizedString;
+  howToPlay?: LocalizedString;
+  title: string;
+  onExit: () => void;
+  showClose: boolean;
+}) {
   const [open, setOpen] = useState(false);
   const { t } = useTranslation();
   const localize = useLocalize();
-  if (!howToPlay) return null;
   return (
     <>
-      <div className="pointer-events-none fixed inset-x-0 top-0 z-30 mx-auto flex max-w-md justify-end px-4 pt-3">
-        <motion.button
-          whileTap={{ scale: 0.9 }}
-          onClick={() => setOpen(true)}
-          aria-label={t('common.howToPlay')}
-          className="pointer-events-auto grid h-10 w-10 place-items-center rounded-full bg-[var(--surface-2)] text-lg font-bold text-[var(--game-accent-strong)] shadow-[inset_0_0_0_1px_var(--border-glow)]"
-        >
-          ?
-        </motion.button>
+      <div className="pointer-events-none fixed inset-x-0 top-0 z-30 mx-auto flex max-w-md items-center justify-end gap-2 px-4 pt-3">
+        {showClose && (
+          <motion.button
+            whileTap={{ scale: 0.9 }}
+            onClick={onExit}
+            aria-label={t('common.leave')}
+            className="pointer-events-auto grid h-10 w-10 place-items-center rounded-full bg-[var(--surface-2)] text-lg font-bold text-[var(--text)] shadow-[inset_0_0_0_1px_var(--border-glow)]"
+          >
+            ✕
+          </motion.button>
+        )}
+        {(howToPlay || description) && (
+          <motion.button
+            whileTap={{ scale: 0.9 }}
+            onClick={() => setOpen(true)}
+            aria-label={t('common.howToPlay')}
+            className="pointer-events-auto grid h-10 w-10 place-items-center rounded-full bg-[var(--surface-2)] text-lg font-bold text-[var(--game-accent-strong)] shadow-[inset_0_0_0_1px_var(--border-glow)]"
+          >
+            ?
+          </motion.button>
+        )}
       </div>
-      <Sheet open={open} onClose={() => setOpen(false)} title={title}>
-        <p className="whitespace-pre-line text-sm leading-relaxed text-[var(--text-muted)]">
-          {localize(howToPlay)}
-        </p>
-        <Button fullWidth className="mt-5" onClick={() => setOpen(false)}>
-          {t('common.close')}
-        </Button>
-      </Sheet>
+      {(howToPlay || description) && (
+        <Sheet open={open} onClose={() => setOpen(false)} title={title}>
+          {description && (
+            <p className="whitespace-pre-line text-sm leading-relaxed text-[var(--text)]">
+              {localize(description)}
+            </p>
+          )}
+          {howToPlay && (
+            <>
+              {description && (
+                <p className="mb-1 mt-4 text-xs font-semibold uppercase tracking-wide text-[var(--game-accent-strong)]">
+                  {t('common.howToPlay')}
+                </p>
+              )}
+              <p className="whitespace-pre-line text-sm leading-relaxed text-[var(--text-muted)]">
+                {localize(howToPlay)}
+              </p>
+            </>
+          )}
+          <Button fullWidth className="mt-5" onClick={() => setOpen(false)}>
+            {t('common.close')}
+          </Button>
+        </Sheet>
+      )}
     </>
   );
 }
@@ -138,6 +183,11 @@ export function GameHostPage() {
   // Per-mount: once the player chooses (or starts a match), don't show the resume gate again.
   const [resumed, setResumed] = useState(false);
 
+  // Are-you-sure gate before leaving the game (driven by nav.exit + the floating Close button).
+  const [confirmExit, setConfirmExit] = useState(false);
+  // Are-you-sure gate before ending the match (driven by nav.endGame from each game's "End game").
+  const [confirmEndGame, setConfirmEndGame] = useState(false);
+
   const muted = useSettingsStore((s) => s.muted);
   const hapticsOn = useSettingsStore((s) => s.haptics);
   const reduced = useSettingsStore((s) => s.reducedMotion);
@@ -182,7 +232,11 @@ export function GameHostPage() {
     toSetup: () => updateStore(gameId, { screen: 'setup' }),
     toPlay: () => updateStore(gameId, { screen: 'play' }),
     toResults: () => updateStore(gameId, { screen: 'results' }),
-    exit: () => navigate('/'),
+    // Don't leave straight away — open the are-you-sure gate first (back arrows, the Results
+    // "Home" button and the floating Close all route through here).
+    exit: () => setConfirmExit(true),
+    // Ending the match records a leaderboard result, so gate it behind an are-you-sure too.
+    endGame: () => setConfirmEndGame(true),
     startMatch: (config: GameConfig) => {
       const seed = randomService.seed();
       const state = mod.logic.createInitialState(config, seed);
@@ -254,8 +308,17 @@ export function GameHostPage() {
 
   return (
     <GameContextProvider value={ctx}>
+      <GameChromeContext.Provider value={{ name: localize(mod.manifest.name) }}>
       <div style={accentStyle} className="contents">
-        <HostHelp howToPlay={mod.manifest.howToPlay} title={localize(mod.manifest.name)} />
+        <HostTopBar
+          description={mod.manifest.description}
+          howToPlay={mod.manifest.howToPlay}
+          title={localize(mod.manifest.name)}
+          onExit={() => setConfirmExit(true)}
+          // The floating ✕ is for leaving a game in progress — not the setup "menu", which already
+          // has its own back arrow. Show it only once a match is underway (play/results).
+          showClose={!showGate && shownScreen !== 'setup'}
+        />
         <AnimatePresence mode="wait" initial={false}>
           {showGate ? (
             <motion.div
@@ -296,7 +359,54 @@ export function GameHostPage() {
           )}
         </AnimatePresence>
         <GuideBanner text={guideText} />
+        <Sheet
+          open={confirmExit}
+          onClose={() => setConfirmExit(false)}
+          title={t('common.leave')}
+        >
+          <p className="text-sm leading-relaxed text-[var(--text-muted)]">
+            {t('common.leaveConfirm')}
+          </p>
+          <div className="mt-5 flex flex-col gap-2">
+            <Button
+              fullWidth
+              onClick={() => {
+                setConfirmExit(false);
+                navigate('/');
+              }}
+            >
+              {t('common.leave')}
+            </Button>
+            <Button variant="secondary" fullWidth onClick={() => setConfirmExit(false)}>
+              {t('common.cancel')}
+            </Button>
+          </div>
+        </Sheet>
+        <Sheet
+          open={confirmEndGame}
+          onClose={() => setConfirmEndGame(false)}
+          title={t('common.endGame')}
+        >
+          <p className="text-sm leading-relaxed text-[var(--text-muted)]">
+            {t('common.endGameConfirm')}
+          </p>
+          <div className="mt-5 flex flex-col gap-2">
+            <Button
+              fullWidth
+              onClick={() => {
+                setConfirmEndGame(false);
+                dispatch({ type: 'END_GAME' } as GameActionBase);
+              }}
+            >
+              {t('common.endGame')}
+            </Button>
+            <Button variant="secondary" fullWidth onClick={() => setConfirmEndGame(false)}>
+              {t('common.cancel')}
+            </Button>
+          </div>
+        </Sheet>
       </div>
+      </GameChromeContext.Provider>
     </GameContextProvider>
   );
 }

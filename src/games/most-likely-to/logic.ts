@@ -41,7 +41,8 @@ export type MltAction =
   | { type: 'UNDO_LAST_VOTE' }
   | { type: 'SUBMIT_VOTES'; tally?: VoteTally; seed: number }
   | { type: 'NEXT_ROUND' }
-  | { type: 'SKIP_PROMPT' };
+  | { type: 'SKIP_PROMPT' }
+  | { type: 'END_GAME' };
 
 export function createInitialState(config: GameConfig, seed: number): MltState {
   const options = readOptions(config);
@@ -187,6 +188,11 @@ export function reducer(state: MltState, action: MltAction): MltState {
       const orderedPromptIds = s.orderedPromptIds.slice();
       orderedPromptIds[s.currentRound] = s.pool[s.poolNextIndex];
       return { ...s, orderedPromptIds, poolNextIndex: s.poolNextIndex + 1 };
+    }
+    case 'END_GAME': {
+      // End the match now and lock in the standings from the rounds played so far.
+      if (s.phase === 'finished' || s.phase === 'error') return s;
+      return { ...s, phase: 'finished', finished: true, pendingVotes: {}, activeVoterIndex: null };
     }
     default:
       return s;

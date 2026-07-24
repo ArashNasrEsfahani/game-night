@@ -34,7 +34,7 @@ export function ResultsScreen({ state, ctx, nav }: GameScreenProps<NhieState, Nh
     <Screen>
       <AppBar title={t('results.title')} onBack={() => nav.exit()} />
       <div className="flex flex-col gap-4 pb-8">
-        <WinnerBanner title={title} names={winnerNames} />
+        <WinnerBanner title={title} names={winnerNames} tie={s.winnerIds.length > 1} />
         <p className="text-center text-sm text-[var(--text-muted)]">
           {classic ? t('nhie.livesLeft') : t('nhie.confessionsLabel')}
         </p>

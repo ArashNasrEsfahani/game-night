@@ -715,14 +715,6 @@
       "intensity": "spicy"
     },
     {
-      "id": "mlt-gen-276",
-      "text": {
-        "en": "text an ex at 2 a.m.",
-        "fa": "ساعت دو نصف‌شب به اکسش پیام بده"
-      },
-      "intensity": "spicy"
-    },
-    {
       "id": "mlt-gen-277",
       "text": {
         "en": "sneak out for a secret rendezvous",
@@ -1015,14 +1007,6 @@
       "text": {
         "en": "end up dancing on the bar by midnight",
         "fa": "تا نصفه‌شب رو پیشخون بار برقصه"
-      },
-      "intensity": "spicy"
-    },
-    {
-      "id": "mlt-gen-314",
-      "text": {
-        "en": "text an ex after one too many shots",
-        "fa": "بعد یه پیک اضافه به اکس‌شون پیام بده"
       },
       "intensity": "spicy"
     },
@@ -1371,14 +1355,6 @@
       "intensity": "spicy"
     },
     {
-      "id": "mlt-gen-358",
-      "text": {
-        "en": "text their ex at 2am after a few drinks",
-        "fa": "بعد چندتا پیک، ساعت دو شب به اکسش پیام بده"
-      },
-      "intensity": "spicy"
-    },
-    {
       "id": "mlt-gen-359",
       "text": {
         "en": "fall in love after a single steamy date",
@@ -1415,14 +1391,6 @@
       "text": {
         "en": "get caught making out in a parked car",
         "fa": "موقع لب گرفتن تو ماشین پارک‌شده مچش گرفته بشه"
-      },
-      "intensity": "spicy"
-    },
-    {
-      "id": "mlt-gen-364",
-      "text": {
-        "en": "flirt shamelessly with the bartender",
-        "fa": "بی‌خجالت با باریستا لاس بزنه"
       },
       "intensity": "spicy"
     },
@@ -1519,14 +1487,6 @@
       "text": {
         "en": "ghost someone after three perfect dates",
         "fa": "بعد سه قرار عالی یهو ناپدید بشه و جواب نده"
-      },
-      "intensity": "spicy"
-    },
-    {
-      "id": "mlt-gen-377",
-      "text": {
-        "en": "hook up with someone at a wedding",
-        "fa": "تو یه عروسی با کسی ریخت‌وپاش کنه"
       },
       "intensity": "spicy"
     },
@@ -1655,14 +1615,6 @@
       "text": {
         "en": "keep a drawer of their dates' forgotten things",
         "fa": "یه کشو پر از وسایل جامونده‌ی قرارهاش داشته باشه"
-      },
-      "intensity": "spicy"
-    },
-    {
-      "id": "mlt-gen-394",
-      "text": {
-        "en": "swipe right on absolutely everyone",
-        "fa": "رو همه بدون استثنا راست بکشه"
       },
       "intensity": "spicy"
     },

@@ -5,8 +5,8 @@ export const manifest: GameManifest = {
   name: { en: 'Mine Hunt', fa: 'مین‌یاب' },
   tagline: { en: 'Hunt down the hidden mines!', fa: 'مین‌های پنهان را پیدا کن!' },
   description: {
-    en: 'Reverse Minesweeper: the mines are the treasure. Tap squares to hunt them. Find a mine and you score it and tap again; tap a safe square and it reveals a number clue and your turn passes. Nothing explodes. Use the clues to track down every mine, and whoever finds the most wins.',
-    fa: 'مین‌یاب وارونه: این بار مین‌ها گنج‌اند. روی خانه‌ها بزن تا پیدایشان کنی. مین پیدا کنی امتیاز می‌گیری و دوباره می‌زنی؛ خانهٔ امن بزنی یک عدد راهنما رو می‌شود و نوبت رد می‌شود. هیچ‌چیز منفجر نمی‌شود. با عددها رد مین‌ها را بگیر، و هرکس بیشترین مین را پیدا کند برنده است.',
+    en: "Minesweeper flipped on its head: this time the mines are buried treasure and you want every last one. Tap a square to strike a mine and score it (then tap again), or hit a safe spot that reveals a number clue and passes your turn — nothing ever explodes. Read the numbers like a detective to sniff out where the mines hide, and whoever digs up the most takes the win.",
+    fa: 'مین‌یاب وارونه شده: این بار مین‌ها گنجِ دفن‌شده‌اند و تو همه‌شان را می‌خواهی. روی خانه‌ای بزن تا به مین برسی و امتیاز بگیری (و دوباره بزن)، یا به خانهٔ امنی بخوری که عددی راهنما رو می‌کند و نوبتت را رد می‌کند — هیچ‌چیز هرگز منفجر نمی‌شود. مثل یک کارآگاه عددها را بخوان تا بفهمی مین‌ها کجا پنهان‌اند، و هرکس بیشترین مین را بیرون بکشد برنده است.',
   },
   icon: '💣',
   color: 'tangerine',

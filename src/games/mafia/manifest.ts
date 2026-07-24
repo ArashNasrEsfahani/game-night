@@ -5,8 +5,8 @@ export const manifest: GameManifest = {
   name: { en: 'Mafia', fa: 'مافیا' },
   tagline: { en: 'Hidden roles, night & day', fa: 'نقش‌های پنهان، شب و روز' },
   description: {
-    en: 'Town versus Mafia social deduction. The phone deals secret roles, then narrates the night/day loop: mafia eliminate, the doctor saves, the detective investigates, and the town votes to hang a suspect.',
-    fa: 'نبرد مردم‌شهر و مافیا. گوشی نقش‌ها را پنهانی پخش می‌کند و چرخهٔ شب و روز را روایت می‌کند: مافیا حذف می‌کند، دکتر نجات می‌دهد، کارآگاه تحقیق می‌کند و شهر برای حذف یک مظنون رأی می‌دهد.',
+    en: "Night falls on a town quietly torn apart by a hidden Mafia, and the phone deals everyone a secret role. As darkness comes the Mafia pick off a victim, the doctor scrambles to save a life, and the detective digs for the truth; by day the whole town argues, accuses, and votes someone to the gallows. Town wins by rooting out every last Mafioso — but trust no one, because anyone could be lying straight to your face.",
+    fa: 'شب بر شهری فرود می‌آید که مافیای پنهان بی‌سروصدا از هم می‌پاشدش، و گوشی به هرکس یک نقش مخفی می‌دهد. با آمدن تاریکی مافیا قربانی می‌گیرد، دکتر تقلا می‌کند جانی را نجات دهد و کارآگاه دنبال حقیقت می‌گردد؛ روز که می‌شود کل شهر بحث و متهم و رأی‌گیری می‌کند تا یکی را پای چوبهٔ دار بفرستد. مردم‌شهر با ریشه‌کن کردن تک‌تک مافیاها برنده می‌شوند — اما به هیچ‌کس اعتماد نکن، چون هرکسی ممکن است توی چشمت دروغ بگوید.',
   },
   icon: '🎭',
   color: 'rose',

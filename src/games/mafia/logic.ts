@@ -105,7 +105,8 @@ export type MafiaAction =
   | { type: 'RETRACT_VOTE'; voterId: string }
   | { type: 'RESOLVE_VOTE'; seed: number }
   | { type: 'ACK_VOTE_RESULT' }
-  | { type: 'ABORT_GAME'; winner?: MafiaWinner };
+  | { type: 'ABORT_GAME'; winner?: MafiaWinner }
+  | { type: 'END_GAME' };
 
 /* ─────────────────────────  Pure helpers  ───────────────────────── */
 
@@ -532,6 +533,18 @@ export function reducer(state: MafiaState, action: MafiaAction): MafiaState {
     case 'ABORT_GAME': {
       if (s.phase === 'ended') return s;
       return { ...s, phase: 'ended', finished: true, winner: action.winner ?? null };
+    }
+    case 'END_GAME': {
+      // Manually end the match and show Results with the standings/winner so far.
+      if (s.phase === 'ended') return s;
+      const w = checkWin(s.players);
+      return {
+        ...s,
+        phase: 'ended',
+        finished: true,
+        winner: w,
+        log: w ? [...s.log, { t: 'win', round: s.round, winner: w }] : s.log,
+      };
     }
     default:
       return s;

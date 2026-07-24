@@ -1,8 +1,8 @@
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Screen, AppBar, Card } from '../../sdk/ui';
+import { Screen, AppBar, Card, SegmentedControl, Toggle } from '../../sdk/ui';
 import { useSettingsStore } from '../../store/settingsStore';
-import type { ThemePref } from '../../store/settingsStore';
+import type { ThemePref, MotionPref } from '../../store/settingsStore';
 import type { Lang } from '../../sdk/types';
 
 export function SettingsPage() {
@@ -10,8 +10,20 @@ export function SettingsPage() {
   const navigate = useNavigate();
   const s = useSettingsStore();
 
-  const themes: ThemePref[] = ['system', 'light', 'dark'];
-  const langs: Lang[] = ['en', 'fa'];
+  const themeOptions: { value: ThemePref; label: string }[] = [
+    { value: 'system', label: t('settings.system') },
+    { value: 'light', label: t('settings.light') },
+    { value: 'dark', label: t('settings.dark') },
+  ];
+  const langOptions: { value: Lang; label: string }[] = [
+    { value: 'en', label: 'English' },
+    { value: 'fa', label: 'فارسی' },
+  ];
+  const motionOptions: { value: MotionPref; label: string }[] = [
+    { value: 'system', label: t('settings.system') },
+    { value: 'on', label: t('settings.on') },
+    { value: 'off', label: t('settings.off') },
+  ];
 
   return (
     <Screen>
@@ -19,99 +31,50 @@ export function SettingsPage() {
 
       <Card className="my-2">
         <label className="mb-2 block text-sm text-[var(--text-muted)]">{t('settings.theme')}</label>
-        <div className="flex gap-2">
-          {themes.map((th) => (
-            <button
-              key={th}
-              onClick={() => s.setTheme(th)}
-              className={`flex-1 rounded-full py-2 text-sm font-medium ${
-                s.theme === th
-                  ? 'bg-[var(--game-accent-strong)] text-[var(--game-on-accent)]'
-                  : 'bg-[var(--surface-2)] text-[var(--text)]'
-              }`}
-            >
-              {t(`settings.${th}`)}
-            </button>
-          ))}
-        </div>
+        <SegmentedControl
+          ariaLabel={t('settings.theme')}
+          options={themeOptions}
+          value={s.theme}
+          onChange={s.setTheme}
+        />
       </Card>
 
       <Card className="my-2">
         <label className="mb-2 block text-sm text-[var(--text-muted)]">
           {t('settings.language')}
         </label>
-        <div className="flex gap-2">
-          {langs.map((lng) => (
-            <button
-              key={lng}
-              onClick={() => s.setLanguage(lng)}
-              className={`flex-1 rounded-full py-2 text-sm font-medium ${
-                s.language === lng
-                  ? 'bg-[var(--game-accent-strong)] text-[var(--game-on-accent)]'
-                  : 'bg-[var(--surface-2)] text-[var(--text)]'
-              }`}
-            >
-              {lng === 'en' ? 'English' : 'فارسی'}
-            </button>
-          ))}
-        </div>
+        <SegmentedControl
+          ariaLabel={t('settings.language')}
+          options={langOptions}
+          value={s.language}
+          onChange={s.setLanguage}
+        />
       </Card>
 
-      <Card className="my-2 flex items-center justify-between">
-        <span className="font-medium">{t('settings.sound')}</span>
-        <button
-          role="switch"
-          aria-checked={!s.muted}
-          onClick={() => s.setMuted(!s.muted)}
-          className={`h-7 w-12 rounded-full p-0.5 transition ${
-            !s.muted ? 'bg-[var(--game-accent-strong)]' : 'bg-[var(--surface-2)]'
-          }`}
-        >
-          <span
-            className={`block h-6 w-6 rounded-full bg-white transition ${
-              !s.muted ? 'translate-x-5 rtl:-translate-x-5' : 'translate-x-0'
-            }`}
-          />
-        </button>
+      <Card className="my-2">
+        <label className="mb-2 block text-sm text-[var(--text-muted)]">{t('settings.motion')}</label>
+        <SegmentedControl
+          ariaLabel={t('settings.motion')}
+          options={motionOptions}
+          value={s.reducedMotion}
+          onChange={s.setReducedMotion}
+        />
       </Card>
 
-      <Card className="my-2 flex items-center justify-between">
-        <span className="font-medium">{t('settings.haptics')}</span>
-        <button
-          role="switch"
-          aria-checked={s.haptics}
-          onClick={() => s.setHaptics(!s.haptics)}
-          className={`h-7 w-12 rounded-full p-0.5 transition ${
-            s.haptics ? 'bg-[var(--game-accent-strong)]' : 'bg-[var(--surface-2)]'
-          }`}
-        >
-          <span
-            className={`block h-6 w-6 rounded-full bg-white transition ${
-              s.haptics ? 'translate-x-5 rtl:-translate-x-5' : 'translate-x-0'
-            }`}
-          />
-        </button>
+      <Card className="my-2">
+        <Toggle checked={!s.muted} onChange={(v) => s.setMuted(!v)} label={t('settings.sound')} />
       </Card>
 
-      <Card className="my-2 flex items-center justify-between">
+      <Card className="my-2">
+        <Toggle checked={s.haptics} onChange={s.setHaptics} label={t('settings.haptics')} />
+      </Card>
+
+      <Card className="my-2 flex items-center justify-between gap-3">
         <div>
           <span className="font-medium">💡 {t('settings.guidance')}</span>
           <p className="text-xs text-[var(--text-muted)]">{t('settings.guidanceHint')}</p>
         </div>
-        <button
-          role="switch"
-          aria-checked={s.guidance}
-          onClick={() => s.setGuidance(!s.guidance)}
-          className={`h-7 w-12 shrink-0 rounded-full p-0.5 transition ${
-            s.guidance ? 'bg-[var(--game-accent-strong)]' : 'bg-[var(--surface-2)]'
-          }`}
-        >
-          <span
-            className={`block h-6 w-6 rounded-full bg-white transition ${
-              s.guidance ? 'translate-x-5 rtl:-translate-x-5' : 'translate-x-0'
-            }`}
-          />
-        </button>
+        <Toggle checked={s.guidance} onChange={s.setGuidance} />
       </Card>
     </Screen>
   );

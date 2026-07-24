@@ -287,13 +287,6 @@
       }
     },
     {
-      "id": "thunder",
-      "text": {
-        "en": "Thunder",
-        "fa": "رعد و برق"
-      }
-    },
-    {
       "id": "volcano",
       "text": {
         "en": "Volcano",
@@ -1610,13 +1603,6 @@
       }
     },
     {
-      "id": "cn-river",
-      "text": {
-        "en": "River",
-        "fa": "رودخانه"
-      }
-    },
-    {
       "id": "cn-ocean",
       "text": {
         "en": "Ocean",
@@ -1698,13 +1684,6 @@
       "text": {
         "en": "Jungle",
         "fa": "جنگل انبوه"
-      }
-    },
-    {
-      "id": "cn-spring",
-      "text": {
-        "en": "Spring",
-        "fa": "چشمه"
       }
     },
     {
@@ -1953,13 +1932,6 @@
       }
     },
     {
-      "id": "cn-clock",
-      "text": {
-        "en": "Clock",
-        "fa": "ساعت"
-      }
-    },
-    {
       "id": "cn-curtain",
       "text": {
         "en": "Curtain",
@@ -2118,13 +2090,6 @@
       "text": {
         "en": "Doorknob",
         "fa": "دستگیره"
-      }
-    },
-    {
-      "id": "cn-ladder",
-      "text": {
-        "en": "Ladder",
-        "fa": "نردبان"
       }
     },
     {
@@ -2408,13 +2373,6 @@
       }
     },
     {
-      "id": "cn-ring",
-      "text": {
-        "en": "Ring",
-        "fa": "حلقه"
-      }
-    },
-    {
       "id": "cn-necklace",
       "text": {
         "en": "Necklace",
@@ -2653,13 +2611,6 @@
       }
     },
     {
-      "id": "cn-nut",
-      "text": {
-        "en": "Nut",
-        "fa": "مهره"
-      }
-    },
-    {
       "id": "cn-washer",
       "text": {
         "en": "Washer",
@@ -2779,13 +2730,6 @@
       }
     },
     {
-      "id": "cn-compass",
-      "text": {
-        "en": "Compass",
-        "fa": "پرگار"
-      }
-    },
-    {
       "id": "cn-anvil",
       "text": {
         "en": "Anvil",
@@ -2849,13 +2793,6 @@
       }
     },
     {
-      "id": "cn-spring-2",
-      "text": {
-        "en": "Spring",
-        "fa": "فنر"
-      }
-    },
-    {
       "id": "cn-magnet",
       "text": {
         "en": "Magnet",
@@ -2881,13 +2818,6 @@
       "text": {
         "en": "Blade",
         "fa": "تیغه"
-      }
-    },
-    {
-      "id": "cn-rain",
-      "text": {
-        "en": "Rain",
-        "fa": "باران"
       }
     },
     {
@@ -2933,13 +2863,6 @@
       }
     },
     {
-      "id": "cn-rainbow",
-      "text": {
-        "en": "Rainbow",
-        "fa": "رنگین‌کمان"
-      }
-    },
-    {
       "id": "cn-sky",
       "text": {
         "en": "Sky",
@@ -2972,13 +2895,6 @@
       "text": {
         "en": "Dew",
         "fa": "شبنم"
-      }
-    },
-    {
-      "id": "cn-sleet",
-      "text": {
-        "en": "Sleet",
-        "fa": "برف و باران"
       }
     },
     {
@@ -3227,13 +3143,6 @@
       }
     },
     {
-      "id": "cn-flute",
-      "text": {
-        "en": "Flute",
-        "fa": "فلوت"
-      }
-    },
-    {
       "id": "cn-trumpet",
       "text": {
         "en": "Trumpet",
@@ -3315,13 +3224,6 @@
       "text": {
         "en": "Whistle",
         "fa": "سوت"
-      }
-    },
-    {
-      "id": "cn-bow-2",
-      "text": {
-        "en": "Bow",
-        "fa": "آرشه"
       }
     },
     {
@@ -3525,13 +3427,6 @@
       "text": {
         "en": "Oboe",
         "fa": "ابوا"
-      }
-    },
-    {
-      "id": "cn-pipe-2",
-      "text": {
-        "en": "Pipe",
-        "fa": "نی"
       }
     },
     {
@@ -4228,13 +4123,6 @@
       }
     },
     {
-      "id": "cn-bread",
-      "text": {
-        "en": "Bread",
-        "fa": "نان"
-      }
-    },
-    {
       "id": "cn-banana",
       "text": {
         "en": "Banana",
@@ -4288,13 +4176,6 @@
       "text": {
         "en": "Peach",
         "fa": "هلو"
-      }
-    },
-    {
-      "id": "cn-watermelon",
-      "text": {
-        "en": "Watermelon",
-        "fa": "هندوانه"
       }
     },
     {
@@ -4466,24 +4347,10 @@
       }
     },
     {
-      "id": "cn-lion",
-      "text": {
-        "en": "Lion",
-        "fa": "شیر"
-      }
-    },
-    {
       "id": "cn-tiger",
       "text": {
         "en": "Tiger",
         "fa": "ببر"
-      }
-    },
-    {
-      "id": "cn-deer",
-      "text": {
-        "en": "Deer",
-        "fa": "گوزن"
       }
     },
     {
@@ -4813,13 +4680,6 @@
       "text": {
         "en": "Airport",
         "fa": "فرودگاه"
-      }
-    },
-    {
-      "id": "cn-harbor",
-      "text": {
-        "en": "Harbor",
-        "fa": "بندر"
       }
     },
     {
@@ -5523,13 +5383,6 @@
       }
     },
     {
-      "id": "cn-dentist-2",
-      "text": {
-        "en": "Dentist",
-        "fa": "دندانپزشک"
-      }
-    },
-    {
       "id": "cn-scientist",
       "text": {
         "en": "Scientist",
@@ -5600,13 +5453,6 @@
       }
     },
     {
-      "id": "cn-goal",
-      "text": {
-        "en": "Goal",
-        "fa": "دروازه"
-      }
-    },
-    {
       "id": "cn-skate",
       "text": {
         "en": "Skate",
@@ -5618,13 +5464,6 @@
       "text": {
         "en": "Ski",
         "fa": "اسکی"
-      }
-    },
-    {
-      "id": "cn-bat-2",
-      "text": {
-        "en": "Bat",
-        "fa": "چوگان‌بیسبال"
       }
     },
     {
@@ -5719,13 +5558,6 @@
       }
     },
     {
-      "id": "cn-ring-2",
-      "text": {
-        "en": "Ring",
-        "fa": "رینگ"
-      }
-    },
-    {
       "id": "cn-saddle",
       "text": {
         "en": "Saddle",
@@ -5768,13 +5600,6 @@
       }
     },
     {
-      "id": "cn-court",
-      "text": {
-        "en": "Court",
-        "fa": "زمین‌بازی"
-      }
-    },
-    {
       "id": "cn-pitch",
       "text": {
         "en": "Pitch",
@@ -5793,13 +5618,6 @@
       "text": {
         "en": "Checker",
         "fa": "مهره"
-      }
-    },
-    {
-      "id": "cn-card",
-      "text": {
-        "en": "Card",
-        "fa": "کارت‌بازی"
       }
     },
     {
@@ -5887,20 +5705,6 @@
       }
     },
     {
-      "id": "cn-keyboard-2",
-      "text": {
-        "en": "Keyboard",
-        "fa": "صفحه‌کلید"
-      }
-    },
-    {
-      "id": "cn-mouse",
-      "text": {
-        "en": "Mouse",
-        "fa": "ماوس"
-      }
-    },
-    {
       "id": "cn-monitor",
       "text": {
         "en": "Monitor",
@@ -5940,20 +5744,6 @@
       "text": {
         "en": "Server",
         "fa": "سرور"
-      }
-    },
-    {
-      "id": "cn-screen",
-      "text": {
-        "en": "Screen",
-        "fa": "صفحه‌نمایش"
-      }
-    },
-    {
-      "id": "cn-phone",
-      "text": {
-        "en": "Phone",
-        "fa": "تلفن"
       }
     },
     {
@@ -6087,13 +5877,6 @@
       "text": {
         "en": "Disk",
         "fa": "دیسک"
-      }
-    },
-    {
-      "id": "cn-memory-2",
-      "text": {
-        "en": "Memory",
-        "fa": "حافظه"
       }
     },
     {
@@ -6237,20 +6020,6 @@
       }
     },
     {
-      "id": "cn-balloon",
-      "text": {
-        "en": "Balloon",
-        "fa": "بالن"
-      }
-    },
-    {
-      "id": "cn-wagon",
-      "text": {
-        "en": "Wagon",
-        "fa": "گاری"
-      }
-    },
-    {
       "id": "cn-carriage",
       "text": {
         "en": "Carriage",
@@ -6346,13 +6115,6 @@
       "text": {
         "en": "Gondola",
         "fa": "گاندولا"
-      }
-    },
-    {
-      "id": "cn-parachute-2",
-      "text": {
-        "en": "Parachute",
-        "fa": "چتر نجات"
       }
     },
     {

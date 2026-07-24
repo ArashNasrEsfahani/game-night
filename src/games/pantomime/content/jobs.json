@@ -1,0 +1,186 @@
+{
+  "category": "jobs",
+  "version": 1,
+  "prompts": [
+    {
+      "id": "jobs.doctor",
+      "category": "jobs",
+      "difficulty": "easy",
+      "text": {
+        "en": "Doctor",
+        "fa": "دکتر"
+      }
+    },
+    {
+      "id": "jobs.teacher",
+      "category": "jobs",
+      "difficulty": "easy",
+      "text": {
+        "en": "Teacher",
+        "fa": "معلم"
+      }
+    },
+    {
+      "id": "jobs.chef",
+      "category": "jobs",
+      "difficulty": "easy",
+      "text": {
+        "en": "Chef",
+        "fa": "آشپز"
+      }
+    },
+    {
+      "id": "jobs.police",
+      "category": "jobs",
+      "difficulty": "easy",
+      "text": {
+        "en": "Police officer",
+        "fa": "پلیس"
+      }
+    },
+    {
+      "id": "jobs.firefighter",
+      "category": "jobs",
+      "difficulty": "easy",
+      "text": {
+        "en": "Firefighter",
+        "fa": "آتش‌نشان"
+      }
+    },
+    {
+      "id": "jobs.driver",
+      "category": "jobs",
+      "difficulty": "easy",
+      "text": {
+        "en": "Driver",
+        "fa": "راننده"
+      }
+    },
+    {
+      "id": "jobs.barber",
+      "category": "jobs",
+      "difficulty": "medium",
+      "text": {
+        "en": "Barber",
+        "fa": "آرایشگر"
+      }
+    },
+    {
+      "id": "jobs.dentist",
+      "category": "jobs",
+      "difficulty": "medium",
+      "text": {
+        "en": "Dentist",
+        "fa": "دندان‌پزشک"
+      }
+    },
+    {
+      "id": "jobs.painter",
+      "category": "jobs",
+      "difficulty": "medium",
+      "text": {
+        "en": "Painter",
+        "fa": "نقاش"
+      }
+    },
+    {
+      "id": "jobs.photographer",
+      "category": "jobs",
+      "difficulty": "medium",
+      "text": {
+        "en": "Photographer",
+        "fa": "عکاس"
+      }
+    },
+    {
+      "id": "jobs.mechanic",
+      "category": "jobs",
+      "difficulty": "medium",
+      "text": {
+        "en": "Mechanic",
+        "fa": "مکانیک"
+      }
+    },
+    {
+      "id": "jobs.farmer",
+      "category": "jobs",
+      "difficulty": "medium",
+      "text": {
+        "en": "Farmer",
+        "fa": "کشاورز"
+      }
+    },
+    {
+      "id": "jobs.waiter",
+      "category": "jobs",
+      "difficulty": "medium",
+      "text": {
+        "en": "Waiter",
+        "fa": "گارسون"
+      }
+    },
+    {
+      "id": "jobs.nurse",
+      "category": "jobs",
+      "difficulty": "medium",
+      "text": {
+        "en": "Nurse",
+        "fa": "پرستار"
+      }
+    },
+    {
+      "id": "jobs.surgeon",
+      "category": "jobs",
+      "difficulty": "hard",
+      "text": {
+        "en": "Surgeon",
+        "fa": "جراح"
+      }
+    },
+    {
+      "id": "jobs.magician",
+      "category": "jobs",
+      "difficulty": "hard",
+      "text": {
+        "en": "Magician",
+        "fa": "شعبده‌باز"
+      }
+    },
+    {
+      "id": "jobs.tailor",
+      "category": "jobs",
+      "difficulty": "hard",
+      "text": {
+        "en": "Tailor",
+        "fa": "خیاط"
+      }
+    },
+    {
+      "id": "jobs.conductor",
+      "category": "jobs",
+      "difficulty": "hard",
+      "text": {
+        "en": "Orchestra conductor",
+        "fa": "رهبر ارکستر"
+      }
+    },
+    {
+      "id": "jobs.astronaut",
+      "category": "jobs",
+      "difficulty": "hard",
+      "text": {
+        "en": "Astronaut",
+        "fa": "فضانورد"
+      }
+    },
+    {
+      "id": "jobs.blacksmith",
+      "category": "jobs",
+      "difficulty": "hard",
+      "text": {
+        "en": "Blacksmith",
+        "fa": "آهنگر"
+      }
+    }
+  ]
+}

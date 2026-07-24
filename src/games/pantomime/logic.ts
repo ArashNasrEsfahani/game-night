@@ -89,6 +89,7 @@ export type PantomimeAction =
   | { type: 'RESUME'; now: number }
   | { type: 'END_TURN_EARLY'; now: number }
   | { type: 'NEXT_TURN'; seed: number }
+  | { type: 'END_GAME' }
   | { type: 'RESET' };
 
 const MACHINE = phaseMachine.defineMachine<PantomimePhase>({
@@ -379,6 +380,19 @@ export function reducer(state: PantomimeState, action: PantomimeAction): Pantomi
         lastTurnEndReason: null,
         gate: revealGate.init([]),
         clock: timer.create('countdown', s.options.roundSeconds * 1000),
+      };
+    }
+    case 'END_GAME': {
+      // End the match now and jump straight to results, locking in the standings so far.
+      // Scores already reflect every resolved prompt (CORRECT/SKIP mutate score live), so the
+      // Results screen reads correctly even when ending mid-turn.
+      if (s.phase === 'results' || s.phase === 'error') return s;
+      const res = results.fromScores(s.score);
+      return {
+        ...s,
+        phase: 'results',
+        finished: true,
+        winnerTeamIds: res.winners,
       };
     }
     case 'RESET':
