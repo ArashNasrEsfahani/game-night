@@ -1,33 +1,23 @@
 package com.gamenight.party.game.codenames
 
 import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.gamenight.party.model.ColorToken
@@ -40,12 +30,13 @@ import com.gamenight.party.ui.components.AppCard
 import com.gamenight.party.ui.components.AppScreen
 import com.gamenight.party.ui.components.AppToggle
 import com.gamenight.party.ui.components.ButtonSize
-import com.gamenight.party.ui.components.CardShape
 import com.gamenight.party.ui.components.GameAppBar
 import com.gamenight.party.ui.components.SegmentOption
 import com.gamenight.party.ui.components.SegmentedControl
 import com.gamenight.party.ui.components.SelectChip
-import com.gamenight.party.ui.components.glass2Surface
+import com.gamenight.party.ui.components.TeamAssigner
+import com.gamenight.party.ui.components.TeamColumnSpec
+import com.gamenight.party.ui.components.rememberTeamAssignment
 import com.gamenight.party.ui.screens.fmtNum
 import com.gamenight.party.ui.theme.Accents
 import com.gamenight.party.ui.theme.LocalAccent
@@ -53,23 +44,6 @@ import com.gamenight.party.ui.theme.LocalPalette
 import com.gamenight.party.ui.theme.TeamA
 import com.gamenight.party.ui.theme.TeamB
 import com.gamenight.party.ui.theme.accent
-
-/** Round-robin balance preserving prior picks — the 2-team case of TeamAssigner.tsx `balance`. */
-private fun balanceTeams(ids: List<String>, prev: Map<String, Int>): Map<String, Int> {
-    val next = LinkedHashMap<String, Int>()
-    val counts = intArrayOf(0, 0)
-    for (id in ids) {
-        val t = prev[id]
-        if (t != null && t in 0..1) { next[id] = t; counts[t]++ }
-    }
-    for (id in ids) {
-        if (next[id] == null) {
-            val min = if (counts[0] <= counts[1]) 0 else 1
-            next[id] = min; counts[min]++
-        }
-    }
-    return next
-}
 
 /**
  * Codenames setup — a native port of src/games/codenames/screens/SetupScreen.tsx: pick who plays,
@@ -94,15 +68,11 @@ fun CodenamesSetupScreen(
 
         val seats = players.filter { it.id in selected }
         val selectedIds = seats.map { it.id }
-        val selectedKey = selectedIds.joinToString(",")
 
-        var byPlayer by remember { mutableStateOf(balanceTeams(selectedIds, emptyMap())) }
-        LaunchedEffect(selectedKey) { byPlayer = balanceTeams(selectedIds, byPlayer) }
-        val cycle: (String) -> Unit = { id -> byPlayer = byPlayer + (id to (((byPlayer[id] ?: 0) + 1) % 2)) }
-
-        val seatById = seats.associateBy { it.id }
-        val memberAIds = selectedIds.filter { minOf(byPlayer[it] ?: 0, 1) == 0 }
-        val memberBIds = selectedIds.filter { minOf(byPlayer[it] ?: 0, 1) == 1 }
+        // Auto-balanced two-team split the host can tweak per player (shared with the other team games).
+        val assignment = rememberTeamAssignment(selectedIds, 2)
+        val memberAIds = assignment.memberIdsByTeam[0]
+        val memberBIds = assignment.memberIdsByTeam[1]
         val teams = listOf(
             CnConfigTeam("teamA", CnStr.red, memberAIds),
             CnConfigTeam("teamB", CnStr.blue, memberBIds),
@@ -146,18 +116,17 @@ fun CodenamesSetupScreen(
 
                 // ── Two-team assignment (spymaster = first, 🔍) ──
                 if (seats.size >= 2) {
-                    Column(verticalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.fillMaxWidth()) {
-                        Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                            TeamColumn(CnStr.red.resolve(lang), TeamA, memberAIds.mapNotNull { seatById[it] }, cycle, lang)
-                            TeamColumn(CnStr.blue.resolve(lang), TeamB, memberBIds.mapNotNull { seatById[it] }, cycle, lang)
-                        }
-                        Text(
-                            text = "🔍 = ${CnStr.spymaster.resolve(lang)} · ${CnStr.teamHint.resolve(lang)}",
-                            color = palette.textMuted,
-                            fontSize = 12.sp,
-                            modifier = Modifier.fillMaxWidth(),
-                        )
-                    }
+                    TeamAssigner(
+                        players = seats,
+                        columns = listOf(
+                            TeamColumnSpec(CnStr.red.resolve(lang), TeamA),
+                            TeamColumnSpec(CnStr.blue.resolve(lang), TeamB),
+                        ),
+                        byPlayer = assignment.byPlayer,
+                        onCycle = assignment.cycle,
+                        spymasterFirst = true,
+                        hint = "🔍 = ${CnStr.spymaster.resolve(lang)} · ${CnStr.teamHint.resolve(lang)}",
+                    )
                 }
 
                 // ── More options disclosure ──
@@ -272,45 +241,3 @@ private fun OptionLabel(text: String) {
     Text(text = text, color = LocalPalette.current.text, fontSize = 14.sp)
 }
 
-@Composable
-private fun RowScope.TeamColumn(
-    name: String,
-    color: androidx.compose.ui.graphics.Color,
-    members: List<PlayerSeat>,
-    onCycle: (String) -> Unit,
-    lang: Lang,
-) {
-    val palette = LocalPalette.current
-    Column(
-        modifier = Modifier.weight(1f).glass2Surface(palette, CardShape).padding(8.dp),
-        verticalArrangement = Arrangement.spacedBy(6.dp),
-    ) {
-        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp), modifier = Modifier.fillMaxWidth()) {
-            Box(modifier = Modifier.size(10.dp).clip(CircleShape).background(color))
-            Text(name, color = palette.text, fontWeight = FontWeight.Bold, fontSize = 11.sp, maxLines = 1, overflow = TextOverflow.Ellipsis)
-        }
-        if (members.isEmpty()) {
-            Text("—", color = palette.textMuted, fontSize = 12.sp)
-        } else {
-            members.forEachIndexed { mi, p ->
-                Box(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .clip(RoundedCornerShape(12.dp))
-                        .background(palette.surface)
-                        .clickable { onCycle(p.id) }
-                        .padding(horizontal = 8.dp, vertical = 8.dp),
-                ) {
-                    Text(
-                        text = (if (mi == 0) "🔍 " else "") + (p.emoji?.let { "$it " } ?: "") + p.name,
-                        color = palette.text,
-                        fontWeight = FontWeight.Medium,
-                        fontSize = 13.sp,
-                        maxLines = 1,
-                        overflow = TextOverflow.Ellipsis,
-                    )
-                }
-            }
-        }
-    }
-}

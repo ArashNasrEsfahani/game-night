@@ -35,7 +35,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.gamenight.party.content.ContentStore
 import com.gamenight.party.game.Sfx
-import com.gamenight.party.engine.Rng
 import com.gamenight.party.engine.teamIdAt
 import com.gamenight.party.model.ColorToken
 import com.gamenight.party.model.GameManifest
@@ -60,8 +59,11 @@ import com.gamenight.party.ui.components.SegmentOption
 import com.gamenight.party.ui.components.SegmentedControl
 import com.gamenight.party.ui.components.SelectChip
 import com.gamenight.party.ui.components.Stepper
+import com.gamenight.party.ui.components.TeamAssigner
+import com.gamenight.party.ui.components.TeamColumnSpec
 import com.gamenight.party.ui.components.TimerRing
 import com.gamenight.party.ui.components.WinnerBanner
+import com.gamenight.party.ui.components.rememberTeamAssignment
 import com.gamenight.party.ui.theme.Accents
 import com.gamenight.party.ui.theme.LocalAccent
 import com.gamenight.party.ui.theme.LocalPalette
@@ -95,19 +97,11 @@ private fun defaultRoster(lang: Lang): List<PlayerSeat> = (0 until 4).map { i ->
     )
 }
 
-/** Round-robin a seed-shuffled roster across [teamCount] teams (mirrors the Setup team auto-split). */
-private fun buildTeams(seats: List<PlayerSeat>, teamCount: Int, seed: Int): List<ConfigTeam> {
-    val dealt = Rng(seed).shuffle(seats.map { it.id })
-    val buckets = List(teamCount) { mutableListOf<String>() }
-    dealt.forEachIndexed { i, id -> buckets[i % teamCount].add(id) }
-    return (0 until teamCount).map { i ->
-        ConfigTeam(
-            id = teamIdAt(i),
-            name = LocalizedString("Team ${i + 1}", "تیم ${i + 1}"),
-            memberIds = buckets[i].toList(),
-        )
-    }
-}
+/** Colours for the team columns in Setup (matches the web TEAM_PALETTE). */
+private val TEAM_PALETTE: List<ColorToken> =
+    listOf(ColorToken.ROSE, ColorToken.SKY, ColorToken.LIME, ColorToken.GOLD)
+
+private fun teamLabel(i: Int): LocalizedString = LocalizedString("Team ${i + 1}", "تیم ${i + 1}")
 
 /* ───────────────────────────────  Setup  ─────────────────────────────── */
 
@@ -139,7 +133,6 @@ fun HeadsUpSetupScreen(
         var diffEasy by remember { mutableStateOf(true) }
         var diffMedium by remember { mutableStateOf(true) }
         var diffHard by remember { mutableStateOf(true) }
-        val teamSeed = remember { freshSeed() }
 
         val options = HeadsUpOptions(
             deckIds = deckIds.toList(),
@@ -158,7 +151,19 @@ fun HeadsUpSetupScreen(
         )
         val seats = roster.filter { it.id in selected }
         val pool = huContent.mergedPool(options.deckIds, selectedDifficulties(options))
-        val teams = if (mode == HeadsUpMode.TEAMS) buildTeams(seats, teamCount, teamSeed) else null
+        // Auto-balanced split the host can tweak per player (teams mode only).
+        val assignment = rememberTeamAssignment(seats.map { it.id }, teamCount)
+        val teams = if (mode == HeadsUpMode.TEAMS) {
+            (0 until teamCount).map { i ->
+                ConfigTeam(
+                    id = teamIdAt(i),
+                    name = teamLabel(i),
+                    memberIds = assignment.memberIdsByTeam[i],
+                )
+            }
+        } else {
+            null
+        }
         val config = HeadsUpConfig(players = seats, teams = teams, lang = lang, options = options, cardPool = pool)
         val errors = validateConfig(config)
         val diffCounts = huContent.deckDifficultyCounts(options.deckIds)
@@ -224,6 +229,23 @@ fun HeadsUpSetupScreen(
                     value = teamCount,
                     onChange = { teamCount = it },
                 )
+                if (seats.size >= 2) {
+                    TeamAssigner(
+                        players = seats,
+                        columns = (0 until teamCount).map { i ->
+                            TeamColumnSpec(
+                                teamLabel(i).resolve(lang),
+                                TEAM_PALETTE[i % TEAM_PALETTE.size].accent().base,
+                            )
+                        },
+                        byPlayer = assignment.byPlayer,
+                        onCycle = assignment.cycle,
+                        hint = t(
+                            "Tap a player to move them to another team",
+                            "برای جابه‌جایی هر بازیکن به تیم دیگر، روی او بزن",
+                        ),
+                    )
+                }
             }
 
             SectionLabel(t("Difficulty", "سختی"), palette.textMuted)

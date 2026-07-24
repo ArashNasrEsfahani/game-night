@@ -65,9 +65,11 @@ import com.gamenight.party.ui.components.ScoreRow
 import com.gamenight.party.ui.components.SegmentOption
 import com.gamenight.party.ui.components.SegmentedControl
 import com.gamenight.party.ui.components.SelectChip
+import com.gamenight.party.ui.components.PairAssigner
 import com.gamenight.party.ui.components.Stepper
 import com.gamenight.party.ui.components.TimerRing
 import com.gamenight.party.ui.components.WinnerBanner
+import com.gamenight.party.ui.components.rememberPairAssignment
 import com.gamenight.party.ui.components.glassBg2
 import com.gamenight.party.ui.screens.faDigits
 import com.gamenight.party.ui.screens.fmtNum
@@ -92,6 +94,19 @@ private fun DowrThemed(content: @Composable () -> Unit) {
 }
 
 private fun tr(lang: Lang, en: String, fa: String): String = if (lang == Lang.FA) fa else en
+
+private fun teamName(i: Int, lang: Lang): String =
+    if (lang == Lang.FA) "تیم ${fmtNum(i + 1, lang)}" else "Team ${i + 1}"
+
+/** Setup pair colours — same order as the logic's TEAM_COLORS, so a pair keeps its colour in play. */
+private val PAIR_COLORS: List<ColorToken> = listOf(
+    ColorToken.ROSE,
+    ColorToken.SKY,
+    ColorToken.LIME,
+    ColorToken.GOLD,
+    ColorToken.VIOLET,
+    ColorToken.TEAL,
+)
 
 /** Tidy mm:ss / Ns total (mirrors the screens' `fmtTotal`), localizing digits for Persian. */
 private fun fmtTotal(ms: Long, lang: Lang): String {
@@ -118,8 +133,17 @@ fun DowrSetupScreen(
     var selected by remember { mutableStateOf(players.map { it.id }.toSet()) }
 
     val seats = players.filter { it.id in selected }
-    val teamCount = seats.size / 2
-    val config = DowrConfig(players = seats, content = content, lang = lang, options = opts)
+    // Pairs are consecutive slots in `order`; the host swaps two players to re-pair them.
+    val pairing = rememberPairAssignment(seats.map { it.id })
+    val teamCount = pairing.order.size / 2
+    val teams = (0 until teamCount).map { i ->
+        DowrTeamSpec(
+            id = "t$i",
+            name = teamName(i, lang),
+            memberIds = listOf(pairing.order[2 * i], pairing.order[2 * i + 1]),
+        )
+    }
+    val config = DowrConfig(players = seats, content = content, lang = lang, options = opts, teams = teams)
     val errors = validateConfig(config)
     val poolSize = content.buildPool(normalizeOptions(opts).categories, opts.difficulty).size
 
@@ -171,6 +195,24 @@ fun DowrSetupScreen(
                 color = palette.textMuted,
                 fontSize = 12.sp,
             )
+
+            // Who's paired with whom — tap two players to swap them between pairs.
+            if (seats.size >= 2) {
+                SectionLabel(tr(lang, "Teams of two", "تیم‌های دونفره"))
+                PairAssigner(
+                    players = seats,
+                    order = pairing.order,
+                    picked = pairing.picked,
+                    onTap = pairing.tap,
+                    teamName = { n -> teamName(n - 1, lang) },
+                    colors = PAIR_COLORS.map { it.accent().base },
+                    hint = tr(
+                        lang,
+                        "Tap two players to swap them between teams",
+                        "روی دو بازیکن بزن تا جایشان با هم عوض شود",
+                    ),
+                )
+            }
 
             // Word packs
             SectionLabel(tr(lang, "Word packs", "بسته‌های کلمه"))

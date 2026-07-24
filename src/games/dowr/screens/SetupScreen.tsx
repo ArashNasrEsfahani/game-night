@@ -5,6 +5,7 @@ import type { GameConfig, GameScreenProps, PlayerSeat, TeamSetup } from '../../.
 import { Screen, AppBar, Button, SetupErrors, SegmentedControl, Stepper, Toggle, MotifDivider, Disclosure, SelectChip } from '../../../sdk/ui';
 import { useRosterStore } from '../../../store/rosterStore';
 import { PlayerPicker } from '../../../app/components/PlayerPicker';
+import { PairAssigner, usePairAssignment } from '../../../app/components/TeamAssigner';
 import { asTeamId } from '../../../engine/ids';
 import {
   DEFAULT_OPTIONS,
@@ -44,13 +45,15 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<DowrState, DowrAction>
     .filter((p) => selected.includes(p.id))
     .map((p) => ({ id: p.id, name: p.name, emoji: p.emoji, color: p.color }));
 
-  const teamCount = Math.floor(seats.length / 2);
+  // Pairs are consecutive slots in `order`; the host swaps two players to re-pair them.
+  const { order, picked, tap } = usePairAssignment(seats.map((s) => s.id));
+  const teamCount = Math.floor(order.length / 2);
   const teams: TeamSetup = {
-    mode: 'auto',
+    mode: 'manual',
     teams: Array.from({ length: teamCount }, (_, i) => ({
       id: asTeamId(`t${i}`),
-      name: `Team ${i + 1}`,
-      memberIds: [seats[2 * i].id, seats[2 * i + 1].id],
+      name: t('dowr.teamName', { n: i + 1 }),
+      memberIds: [order[2 * i], order[2 * i + 1]],
     })),
   };
 
@@ -91,6 +94,23 @@ export function SetupScreen({ ctx, nav }: GameScreenProps<DowrState, DowrAction>
           />
           <p className="mt-2 text-xs text-[var(--text-muted)]">{t('dowr.evenHint')}</p>
         </section>
+
+        {/* Always visible: who's paired with whom (tap two players to swap) */}
+        {seats.length >= 2 && (
+          <section>
+            <h2 className="mb-2 text-sm font-semibold text-[var(--text-muted)]">
+              {t('dowr.pairs')}
+            </h2>
+            <PairAssigner
+              players={seats}
+              order={order}
+              picked={picked}
+              onTap={tap}
+              teamName={(n) => t('dowr.teamName', { n })}
+              hint={t('common.pairHint')}
+            />
+          </section>
+        )}
 
         <MotifDivider motif="tar" />
 

@@ -2,7 +2,6 @@ package com.gamenight.party.game.pantomime
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -23,7 +22,6 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.key
-import androidx.compose.runtime.mutableStateMapOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -58,7 +56,10 @@ import com.gamenight.party.ui.components.SegmentOption
 import com.gamenight.party.ui.components.SegmentedControl
 import com.gamenight.party.ui.components.SelectChip
 import com.gamenight.party.ui.components.Stepper
+import com.gamenight.party.ui.components.TeamAssigner
+import com.gamenight.party.ui.components.TeamColumnSpec
 import com.gamenight.party.ui.components.TimerRing
+import com.gamenight.party.ui.components.rememberTeamAssignment
 import com.gamenight.party.ui.components.WinnerBanner
 import com.gamenight.party.ui.components.screenEntrance
 import com.gamenight.party.ui.screens.faDigits
@@ -107,21 +108,19 @@ fun PantomimeSetupScreen(
     val palette = LocalPalette.current
     var opts by remember { mutableStateOf(DEFAULT_OPTIONS) }
     var teamCount by remember { mutableStateOf(2) }
-    // Per-player manual team overrides (set when the host taps a chip to move them). Cleared whenever
-    // the team count changes so the auto round-robin balance starts fresh — mirrors the web's TeamAssigner.
-    val overrides = remember { mutableStateMapOf<String, Int>() }
-    LaunchedEffect(teamCount) { overrides.clear() }
+    var selected by remember(players) { mutableStateOf(players.map { it.id }.toSet()) }
 
-    fun teamIndexOf(seatIndex: Int, id: String): Int = (overrides[id] ?: seatIndex) % teamCount
-
-    val memberIdsByTeam: List<List<String>> = (0 until teamCount).map { ti ->
-        players.filterIndexed { i, p -> teamIndexOf(i, p.id) == ti }.map { it.id }
+    val seats = players.filter { it.id in selected }
+    // Auto-balanced split the host can tweak per player (tap a name to move it to the next team).
+    val assignment = rememberTeamAssignment(seats.map { it.id }, teamCount)
+    val teamColumns = (0 until teamCount).map { i ->
+        TeamColumnSpec(teamName(i, lang), TEAM_PALETTE[i % TEAM_PALETTE.size].accent().base)
     }
     val teams = (0 until teamCount).map { i ->
-        TeamConfig(id = "t$i", name = teamName(i, lang), memberIds = memberIdsByTeam[i])
+        TeamConfig(id = "t$i", name = teamName(i, lang), memberIds = assignment.memberIdsByTeam[i])
     }
 
-    val config = PantomimeConfig(players = players, teams = teams, options = opts, lang = lang)
+    val config = PantomimeConfig(players = seats, teams = teams, options = opts, lang = lang)
     val errors = validateConfig(config, content)
     val poolSize = buildPool(content, opts).size
 
@@ -148,19 +147,25 @@ fun PantomimeSetupScreen(
                 .verticalScroll(rememberScrollState()),
             verticalArrangement = Arrangement.spacedBy(20.dp),
         ) {
-            // Players (the whole roster takes part; team assignment splits them below).
-            SectionLabel(tr(lang, "Players", "بازیکنان") + " · " + fmtNum(players.size, lang))
+            // Players: pick who's in, then split them into teams below.
+            SectionLabel(tr(lang, "Players", "بازیکنان") + " · " + fmtNum(seats.size, lang))
             FlowRow(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
                 verticalArrangement = Arrangement.spacedBy(8.dp),
             ) {
                 players.forEach { p ->
-                    com.gamenight.party.ui.components.Chip(text = (p.emoji?.let { "$it " } ?: "") + p.name)
+                    SelectChip(
+                        selected = p.id in selected,
+                        onClick = {
+                            selected = if (p.id in selected) selected - p.id else selected + p.id
+                        },
+                        text = (p.emoji?.let { "$it " } ?: "") + p.name,
+                    )
                 }
             }
 
-            // Teams: count + tap-to-move assignment.
+            // Teams: count + who's in each one (tap a name to move them).
             SectionLabel(tr(lang, "Teams", "تیم‌ها"))
             SegmentedControl(
                 value = teamCount,
@@ -172,24 +177,18 @@ fun PantomimeSetupScreen(
                 ),
                 modifier = Modifier.fillMaxWidth(),
             )
-            Text(
-                text = tr(lang, "Tap a player to move them to another team", "برای جابه‌جایی هر بازیکن به تیم دیگر، روی او بزن"),
-                color = palette.textMuted,
-                fontSize = 13.sp,
-            )
-            FlowRow(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.spacedBy(8.dp),
-                verticalArrangement = Arrangement.spacedBy(8.dp),
-            ) {
-                players.forEachIndexed { i, p ->
-                    val ti = teamIndexOf(i, p.id)
-                    TeamChip(
-                        name = (p.emoji?.let { "$it " } ?: "") + p.name,
-                        color = TEAM_PALETTE[ti % TEAM_PALETTE.size],
-                        onClick = { overrides[p.id] = (ti + 1) % teamCount },
-                    )
-                }
+            if (seats.size >= 2) {
+                TeamAssigner(
+                    players = seats,
+                    columns = teamColumns,
+                    byPlayer = assignment.byPlayer,
+                    onCycle = assignment.cycle,
+                    hint = tr(
+                        lang,
+                        "Tap a player to move them to another team",
+                        "برای جابه‌جایی هر بازیکن به تیم دیگر، روی او بزن",
+                    ),
+                )
             }
 
             // Categories
@@ -732,25 +731,6 @@ private fun TeamBadge(name: String, color: ColorToken?) {
     ) {
         Box(modifier = Modifier.size(10.dp).clip(CircleShape).background(ac.base, CircleShape))
         Text(text = name, color = palette.text, fontWeight = FontWeight.Bold, fontSize = 16.sp)
-    }
-}
-
-@Composable
-private fun TeamChip(name: String, color: ColorToken, onClick: () -> Unit) {
-    val ac = color.accent()
-    val palette = LocalPalette.current
-    Row(
-        modifier = Modifier
-            .clip(PillShape)
-            .background(ac.soft, PillShape)
-            .border(1.dp, ac.base.copy(alpha = 0.5f), PillShape)
-            .clickable(onClick = onClick)
-            .padding(horizontal = 12.dp, vertical = 6.dp),
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(6.dp),
-    ) {
-        Box(modifier = Modifier.size(10.dp).clip(CircleShape).background(ac.base, CircleShape))
-        Text(text = name, color = palette.text, fontWeight = FontWeight.SemiBold, fontSize = 14.sp)
     }
 }
 
