@@ -91,13 +91,15 @@ export function usePairAssignment<T extends string>(orderedIds: T[]) {
   }, [idsKey, moved]);
   const picked = pickedRaw !== null && order.includes(pickedRaw) ? pickedRaw : null;
 
-  const tap = (id: T) => {
+  // Takes a plain `string` (not `T`) so it drops straight into `PairAssigner`'s `onTap`: seat ids are
+  // branded (PlayerId), and a `(id: PlayerId) => void` handler isn't assignable to `(id: string)`.
+  const tap = (id: string) => {
     if (picked === null || picked === id) {
-      setPicked(picked === id ? null : id);
+      setPicked(picked === id ? null : (id as T));
       return;
     }
     const a = order.indexOf(picked);
-    const b = order.indexOf(id);
+    const b = order.indexOf(id as T);
     setPicked(null);
     if (a < 0 || b < 0) return;
     const next = [...order];
